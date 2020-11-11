@@ -1,7 +1,7 @@
 =begin
 #JumpCloud APIs
 
-# JumpCloud's V1 API. This set of endpoints allows JumpCloud customers to manage commands, systems, & system users.
+#JumpCloud's V1 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
 
 OpenAPI spec version: 1.0
 
@@ -21,41 +21,41 @@ module JCAPIv1
     end
 
     # Delete a Command result
-    # This endpoint deletes a specific command result.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/commandresults/{CommandID} \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}'   ````
+    # This endpoint deletes a specific command result.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/commandresults/{CommandID} \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}'    ````
     # @param id 
-    # @param content_type 
     # @param accept 
+    # @param content_type 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :x_org_id  (default to )
     # @return [Commandresult]
-    def command_results_delete(id, content_type, accept, opts = {})
-      data, _status_code, _headers = command_results_delete_with_http_info(id, content_type, accept, opts)
+    def d_elete_commandresults_id(id, accept, content_type, opts = {})
+      data, _status_code, _headers = d_elete_commandresults_id_with_http_info(id, accept, content_type, opts)
       return data
     end
 
     # Delete a Command result
-    # This endpoint deletes a specific command result.  #### Sample Request &#x60;&#x60;&#x60; curl -X GET https://console.jumpcloud.com/api/commandresults/{CommandID} \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39;   &#x60;&#x60;&#x60;&#x60;
+    # This endpoint deletes a specific command result.  #### Sample Request &#x60;&#x60;&#x60; curl -X GET https://console.jumpcloud.com/api/commandresults/{CommandID} \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39;    &#x60;&#x60;&#x60;&#x60;
     # @param id 
-    # @param content_type 
     # @param accept 
+    # @param content_type 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :x_org_id 
     # @return [Array<(Commandresult, Fixnum, Hash)>] Commandresult data, response status code and response headers
-    def command_results_delete_with_http_info(id, content_type, accept, opts = {})
+    def d_elete_commandresults_id_with_http_info(id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CommandResultsApi.command_results_delete ..."
+        @api_client.config.logger.debug "Calling API: CommandResultsApi.d_elete_commandresults_id ..."
       end
       # verify the required parameter 'id' is set
       if @api_client.config.client_side_validation && id.nil?
-        fail ArgumentError, "Missing the required parameter 'id' when calling CommandResultsApi.command_results_delete"
-      end
-      # verify the required parameter 'content_type' is set
-      if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling CommandResultsApi.command_results_delete"
+        fail ArgumentError, "Missing the required parameter 'id' when calling CommandResultsApi.d_elete_commandresults_id"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling CommandResultsApi.command_results_delete"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling CommandResultsApi.d_elete_commandresults_id"
+      end
+      # verify the required parameter 'content_type' is set
+      if @api_client.config.client_side_validation && content_type.nil?
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling CommandResultsApi.d_elete_commandresults_id"
       end
       # resource path
       local_var_path = "/commandresults/{id}".sub('{' + 'id' + '}', id.to_s)
@@ -65,12 +65,8 @@ module JCAPIv1
 
       # header parameters
       header_params = {}
-      # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
-      # HTTP header 'Content-Type'
-      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-      header_params[:'Content-Type'] = content_type
       header_params[:'Accept'] = accept
+      header_params[:'Content-Type'] = content_type
       header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
 
       # form parameters
@@ -87,132 +83,54 @@ module JCAPIv1
         :auth_names => auth_names,
         :return_type => 'Commandresult')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CommandResultsApi#command_results_delete\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-    # List an individual Command result
-    # This endpoint returns a specific command result.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/commandresults/{CommandResultID} \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}'   ```
-    # @param id 
-    # @param content_type 
-    # @param accept 
-    # @param [Hash] opts the optional parameters
-    # @option opts [String] :fields Use a space seperated string of field parameters to include the data in the response. If omitted, the default list of fields will be returned.  (default to )
-    # @option opts [String] :filter A filter to apply to the query.
-    # @option opts [String] :x_org_id  (default to )
-    # @return [Commandresult]
-    def command_results_get(id, content_type, accept, opts = {})
-      data, _status_code, _headers = command_results_get_with_http_info(id, content_type, accept, opts)
-      return data
-    end
-
-    # List an individual Command result
-    # This endpoint returns a specific command result.  #### Sample Request &#x60;&#x60;&#x60; curl -X GET https://console.jumpcloud.com/api/commandresults/{CommandResultID} \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39;   &#x60;&#x60;&#x60;
-    # @param id 
-    # @param content_type 
-    # @param accept 
-    # @param [Hash] opts the optional parameters
-    # @option opts [String] :fields Use a space seperated string of field parameters to include the data in the response. If omitted, the default list of fields will be returned. 
-    # @option opts [String] :filter A filter to apply to the query.
-    # @option opts [String] :x_org_id 
-    # @return [Array<(Commandresult, Fixnum, Hash)>] Commandresult data, response status code and response headers
-    def command_results_get_with_http_info(id, content_type, accept, opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CommandResultsApi.command_results_get ..."
-      end
-      # verify the required parameter 'id' is set
-      if @api_client.config.client_side_validation && id.nil?
-        fail ArgumentError, "Missing the required parameter 'id' when calling CommandResultsApi.command_results_get"
-      end
-      # verify the required parameter 'content_type' is set
-      if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling CommandResultsApi.command_results_get"
-      end
-      # verify the required parameter 'accept' is set
-      if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling CommandResultsApi.command_results_get"
-      end
-      # resource path
-      local_var_path = "/commandresults/{id}".sub('{' + 'id' + '}', id.to_s)
-
-      # query parameters
-      query_params = {}
-      query_params[:'fields'] = opts[:'fields'] if !opts[:'fields'].nil?
-      query_params[:'filter'] = opts[:'filter'] if !opts[:'filter'].nil?
-
-      # header parameters
-      header_params = {}
-      # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
-      # HTTP header 'Content-Type'
-      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-      header_params[:'Content-Type'] = content_type
-      header_params[:'Accept'] = accept
-      header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
-
-      # form parameters
-      form_params = {}
-
-      # http body (model)
-      post_body = nil
-      auth_names = ['x-api-key']
-      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'Commandresult')
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CommandResultsApi#command_results_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CommandResultsApi#d_elete_commandresults_id\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
     # List all Command Results
     # This endpoint returns all command results.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/commandresults \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key:{API_KEY}'   ```
-    # @param content_type 
     # @param accept 
+    # @param content_type 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :fields Use a space seperated string of field parameters to include the data in the response. If omitted, the default list of fields will be returned.  (default to )
+    # @option opts [String] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [Integer] :limit The number of records to return at once. Limited to 100. (default to 10)
     # @option opts [Integer] :skip The offset into the records to return. (default to 0)
     # @option opts [String] :sort Use space separated sort parameters to sort the collection. Default sort is ascending. Prefix with &#x60;-&#x60; to sort descending.  (default to )
-    # @option opts [String] :filter A filter to apply to the query.
     # @option opts [String] :x_org_id  (default to )
     # @return [Commandresultslist]
-    def command_results_list(content_type, accept, opts = {})
-      data, _status_code, _headers = command_results_list_with_http_info(content_type, accept, opts)
+    def g_et_commandresults(accept, content_type, opts = {})
+      data, _status_code, _headers = g_et_commandresults_with_http_info(accept, content_type, opts)
       return data
     end
 
     # List all Command Results
     # This endpoint returns all command results.  #### Sample Request &#x60;&#x60;&#x60; curl -X GET https://console.jumpcloud.com/api/commandresults \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key:{API_KEY}&#39;   &#x60;&#x60;&#x60;
-    # @param content_type 
     # @param accept 
+    # @param content_type 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :fields Use a space seperated string of field parameters to include the data in the response. If omitted, the default list of fields will be returned. 
+    # @option opts [String] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [Integer] :limit The number of records to return at once. Limited to 100.
     # @option opts [Integer] :skip The offset into the records to return.
     # @option opts [String] :sort Use space separated sort parameters to sort the collection. Default sort is ascending. Prefix with &#x60;-&#x60; to sort descending. 
-    # @option opts [String] :filter A filter to apply to the query.
     # @option opts [String] :x_org_id 
     # @return [Array<(Commandresultslist, Fixnum, Hash)>] Commandresultslist data, response status code and response headers
-    def command_results_list_with_http_info(content_type, accept, opts = {})
+    def g_et_commandresults_with_http_info(accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CommandResultsApi.command_results_list ..."
-      end
-      # verify the required parameter 'content_type' is set
-      if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling CommandResultsApi.command_results_list"
+        @api_client.config.logger.debug "Calling API: CommandResultsApi.g_et_commandresults ..."
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling CommandResultsApi.command_results_list"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling CommandResultsApi.g_et_commandresults"
+      end
+      # verify the required parameter 'content_type' is set
+      if @api_client.config.client_side_validation && content_type.nil?
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling CommandResultsApi.g_et_commandresults"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling CommandResultsApi.command_results_list, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling CommandResultsApi.g_et_commandresults, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -221,19 +139,15 @@ module JCAPIv1
       # query parameters
       query_params = {}
       query_params[:'fields'] = opts[:'fields'] if !opts[:'fields'].nil?
+      query_params[:'filter'] = opts[:'filter'] if !opts[:'filter'].nil?
       query_params[:'limit'] = opts[:'limit'] if !opts[:'limit'].nil?
       query_params[:'skip'] = opts[:'skip'] if !opts[:'skip'].nil?
       query_params[:'sort'] = opts[:'sort'] if !opts[:'sort'].nil?
-      query_params[:'filter'] = opts[:'filter'] if !opts[:'filter'].nil?
 
       # header parameters
       header_params = {}
-      # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
-      # HTTP header 'Content-Type'
-      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-      header_params[:'Content-Type'] = content_type
       header_params[:'Accept'] = accept
+      header_params[:'Content-Type'] = content_type
       header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
 
       # form parameters
@@ -250,7 +164,81 @@ module JCAPIv1
         :auth_names => auth_names,
         :return_type => 'Commandresultslist')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CommandResultsApi#command_results_list\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CommandResultsApi#g_et_commandresults\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # List an individual Command result
+    # This endpoint returns a specific command result.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/commandresults/{CommandResultID} \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}'    ```
+    # @param id 
+    # @param accept 
+    # @param content_type 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :fields Use a space seperated string of field parameters to include the data in the response. If omitted, the default list of fields will be returned.  (default to )
+    # @option opts [String] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
+    # @option opts [String] :x_org_id  (default to )
+    # @return [Commandresult]
+    def g_et_commandresults_id(id, accept, content_type, opts = {})
+      data, _status_code, _headers = g_et_commandresults_id_with_http_info(id, accept, content_type, opts)
+      return data
+    end
+
+    # List an individual Command result
+    # This endpoint returns a specific command result.  #### Sample Request &#x60;&#x60;&#x60; curl -X GET https://console.jumpcloud.com/api/commandresults/{CommandResultID} \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39;    &#x60;&#x60;&#x60;
+    # @param id 
+    # @param accept 
+    # @param content_type 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :fields Use a space seperated string of field parameters to include the data in the response. If omitted, the default list of fields will be returned. 
+    # @option opts [String] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
+    # @option opts [String] :x_org_id 
+    # @return [Array<(Commandresult, Fixnum, Hash)>] Commandresult data, response status code and response headers
+    def g_et_commandresults_id_with_http_info(id, accept, content_type, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: CommandResultsApi.g_et_commandresults_id ..."
+      end
+      # verify the required parameter 'id' is set
+      if @api_client.config.client_side_validation && id.nil?
+        fail ArgumentError, "Missing the required parameter 'id' when calling CommandResultsApi.g_et_commandresults_id"
+      end
+      # verify the required parameter 'accept' is set
+      if @api_client.config.client_side_validation && accept.nil?
+        fail ArgumentError, "Missing the required parameter 'accept' when calling CommandResultsApi.g_et_commandresults_id"
+      end
+      # verify the required parameter 'content_type' is set
+      if @api_client.config.client_side_validation && content_type.nil?
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling CommandResultsApi.g_et_commandresults_id"
+      end
+      # resource path
+      local_var_path = "/commandresults/{id}".sub('{' + 'id' + '}', id.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'fields'] = opts[:'fields'] if !opts[:'fields'].nil?
+      query_params[:'filter'] = opts[:'filter'] if !opts[:'filter'].nil?
+
+      # header parameters
+      header_params = {}
+      header_params[:'Accept'] = accept
+      header_params[:'Content-Type'] = content_type
+      header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      auth_names = ['x-api-key']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'Commandresult')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CommandResultsApi#g_et_commandresults_id\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

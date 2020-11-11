@@ -3,8 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**groups** | **Array&lt;String&gt;** |  | [optional] 
-**name** | **String** |  | [optional] 
-**users** | **Array&lt;String&gt;** |  | [optional] 
+**pin** | **String** | 6-digit PIN required to erase the device | 
 
 

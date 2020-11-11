@@ -1,7 +1,7 @@
 =begin
 #JumpCloud APIs
 
-# JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
+#JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
 
 OpenAPI spec version: 2.0
 
@@ -15,52 +15,24 @@ require 'date'
 module JCAPIv2
 
   class SystemInsightsInterfaceAddresses
-    attr_accessor :address
-
-    attr_accessor :broadcast
-
     attr_accessor :collection_time
 
-    attr_accessor :friendly_name
-
-    attr_accessor :interface
-
-    attr_accessor :mask
-
-    attr_accessor :point_to_point
-
     attr_accessor :system_id
-
-    attr_accessor :type
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'address' => :'address',
-        :'broadcast' => :'broadcast',
         :'collection_time' => :'collection_time',
-        :'friendly_name' => :'friendly_name',
-        :'interface' => :'interface',
-        :'mask' => :'mask',
-        :'point_to_point' => :'point_to_point',
-        :'system_id' => :'system_id',
-        :'type' => :'type'
+        :'system_id' => :'system_id'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'address' => :'String',
-        :'broadcast' => :'String',
         :'collection_time' => :'String',
-        :'friendly_name' => :'String',
-        :'interface' => :'String',
-        :'mask' => :'String',
-        :'point_to_point' => :'String',
-        :'system_id' => :'String',
-        :'type' => :'String'
+        :'system_id' => :'String'
       }
     end
 
@@ -72,40 +44,12 @@ module JCAPIv2
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'address')
-        self.address = attributes[:'address']
-      end
-
-      if attributes.has_key?(:'broadcast')
-        self.broadcast = attributes[:'broadcast']
-      end
-
       if attributes.has_key?(:'collection_time')
         self.collection_time = attributes[:'collection_time']
       end
 
-      if attributes.has_key?(:'friendly_name')
-        self.friendly_name = attributes[:'friendly_name']
-      end
-
-      if attributes.has_key?(:'interface')
-        self.interface = attributes[:'interface']
-      end
-
-      if attributes.has_key?(:'mask')
-        self.mask = attributes[:'mask']
-      end
-
-      if attributes.has_key?(:'point_to_point')
-        self.point_to_point = attributes[:'point_to_point']
-      end
-
       if attributes.has_key?(:'system_id')
         self.system_id = attributes[:'system_id']
-      end
-
-      if attributes.has_key?(:'type')
-        self.type = attributes[:'type']
       end
 
     end
@@ -128,15 +72,8 @@ module JCAPIv2
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          address == o.address &&
-          broadcast == o.broadcast &&
           collection_time == o.collection_time &&
-          friendly_name == o.friendly_name &&
-          interface == o.interface &&
-          mask == o.mask &&
-          point_to_point == o.point_to_point &&
-          system_id == o.system_id &&
-          type == o.type
+          system_id == o.system_id
     end
 
     # @see the `==` method
@@ -148,7 +85,7 @@ module JCAPIv2
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [address, broadcast, collection_time, friendly_name, interface, mask, point_to_point, system_id, type].hash
+      [collection_time, system_id].hash
     end
 
     # Builds the object from hash

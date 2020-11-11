@@ -1,7 +1,7 @@
 =begin
 #JumpCloud APIs
 
-# JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
+#JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
 
 OpenAPI spec version: 2.0
 
@@ -35,7 +35,7 @@ describe 'PolicyTemplateConfigField' do
   describe 'test attribute "display_type"' do
     it 'should work' do
        # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-       #validator = Petstore::EnumTest::EnumAttributeValidator.new('String', ["checkbox", "date", "email", "number", "select", "text", "textarea"])
+       #validator = Petstore::EnumTest::EnumAttributeValidator.new('String', ["checkbox", "date", "email", "file", "number", "select", "text", "textarea", "singlelistbox", "doublelistbox", "table"])
        #validator.allowable_values.each do |value|
        #  expect { @instance.display_type = value }.not_to raise_error
        #end

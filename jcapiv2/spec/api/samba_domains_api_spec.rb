@@ -1,7 +1,7 @@
 =begin
 #JumpCloud APIs
 
-# JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
+#JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
 
 OpenAPI spec version: 2.0
 
@@ -32,7 +32,7 @@ describe 'SambaDomainsApi' do
     end
   end
 
-  # unit tests for ldapservers_samba_domains_delete
+  # unit tests for d_elete_ldapservers_ldapserver_id_sambadomains_id
   # Delete Samba Domain
   # This endpoint allows you to delete a samba domain from an LDAP server.  ##### Sample Request &#x60;&#x60;&#x60; curl -X DELETE https://console.jumpcloud.com/api/v2/ldapservers/{LDAP_ID}/sambadomains/{SAMBA_ID} \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
   # @param ldapserver_id Unique identifier of the LDAP server.
@@ -42,13 +42,33 @@ describe 'SambaDomainsApi' do
   # @option opts [String] :accept 
   # @option opts [String] :x_org_id 
   # @return [String]
-  describe 'ldapservers_samba_domains_delete test' do
+  describe 'd_elete_ldapservers_ldapserver_id_sambadomains_id test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for ldapservers_samba_domains_get
+  # unit tests for g_et_ldapservers_ldapserver_id_sambadomains
+  # List Samba Domains
+  # This endpoint returns all samba domains for an LDAP server.  ##### Sample Request &#x60;&#x60;&#x60; curl -X GET https://console.jumpcloud.com/api/v2/ldapservers/{LDAP_ID}/sambadomains \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39;   &#x60;&#x60;&#x60;
+  # @param ldapserver_id Unique identifier of the LDAP server.
+  # @param [Hash] opts the optional parameters
+  # @option opts [Array<String>] :fields The comma separated fields included in the returned records. If omitted, the default list of fields will be returned. 
+  # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
+  # @option opts [Integer] :limit The number of records to return at once. Limited to 100.
+  # @option opts [Integer] :skip The offset into the records to return.
+  # @option opts [Array<String>] :sort The comma separated fields used to sort the collection. Default sort is ascending, prefix with &#x60;-&#x60; to sort descending. 
+  # @option opts [String] :content_type 
+  # @option opts [String] :accept 
+  # @option opts [String] :x_org_id 
+  # @return [Array<SambaDomainOutput>]
+  describe 'g_et_ldapservers_ldapserver_id_sambadomains test' do
+    it "should work" do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for g_et_ldapservers_ldapserver_id_sambadomains_id
   # Get Samba Domain
   # This endpoint returns a specific samba domain for an LDAP server.  ##### Sample Request &#x60;&#x60;&#x60; curl -X GET \\   https://console.jumpcloud.com/api/v2/ldapservers/ldapservers/{LDAP_ID}/sambadomains/{SAMBA_ID} \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39;   &#x60;&#x60;&#x60;
   # @param ldapserver_id Unique identifier of the LDAP server.
@@ -58,33 +78,13 @@ describe 'SambaDomainsApi' do
   # @option opts [String] :accept 
   # @option opts [String] :x_org_id 
   # @return [SambaDomainOutput]
-  describe 'ldapservers_samba_domains_get test' do
+  describe 'g_et_ldapservers_ldapserver_id_sambadomains_id test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for ldapservers_samba_domains_list
-  # List Samba Domains
-  # This endpoint returns all samba domains for an LDAP server.  ##### Sample Request &#x60;&#x60;&#x60; curl -X GET https://console.jumpcloud.com/api/v2/ldapservers/{LDAP_ID}/sambadomains \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39;   &#x60;&#x60;&#x60;
-  # @param ldapserver_id Unique identifier of the LDAP server.
-  # @param [Hash] opts the optional parameters
-  # @option opts [String] :content_type 
-  # @option opts [String] :accept 
-  # @option opts [Array<String>] :fields The comma separated fields included in the returned records. If omitted, the default list of fields will be returned. 
-  # @option opts [Array<String>] :filter Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
-  # @option opts [Integer] :limit The number of records to return at once. Limited to 100.
-  # @option opts [Integer] :skip The offset into the records to return.
-  # @option opts [Array<String>] :sort The comma separated fields used to sort the collection. Default sort is ascending, prefix with &#x60;-&#x60; to sort descending. 
-  # @option opts [String] :x_org_id 
-  # @return [Array<SambaDomainOutput>]
-  describe 'ldapservers_samba_domains_list test' do
-    it "should work" do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
-  # unit tests for ldapservers_samba_domains_post
+  # unit tests for p_ost_ldapservers_ldapserver_id_sambadomains
   # Create Samba Domain
   # This endpoint allows you to create a samba domain for an LDAP server.  ##### Sample Request &#x60;&#x60;&#x60; curl -X POST https://console.jumpcloud.com/api/v2/ldapservers/{LDAP_ID}/sambadomains \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; \\   -d &#39;{ \&quot;sid\&quot;:\&quot;{SID_ID}\&quot;, \&quot;name\&quot;:\&quot;{WORKGROUP_NAME}\&quot; }&#39; &#x60;&#x60;&#x60;
   # @param ldapserver_id Unique identifier of the LDAP server.
@@ -94,13 +94,13 @@ describe 'SambaDomainsApi' do
   # @option opts [String] :accept 
   # @option opts [String] :x_org_id 
   # @return [SambaDomainOutput]
-  describe 'ldapservers_samba_domains_post test' do
+  describe 'p_ost_ldapservers_ldapserver_id_sambadomains test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for ldapservers_samba_domains_put
+  # unit tests for p_ut_ldapservers_ldapserver_id_sambadomains_id
   # Update Samba Domain
   # This endpoint allows you to update the samba domain information for an LDAP server.  ##### Sample Request &#x60;&#x60;&#x60; curl -X PUT https://console.jumpcloud.com/api/v2/ldapservers/{LDAP_ID}/sambadomains/{SAMBA_ID} \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; \\   -d &#39;{ \&quot;sid\&quot;:\&quot;{SID_ID}\&quot;, \&quot;name\&quot;:\&quot;{WORKGROUP_NAME}\&quot; }&#39;  &#x60;&#x60;&#x60;
   # @param ldapserver_id Unique identifier of the LDAP server.
@@ -111,7 +111,7 @@ describe 'SambaDomainsApi' do
   # @option opts [String] :accept 
   # @option opts [String] :x_org_id 
   # @return [SambaDomainOutput]
-  describe 'ldapservers_samba_domains_put test' do
+  describe 'p_ut_ldapservers_ldapserver_id_sambadomains_id test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

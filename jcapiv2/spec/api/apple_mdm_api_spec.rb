@@ -1,7 +1,7 @@
 =begin
 #JumpCloud APIs
 
-# JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
+#JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
 
 OpenAPI spec version: 2.0
 
@@ -32,92 +32,207 @@ describe 'AppleMDMApi' do
     end
   end
 
-  # unit tests for applemdms_delete
+  # unit tests for d_elete_applemdms_id
   # Delete an Apple MDM
   # Removes an Apple MDM configuration.  Warning: This is a destructive operation and will remove your Apple Push Certificates.  We will no longer be able to manage your devices and the only recovery option is to re-register all devices into MDM.  #### Sample Request &#x60;&#x60;&#x60; curl -X DELETE https://console.jumpcloud.com/api/v2/applemdms/{id} \\   -H &#39;accept: application/json&#39; \\   -H &#39;content-type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
-  # @param apple_mdm_id 
-  # @param content_type 
+  # @param id 
   # @param accept 
+  # @param content_type 
   # @param [Hash] opts the optional parameters
   # @option opts [String] :x_org_id 
   # @return [AppleMDM]
-  describe 'applemdms_delete test' do
+  describe 'd_elete_applemdms_id test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for applemdms_list
+  # unit tests for g_et_applemdms
   # List Apple MDMs
   # Get a list of all Apple MDM configurations.  An empty topic indicates that a signed certificate from Apple has not been provided to the PUT endpoint yet.  Note: currently only one MDM configuration per organization is supported.  #### Sample Request &#x60;&#x60;&#x60; curl https://console.jumpcloud.com/api/v2/applemdms \\   -H &#39;accept: application/json&#39; \\   -H &#39;content-type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
-  # @param content_type 
   # @param accept 
+  # @param content_type 
   # @param [Hash] opts the optional parameters
   # @option opts [String] :x_org_id 
   # @return [Array<AppleMDM>]
-  describe 'applemdms_list test' do
+  describe 'g_et_applemdms test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for applemdms_post
-  # Create Apple MDM
-  # Creates an Apple MDM Enrollment for an organization. Only one enrollment per organization will be allowed.  Note that this is the first step in completly setting up an MDM Enrollment.  The user must supply the returned plist to Apple for signing, and then provide the certificate provided by Apple back into the PUT API.  #### Sample Request &#x60;&#x60;&#x60;   curl -X POST https://console.jumpcloud.com/api/v2/organizations/{Organization_ID}/mdm \\   -H &#39;accept: application/json&#39; \\   -H &#39;content-type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; \\   -d &#39;{}&#39; &#x60;&#x60;&#x60;
-  # @param content_type 
+  # unit tests for g_et_applemdms_apple_mdm_id_csr
+  # Get Apple MDM CSR Plist
+  # Retrieves an Apple MDM signed CSR Plist for an organization.  The user must supply the returned plist to Apple for signing, and then provide the certificate provided by Apple back into the PUT API.  #### Sample Request &#x60;&#x60;&#x60;   curl -X GET https://console.jumpcloud.com/api/v2/applemdms/{APPLE_MDM_ID}/csr \\   -H &#39;accept: application/json&#39; \\   -H &#39;content-type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
+  # @param apple_mdm_id 
   # @param accept 
+  # @param content_type 
+  # @param [Hash] opts the optional parameters
+  # @option opts [String] :x_org_id 
+  # @return [AppleMdmSignedCsrPlist]
+  describe 'g_et_applemdms_apple_mdm_id_csr test' do
+    it "should work" do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for g_et_applemdms_apple_mdm_id_depkey
+  # Get Apple MDM DEP Public Key
+  # Retrieves an Apple MDM DEP Public Key.
+  # @param apple_mdm_id 
+  # @param accept 
+  # @param content_type 
+  # @param [Hash] opts the optional parameters
+  # @option opts [String] :x_org_id 
+  # @return [AppleMdmPublicKeyCert]
+  describe 'g_et_applemdms_apple_mdm_id_depkey test' do
+    it "should work" do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for g_et_applemdms_apple_mdm_id_devices
+  # List AppleMDM Devices
+  # Lists all Apple MDM devices.  The filter and sort queries will allow the following fields: &#x60;createdAt&#x60; &#x60;depRegistered&#x60; &#x60;enrolled&#x60; &#x60;id&#x60; &#x60;osVersion&#x60; &#x60;serialNumber&#x60; &#x60;udid&#x60;  #### Sample Request &#x60;&#x60;&#x60;   curl -X GET https://console.jumpcloud.com/api/v2/applemdms/{apple_mdm_id}/devices \\   -H &#39;accept: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; \\   -d &#39;{}&#39; &#x60;&#x60;&#x60;
+  # @param apple_mdm_id 
+  # @param [Hash] opts the optional parameters
+  # @option opts [Integer] :limit The number of records to return at once. Limited to 100.
+  # @option opts [Integer] :skip The offset into the records to return.
+  # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
+  # @option opts [Array<String>] :sort The comma separated fields used to sort the collection. Default sort is ascending, prefix with &#x60;-&#x60; to sort descending. 
+  # @option opts [String] :x_org_id 
+  # @option opts [Integer] :x_total_count 
+  # @option opts [Integer] :x_unfiltered_total_count If provided in the request with any non-empty value, this header will be returned on the response populated with the total count of objects without filters taken into account
+  # @return [Array<AppleMdmDevice>]
+  describe 'g_et_applemdms_apple_mdm_id_devices test' do
+    it "should work" do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for g_et_applemdms_apple_mdm_id_enrollmentprofiles
+  # List Apple MDM Enrollment Profiles
+  # Get a list of enrollment profiles for an apple mdm.  Note: currently only one enrollment profile is supported.  #### Sample Request &#x60;&#x60;&#x60;  curl https://console.jumpcloud.com/api/v2/applemdms/{APPLE_MDM_ID}/enrollmentprofiles \\   -H &#39;accept: application/json&#39; \\   -H &#39;content-type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
+  # @param apple_mdm_id 
+  # @param accept 
+  # @param content_type 
+  # @param [Hash] opts the optional parameters
+  # @option opts [String] :x_org_id 
+  # @return [Array<AppleMDM>]
+  describe 'g_et_applemdms_apple_mdm_id_enrollmentprofiles test' do
+    it "should work" do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for g_et_applemdms_apple_mdm_id_enrollmentprofiles_id
+  # Get an Apple MDM Enrollment Profile
+  # Get an enrollment profile  Currently only requesting the mobileconfig is supported.  #### Sample Request  &#x60;&#x60;&#x60; curl https://console.jumpcloud.com/api/v2/applemdms/{APPLE_MDM_ID}/enrollmentprofiles/{ID} \\   -H &#39;accept: application/x-apple-aspen-config&#39; \\   -H &#39;content-type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
+  # @param apple_mdm_id 
+  # @param id 
+  # @param accept 
+  # @param content_type 
+  # @param [Hash] opts the optional parameters
+  # @option opts [String] :x_org_id 
+  # @return [Mobileconfig]
+  describe 'g_et_applemdms_apple_mdm_id_enrollmentprofiles_id test' do
+    it "should work" do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for p_ost_applemdms_apple_mdm_id_devices_device_id_erase
+  # Erase Device
+  # Erases a DEP-enrolled device.  #### Sample Request &#x60;&#x60;&#x60;   curl -X POST https://console.jumpcloud.com/api/v2/applemdms/{apple_mdm_id}/devices/{device_id}/erase \\   -H &#39;accept: application/json&#39; \\   -H &#39;content-type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; \\   -d &#39;{}&#39; &#x60;&#x60;&#x60;
+  # @param apple_mdm_id 
+  # @param device_id 
+  # @param accept 
+  # @param content_type 
+  # @param [Hash] opts the optional parameters
+  # @option opts [Body2] :body 
+  # @option opts [String] :x_org_id 
+  # @return [nil]
+  describe 'p_ost_applemdms_apple_mdm_id_devices_device_id_erase test' do
+    it "should work" do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for p_ost_applemdms_apple_mdm_id_devices_device_id_lock
+  # Lock Device
+  # Locks a DEP-enrolled device.  #### Sample Request &#x60;&#x60;&#x60;   curl -X POST https://console.jumpcloud.com/api/v2/applemdms/{apple_mdm_id}/devices/{device_id}/lock \\   -H &#39;accept: application/json&#39; \\   -H &#39;content-type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; \\   -d &#39;{}&#39; &#x60;&#x60;&#x60;
+  # @param apple_mdm_id 
+  # @param device_id 
+  # @param accept 
+  # @param content_type 
   # @param [Hash] opts the optional parameters
   # @option opts [Body] :body 
   # @option opts [String] :x_org_id 
-  # @return [InlineResponse201]
-  describe 'applemdms_post test' do
+  # @return [nil]
+  describe 'p_ost_applemdms_apple_mdm_id_devices_device_id_lock test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for applemdms_put
-  # Update an Apple MDM
-  # Updates an Apple MDM configuration.  This endpoint is used to supply JumpCloud with a signed certificate from Apple in order to finalize the setup and allow JumpCloud to manage your devices.  #### Sample Request &#x60;&#x60;&#x60;   curl -X PUT https://console.jumpcloud.com/api/v2/applemdms/{ID} \\   -H &#39;accept: application/json&#39; \\   -H &#39;content-type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; \\   -d &#39;{     \&quot;name\&quot;: \&quot;MDM name\&quot;,     \&quot;appleSignedCert\&quot;: \&quot;{CERTIFICATE}\&quot;   }&#39; &#x60;&#x60;&#x60;
+  # unit tests for p_ost_applemdms_apple_mdm_id_devices_device_id_restart
+  # Restart Device
+  # Restarts a DEP-enrolled device.  #### Sample Request &#x60;&#x60;&#x60;   curl -X POST https://console.jumpcloud.com/api/v2/applemdms/{apple_mdm_id}/devices/{device_id}/restart \\   -H &#39;accept: application/json&#39; \\   -H &#39;content-type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; \\   -d &#39;{}&#39; &#x60;&#x60;&#x60;
   # @param apple_mdm_id 
-  # @param content_type 
+  # @param device_id 
   # @param accept 
+  # @param content_type 
+  # @param [Hash] opts the optional parameters
+  # @option opts [String] :x_org_id 
+  # @return [nil]
+  describe 'p_ost_applemdms_apple_mdm_id_devices_device_id_restart test' do
+    it "should work" do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for p_ost_applemdms_apple_mdm_id_devices_device_id_shutdown
+  # Shut Down Device
+  # Shuts down a DEP-enrolled device.  #### Sample Request &#x60;&#x60;&#x60;   curl -X POST https://console.jumpcloud.com/api/v2/applemdms/{apple_mdm_id}/devices/{device_id}/shutdown \\   -H &#39;accept: application/json&#39; \\   -H &#39;content-type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; \\   -d &#39;{}&#39; &#x60;&#x60;&#x60;
+  # @param apple_mdm_id 
+  # @param device_id 
+  # @param accept 
+  # @param content_type 
+  # @param [Hash] opts the optional parameters
+  # @option opts [String] :x_org_id 
+  # @return [nil]
+  describe 'p_ost_applemdms_apple_mdm_id_devices_device_id_shutdown test' do
+    it "should work" do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for p_ost_applemdms_apple_mdm_id_refreshdepdevices
+  # Refresh DEP Devices
+  # Refreshes the list of devices that a JumpCloud admin has added to their virtual MDM in Apple Business Manager - ABM so that they can be DEP enrolled with JumpCloud.  #### Sample Request &#x60;&#x60;&#x60;   curl -X POST https://console.jumpcloud.com/api/v2/applemdms/{apple_mdm_id}/refreshdepdevices \\   -H &#39;accept: application/json&#39; \\   -H &#39;content-type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; \\   -d &#39;{}&#39; &#x60;&#x60;&#x60;
+  # @param apple_mdm_id 
+  # @param accept 
+  # @param content_type 
+  # @param [Hash] opts the optional parameters
+  # @option opts [String] :x_org_id 
+  # @return [nil]
+  describe 'p_ost_applemdms_apple_mdm_id_refreshdepdevices test' do
+    it "should work" do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for p_ut_applemdms_id
+  # Update an Apple MDM
+  # Updates an Apple MDM configuration.  This endpoint is used to supply JumpCloud with a signed certificate from Apple in order to finalize the setup and allow JumpCloud to manage your devices.  It may also be used to update the DEP Settings.  #### Sample Request &#x60;&#x60;&#x60;   curl -X PUT https://console.jumpcloud.com/api/v2/applemdms/{ID} \\   -H &#39;accept: application/json&#39; \\   -H &#39;content-type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; \\   -d &#39;{     \&quot;name\&quot;: \&quot;MDM name\&quot;,     \&quot;appleSignedCert\&quot;: \&quot;{CERTIFICATE}\&quot;,     \&quot;encryptedDepServerToken\&quot;: \&quot;{SERVER_TOKEN}\&quot;,     \&quot;dep\&quot;: {       \&quot;welcomeScreen\&quot;: {         \&quot;title\&quot;: \&quot;Welcome\&quot;,         \&quot;paragraph\&quot;: \&quot;In just a few steps, you will be working securely from your Mac.\&quot;,         \&quot;button\&quot;: \&quot;continue\&quot;,       },     },   }&#39; &#x60;&#x60;&#x60;
+  # @param id 
+  # @param accept 
+  # @param content_type 
   # @param [Hash] opts the optional parameters
   # @option opts [AppleMdmPatchInput] :body 
   # @option opts [String] :x_org_id 
   # @return [AppleMDM]
-  describe 'applemdms_put test' do
-    it "should work" do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
-  # unit tests for enrollmentprofiles_get
-  # Get an Apple MDM Enrollment Profile
-  # Get an enrollment profile  Currently only requesting the mobileconfig is supported.  #### Sample Request  &#x60;&#x60;&#x60; curl https://console.jumpcloud.com/api/v2/applemdms/{APPLE_MDM_ID}/enrollmentprofiles/{ENROLLMENT_PROFILE_ID} \\   -H &#39;accept: application/x-apple-aspen-config&#39; \\   -H &#39;content-type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
-  # @param apple_mdm_id 
-  # @param enrollment_profile_id 
-  # @param content_type 
-  # @param accept 
-  # @param [Hash] opts the optional parameters
-  # @option opts [String] :x_org_id 
-  # @return [Mobileconfig]
-  describe 'enrollmentprofiles_get test' do
-    it "should work" do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
-  # unit tests for enrollmentprofiles_list
-  # List Apple MDM Enrollment Profiles
-  # Get a list of enrollment profiles for an apple mdm.  Note: currently only one enrollment profile is supported.  #### Sample Request &#x60;&#x60;&#x60; curl https://console.jumpcloud.com/api/v2/applemdms/{APPLE_MDM_ID}/enrollmentprofiles \\   -H &#39;accept: application/json&#39; \\   -H &#39;content-type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
-  # @param apple_mdm_id 
-  # @param content_type 
-  # @param accept 
-  # @param [Hash] opts the optional parameters
-  # @option opts [String] :x_org_id 
-  # @return [Array<AppleMDM>]
-  describe 'enrollmentprofiles_list test' do
+  describe 'p_ut_applemdms_id test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

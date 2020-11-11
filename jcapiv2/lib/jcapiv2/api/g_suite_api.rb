@@ -1,7 +1,7 @@
 =begin
 #JumpCloud APIs
 
-# JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
+#JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
 
 OpenAPI spec version: 2.0
 
@@ -20,19 +20,93 @@ module JCAPIv2
       @api_client = api_client
     end
 
+    # Deletes a G Suite translation rule
+    # This endpoint allows you to delete a translation rule for a specific G Suite instance. These rules specify how JumpCloud attributes translate to [G Suite Admin SDK](https://developers.google.com/admin-sdk/directory/) attributes.  #### Sample Request  ``` curl -X DELETE https://console.jumpcloud.com/api/v2/gsuites/{gsuite_id}/translationrules/{id} \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}'   ```
+    # @param gsuite_id 
+    # @param id 
+    # @param accept 
+    # @param content_type 
+    # @param [Hash] opts the optional parameters
+    # @return [nil]
+    def d_elete_gsuites_gsuite_id_translationrules_id(gsuite_id, id, accept, content_type, opts = {})
+      d_elete_gsuites_gsuite_id_translationrules_id_with_http_info(gsuite_id, id, accept, content_type, opts)
+      return nil
+    end
+
+    # Deletes a G Suite translation rule
+    # This endpoint allows you to delete a translation rule for a specific G Suite instance. These rules specify how JumpCloud attributes translate to [G Suite Admin SDK](https://developers.google.com/admin-sdk/directory/) attributes.  #### Sample Request  &#x60;&#x60;&#x60; curl -X DELETE https://console.jumpcloud.com/api/v2/gsuites/{gsuite_id}/translationrules/{id} \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39;   &#x60;&#x60;&#x60;
+    # @param gsuite_id 
+    # @param id 
+    # @param accept 
+    # @param content_type 
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
+    def d_elete_gsuites_gsuite_id_translationrules_id_with_http_info(gsuite_id, id, accept, content_type, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: GSuiteApi.d_elete_gsuites_gsuite_id_translationrules_id ..."
+      end
+      # verify the required parameter 'gsuite_id' is set
+      if @api_client.config.client_side_validation && gsuite_id.nil?
+        fail ArgumentError, "Missing the required parameter 'gsuite_id' when calling GSuiteApi.d_elete_gsuites_gsuite_id_translationrules_id"
+      end
+      # verify the required parameter 'id' is set
+      if @api_client.config.client_side_validation && id.nil?
+        fail ArgumentError, "Missing the required parameter 'id' when calling GSuiteApi.d_elete_gsuites_gsuite_id_translationrules_id"
+      end
+      # verify the required parameter 'accept' is set
+      if @api_client.config.client_side_validation && accept.nil?
+        fail ArgumentError, "Missing the required parameter 'accept' when calling GSuiteApi.d_elete_gsuites_gsuite_id_translationrules_id"
+      end
+      # verify the required parameter 'content_type' is set
+      if @api_client.config.client_side_validation && content_type.nil?
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling GSuiteApi.d_elete_gsuites_gsuite_id_translationrules_id"
+      end
+      # resource path
+      local_var_path = "/gsuites/{gsuite_id}/translationrules/{id}".sub('{' + 'gsuite_id' + '}', gsuite_id.to_s).sub('{' + 'id' + '}', id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+      header_params[:'Accept'] = accept
+      header_params[:'Content-Type'] = content_type
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      auth_names = ['x-api-key']
+      data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: GSuiteApi#d_elete_gsuites_gsuite_id_translationrules_id\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # List the associations of a G Suite instance
     # This endpoint returns the _direct_ associations of this G Suite instance.  A direct association can be a non-homogeneous relationship between 2 different objects, for example G Suite and Users.   #### Sample Request ``` curl -X GET 'https://console.jumpcloud.com/api/v2/gsuites/{Gsuite_ID}/associations?targets=user_group \\   -H 'accept: application/json' \\   -H 'content-type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
     # @param gsuite_id ObjectID of the G Suite instance.
     # @param targets 
-    # @param content_type 
     # @param accept 
+    # @param content_type 
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :limit The number of records to return at once. Limited to 100. (default to 10)
     # @option opts [Integer] :skip The offset into the records to return. (default to 0)
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<GraphConnection>]
-    def graph_g_suite_associations_list(gsuite_id, targets, content_type, accept, opts = {})
-      data, _status_code, _headers = graph_g_suite_associations_list_with_http_info(gsuite_id, targets, content_type, accept, opts)
+    def g_et_gsuites_gsuite_id_associations(gsuite_id, targets, accept, content_type, opts = {})
+      data, _status_code, _headers = g_et_gsuites_gsuite_id_associations_with_http_info(gsuite_id, targets, accept, content_type, opts)
       return data
     end
 
@@ -40,35 +114,35 @@ module JCAPIv2
     # This endpoint returns the _direct_ associations of this G Suite instance.  A direct association can be a non-homogeneous relationship between 2 different objects, for example G Suite and Users.   #### Sample Request &#x60;&#x60;&#x60; curl -X GET &#39;https://console.jumpcloud.com/api/v2/gsuites/{Gsuite_ID}/associations?targets&#x3D;user_group \\   -H &#39;accept: application/json&#39; \\   -H &#39;content-type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
     # @param gsuite_id ObjectID of the G Suite instance.
     # @param targets 
-    # @param content_type 
     # @param accept 
+    # @param content_type 
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :limit The number of records to return at once. Limited to 100.
     # @option opts [Integer] :skip The offset into the records to return.
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<GraphConnection>, Fixnum, Hash)>] Array<GraphConnection> data, response status code and response headers
-    def graph_g_suite_associations_list_with_http_info(gsuite_id, targets, content_type, accept, opts = {})
+    def g_et_gsuites_gsuite_id_associations_with_http_info(gsuite_id, targets, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GSuiteApi.graph_g_suite_associations_list ..."
+        @api_client.config.logger.debug "Calling API: GSuiteApi.g_et_gsuites_gsuite_id_associations ..."
       end
       # verify the required parameter 'gsuite_id' is set
       if @api_client.config.client_side_validation && gsuite_id.nil?
-        fail ArgumentError, "Missing the required parameter 'gsuite_id' when calling GSuiteApi.graph_g_suite_associations_list"
+        fail ArgumentError, "Missing the required parameter 'gsuite_id' when calling GSuiteApi.g_et_gsuites_gsuite_id_associations"
       end
       # verify the required parameter 'targets' is set
       if @api_client.config.client_side_validation && targets.nil?
-        fail ArgumentError, "Missing the required parameter 'targets' when calling GSuiteApi.graph_g_suite_associations_list"
-      end
-      # verify the required parameter 'content_type' is set
-      if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling GSuiteApi.graph_g_suite_associations_list"
+        fail ArgumentError, "Missing the required parameter 'targets' when calling GSuiteApi.g_et_gsuites_gsuite_id_associations"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling GSuiteApi.graph_g_suite_associations_list"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling GSuiteApi.g_et_gsuites_gsuite_id_associations"
+      end
+      # verify the required parameter 'content_type' is set
+      if @api_client.config.client_side_validation && content_type.nil?
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling GSuiteApi.g_et_gsuites_gsuite_id_associations"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GSuiteApi.graph_g_suite_associations_list, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GSuiteApi.g_et_gsuites_gsuite_id_associations, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -86,8 +160,8 @@ module JCAPIv2
       header_params['Accept'] = @api_client.select_header_accept(['application/json'])
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-      header_params[:'Content-Type'] = content_type
       header_params[:'Accept'] = accept
+      header_params[:'Content-Type'] = content_type
       header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
 
       # form parameters
@@ -104,125 +178,57 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<GraphConnection>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GSuiteApi#graph_g_suite_associations_list\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GSuiteApi#g_et_gsuites_gsuite_id_associations\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
-    # Manage the associations of a G Suite instance
-    # This endpoint returns the _direct_ associations of this G Suite instance.  A direct association can be a non-homogeneous relationship between 2 different objects, for example G Suite and Users.   #### Sample Request ``` curl -X POST https://console.jumpcloud.com/api/v2/gsuites/{Gsuite_ID}/associations \\   -H 'accept: application/json' \\   -H 'content-type: application/json' \\   -H 'x-api-key: {API_KEY}' \\   -d '{     \"op\": \"add\",     \"type\": \"user_group\",     \"id\": \"{Group_ID}\" }' ```
-    # @param gsuite_id ObjectID of the G Suite instance.
-    # @param [Hash] opts the optional parameters
-    # @option opts [GraphManagementReq] :body 
-    # @option opts [String] :x_org_id  (default to )
-    # @return [nil]
-    def graph_g_suite_associations_post(gsuite_id, opts = {})
-      graph_g_suite_associations_post_with_http_info(gsuite_id, opts)
-      return nil
-    end
-
-    # Manage the associations of a G Suite instance
-    # This endpoint returns the _direct_ associations of this G Suite instance.  A direct association can be a non-homogeneous relationship between 2 different objects, for example G Suite and Users.   #### Sample Request &#x60;&#x60;&#x60; curl -X POST https://console.jumpcloud.com/api/v2/gsuites/{Gsuite_ID}/associations \\   -H &#39;accept: application/json&#39; \\   -H &#39;content-type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; \\   -d &#39;{     \&quot;op\&quot;: \&quot;add\&quot;,     \&quot;type\&quot;: \&quot;user_group\&quot;,     \&quot;id\&quot;: \&quot;{Group_ID}\&quot; }&#39; &#x60;&#x60;&#x60;
-    # @param gsuite_id ObjectID of the G Suite instance.
-    # @param [Hash] opts the optional parameters
-    # @option opts [GraphManagementReq] :body 
-    # @option opts [String] :x_org_id 
-    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
-    def graph_g_suite_associations_post_with_http_info(gsuite_id, opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GSuiteApi.graph_g_suite_associations_post ..."
-      end
-      # verify the required parameter 'gsuite_id' is set
-      if @api_client.config.client_side_validation && gsuite_id.nil?
-        fail ArgumentError, "Missing the required parameter 'gsuite_id' when calling GSuiteApi.graph_g_suite_associations_post"
-      end
-      # resource path
-      local_var_path = "/gsuites/{gsuite_id}/associations".sub('{' + 'gsuite_id' + '}', gsuite_id.to_s)
-
-      # query parameters
-      query_params = {}
-
-      # header parameters
-      header_params = {}
-      # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
-      # HTTP header 'Content-Type'
-      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-      header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
-
-      # form parameters
-      form_params = {}
-
-      # http body (model)
-      post_body = @api_client.object_to_http_body(opts[:'body'])
-      auth_names = ['x-api-key']
-      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names)
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GSuiteApi#graph_g_suite_associations_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-    # List the Users bound to a G Suite instance
-    # This endpoint will return all Users bound to a G Suite instance, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths.  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this G Suite instance to the corresponding User; this array represents all grouping and/or associations that would have to be removed to deprovision the User from this G Suite instance.  See `/members` and `/associations` endpoints to manage those collections.  #### Sample Request ```   curl -X GET https://console.jumpcloud.com/api/v2/gsuites/{Gsuite_ID}/users \\   -H 'accept: application/json' \\   -H 'content-type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
-    # @param gsuite_id ObjectID of the G Suite instance.
-    # @param content_type 
+    # Get a list of users to import
+    # Lists G Suite users available for import.
+    # @param gsuite_id 
     # @param accept 
+    # @param content_type 
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :limit The number of records to return at once. Limited to 100. (default to 10)
-    # @option opts [String] :x_org_id  (default to )
-    # @option opts [Integer] :skip The offset into the records to return. (default to 0)
-    # @option opts [Array<String>] :filter Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
-    # @return [Array<GraphObjectWithPaths>]
-    def graph_g_suite_traverse_user(gsuite_id, content_type, accept, opts = {})
-      data, _status_code, _headers = graph_g_suite_traverse_user_with_http_info(gsuite_id, content_type, accept, opts)
+    # @option opts [String] :page_token Token used to access next page of results.
+    # @return [InlineResponse2002]
+    def g_et_gsuites_gsuite_id_import_users(gsuite_id, accept, content_type, opts = {})
+      data, _status_code, _headers = g_et_gsuites_gsuite_id_import_users_with_http_info(gsuite_id, accept, content_type, opts)
       return data
     end
 
-    # List the Users bound to a G Suite instance
-    # This endpoint will return all Users bound to a G Suite instance, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths.  The &#x60;attributes&#x60; object is a key/value hash of compiled graph attributes for all paths followed.  The &#x60;paths&#x60; array enumerates each path from this G Suite instance to the corresponding User; this array represents all grouping and/or associations that would have to be removed to deprovision the User from this G Suite instance.  See &#x60;/members&#x60; and &#x60;/associations&#x60; endpoints to manage those collections.  #### Sample Request &#x60;&#x60;&#x60;   curl -X GET https://console.jumpcloud.com/api/v2/gsuites/{Gsuite_ID}/users \\   -H &#39;accept: application/json&#39; \\   -H &#39;content-type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
-    # @param gsuite_id ObjectID of the G Suite instance.
-    # @param content_type 
+    # Get a list of users to import
+    # Lists G Suite users available for import.
+    # @param gsuite_id 
     # @param accept 
+    # @param content_type 
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :limit The number of records to return at once. Limited to 100.
-    # @option opts [String] :x_org_id 
-    # @option opts [Integer] :skip The offset into the records to return.
-    # @option opts [Array<String>] :filter Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
-    # @return [Array<(Array<GraphObjectWithPaths>, Fixnum, Hash)>] Array<GraphObjectWithPaths> data, response status code and response headers
-    def graph_g_suite_traverse_user_with_http_info(gsuite_id, content_type, accept, opts = {})
+    # @option opts [String] :page_token Token used to access next page of results.
+    # @return [Array<(InlineResponse2002, Fixnum, Hash)>] InlineResponse2002 data, response status code and response headers
+    def g_et_gsuites_gsuite_id_import_users_with_http_info(gsuite_id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GSuiteApi.graph_g_suite_traverse_user ..."
+        @api_client.config.logger.debug "Calling API: GSuiteApi.g_et_gsuites_gsuite_id_import_users ..."
       end
       # verify the required parameter 'gsuite_id' is set
       if @api_client.config.client_side_validation && gsuite_id.nil?
-        fail ArgumentError, "Missing the required parameter 'gsuite_id' when calling GSuiteApi.graph_g_suite_traverse_user"
-      end
-      # verify the required parameter 'content_type' is set
-      if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling GSuiteApi.graph_g_suite_traverse_user"
+        fail ArgumentError, "Missing the required parameter 'gsuite_id' when calling GSuiteApi.g_et_gsuites_gsuite_id_import_users"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling GSuiteApi.graph_g_suite_traverse_user"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling GSuiteApi.g_et_gsuites_gsuite_id_import_users"
       end
-      if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GSuiteApi.graph_g_suite_traverse_user, must be greater than or equal to 0.'
+      # verify the required parameter 'content_type' is set
+      if @api_client.config.client_side_validation && content_type.nil?
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling GSuiteApi.g_et_gsuites_gsuite_id_import_users"
       end
-
       # resource path
-      local_var_path = "/gsuites/{gsuite_id}/users".sub('{' + 'gsuite_id' + '}', gsuite_id.to_s)
+      local_var_path = "/gsuites/{gsuite_id}/import/users".sub('{' + 'gsuite_id' + '}', gsuite_id.to_s)
 
       # query parameters
       query_params = {}
       query_params[:'limit'] = opts[:'limit'] if !opts[:'limit'].nil?
-      query_params[:'skip'] = opts[:'skip'] if !opts[:'skip'].nil?
-      query_params[:'filter'] = @api_client.build_collection_param(opts[:'filter'], :csv) if !opts[:'filter'].nil?
+      query_params[:'pageToken'] = opts[:'page_token'] if !opts[:'page_token'].nil?
 
       # header parameters
       header_params = {}
@@ -230,9 +236,8 @@ module JCAPIv2
       header_params['Accept'] = @api_client.select_header_accept(['application/json'])
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-      header_params[:'Content-Type'] = content_type
       header_params[:'Accept'] = accept
-      header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
+      header_params[:'Content-Type'] = content_type
 
       # form parameters
       form_params = {}
@@ -246,389 +251,9 @@ module JCAPIv2
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'Array<GraphObjectWithPaths>')
+        :return_type => 'InlineResponse2002')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GSuiteApi#graph_g_suite_traverse_user\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-    # List the User Groups bound to a G Suite instance
-    # This endpoint will return all User Groups bound to an G Suite instance, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the group's type, id, attributes and paths.  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this G Suite instance to the corresponding User Group; this array represents all grouping and/or associations that would have to be removed to deprovision the User Group from this G Suite instance.  See `/members` and `/associations` endpoints to manage those collections.  #### Sample Request ```   curl -X GET https://console.jumpcloud.com/api/v2/gsuites/{GSuite_ID}/usergroups \\   -H 'accept: application/json' \\   -H 'content-type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
-    # @param gsuite_id ObjectID of the G Suite instance.
-    # @param content_type 
-    # @param accept 
-    # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :limit The number of records to return at once. Limited to 100. (default to 10)
-    # @option opts [String] :x_org_id  (default to )
-    # @option opts [Integer] :skip The offset into the records to return. (default to 0)
-    # @option opts [Array<String>] :filter Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
-    # @return [Array<GraphObjectWithPaths>]
-    def graph_g_suite_traverse_user_group(gsuite_id, content_type, accept, opts = {})
-      data, _status_code, _headers = graph_g_suite_traverse_user_group_with_http_info(gsuite_id, content_type, accept, opts)
-      return data
-    end
-
-    # List the User Groups bound to a G Suite instance
-    # This endpoint will return all User Groups bound to an G Suite instance, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the group&#39;s type, id, attributes and paths.  The &#x60;attributes&#x60; object is a key/value hash of compiled graph attributes for all paths followed.  The &#x60;paths&#x60; array enumerates each path from this G Suite instance to the corresponding User Group; this array represents all grouping and/or associations that would have to be removed to deprovision the User Group from this G Suite instance.  See &#x60;/members&#x60; and &#x60;/associations&#x60; endpoints to manage those collections.  #### Sample Request &#x60;&#x60;&#x60;   curl -X GET https://console.jumpcloud.com/api/v2/gsuites/{GSuite_ID}/usergroups \\   -H &#39;accept: application/json&#39; \\   -H &#39;content-type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
-    # @param gsuite_id ObjectID of the G Suite instance.
-    # @param content_type 
-    # @param accept 
-    # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :limit The number of records to return at once. Limited to 100.
-    # @option opts [String] :x_org_id 
-    # @option opts [Integer] :skip The offset into the records to return.
-    # @option opts [Array<String>] :filter Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
-    # @return [Array<(Array<GraphObjectWithPaths>, Fixnum, Hash)>] Array<GraphObjectWithPaths> data, response status code and response headers
-    def graph_g_suite_traverse_user_group_with_http_info(gsuite_id, content_type, accept, opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GSuiteApi.graph_g_suite_traverse_user_group ..."
-      end
-      # verify the required parameter 'gsuite_id' is set
-      if @api_client.config.client_side_validation && gsuite_id.nil?
-        fail ArgumentError, "Missing the required parameter 'gsuite_id' when calling GSuiteApi.graph_g_suite_traverse_user_group"
-      end
-      # verify the required parameter 'content_type' is set
-      if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling GSuiteApi.graph_g_suite_traverse_user_group"
-      end
-      # verify the required parameter 'accept' is set
-      if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling GSuiteApi.graph_g_suite_traverse_user_group"
-      end
-      if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GSuiteApi.graph_g_suite_traverse_user_group, must be greater than or equal to 0.'
-      end
-
-      # resource path
-      local_var_path = "/gsuites/{gsuite_id}/usergroups".sub('{' + 'gsuite_id' + '}', gsuite_id.to_s)
-
-      # query parameters
-      query_params = {}
-      query_params[:'limit'] = opts[:'limit'] if !opts[:'limit'].nil?
-      query_params[:'skip'] = opts[:'skip'] if !opts[:'skip'].nil?
-      query_params[:'filter'] = @api_client.build_collection_param(opts[:'filter'], :csv) if !opts[:'filter'].nil?
-
-      # header parameters
-      header_params = {}
-      # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
-      # HTTP header 'Content-Type'
-      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-      header_params[:'Content-Type'] = content_type
-      header_params[:'Accept'] = accept
-      header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
-
-      # form parameters
-      form_params = {}
-
-      # http body (model)
-      post_body = nil
-      auth_names = ['x-api-key']
-      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'Array<GraphObjectWithPaths>')
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GSuiteApi#graph_g_suite_traverse_user_group\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-    # Get G Suite
-    # This endpoint returns a specific G Suite.  ##### Sample Request  ```  curl -X GET https://console.jumpcloud.com/api/v2/gsuites/{GSUITE_ID} \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
-    # @param id Unique identifier of the GSuite.
-    # @param content_type 
-    # @param accept 
-    # @param [Hash] opts the optional parameters
-    # @option opts [String] :x_org_id  (default to )
-    # @return [GsuiteOutput]
-    def gsuites_get(id, content_type, accept, opts = {})
-      data, _status_code, _headers = gsuites_get_with_http_info(id, content_type, accept, opts)
-      return data
-    end
-
-    # Get G Suite
-    # This endpoint returns a specific G Suite.  ##### Sample Request  &#x60;&#x60;&#x60;  curl -X GET https://console.jumpcloud.com/api/v2/gsuites/{GSUITE_ID} \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
-    # @param id Unique identifier of the GSuite.
-    # @param content_type 
-    # @param accept 
-    # @param [Hash] opts the optional parameters
-    # @option opts [String] :x_org_id 
-    # @return [Array<(GsuiteOutput, Fixnum, Hash)>] GsuiteOutput data, response status code and response headers
-    def gsuites_get_with_http_info(id, content_type, accept, opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GSuiteApi.gsuites_get ..."
-      end
-      # verify the required parameter 'id' is set
-      if @api_client.config.client_side_validation && id.nil?
-        fail ArgumentError, "Missing the required parameter 'id' when calling GSuiteApi.gsuites_get"
-      end
-      # verify the required parameter 'content_type' is set
-      if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling GSuiteApi.gsuites_get"
-      end
-      # verify the required parameter 'accept' is set
-      if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling GSuiteApi.gsuites_get"
-      end
-      # resource path
-      local_var_path = "/gsuites/{id}".sub('{' + 'id' + '}', id.to_s)
-
-      # query parameters
-      query_params = {}
-
-      # header parameters
-      header_params = {}
-      # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
-      # HTTP header 'Content-Type'
-      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-      header_params[:'Content-Type'] = content_type
-      header_params[:'Accept'] = accept
-      header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
-
-      # form parameters
-      form_params = {}
-
-      # http body (model)
-      post_body = nil
-      auth_names = []
-      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'GsuiteOutput')
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GSuiteApi#gsuites_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-    # Update existing G Suite
-    # This endpoint allows updating some attributes of a G Suite.  ##### Sample Request  ``` curl -X PATCH https://console.jumpcloud.com/api/v2/gsuites/{GSUITE_ID} \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' \\   -d '{     \"userLockoutAction\": \"remove\",     \"userPasswordExpirationAction\": \"disable\"   }' ```
-    # @param id Unique identifier of the GSuite.
-    # @param content_type 
-    # @param accept 
-    # @param [Hash] opts the optional parameters
-    # @option opts [GsuitePatchInput] :body 
-    # @option opts [String] :x_org_id  (default to )
-    # @return [GsuiteOutput]
-    def gsuites_patch(id, content_type, accept, opts = {})
-      data, _status_code, _headers = gsuites_patch_with_http_info(id, content_type, accept, opts)
-      return data
-    end
-
-    # Update existing G Suite
-    # This endpoint allows updating some attributes of a G Suite.  ##### Sample Request  &#x60;&#x60;&#x60; curl -X PATCH https://console.jumpcloud.com/api/v2/gsuites/{GSUITE_ID} \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; \\   -d &#39;{     \&quot;userLockoutAction\&quot;: \&quot;remove\&quot;,     \&quot;userPasswordExpirationAction\&quot;: \&quot;disable\&quot;   }&#39; &#x60;&#x60;&#x60;
-    # @param id Unique identifier of the GSuite.
-    # @param content_type 
-    # @param accept 
-    # @param [Hash] opts the optional parameters
-    # @option opts [GsuitePatchInput] :body 
-    # @option opts [String] :x_org_id 
-    # @return [Array<(GsuiteOutput, Fixnum, Hash)>] GsuiteOutput data, response status code and response headers
-    def gsuites_patch_with_http_info(id, content_type, accept, opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GSuiteApi.gsuites_patch ..."
-      end
-      # verify the required parameter 'id' is set
-      if @api_client.config.client_side_validation && id.nil?
-        fail ArgumentError, "Missing the required parameter 'id' when calling GSuiteApi.gsuites_patch"
-      end
-      # verify the required parameter 'content_type' is set
-      if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling GSuiteApi.gsuites_patch"
-      end
-      # verify the required parameter 'accept' is set
-      if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling GSuiteApi.gsuites_patch"
-      end
-      # resource path
-      local_var_path = "/gsuites/{id}".sub('{' + 'id' + '}', id.to_s)
-
-      # query parameters
-      query_params = {}
-
-      # header parameters
-      header_params = {}
-      # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
-      # HTTP header 'Content-Type'
-      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-      header_params[:'Content-Type'] = content_type
-      header_params[:'Accept'] = accept
-      header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
-
-      # form parameters
-      form_params = {}
-
-      # http body (model)
-      post_body = @api_client.object_to_http_body(opts[:'body'])
-      auth_names = []
-      data, status_code, headers = @api_client.call_api(:PATCH, local_var_path,
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'GsuiteOutput')
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GSuiteApi#gsuites_patch\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-    # Deletes a G Suite translation rule
-    # This endpoint allows you to delete a translation rule for a specific G Suite instance. These rules specify how JumpCloud attributes translate to [G Suite Admin SDK](https://developers.google.com/admin-sdk/directory/) attributes.  #### Sample Request  ``` curl -X DELETE https://console.jumpcloud.com/api/v2/gsuites/{gsuite_id}/translationrules/{id} \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}'   ```
-    # @param gsuite_id 
-    # @param id 
-    # @param content_type 
-    # @param accept 
-    # @param [Hash] opts the optional parameters
-    # @return [nil]
-    def translation_rules_g_suite_delete(gsuite_id, id, content_type, accept, opts = {})
-      translation_rules_g_suite_delete_with_http_info(gsuite_id, id, content_type, accept, opts)
-      return nil
-    end
-
-    # Deletes a G Suite translation rule
-    # This endpoint allows you to delete a translation rule for a specific G Suite instance. These rules specify how JumpCloud attributes translate to [G Suite Admin SDK](https://developers.google.com/admin-sdk/directory/) attributes.  #### Sample Request  &#x60;&#x60;&#x60; curl -X DELETE https://console.jumpcloud.com/api/v2/gsuites/{gsuite_id}/translationrules/{id} \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39;   &#x60;&#x60;&#x60;
-    # @param gsuite_id 
-    # @param id 
-    # @param content_type 
-    # @param accept 
-    # @param [Hash] opts the optional parameters
-    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
-    def translation_rules_g_suite_delete_with_http_info(gsuite_id, id, content_type, accept, opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GSuiteApi.translation_rules_g_suite_delete ..."
-      end
-      # verify the required parameter 'gsuite_id' is set
-      if @api_client.config.client_side_validation && gsuite_id.nil?
-        fail ArgumentError, "Missing the required parameter 'gsuite_id' when calling GSuiteApi.translation_rules_g_suite_delete"
-      end
-      # verify the required parameter 'id' is set
-      if @api_client.config.client_side_validation && id.nil?
-        fail ArgumentError, "Missing the required parameter 'id' when calling GSuiteApi.translation_rules_g_suite_delete"
-      end
-      # verify the required parameter 'content_type' is set
-      if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling GSuiteApi.translation_rules_g_suite_delete"
-      end
-      # verify the required parameter 'accept' is set
-      if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling GSuiteApi.translation_rules_g_suite_delete"
-      end
-      # resource path
-      local_var_path = "/gsuites/{gsuite_id}/translationrules/{id}".sub('{' + 'gsuite_id' + '}', gsuite_id.to_s).sub('{' + 'id' + '}', id.to_s)
-
-      # query parameters
-      query_params = {}
-
-      # header parameters
-      header_params = {}
-      # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
-      # HTTP header 'Content-Type'
-      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-      header_params[:'Content-Type'] = content_type
-      header_params[:'Accept'] = accept
-
-      # form parameters
-      form_params = {}
-
-      # http body (model)
-      post_body = nil
-      auth_names = ['x-api-key']
-      data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names)
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GSuiteApi#translation_rules_g_suite_delete\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-    # Gets a specific G Suite translation rule
-    # This endpoint returns a specific translation rule for a specific G Suite instance. These rules specify how JumpCloud attributes translate to [G Suite Admin SDK](https://developers.google.com/admin-sdk/directory/) attributes.  ###### Sample Request  ```   curl -X GET https://console.jumpcloud.com/api/v2/gsuites/{gsuite_id}/translationrules/{id} \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}'   ```
-    # @param gsuite_id 
-    # @param id 
-    # @param content_type 
-    # @param accept 
-    # @param [Hash] opts the optional parameters
-    # @return [GSuiteTranslationRule]
-    def translation_rules_g_suite_get(gsuite_id, id, content_type, accept, opts = {})
-      data, _status_code, _headers = translation_rules_g_suite_get_with_http_info(gsuite_id, id, content_type, accept, opts)
-      return data
-    end
-
-    # Gets a specific G Suite translation rule
-    # This endpoint returns a specific translation rule for a specific G Suite instance. These rules specify how JumpCloud attributes translate to [G Suite Admin SDK](https://developers.google.com/admin-sdk/directory/) attributes.  ###### Sample Request  &#x60;&#x60;&#x60;   curl -X GET https://console.jumpcloud.com/api/v2/gsuites/{gsuite_id}/translationrules/{id} \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39;   &#x60;&#x60;&#x60;
-    # @param gsuite_id 
-    # @param id 
-    # @param content_type 
-    # @param accept 
-    # @param [Hash] opts the optional parameters
-    # @return [Array<(GSuiteTranslationRule, Fixnum, Hash)>] GSuiteTranslationRule data, response status code and response headers
-    def translation_rules_g_suite_get_with_http_info(gsuite_id, id, content_type, accept, opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GSuiteApi.translation_rules_g_suite_get ..."
-      end
-      # verify the required parameter 'gsuite_id' is set
-      if @api_client.config.client_side_validation && gsuite_id.nil?
-        fail ArgumentError, "Missing the required parameter 'gsuite_id' when calling GSuiteApi.translation_rules_g_suite_get"
-      end
-      # verify the required parameter 'id' is set
-      if @api_client.config.client_side_validation && id.nil?
-        fail ArgumentError, "Missing the required parameter 'id' when calling GSuiteApi.translation_rules_g_suite_get"
-      end
-      # verify the required parameter 'content_type' is set
-      if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling GSuiteApi.translation_rules_g_suite_get"
-      end
-      # verify the required parameter 'accept' is set
-      if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling GSuiteApi.translation_rules_g_suite_get"
-      end
-      # resource path
-      local_var_path = "/gsuites/{gsuite_id}/translationrules/{id}".sub('{' + 'gsuite_id' + '}', gsuite_id.to_s).sub('{' + 'id' + '}', id.to_s)
-
-      # query parameters
-      query_params = {}
-
-      # header parameters
-      header_params = {}
-      # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
-      # HTTP header 'Content-Type'
-      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-      header_params[:'Content-Type'] = content_type
-      header_params[:'Accept'] = accept
-
-      # form parameters
-      form_params = {}
-
-      # http body (model)
-      post_body = nil
-      auth_names = ['x-api-key']
-      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'GSuiteTranslationRule')
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GSuiteApi#translation_rules_g_suite_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GSuiteApi#g_et_gsuites_gsuite_id_import_users\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -636,50 +261,50 @@ module JCAPIv2
     # List all the G Suite Translation Rules
     # This endpoint returns all graph translation rules for a specific G Suite instance. These rules specify how JumpCloud attributes translate to [G Suite Admin SDK](https://developers.google.com/admin-sdk/directory/) attributes.  ##### Sample Request  ```  curl -X GET  https://console.jumpcloud.com/api/v2/gsuites/{gsuite_id}/translationrules \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}'   ```
     # @param gsuite_id 
-    # @param content_type 
     # @param accept 
+    # @param content_type 
     # @param [Hash] opts the optional parameters
     # @option opts [Array<String>] :fields The comma separated fields included in the returned records. If omitted, the default list of fields will be returned. 
-    # @option opts [Array<String>] :filter Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
+    # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [Integer] :limit The number of records to return at once. Limited to 100. (default to 10)
     # @option opts [Integer] :skip The offset into the records to return. (default to 0)
     # @option opts [Array<String>] :sort The comma separated fields used to sort the collection. Default sort is ascending, prefix with &#x60;-&#x60; to sort descending. 
     # @return [Array<GSuiteTranslationRule>]
-    def translation_rules_g_suite_list(gsuite_id, content_type, accept, opts = {})
-      data, _status_code, _headers = translation_rules_g_suite_list_with_http_info(gsuite_id, content_type, accept, opts)
+    def g_et_gsuites_gsuite_id_translationrules(gsuite_id, accept, content_type, opts = {})
+      data, _status_code, _headers = g_et_gsuites_gsuite_id_translationrules_with_http_info(gsuite_id, accept, content_type, opts)
       return data
     end
 
     # List all the G Suite Translation Rules
     # This endpoint returns all graph translation rules for a specific G Suite instance. These rules specify how JumpCloud attributes translate to [G Suite Admin SDK](https://developers.google.com/admin-sdk/directory/) attributes.  ##### Sample Request  &#x60;&#x60;&#x60;  curl -X GET  https://console.jumpcloud.com/api/v2/gsuites/{gsuite_id}/translationrules \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39;   &#x60;&#x60;&#x60;
     # @param gsuite_id 
-    # @param content_type 
     # @param accept 
+    # @param content_type 
     # @param [Hash] opts the optional parameters
     # @option opts [Array<String>] :fields The comma separated fields included in the returned records. If omitted, the default list of fields will be returned. 
-    # @option opts [Array<String>] :filter Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
+    # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [Integer] :limit The number of records to return at once. Limited to 100.
     # @option opts [Integer] :skip The offset into the records to return.
     # @option opts [Array<String>] :sort The comma separated fields used to sort the collection. Default sort is ascending, prefix with &#x60;-&#x60; to sort descending. 
     # @return [Array<(Array<GSuiteTranslationRule>, Fixnum, Hash)>] Array<GSuiteTranslationRule> data, response status code and response headers
-    def translation_rules_g_suite_list_with_http_info(gsuite_id, content_type, accept, opts = {})
+    def g_et_gsuites_gsuite_id_translationrules_with_http_info(gsuite_id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GSuiteApi.translation_rules_g_suite_list ..."
+        @api_client.config.logger.debug "Calling API: GSuiteApi.g_et_gsuites_gsuite_id_translationrules ..."
       end
       # verify the required parameter 'gsuite_id' is set
       if @api_client.config.client_side_validation && gsuite_id.nil?
-        fail ArgumentError, "Missing the required parameter 'gsuite_id' when calling GSuiteApi.translation_rules_g_suite_list"
-      end
-      # verify the required parameter 'content_type' is set
-      if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling GSuiteApi.translation_rules_g_suite_list"
+        fail ArgumentError, "Missing the required parameter 'gsuite_id' when calling GSuiteApi.g_et_gsuites_gsuite_id_translationrules"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling GSuiteApi.translation_rules_g_suite_list"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling GSuiteApi.g_et_gsuites_gsuite_id_translationrules"
+      end
+      # verify the required parameter 'content_type' is set
+      if @api_client.config.client_side_validation && content_type.nil?
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling GSuiteApi.g_et_gsuites_gsuite_id_translationrules"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GSuiteApi.translation_rules_g_suite_list, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GSuiteApi.g_et_gsuites_gsuite_id_translationrules, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -699,8 +324,8 @@ module JCAPIv2
       header_params['Accept'] = @api_client.select_header_accept(['application/json'])
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-      header_params[:'Content-Type'] = content_type
       header_params[:'Accept'] = accept
+      header_params[:'Content-Type'] = content_type
 
       # form parameters
       form_params = {}
@@ -716,7 +341,457 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<GSuiteTranslationRule>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GSuiteApi#translation_rules_g_suite_list\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GSuiteApi#g_et_gsuites_gsuite_id_translationrules\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Gets a specific G Suite translation rule
+    # This endpoint returns a specific translation rule for a specific G Suite instance. These rules specify how JumpCloud attributes translate to [G Suite Admin SDK](https://developers.google.com/admin-sdk/directory/) attributes.  ###### Sample Request  ```   curl -X GET https://console.jumpcloud.com/api/v2/gsuites/{gsuite_id}/translationrules/{id} \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}'   ```
+    # @param gsuite_id 
+    # @param id 
+    # @param accept 
+    # @param content_type 
+    # @param [Hash] opts the optional parameters
+    # @return [GSuiteTranslationRule]
+    def g_et_gsuites_gsuite_id_translationrules_id(gsuite_id, id, accept, content_type, opts = {})
+      data, _status_code, _headers = g_et_gsuites_gsuite_id_translationrules_id_with_http_info(gsuite_id, id, accept, content_type, opts)
+      return data
+    end
+
+    # Gets a specific G Suite translation rule
+    # This endpoint returns a specific translation rule for a specific G Suite instance. These rules specify how JumpCloud attributes translate to [G Suite Admin SDK](https://developers.google.com/admin-sdk/directory/) attributes.  ###### Sample Request  &#x60;&#x60;&#x60;   curl -X GET https://console.jumpcloud.com/api/v2/gsuites/{gsuite_id}/translationrules/{id} \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39;   &#x60;&#x60;&#x60;
+    # @param gsuite_id 
+    # @param id 
+    # @param accept 
+    # @param content_type 
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(GSuiteTranslationRule, Fixnum, Hash)>] GSuiteTranslationRule data, response status code and response headers
+    def g_et_gsuites_gsuite_id_translationrules_id_with_http_info(gsuite_id, id, accept, content_type, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: GSuiteApi.g_et_gsuites_gsuite_id_translationrules_id ..."
+      end
+      # verify the required parameter 'gsuite_id' is set
+      if @api_client.config.client_side_validation && gsuite_id.nil?
+        fail ArgumentError, "Missing the required parameter 'gsuite_id' when calling GSuiteApi.g_et_gsuites_gsuite_id_translationrules_id"
+      end
+      # verify the required parameter 'id' is set
+      if @api_client.config.client_side_validation && id.nil?
+        fail ArgumentError, "Missing the required parameter 'id' when calling GSuiteApi.g_et_gsuites_gsuite_id_translationrules_id"
+      end
+      # verify the required parameter 'accept' is set
+      if @api_client.config.client_side_validation && accept.nil?
+        fail ArgumentError, "Missing the required parameter 'accept' when calling GSuiteApi.g_et_gsuites_gsuite_id_translationrules_id"
+      end
+      # verify the required parameter 'content_type' is set
+      if @api_client.config.client_side_validation && content_type.nil?
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling GSuiteApi.g_et_gsuites_gsuite_id_translationrules_id"
+      end
+      # resource path
+      local_var_path = "/gsuites/{gsuite_id}/translationrules/{id}".sub('{' + 'gsuite_id' + '}', gsuite_id.to_s).sub('{' + 'id' + '}', id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+      header_params[:'Accept'] = accept
+      header_params[:'Content-Type'] = content_type
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      auth_names = ['x-api-key']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'GSuiteTranslationRule')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: GSuiteApi#g_et_gsuites_gsuite_id_translationrules_id\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # List the User Groups bound to a G Suite instance
+    # This endpoint will return all User Groups bound to an G Suite instance, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the group's type, id, attributes and paths.  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this G Suite instance to the corresponding User Group; this array represents all grouping and/or associations that would have to be removed to deprovision the User Group from this G Suite instance.  See `/members` and `/associations` endpoints to manage those collections.  #### Sample Request ```   curl -X GET https://console.jumpcloud.com/api/v2/gsuites/{GSuite_ID}/usergroups \\   -H 'accept: application/json' \\   -H 'content-type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
+    # @param gsuite_id ObjectID of the G Suite instance.
+    # @param accept 
+    # @param content_type 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :limit The number of records to return at once. Limited to 100. (default to 10)
+    # @option opts [Integer] :skip The offset into the records to return. (default to 0)
+    # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
+    # @option opts [String] :x_org_id  (default to )
+    # @return [Array<GraphObjectWithPaths>]
+    def g_et_gsuites_gsuite_id_usergroups(gsuite_id, accept, content_type, opts = {})
+      data, _status_code, _headers = g_et_gsuites_gsuite_id_usergroups_with_http_info(gsuite_id, accept, content_type, opts)
+      return data
+    end
+
+    # List the User Groups bound to a G Suite instance
+    # This endpoint will return all User Groups bound to an G Suite instance, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the group&#39;s type, id, attributes and paths.  The &#x60;attributes&#x60; object is a key/value hash of compiled graph attributes for all paths followed.  The &#x60;paths&#x60; array enumerates each path from this G Suite instance to the corresponding User Group; this array represents all grouping and/or associations that would have to be removed to deprovision the User Group from this G Suite instance.  See &#x60;/members&#x60; and &#x60;/associations&#x60; endpoints to manage those collections.  #### Sample Request &#x60;&#x60;&#x60;   curl -X GET https://console.jumpcloud.com/api/v2/gsuites/{GSuite_ID}/usergroups \\   -H &#39;accept: application/json&#39; \\   -H &#39;content-type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
+    # @param gsuite_id ObjectID of the G Suite instance.
+    # @param accept 
+    # @param content_type 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :limit The number of records to return at once. Limited to 100.
+    # @option opts [Integer] :skip The offset into the records to return.
+    # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
+    # @option opts [String] :x_org_id 
+    # @return [Array<(Array<GraphObjectWithPaths>, Fixnum, Hash)>] Array<GraphObjectWithPaths> data, response status code and response headers
+    def g_et_gsuites_gsuite_id_usergroups_with_http_info(gsuite_id, accept, content_type, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: GSuiteApi.g_et_gsuites_gsuite_id_usergroups ..."
+      end
+      # verify the required parameter 'gsuite_id' is set
+      if @api_client.config.client_side_validation && gsuite_id.nil?
+        fail ArgumentError, "Missing the required parameter 'gsuite_id' when calling GSuiteApi.g_et_gsuites_gsuite_id_usergroups"
+      end
+      # verify the required parameter 'accept' is set
+      if @api_client.config.client_side_validation && accept.nil?
+        fail ArgumentError, "Missing the required parameter 'accept' when calling GSuiteApi.g_et_gsuites_gsuite_id_usergroups"
+      end
+      # verify the required parameter 'content_type' is set
+      if @api_client.config.client_side_validation && content_type.nil?
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling GSuiteApi.g_et_gsuites_gsuite_id_usergroups"
+      end
+      if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GSuiteApi.g_et_gsuites_gsuite_id_usergroups, must be greater than or equal to 0.'
+      end
+
+      # resource path
+      local_var_path = "/gsuites/{gsuite_id}/usergroups".sub('{' + 'gsuite_id' + '}', gsuite_id.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'limit'] = opts[:'limit'] if !opts[:'limit'].nil?
+      query_params[:'skip'] = opts[:'skip'] if !opts[:'skip'].nil?
+      query_params[:'filter'] = @api_client.build_collection_param(opts[:'filter'], :csv) if !opts[:'filter'].nil?
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+      header_params[:'Accept'] = accept
+      header_params[:'Content-Type'] = content_type
+      header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      auth_names = ['x-api-key']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'Array<GraphObjectWithPaths>')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: GSuiteApi#g_et_gsuites_gsuite_id_usergroups\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # List the Users bound to a G Suite instance
+    # This endpoint will return all Users bound to a G Suite instance, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths.  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this G Suite instance to the corresponding User; this array represents all grouping and/or associations that would have to be removed to deprovision the User from this G Suite instance.  See `/members` and `/associations` endpoints to manage those collections.  #### Sample Request ```   curl -X GET https://console.jumpcloud.com/api/v2/gsuites/{Gsuite_ID}/users \\   -H 'accept: application/json' \\   -H 'content-type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
+    # @param gsuite_id ObjectID of the G Suite instance.
+    # @param accept 
+    # @param content_type 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :limit The number of records to return at once. Limited to 100. (default to 10)
+    # @option opts [Integer] :skip The offset into the records to return. (default to 0)
+    # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
+    # @option opts [String] :x_org_id  (default to )
+    # @return [Array<GraphObjectWithPaths>]
+    def g_et_gsuites_gsuite_id_users(gsuite_id, accept, content_type, opts = {})
+      data, _status_code, _headers = g_et_gsuites_gsuite_id_users_with_http_info(gsuite_id, accept, content_type, opts)
+      return data
+    end
+
+    # List the Users bound to a G Suite instance
+    # This endpoint will return all Users bound to a G Suite instance, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths.  The &#x60;attributes&#x60; object is a key/value hash of compiled graph attributes for all paths followed.  The &#x60;paths&#x60; array enumerates each path from this G Suite instance to the corresponding User; this array represents all grouping and/or associations that would have to be removed to deprovision the User from this G Suite instance.  See &#x60;/members&#x60; and &#x60;/associations&#x60; endpoints to manage those collections.  #### Sample Request &#x60;&#x60;&#x60;   curl -X GET https://console.jumpcloud.com/api/v2/gsuites/{Gsuite_ID}/users \\   -H &#39;accept: application/json&#39; \\   -H &#39;content-type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
+    # @param gsuite_id ObjectID of the G Suite instance.
+    # @param accept 
+    # @param content_type 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :limit The number of records to return at once. Limited to 100.
+    # @option opts [Integer] :skip The offset into the records to return.
+    # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
+    # @option opts [String] :x_org_id 
+    # @return [Array<(Array<GraphObjectWithPaths>, Fixnum, Hash)>] Array<GraphObjectWithPaths> data, response status code and response headers
+    def g_et_gsuites_gsuite_id_users_with_http_info(gsuite_id, accept, content_type, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: GSuiteApi.g_et_gsuites_gsuite_id_users ..."
+      end
+      # verify the required parameter 'gsuite_id' is set
+      if @api_client.config.client_side_validation && gsuite_id.nil?
+        fail ArgumentError, "Missing the required parameter 'gsuite_id' when calling GSuiteApi.g_et_gsuites_gsuite_id_users"
+      end
+      # verify the required parameter 'accept' is set
+      if @api_client.config.client_side_validation && accept.nil?
+        fail ArgumentError, "Missing the required parameter 'accept' when calling GSuiteApi.g_et_gsuites_gsuite_id_users"
+      end
+      # verify the required parameter 'content_type' is set
+      if @api_client.config.client_side_validation && content_type.nil?
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling GSuiteApi.g_et_gsuites_gsuite_id_users"
+      end
+      if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GSuiteApi.g_et_gsuites_gsuite_id_users, must be greater than or equal to 0.'
+      end
+
+      # resource path
+      local_var_path = "/gsuites/{gsuite_id}/users".sub('{' + 'gsuite_id' + '}', gsuite_id.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'limit'] = opts[:'limit'] if !opts[:'limit'].nil?
+      query_params[:'skip'] = opts[:'skip'] if !opts[:'skip'].nil?
+      query_params[:'filter'] = @api_client.build_collection_param(opts[:'filter'], :csv) if !opts[:'filter'].nil?
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+      header_params[:'Accept'] = accept
+      header_params[:'Content-Type'] = content_type
+      header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      auth_names = ['x-api-key']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'Array<GraphObjectWithPaths>')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: GSuiteApi#g_et_gsuites_gsuite_id_users\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get G Suite
+    # This endpoint returns a specific G Suite.  ##### Sample Request  ```  curl -X GET https://console.jumpcloud.com/api/v2/gsuites/{GSUITE_ID} \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
+    # @param id Unique identifier of the GSuite.
+    # @param accept 
+    # @param content_type 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :x_org_id  (default to )
+    # @return [GsuiteOutput]
+    def g_et_gsuites_id(id, accept, content_type, opts = {})
+      data, _status_code, _headers = g_et_gsuites_id_with_http_info(id, accept, content_type, opts)
+      return data
+    end
+
+    # Get G Suite
+    # This endpoint returns a specific G Suite.  ##### Sample Request  &#x60;&#x60;&#x60;  curl -X GET https://console.jumpcloud.com/api/v2/gsuites/{GSUITE_ID} \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
+    # @param id Unique identifier of the GSuite.
+    # @param accept 
+    # @param content_type 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :x_org_id 
+    # @return [Array<(GsuiteOutput, Fixnum, Hash)>] GsuiteOutput data, response status code and response headers
+    def g_et_gsuites_id_with_http_info(id, accept, content_type, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: GSuiteApi.g_et_gsuites_id ..."
+      end
+      # verify the required parameter 'id' is set
+      if @api_client.config.client_side_validation && id.nil?
+        fail ArgumentError, "Missing the required parameter 'id' when calling GSuiteApi.g_et_gsuites_id"
+      end
+      # verify the required parameter 'accept' is set
+      if @api_client.config.client_side_validation && accept.nil?
+        fail ArgumentError, "Missing the required parameter 'accept' when calling GSuiteApi.g_et_gsuites_id"
+      end
+      # verify the required parameter 'content_type' is set
+      if @api_client.config.client_side_validation && content_type.nil?
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling GSuiteApi.g_et_gsuites_id"
+      end
+      # resource path
+      local_var_path = "/gsuites/{id}".sub('{' + 'id' + '}', id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+      header_params[:'Accept'] = accept
+      header_params[:'Content-Type'] = content_type
+      header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      auth_names = ['x-api-key']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'GsuiteOutput')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: GSuiteApi#g_et_gsuites_id\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Update existing G Suite
+    # This endpoint allows updating some attributes of a G Suite.  ##### Sample Request  ``` curl -X PATCH https://console.jumpcloud.com/api/v2/gsuites/{GSUITE_ID} \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' \\   -d '{     \"userLockoutAction\": \"suspend\",     \"userPasswordExpirationAction\": \"maintain\"   }' ```
+    # @param id Unique identifier of the GSuite.
+    # @param accept 
+    # @param content_type 
+    # @param [Hash] opts the optional parameters
+    # @option opts [GsuitePatchInput] :body 
+    # @option opts [String] :x_org_id  (default to )
+    # @return [GsuiteOutput]
+    def p_atch_gsuites_id(id, accept, content_type, opts = {})
+      data, _status_code, _headers = p_atch_gsuites_id_with_http_info(id, accept, content_type, opts)
+      return data
+    end
+
+    # Update existing G Suite
+    # This endpoint allows updating some attributes of a G Suite.  ##### Sample Request  &#x60;&#x60;&#x60; curl -X PATCH https://console.jumpcloud.com/api/v2/gsuites/{GSUITE_ID} \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; \\   -d &#39;{     \&quot;userLockoutAction\&quot;: \&quot;suspend\&quot;,     \&quot;userPasswordExpirationAction\&quot;: \&quot;maintain\&quot;   }&#39; &#x60;&#x60;&#x60;
+    # @param id Unique identifier of the GSuite.
+    # @param accept 
+    # @param content_type 
+    # @param [Hash] opts the optional parameters
+    # @option opts [GsuitePatchInput] :body 
+    # @option opts [String] :x_org_id 
+    # @return [Array<(GsuiteOutput, Fixnum, Hash)>] GsuiteOutput data, response status code and response headers
+    def p_atch_gsuites_id_with_http_info(id, accept, content_type, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: GSuiteApi.p_atch_gsuites_id ..."
+      end
+      # verify the required parameter 'id' is set
+      if @api_client.config.client_side_validation && id.nil?
+        fail ArgumentError, "Missing the required parameter 'id' when calling GSuiteApi.p_atch_gsuites_id"
+      end
+      # verify the required parameter 'accept' is set
+      if @api_client.config.client_side_validation && accept.nil?
+        fail ArgumentError, "Missing the required parameter 'accept' when calling GSuiteApi.p_atch_gsuites_id"
+      end
+      # verify the required parameter 'content_type' is set
+      if @api_client.config.client_side_validation && content_type.nil?
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling GSuiteApi.p_atch_gsuites_id"
+      end
+      # resource path
+      local_var_path = "/gsuites/{id}".sub('{' + 'id' + '}', id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+      header_params[:'Accept'] = accept
+      header_params[:'Content-Type'] = content_type
+      header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(opts[:'body'])
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:PATCH, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'GsuiteOutput')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: GSuiteApi#p_atch_gsuites_id\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Manage the associations of a G Suite instance
+    # This endpoint returns the _direct_ associations of this G Suite instance.  A direct association can be a non-homogeneous relationship between 2 different objects, for example G Suite and Users.   #### Sample Request ``` curl -X POST https://console.jumpcloud.com/api/v2/gsuites/{Gsuite_ID}/associations \\   -H 'accept: application/json' \\   -H 'content-type: application/json' \\   -H 'x-api-key: {API_KEY}' \\   -d '{     \"op\": \"add\",     \"type\": \"user_group\",     \"id\": \"{Group_ID}\" }' ```
+    # @param gsuite_id ObjectID of the G Suite instance.
+    # @param [Hash] opts the optional parameters
+    # @option opts [GraphManagementReq] :body 
+    # @option opts [String] :x_org_id  (default to )
+    # @return [nil]
+    def p_ost_gsuites_gsuite_id_associations(gsuite_id, opts = {})
+      p_ost_gsuites_gsuite_id_associations_with_http_info(gsuite_id, opts)
+      return nil
+    end
+
+    # Manage the associations of a G Suite instance
+    # This endpoint returns the _direct_ associations of this G Suite instance.  A direct association can be a non-homogeneous relationship between 2 different objects, for example G Suite and Users.   #### Sample Request &#x60;&#x60;&#x60; curl -X POST https://console.jumpcloud.com/api/v2/gsuites/{Gsuite_ID}/associations \\   -H &#39;accept: application/json&#39; \\   -H &#39;content-type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; \\   -d &#39;{     \&quot;op\&quot;: \&quot;add\&quot;,     \&quot;type\&quot;: \&quot;user_group\&quot;,     \&quot;id\&quot;: \&quot;{Group_ID}\&quot; }&#39; &#x60;&#x60;&#x60;
+    # @param gsuite_id ObjectID of the G Suite instance.
+    # @param [Hash] opts the optional parameters
+    # @option opts [GraphManagementReq] :body 
+    # @option opts [String] :x_org_id 
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
+    def p_ost_gsuites_gsuite_id_associations_with_http_info(gsuite_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: GSuiteApi.p_ost_gsuites_gsuite_id_associations ..."
+      end
+      # verify the required parameter 'gsuite_id' is set
+      if @api_client.config.client_side_validation && gsuite_id.nil?
+        fail ArgumentError, "Missing the required parameter 'gsuite_id' when calling GSuiteApi.p_ost_gsuites_gsuite_id_associations"
+      end
+      # resource path
+      local_var_path = "/gsuites/{gsuite_id}/associations".sub('{' + 'gsuite_id' + '}', gsuite_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+      header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(opts[:'body'])
+      auth_names = ['x-api-key']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: GSuiteApi#p_ost_gsuites_gsuite_id_associations\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -724,39 +799,39 @@ module JCAPIv2
     # Create a new G Suite Translation Rule
     # This endpoint allows you to create a translation rule for a specific G Suite instance. These rules specify how JumpCloud attributes translate to [G Suite Admin SDK](https://developers.google.com/admin-sdk/directory/) attributes.  ##### Sample Request ``` curl -X POST https://console.jumpcloud.com/api/v2/gsuites/{gsuite_id}/translationrules \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' \\   -d '{   {Translation Rule Parameters} }'  ```
     # @param gsuite_id 
-    # @param content_type 
     # @param accept 
+    # @param content_type 
     # @param [Hash] opts the optional parameters
     # @option opts [GSuiteTranslationRuleRequest] :body 
     # @return [GSuiteTranslationRule]
-    def translation_rules_g_suite_post(gsuite_id, content_type, accept, opts = {})
-      data, _status_code, _headers = translation_rules_g_suite_post_with_http_info(gsuite_id, content_type, accept, opts)
+    def p_ost_gsuites_gsuite_id_translationrules(gsuite_id, accept, content_type, opts = {})
+      data, _status_code, _headers = p_ost_gsuites_gsuite_id_translationrules_with_http_info(gsuite_id, accept, content_type, opts)
       return data
     end
 
     # Create a new G Suite Translation Rule
     # This endpoint allows you to create a translation rule for a specific G Suite instance. These rules specify how JumpCloud attributes translate to [G Suite Admin SDK](https://developers.google.com/admin-sdk/directory/) attributes.  ##### Sample Request &#x60;&#x60;&#x60; curl -X POST https://console.jumpcloud.com/api/v2/gsuites/{gsuite_id}/translationrules \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; \\   -d &#39;{   {Translation Rule Parameters} }&#39;  &#x60;&#x60;&#x60;
     # @param gsuite_id 
-    # @param content_type 
     # @param accept 
+    # @param content_type 
     # @param [Hash] opts the optional parameters
     # @option opts [GSuiteTranslationRuleRequest] :body 
     # @return [Array<(GSuiteTranslationRule, Fixnum, Hash)>] GSuiteTranslationRule data, response status code and response headers
-    def translation_rules_g_suite_post_with_http_info(gsuite_id, content_type, accept, opts = {})
+    def p_ost_gsuites_gsuite_id_translationrules_with_http_info(gsuite_id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GSuiteApi.translation_rules_g_suite_post ..."
+        @api_client.config.logger.debug "Calling API: GSuiteApi.p_ost_gsuites_gsuite_id_translationrules ..."
       end
       # verify the required parameter 'gsuite_id' is set
       if @api_client.config.client_side_validation && gsuite_id.nil?
-        fail ArgumentError, "Missing the required parameter 'gsuite_id' when calling GSuiteApi.translation_rules_g_suite_post"
-      end
-      # verify the required parameter 'content_type' is set
-      if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling GSuiteApi.translation_rules_g_suite_post"
+        fail ArgumentError, "Missing the required parameter 'gsuite_id' when calling GSuiteApi.p_ost_gsuites_gsuite_id_translationrules"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling GSuiteApi.translation_rules_g_suite_post"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling GSuiteApi.p_ost_gsuites_gsuite_id_translationrules"
+      end
+      # verify the required parameter 'content_type' is set
+      if @api_client.config.client_side_validation && content_type.nil?
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling GSuiteApi.p_ost_gsuites_gsuite_id_translationrules"
       end
       # resource path
       local_var_path = "/gsuites/{gsuite_id}/translationrules".sub('{' + 'gsuite_id' + '}', gsuite_id.to_s)
@@ -770,8 +845,8 @@ module JCAPIv2
       header_params['Accept'] = @api_client.select_header_accept(['application/json'])
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-      header_params[:'Content-Type'] = content_type
       header_params[:'Accept'] = accept
+      header_params[:'Content-Type'] = content_type
 
       # form parameters
       form_params = {}
@@ -787,7 +862,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'GSuiteTranslationRule')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GSuiteApi#translation_rules_g_suite_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GSuiteApi#p_ost_gsuites_gsuite_id_translationrules\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

@@ -1,7 +1,7 @@
 =begin
 #JumpCloud APIs
 
-# JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
+#JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
 
 OpenAPI spec version: 2.0
 
@@ -26,8 +26,8 @@ module JCAPIv2
     # @param [Hash] opts the optional parameters
     # @option opts [String] :x_org_id  (default to )
     # @return [Systemfdekey]
-    def systems_get_fde_key(system_id, opts = {})
-      data, _status_code, _headers = systems_get_fde_key_with_http_info(system_id, opts)
+    def g_et_systems_system_id_fdekey(system_id, opts = {})
+      data, _status_code, _headers = g_et_systems_system_id_fdekey_with_http_info(system_id, opts)
       return data
     end
 
@@ -37,13 +37,13 @@ module JCAPIv2
     # @param [Hash] opts the optional parameters
     # @option opts [String] :x_org_id 
     # @return [Array<(Systemfdekey, Fixnum, Hash)>] Systemfdekey data, response status code and response headers
-    def systems_get_fde_key_with_http_info(system_id, opts = {})
+    def g_et_systems_system_id_fdekey_with_http_info(system_id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: FdeApi.systems_get_fde_key ..."
+        @api_client.config.logger.debug "Calling API: FdeApi.g_et_systems_system_id_fdekey ..."
       end
       # verify the required parameter 'system_id' is set
       if @api_client.config.client_side_validation && system_id.nil?
-        fail ArgumentError, "Missing the required parameter 'system_id' when calling FdeApi.systems_get_fde_key"
+        fail ArgumentError, "Missing the required parameter 'system_id' when calling FdeApi.g_et_systems_system_id_fdekey"
       end
       # resource path
       local_var_path = "/systems/{system_id}/fdekey".sub('{' + 'system_id' + '}', system_id.to_s)
@@ -73,7 +73,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Systemfdekey')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: FdeApi#systems_get_fde_key\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: FdeApi#g_et_systems_system_id_fdekey\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

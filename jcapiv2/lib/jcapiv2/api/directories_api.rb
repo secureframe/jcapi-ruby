@@ -1,7 +1,7 @@
 =begin
 #JumpCloud APIs
 
-# JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
+#JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
 
 OpenAPI spec version: 2.0
 
@@ -22,8 +22,8 @@ module JCAPIv2
 
     # List All Directories
     # This endpoint returns all active directories (LDAP, O365 Suite, G-Suite).  #### Sample Request ```  curl -X GET https://console.jumpcloud.com/api/v2/directories \\   -H 'accept: application/json' \\   -H 'content-type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
-    # @param content_type 
     # @param accept 
+    # @param content_type 
     # @param [Hash] opts the optional parameters
     # @option opts [Array<String>] :fields The comma separated fields included in the returned records. If omitted, the default list of fields will be returned. 
     # @option opts [Integer] :limit The number of records to return at once. Limited to 100. (default to 10)
@@ -31,15 +31,15 @@ module JCAPIv2
     # @option opts [Integer] :skip The offset into the records to return. (default to 0)
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<Directory>]
-    def directories_list(content_type, accept, opts = {})
-      data, _status_code, _headers = directories_list_with_http_info(content_type, accept, opts)
+    def g_et_directories(accept, content_type, opts = {})
+      data, _status_code, _headers = g_et_directories_with_http_info(accept, content_type, opts)
       return data
     end
 
     # List All Directories
     # This endpoint returns all active directories (LDAP, O365 Suite, G-Suite).  #### Sample Request &#x60;&#x60;&#x60;  curl -X GET https://console.jumpcloud.com/api/v2/directories \\   -H &#39;accept: application/json&#39; \\   -H &#39;content-type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
-    # @param content_type 
     # @param accept 
+    # @param content_type 
     # @param [Hash] opts the optional parameters
     # @option opts [Array<String>] :fields The comma separated fields included in the returned records. If omitted, the default list of fields will be returned. 
     # @option opts [Integer] :limit The number of records to return at once. Limited to 100.
@@ -47,20 +47,20 @@ module JCAPIv2
     # @option opts [Integer] :skip The offset into the records to return.
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<Directory>, Fixnum, Hash)>] Array<Directory> data, response status code and response headers
-    def directories_list_with_http_info(content_type, accept, opts = {})
+    def g_et_directories_with_http_info(accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: DirectoriesApi.directories_list ..."
-      end
-      # verify the required parameter 'content_type' is set
-      if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling DirectoriesApi.directories_list"
+        @api_client.config.logger.debug "Calling API: DirectoriesApi.g_et_directories ..."
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling DirectoriesApi.directories_list"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling DirectoriesApi.g_et_directories"
+      end
+      # verify the required parameter 'content_type' is set
+      if @api_client.config.client_side_validation && content_type.nil?
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling DirectoriesApi.g_et_directories"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling DirectoriesApi.directories_list, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling DirectoriesApi.g_et_directories, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -79,8 +79,8 @@ module JCAPIv2
       header_params['Accept'] = @api_client.select_header_accept(['application/json'])
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-      header_params[:'Content-Type'] = content_type
       header_params[:'Accept'] = accept
+      header_params[:'Content-Type'] = content_type
       header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
 
       # form parameters
@@ -97,7 +97,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<Directory>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: DirectoriesApi#directories_list\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: DirectoriesApi#g_et_directories\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

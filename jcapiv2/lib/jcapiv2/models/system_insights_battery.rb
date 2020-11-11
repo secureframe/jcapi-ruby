@@ -1,7 +1,7 @@
 =begin
 #JumpCloud APIs
 
-# JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
+#JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
 
 OpenAPI spec version: 2.0
 
@@ -15,96 +15,24 @@ require 'date'
 module JCAPIv2
 
   class SystemInsightsBattery
-    attr_accessor :amgerage
-
-    attr_accessor :charged
-
-    attr_accessor :charging
-
     attr_accessor :collection_time
 
-    attr_accessor :condition
-
-    attr_accessor :current_capacity
-
-    attr_accessor :cycle_count
-
-    attr_accessor :designed_capacity
-
-    attr_accessor :health
-
-    attr_accessor :manufacture_date
-
-    attr_accessor :manufacturer
-
-    attr_accessor :max_capacity
-
-    attr_accessor :minutes_to_full_charge
-
-    attr_accessor :minutes_until_empty
-
-    attr_accessor :model
-
-    attr_accessor :percent_remaining
-
-    attr_accessor :serial_number
-
-    attr_accessor :state
-
     attr_accessor :system_id
-
-    attr_accessor :voltage
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'amgerage' => :'amgerage',
-        :'charged' => :'charged',
-        :'charging' => :'charging',
         :'collection_time' => :'collection_time',
-        :'condition' => :'condition',
-        :'current_capacity' => :'current_capacity',
-        :'cycle_count' => :'cycle_count',
-        :'designed_capacity' => :'designed_capacity',
-        :'health' => :'health',
-        :'manufacture_date' => :'manufacture_date',
-        :'manufacturer' => :'manufacturer',
-        :'max_capacity' => :'max_capacity',
-        :'minutes_to_full_charge' => :'minutes_to_full_charge',
-        :'minutes_until_empty' => :'minutes_until_empty',
-        :'model' => :'model',
-        :'percent_remaining' => :'percent_remaining',
-        :'serial_number' => :'serial_number',
-        :'state' => :'state',
-        :'system_id' => :'system_id',
-        :'voltage' => :'voltage'
+        :'system_id' => :'system_id'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'amgerage' => :'Integer',
-        :'charged' => :'Integer',
-        :'charging' => :'Integer',
         :'collection_time' => :'String',
-        :'condition' => :'String',
-        :'current_capacity' => :'Integer',
-        :'cycle_count' => :'Integer',
-        :'designed_capacity' => :'Integer',
-        :'health' => :'String',
-        :'manufacture_date' => :'Integer',
-        :'manufacturer' => :'String',
-        :'max_capacity' => :'Integer',
-        :'minutes_to_full_charge' => :'Integer',
-        :'minutes_until_empty' => :'Integer',
-        :'model' => :'String',
-        :'percent_remaining' => :'Integer',
-        :'serial_number' => :'String',
-        :'state' => :'String',
-        :'system_id' => :'String',
-        :'voltage' => :'Integer'
+        :'system_id' => :'String'
       }
     end
 
@@ -116,84 +44,12 @@ module JCAPIv2
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'amgerage')
-        self.amgerage = attributes[:'amgerage']
-      end
-
-      if attributes.has_key?(:'charged')
-        self.charged = attributes[:'charged']
-      end
-
-      if attributes.has_key?(:'charging')
-        self.charging = attributes[:'charging']
-      end
-
       if attributes.has_key?(:'collection_time')
         self.collection_time = attributes[:'collection_time']
       end
 
-      if attributes.has_key?(:'condition')
-        self.condition = attributes[:'condition']
-      end
-
-      if attributes.has_key?(:'current_capacity')
-        self.current_capacity = attributes[:'current_capacity']
-      end
-
-      if attributes.has_key?(:'cycle_count')
-        self.cycle_count = attributes[:'cycle_count']
-      end
-
-      if attributes.has_key?(:'designed_capacity')
-        self.designed_capacity = attributes[:'designed_capacity']
-      end
-
-      if attributes.has_key?(:'health')
-        self.health = attributes[:'health']
-      end
-
-      if attributes.has_key?(:'manufacture_date')
-        self.manufacture_date = attributes[:'manufacture_date']
-      end
-
-      if attributes.has_key?(:'manufacturer')
-        self.manufacturer = attributes[:'manufacturer']
-      end
-
-      if attributes.has_key?(:'max_capacity')
-        self.max_capacity = attributes[:'max_capacity']
-      end
-
-      if attributes.has_key?(:'minutes_to_full_charge')
-        self.minutes_to_full_charge = attributes[:'minutes_to_full_charge']
-      end
-
-      if attributes.has_key?(:'minutes_until_empty')
-        self.minutes_until_empty = attributes[:'minutes_until_empty']
-      end
-
-      if attributes.has_key?(:'model')
-        self.model = attributes[:'model']
-      end
-
-      if attributes.has_key?(:'percent_remaining')
-        self.percent_remaining = attributes[:'percent_remaining']
-      end
-
-      if attributes.has_key?(:'serial_number')
-        self.serial_number = attributes[:'serial_number']
-      end
-
-      if attributes.has_key?(:'state')
-        self.state = attributes[:'state']
-      end
-
       if attributes.has_key?(:'system_id')
         self.system_id = attributes[:'system_id']
-      end
-
-      if attributes.has_key?(:'voltage')
-        self.voltage = attributes[:'voltage']
       end
 
     end
@@ -216,26 +72,8 @@ module JCAPIv2
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          amgerage == o.amgerage &&
-          charged == o.charged &&
-          charging == o.charging &&
           collection_time == o.collection_time &&
-          condition == o.condition &&
-          current_capacity == o.current_capacity &&
-          cycle_count == o.cycle_count &&
-          designed_capacity == o.designed_capacity &&
-          health == o.health &&
-          manufacture_date == o.manufacture_date &&
-          manufacturer == o.manufacturer &&
-          max_capacity == o.max_capacity &&
-          minutes_to_full_charge == o.minutes_to_full_charge &&
-          minutes_until_empty == o.minutes_until_empty &&
-          model == o.model &&
-          percent_remaining == o.percent_remaining &&
-          serial_number == o.serial_number &&
-          state == o.state &&
-          system_id == o.system_id &&
-          voltage == o.voltage
+          system_id == o.system_id
     end
 
     # @see the `==` method
@@ -247,7 +85,7 @@ module JCAPIv2
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [amgerage, charged, charging, collection_time, condition, current_capacity, cycle_count, designed_capacity, health, manufacture_date, manufacturer, max_capacity, minutes_to_full_charge, minutes_until_empty, model, percent_remaining, serial_number, state, system_id, voltage].hash
+      [collection_time, system_id].hash
     end
 
     # Builds the object from hash

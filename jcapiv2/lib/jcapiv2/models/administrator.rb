@@ -1,7 +1,7 @@
 =begin
 #JumpCloud APIs
 
-# JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
+#JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
 
 OpenAPI spec version: 2.0
 
@@ -27,6 +27,8 @@ module JCAPIv2
 
     attr_accessor :registered
 
+    attr_accessor :suspended
+
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -36,7 +38,8 @@ module JCAPIv2
         :'firstname' => :'firstname',
         :'id' => :'id',
         :'lastname' => :'lastname',
-        :'registered' => :'registered'
+        :'registered' => :'registered',
+        :'suspended' => :'suspended'
       }
     end
 
@@ -48,7 +51,8 @@ module JCAPIv2
         :'firstname' => :'String',
         :'id' => :'String',
         :'lastname' => :'String',
-        :'registered' => :'BOOLEAN'
+        :'registered' => :'BOOLEAN',
+        :'suspended' => :'BOOLEAN'
       }
     end
 
@@ -84,6 +88,10 @@ module JCAPIv2
         self.registered = attributes[:'registered']
       end
 
+      if attributes.has_key?(:'suspended')
+        self.suspended = attributes[:'suspended']
+      end
+
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -109,7 +117,8 @@ module JCAPIv2
           firstname == o.firstname &&
           id == o.id &&
           lastname == o.lastname &&
-          registered == o.registered
+          registered == o.registered &&
+          suspended == o.suspended
     end
 
     # @see the `==` method
@@ -121,7 +130,7 @@ module JCAPIv2
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [email, enable_multi_factor, firstname, id, lastname, registered].hash
+      [email, enable_multi_factor, firstname, id, lastname, registered, suspended].hash
     end
 
     # Builds the object from hash

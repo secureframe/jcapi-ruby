@@ -1,7 +1,7 @@
 =begin
 #JumpCloud APIs
 
-# JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
+#JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
 
 OpenAPI spec version: 2.0
 
@@ -15,11 +15,7 @@ require 'date'
 module JCAPIv2
 
   class SystemInsightsEtcHosts
-    attr_accessor :address
-
     attr_accessor :collection_time
-
-    attr_accessor :hostnames
 
     attr_accessor :system_id
 
@@ -27,9 +23,7 @@ module JCAPIv2
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'address' => :'address',
         :'collection_time' => :'collection_time',
-        :'hostnames' => :'hostnames',
         :'system_id' => :'system_id'
       }
     end
@@ -37,9 +31,7 @@ module JCAPIv2
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'address' => :'String',
         :'collection_time' => :'String',
-        :'hostnames' => :'String',
         :'system_id' => :'String'
       }
     end
@@ -52,16 +44,8 @@ module JCAPIv2
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'address')
-        self.address = attributes[:'address']
-      end
-
       if attributes.has_key?(:'collection_time')
         self.collection_time = attributes[:'collection_time']
-      end
-
-      if attributes.has_key?(:'hostnames')
-        self.hostnames = attributes[:'hostnames']
       end
 
       if attributes.has_key?(:'system_id')
@@ -88,9 +72,7 @@ module JCAPIv2
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          address == o.address &&
           collection_time == o.collection_time &&
-          hostnames == o.hostnames &&
           system_id == o.system_id
     end
 
@@ -103,7 +85,7 @@ module JCAPIv2
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [address, collection_time, hostnames, system_id].hash
+      [collection_time, system_id].hash
     end
 
     # Builds the object from hash

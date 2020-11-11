@@ -1,7 +1,7 @@
 =begin
 #JumpCloud APIs
 
-# JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
+#JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
 
 OpenAPI spec version: 2.0
 
@@ -32,14 +32,14 @@ describe 'FdeApi' do
     end
   end
 
-  # unit tests for systems_get_fde_key
+  # unit tests for g_et_systems_system_id_fdekey
   # Get System FDE Key
   # This endpoint will return the current (latest) fde key saved for a system.
   # @param system_id 
   # @param [Hash] opts the optional parameters
   # @option opts [String] :x_org_id 
   # @return [Systemfdekey]
-  describe 'systems_get_fde_key test' do
+  describe 'g_et_systems_system_id_fdekey test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

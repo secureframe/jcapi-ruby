@@ -1,7 +1,7 @@
 =begin
 #JumpCloud APIs
 
-# JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
+#JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
 
 OpenAPI spec version: 2.0
 
@@ -32,258 +32,223 @@ describe 'SystemGroupsApi' do
     end
   end
 
-  # unit tests for graph_system_group_associations_list
-  # List the associations of a System Group
-  # This endpoint returns the _direct_ associations of a System Group.  A direct association can be a non-homogeneous relationship between 2 different objects, for example System Groups and Users.   #### Sample Request &#x60;&#x60;&#x60; curl -X GET https://console.jumpcloud.com/api/v2/systemgroups/{GroupID}/associations?targets&#x3D;user \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
-  # @param group_id ObjectID of the System Group.
-  # @param content_type 
-  # @param accept 
-  # @param targets 
-  # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :limit The number of records to return at once. Limited to 100.
-  # @option opts [Integer] :skip The offset into the records to return.
-  # @option opts [String] :x_org_id 
-  # @return [Array<GraphConnection>]
-  describe 'graph_system_group_associations_list test' do
-    it "should work" do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
-  # unit tests for graph_system_group_associations_post
-  # Manage the associations of a System Group
-  # This endpoint allows you to manage the _direct_ associations of a System Group.  A direct association can be a non-homogeneous relationship between 2 different objects, for example System Groups and Users.   #### Sample Request &#x60;&#x60;&#x60; curl -X POST https://console.jumpcloud.com/api/v2/systemgroups/{GroupID}/associations \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; \\   -d &#39;{     \&quot;op\&quot;: \&quot;add\&quot;,     \&quot;type\&quot;: \&quot;user\&quot;,     \&quot;id\&quot;: \&quot;{UserID}\&quot; }&#39;  &#x60;&#x60;&#x60;
-  # @param group_id ObjectID of the System Group.
-  # @param content_type 
-  # @param accept 
-  # @param [Hash] opts the optional parameters
-  # @option opts [SystemGroupGraphManagementReq] :body 
-  # @option opts [String] :x_org_id 
-  # @return [nil]
-  describe 'graph_system_group_associations_post test' do
-    it "should work" do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
-  # unit tests for graph_system_group_member_of
-  # List the System Group&#39;s parents
-  # This endpoint returns all System Groups a System Group is a member of.  This endpoint is not yet public as we haven&#39;t completed the code yet.
-  # @param group_id ObjectID of the System Group.
-  # @param content_type 
-  # @param accept 
-  # @param [Hash] opts the optional parameters
-  # @option opts [Array<String>] :filter Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
-  # @option opts [Integer] :limit The number of records to return at once. Limited to 100.
-  # @option opts [Integer] :skip The offset into the records to return.
-  # @option opts [Array<String>] :sort The comma separated fields used to sort the collection. Default sort is ascending, prefix with &#x60;-&#x60; to sort descending. 
-  # @option opts [String] :x_org_id 
-  # @return [Array<GraphObjectWithPaths>]
-  describe 'graph_system_group_member_of test' do
-    it "should work" do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
-  # unit tests for graph_system_group_members_list
-  # List the members of a System Group
-  # This endpoint returns the system members of a System Group.  #### Sample Request &#x60;&#x60;&#x60; curl -X GET https://console.jumpcloud.com/api/v2/systemgroups/{Group_ID}/members \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39;  &#x60;&#x60;&#x60;
-  # @param group_id ObjectID of the System Group.
-  # @param content_type 
-  # @param accept 
-  # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :limit The number of records to return at once. Limited to 100.
-  # @option opts [Integer] :skip The offset into the records to return.
-  # @option opts [String] :x_org_id 
-  # @return [Array<GraphConnection>]
-  describe 'graph_system_group_members_list test' do
-    it "should work" do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
-  # unit tests for graph_system_group_members_post
-  # Manage the members of a System Group
-  # This endpoint allows you to manage the system members of a System Group.  #### Sample Request &#x60;&#x60;&#x60; curl -X POST https://console.jumpcloud.com/api/v2/systemgroups/{Group_ID}/members \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; \\   -d &#39;{     \&quot;op\&quot;: \&quot;add\&quot;,     \&quot;type\&quot;: \&quot;system\&quot;,     \&quot;id\&quot;: \&quot;{System_ID}\&quot; }&#39; &#x60;&#x60;&#x60;
-  # @param group_id ObjectID of the System Group.
-  # @param content_type 
-  # @param accept 
-  # @param [Hash] opts the optional parameters
-  # @option opts [SystemGroupMembersReq] :body 
-  # @option opts [String] :date Current date header for the System Context API
-  # @option opts [String] :authorization Authorization header for the System Context API
-  # @option opts [String] :x_org_id 
-  # @return [nil]
-  describe 'graph_system_group_members_post test' do
-    it "should work" do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
-  # unit tests for graph_system_group_membership
-  # List the System Group&#39;s membership
-  # This endpoint returns all Systems that are a member of this System Group.  #### Sample Request &#x60;&#x60;&#x60; curl -X GET https://console.jumpcloud.com/api/v2/systemgroups/{Group_ID/membership \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39;  &#x60;&#x60;&#x60;
-  # @param group_id ObjectID of the System Group.
-  # @param content_type 
-  # @param accept 
-  # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :limit The number of records to return at once. Limited to 100.
-  # @option opts [Integer] :skip The offset into the records to return.
-  # @option opts [Array<String>] :sort The comma separated fields used to sort the collection. Default sort is ascending, prefix with &#x60;-&#x60; to sort descending. 
-  # @option opts [Array<String>] :filter Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
-  # @option opts [String] :x_org_id 
-  # @return [Array<GraphObjectWithPaths>]
-  describe 'graph_system_group_membership test' do
-    it "should work" do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
-  # unit tests for graph_system_group_traverse_policy
-  # List the Policies bound to a System Group
-  # This endpoint will return all Policies bound to a System Group, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths.  The &#x60;attributes&#x60; object is a key/value hash of compiled graph attributes for all paths followed.  The &#x60;paths&#x60; array enumerates each path from this System Group to the corresponding Policy; this array represents all grouping and/or associations that would have to be removed to deprovision the Policy from this System Group.  See &#x60;/members&#x60; and &#x60;/associations&#x60; endpoints to manage those collections.  This endpoint is not public yet as we haven&#39;t finished the code.  ##### Sample Request &#x60;&#x60;&#x60; curl -X GET https://console.jumpcloud.com/api/v2/systemgroups/{GroupID}/policies \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
-  # @param group_id ObjectID of the System Group.
-  # @param content_type 
-  # @param accept 
-  # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :limit The number of records to return at once. Limited to 100.
-  # @option opts [String] :x_org_id 
-  # @option opts [Integer] :skip The offset into the records to return.
-  # @option opts [Array<String>] :filter Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
-  # @return [Array<GraphObjectWithPaths>]
-  describe 'graph_system_group_traverse_policy test' do
-    it "should work" do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
-  # unit tests for graph_system_group_traverse_user
-  # List the Users bound to a System Group
-  # This endpoint will return all Users bound to a System Group, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths.  The &#x60;attributes&#x60; object is a key/value hash of compiled graph attributes for all paths followed.  The &#x60;paths&#x60; array enumerates each path from this System Group to the corresponding User; this array represents all grouping and/or associations that would have to be removed to deprovision the User from this System Group.  See &#x60;/members&#x60; and &#x60;/associations&#x60; endpoints to manage those collections.  #### Sample Request &#x60;&#x60;&#x60; curl -X GET https://console.jumpcloud.com/api/v2/systemgroups/{GroupID}/users \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
-  # @param group_id ObjectID of the System Group.
-  # @param content_type 
-  # @param accept 
-  # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :limit The number of records to return at once. Limited to 100.
-  # @option opts [String] :x_org_id 
-  # @option opts [Integer] :skip The offset into the records to return.
-  # @option opts [Array<String>] :filter Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
-  # @return [Array<GraphObjectWithPaths>]
-  describe 'graph_system_group_traverse_user test' do
-    it "should work" do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
-  # unit tests for graph_system_group_traverse_user_group
-  # List the User Groups bound to a System Group
-  # This endpoint will return all User Groups bound to a System Group, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths.  The &#x60;attributes&#x60; object is a key/value hash of compiled graph attributes for all paths followed.  The &#x60;paths&#x60; array enumerates each path from this System Group to the corresponding User Group; this array represents all grouping and/or associations that would have to be removed to deprovision the User Group from this System Group.  See &#x60;/members&#x60; and &#x60;/associations&#x60; endpoints to manage those collections.  #### Sample Request &#x60;&#x60;&#x60; curl -X GET https://console.jumpcloud.com/api/v2/systemgroups/{GroupID}/usergroups \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39;  &#x60;&#x60;&#x60;
-  # @param group_id ObjectID of the System Group.
-  # @param content_type 
-  # @param accept 
-  # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :limit The number of records to return at once. Limited to 100.
-  # @option opts [String] :x_org_id 
-  # @option opts [Integer] :skip The offset into the records to return.
-  # @option opts [Array<String>] :filter Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
-  # @return [Array<GraphObjectWithPaths>]
-  describe 'graph_system_group_traverse_user_group test' do
-    it "should work" do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
-  # unit tests for groups_system_delete
+  # unit tests for d_elete_systemgroups_id
   # Delete a System Group
   # This endpoint allows you to delete a System Group.  #### Sample Request &#x60;&#x60;&#x60; curl -X DELETE https://console.jumpcloud.com/api/v2/systemgroups/{Group_ID} \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39;  &#x60;&#x60;&#x60;
   # @param id ObjectID of the System Group.
-  # @param content_type 
   # @param accept 
+  # @param content_type 
   # @param [Hash] opts the optional parameters
   # @option opts [String] :x_org_id 
   # @return [nil]
-  describe 'groups_system_delete test' do
+  describe 'd_elete_systemgroups_id test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for groups_system_get
-  # View an individual System Group details
-  # This endpoint returns the details of a System Group.  #### Sample Request &#x60;&#x60;&#x60; curl -X GET https://console.jumpcloud.com/api/v2/systemgroups/{Group_ID} \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
-  # @param id ObjectID of the System Group.
-  # @param content_type 
-  # @param accept 
-  # @param [Hash] opts the optional parameters
-  # @option opts [String] :x_org_id 
-  # @return [SystemGroup]
-  describe 'groups_system_get test' do
-    it "should work" do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
-  # unit tests for groups_system_list
+  # unit tests for g_et_systemgroups
   # List all System Groups
   # This endpoint returns all System Groups.  Available filter fields:   - &#x60;name&#x60;   - &#x60;disabled&#x60;   - &#x60;type&#x60;  #### Sample Request  &#x60;&#x60;&#x60; curl -X GET https://console.jumpcloud.com/api/v2/systemgroups \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
-  # @param content_type 
   # @param accept 
+  # @param content_type 
   # @param [Hash] opts the optional parameters
   # @option opts [Array<String>] :fields The comma separated fields included in the returned records. If omitted, the default list of fields will be returned. 
-  # @option opts [Array<String>] :filter Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
+  # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
   # @option opts [Integer] :limit The number of records to return at once. Limited to 100.
   # @option opts [Integer] :skip The offset into the records to return.
   # @option opts [Array<String>] :sort The comma separated fields used to sort the collection. Default sort is ascending, prefix with &#x60;-&#x60; to sort descending. 
   # @option opts [String] :x_org_id 
   # @return [Array<SystemGroup>]
-  describe 'groups_system_list test' do
+  describe 'g_et_systemgroups test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for groups_system_patch
-  # Partial update a System Group
-  # We have hidden PATCH on the systemgroups and usergroups for now; we don&#39;t have that implemented correctly yet, people should use PUT until we do a true PATCH operation.  #### Sample Request &#x60;&#x60;&#x60; https://console.jumpcloud.com/api/v2/systemgroups/{id} &#x60;&#x60;&#x60;
-  # @param id ObjectID of the System Group.
-  # @param content_type 
+  # unit tests for g_et_systemgroups_group_id_associations
+  # List the associations of a System Group
+  # This endpoint returns the _direct_ associations of a System Group.  A direct association can be a non-homogeneous relationship between 2 different objects, for example System Groups and Users.   #### Sample Request &#x60;&#x60;&#x60; curl -X GET https://console.jumpcloud.com/api/v2/systemgroups/{GroupID}/associations?targets&#x3D;user \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
+  # @param group_id ObjectID of the System Group.
+  # @param targets 
   # @param accept 
+  # @param content_type 
   # @param [Hash] opts the optional parameters
-  # @option opts [SystemGroupData] :body 
+  # @option opts [Integer] :limit The number of records to return at once. Limited to 100.
+  # @option opts [Integer] :skip The offset into the records to return.
+  # @option opts [String] :x_org_id 
+  # @return [Array<GraphConnection>]
+  describe 'g_et_systemgroups_group_id_associations test' do
+    it "should work" do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for g_et_systemgroups_group_id_members
+  # List the members of a System Group
+  # This endpoint returns the system members of a System Group.  #### Sample Request &#x60;&#x60;&#x60; curl -X GET https://console.jumpcloud.com/api/v2/systemgroups/{Group_ID}/members \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39;  &#x60;&#x60;&#x60;
+  # @param group_id ObjectID of the System Group.
+  # @param accept 
+  # @param content_type 
+  # @param [Hash] opts the optional parameters
+  # @option opts [Integer] :limit The number of records to return at once. Limited to 100.
+  # @option opts [Integer] :skip The offset into the records to return.
+  # @option opts [String] :x_org_id 
+  # @return [Array<GraphConnection>]
+  describe 'g_et_systemgroups_group_id_members test' do
+    it "should work" do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for g_et_systemgroups_group_id_membership
+  # List the System Group&#39;s membership
+  # This endpoint returns all Systems that are a member of this System Group.  #### Sample Request &#x60;&#x60;&#x60; curl -X GET https://console.jumpcloud.com/api/v2/systemgroups/{Group_ID/membership \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39;  &#x60;&#x60;&#x60;
+  # @param group_id ObjectID of the System Group.
+  # @param accept 
+  # @param content_type 
+  # @param [Hash] opts the optional parameters
+  # @option opts [Integer] :limit The number of records to return at once. Limited to 100.
+  # @option opts [Integer] :skip The offset into the records to return.
+  # @option opts [Array<String>] :sort The comma separated fields used to sort the collection. Default sort is ascending, prefix with &#x60;-&#x60; to sort descending. 
+  # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
+  # @option opts [String] :x_org_id 
+  # @return [Array<GraphObjectWithPaths>]
+  describe 'g_et_systemgroups_group_id_membership test' do
+    it "should work" do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for g_et_systemgroups_group_id_policies
+  # List the Policies bound to a System Group
+  # This endpoint will return all Policies bound to a System Group, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths.  The &#x60;attributes&#x60; object is a key/value hash of compiled graph attributes for all paths followed.  The &#x60;paths&#x60; array enumerates each path from this System Group to the corresponding Policy; this array represents all grouping and/or associations that would have to be removed to deprovision the Policy from this System Group.  See &#x60;/members&#x60; and &#x60;/associations&#x60; endpoints to manage those collections.  This endpoint is not public yet as we haven&#39;t finished the code.  ##### Sample Request &#x60;&#x60;&#x60; curl -X GET https://console.jumpcloud.com/api/v2/systemgroups/{GroupID}/policies \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
+  # @param group_id ObjectID of the System Group.
+  # @param accept 
+  # @param content_type 
+  # @param [Hash] opts the optional parameters
+  # @option opts [Integer] :limit The number of records to return at once. Limited to 100.
+  # @option opts [Integer] :skip The offset into the records to return.
+  # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
+  # @option opts [String] :x_org_id 
+  # @return [Array<GraphObjectWithPaths>]
+  describe 'g_et_systemgroups_group_id_policies test' do
+    it "should work" do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for g_et_systemgroups_group_id_usergroups
+  # List the User Groups bound to a System Group
+  # This endpoint will return all User Groups bound to a System Group, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths.  The &#x60;attributes&#x60; object is a key/value hash of compiled graph attributes for all paths followed.  The &#x60;paths&#x60; array enumerates each path from this System Group to the corresponding User Group; this array represents all grouping and/or associations that would have to be removed to deprovision the User Group from this System Group.  See &#x60;/members&#x60; and &#x60;/associations&#x60; endpoints to manage those collections.  #### Sample Request &#x60;&#x60;&#x60; curl -X GET https://console.jumpcloud.com/api/v2/systemgroups/{GroupID}/usergroups \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39;  &#x60;&#x60;&#x60;
+  # @param group_id ObjectID of the System Group.
+  # @param accept 
+  # @param content_type 
+  # @param [Hash] opts the optional parameters
+  # @option opts [Integer] :limit The number of records to return at once. Limited to 100.
+  # @option opts [Integer] :skip The offset into the records to return.
+  # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
+  # @option opts [String] :x_org_id 
+  # @return [Array<GraphObjectWithPaths>]
+  describe 'g_et_systemgroups_group_id_usergroups test' do
+    it "should work" do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for g_et_systemgroups_group_id_users
+  # List the Users bound to a System Group
+  # This endpoint will return all Users bound to a System Group, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths.  The &#x60;attributes&#x60; object is a key/value hash of compiled graph attributes for all paths followed.  The &#x60;paths&#x60; array enumerates each path from this System Group to the corresponding User; this array represents all grouping and/or associations that would have to be removed to deprovision the User from this System Group.  See &#x60;/members&#x60; and &#x60;/associations&#x60; endpoints to manage those collections.  #### Sample Request &#x60;&#x60;&#x60; curl -X GET https://console.jumpcloud.com/api/v2/systemgroups/{GroupID}/users \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
+  # @param group_id ObjectID of the System Group.
+  # @param accept 
+  # @param content_type 
+  # @param [Hash] opts the optional parameters
+  # @option opts [Integer] :limit The number of records to return at once. Limited to 100.
+  # @option opts [Integer] :skip The offset into the records to return.
+  # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
+  # @option opts [String] :x_org_id 
+  # @return [Array<GraphObjectWithPaths>]
+  describe 'g_et_systemgroups_group_id_users test' do
+    it "should work" do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for g_et_systemgroups_id
+  # View an individual System Group details
+  # This endpoint returns the details of a System Group.  #### Sample Request &#x60;&#x60;&#x60; curl -X GET https://console.jumpcloud.com/api/v2/systemgroups/{Group_ID} \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
+  # @param id ObjectID of the System Group.
+  # @param accept 
+  # @param content_type 
+  # @param [Hash] opts the optional parameters
   # @option opts [String] :x_org_id 
   # @return [SystemGroup]
-  describe 'groups_system_patch test' do
+  describe 'g_et_systemgroups_id test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for groups_system_post
+  # unit tests for p_ost_systemgroups
   # Create a new System Group
   # This endpoint allows you to create a new System Group.  #### Sample Request  &#x60;&#x60;&#x60; curl -X POST https://console.jumpcloud.com/api/v2/systemgroups \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; \\   -d &#39;{  \&quot;name\&quot;: \&quot;{Group_Name}\&quot; }&#39;  &#x60;&#x60;&#x60;
-  # @param content_type 
   # @param accept 
+  # @param content_type 
   # @param [Hash] opts the optional parameters
   # @option opts [SystemGroupData] :body 
   # @option opts [String] :x_org_id 
   # @return [SystemGroup]
-  describe 'groups_system_post test' do
+  describe 'p_ost_systemgroups test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for groups_system_put
+  # unit tests for p_ost_systemgroups_group_id_associations
+  # Manage the associations of a System Group
+  # This endpoint allows you to manage the _direct_ associations of a System Group.  A direct association can be a non-homogeneous relationship between 2 different objects, for example System Groups and Users.   #### Sample Request &#x60;&#x60;&#x60; curl -X POST https://console.jumpcloud.com/api/v2/systemgroups/{GroupID}/associations \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; \\   -d &#39;{     \&quot;op\&quot;: \&quot;add\&quot;,     \&quot;type\&quot;: \&quot;user\&quot;,     \&quot;id\&quot;: \&quot;{UserID}\&quot; }&#39;  &#x60;&#x60;&#x60;
+  # @param group_id ObjectID of the System Group.
+  # @param accept 
+  # @param content_type 
+  # @param [Hash] opts the optional parameters
+  # @option opts [SystemGroupGraphManagementReq] :body 
+  # @option opts [String] :x_org_id 
+  # @return [nil]
+  describe 'p_ost_systemgroups_group_id_associations test' do
+    it "should work" do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for p_ost_systemgroups_group_id_members
+  # Manage the members of a System Group
+  # This endpoint allows you to manage the system members of a System Group.  #### Sample Request &#x60;&#x60;&#x60; curl -X POST https://console.jumpcloud.com/api/v2/systemgroups/{Group_ID}/members \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; \\   -d &#39;{     \&quot;op\&quot;: \&quot;add\&quot;,     \&quot;type\&quot;: \&quot;system\&quot;,     \&quot;id\&quot;: \&quot;{System_ID}\&quot; }&#39; &#x60;&#x60;&#x60;
+  # @param group_id ObjectID of the System Group.
+  # @param accept 
+  # @param content_type 
+  # @param [Hash] opts the optional parameters
+  # @option opts [SystemGroupMembersReq] :body 
+  # @option opts [String] :authorization Authorization header for the System Context API
+  # @option opts [String] :date Current date header for the System Context API
+  # @option opts [String] :x_org_id 
+  # @return [nil]
+  describe 'p_ost_systemgroups_group_id_members test' do
+    it "should work" do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for p_ut_systemgroups_id
   # Update a System Group
   # This endpoint allows you to do a full update of the System Group.  #### Sample Request &#x60;&#x60;&#x60; curl -X PUT https://console.jumpcloud.com/api/v2/systemgroups/{Group_ID} \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; \\   -d &#39;{  \&quot;name\&quot;: \&quot;Name_Update\&quot; }&#39; &#x60;&#x60;&#x60;
   # @param id ObjectID of the System Group.
-  # @param content_type 
   # @param accept 
+  # @param content_type 
   # @param [Hash] opts the optional parameters
   # @option opts [SystemGroupData] :body 
   # @option opts [String] :x_org_id 
   # @return [SystemGroup]
-  describe 'groups_system_put test' do
+  describe 'p_ut_systemgroups_id test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

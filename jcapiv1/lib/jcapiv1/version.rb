@@ -1,7 +1,7 @@
 =begin
 #JumpCloud APIs
 
-# JumpCloud's V1 API. This set of endpoints allows JumpCloud customers to manage commands, systems, & system users.
+#JumpCloud's V1 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
 
 OpenAPI spec version: 1.0
 
@@ -11,5 +11,5 @@ Swagger Codegen version: 2.3.1
 =end
 
 module JCAPIv1
-  VERSION = "3.0.0"
+  VERSION = "3.0.1"
 end

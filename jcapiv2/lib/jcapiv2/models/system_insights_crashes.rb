@@ -1,7 +1,7 @@
 =begin
 #JumpCloud APIs
 
-# JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
+#JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
 
 OpenAPI spec version: 2.0
 
@@ -15,80 +15,24 @@ require 'date'
 module JCAPIv2
 
   class SystemInsightsCrashes
-    attr_accessor :crash_path
+    attr_accessor :collection_time
 
-    attr_accessor :crashed_thread
-
-    attr_accessor :datetime
-
-    attr_accessor :exception_codes
-
-    attr_accessor :exception_notes
-
-    attr_accessor :exception_type
-
-    attr_accessor :identifier
-
-    attr_accessor :parent
-
-    attr_accessor :path
-
-    attr_accessor :pid
-
-    attr_accessor :registers
-
-    attr_accessor :responsible
-
-    attr_accessor :stack_trace
-
-    attr_accessor :type
-
-    attr_accessor :uid
-
-    attr_accessor :version
+    attr_accessor :system_id
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'crash_path' => :'crash_path',
-        :'crashed_thread' => :'crashed_thread',
-        :'datetime' => :'datetime',
-        :'exception_codes' => :'exception_codes',
-        :'exception_notes' => :'exception_notes',
-        :'exception_type' => :'exception_type',
-        :'identifier' => :'identifier',
-        :'parent' => :'parent',
-        :'path' => :'path',
-        :'pid' => :'pid',
-        :'registers' => :'registers',
-        :'responsible' => :'responsible',
-        :'stack_trace' => :'stack_trace',
-        :'type' => :'type',
-        :'uid' => :'uid',
-        :'version' => :'version'
+        :'collection_time' => :'collection_time',
+        :'system_id' => :'system_id'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'crash_path' => :'String',
-        :'crashed_thread' => :'String',
-        :'datetime' => :'String',
-        :'exception_codes' => :'String',
-        :'exception_notes' => :'String',
-        :'exception_type' => :'String',
-        :'identifier' => :'String',
-        :'parent' => :'String',
-        :'path' => :'String',
-        :'pid' => :'String',
-        :'registers' => :'String',
-        :'responsible' => :'String',
-        :'stack_trace' => :'String',
-        :'type' => :'String',
-        :'uid' => :'Integer',
-        :'version' => :'String'
+        :'collection_time' => :'String',
+        :'system_id' => :'String'
       }
     end
 
@@ -100,68 +44,12 @@ module JCAPIv2
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'crash_path')
-        self.crash_path = attributes[:'crash_path']
+      if attributes.has_key?(:'collection_time')
+        self.collection_time = attributes[:'collection_time']
       end
 
-      if attributes.has_key?(:'crashed_thread')
-        self.crashed_thread = attributes[:'crashed_thread']
-      end
-
-      if attributes.has_key?(:'datetime')
-        self.datetime = attributes[:'datetime']
-      end
-
-      if attributes.has_key?(:'exception_codes')
-        self.exception_codes = attributes[:'exception_codes']
-      end
-
-      if attributes.has_key?(:'exception_notes')
-        self.exception_notes = attributes[:'exception_notes']
-      end
-
-      if attributes.has_key?(:'exception_type')
-        self.exception_type = attributes[:'exception_type']
-      end
-
-      if attributes.has_key?(:'identifier')
-        self.identifier = attributes[:'identifier']
-      end
-
-      if attributes.has_key?(:'parent')
-        self.parent = attributes[:'parent']
-      end
-
-      if attributes.has_key?(:'path')
-        self.path = attributes[:'path']
-      end
-
-      if attributes.has_key?(:'pid')
-        self.pid = attributes[:'pid']
-      end
-
-      if attributes.has_key?(:'registers')
-        self.registers = attributes[:'registers']
-      end
-
-      if attributes.has_key?(:'responsible')
-        self.responsible = attributes[:'responsible']
-      end
-
-      if attributes.has_key?(:'stack_trace')
-        self.stack_trace = attributes[:'stack_trace']
-      end
-
-      if attributes.has_key?(:'type')
-        self.type = attributes[:'type']
-      end
-
-      if attributes.has_key?(:'uid')
-        self.uid = attributes[:'uid']
-      end
-
-      if attributes.has_key?(:'version')
-        self.version = attributes[:'version']
+      if attributes.has_key?(:'system_id')
+        self.system_id = attributes[:'system_id']
       end
 
     end
@@ -184,22 +72,8 @@ module JCAPIv2
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          crash_path == o.crash_path &&
-          crashed_thread == o.crashed_thread &&
-          datetime == o.datetime &&
-          exception_codes == o.exception_codes &&
-          exception_notes == o.exception_notes &&
-          exception_type == o.exception_type &&
-          identifier == o.identifier &&
-          parent == o.parent &&
-          path == o.path &&
-          pid == o.pid &&
-          registers == o.registers &&
-          responsible == o.responsible &&
-          stack_trace == o.stack_trace &&
-          type == o.type &&
-          uid == o.uid &&
-          version == o.version
+          collection_time == o.collection_time &&
+          system_id == o.system_id
     end
 
     # @see the `==` method
@@ -211,7 +85,7 @@ module JCAPIv2
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [crash_path, crashed_thread, datetime, exception_codes, exception_notes, exception_type, identifier, parent, path, pid, registers, responsible, stack_trace, type, uid, version].hash
+      [collection_time, system_id].hash
     end
 
     # Builds the object from hash

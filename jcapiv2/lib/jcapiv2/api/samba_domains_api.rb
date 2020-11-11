@@ -1,7 +1,7 @@
 =begin
 #JumpCloud APIs
 
-# JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
+#JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
 
 OpenAPI spec version: 2.0
 
@@ -29,8 +29,8 @@ module JCAPIv2
     # @option opts [String] :accept  (default to application/json)
     # @option opts [String] :x_org_id  (default to )
     # @return [String]
-    def ldapservers_samba_domains_delete(ldapserver_id, id, opts = {})
-      data, _status_code, _headers = ldapservers_samba_domains_delete_with_http_info(ldapserver_id, id, opts)
+    def d_elete_ldapservers_ldapserver_id_sambadomains_id(ldapserver_id, id, opts = {})
+      data, _status_code, _headers = d_elete_ldapservers_ldapserver_id_sambadomains_id_with_http_info(ldapserver_id, id, opts)
       return data
     end
 
@@ -43,17 +43,17 @@ module JCAPIv2
     # @option opts [String] :accept 
     # @option opts [String] :x_org_id 
     # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
-    def ldapservers_samba_domains_delete_with_http_info(ldapserver_id, id, opts = {})
+    def d_elete_ldapservers_ldapserver_id_sambadomains_id_with_http_info(ldapserver_id, id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SambaDomainsApi.ldapservers_samba_domains_delete ..."
+        @api_client.config.logger.debug "Calling API: SambaDomainsApi.d_elete_ldapservers_ldapserver_id_sambadomains_id ..."
       end
       # verify the required parameter 'ldapserver_id' is set
       if @api_client.config.client_side_validation && ldapserver_id.nil?
-        fail ArgumentError, "Missing the required parameter 'ldapserver_id' when calling SambaDomainsApi.ldapservers_samba_domains_delete"
+        fail ArgumentError, "Missing the required parameter 'ldapserver_id' when calling SambaDomainsApi.d_elete_ldapservers_ldapserver_id_sambadomains_id"
       end
       # verify the required parameter 'id' is set
       if @api_client.config.client_side_validation && id.nil?
-        fail ArgumentError, "Missing the required parameter 'id' when calling SambaDomainsApi.ldapservers_samba_domains_delete"
+        fail ArgumentError, "Missing the required parameter 'id' when calling SambaDomainsApi.d_elete_ldapservers_ldapserver_id_sambadomains_id"
       end
       # resource path
       local_var_path = "/ldapservers/{ldapserver_id}/sambadomains/{id}".sub('{' + 'ldapserver_id' + '}', ldapserver_id.to_s).sub('{' + 'id' + '}', id.to_s)
@@ -85,77 +85,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'String')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SambaDomainsApi#ldapservers_samba_domains_delete\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-    # Get Samba Domain
-    # This endpoint returns a specific samba domain for an LDAP server.  ##### Sample Request ``` curl -X GET \\   https://console.jumpcloud.com/api/v2/ldapservers/ldapservers/{LDAP_ID}/sambadomains/{SAMBA_ID} \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}'   ```
-    # @param ldapserver_id Unique identifier of the LDAP server.
-    # @param id Unique identifier of the samba domain.
-    # @param [Hash] opts the optional parameters
-    # @option opts [String] :content_type  (default to application/json)
-    # @option opts [String] :accept  (default to application/json)
-    # @option opts [String] :x_org_id  (default to )
-    # @return [SambaDomainOutput]
-    def ldapservers_samba_domains_get(ldapserver_id, id, opts = {})
-      data, _status_code, _headers = ldapservers_samba_domains_get_with_http_info(ldapserver_id, id, opts)
-      return data
-    end
-
-    # Get Samba Domain
-    # This endpoint returns a specific samba domain for an LDAP server.  ##### Sample Request &#x60;&#x60;&#x60; curl -X GET \\   https://console.jumpcloud.com/api/v2/ldapservers/ldapservers/{LDAP_ID}/sambadomains/{SAMBA_ID} \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39;   &#x60;&#x60;&#x60;
-    # @param ldapserver_id Unique identifier of the LDAP server.
-    # @param id Unique identifier of the samba domain.
-    # @param [Hash] opts the optional parameters
-    # @option opts [String] :content_type 
-    # @option opts [String] :accept 
-    # @option opts [String] :x_org_id 
-    # @return [Array<(SambaDomainOutput, Fixnum, Hash)>] SambaDomainOutput data, response status code and response headers
-    def ldapservers_samba_domains_get_with_http_info(ldapserver_id, id, opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SambaDomainsApi.ldapservers_samba_domains_get ..."
-      end
-      # verify the required parameter 'ldapserver_id' is set
-      if @api_client.config.client_side_validation && ldapserver_id.nil?
-        fail ArgumentError, "Missing the required parameter 'ldapserver_id' when calling SambaDomainsApi.ldapservers_samba_domains_get"
-      end
-      # verify the required parameter 'id' is set
-      if @api_client.config.client_side_validation && id.nil?
-        fail ArgumentError, "Missing the required parameter 'id' when calling SambaDomainsApi.ldapservers_samba_domains_get"
-      end
-      # resource path
-      local_var_path = "/ldapservers/{ldapserver_id}/sambadomains/{id}".sub('{' + 'ldapserver_id' + '}', ldapserver_id.to_s).sub('{' + 'id' + '}', id.to_s)
-
-      # query parameters
-      query_params = {}
-
-      # header parameters
-      header_params = {}
-      # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
-      # HTTP header 'Content-Type'
-      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-      header_params[:'Content-Type'] = opts[:'content_type'] if !opts[:'content_type'].nil?
-      header_params[:'Accept'] = opts[:'accept'] if !opts[:'accept'].nil?
-      header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
-
-      # form parameters
-      form_params = {}
-
-      # http body (model)
-      post_body = nil
-      auth_names = ['x-api-key']
-      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'SambaDomainOutput')
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SambaDomainsApi#ldapservers_samba_domains_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SambaDomainsApi#d_elete_ldapservers_ldapserver_id_sambadomains_id\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -164,17 +94,17 @@ module JCAPIv2
     # This endpoint returns all samba domains for an LDAP server.  ##### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/ldapservers/{LDAP_ID}/sambadomains \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}'   ```
     # @param ldapserver_id Unique identifier of the LDAP server.
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :content_type  (default to application/json)
-    # @option opts [String] :accept  (default to application/json)
     # @option opts [Array<String>] :fields The comma separated fields included in the returned records. If omitted, the default list of fields will be returned. 
-    # @option opts [Array<String>] :filter Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
+    # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [Integer] :limit The number of records to return at once. Limited to 100. (default to 10)
     # @option opts [Integer] :skip The offset into the records to return. (default to 0)
     # @option opts [Array<String>] :sort The comma separated fields used to sort the collection. Default sort is ascending, prefix with &#x60;-&#x60; to sort descending. 
+    # @option opts [String] :content_type  (default to application/json)
+    # @option opts [String] :accept  (default to application/json)
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<SambaDomainOutput>]
-    def ldapservers_samba_domains_list(ldapserver_id, opts = {})
-      data, _status_code, _headers = ldapservers_samba_domains_list_with_http_info(ldapserver_id, opts)
+    def g_et_ldapservers_ldapserver_id_sambadomains(ldapserver_id, opts = {})
+      data, _status_code, _headers = g_et_ldapservers_ldapserver_id_sambadomains_with_http_info(ldapserver_id, opts)
       return data
     end
 
@@ -182,25 +112,25 @@ module JCAPIv2
     # This endpoint returns all samba domains for an LDAP server.  ##### Sample Request &#x60;&#x60;&#x60; curl -X GET https://console.jumpcloud.com/api/v2/ldapservers/{LDAP_ID}/sambadomains \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39;   &#x60;&#x60;&#x60;
     # @param ldapserver_id Unique identifier of the LDAP server.
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :content_type 
-    # @option opts [String] :accept 
     # @option opts [Array<String>] :fields The comma separated fields included in the returned records. If omitted, the default list of fields will be returned. 
-    # @option opts [Array<String>] :filter Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
+    # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [Integer] :limit The number of records to return at once. Limited to 100.
     # @option opts [Integer] :skip The offset into the records to return.
     # @option opts [Array<String>] :sort The comma separated fields used to sort the collection. Default sort is ascending, prefix with &#x60;-&#x60; to sort descending. 
+    # @option opts [String] :content_type 
+    # @option opts [String] :accept 
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<SambaDomainOutput>, Fixnum, Hash)>] Array<SambaDomainOutput> data, response status code and response headers
-    def ldapservers_samba_domains_list_with_http_info(ldapserver_id, opts = {})
+    def g_et_ldapservers_ldapserver_id_sambadomains_with_http_info(ldapserver_id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SambaDomainsApi.ldapservers_samba_domains_list ..."
+        @api_client.config.logger.debug "Calling API: SambaDomainsApi.g_et_ldapservers_ldapserver_id_sambadomains ..."
       end
       # verify the required parameter 'ldapserver_id' is set
       if @api_client.config.client_side_validation && ldapserver_id.nil?
-        fail ArgumentError, "Missing the required parameter 'ldapserver_id' when calling SambaDomainsApi.ldapservers_samba_domains_list"
+        fail ArgumentError, "Missing the required parameter 'ldapserver_id' when calling SambaDomainsApi.g_et_ldapservers_ldapserver_id_sambadomains"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SambaDomainsApi.ldapservers_samba_domains_list, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SambaDomainsApi.g_et_ldapservers_ldapserver_id_sambadomains, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -238,7 +168,77 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<SambaDomainOutput>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SambaDomainsApi#ldapservers_samba_domains_list\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SambaDomainsApi#g_et_ldapservers_ldapserver_id_sambadomains\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get Samba Domain
+    # This endpoint returns a specific samba domain for an LDAP server.  ##### Sample Request ``` curl -X GET \\   https://console.jumpcloud.com/api/v2/ldapservers/ldapservers/{LDAP_ID}/sambadomains/{SAMBA_ID} \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}'   ```
+    # @param ldapserver_id Unique identifier of the LDAP server.
+    # @param id Unique identifier of the samba domain.
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :content_type  (default to application/json)
+    # @option opts [String] :accept  (default to application/json)
+    # @option opts [String] :x_org_id  (default to )
+    # @return [SambaDomainOutput]
+    def g_et_ldapservers_ldapserver_id_sambadomains_id(ldapserver_id, id, opts = {})
+      data, _status_code, _headers = g_et_ldapservers_ldapserver_id_sambadomains_id_with_http_info(ldapserver_id, id, opts)
+      return data
+    end
+
+    # Get Samba Domain
+    # This endpoint returns a specific samba domain for an LDAP server.  ##### Sample Request &#x60;&#x60;&#x60; curl -X GET \\   https://console.jumpcloud.com/api/v2/ldapservers/ldapservers/{LDAP_ID}/sambadomains/{SAMBA_ID} \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39;   &#x60;&#x60;&#x60;
+    # @param ldapserver_id Unique identifier of the LDAP server.
+    # @param id Unique identifier of the samba domain.
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :content_type 
+    # @option opts [String] :accept 
+    # @option opts [String] :x_org_id 
+    # @return [Array<(SambaDomainOutput, Fixnum, Hash)>] SambaDomainOutput data, response status code and response headers
+    def g_et_ldapservers_ldapserver_id_sambadomains_id_with_http_info(ldapserver_id, id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: SambaDomainsApi.g_et_ldapservers_ldapserver_id_sambadomains_id ..."
+      end
+      # verify the required parameter 'ldapserver_id' is set
+      if @api_client.config.client_side_validation && ldapserver_id.nil?
+        fail ArgumentError, "Missing the required parameter 'ldapserver_id' when calling SambaDomainsApi.g_et_ldapservers_ldapserver_id_sambadomains_id"
+      end
+      # verify the required parameter 'id' is set
+      if @api_client.config.client_side_validation && id.nil?
+        fail ArgumentError, "Missing the required parameter 'id' when calling SambaDomainsApi.g_et_ldapservers_ldapserver_id_sambadomains_id"
+      end
+      # resource path
+      local_var_path = "/ldapservers/{ldapserver_id}/sambadomains/{id}".sub('{' + 'ldapserver_id' + '}', ldapserver_id.to_s).sub('{' + 'id' + '}', id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+      header_params[:'Content-Type'] = opts[:'content_type'] if !opts[:'content_type'].nil?
+      header_params[:'Accept'] = opts[:'accept'] if !opts[:'accept'].nil?
+      header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      auth_names = ['x-api-key']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'SambaDomainOutput')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: SambaDomainsApi#g_et_ldapservers_ldapserver_id_sambadomains_id\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -252,8 +252,8 @@ module JCAPIv2
     # @option opts [String] :accept  (default to application/json)
     # @option opts [String] :x_org_id  (default to )
     # @return [SambaDomainOutput]
-    def ldapservers_samba_domains_post(ldapserver_id, opts = {})
-      data, _status_code, _headers = ldapservers_samba_domains_post_with_http_info(ldapserver_id, opts)
+    def p_ost_ldapservers_ldapserver_id_sambadomains(ldapserver_id, opts = {})
+      data, _status_code, _headers = p_ost_ldapservers_ldapserver_id_sambadomains_with_http_info(ldapserver_id, opts)
       return data
     end
 
@@ -266,13 +266,13 @@ module JCAPIv2
     # @option opts [String] :accept 
     # @option opts [String] :x_org_id 
     # @return [Array<(SambaDomainOutput, Fixnum, Hash)>] SambaDomainOutput data, response status code and response headers
-    def ldapservers_samba_domains_post_with_http_info(ldapserver_id, opts = {})
+    def p_ost_ldapservers_ldapserver_id_sambadomains_with_http_info(ldapserver_id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SambaDomainsApi.ldapservers_samba_domains_post ..."
+        @api_client.config.logger.debug "Calling API: SambaDomainsApi.p_ost_ldapservers_ldapserver_id_sambadomains ..."
       end
       # verify the required parameter 'ldapserver_id' is set
       if @api_client.config.client_side_validation && ldapserver_id.nil?
-        fail ArgumentError, "Missing the required parameter 'ldapserver_id' when calling SambaDomainsApi.ldapservers_samba_domains_post"
+        fail ArgumentError, "Missing the required parameter 'ldapserver_id' when calling SambaDomainsApi.p_ost_ldapservers_ldapserver_id_sambadomains"
       end
       # resource path
       local_var_path = "/ldapservers/{ldapserver_id}/sambadomains".sub('{' + 'ldapserver_id' + '}', ldapserver_id.to_s)
@@ -304,7 +304,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'SambaDomainOutput')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SambaDomainsApi#ldapservers_samba_domains_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SambaDomainsApi#p_ost_ldapservers_ldapserver_id_sambadomains\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -319,8 +319,8 @@ module JCAPIv2
     # @option opts [String] :accept  (default to application/json)
     # @option opts [String] :x_org_id  (default to )
     # @return [SambaDomainOutput]
-    def ldapservers_samba_domains_put(ldapserver_id, id, opts = {})
-      data, _status_code, _headers = ldapservers_samba_domains_put_with_http_info(ldapserver_id, id, opts)
+    def p_ut_ldapservers_ldapserver_id_sambadomains_id(ldapserver_id, id, opts = {})
+      data, _status_code, _headers = p_ut_ldapservers_ldapserver_id_sambadomains_id_with_http_info(ldapserver_id, id, opts)
       return data
     end
 
@@ -334,17 +334,17 @@ module JCAPIv2
     # @option opts [String] :accept 
     # @option opts [String] :x_org_id 
     # @return [Array<(SambaDomainOutput, Fixnum, Hash)>] SambaDomainOutput data, response status code and response headers
-    def ldapservers_samba_domains_put_with_http_info(ldapserver_id, id, opts = {})
+    def p_ut_ldapservers_ldapserver_id_sambadomains_id_with_http_info(ldapserver_id, id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SambaDomainsApi.ldapservers_samba_domains_put ..."
+        @api_client.config.logger.debug "Calling API: SambaDomainsApi.p_ut_ldapservers_ldapserver_id_sambadomains_id ..."
       end
       # verify the required parameter 'ldapserver_id' is set
       if @api_client.config.client_side_validation && ldapserver_id.nil?
-        fail ArgumentError, "Missing the required parameter 'ldapserver_id' when calling SambaDomainsApi.ldapservers_samba_domains_put"
+        fail ArgumentError, "Missing the required parameter 'ldapserver_id' when calling SambaDomainsApi.p_ut_ldapservers_ldapserver_id_sambadomains_id"
       end
       # verify the required parameter 'id' is set
       if @api_client.config.client_side_validation && id.nil?
-        fail ArgumentError, "Missing the required parameter 'id' when calling SambaDomainsApi.ldapservers_samba_domains_put"
+        fail ArgumentError, "Missing the required parameter 'id' when calling SambaDomainsApi.p_ut_ldapservers_ldapserver_id_sambadomains_id"
       end
       # resource path
       local_var_path = "/ldapservers/{ldapserver_id}/sambadomains/{id}".sub('{' + 'ldapserver_id' + '}', ldapserver_id.to_s).sub('{' + 'id' + '}', id.to_s)
@@ -376,7 +376,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'SambaDomainOutput')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SambaDomainsApi#ldapservers_samba_domains_put\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SambaDomainsApi#p_ut_ldapservers_ldapserver_id_sambadomains_id\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

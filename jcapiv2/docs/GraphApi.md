@@ -4,87 +4,85 @@ All URIs are relative to *https://console.jumpcloud.com/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**graph_active_directory_associations_list**](GraphApi.md#graph_active_directory_associations_list) | **GET** /activedirectories/{activedirectory_id}/associations | List the associations of an Active Directory instance
-[**graph_active_directory_associations_post**](GraphApi.md#graph_active_directory_associations_post) | **POST** /activedirectories/{activedirectory_id}/associations | Manage the associations of an Active Directory instance
-[**graph_active_directory_traverse_user**](GraphApi.md#graph_active_directory_traverse_user) | **GET** /activedirectories/{activedirectory_id}/users | List the Users bound to an Active Directory instance
-[**graph_active_directory_traverse_user_group**](GraphApi.md#graph_active_directory_traverse_user_group) | **GET** /activedirectories/{activedirectory_id}/usergroups | List the User Groups bound to an Active Directory instance
-[**graph_application_associations_list**](GraphApi.md#graph_application_associations_list) | **GET** /applications/{application_id}/associations | List the associations of an Application
-[**graph_application_associations_post**](GraphApi.md#graph_application_associations_post) | **POST** /applications/{application_id}/associations | Manage the associations of an Application
-[**graph_application_traverse_user**](GraphApi.md#graph_application_traverse_user) | **GET** /applications/{application_id}/users | List the Users bound to an Application
-[**graph_application_traverse_user_group**](GraphApi.md#graph_application_traverse_user_group) | **GET** /applications/{application_id}/usergroups | List the User Groups bound to an Application
-[**graph_command_associations_list**](GraphApi.md#graph_command_associations_list) | **GET** /commands/{command_id}/associations | List the associations of a Command
-[**graph_command_associations_post**](GraphApi.md#graph_command_associations_post) | **POST** /commands/{command_id}/associations | Manage the associations of a Command
-[**graph_command_traverse_system**](GraphApi.md#graph_command_traverse_system) | **GET** /commands/{command_id}/systems | List the Systems bound to a Command
-[**graph_command_traverse_system_group**](GraphApi.md#graph_command_traverse_system_group) | **GET** /commands/{command_id}/systemgroups | List the System Groups bound to a Command
-[**graph_g_suite_associations_list**](GraphApi.md#graph_g_suite_associations_list) | **GET** /gsuites/{gsuite_id}/associations | List the associations of a G Suite instance
-[**graph_g_suite_associations_post**](GraphApi.md#graph_g_suite_associations_post) | **POST** /gsuites/{gsuite_id}/associations | Manage the associations of a G Suite instance
-[**graph_g_suite_traverse_user**](GraphApi.md#graph_g_suite_traverse_user) | **GET** /gsuites/{gsuite_id}/users | List the Users bound to a G Suite instance
-[**graph_g_suite_traverse_user_group**](GraphApi.md#graph_g_suite_traverse_user_group) | **GET** /gsuites/{gsuite_id}/usergroups | List the User Groups bound to a G Suite instance
-[**graph_ldap_server_associations_list**](GraphApi.md#graph_ldap_server_associations_list) | **GET** /ldapservers/{ldapserver_id}/associations | List the associations of a LDAP Server
-[**graph_ldap_server_associations_post**](GraphApi.md#graph_ldap_server_associations_post) | **POST** /ldapservers/{ldapserver_id}/associations | Manage the associations of a LDAP Server
-[**graph_ldap_server_traverse_user**](GraphApi.md#graph_ldap_server_traverse_user) | **GET** /ldapservers/{ldapserver_id}/users | List the Users bound to a LDAP Server
-[**graph_ldap_server_traverse_user_group**](GraphApi.md#graph_ldap_server_traverse_user_group) | **GET** /ldapservers/{ldapserver_id}/usergroups | List the User Groups bound to a LDAP Server
-[**graph_office365_associations_list**](GraphApi.md#graph_office365_associations_list) | **GET** /office365s/{office365_id}/associations | List the associations of an Office 365 instance
-[**graph_office365_associations_post**](GraphApi.md#graph_office365_associations_post) | **POST** /office365s/{office365_id}/associations | Manage the associations of an Office 365 instance
-[**graph_office365_traverse_user**](GraphApi.md#graph_office365_traverse_user) | **GET** /office365s/{office365_id}/users | List the Users bound to an Office 365 instance
-[**graph_office365_traverse_user_group**](GraphApi.md#graph_office365_traverse_user_group) | **GET** /office365s/{office365_id}/usergroups | List the User Groups bound to an Office 365 instance
-[**graph_policy_associations_list**](GraphApi.md#graph_policy_associations_list) | **GET** /policies/{policy_id}/associations | List the associations of a Policy
-[**graph_policy_associations_post**](GraphApi.md#graph_policy_associations_post) | **POST** /policies/{policy_id}/associations | Manage the associations of a Policy
-[**graph_policy_traverse_system**](GraphApi.md#graph_policy_traverse_system) | **GET** /policies/{policy_id}/systems | List the Systems bound to a Policy
-[**graph_policy_traverse_system_group**](GraphApi.md#graph_policy_traverse_system_group) | **GET** /policies/{policy_id}/systemgroups | List the System Groups bound to a Policy
-[**graph_radius_server_associations_list**](GraphApi.md#graph_radius_server_associations_list) | **GET** /radiusservers/{radiusserver_id}/associations | List the associations of a RADIUS  Server
-[**graph_radius_server_associations_post**](GraphApi.md#graph_radius_server_associations_post) | **POST** /radiusservers/{radiusserver_id}/associations | Manage the associations of a RADIUS Server
-[**graph_radius_server_traverse_user**](GraphApi.md#graph_radius_server_traverse_user) | **GET** /radiusservers/{radiusserver_id}/users | List the Users bound to a RADIUS  Server
-[**graph_radius_server_traverse_user_group**](GraphApi.md#graph_radius_server_traverse_user_group) | **GET** /radiusservers/{radiusserver_id}/usergroups | List the User Groups bound to a RADIUS  Server
-[**graph_system_associations_list**](GraphApi.md#graph_system_associations_list) | **GET** /systems/{system_id}/associations | List the associations of a System
-[**graph_system_associations_post**](GraphApi.md#graph_system_associations_post) | **POST** /systems/{system_id}/associations | Manage associations of a System
-[**graph_system_group_associations_list**](GraphApi.md#graph_system_group_associations_list) | **GET** /systemgroups/{group_id}/associations | List the associations of a System Group
-[**graph_system_group_associations_post**](GraphApi.md#graph_system_group_associations_post) | **POST** /systemgroups/{group_id}/associations | Manage the associations of a System Group
-[**graph_system_group_member_of**](GraphApi.md#graph_system_group_member_of) | **GET** /systemgroups/{group_id}/memberof | List the System Group&#39;s parents
-[**graph_system_group_members_list**](GraphApi.md#graph_system_group_members_list) | **GET** /systemgroups/{group_id}/members | List the members of a System Group
-[**graph_system_group_members_post**](GraphApi.md#graph_system_group_members_post) | **POST** /systemgroups/{group_id}/members | Manage the members of a System Group
-[**graph_system_group_membership**](GraphApi.md#graph_system_group_membership) | **GET** /systemgroups/{group_id}/membership | List the System Group&#39;s membership
-[**graph_system_group_traverse_command**](GraphApi.md#graph_system_group_traverse_command) | **GET** /systemgroups/{group_id}/commands | List the Commands bound to a System Group
-[**graph_system_group_traverse_policy**](GraphApi.md#graph_system_group_traverse_policy) | **GET** /systemgroups/{group_id}/policies | List the Policies bound to a System Group
-[**graph_system_group_traverse_user**](GraphApi.md#graph_system_group_traverse_user) | **GET** /systemgroups/{group_id}/users | List the Users bound to a System Group
-[**graph_system_group_traverse_user_group**](GraphApi.md#graph_system_group_traverse_user_group) | **GET** /systemgroups/{group_id}/usergroups | List the User Groups bound to a System Group
-[**graph_system_member_of**](GraphApi.md#graph_system_member_of) | **GET** /systems/{system_id}/memberof | List the parent Groups of a System
-[**graph_system_traverse_command**](GraphApi.md#graph_system_traverse_command) | **GET** /systems/{system_id}/commands | List the Commands bound to a System
-[**graph_system_traverse_policy**](GraphApi.md#graph_system_traverse_policy) | **GET** /systems/{system_id}/policies | List the Policies bound to a System
-[**graph_system_traverse_user**](GraphApi.md#graph_system_traverse_user) | **GET** /systems/{system_id}/users | List the Users bound to a System
-[**graph_system_traverse_user_group**](GraphApi.md#graph_system_traverse_user_group) | **GET** /systems/{system_id}/usergroups | List the User Groups bound to a System
-[**graph_user_associations_list**](GraphApi.md#graph_user_associations_list) | **GET** /users/{user_id}/associations | List the associations of a User
-[**graph_user_associations_post**](GraphApi.md#graph_user_associations_post) | **POST** /users/{user_id}/associations | Manage the associations of a User
-[**graph_user_group_associations_list**](GraphApi.md#graph_user_group_associations_list) | **GET** /usergroups/{group_id}/associations | List the associations of a User Group.
-[**graph_user_group_associations_post**](GraphApi.md#graph_user_group_associations_post) | **POST** /usergroups/{group_id}/associations | Manage the associations of a User Group
-[**graph_user_group_member_of**](GraphApi.md#graph_user_group_member_of) | **GET** /usergroups/{group_id}/memberof | List the User Group&#39;s parents
-[**graph_user_group_members_list**](GraphApi.md#graph_user_group_members_list) | **GET** /usergroups/{group_id}/members | List the members of a User Group
-[**graph_user_group_members_post**](GraphApi.md#graph_user_group_members_post) | **POST** /usergroups/{group_id}/members | Manage the members of a User Group
-[**graph_user_group_membership**](GraphApi.md#graph_user_group_membership) | **GET** /usergroups/{group_id}/membership | List the User Group&#39;s membership
-[**graph_user_group_traverse_active_directory**](GraphApi.md#graph_user_group_traverse_active_directory) | **GET** /usergroups/{group_id}/activedirectories | List the Active Directories bound to a User Group
-[**graph_user_group_traverse_application**](GraphApi.md#graph_user_group_traverse_application) | **GET** /usergroups/{group_id}/applications | List the Applications bound to a User Group
-[**graph_user_group_traverse_directory**](GraphApi.md#graph_user_group_traverse_directory) | **GET** /usergroups/{group_id}/directories | List the Directories bound to a User Group
-[**graph_user_group_traverse_g_suite**](GraphApi.md#graph_user_group_traverse_g_suite) | **GET** /usergroups/{group_id}/gsuites | List the G Suite instances bound to a User Group
-[**graph_user_group_traverse_ldap_server**](GraphApi.md#graph_user_group_traverse_ldap_server) | **GET** /usergroups/{group_id}/ldapservers | List the LDAP Servers bound to a User Group
-[**graph_user_group_traverse_office365**](GraphApi.md#graph_user_group_traverse_office365) | **GET** /usergroups/{group_id}/office365s | List the Office 365 instances bound to a User Group
-[**graph_user_group_traverse_radius_server**](GraphApi.md#graph_user_group_traverse_radius_server) | **GET** /usergroups/{group_id}/radiusservers | List the RADIUS Servers bound to a User Group
-[**graph_user_group_traverse_system**](GraphApi.md#graph_user_group_traverse_system) | **GET** /usergroups/{group_id}/systems | List the Systems bound to a User Group
-[**graph_user_group_traverse_system_group**](GraphApi.md#graph_user_group_traverse_system_group) | **GET** /usergroups/{group_id}/systemgroups | List the System Groups bound to User Groups
-[**graph_user_member_of**](GraphApi.md#graph_user_member_of) | **GET** /users/{user_id}/memberof | List the parent Groups of a User
-[**graph_user_traverse_active_directory**](GraphApi.md#graph_user_traverse_active_directory) | **GET** /users/{user_id}/activedirectories | List the Active Directory instances bound to a User
-[**graph_user_traverse_application**](GraphApi.md#graph_user_traverse_application) | **GET** /users/{user_id}/applications | List the Applications bound to a User
-[**graph_user_traverse_directory**](GraphApi.md#graph_user_traverse_directory) | **GET** /users/{user_id}/directories | List the Directories bound to a User
-[**graph_user_traverse_g_suite**](GraphApi.md#graph_user_traverse_g_suite) | **GET** /users/{user_id}/gsuites | List the G Suite instances bound to a User
-[**graph_user_traverse_ldap_server**](GraphApi.md#graph_user_traverse_ldap_server) | **GET** /users/{user_id}/ldapservers | List the LDAP servers bound to a User
-[**graph_user_traverse_office365**](GraphApi.md#graph_user_traverse_office365) | **GET** /users/{user_id}/office365s | List the Office 365 instances bound to a User
-[**graph_user_traverse_radius_server**](GraphApi.md#graph_user_traverse_radius_server) | **GET** /users/{user_id}/radiusservers | List the RADIUS Servers bound to a User
-[**graph_user_traverse_system**](GraphApi.md#graph_user_traverse_system) | **GET** /users/{user_id}/systems | List the Systems bound to a User
-[**graph_user_traverse_system_group**](GraphApi.md#graph_user_traverse_system_group) | **GET** /users/{user_id}/systemgroups | List the System Groups bound to a User
-[**policystatuses_list**](GraphApi.md#policystatuses_list) | **GET** /systems/{system_id}/policystatuses | List the policy statuses for a system
+[**g_et_activedirectories_activedirectory_id_associations**](GraphApi.md#g_et_activedirectories_activedirectory_id_associations) | **GET** /activedirectories/{activedirectory_id}/associations | List the associations of an Active Directory instance
+[**g_et_activedirectories_activedirectory_id_usergroups**](GraphApi.md#g_et_activedirectories_activedirectory_id_usergroups) | **GET** /activedirectories/{activedirectory_id}/usergroups | List the User Groups bound to an Active Directory instance
+[**g_et_applications_application_id_associations**](GraphApi.md#g_et_applications_application_id_associations) | **GET** /applications/{application_id}/associations | List the associations of an Application
+[**g_et_applications_application_id_usergroups**](GraphApi.md#g_et_applications_application_id_usergroups) | **GET** /applications/{application_id}/usergroups | List the User Groups bound to an Application
+[**g_et_applications_application_id_users**](GraphApi.md#g_et_applications_application_id_users) | **GET** /applications/{application_id}/users | List the Users bound to an Application
+[**g_et_commands_command_id_associations**](GraphApi.md#g_et_commands_command_id_associations) | **GET** /commands/{command_id}/associations | List the associations of a Command
+[**g_et_commands_command_id_systemgroups**](GraphApi.md#g_et_commands_command_id_systemgroups) | **GET** /commands/{command_id}/systemgroups | List the System Groups bound to a Command
+[**g_et_commands_command_id_systems**](GraphApi.md#g_et_commands_command_id_systems) | **GET** /commands/{command_id}/systems | List the Systems bound to a Command
+[**g_et_gsuites_gsuite_id_associations**](GraphApi.md#g_et_gsuites_gsuite_id_associations) | **GET** /gsuites/{gsuite_id}/associations | List the associations of a G Suite instance
+[**g_et_gsuites_gsuite_id_usergroups**](GraphApi.md#g_et_gsuites_gsuite_id_usergroups) | **GET** /gsuites/{gsuite_id}/usergroups | List the User Groups bound to a G Suite instance
+[**g_et_gsuites_gsuite_id_users**](GraphApi.md#g_et_gsuites_gsuite_id_users) | **GET** /gsuites/{gsuite_id}/users | List the Users bound to a G Suite instance
+[**g_et_ldapservers_ldapserver_id_associations**](GraphApi.md#g_et_ldapservers_ldapserver_id_associations) | **GET** /ldapservers/{ldapserver_id}/associations | List the associations of a LDAP Server
+[**g_et_ldapservers_ldapserver_id_usergroups**](GraphApi.md#g_et_ldapservers_ldapserver_id_usergroups) | **GET** /ldapservers/{ldapserver_id}/usergroups | List the User Groups bound to a LDAP Server
+[**g_et_ldapservers_ldapserver_id_users**](GraphApi.md#g_et_ldapservers_ldapserver_id_users) | **GET** /ldapservers/{ldapserver_id}/users | List the Users bound to a LDAP Server
+[**g_et_office365s_office365_id_associations**](GraphApi.md#g_et_office365s_office365_id_associations) | **GET** /office365s/{office365_id}/associations | List the associations of an Office 365 instance
+[**g_et_office365s_office365_id_usergroups**](GraphApi.md#g_et_office365s_office365_id_usergroups) | **GET** /office365s/{office365_id}/usergroups | List the User Groups bound to an Office 365 instance
+[**g_et_office365s_office365_id_users**](GraphApi.md#g_et_office365s_office365_id_users) | **GET** /office365s/{office365_id}/users | List the Users bound to an Office 365 instance
+[**g_et_policies_policy_id_associations**](GraphApi.md#g_et_policies_policy_id_associations) | **GET** /policies/{policy_id}/associations | List the associations of a Policy
+[**g_et_policies_policy_id_systemgroups**](GraphApi.md#g_et_policies_policy_id_systemgroups) | **GET** /policies/{policy_id}/systemgroups | List the System Groups bound to a Policy
+[**g_et_policies_policy_id_systems**](GraphApi.md#g_et_policies_policy_id_systems) | **GET** /policies/{policy_id}/systems | List the Systems bound to a Policy
+[**g_et_radiusservers_radiusserver_id_associations**](GraphApi.md#g_et_radiusservers_radiusserver_id_associations) | **GET** /radiusservers/{radiusserver_id}/associations | List the associations of a RADIUS  Server
+[**g_et_radiusservers_radiusserver_id_usergroups**](GraphApi.md#g_et_radiusservers_radiusserver_id_usergroups) | **GET** /radiusservers/{radiusserver_id}/usergroups | List the User Groups bound to a RADIUS  Server
+[**g_et_radiusservers_radiusserver_id_users**](GraphApi.md#g_et_radiusservers_radiusserver_id_users) | **GET** /radiusservers/{radiusserver_id}/users | List the Users bound to a RADIUS  Server
+[**g_et_software_apps_software_app_id_associations**](GraphApi.md#g_et_software_apps_software_app_id_associations) | **GET** /software_apps/{software_app_id}/associations | List the associations of a Software Application
+[**g_et_software_apps_software_app_id_systemgroups**](GraphApi.md#g_et_software_apps_software_app_id_systemgroups) | **GET** /software_apps/{software_app_id}/systemgroups | List the System Groups bound to a Software App.
+[**g_et_software_apps_software_app_id_systems**](GraphApi.md#g_et_software_apps_software_app_id_systems) | **GET** /software_apps/{software_app_id}/systems | List the Systems bound to a Software App.
+[**g_et_systemgroups_group_id_associations**](GraphApi.md#g_et_systemgroups_group_id_associations) | **GET** /systemgroups/{group_id}/associations | List the associations of a System Group
+[**g_et_systemgroups_group_id_commands**](GraphApi.md#g_et_systemgroups_group_id_commands) | **GET** /systemgroups/{group_id}/commands | List the Commands bound to a System Group
+[**g_et_systemgroups_group_id_members**](GraphApi.md#g_et_systemgroups_group_id_members) | **GET** /systemgroups/{group_id}/members | List the members of a System Group
+[**g_et_systemgroups_group_id_membership**](GraphApi.md#g_et_systemgroups_group_id_membership) | **GET** /systemgroups/{group_id}/membership | List the System Group&#39;s membership
+[**g_et_systemgroups_group_id_policies**](GraphApi.md#g_et_systemgroups_group_id_policies) | **GET** /systemgroups/{group_id}/policies | List the Policies bound to a System Group
+[**g_et_systemgroups_group_id_usergroups**](GraphApi.md#g_et_systemgroups_group_id_usergroups) | **GET** /systemgroups/{group_id}/usergroups | List the User Groups bound to a System Group
+[**g_et_systemgroups_group_id_users**](GraphApi.md#g_et_systemgroups_group_id_users) | **GET** /systemgroups/{group_id}/users | List the Users bound to a System Group
+[**g_et_systems_system_id_associations**](GraphApi.md#g_et_systems_system_id_associations) | **GET** /systems/{system_id}/associations | List the associations of a System
+[**g_et_systems_system_id_commands**](GraphApi.md#g_et_systems_system_id_commands) | **GET** /systems/{system_id}/commands | List the Commands bound to a System
+[**g_et_systems_system_id_memberof**](GraphApi.md#g_et_systems_system_id_memberof) | **GET** /systems/{system_id}/memberof | List the parent Groups of a System
+[**g_et_systems_system_id_policies**](GraphApi.md#g_et_systems_system_id_policies) | **GET** /systems/{system_id}/policies | List the Policies bound to a System
+[**g_et_systems_system_id_policystatuses**](GraphApi.md#g_et_systems_system_id_policystatuses) | **GET** /systems/{system_id}/policystatuses | List the policy statuses for a system
+[**g_et_systems_system_id_usergroups**](GraphApi.md#g_et_systems_system_id_usergroups) | **GET** /systems/{system_id}/usergroups | List the User Groups bound to a System
+[**g_et_systems_system_id_users**](GraphApi.md#g_et_systems_system_id_users) | **GET** /systems/{system_id}/users | List the Users bound to a System
+[**g_et_usergroups_group_id_applications**](GraphApi.md#g_et_usergroups_group_id_applications) | **GET** /usergroups/{group_id}/applications | List the Applications bound to a User Group
+[**g_et_usergroups_group_id_associations**](GraphApi.md#g_et_usergroups_group_id_associations) | **GET** /usergroups/{group_id}/associations | List the associations of a User Group.
+[**g_et_usergroups_group_id_directories**](GraphApi.md#g_et_usergroups_group_id_directories) | **GET** /usergroups/{group_id}/directories | List the Directories bound to a User Group
+[**g_et_usergroups_group_id_gsuites**](GraphApi.md#g_et_usergroups_group_id_gsuites) | **GET** /usergroups/{group_id}/gsuites | List the G Suite instances bound to a User Group
+[**g_et_usergroups_group_id_ldapservers**](GraphApi.md#g_et_usergroups_group_id_ldapservers) | **GET** /usergroups/{group_id}/ldapservers | List the LDAP Servers bound to a User Group
+[**g_et_usergroups_group_id_members**](GraphApi.md#g_et_usergroups_group_id_members) | **GET** /usergroups/{group_id}/members | List the members of a User Group
+[**g_et_usergroups_group_id_membership**](GraphApi.md#g_et_usergroups_group_id_membership) | **GET** /usergroups/{group_id}/membership | List the User Group&#39;s membership
+[**g_et_usergroups_group_id_office365s**](GraphApi.md#g_et_usergroups_group_id_office365s) | **GET** /usergroups/{group_id}/office365s | List the Office 365 instances bound to a User Group
+[**g_et_usergroups_group_id_radiusservers**](GraphApi.md#g_et_usergroups_group_id_radiusservers) | **GET** /usergroups/{group_id}/radiusservers | List the RADIUS Servers bound to a User Group
+[**g_et_usergroups_group_id_systemgroups**](GraphApi.md#g_et_usergroups_group_id_systemgroups) | **GET** /usergroups/{group_id}/systemgroups | List the System Groups bound to User Groups
+[**g_et_usergroups_group_id_systems**](GraphApi.md#g_et_usergroups_group_id_systems) | **GET** /usergroups/{group_id}/systems | List the Systems bound to a User Group
+[**g_et_users_user_id_applications**](GraphApi.md#g_et_users_user_id_applications) | **GET** /users/{user_id}/applications | List the Applications bound to a User
+[**g_et_users_user_id_associations**](GraphApi.md#g_et_users_user_id_associations) | **GET** /users/{user_id}/associations | List the associations of a User
+[**g_et_users_user_id_directories**](GraphApi.md#g_et_users_user_id_directories) | **GET** /users/{user_id}/directories | List the Directories bound to a User
+[**g_et_users_user_id_gsuites**](GraphApi.md#g_et_users_user_id_gsuites) | **GET** /users/{user_id}/gsuites | List the G Suite instances bound to a User
+[**g_et_users_user_id_ldapservers**](GraphApi.md#g_et_users_user_id_ldapservers) | **GET** /users/{user_id}/ldapservers | List the LDAP servers bound to a User
+[**g_et_users_user_id_memberof**](GraphApi.md#g_et_users_user_id_memberof) | **GET** /users/{user_id}/memberof | List the parent Groups of a User
+[**g_et_users_user_id_office365s**](GraphApi.md#g_et_users_user_id_office365s) | **GET** /users/{user_id}/office365s | List the Office 365 instances bound to a User
+[**g_et_users_user_id_radiusservers**](GraphApi.md#g_et_users_user_id_radiusservers) | **GET** /users/{user_id}/radiusservers | List the RADIUS Servers bound to a User
+[**g_et_users_user_id_systemgroups**](GraphApi.md#g_et_users_user_id_systemgroups) | **GET** /users/{user_id}/systemgroups | List the System Groups bound to a User
+[**g_et_users_user_id_systems**](GraphApi.md#g_et_users_user_id_systems) | **GET** /users/{user_id}/systems | List the Systems bound to a User
+[**p_ost_applications_application_id_associations**](GraphApi.md#p_ost_applications_application_id_associations) | **POST** /applications/{application_id}/associations | Manage the associations of an Application
+[**p_ost_commands_command_id_associations**](GraphApi.md#p_ost_commands_command_id_associations) | **POST** /commands/{command_id}/associations | Manage the associations of a Command
+[**p_ost_gsuites_gsuite_id_associations**](GraphApi.md#p_ost_gsuites_gsuite_id_associations) | **POST** /gsuites/{gsuite_id}/associations | Manage the associations of a G Suite instance
+[**p_ost_ldapservers_ldapserver_id_associations**](GraphApi.md#p_ost_ldapservers_ldapserver_id_associations) | **POST** /ldapservers/{ldapserver_id}/associations | Manage the associations of a LDAP Server
+[**p_ost_office365s_office365_id_associations**](GraphApi.md#p_ost_office365s_office365_id_associations) | **POST** /office365s/{office365_id}/associations | Manage the associations of an Office 365 instance
+[**p_ost_policies_policy_id_associations**](GraphApi.md#p_ost_policies_policy_id_associations) | **POST** /policies/{policy_id}/associations | Manage the associations of a Policy
+[**p_ost_radiusservers_radiusserver_id_associations**](GraphApi.md#p_ost_radiusservers_radiusserver_id_associations) | **POST** /radiusservers/{radiusserver_id}/associations | Manage the associations of a RADIUS Server
+[**p_ost_software_apps_software_app_id_associations**](GraphApi.md#p_ost_software_apps_software_app_id_associations) | **POST** /software_apps/{software_app_id}/associations | Manage the associations of a software application.
+[**p_ost_systemgroups_group_id_associations**](GraphApi.md#p_ost_systemgroups_group_id_associations) | **POST** /systemgroups/{group_id}/associations | Manage the associations of a System Group
+[**p_ost_systemgroups_group_id_members**](GraphApi.md#p_ost_systemgroups_group_id_members) | **POST** /systemgroups/{group_id}/members | Manage the members of a System Group
+[**p_ost_systems_system_id_associations**](GraphApi.md#p_ost_systems_system_id_associations) | **POST** /systems/{system_id}/associations | Manage associations of a System
+[**p_ost_usergroups_group_id_associations**](GraphApi.md#p_ost_usergroups_group_id_associations) | **POST** /usergroups/{group_id}/associations | Manage the associations of a User Group
+[**p_ost_usergroups_group_id_members**](GraphApi.md#p_ost_usergroups_group_id_members) | **POST** /usergroups/{group_id}/members | Manage the members of a User Group
+[**p_ost_users_user_id_associations**](GraphApi.md#p_ost_users_user_id_associations) | **POST** /users/{user_id}/associations | Manage the associations of a User
 
 
-# **graph_active_directory_associations_list**
-> Array&lt;GraphConnection&gt; graph_active_directory_associations_list(activedirectory_id, targets, content_type, accept, opts)
+# **g_et_activedirectories_activedirectory_id_associations**
+> Array&lt;GraphConnection&gt; g_et_activedirectories_activedirectory_id_associations(activedirectory_id, targets, accept, content_type, opts)
 
 List the associations of an Active Directory instance
 
@@ -108,9 +106,9 @@ activedirectory_id = "activedirectory_id_example" # String |
 
 targets = ["targets_example"] # Array<String> | 
 
-content_type = "application/json" # String | 
+accept = "application/x-pem-file" # String | 
 
-accept = "application/json" # String | 
+content_type = "application/json" # String | 
 
 opts = { 
   limit: 10, # Integer | The number of records to return at once. Limited to 100.
@@ -120,10 +118,10 @@ opts = {
 
 begin
   #List the associations of an Active Directory instance
-  result = api_instance.graph_active_directory_associations_list(activedirectory_id, targets, content_type, accept, opts)
+  result = api_instance.g_et_activedirectories_activedirectory_id_associations(activedirectory_id, targets, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GraphApi->graph_active_directory_associations_list: #{e}"
+  puts "Exception when calling GraphApi->g_et_activedirectories_activedirectory_id_associations: #{e}"
 end
 ```
 
@@ -133,8 +131,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **activedirectory_id** | **String**|  | 
  **targets** | [**Array&lt;String&gt;**](String.md)|  | 
+ **accept** | **String**|  | [default to application/x-pem-file]
  **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
  **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
  **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
  **x_org_id** | **String**|  | [optional] [default to ]
@@ -154,143 +152,8 @@ Name | Type | Description  | Notes
 
 
 
-# **graph_active_directory_associations_post**
-> graph_active_directory_associations_post(activedirectory_id, content_type, accept, opts)
-
-Manage the associations of an Active Directory instance
-
-This endpoint allows you to manage the _direct_ associations of an Active Directory instance.  A direct association can be a non-homogeneous relationship between 2 different objects, for example Active Directory and Users.  #### Sample Request ``` curl -X POST https://console.jumpcloud.com/api/v2/activedirectories/{AD_Instance_ID}/associations \\   -H 'accept: application/json' \\   -H 'content-type: application/json' \\   -H 'x-api-key: {API_KEY}' \\   -d '{         \"op\": \"add\",         \"type\": \"user\",         \"id\": \"{User_ID}\" } ' ```
-
-### Example
-```ruby
-# load the gem
-require 'jcapiv2'
-# setup authorization
-JCAPIv2.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['x-api-key'] = 'Bearer'
-end
-
-api_instance = JCAPIv2::GraphApi.new
-
-activedirectory_id = "activedirectory_id_example" # String | 
-
-content_type = "application/json" # String | 
-
-accept = "application/json" # String | 
-
-opts = { 
-  body: JCAPIv2::GraphManagementReq.new, # GraphManagementReq | 
-  x_org_id: "" # String | 
-}
-
-begin
-  #Manage the associations of an Active Directory instance
-  api_instance.graph_active_directory_associations_post(activedirectory_id, content_type, accept, opts)
-rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GraphApi->graph_active_directory_associations_post: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **activedirectory_id** | **String**|  | 
- **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
- **body** | [**GraphManagementReq**](GraphManagementReq.md)|  | [optional] 
- **x_org_id** | **String**|  | [optional] [default to ]
-
-### Return type
-
-nil (empty response body)
-
-### Authorization
-
-[x-api-key](../README.md#x-api-key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-# **graph_active_directory_traverse_user**
-> Array&lt;GraphObjectWithPaths&gt; graph_active_directory_traverse_user(activedirectory_id, content_type, accept, opts)
-
-List the Users bound to an Active Directory instance
-
-This endpoint will return all Users bound to an Active Directory instance, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths.  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this Active Directory instance to the corresponding User; this array represents all grouping and/or associations that would have to be removed to deprovision the User from this Active Directory instance.  See `/members` and `/associations` endpoints to manage those collections.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/activedirectories/{ActiveDirectory_ID}/users \\   -H 'accept: application/json' \\   -H 'content-type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
-
-### Example
-```ruby
-# load the gem
-require 'jcapiv2'
-# setup authorization
-JCAPIv2.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['x-api-key'] = 'Bearer'
-end
-
-api_instance = JCAPIv2::GraphApi.new
-
-activedirectory_id = "activedirectory_id_example" # String | ObjectID of the Active Directory instance.
-
-content_type = "application/json" # String | 
-
-accept = "application/json" # String | 
-
-opts = { 
-  filter: ["filter_example"], # Array<String> | Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
-  limit: 10, # Integer | The number of records to return at once. Limited to 100.
-  x_org_id: "" # String | 
-  skip: 0, # Integer | The offset into the records to return.
-}
-
-begin
-  #List the Users bound to an Active Directory instance
-  result = api_instance.graph_active_directory_traverse_user(activedirectory_id, content_type, accept, opts)
-  p result
-rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GraphApi->graph_active_directory_traverse_user: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **activedirectory_id** | **String**| ObjectID of the Active Directory instance. | 
- **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
- **filter** | [**Array&lt;String&gt;**](String.md)| Supported operators are: eq, ne, gt, ge, lt, le, between, search, in | [optional] 
- **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
- **x_org_id** | **String**|  | [optional] [default to ]
- **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
-
-### Return type
-
-[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
-
-### Authorization
-
-[x-api-key](../README.md#x-api-key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-# **graph_active_directory_traverse_user_group**
-> Array&lt;GraphObjectWithPaths&gt; graph_active_directory_traverse_user_group(activedirectory_id, content_type, accept, opts)
+# **g_et_activedirectories_activedirectory_id_usergroups**
+> Array&lt;GraphObjectWithPaths&gt; g_et_activedirectories_activedirectory_id_usergroups(activedirectory_id, accept, content_type, opts)
 
 List the User Groups bound to an Active Directory instance
 
@@ -312,23 +175,23 @@ api_instance = JCAPIv2::GraphApi.new
 
 activedirectory_id = "activedirectory_id_example" # String | ObjectID of the Active Directory instance.
 
-content_type = "application/json" # String | 
+accept = "application/x-pem-file" # String | 
 
-accept = "application/json" # String | 
+content_type = "application/json" # String | 
 
 opts = { 
   limit: 10, # Integer | The number of records to return at once. Limited to 100.
-  x_org_id: "" # String | 
   skip: 0, # Integer | The offset into the records to return.
-  filter: ["filter_example"], # Array<String> | Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
+  filter: ["filter_example"], # Array<String> | A filter to apply to the query. **Filter structure**: `<field>:<operator>:<value>`. **field** = Populate with a valid field from an endpoint response. **operator** =  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** = Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** `GET /users?username=eq:testuser`
+  x_org_id: "" # String | 
 }
 
 begin
   #List the User Groups bound to an Active Directory instance
-  result = api_instance.graph_active_directory_traverse_user_group(activedirectory_id, content_type, accept, opts)
+  result = api_instance.g_et_activedirectories_activedirectory_id_usergroups(activedirectory_id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GraphApi->graph_active_directory_traverse_user_group: #{e}"
+  puts "Exception when calling GraphApi->g_et_activedirectories_activedirectory_id_usergroups: #{e}"
 end
 ```
 
@@ -337,12 +200,12 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **activedirectory_id** | **String**| ObjectID of the Active Directory instance. | 
+ **accept** | **String**|  | [default to application/x-pem-file]
  **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
  **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
- **x_org_id** | **String**|  | [optional] [default to ]
  **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
- **filter** | [**Array&lt;String&gt;**](String.md)| Supported operators are: eq, ne, gt, ge, lt, le, between, search, in | [optional] 
+ **filter** | [**Array&lt;String&gt;**](String.md)| A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60; | [optional] 
+ **x_org_id** | **String**|  | [optional] [default to ]
 
 ### Return type
 
@@ -359,8 +222,8 @@ Name | Type | Description  | Notes
 
 
 
-# **graph_application_associations_list**
-> Array&lt;GraphConnection&gt; graph_application_associations_list(application_id, targets, content_type, accept, opts)
+# **g_et_applications_application_id_associations**
+> Array&lt;GraphConnection&gt; g_et_applications_application_id_associations(application_id, targets, accept, content_type, opts)
 
 List the associations of an Application
 
@@ -384,9 +247,9 @@ application_id = "application_id_example" # String | ObjectID of the Application
 
 targets = ["targets_example"] # Array<String> | 
 
-content_type = "application/json" # String | 
+accept = "application/x-pem-file" # String | 
 
-accept = "application/json" # String | 
+content_type = "application/json" # String | 
 
 opts = { 
   limit: 10, # Integer | The number of records to return at once. Limited to 100.
@@ -396,10 +259,10 @@ opts = {
 
 begin
   #List the associations of an Application
-  result = api_instance.graph_application_associations_list(application_id, targets, content_type, accept, opts)
+  result = api_instance.g_et_applications_application_id_associations(application_id, targets, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GraphApi->graph_application_associations_list: #{e}"
+  puts "Exception when calling GraphApi->g_et_applications_application_id_associations: #{e}"
 end
 ```
 
@@ -409,8 +272,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **application_id** | **String**| ObjectID of the Application. | 
  **targets** | [**Array&lt;String&gt;**](String.md)|  | 
+ **accept** | **String**|  | [default to application/x-pem-file]
  **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
  **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
  **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
  **x_org_id** | **String**|  | [optional] [default to ]
@@ -430,143 +293,8 @@ Name | Type | Description  | Notes
 
 
 
-# **graph_application_associations_post**
-> graph_application_associations_post(application_id, content_type, accept, opts)
-
-Manage the associations of an Application
-
-This endpoint allows you to manage the _direct_ associations of an Application. A direct association can be a non-homogeneous relationship between 2 different objects, for example Application and User Groups.  #### Sample Request ``` curl -X POST 'https://console.jumpcloud.com/api/v2/applications/{Application_ID}/associations' \\   -H 'accept: application/json' \\   -H 'content-type: application/json' \\   -H 'x-api-key: {API_KEY}' \\   -d '{     \"op\": \"add\",     \"type\": \"user_group\",     \"id\": \"{Group_ID}\" }' ```
-
-### Example
-```ruby
-# load the gem
-require 'jcapiv2'
-# setup authorization
-JCAPIv2.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['x-api-key'] = 'Bearer'
-end
-
-api_instance = JCAPIv2::GraphApi.new
-
-application_id = "application_id_example" # String | ObjectID of the Application.
-
-content_type = "application/json" # String | 
-
-accept = "application/json" # String | 
-
-opts = { 
-  body: JCAPIv2::GraphManagementReq.new, # GraphManagementReq | 
-  x_org_id: "" # String | 
-}
-
-begin
-  #Manage the associations of an Application
-  api_instance.graph_application_associations_post(application_id, content_type, accept, opts)
-rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GraphApi->graph_application_associations_post: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **application_id** | **String**| ObjectID of the Application. | 
- **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
- **body** | [**GraphManagementReq**](GraphManagementReq.md)|  | [optional] 
- **x_org_id** | **String**|  | [optional] [default to ]
-
-### Return type
-
-nil (empty response body)
-
-### Authorization
-
-[x-api-key](../README.md#x-api-key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-# **graph_application_traverse_user**
-> Array&lt;GraphObjectWithPaths&gt; graph_application_traverse_user(application_id, content_type, accept, opts)
-
-List the Users bound to an Application
-
-This endpoint will return all Users bound to an Application, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths.  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this Application to the corresponding User; this array represents all grouping and/or associations that would have to be removed to deprovision the User from this Application.  See `/members` and `/associations` endpoints to manage those collections.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/applications/{Application_ID}/users \\   -H 'accept: application/json' \\   -H 'content-type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
-
-### Example
-```ruby
-# load the gem
-require 'jcapiv2'
-# setup authorization
-JCAPIv2.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['x-api-key'] = 'Bearer'
-end
-
-api_instance = JCAPIv2::GraphApi.new
-
-application_id = "application_id_example" # String | ObjectID of the Application.
-
-content_type = "application/json" # String | 
-
-accept = "application/json" # String | 
-
-opts = { 
-  limit: 10, # Integer | The number of records to return at once. Limited to 100.
-  x_org_id: "" # String | 
-  skip: 0, # Integer | The offset into the records to return.
-  filter: ["filter_example"], # Array<String> | Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
-}
-
-begin
-  #List the Users bound to an Application
-  result = api_instance.graph_application_traverse_user(application_id, content_type, accept, opts)
-  p result
-rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GraphApi->graph_application_traverse_user: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **application_id** | **String**| ObjectID of the Application. | 
- **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
- **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
- **x_org_id** | **String**|  | [optional] [default to ]
- **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
- **filter** | [**Array&lt;String&gt;**](String.md)| Supported operators are: eq, ne, gt, ge, lt, le, between, search, in | [optional] 
-
-### Return type
-
-[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
-
-### Authorization
-
-[x-api-key](../README.md#x-api-key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-# **graph_application_traverse_user_group**
-> Array&lt;GraphObjectWithPaths&gt; graph_application_traverse_user_group(application_id, content_type, accept, opts)
+# **g_et_applications_application_id_usergroups**
+> Array&lt;GraphObjectWithPaths&gt; g_et_applications_application_id_usergroups(application_id, accept, content_type, opts)
 
 List the User Groups bound to an Application
 
@@ -588,23 +316,23 @@ api_instance = JCAPIv2::GraphApi.new
 
 application_id = "application_id_example" # String | ObjectID of the Application.
 
-content_type = "application/json" # String | 
+accept = "application/x-pem-file" # String | 
 
-accept = "application/json" # String | 
+content_type = "application/json" # String | 
 
 opts = { 
   limit: 10, # Integer | The number of records to return at once. Limited to 100.
-  x_org_id: "" # String | 
   skip: 0, # Integer | The offset into the records to return.
-  filter: ["filter_example"], # Array<String> | Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
+  filter: ["filter_example"], # Array<String> | A filter to apply to the query. **Filter structure**: `<field>:<operator>:<value>`. **field** = Populate with a valid field from an endpoint response. **operator** =  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** = Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** `GET /users?username=eq:testuser`
+  x_org_id: "" # String | 
 }
 
 begin
   #List the User Groups bound to an Application
-  result = api_instance.graph_application_traverse_user_group(application_id, content_type, accept, opts)
+  result = api_instance.g_et_applications_application_id_usergroups(application_id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GraphApi->graph_application_traverse_user_group: #{e}"
+  puts "Exception when calling GraphApi->g_et_applications_application_id_usergroups: #{e}"
 end
 ```
 
@@ -613,12 +341,12 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **application_id** | **String**| ObjectID of the Application. | 
+ **accept** | **String**|  | [default to application/x-pem-file]
  **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
  **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
- **x_org_id** | **String**|  | [optional] [default to ]
  **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
- **filter** | [**Array&lt;String&gt;**](String.md)| Supported operators are: eq, ne, gt, ge, lt, le, between, search, in | [optional] 
+ **filter** | [**Array&lt;String&gt;**](String.md)| A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60; | [optional] 
+ **x_org_id** | **String**|  | [optional] [default to ]
 
 ### Return type
 
@@ -635,8 +363,78 @@ Name | Type | Description  | Notes
 
 
 
-# **graph_command_associations_list**
-> Array&lt;GraphConnection&gt; graph_command_associations_list(command_id, targets, content_type, accept, opts)
+# **g_et_applications_application_id_users**
+> Array&lt;GraphObjectWithPaths&gt; g_et_applications_application_id_users(application_id, accept, content_type, opts)
+
+List the Users bound to an Application
+
+This endpoint will return all Users bound to an Application, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths.  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this Application to the corresponding User; this array represents all grouping and/or associations that would have to be removed to deprovision the User from this Application.  See `/members` and `/associations` endpoints to manage those collections.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/applications/{Application_ID}/users \\   -H 'accept: application/json' \\   -H 'content-type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
+
+### Example
+```ruby
+# load the gem
+require 'jcapiv2'
+# setup authorization
+JCAPIv2.configure do |config|
+  # Configure API key authorization: x-api-key
+  config.api_key['x-api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['x-api-key'] = 'Bearer'
+end
+
+api_instance = JCAPIv2::GraphApi.new
+
+application_id = "application_id_example" # String | ObjectID of the Application.
+
+accept = "application/x-pem-file" # String | 
+
+content_type = "application/json" # String | 
+
+opts = { 
+  limit: 10, # Integer | The number of records to return at once. Limited to 100.
+  skip: 0, # Integer | The offset into the records to return.
+  filter: ["filter_example"], # Array<String> | A filter to apply to the query. **Filter structure**: `<field>:<operator>:<value>`. **field** = Populate with a valid field from an endpoint response. **operator** =  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** = Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** `GET /users?username=eq:testuser`
+  x_org_id: "" # String | 
+}
+
+begin
+  #List the Users bound to an Application
+  result = api_instance.g_et_applications_application_id_users(application_id, accept, content_type, opts)
+  p result
+rescue JCAPIv2::ApiError => e
+  puts "Exception when calling GraphApi->g_et_applications_application_id_users: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **application_id** | **String**| ObjectID of the Application. | 
+ **accept** | **String**|  | [default to application/x-pem-file]
+ **content_type** | **String**|  | [default to application/json]
+ **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
+ **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
+ **filter** | [**Array&lt;String&gt;**](String.md)| A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60; | [optional] 
+ **x_org_id** | **String**|  | [optional] [default to ]
+
+### Return type
+
+[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
+
+### Authorization
+
+[x-api-key](../README.md#x-api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **g_et_commands_command_id_associations**
+> Array&lt;GraphConnection&gt; g_et_commands_command_id_associations(command_id, targets, accept, content_type, opts)
 
 List the associations of a Command
 
@@ -660,9 +458,9 @@ command_id = "command_id_example" # String | ObjectID of the Command.
 
 targets = ["targets_example"] # Array<String> | 
 
-content_type = "application/json" # String | 
+accept = "application/x-pem-file" # String | 
 
-accept = "application/json" # String | 
+content_type = "application/json" # String | 
 
 opts = { 
   limit: 10, # Integer | The number of records to return at once. Limited to 100.
@@ -672,10 +470,10 @@ opts = {
 
 begin
   #List the associations of a Command
-  result = api_instance.graph_command_associations_list(command_id, targets, content_type, accept, opts)
+  result = api_instance.g_et_commands_command_id_associations(command_id, targets, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GraphApi->graph_command_associations_list: #{e}"
+  puts "Exception when calling GraphApi->g_et_commands_command_id_associations: #{e}"
 end
 ```
 
@@ -685,8 +483,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **command_id** | **String**| ObjectID of the Command. | 
  **targets** | [**Array&lt;String&gt;**](String.md)|  | 
+ **accept** | **String**|  | [default to application/x-pem-file]
  **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
  **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
  **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
  **x_org_id** | **String**|  | [optional] [default to ]
@@ -706,143 +504,8 @@ Name | Type | Description  | Notes
 
 
 
-# **graph_command_associations_post**
-> graph_command_associations_post(command_id, content_type, accept, opts)
-
-Manage the associations of a Command
-
-This endpoint will allow you to manage the _direct_ associations of this Command.  A direct association can be a non-homogeneous relationship between 2 different objects, for example Commands and User Groups.   #### Sample Request ```  curl -X POST https://console.jumpcloud.com/api/v2/commands/{Command_ID}/associations \\   -H 'accept: application/json' \\   -H 'content-type: application/json' \\   -H 'x-api-key: {API_KEY}' \\   -d '{     \"op\": \"add\",     \"type\": \"system_group\",     \"id\": \"Group_ID\" }' ```
-
-### Example
-```ruby
-# load the gem
-require 'jcapiv2'
-# setup authorization
-JCAPIv2.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['x-api-key'] = 'Bearer'
-end
-
-api_instance = JCAPIv2::GraphApi.new
-
-command_id = "command_id_example" # String | ObjectID of the Command.
-
-content_type = "application/json" # String | 
-
-accept = "application/json" # String | 
-
-opts = { 
-  body: JCAPIv2::GraphManagementReq.new, # GraphManagementReq | 
-  x_org_id: "" # String | 
-}
-
-begin
-  #Manage the associations of a Command
-  api_instance.graph_command_associations_post(command_id, content_type, accept, opts)
-rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GraphApi->graph_command_associations_post: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **command_id** | **String**| ObjectID of the Command. | 
- **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
- **body** | [**GraphManagementReq**](GraphManagementReq.md)|  | [optional] 
- **x_org_id** | **String**|  | [optional] [default to ]
-
-### Return type
-
-nil (empty response body)
-
-### Authorization
-
-[x-api-key](../README.md#x-api-key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-# **graph_command_traverse_system**
-> Array&lt;GraphObjectWithPaths&gt; graph_command_traverse_system(command_id, content_type, accept, opts)
-
-List the Systems bound to a Command
-
-This endpoint will return all Systems bound to a Command, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths.  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this Command to the corresponding System; this array represents all grouping and/or associations that would have to be removed to deprovision the System from this Command.  See `/members` and `/associations` endpoints to manage those collections.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/commands/{Command_ID}/systems \\   -H 'accept: application/json' \\   -H 'content-type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
-
-### Example
-```ruby
-# load the gem
-require 'jcapiv2'
-# setup authorization
-JCAPIv2.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['x-api-key'] = 'Bearer'
-end
-
-api_instance = JCAPIv2::GraphApi.new
-
-command_id = "command_id_example" # String | ObjectID of the Command.
-
-content_type = "application/json" # String | 
-
-accept = "application/json" # String | 
-
-opts = { 
-  limit: 10, # Integer | The number of records to return at once. Limited to 100.
-  x_org_id: "" # String | 
-  skip: 0, # Integer | The offset into the records to return.
-  filter: ["filter_example"], # Array<String> | Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
-}
-
-begin
-  #List the Systems bound to a Command
-  result = api_instance.graph_command_traverse_system(command_id, content_type, accept, opts)
-  p result
-rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GraphApi->graph_command_traverse_system: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **command_id** | **String**| ObjectID of the Command. | 
- **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
- **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
- **x_org_id** | **String**|  | [optional] [default to ]
- **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
- **filter** | [**Array&lt;String&gt;**](String.md)| Supported operators are: eq, ne, gt, ge, lt, le, between, search, in | [optional] 
-
-### Return type
-
-[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
-
-### Authorization
-
-[x-api-key](../README.md#x-api-key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-# **graph_command_traverse_system_group**
-> Array&lt;GraphObjectWithPaths&gt; graph_command_traverse_system_group(command_id, content_type, accept, opts)
+# **g_et_commands_command_id_systemgroups**
+> Array&lt;GraphObjectWithPaths&gt; g_et_commands_command_id_systemgroups(command_id, accept, content_type, opts)
 
 List the System Groups bound to a Command
 
@@ -864,23 +527,23 @@ api_instance = JCAPIv2::GraphApi.new
 
 command_id = "command_id_example" # String | ObjectID of the Command.
 
-content_type = "application/json" # String | 
+accept = "application/x-pem-file" # String | 
 
-accept = "application/json" # String | 
+content_type = "application/json" # String | 
 
 opts = { 
   limit: 10, # Integer | The number of records to return at once. Limited to 100.
-  x_org_id: "" # String | 
   skip: 0, # Integer | The offset into the records to return.
-  filter: ["filter_example"], # Array<String> | Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
+  filter: ["filter_example"], # Array<String> | A filter to apply to the query. **Filter structure**: `<field>:<operator>:<value>`. **field** = Populate with a valid field from an endpoint response. **operator** =  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** = Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** `GET /users?username=eq:testuser`
+  x_org_id: "" # String | 
 }
 
 begin
   #List the System Groups bound to a Command
-  result = api_instance.graph_command_traverse_system_group(command_id, content_type, accept, opts)
+  result = api_instance.g_et_commands_command_id_systemgroups(command_id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GraphApi->graph_command_traverse_system_group: #{e}"
+  puts "Exception when calling GraphApi->g_et_commands_command_id_systemgroups: #{e}"
 end
 ```
 
@@ -889,12 +552,12 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **command_id** | **String**| ObjectID of the Command. | 
+ **accept** | **String**|  | [default to application/x-pem-file]
  **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
  **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
- **x_org_id** | **String**|  | [optional] [default to ]
  **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
- **filter** | [**Array&lt;String&gt;**](String.md)| Supported operators are: eq, ne, gt, ge, lt, le, between, search, in | [optional] 
+ **filter** | [**Array&lt;String&gt;**](String.md)| A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60; | [optional] 
+ **x_org_id** | **String**|  | [optional] [default to ]
 
 ### Return type
 
@@ -911,8 +574,78 @@ Name | Type | Description  | Notes
 
 
 
-# **graph_g_suite_associations_list**
-> Array&lt;GraphConnection&gt; graph_g_suite_associations_list(gsuite_idtargets, content_type, accept, opts)
+# **g_et_commands_command_id_systems**
+> Array&lt;GraphObjectWithPaths&gt; g_et_commands_command_id_systems(command_id, accept, content_type, opts)
+
+List the Systems bound to a Command
+
+This endpoint will return all Systems bound to a Command, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths.  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this Command to the corresponding System; this array represents all grouping and/or associations that would have to be removed to deprovision the System from this Command.  See `/members` and `/associations` endpoints to manage those collections.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/commands/{Command_ID}/systems \\   -H 'accept: application/json' \\   -H 'content-type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
+
+### Example
+```ruby
+# load the gem
+require 'jcapiv2'
+# setup authorization
+JCAPIv2.configure do |config|
+  # Configure API key authorization: x-api-key
+  config.api_key['x-api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['x-api-key'] = 'Bearer'
+end
+
+api_instance = JCAPIv2::GraphApi.new
+
+command_id = "command_id_example" # String | ObjectID of the Command.
+
+accept = "application/x-pem-file" # String | 
+
+content_type = "application/json" # String | 
+
+opts = { 
+  limit: 10, # Integer | The number of records to return at once. Limited to 100.
+  skip: 0, # Integer | The offset into the records to return.
+  filter: ["filter_example"], # Array<String> | A filter to apply to the query. **Filter structure**: `<field>:<operator>:<value>`. **field** = Populate with a valid field from an endpoint response. **operator** =  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** = Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** `GET /users?username=eq:testuser`
+  x_org_id: "" # String | 
+}
+
+begin
+  #List the Systems bound to a Command
+  result = api_instance.g_et_commands_command_id_systems(command_id, accept, content_type, opts)
+  p result
+rescue JCAPIv2::ApiError => e
+  puts "Exception when calling GraphApi->g_et_commands_command_id_systems: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **command_id** | **String**| ObjectID of the Command. | 
+ **accept** | **String**|  | [default to application/x-pem-file]
+ **content_type** | **String**|  | [default to application/json]
+ **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
+ **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
+ **filter** | [**Array&lt;String&gt;**](String.md)| A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60; | [optional] 
+ **x_org_id** | **String**|  | [optional] [default to ]
+
+### Return type
+
+[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
+
+### Authorization
+
+[x-api-key](../README.md#x-api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **g_et_gsuites_gsuite_id_associations**
+> Array&lt;GraphConnection&gt; g_et_gsuites_gsuite_id_associations(gsuite_idtargets, accept, content_type, opts)
 
 List the associations of a G Suite instance
 
@@ -936,9 +669,9 @@ gsuite_id = "gsuite_id_example" # String | ObjectID of the G Suite instance.
 
 targets = ["targets_example"] # Array<String> | 
 
-content_type = "application/json" # String | 
+accept = "application/x-pem-file" # String | 
 
-accept = "application/json" # String | 
+content_type = "application/json" # String | 
 
 opts = { 
   limit: 10, # Integer | The number of records to return at once. Limited to 100.
@@ -948,10 +681,10 @@ opts = {
 
 begin
   #List the associations of a G Suite instance
-  result = api_instance.graph_g_suite_associations_list(gsuite_idtargets, content_type, accept, opts)
+  result = api_instance.g_et_gsuites_gsuite_id_associations(gsuite_idtargets, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GraphApi->graph_g_suite_associations_list: #{e}"
+  puts "Exception when calling GraphApi->g_et_gsuites_gsuite_id_associations: #{e}"
 end
 ```
 
@@ -961,8 +694,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **gsuite_id** | **String**| ObjectID of the G Suite instance. | 
  **targets** | [**Array&lt;String&gt;**](String.md)|  | 
+ **accept** | **String**|  | [default to application/x-pem-file]
  **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
  **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
  **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
  **x_org_id** | **String**|  | [optional] [default to ]
@@ -982,8 +715,3811 @@ Name | Type | Description  | Notes
 
 
 
-# **graph_g_suite_associations_post**
-> graph_g_suite_associations_post(gsuite_id, opts)
+# **g_et_gsuites_gsuite_id_usergroups**
+> Array&lt;GraphObjectWithPaths&gt; g_et_gsuites_gsuite_id_usergroups(gsuite_id, accept, content_type, opts)
+
+List the User Groups bound to a G Suite instance
+
+This endpoint will return all User Groups bound to an G Suite instance, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the group's type, id, attributes and paths.  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this G Suite instance to the corresponding User Group; this array represents all grouping and/or associations that would have to be removed to deprovision the User Group from this G Suite instance.  See `/members` and `/associations` endpoints to manage those collections.  #### Sample Request ```   curl -X GET https://console.jumpcloud.com/api/v2/gsuites/{GSuite_ID}/usergroups \\   -H 'accept: application/json' \\   -H 'content-type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
+
+### Example
+```ruby
+# load the gem
+require 'jcapiv2'
+# setup authorization
+JCAPIv2.configure do |config|
+  # Configure API key authorization: x-api-key
+  config.api_key['x-api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['x-api-key'] = 'Bearer'
+end
+
+api_instance = JCAPIv2::GraphApi.new
+
+gsuite_id = "gsuite_id_example" # String | ObjectID of the G Suite instance.
+
+accept = "application/x-pem-file" # String | 
+
+content_type = "application/json" # String | 
+
+opts = { 
+  limit: 10, # Integer | The number of records to return at once. Limited to 100.
+  skip: 0, # Integer | The offset into the records to return.
+  filter: ["filter_example"], # Array<String> | A filter to apply to the query. **Filter structure**: `<field>:<operator>:<value>`. **field** = Populate with a valid field from an endpoint response. **operator** =  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** = Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** `GET /users?username=eq:testuser`
+  x_org_id: "" # String | 
+}
+
+begin
+  #List the User Groups bound to a G Suite instance
+  result = api_instance.g_et_gsuites_gsuite_id_usergroups(gsuite_id, accept, content_type, opts)
+  p result
+rescue JCAPIv2::ApiError => e
+  puts "Exception when calling GraphApi->g_et_gsuites_gsuite_id_usergroups: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **gsuite_id** | **String**| ObjectID of the G Suite instance. | 
+ **accept** | **String**|  | [default to application/x-pem-file]
+ **content_type** | **String**|  | [default to application/json]
+ **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
+ **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
+ **filter** | [**Array&lt;String&gt;**](String.md)| A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60; | [optional] 
+ **x_org_id** | **String**|  | [optional] [default to ]
+
+### Return type
+
+[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
+
+### Authorization
+
+[x-api-key](../README.md#x-api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **g_et_gsuites_gsuite_id_users**
+> Array&lt;GraphObjectWithPaths&gt; g_et_gsuites_gsuite_id_users(gsuite_id, accept, content_type, opts)
+
+List the Users bound to a G Suite instance
+
+This endpoint will return all Users bound to a G Suite instance, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths.  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this G Suite instance to the corresponding User; this array represents all grouping and/or associations that would have to be removed to deprovision the User from this G Suite instance.  See `/members` and `/associations` endpoints to manage those collections.  #### Sample Request ```   curl -X GET https://console.jumpcloud.com/api/v2/gsuites/{Gsuite_ID}/users \\   -H 'accept: application/json' \\   -H 'content-type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
+
+### Example
+```ruby
+# load the gem
+require 'jcapiv2'
+# setup authorization
+JCAPIv2.configure do |config|
+  # Configure API key authorization: x-api-key
+  config.api_key['x-api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['x-api-key'] = 'Bearer'
+end
+
+api_instance = JCAPIv2::GraphApi.new
+
+gsuite_id = "gsuite_id_example" # String | ObjectID of the G Suite instance.
+
+accept = "application/x-pem-file" # String | 
+
+content_type = "application/json" # String | 
+
+opts = { 
+  limit: 10, # Integer | The number of records to return at once. Limited to 100.
+  skip: 0, # Integer | The offset into the records to return.
+  filter: ["filter_example"], # Array<String> | A filter to apply to the query. **Filter structure**: `<field>:<operator>:<value>`. **field** = Populate with a valid field from an endpoint response. **operator** =  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** = Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** `GET /users?username=eq:testuser`
+  x_org_id: "" # String | 
+}
+
+begin
+  #List the Users bound to a G Suite instance
+  result = api_instance.g_et_gsuites_gsuite_id_users(gsuite_id, accept, content_type, opts)
+  p result
+rescue JCAPIv2::ApiError => e
+  puts "Exception when calling GraphApi->g_et_gsuites_gsuite_id_users: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **gsuite_id** | **String**| ObjectID of the G Suite instance. | 
+ **accept** | **String**|  | [default to application/x-pem-file]
+ **content_type** | **String**|  | [default to application/json]
+ **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
+ **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
+ **filter** | [**Array&lt;String&gt;**](String.md)| A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60; | [optional] 
+ **x_org_id** | **String**|  | [optional] [default to ]
+
+### Return type
+
+[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
+
+### Authorization
+
+[x-api-key](../README.md#x-api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **g_et_ldapservers_ldapserver_id_associations**
+> Array&lt;GraphConnection&gt; g_et_ldapservers_ldapserver_id_associations(ldapserver_id, targets, accept, content_type, opts)
+
+List the associations of a LDAP Server
+
+This endpoint returns the _direct_ associations of this LDAP Server.  A direct association can be a non-homogeneous relationship between 2 different objects, for example LDAP and Users.  #### Sample Request  ```  curl -X GET 'https://console.jumpcloud.com/api/v2/ldapservers/{LDAP_ID}/associations?targets=user_group \\   -H 'accept: application/json' \\   -H 'content-type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
+
+### Example
+```ruby
+# load the gem
+require 'jcapiv2'
+# setup authorization
+JCAPIv2.configure do |config|
+  # Configure API key authorization: x-api-key
+  config.api_key['x-api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['x-api-key'] = 'Bearer'
+end
+
+api_instance = JCAPIv2::GraphApi.new
+
+ldapserver_id = "ldapserver_id_example" # String | ObjectID of the LDAP Server.
+
+targets = ["targets_example"] # Array<String> | 
+
+accept = "application/x-pem-file" # String | 
+
+content_type = "application/json" # String | 
+
+opts = { 
+  limit: 10, # Integer | The number of records to return at once. Limited to 100.
+  skip: 0, # Integer | The offset into the records to return.
+  x_org_id: "" # String | 
+}
+
+begin
+  #List the associations of a LDAP Server
+  result = api_instance.g_et_ldapservers_ldapserver_id_associations(ldapserver_id, targets, accept, content_type, opts)
+  p result
+rescue JCAPIv2::ApiError => e
+  puts "Exception when calling GraphApi->g_et_ldapservers_ldapserver_id_associations: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ldapserver_id** | **String**| ObjectID of the LDAP Server. | 
+ **targets** | [**Array&lt;String&gt;**](String.md)|  | 
+ **accept** | **String**|  | [default to application/x-pem-file]
+ **content_type** | **String**|  | [default to application/json]
+ **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
+ **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
+ **x_org_id** | **String**|  | [optional] [default to ]
+
+### Return type
+
+[**Array&lt;GraphConnection&gt;**](GraphConnection.md)
+
+### Authorization
+
+[x-api-key](../README.md#x-api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **g_et_ldapservers_ldapserver_id_usergroups**
+> Array&lt;GraphObjectWithPaths&gt; g_et_ldapservers_ldapserver_id_usergroups(ldapserver_id, accept, content_type, opts)
+
+List the User Groups bound to a LDAP Server
+
+This endpoint will return all Users Groups bound to a LDAP Server, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the group's type, id, attributes and paths.  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this LDAP server instance to the corresponding User Group; this array represents all grouping and/or associations that would have to be removed to deprovision the User Group from this LDAP server instance.  See `/members` and `/associations` endpoints to manage those collections.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/ldapservers/{LDAP_ID}/usergroups \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
+
+### Example
+```ruby
+# load the gem
+require 'jcapiv2'
+# setup authorization
+JCAPIv2.configure do |config|
+  # Configure API key authorization: x-api-key
+  config.api_key['x-api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['x-api-key'] = 'Bearer'
+end
+
+api_instance = JCAPIv2::GraphApi.new
+
+ldapserver_id = "ldapserver_id_example" # String | ObjectID of the LDAP Server.
+
+accept = "application/x-pem-file" # String | 
+
+content_type = "application/json" # String | 
+
+opts = { 
+  limit: 10, # Integer | The number of records to return at once. Limited to 100.
+  skip: 0, # Integer | The offset into the records to return.
+  filter: ["filter_example"], # Array<String> | A filter to apply to the query. **Filter structure**: `<field>:<operator>:<value>`. **field** = Populate with a valid field from an endpoint response. **operator** =  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** = Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** `GET /users?username=eq:testuser`
+  x_org_id: "" # String | 
+}
+
+begin
+  #List the User Groups bound to a LDAP Server
+  result = api_instance.g_et_ldapservers_ldapserver_id_usergroups(ldapserver_id, accept, content_type, opts)
+  p result
+rescue JCAPIv2::ApiError => e
+  puts "Exception when calling GraphApi->g_et_ldapservers_ldapserver_id_usergroups: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ldapserver_id** | **String**| ObjectID of the LDAP Server. | 
+ **accept** | **String**|  | [default to application/x-pem-file]
+ **content_type** | **String**|  | [default to application/json]
+ **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
+ **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
+ **filter** | [**Array&lt;String&gt;**](String.md)| A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60; | [optional] 
+ **x_org_id** | **String**|  | [optional] [default to ]
+
+### Return type
+
+[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
+
+### Authorization
+
+[x-api-key](../README.md#x-api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **g_et_ldapservers_ldapserver_id_users**
+> Array&lt;GraphObjectWithPaths&gt; g_et_ldapservers_ldapserver_id_users(ldapserver_id, accept, content_type, opts)
+
+List the Users bound to a LDAP Server
+
+This endpoint will return all Users bound to an LDAP Server, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths.  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this LDAP server instance to the corresponding User; this array represents all grouping and/or associations that would have to be removed to deprovision the User from this LDAP server instance.  See `/members` and `/associations` endpoints to manage those collections.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/ldapservers/{LDAP_ID}/users \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
+
+### Example
+```ruby
+# load the gem
+require 'jcapiv2'
+# setup authorization
+JCAPIv2.configure do |config|
+  # Configure API key authorization: x-api-key
+  config.api_key['x-api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['x-api-key'] = 'Bearer'
+end
+
+api_instance = JCAPIv2::GraphApi.new
+
+ldapserver_id = "ldapserver_id_example" # String | ObjectID of the LDAP Server.
+
+accept = "application/x-pem-file" # String | 
+
+content_type = "application/json" # String | 
+
+opts = { 
+  limit: 10, # Integer | The number of records to return at once. Limited to 100.
+  skip: 0, # Integer | The offset into the records to return.
+  filter: ["filter_example"], # Array<String> | A filter to apply to the query. **Filter structure**: `<field>:<operator>:<value>`. **field** = Populate with a valid field from an endpoint response. **operator** =  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** = Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** `GET /users?username=eq:testuser`
+  x_org_id: "" # String | 
+}
+
+begin
+  #List the Users bound to a LDAP Server
+  result = api_instance.g_et_ldapservers_ldapserver_id_users(ldapserver_id, accept, content_type, opts)
+  p result
+rescue JCAPIv2::ApiError => e
+  puts "Exception when calling GraphApi->g_et_ldapservers_ldapserver_id_users: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ldapserver_id** | **String**| ObjectID of the LDAP Server. | 
+ **accept** | **String**|  | [default to application/x-pem-file]
+ **content_type** | **String**|  | [default to application/json]
+ **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
+ **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
+ **filter** | [**Array&lt;String&gt;**](String.md)| A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60; | [optional] 
+ **x_org_id** | **String**|  | [optional] [default to ]
+
+### Return type
+
+[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
+
+### Authorization
+
+[x-api-key](../README.md#x-api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **g_et_office365s_office365_id_associations**
+> Array&lt;GraphConnection&gt; g_et_office365s_office365_id_associations(office365_id, targets, accept, content_type, opts)
+
+List the associations of an Office 365 instance
+
+This endpoint returns _direct_ associations of an Office 365 instance.   A direct association can be a non-homogeneous relationship between 2 different objects, for example Office 365 and Users.  #### Sample Request ``` curl -X GET 'https://console.jumpcloud.com/api/v2/office365s/{OFFICE365_ID}/associations?targets=user_group' \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}'  ```
+
+### Example
+```ruby
+# load the gem
+require 'jcapiv2'
+# setup authorization
+JCAPIv2.configure do |config|
+  # Configure API key authorization: x-api-key
+  config.api_key['x-api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['x-api-key'] = 'Bearer'
+end
+
+api_instance = JCAPIv2::GraphApi.new
+
+office365_id = "office365_id_example" # String | ObjectID of the Office 365 instance.
+
+targets = ["targets_example"] # Array<String> | 
+
+accept = "application/x-pem-file" # String | 
+
+content_type = "application/json" # String | 
+
+opts = { 
+  limit: 10, # Integer | The number of records to return at once. Limited to 100.
+  skip: 0, # Integer | The offset into the records to return.
+  x_org_id: "" # String | 
+}
+
+begin
+  #List the associations of an Office 365 instance
+  result = api_instance.g_et_office365s_office365_id_associations(office365_id, targets, accept, content_type, opts)
+  p result
+rescue JCAPIv2::ApiError => e
+  puts "Exception when calling GraphApi->g_et_office365s_office365_id_associations: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **office365_id** | **String**| ObjectID of the Office 365 instance. | 
+ **targets** | [**Array&lt;String&gt;**](String.md)|  | 
+ **accept** | **String**|  | [default to application/x-pem-file]
+ **content_type** | **String**|  | [default to application/json]
+ **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
+ **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
+ **x_org_id** | **String**|  | [optional] [default to ]
+
+### Return type
+
+[**Array&lt;GraphConnection&gt;**](GraphConnection.md)
+
+### Authorization
+
+[x-api-key](../README.md#x-api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **g_et_office365s_office365_id_usergroups**
+> Array&lt;GraphObjectWithPaths&gt; g_et_office365s_office365_id_usergroups(office365_id, accept, content_type, opts)
+
+List the User Groups bound to an Office 365 instance
+
+This endpoint will return all Users Groups bound to an Office 365 instance, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the group's type, id, attributes and paths.  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this Office 365 instance to the corresponding User Group; this array represents all grouping and/or associations that would have to be removed to deprovision the User Group from this Office 365 instance.  See `/members` and `/associations` endpoints to manage those collections.  #### Sample Request ```   curl -X GET https://console.jumpcloud.com/api/v2/office365s/{OFFICE365_ID/usergroups \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
+
+### Example
+```ruby
+# load the gem
+require 'jcapiv2'
+# setup authorization
+JCAPIv2.configure do |config|
+  # Configure API key authorization: x-api-key
+  config.api_key['x-api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['x-api-key'] = 'Bearer'
+end
+
+api_instance = JCAPIv2::GraphApi.new
+
+office365_id = "office365_id_example" # String | ObjectID of the Office 365 suite.
+
+accept = "application/x-pem-file" # String | 
+
+content_type = "application/json" # String | 
+
+opts = { 
+  limit: 10, # Integer | The number of records to return at once. Limited to 100.
+  skip: 0, # Integer | The offset into the records to return.
+  filter: ["filter_example"], # Array<String> | A filter to apply to the query. **Filter structure**: `<field>:<operator>:<value>`. **field** = Populate with a valid field from an endpoint response. **operator** =  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** = Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** `GET /users?username=eq:testuser`
+  x_org_id: "" # String | 
+}
+
+begin
+  #List the User Groups bound to an Office 365 instance
+  result = api_instance.g_et_office365s_office365_id_usergroups(office365_id, accept, content_type, opts)
+  p result
+rescue JCAPIv2::ApiError => e
+  puts "Exception when calling GraphApi->g_et_office365s_office365_id_usergroups: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **office365_id** | **String**| ObjectID of the Office 365 suite. | 
+ **accept** | **String**|  | [default to application/x-pem-file]
+ **content_type** | **String**|  | [default to application/json]
+ **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
+ **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
+ **filter** | [**Array&lt;String&gt;**](String.md)| A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60; | [optional] 
+ **x_org_id** | **String**|  | [optional] [default to ]
+
+### Return type
+
+[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
+
+### Authorization
+
+[x-api-key](../README.md#x-api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **g_et_office365s_office365_id_users**
+> Array&lt;GraphObjectWithPaths&gt; g_et_office365s_office365_id_users(office365_id, accept, content_type, opts)
+
+List the Users bound to an Office 365 instance
+
+This endpoint will return all Users bound to an Office 365 instance, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths.  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this Office 365 instance to the corresponding User; this array represents all grouping and/or associations that would have to be removed to deprovision the User from this Office 365 instance.  See `/members` and `/associations` endpoints to manage those collections.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/office365s/{OFFICE365_ID}/users \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
+
+### Example
+```ruby
+# load the gem
+require 'jcapiv2'
+# setup authorization
+JCAPIv2.configure do |config|
+  # Configure API key authorization: x-api-key
+  config.api_key['x-api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['x-api-key'] = 'Bearer'
+end
+
+api_instance = JCAPIv2::GraphApi.new
+
+office365_id = "office365_id_example" # String | ObjectID of the Office 365 suite.
+
+accept = "application/x-pem-file" # String | 
+
+content_type = "application/json" # String | 
+
+opts = { 
+  limit: 10, # Integer | The number of records to return at once. Limited to 100.
+  skip: 0, # Integer | The offset into the records to return.
+  filter: ["filter_example"], # Array<String> | A filter to apply to the query. **Filter structure**: `<field>:<operator>:<value>`. **field** = Populate with a valid field from an endpoint response. **operator** =  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** = Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** `GET /users?username=eq:testuser`
+  x_org_id: "" # String | 
+}
+
+begin
+  #List the Users bound to an Office 365 instance
+  result = api_instance.g_et_office365s_office365_id_users(office365_id, accept, content_type, opts)
+  p result
+rescue JCAPIv2::ApiError => e
+  puts "Exception when calling GraphApi->g_et_office365s_office365_id_users: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **office365_id** | **String**| ObjectID of the Office 365 suite. | 
+ **accept** | **String**|  | [default to application/x-pem-file]
+ **content_type** | **String**|  | [default to application/json]
+ **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
+ **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
+ **filter** | [**Array&lt;String&gt;**](String.md)| A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60; | [optional] 
+ **x_org_id** | **String**|  | [optional] [default to ]
+
+### Return type
+
+[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
+
+### Authorization
+
+[x-api-key](../README.md#x-api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **g_et_policies_policy_id_associations**
+> Array&lt;GraphConnection&gt; g_et_policies_policy_id_associations(policy_id, targets, accept, content_type, opts)
+
+List the associations of a Policy
+
+This endpoint returns the _direct_ associations of a Policy.  A direct association can be a non-homogeneous relationship between 2 different objects, for example Policies and Systems.  #### Sample Request ``` curl -X GET 'https://console.jumpcloud.com/api/v2/policies/{Policy_ID}/associations?targets=system_group \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
+
+### Example
+```ruby
+# load the gem
+require 'jcapiv2'
+# setup authorization
+JCAPIv2.configure do |config|
+  # Configure API key authorization: x-api-key
+  config.api_key['x-api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['x-api-key'] = 'Bearer'
+end
+
+api_instance = JCAPIv2::GraphApi.new
+
+policy_id = "policy_id_example" # String | ObjectID of the Policy.
+
+targets = ["targets_example"] # Array<String> | 
+
+accept = "application/x-pem-file" # String | 
+
+content_type = "application/json" # String | 
+
+opts = { 
+  limit: 10, # Integer | The number of records to return at once. Limited to 100.
+  skip: 0, # Integer | The offset into the records to return.
+  x_org_id: "" # String | 
+}
+
+begin
+  #List the associations of a Policy
+  result = api_instance.g_et_policies_policy_id_associations(policy_id, targets, accept, content_type, opts)
+  p result
+rescue JCAPIv2::ApiError => e
+  puts "Exception when calling GraphApi->g_et_policies_policy_id_associations: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **policy_id** | **String**| ObjectID of the Policy. | 
+ **targets** | [**Array&lt;String&gt;**](String.md)|  | 
+ **accept** | **String**|  | [default to application/x-pem-file]
+ **content_type** | **String**|  | [default to application/json]
+ **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
+ **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
+ **x_org_id** | **String**|  | [optional] [default to ]
+
+### Return type
+
+[**Array&lt;GraphConnection&gt;**](GraphConnection.md)
+
+### Authorization
+
+[x-api-key](../README.md#x-api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **g_et_policies_policy_id_systemgroups**
+> Array&lt;GraphObjectWithPaths&gt; g_et_policies_policy_id_systemgroups(policy_id, accept, content_type, opts)
+
+List the System Groups bound to a Policy
+
+This endpoint will return all Systems Groups bound to a Policy, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the group's type, id, attributes and paths.  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this Policy to the corresponding System Group; this array represents all grouping and/or associations that would have to be removed to deprovision the System Group from this Policy.  See `/members` and `/associations` endpoints to manage those collections.  #### Sample Request ``` curl -X GET  https://console.jumpcloud.com/api/v2/policies/{Policy_ID}/systemgroups \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
+
+### Example
+```ruby
+# load the gem
+require 'jcapiv2'
+# setup authorization
+JCAPIv2.configure do |config|
+  # Configure API key authorization: x-api-key
+  config.api_key['x-api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['x-api-key'] = 'Bearer'
+end
+
+api_instance = JCAPIv2::GraphApi.new
+
+policy_id = "policy_id_example" # String | ObjectID of the Command.
+
+accept = "application/x-pem-file" # String | 
+
+content_type = "application/json" # String | 
+
+opts = { 
+  limit: 10, # Integer | The number of records to return at once. Limited to 100.
+  skip: 0, # Integer | The offset into the records to return.
+  filter: ["filter_example"], # Array<String> | A filter to apply to the query. **Filter structure**: `<field>:<operator>:<value>`. **field** = Populate with a valid field from an endpoint response. **operator** =  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** = Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** `GET /users?username=eq:testuser`
+  x_org_id: "" # String | 
+}
+
+begin
+  #List the System Groups bound to a Policy
+  result = api_instance.g_et_policies_policy_id_systemgroups(policy_id, accept, content_type, opts)
+  p result
+rescue JCAPIv2::ApiError => e
+  puts "Exception when calling GraphApi->g_et_policies_policy_id_systemgroups: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **policy_id** | **String**| ObjectID of the Command. | 
+ **accept** | **String**|  | [default to application/x-pem-file]
+ **content_type** | **String**|  | [default to application/json]
+ **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
+ **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
+ **filter** | [**Array&lt;String&gt;**](String.md)| A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60; | [optional] 
+ **x_org_id** | **String**|  | [optional] [default to ]
+
+### Return type
+
+[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
+
+### Authorization
+
+[x-api-key](../README.md#x-api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **g_et_policies_policy_id_systems**
+> Array&lt;GraphObjectWithPaths&gt; g_et_policies_policy_id_systems(policy_id, accept, content_type, opts)
+
+List the Systems bound to a Policy
+
+This endpoint will return all Systems bound to a Policy, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths.  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this Policy to the corresponding System; this array represents all grouping and/or associations that would have to be removed to deprovision the System from this Policy.  See `/members` and `/associations` endpoints to manage those collections.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/policies/{Policy_ID}/systems \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
+
+### Example
+```ruby
+# load the gem
+require 'jcapiv2'
+# setup authorization
+JCAPIv2.configure do |config|
+  # Configure API key authorization: x-api-key
+  config.api_key['x-api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['x-api-key'] = 'Bearer'
+end
+
+api_instance = JCAPIv2::GraphApi.new
+
+policy_id = "policy_id_example" # String | ObjectID of the Command.
+
+accept = "application/x-pem-file" # String | 
+
+content_type = "application/json" # String | 
+
+opts = { 
+  limit: 10, # Integer | The number of records to return at once. Limited to 100.
+  skip: 0, # Integer | The offset into the records to return.
+  filter: ["filter_example"], # Array<String> | A filter to apply to the query. **Filter structure**: `<field>:<operator>:<value>`. **field** = Populate with a valid field from an endpoint response. **operator** =  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** = Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** `GET /users?username=eq:testuser`
+  x_org_id: "" # String | 
+}
+
+begin
+  #List the Systems bound to a Policy
+  result = api_instance.g_et_policies_policy_id_systems(policy_id, accept, content_type, opts)
+  p result
+rescue JCAPIv2::ApiError => e
+  puts "Exception when calling GraphApi->g_et_policies_policy_id_systems: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **policy_id** | **String**| ObjectID of the Command. | 
+ **accept** | **String**|  | [default to application/x-pem-file]
+ **content_type** | **String**|  | [default to application/json]
+ **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
+ **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
+ **filter** | [**Array&lt;String&gt;**](String.md)| A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60; | [optional] 
+ **x_org_id** | **String**|  | [optional] [default to ]
+
+### Return type
+
+[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
+
+### Authorization
+
+[x-api-key](../README.md#x-api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **g_et_radiusservers_radiusserver_id_associations**
+> Array&lt;GraphConnection&gt; g_et_radiusservers_radiusserver_id_associations(radiusserver_id, targets, accept, content_type, opts)
+
+List the associations of a RADIUS  Server
+
+This endpoint returns the _direct_ associations of a Radius Server.  A direct association can be a non-homogeneous relationship between 2 different objects, for example Radius Servers and Users.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/radiusservers/{RADIUS_ID}/associations?targets=user_group \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
+
+### Example
+```ruby
+# load the gem
+require 'jcapiv2'
+# setup authorization
+JCAPIv2.configure do |config|
+  # Configure API key authorization: x-api-key
+  config.api_key['x-api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['x-api-key'] = 'Bearer'
+end
+
+api_instance = JCAPIv2::GraphApi.new
+
+radiusserver_id = "radiusserver_id_example" # String | ObjectID of the Radius Server.
+
+targets = ["targets_example"] # Array<String> | 
+
+accept = "application/x-pem-file" # String | 
+
+content_type = "application/json" # String | 
+
+opts = { 
+  limit: 10, # Integer | The number of records to return at once. Limited to 100.
+  skip: 0, # Integer | The offset into the records to return.
+  x_org_id: "" # String | 
+}
+
+begin
+  #List the associations of a RADIUS  Server
+  result = api_instance.g_et_radiusservers_radiusserver_id_associations(radiusserver_id, targets, accept, content_type, opts)
+  p result
+rescue JCAPIv2::ApiError => e
+  puts "Exception when calling GraphApi->g_et_radiusservers_radiusserver_id_associations: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **radiusserver_id** | **String**| ObjectID of the Radius Server. | 
+ **targets** | [**Array&lt;String&gt;**](String.md)|  | 
+ **accept** | **String**|  | [default to application/x-pem-file]
+ **content_type** | **String**|  | [default to application/json]
+ **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
+ **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
+ **x_org_id** | **String**|  | [optional] [default to ]
+
+### Return type
+
+[**Array&lt;GraphConnection&gt;**](GraphConnection.md)
+
+### Authorization
+
+[x-api-key](../README.md#x-api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **g_et_radiusservers_radiusserver_id_usergroups**
+> Array&lt;GraphObjectWithPaths&gt; g_et_radiusservers_radiusserver_id_usergroups(radiusserver_id, accept, content_type, opts)
+
+List the User Groups bound to a RADIUS  Server
+
+This endpoint will return all Users Groups bound to a RADIUS Server, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the group's type, id, attributes and paths.  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this RADIUS server instance to the corresponding User Group; this array represents all grouping and/or associations that would have to be removed to deprovision the User Group from this RADIUS server instance.  See `/members` and `/associations` endpoints to manage those collections.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/radiusservers/{RADIUS_ID}/usergroups \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
+
+### Example
+```ruby
+# load the gem
+require 'jcapiv2'
+# setup authorization
+JCAPIv2.configure do |config|
+  # Configure API key authorization: x-api-key
+  config.api_key['x-api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['x-api-key'] = 'Bearer'
+end
+
+api_instance = JCAPIv2::GraphApi.new
+
+radiusserver_id = "radiusserver_id_example" # String | ObjectID of the Radius Server.
+
+accept = "application/x-pem-file" # String | 
+
+content_type = "application/json" # String | 
+
+opts = { 
+  limit: 10, # Integer | The number of records to return at once. Limited to 100.
+  skip: 0, # Integer | The offset into the records to return.
+  filter: ["filter_example"], # Array<String> | A filter to apply to the query. **Filter structure**: `<field>:<operator>:<value>`. **field** = Populate with a valid field from an endpoint response. **operator** =  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** = Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** `GET /users?username=eq:testuser`
+  x_org_id: "" # String | 
+}
+
+begin
+  #List the User Groups bound to a RADIUS  Server
+  result = api_instance.g_et_radiusservers_radiusserver_id_usergroups(radiusserver_id, accept, content_type, opts)
+  p result
+rescue JCAPIv2::ApiError => e
+  puts "Exception when calling GraphApi->g_et_radiusservers_radiusserver_id_usergroups: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **radiusserver_id** | **String**| ObjectID of the Radius Server. | 
+ **accept** | **String**|  | [default to application/x-pem-file]
+ **content_type** | **String**|  | [default to application/json]
+ **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
+ **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
+ **filter** | [**Array&lt;String&gt;**](String.md)| A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60; | [optional] 
+ **x_org_id** | **String**|  | [optional] [default to ]
+
+### Return type
+
+[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
+
+### Authorization
+
+[x-api-key](../README.md#x-api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **g_et_radiusservers_radiusserver_id_users**
+> Array&lt;GraphObjectWithPaths&gt; g_et_radiusservers_radiusserver_id_users(radiusserver_id, accept, content_type, opts)
+
+List the Users bound to a RADIUS  Server
+
+This endpoint will return all Users bound to a RADIUS Server, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths.  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this RADIUS server instance to the corresponding User; this array represents all grouping and/or associations that would have to be removed to deprovision the User from this RADIUS server instance.  See `/members` and `/associations` endpoints to manage those collections.   #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/ldapservers/{LDAP_ID}/users \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}'   ```
+
+### Example
+```ruby
+# load the gem
+require 'jcapiv2'
+# setup authorization
+JCAPIv2.configure do |config|
+  # Configure API key authorization: x-api-key
+  config.api_key['x-api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['x-api-key'] = 'Bearer'
+end
+
+api_instance = JCAPIv2::GraphApi.new
+
+radiusserver_id = "radiusserver_id_example" # String | ObjectID of the Radius Server.
+
+accept = "application/x-pem-file" # String | 
+
+content_type = "application/json" # String | 
+
+opts = { 
+  limit: 10, # Integer | The number of records to return at once. Limited to 100.
+  skip: 0, # Integer | The offset into the records to return.
+  filter: ["filter_example"], # Array<String> | A filter to apply to the query. **Filter structure**: `<field>:<operator>:<value>`. **field** = Populate with a valid field from an endpoint response. **operator** =  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** = Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** `GET /users?username=eq:testuser`
+  x_org_id: "" # String | 
+}
+
+begin
+  #List the Users bound to a RADIUS  Server
+  result = api_instance.g_et_radiusservers_radiusserver_id_users(radiusserver_id, accept, content_type, opts)
+  p result
+rescue JCAPIv2::ApiError => e
+  puts "Exception when calling GraphApi->g_et_radiusservers_radiusserver_id_users: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **radiusserver_id** | **String**| ObjectID of the Radius Server. | 
+ **accept** | **String**|  | [default to application/x-pem-file]
+ **content_type** | **String**|  | [default to application/json]
+ **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
+ **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
+ **filter** | [**Array&lt;String&gt;**](String.md)| A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60; | [optional] 
+ **x_org_id** | **String**|  | [optional] [default to ]
+
+### Return type
+
+[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
+
+### Authorization
+
+[x-api-key](../README.md#x-api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **g_et_software_apps_software_app_id_associations**
+> Array&lt;GraphConnection&gt; g_et_software_apps_software_app_id_associations(software_app_id, targets, accept, content_type, opts)
+
+List the associations of a Software Application
+
+This endpoint will return the _direct_ associations of a Software Application. A direct association can be a non-homogeneous relationship between 2 different objects, for example Software Application and System Groups.   #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/software_apps/{software_app_id}/associations?targets=system_group \\   -H 'accept: application/json' \\   -H 'content-type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
+
+### Example
+```ruby
+# load the gem
+require 'jcapiv2'
+# setup authorization
+JCAPIv2.configure do |config|
+  # Configure API key authorization: x-api-key
+  config.api_key['x-api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['x-api-key'] = 'Bearer'
+end
+
+api_instance = JCAPIv2::GraphApi.new
+
+software_app_id = "software_app_id_example" # String | ObjectID of the Software App.
+
+targets = ["targets_example"] # Array<String> | 
+
+accept = "application/x-pem-file" # String | 
+
+content_type = "application/json" # String | 
+
+opts = { 
+  limit: 10, # Integer | The number of records to return at once. Limited to 100.
+  skip: 0, # Integer | The offset into the records to return.
+  x_org_id: "" # String | 
+}
+
+begin
+  #List the associations of a Software Application
+  result = api_instance.g_et_software_apps_software_app_id_associations(software_app_id, targets, accept, content_type, opts)
+  p result
+rescue JCAPIv2::ApiError => e
+  puts "Exception when calling GraphApi->g_et_software_apps_software_app_id_associations: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **software_app_id** | **String**| ObjectID of the Software App. | 
+ **targets** | [**Array&lt;String&gt;**](String.md)|  | 
+ **accept** | **String**|  | [default to application/x-pem-file]
+ **content_type** | **String**|  | [default to application/json]
+ **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
+ **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
+ **x_org_id** | **String**|  | [optional] [default to ]
+
+### Return type
+
+[**Array&lt;GraphConnection&gt;**](GraphConnection.md)
+
+### Authorization
+
+[x-api-key](../README.md#x-api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **g_et_software_apps_software_app_id_systemgroups**
+> Array&lt;GraphObjectWithPaths&gt; g_et_software_apps_software_app_id_systemgroups(software_app_id, accept, content_type, opts)
+
+List the System Groups bound to a Software App.
+
+This endpoint will return all Systems Groups bound to a Software App, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the group's type, id, attributes and paths.  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this Software App to the corresponding System Group; this array represents all grouping and/or associations that would have to be removed to deprovision the System Group from this Software App.  See `/associations` endpoint to manage those collections.  #### Sample Request ``` curl -X GET  https://console.jumpcloud.com/api/v2/software_apps/{software_app_id}/systemgroups \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
+
+### Example
+```ruby
+# load the gem
+require 'jcapiv2'
+# setup authorization
+JCAPIv2.configure do |config|
+  # Configure API key authorization: x-api-key
+  config.api_key['x-api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['x-api-key'] = 'Bearer'
+end
+
+api_instance = JCAPIv2::GraphApi.new
+
+software_app_id = "software_app_id_example" # String | ObjectID of the Software App.
+
+accept = "application/x-pem-file" # String | 
+
+content_type = "application/json" # String | 
+
+opts = { 
+  limit: 10, # Integer | The number of records to return at once. Limited to 100.
+  skip: 0, # Integer | The offset into the records to return.
+  filter: ["filter_example"], # Array<String> | A filter to apply to the query. **Filter structure**: `<field>:<operator>:<value>`. **field** = Populate with a valid field from an endpoint response. **operator** =  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** = Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** `GET /users?username=eq:testuser`
+  x_org_id: "" # String | 
+}
+
+begin
+  #List the System Groups bound to a Software App.
+  result = api_instance.g_et_software_apps_software_app_id_systemgroups(software_app_id, accept, content_type, opts)
+  p result
+rescue JCAPIv2::ApiError => e
+  puts "Exception when calling GraphApi->g_et_software_apps_software_app_id_systemgroups: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **software_app_id** | **String**| ObjectID of the Software App. | 
+ **accept** | **String**|  | [default to application/x-pem-file]
+ **content_type** | **String**|  | [default to application/json]
+ **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
+ **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
+ **filter** | [**Array&lt;String&gt;**](String.md)| A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60; | [optional] 
+ **x_org_id** | **String**|  | [optional] [default to ]
+
+### Return type
+
+[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
+
+### Authorization
+
+[x-api-key](../README.md#x-api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **g_et_software_apps_software_app_id_systems**
+> Array&lt;GraphObjectWithPaths&gt; g_et_software_apps_software_app_id_systems(software_app_id, accept, content_type, opts)
+
+List the Systems bound to a Software App.
+
+This endpoint will return all Systems bound to a Software App, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths.  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this Software App to the corresponding System; this array represents all grouping and/or associations that would have to be removed to deprovision the System from this Software App.  See `/associations` endpoint to manage those collections.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/software_apps/{software_app_id}/systems \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
+
+### Example
+```ruby
+# load the gem
+require 'jcapiv2'
+# setup authorization
+JCAPIv2.configure do |config|
+  # Configure API key authorization: x-api-key
+  config.api_key['x-api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['x-api-key'] = 'Bearer'
+end
+
+api_instance = JCAPIv2::GraphApi.new
+
+software_app_id = "software_app_id_example" # String | ObjectID of the Software App.
+
+accept = "application/x-pem-file" # String | 
+
+content_type = "application/json" # String | 
+
+opts = { 
+  limit: 10, # Integer | The number of records to return at once. Limited to 100.
+  skip: 0, # Integer | The offset into the records to return.
+  filter: ["filter_example"], # Array<String> | A filter to apply to the query. **Filter structure**: `<field>:<operator>:<value>`. **field** = Populate with a valid field from an endpoint response. **operator** =  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** = Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** `GET /users?username=eq:testuser`
+  x_org_id: "" # String | 
+}
+
+begin
+  #List the Systems bound to a Software App.
+  result = api_instance.g_et_software_apps_software_app_id_systems(software_app_id, accept, content_type, opts)
+  p result
+rescue JCAPIv2::ApiError => e
+  puts "Exception when calling GraphApi->g_et_software_apps_software_app_id_systems: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **software_app_id** | **String**| ObjectID of the Software App. | 
+ **accept** | **String**|  | [default to application/x-pem-file]
+ **content_type** | **String**|  | [default to application/json]
+ **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
+ **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
+ **filter** | [**Array&lt;String&gt;**](String.md)| A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60; | [optional] 
+ **x_org_id** | **String**|  | [optional] [default to ]
+
+### Return type
+
+[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
+
+### Authorization
+
+[x-api-key](../README.md#x-api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **g_et_systemgroups_group_id_associations**
+> Array&lt;GraphConnection&gt; g_et_systemgroups_group_id_associations(group_id, targets, accept, content_type, opts)
+
+List the associations of a System Group
+
+This endpoint returns the _direct_ associations of a System Group.  A direct association can be a non-homogeneous relationship between 2 different objects, for example System Groups and Users.   #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/systemgroups/{GroupID}/associations?targets=user \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
+
+### Example
+```ruby
+# load the gem
+require 'jcapiv2'
+# setup authorization
+JCAPIv2.configure do |config|
+  # Configure API key authorization: x-api-key
+  config.api_key['x-api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['x-api-key'] = 'Bearer'
+end
+
+api_instance = JCAPIv2::GraphApi.new
+
+group_id = "group_id_example" # String | ObjectID of the System Group.
+
+targets = ["targets_example"] # Array<String> | 
+
+accept = "application/x-pem-file" # String | 
+
+content_type = "application/json" # String | 
+
+opts = { 
+  limit: 10, # Integer | The number of records to return at once. Limited to 100.
+  skip: 0, # Integer | The offset into the records to return.
+  x_org_id: "" # String | 
+}
+
+begin
+  #List the associations of a System Group
+  result = api_instance.g_et_systemgroups_group_id_associations(group_id, targets, accept, content_type, opts)
+  p result
+rescue JCAPIv2::ApiError => e
+  puts "Exception when calling GraphApi->g_et_systemgroups_group_id_associations: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **group_id** | **String**| ObjectID of the System Group. | 
+ **targets** | [**Array&lt;String&gt;**](String.md)|  | 
+ **accept** | **String**|  | [default to application/x-pem-file]
+ **content_type** | **String**|  | [default to application/json]
+ **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
+ **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
+ **x_org_id** | **String**|  | [optional] [default to ]
+
+### Return type
+
+[**Array&lt;GraphConnection&gt;**](GraphConnection.md)
+
+### Authorization
+
+[x-api-key](../README.md#x-api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **g_et_systemgroups_group_id_commands**
+> Array&lt;GraphObjectWithPaths&gt; g_et_systemgroups_group_id_commands(group_id, accept, content_type, opts)
+
+List the Commands bound to a System Group
+
+This endpoint will return all Commands bound to a System Group, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the group's type, id, attributes and paths.  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this System Group to the corresponding Command; this array represents all grouping and/or associations that would have to be removed to deprovision the Command from this System Group.  See `/members` and `/associations` endpoints to manage those collections.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/systemgroups/{GroupID}/commands \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
+
+### Example
+```ruby
+# load the gem
+require 'jcapiv2'
+# setup authorization
+JCAPIv2.configure do |config|
+  # Configure API key authorization: x-api-key
+  config.api_key['x-api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['x-api-key'] = 'Bearer'
+end
+
+api_instance = JCAPIv2::GraphApi.new
+
+group_id = "group_id_example" # String | ObjectID of the System Group.
+
+accept = "application/x-pem-file" # String | 
+
+content_type = "application/json" # String | 
+
+opts = { 
+  limit: 10, # Integer | The number of records to return at once. Limited to 100.
+  skip: 0, # Integer | The offset into the records to return.
+  filter: ["filter_example"], # Array<String> | A filter to apply to the query. **Filter structure**: `<field>:<operator>:<value>`. **field** = Populate with a valid field from an endpoint response. **operator** =  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** = Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** `GET /users?username=eq:testuser`
+  x_org_id: "" # String | 
+}
+
+begin
+  #List the Commands bound to a System Group
+  result = api_instance.g_et_systemgroups_group_id_commands(group_id, accept, content_type, opts)
+  p result
+rescue JCAPIv2::ApiError => e
+  puts "Exception when calling GraphApi->g_et_systemgroups_group_id_commands: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **group_id** | **String**| ObjectID of the System Group. | 
+ **accept** | **String**|  | [default to application/x-pem-file]
+ **content_type** | **String**|  | [default to application/json]
+ **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
+ **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
+ **filter** | [**Array&lt;String&gt;**](String.md)| A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60; | [optional] 
+ **x_org_id** | **String**|  | [optional] [default to ]
+
+### Return type
+
+[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
+
+### Authorization
+
+[x-api-key](../README.md#x-api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **g_et_systemgroups_group_id_members**
+> Array&lt;GraphConnection&gt; g_et_systemgroups_group_id_members(group_id, accept, content_type, opts)
+
+List the members of a System Group
+
+This endpoint returns the system members of a System Group.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/systemgroups/{Group_ID}/members \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}'  ```
+
+### Example
+```ruby
+# load the gem
+require 'jcapiv2'
+# setup authorization
+JCAPIv2.configure do |config|
+  # Configure API key authorization: x-api-key
+  config.api_key['x-api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['x-api-key'] = 'Bearer'
+end
+
+api_instance = JCAPIv2::GraphApi.new
+
+group_id = "group_id_example" # String | ObjectID of the System Group.
+
+accept = "application/x-pem-file" # String | 
+
+content_type = "application/json" # String | 
+
+opts = { 
+  limit: 10, # Integer | The number of records to return at once. Limited to 100.
+  skip: 0, # Integer | The offset into the records to return.
+  x_org_id: "" # String | 
+}
+
+begin
+  #List the members of a System Group
+  result = api_instance.g_et_systemgroups_group_id_members(group_id, accept, content_type, opts)
+  p result
+rescue JCAPIv2::ApiError => e
+  puts "Exception when calling GraphApi->g_et_systemgroups_group_id_members: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **group_id** | **String**| ObjectID of the System Group. | 
+ **accept** | **String**|  | [default to application/x-pem-file]
+ **content_type** | **String**|  | [default to application/json]
+ **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
+ **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
+ **x_org_id** | **String**|  | [optional] [default to ]
+
+### Return type
+
+[**Array&lt;GraphConnection&gt;**](GraphConnection.md)
+
+### Authorization
+
+[x-api-key](../README.md#x-api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **g_et_systemgroups_group_id_membership**
+> Array&lt;GraphObjectWithPaths&gt; g_et_systemgroups_group_id_membership(group_id, accept, content_type, opts)
+
+List the System Group's membership
+
+This endpoint returns all Systems that are a member of this System Group.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/systemgroups/{Group_ID/membership \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}'  ```
+
+### Example
+```ruby
+# load the gem
+require 'jcapiv2'
+# setup authorization
+JCAPIv2.configure do |config|
+  # Configure API key authorization: x-api-key
+  config.api_key['x-api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['x-api-key'] = 'Bearer'
+end
+
+api_instance = JCAPIv2::GraphApi.new
+
+group_id = "group_id_example" # String | ObjectID of the System Group.
+
+accept = "application/x-pem-file" # String | 
+
+content_type = "application/json" # String | 
+
+opts = { 
+  limit: 10, # Integer | The number of records to return at once. Limited to 100.
+  skip: 0, # Integer | The offset into the records to return.
+  sort: ["sort_example"], # Array<String> | The comma separated fields used to sort the collection. Default sort is ascending, prefix with `-` to sort descending. 
+  filter: ["filter_example"], # Array<String> | A filter to apply to the query. **Filter structure**: `<field>:<operator>:<value>`. **field** = Populate with a valid field from an endpoint response. **operator** =  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** = Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** `GET /users?username=eq:testuser`
+  x_org_id: "" # String | 
+}
+
+begin
+  #List the System Group's membership
+  result = api_instance.g_et_systemgroups_group_id_membership(group_id, accept, content_type, opts)
+  p result
+rescue JCAPIv2::ApiError => e
+  puts "Exception when calling GraphApi->g_et_systemgroups_group_id_membership: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **group_id** | **String**| ObjectID of the System Group. | 
+ **accept** | **String**|  | [default to application/x-pem-file]
+ **content_type** | **String**|  | [default to application/json]
+ **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
+ **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
+ **sort** | [**Array&lt;String&gt;**](String.md)| The comma separated fields used to sort the collection. Default sort is ascending, prefix with &#x60;-&#x60; to sort descending.  | [optional] 
+ **filter** | [**Array&lt;String&gt;**](String.md)| A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60; | [optional] 
+ **x_org_id** | **String**|  | [optional] [default to ]
+
+### Return type
+
+[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
+
+### Authorization
+
+[x-api-key](../README.md#x-api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **g_et_systemgroups_group_id_policies**
+> Array&lt;GraphObjectWithPaths&gt; g_et_systemgroups_group_id_policies(group_id, accept, content_type, opts)
+
+List the Policies bound to a System Group
+
+This endpoint will return all Policies bound to a System Group, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths.  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this System Group to the corresponding Policy; this array represents all grouping and/or associations that would have to be removed to deprovision the Policy from this System Group.  See `/members` and `/associations` endpoints to manage those collections.  This endpoint is not public yet as we haven't finished the code.  ##### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/systemgroups/{GroupID}/policies \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
+
+### Example
+```ruby
+# load the gem
+require 'jcapiv2'
+# setup authorization
+JCAPIv2.configure do |config|
+  # Configure API key authorization: x-api-key
+  config.api_key['x-api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['x-api-key'] = 'Bearer'
+end
+
+api_instance = JCAPIv2::GraphApi.new
+
+group_id = "group_id_example" # String | ObjectID of the System Group.
+
+accept = "application/x-pem-file" # String | 
+
+content_type = "application/json" # String | 
+
+opts = { 
+  limit: 10, # Integer | The number of records to return at once. Limited to 100.
+  skip: 0, # Integer | The offset into the records to return.
+  filter: ["filter_example"], # Array<String> | A filter to apply to the query. **Filter structure**: `<field>:<operator>:<value>`. **field** = Populate with a valid field from an endpoint response. **operator** =  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** = Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** `GET /users?username=eq:testuser`
+  x_org_id: "" # String | 
+}
+
+begin
+  #List the Policies bound to a System Group
+  result = api_instance.g_et_systemgroups_group_id_policies(group_id, accept, content_type, opts)
+  p result
+rescue JCAPIv2::ApiError => e
+  puts "Exception when calling GraphApi->g_et_systemgroups_group_id_policies: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **group_id** | **String**| ObjectID of the System Group. | 
+ **accept** | **String**|  | [default to application/x-pem-file]
+ **content_type** | **String**|  | [default to application/json]
+ **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
+ **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
+ **filter** | [**Array&lt;String&gt;**](String.md)| A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60; | [optional] 
+ **x_org_id** | **String**|  | [optional] [default to ]
+
+### Return type
+
+[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
+
+### Authorization
+
+[x-api-key](../README.md#x-api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **g_et_systemgroups_group_id_usergroups**
+> Array&lt;GraphObjectWithPaths&gt; g_et_systemgroups_group_id_usergroups(group_id, accept, content_type, opts)
+
+List the User Groups bound to a System Group
+
+This endpoint will return all User Groups bound to a System Group, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths.  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this System Group to the corresponding User Group; this array represents all grouping and/or associations that would have to be removed to deprovision the User Group from this System Group.  See `/members` and `/associations` endpoints to manage those collections.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/systemgroups/{GroupID}/usergroups \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}'  ```
+
+### Example
+```ruby
+# load the gem
+require 'jcapiv2'
+# setup authorization
+JCAPIv2.configure do |config|
+  # Configure API key authorization: x-api-key
+  config.api_key['x-api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['x-api-key'] = 'Bearer'
+end
+
+api_instance = JCAPIv2::GraphApi.new
+
+group_id = "group_id_example" # String | ObjectID of the System Group.
+
+accept = "application/x-pem-file" # String | 
+
+content_type = "application/json" # String | 
+
+opts = { 
+  limit: 10, # Integer | The number of records to return at once. Limited to 100.
+  skip: 0, # Integer | The offset into the records to return.
+  filter: ["filter_example"], # Array<String> | A filter to apply to the query. **Filter structure**: `<field>:<operator>:<value>`. **field** = Populate with a valid field from an endpoint response. **operator** =  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** = Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** `GET /users?username=eq:testuser`
+  x_org_id: "" # String | 
+}
+
+begin
+  #List the User Groups bound to a System Group
+  result = api_instance.g_et_systemgroups_group_id_usergroups(group_id, accept, content_type, opts)
+  p result
+rescue JCAPIv2::ApiError => e
+  puts "Exception when calling GraphApi->g_et_systemgroups_group_id_usergroups: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **group_id** | **String**| ObjectID of the System Group. | 
+ **accept** | **String**|  | [default to application/x-pem-file]
+ **content_type** | **String**|  | [default to application/json]
+ **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
+ **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
+ **filter** | [**Array&lt;String&gt;**](String.md)| A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60; | [optional] 
+ **x_org_id** | **String**|  | [optional] [default to ]
+
+### Return type
+
+[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
+
+### Authorization
+
+[x-api-key](../README.md#x-api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **g_et_systemgroups_group_id_users**
+> Array&lt;GraphObjectWithPaths&gt; g_et_systemgroups_group_id_users(group_id, accept, content_type, opts)
+
+List the Users bound to a System Group
+
+This endpoint will return all Users bound to a System Group, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths.  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this System Group to the corresponding User; this array represents all grouping and/or associations that would have to be removed to deprovision the User from this System Group.  See `/members` and `/associations` endpoints to manage those collections.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/systemgroups/{GroupID}/users \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
+
+### Example
+```ruby
+# load the gem
+require 'jcapiv2'
+# setup authorization
+JCAPIv2.configure do |config|
+  # Configure API key authorization: x-api-key
+  config.api_key['x-api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['x-api-key'] = 'Bearer'
+end
+
+api_instance = JCAPIv2::GraphApi.new
+
+group_id = "group_id_example" # String | ObjectID of the System Group.
+
+accept = "application/x-pem-file" # String | 
+
+content_type = "application/json" # String | 
+
+opts = { 
+  limit: 10, # Integer | The number of records to return at once. Limited to 100.
+  skip: 0, # Integer | The offset into the records to return.
+  filter: ["filter_example"], # Array<String> | A filter to apply to the query. **Filter structure**: `<field>:<operator>:<value>`. **field** = Populate with a valid field from an endpoint response. **operator** =  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** = Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** `GET /users?username=eq:testuser`
+  x_org_id: "" # String | 
+}
+
+begin
+  #List the Users bound to a System Group
+  result = api_instance.g_et_systemgroups_group_id_users(group_id, accept, content_type, opts)
+  p result
+rescue JCAPIv2::ApiError => e
+  puts "Exception when calling GraphApi->g_et_systemgroups_group_id_users: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **group_id** | **String**| ObjectID of the System Group. | 
+ **accept** | **String**|  | [default to application/x-pem-file]
+ **content_type** | **String**|  | [default to application/json]
+ **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
+ **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
+ **filter** | [**Array&lt;String&gt;**](String.md)| A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60; | [optional] 
+ **x_org_id** | **String**|  | [optional] [default to ]
+
+### Return type
+
+[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
+
+### Authorization
+
+[x-api-key](../README.md#x-api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **g_et_systems_system_id_associations**
+> Array&lt;GraphConnection&gt; g_et_systems_system_id_associations(system_id, targets, accept, content_type, opts)
+
+List the associations of a System
+
+This endpoint returns the _direct_ associations of a System.  A direct association can be a non-homogeneous relationship between 2 different objects, for example Systems and Users.   #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/systems/{System_ID}/associations?targets=user \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}'  ```
+
+### Example
+```ruby
+# load the gem
+require 'jcapiv2'
+# setup authorization
+JCAPIv2.configure do |config|
+  # Configure API key authorization: x-api-key
+  config.api_key['x-api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['x-api-key'] = 'Bearer'
+end
+
+api_instance = JCAPIv2::GraphApi.new
+
+system_id = "system_id_example" # String | ObjectID of the System.
+
+targets = ["targets_example"] # Array<String> | 
+
+accept = "application/x-pem-file" # String | 
+
+content_type = "application/json" # String | 
+
+opts = { 
+  limit: 10, # Integer | The number of records to return at once. Limited to 100.
+  skip: 0, # Integer | The offset into the records to return.
+  authorization: "authorization_example", # String | Authorization header for the System Context API
+  date: "date_example" # String | Current date header for the System Context API
+  x_org_id: "" # String | 
+}
+
+begin
+  #List the associations of a System
+  result = api_instance.g_et_systems_system_id_associations(system_id, targets, accept, content_type, opts)
+  p result
+rescue JCAPIv2::ApiError => e
+  puts "Exception when calling GraphApi->g_et_systems_system_id_associations: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **system_id** | **String**| ObjectID of the System. | 
+ **targets** | [**Array&lt;String&gt;**](String.md)|  | 
+ **accept** | **String**|  | [default to application/x-pem-file]
+ **content_type** | **String**|  | [default to application/json]
+ **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
+ **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
+ **authorization** | **String**| Authorization header for the System Context API | [optional] 
+ **date** | **String**| Current date header for the System Context API | [optional] 
+ **x_org_id** | **String**|  | [optional] [default to ]
+
+### Return type
+
+[**Array&lt;GraphConnection&gt;**](GraphConnection.md)
+
+### Authorization
+
+[x-api-key](../README.md#x-api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **g_et_systems_system_id_commands**
+> Array&lt;GraphObjectWithPaths&gt; g_et_systems_system_id_commands(system_id, accept, content_type, opts)
+
+List the Commands bound to a System
+
+This endpoint will return all Commands bound to a System, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths.  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this System to the corresponding Command; this array represents all grouping and/or associations that would have to be removed to deprovision the Command from this System.  See `/members` and `/associations` endpoints to manage those collections.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/systems/{System_ID}/commands \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}'  ```
+
+### Example
+```ruby
+# load the gem
+require 'jcapiv2'
+# setup authorization
+JCAPIv2.configure do |config|
+  # Configure API key authorization: x-api-key
+  config.api_key['x-api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['x-api-key'] = 'Bearer'
+end
+
+api_instance = JCAPIv2::GraphApi.new
+
+system_id = "system_id_example" # String | ObjectID of the System.
+
+accept = "application/x-pem-file" # String | 
+
+content_type = "application/json" # String | 
+
+opts = { 
+  limit: 10, # Integer | The number of records to return at once. Limited to 100.
+  skip: 0, # Integer | The offset into the records to return.
+  filter: ["filter_example"], # Array<String> | A filter to apply to the query. **Filter structure**: `<field>:<operator>:<value>`. **field** = Populate with a valid field from an endpoint response. **operator** =  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** = Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** `GET /users?username=eq:testuser`
+  x_org_id: "" # String | 
+}
+
+begin
+  #List the Commands bound to a System
+  result = api_instance.g_et_systems_system_id_commands(system_id, accept, content_type, opts)
+  p result
+rescue JCAPIv2::ApiError => e
+  puts "Exception when calling GraphApi->g_et_systems_system_id_commands: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **system_id** | **String**| ObjectID of the System. | 
+ **accept** | **String**|  | [default to application/x-pem-file]
+ **content_type** | **String**|  | [default to application/json]
+ **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
+ **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
+ **filter** | [**Array&lt;String&gt;**](String.md)| A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60; | [optional] 
+ **x_org_id** | **String**|  | [optional] [default to ]
+
+### Return type
+
+[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
+
+### Authorization
+
+[x-api-key](../README.md#x-api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **g_et_systems_system_id_memberof**
+> Array&lt;GraphObjectWithPaths&gt; g_et_systems_system_id_memberof(system_id, accept, content_type, opts)
+
+List the parent Groups of a System
+
+This endpoint returns all the System Groups a System is a member of.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/systems/{System_ID}/memberof \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}'  ```
+
+### Example
+```ruby
+# load the gem
+require 'jcapiv2'
+# setup authorization
+JCAPIv2.configure do |config|
+  # Configure API key authorization: x-api-key
+  config.api_key['x-api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['x-api-key'] = 'Bearer'
+end
+
+api_instance = JCAPIv2::GraphApi.new
+
+system_id = "system_id_example" # String | ObjectID of the System.
+
+accept = "application/x-pem-file" # String | 
+
+content_type = "application/json" # String | 
+
+opts = { 
+  filter: ["filter_example"], # Array<String> | A filter to apply to the query. **Filter structure**: `<field>:<operator>:<value>`. **field** = Populate with a valid field from an endpoint response. **operator** =  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** = Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** `GET /users?username=eq:testuser`
+  limit: 10, # Integer | The number of records to return at once. Limited to 100.
+  skip: 0, # Integer | The offset into the records to return.
+  sort: ["sort_example"], # Array<String> | The comma separated fields used to sort the collection. Default sort is ascending, prefix with `-` to sort descending. 
+  authorization: "authorization_example", # String | Authorization header for the System Context API
+  date: "date_example" # String | Current date header for the System Context API
+  x_org_id: "" # String | 
+}
+
+begin
+  #List the parent Groups of a System
+  result = api_instance.g_et_systems_system_id_memberof(system_id, accept, content_type, opts)
+  p result
+rescue JCAPIv2::ApiError => e
+  puts "Exception when calling GraphApi->g_et_systems_system_id_memberof: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **system_id** | **String**| ObjectID of the System. | 
+ **accept** | **String**|  | [default to application/x-pem-file]
+ **content_type** | **String**|  | [default to application/json]
+ **filter** | [**Array&lt;String&gt;**](String.md)| A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60; | [optional] 
+ **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
+ **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
+ **sort** | [**Array&lt;String&gt;**](String.md)| The comma separated fields used to sort the collection. Default sort is ascending, prefix with &#x60;-&#x60; to sort descending.  | [optional] 
+ **authorization** | **String**| Authorization header for the System Context API | [optional] 
+ **date** | **String**| Current date header for the System Context API | [optional] 
+ **x_org_id** | **String**|  | [optional] [default to ]
+
+### Return type
+
+[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
+
+### Authorization
+
+[x-api-key](../README.md#x-api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **g_et_systems_system_id_policies**
+> Array&lt;GraphObjectWithPaths&gt; g_et_systems_system_id_policies(system_id, accept, content_type, opts)
+
+List the Policies bound to a System
+
+This endpoint will return all Policies bound to a System, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths.  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this System to the corresponding Policy; this array represents all grouping and/or associations that would have to be removed to deprovision the Policy from this System.  See `/members` and `/associations` endpoints to manage those collections.  This endpoint is not yet public as we have finish the code.  ##### Sample Request  ``` curl -X GET https://console.jumpcloud.com/api/v2/{System_ID}/policies \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}'  ```
+
+### Example
+```ruby
+# load the gem
+require 'jcapiv2'
+# setup authorization
+JCAPIv2.configure do |config|
+  # Configure API key authorization: x-api-key
+  config.api_key['x-api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['x-api-key'] = 'Bearer'
+end
+
+api_instance = JCAPIv2::GraphApi.new
+
+system_id = "system_id_example" # String | ObjectID of the System.
+
+accept = "application/x-pem-file" # String | 
+
+content_type = "application/json" # String | 
+
+opts = { 
+  limit: 10, # Integer | The number of records to return at once. Limited to 100.
+  skip: 0, # Integer | The offset into the records to return.
+  filter: ["filter_example"], # Array<String> | A filter to apply to the query. **Filter structure**: `<field>:<operator>:<value>`. **field** = Populate with a valid field from an endpoint response. **operator** =  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** = Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** `GET /users?username=eq:testuser`
+  x_org_id: "" # String | 
+}
+
+begin
+  #List the Policies bound to a System
+  result = api_instance.g_et_systems_system_id_policies(system_id, accept, content_type, opts)
+  p result
+rescue JCAPIv2::ApiError => e
+  puts "Exception when calling GraphApi->g_et_systems_system_id_policies: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **system_id** | **String**| ObjectID of the System. | 
+ **accept** | **String**|  | [default to application/x-pem-file]
+ **content_type** | **String**|  | [default to application/json]
+ **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
+ **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
+ **filter** | [**Array&lt;String&gt;**](String.md)| A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60; | [optional] 
+ **x_org_id** | **String**|  | [optional] [default to ]
+
+### Return type
+
+[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
+
+### Authorization
+
+[x-api-key](../README.md#x-api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **g_et_systems_system_id_policystatuses**
+> Array&lt;PolicyResult&gt; g_et_systems_system_id_policystatuses(system_id, accept, content_type, opts)
+
+List the policy statuses for a system
+
+This endpoint returns the policy results for a particular system.  ##### Sample Request  ``` curl -X GET https://console.jumpcloud.com/api/v2/systems/{System_ID}/policystatuses \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}'  ```
+
+### Example
+```ruby
+# load the gem
+require 'jcapiv2'
+# setup authorization
+JCAPIv2.configure do |config|
+  # Configure API key authorization: x-api-key
+  config.api_key['x-api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['x-api-key'] = 'Bearer'
+end
+
+api_instance = JCAPIv2::GraphApi.new
+
+system_id = "system_id_example" # String | ObjectID of the System.
+
+accept = "application/x-pem-file" # String | 
+
+content_type = "application/json" # String | 
+
+opts = { 
+  fields: ["fields_example"], # Array<String> | The comma separated fields included in the returned records. If omitted, the default list of fields will be returned. 
+  filter: ["filter_example"], # Array<String> | A filter to apply to the query. **Filter structure**: `<field>:<operator>:<value>`. **field** = Populate with a valid field from an endpoint response. **operator** =  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** = Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** `GET /users?username=eq:testuser`
+  limit: 10, # Integer | The number of records to return at once. Limited to 100.
+  skip: 0, # Integer | The offset into the records to return.
+  sort: ["sort_example"], # Array<String> | The comma separated fields used to sort the collection. Default sort is ascending, prefix with `-` to sort descending. 
+  x_org_id: "" # String | 
+}
+
+begin
+  #List the policy statuses for a system
+  result = api_instance.g_et_systems_system_id_policystatuses(system_id, accept, content_type, opts)
+  p result
+rescue JCAPIv2::ApiError => e
+  puts "Exception when calling GraphApi->g_et_systems_system_id_policystatuses: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **system_id** | **String**| ObjectID of the System. | 
+ **accept** | **String**|  | [default to application/x-pem-file]
+ **content_type** | **String**|  | [default to application/json]
+ **fields** | [**Array&lt;String&gt;**](String.md)| The comma separated fields included in the returned records. If omitted, the default list of fields will be returned.  | [optional] 
+ **filter** | [**Array&lt;String&gt;**](String.md)| A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60; | [optional] 
+ **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
+ **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
+ **sort** | [**Array&lt;String&gt;**](String.md)| The comma separated fields used to sort the collection. Default sort is ascending, prefix with &#x60;-&#x60; to sort descending.  | [optional] 
+ **x_org_id** | **String**|  | [optional] [default to ]
+
+### Return type
+
+[**Array&lt;PolicyResult&gt;**](PolicyResult.md)
+
+### Authorization
+
+[x-api-key](../README.md#x-api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **g_et_systems_system_id_usergroups**
+> Array&lt;GraphObjectWithPaths&gt; g_et_systems_system_id_usergroups(system_id, accept, content_type, opts)
+
+List the User Groups bound to a System
+
+This endpoint will return all User Groups bound to a System, either directly or indirectly essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths.  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this System to the corresponding User Group; this array represents all grouping and/or associations that would have to be removed to deprovision the User Group from this System.  See `/members` and `/associations` endpoints to manage those collections.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/systems/{System_ID}/usergroups \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}'  ```
+
+### Example
+```ruby
+# load the gem
+require 'jcapiv2'
+# setup authorization
+JCAPIv2.configure do |config|
+  # Configure API key authorization: x-api-key
+  config.api_key['x-api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['x-api-key'] = 'Bearer'
+end
+
+api_instance = JCAPIv2::GraphApi.new
+
+system_id = "system_id_example" # String | ObjectID of the System.
+
+accept = "application/x-pem-file" # String | 
+
+content_type = "application/json" # String | 
+
+opts = { 
+  limit: 10, # Integer | The number of records to return at once. Limited to 100.
+  skip: 0, # Integer | The offset into the records to return.
+  filter: ["filter_example"], # Array<String> | A filter to apply to the query. **Filter structure**: `<field>:<operator>:<value>`. **field** = Populate with a valid field from an endpoint response. **operator** =  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** = Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** `GET /users?username=eq:testuser`
+  x_org_id: "" # String | 
+  authorization: "authorization_example", # String | Authorization header for the System Context API
+  date: "date_example" # String | Current date header for the System Context API
+}
+
+begin
+  #List the User Groups bound to a System
+  result = api_instance.g_et_systems_system_id_usergroups(system_id, accept, content_type, opts)
+  p result
+rescue JCAPIv2::ApiError => e
+  puts "Exception when calling GraphApi->g_et_systems_system_id_usergroups: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **system_id** | **String**| ObjectID of the System. | 
+ **accept** | **String**|  | [default to application/x-pem-file]
+ **content_type** | **String**|  | [default to application/json]
+ **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
+ **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
+ **filter** | [**Array&lt;String&gt;**](String.md)| A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60; | [optional] 
+ **x_org_id** | **String**|  | [optional] [default to ]
+ **authorization** | **String**| Authorization header for the System Context API | [optional] 
+ **date** | **String**| Current date header for the System Context API | [optional] 
+
+### Return type
+
+[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
+
+### Authorization
+
+[x-api-key](../README.md#x-api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **g_et_systems_system_id_users**
+> Array&lt;GraphObjectWithPaths&gt; g_et_systems_system_id_users(system_id, accept, content_type, opts)
+
+List the Users bound to a System
+
+This endpoint will return all Users bound to a System, either directly or indirectly essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths.  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this System to the corresponding User; this array represents all grouping and/or associations that would have to be removed to deprovision the User from this System.  See `/members` and `/associations` endpoints to manage those collections.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/systems/{System_ID}/users \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}'  ```
+
+### Example
+```ruby
+# load the gem
+require 'jcapiv2'
+# setup authorization
+JCAPIv2.configure do |config|
+  # Configure API key authorization: x-api-key
+  config.api_key['x-api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['x-api-key'] = 'Bearer'
+end
+
+api_instance = JCAPIv2::GraphApi.new
+
+system_id = "system_id_example" # String | ObjectID of the System.
+
+accept = "application/x-pem-file" # String | 
+
+content_type = "application/json" # String | 
+
+opts = { 
+  limit: 10, # Integer | The number of records to return at once. Limited to 100.
+  skip: 0, # Integer | The offset into the records to return.
+  filter: ["filter_example"], # Array<String> | A filter to apply to the query. **Filter structure**: `<field>:<operator>:<value>`. **field** = Populate with a valid field from an endpoint response. **operator** =  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** = Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** `GET /users?username=eq:testuser`
+  x_org_id: "" # String | 
+  authorization: "authorization_example", # String | Authorization header for the System Context API
+  date: "date_example" # String | Current date header for the System Context API
+}
+
+begin
+  #List the Users bound to a System
+  result = api_instance.g_et_systems_system_id_users(system_id, accept, content_type, opts)
+  p result
+rescue JCAPIv2::ApiError => e
+  puts "Exception when calling GraphApi->g_et_systems_system_id_users: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **system_id** | **String**| ObjectID of the System. | 
+ **accept** | **String**|  | [default to application/x-pem-file]
+ **content_type** | **String**|  | [default to application/json]
+ **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
+ **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
+ **filter** | [**Array&lt;String&gt;**](String.md)| A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60; | [optional] 
+ **x_org_id** | **String**|  | [optional] [default to ]
+ **authorization** | **String**| Authorization header for the System Context API | [optional] 
+ **date** | **String**| Current date header for the System Context API | [optional] 
+
+### Return type
+
+[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
+
+### Authorization
+
+[x-api-key](../README.md#x-api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **g_et_usergroups_group_id_applications**
+> Array&lt;GraphObjectWithPaths&gt; g_et_usergroups_group_id_applications(group_id, accept, content_type, opts)
+
+List the Applications bound to a User Group
+
+This endpoint will return all Applications bound to a User Group, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this User Group to the corresponding Application; this array represents all grouping and/or associations that would have to be removed to deprovision the Application from this User Group.  See `/members` and `/associations` endpoints to manage those collections.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/usergroups/{GroupID}/applications \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
+
+### Example
+```ruby
+# load the gem
+require 'jcapiv2'
+# setup authorization
+JCAPIv2.configure do |config|
+  # Configure API key authorization: x-api-key
+  config.api_key['x-api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['x-api-key'] = 'Bearer'
+end
+
+api_instance = JCAPIv2::GraphApi.new
+
+group_id = "group_id_example" # String | ObjectID of the User Group.
+
+accept = "application/x-pem-file" # String | 
+
+content_type = "application/json" # String | 
+
+opts = { 
+  limit: 10, # Integer | The number of records to return at once. Limited to 100.
+  skip: 0, # Integer | The offset into the records to return.
+  filter: ["filter_example"], # Array<String> | A filter to apply to the query. **Filter structure**: `<field>:<operator>:<value>`. **field** = Populate with a valid field from an endpoint response. **operator** =  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** = Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** `GET /users?username=eq:testuser`
+  x_org_id: "" # String | 
+}
+
+begin
+  #List the Applications bound to a User Group
+  result = api_instance.g_et_usergroups_group_id_applications(group_id, accept, content_type, opts)
+  p result
+rescue JCAPIv2::ApiError => e
+  puts "Exception when calling GraphApi->g_et_usergroups_group_id_applications: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **group_id** | **String**| ObjectID of the User Group. | 
+ **accept** | **String**|  | [default to application/x-pem-file]
+ **content_type** | **String**|  | [default to application/json]
+ **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
+ **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
+ **filter** | [**Array&lt;String&gt;**](String.md)| A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60; | [optional] 
+ **x_org_id** | **String**|  | [optional] [default to ]
+
+### Return type
+
+[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
+
+### Authorization
+
+[x-api-key](../README.md#x-api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **g_et_usergroups_group_id_associations**
+> Array&lt;GraphConnection&gt; g_et_usergroups_group_id_associations(group_id, targets, accept, content_type, opts)
+
+List the associations of a User Group.
+
+This endpoint returns the _direct_ associations of this User Group.  A direct association can be a non-homogeneous relationship between 2 different objects, for example User Groups and Users.   #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/usergroups/{GroupID}/associations?targets=system \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
+
+### Example
+```ruby
+# load the gem
+require 'jcapiv2'
+# setup authorization
+JCAPIv2.configure do |config|
+  # Configure API key authorization: x-api-key
+  config.api_key['x-api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['x-api-key'] = 'Bearer'
+end
+
+api_instance = JCAPIv2::GraphApi.new
+
+group_id = "group_id_example" # String | ObjectID of the User Group.
+
+targets = ["targets_example"] # Array<String> | 
+
+accept = "application/x-pem-file" # String | 
+
+content_type = "application/json" # String | 
+
+opts = { 
+  limit: 10, # Integer | The number of records to return at once. Limited to 100.
+  skip: 0, # Integer | The offset into the records to return.
+  x_org_id: "" # String | 
+}
+
+begin
+  #List the associations of a User Group.
+  result = api_instance.g_et_usergroups_group_id_associations(group_id, targets, accept, content_type, opts)
+  p result
+rescue JCAPIv2::ApiError => e
+  puts "Exception when calling GraphApi->g_et_usergroups_group_id_associations: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **group_id** | **String**| ObjectID of the User Group. | 
+ **targets** | [**Array&lt;String&gt;**](String.md)|  | 
+ **accept** | **String**|  | [default to application/x-pem-file]
+ **content_type** | **String**|  | [default to application/json]
+ **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
+ **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
+ **x_org_id** | **String**|  | [optional] [default to ]
+
+### Return type
+
+[**Array&lt;GraphConnection&gt;**](GraphConnection.md)
+
+### Authorization
+
+[x-api-key](../README.md#x-api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **g_et_usergroups_group_id_directories**
+> Array&lt;GraphObjectWithPaths&gt; g_et_usergroups_group_id_directories(group_id, accept, content_type, opts)
+
+List the Directories bound to a User Group
+
+This endpoint will return all Directories bound to a User Group, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this User Group to the corresponding Directory; this array represents all grouping and/or associations that would have to be removed to deprovision the Directories from this User Group.  See `/members` and `/associations` endpoints to manage those collections.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/usergroups/{GroupID}/directories \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}'  ```
+
+### Example
+```ruby
+# load the gem
+require 'jcapiv2'
+# setup authorization
+JCAPIv2.configure do |config|
+  # Configure API key authorization: x-api-key
+  config.api_key['x-api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['x-api-key'] = 'Bearer'
+end
+
+api_instance = JCAPIv2::GraphApi.new
+
+group_id = "group_id_example" # String | ObjectID of the User Group.
+
+accept = "application/x-pem-file" # String | 
+
+content_type = "application/json" # String | 
+
+opts = { 
+  limit: 10, # Integer | The number of records to return at once. Limited to 100.
+  skip: 0, # Integer | The offset into the records to return.
+  filter: ["filter_example"], # Array<String> | A filter to apply to the query. **Filter structure**: `<field>:<operator>:<value>`. **field** = Populate with a valid field from an endpoint response. **operator** =  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** = Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** `GET /users?username=eq:testuser`
+  x_org_id: "" # String | 
+}
+
+begin
+  #List the Directories bound to a User Group
+  result = api_instance.g_et_usergroups_group_id_directories(group_id, accept, content_type, opts)
+  p result
+rescue JCAPIv2::ApiError => e
+  puts "Exception when calling GraphApi->g_et_usergroups_group_id_directories: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **group_id** | **String**| ObjectID of the User Group. | 
+ **accept** | **String**|  | [default to application/x-pem-file]
+ **content_type** | **String**|  | [default to application/json]
+ **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
+ **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
+ **filter** | [**Array&lt;String&gt;**](String.md)| A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60; | [optional] 
+ **x_org_id** | **String**|  | [optional] [default to ]
+
+### Return type
+
+[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
+
+### Authorization
+
+[x-api-key](../README.md#x-api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **g_et_usergroups_group_id_gsuites**
+> Array&lt;GraphObjectWithPaths&gt; g_et_usergroups_group_id_gsuites(group_id, accept, content_type, opts)
+
+List the G Suite instances bound to a User Group
+
+This endpoint will return all G Suite Instances bound to a User Group, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this User Group to the corresponding G Suite instance; this array represents all grouping and/or associations that would have to be removed to deprovision the G Suite instance from this User Group.  See `/members` and `/associations` endpoints to manage those collections.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/usergroups/{GroupID/gsuites \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}'  ```
+
+### Example
+```ruby
+# load the gem
+require 'jcapiv2'
+# setup authorization
+JCAPIv2.configure do |config|
+  # Configure API key authorization: x-api-key
+  config.api_key['x-api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['x-api-key'] = 'Bearer'
+end
+
+api_instance = JCAPIv2::GraphApi.new
+
+group_id = "group_id_example" # String | ObjectID of the User Group.
+
+accept = "application/x-pem-file" # String | 
+
+content_type = "application/json" # String | 
+
+opts = { 
+  limit: 10, # Integer | The number of records to return at once. Limited to 100.
+  skip: 0, # Integer | The offset into the records to return.
+  filter: ["filter_example"], # Array<String> | A filter to apply to the query. **Filter structure**: `<field>:<operator>:<value>`. **field** = Populate with a valid field from an endpoint response. **operator** =  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** = Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** `GET /users?username=eq:testuser`
+  x_org_id: "" # String | 
+}
+
+begin
+  #List the G Suite instances bound to a User Group
+  result = api_instance.g_et_usergroups_group_id_gsuites(group_id, accept, content_type, opts)
+  p result
+rescue JCAPIv2::ApiError => e
+  puts "Exception when calling GraphApi->g_et_usergroups_group_id_gsuites: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **group_id** | **String**| ObjectID of the User Group. | 
+ **accept** | **String**|  | [default to application/x-pem-file]
+ **content_type** | **String**|  | [default to application/json]
+ **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
+ **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
+ **filter** | [**Array&lt;String&gt;**](String.md)| A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60; | [optional] 
+ **x_org_id** | **String**|  | [optional] [default to ]
+
+### Return type
+
+[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
+
+### Authorization
+
+[x-api-key](../README.md#x-api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **g_et_usergroups_group_id_ldapservers**
+> Array&lt;GraphObjectWithPaths&gt; g_et_usergroups_group_id_ldapservers(group_id, accept, content_type, opts)
+
+List the LDAP Servers bound to a User Group
+
+This endpoint will return all LDAP Servers bound to a User Group, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this User Group to the corresponding LDAP Server; this array represents all grouping and/or associations that would have to be removed to deprovision the LDAP Server from this User Group.  See `/members` and `/associations` endpoints to manage those collections.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/usergroups/{GroupID}/ldapservers \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
+
+### Example
+```ruby
+# load the gem
+require 'jcapiv2'
+# setup authorization
+JCAPIv2.configure do |config|
+  # Configure API key authorization: x-api-key
+  config.api_key['x-api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['x-api-key'] = 'Bearer'
+end
+
+api_instance = JCAPIv2::GraphApi.new
+
+group_id = "group_id_example" # String | ObjectID of the User Group.
+
+accept = "application/x-pem-file" # String | 
+
+content_type = "application/json" # String | 
+
+opts = { 
+  limit: 10, # Integer | The number of records to return at once. Limited to 100.
+  skip: 0, # Integer | The offset into the records to return.
+  filter: ["filter_example"], # Array<String> | A filter to apply to the query. **Filter structure**: `<field>:<operator>:<value>`. **field** = Populate with a valid field from an endpoint response. **operator** =  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** = Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** `GET /users?username=eq:testuser`
+  x_org_id: "" # String | 
+}
+
+begin
+  #List the LDAP Servers bound to a User Group
+  result = api_instance.g_et_usergroups_group_id_ldapservers(group_id, accept, content_type, opts)
+  p result
+rescue JCAPIv2::ApiError => e
+  puts "Exception when calling GraphApi->g_et_usergroups_group_id_ldapservers: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **group_id** | **String**| ObjectID of the User Group. | 
+ **accept** | **String**|  | [default to application/x-pem-file]
+ **content_type** | **String**|  | [default to application/json]
+ **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
+ **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
+ **filter** | [**Array&lt;String&gt;**](String.md)| A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60; | [optional] 
+ **x_org_id** | **String**|  | [optional] [default to ]
+
+### Return type
+
+[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
+
+### Authorization
+
+[x-api-key](../README.md#x-api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **g_et_usergroups_group_id_members**
+> Array&lt;GraphConnection&gt; g_et_usergroups_group_id_members(group_id, accept, content_type, opts)
+
+List the members of a User Group
+
+This endpoint returns the user members of a User Group.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/usergroups/{GroupID}/members \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
+
+### Example
+```ruby
+# load the gem
+require 'jcapiv2'
+# setup authorization
+JCAPIv2.configure do |config|
+  # Configure API key authorization: x-api-key
+  config.api_key['x-api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['x-api-key'] = 'Bearer'
+end
+
+api_instance = JCAPIv2::GraphApi.new
+
+group_id = "group_id_example" # String | ObjectID of the User Group.
+
+accept = "application/x-pem-file" # String | 
+
+content_type = "application/json" # String | 
+
+opts = { 
+  limit: 10, # Integer | The number of records to return at once. Limited to 100.
+  skip: 0, # Integer | The offset into the records to return.
+  x_org_id: "" # String | 
+}
+
+begin
+  #List the members of a User Group
+  result = api_instance.g_et_usergroups_group_id_members(group_id, accept, content_type, opts)
+  p result
+rescue JCAPIv2::ApiError => e
+  puts "Exception when calling GraphApi->g_et_usergroups_group_id_members: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **group_id** | **String**| ObjectID of the User Group. | 
+ **accept** | **String**|  | [default to application/x-pem-file]
+ **content_type** | **String**|  | [default to application/json]
+ **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
+ **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
+ **x_org_id** | **String**|  | [optional] [default to ]
+
+### Return type
+
+[**Array&lt;GraphConnection&gt;**](GraphConnection.md)
+
+### Authorization
+
+[x-api-key](../README.md#x-api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **g_et_usergroups_group_id_membership**
+> Array&lt;GraphObjectWithPaths&gt; g_et_usergroups_group_id_membership(group_id, accept, content_type, opts)
+
+List the User Group's membership
+
+This endpoint returns all users members that are a member of this User Group.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/usergroups/{GroupID}/membership \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
+
+### Example
+```ruby
+# load the gem
+require 'jcapiv2'
+# setup authorization
+JCAPIv2.configure do |config|
+  # Configure API key authorization: x-api-key
+  config.api_key['x-api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['x-api-key'] = 'Bearer'
+end
+
+api_instance = JCAPIv2::GraphApi.new
+
+group_id = "group_id_example" # String | ObjectID of the User Group.
+
+accept = "application/x-pem-file" # String | 
+
+content_type = "application/json" # String | 
+
+opts = { 
+  filter: ["filter_example"], # Array<String> | A filter to apply to the query. **Filter structure**: `<field>:<operator>:<value>`. **field** = Populate with a valid field from an endpoint response. **operator** =  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** = Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** `GET /users?username=eq:testuser`
+  limit: 10, # Integer | The number of records to return at once. Limited to 100.
+  skip: 0, # Integer | The offset into the records to return.
+  sort: ["sort_example"], # Array<String> | The comma separated fields used to sort the collection. Default sort is ascending, prefix with `-` to sort descending. 
+  x_org_id: "" # String | 
+}
+
+begin
+  #List the User Group's membership
+  result = api_instance.g_et_usergroups_group_id_membership(group_id, accept, content_type, opts)
+  p result
+rescue JCAPIv2::ApiError => e
+  puts "Exception when calling GraphApi->g_et_usergroups_group_id_membership: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **group_id** | **String**| ObjectID of the User Group. | 
+ **accept** | **String**|  | [default to application/x-pem-file]
+ **content_type** | **String**|  | [default to application/json]
+ **filter** | [**Array&lt;String&gt;**](String.md)| A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60; | [optional] 
+ **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
+ **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
+ **sort** | [**Array&lt;String&gt;**](String.md)| The comma separated fields used to sort the collection. Default sort is ascending, prefix with &#x60;-&#x60; to sort descending.  | [optional] 
+ **x_org_id** | **String**|  | [optional] [default to ]
+
+### Return type
+
+[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
+
+### Authorization
+
+[x-api-key](../README.md#x-api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **g_et_usergroups_group_id_office365s**
+> Array&lt;GraphObjectWithPaths&gt; g_et_usergroups_group_id_office365s(group_id, accept, content_type, opts)
+
+List the Office 365 instances bound to a User Group
+
+This endpoint will return all Office 365 instances bound to a User Group, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this User Group to the corresponding Office 365 instance; this array represents all grouping and/or associations that would have to be removed to deprovision the Office 365 instance from this User Group.  See `/members` and `/associations` endpoints to manage those collections.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/usergroups/{GroupID}/office365s \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
+
+### Example
+```ruby
+# load the gem
+require 'jcapiv2'
+# setup authorization
+JCAPIv2.configure do |config|
+  # Configure API key authorization: x-api-key
+  config.api_key['x-api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['x-api-key'] = 'Bearer'
+end
+
+api_instance = JCAPIv2::GraphApi.new
+
+group_id = "group_id_example" # String | ObjectID of the User Group.
+
+accept = "application/x-pem-file" # String | 
+
+content_type = "application/json" # String | 
+
+opts = { 
+  limit: 10, # Integer | The number of records to return at once. Limited to 100.
+  skip: 0, # Integer | The offset into the records to return.
+  filter: ["filter_example"], # Array<String> | A filter to apply to the query. **Filter structure**: `<field>:<operator>:<value>`. **field** = Populate with a valid field from an endpoint response. **operator** =  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** = Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** `GET /users?username=eq:testuser`
+  x_org_id: "" # String | 
+}
+
+begin
+  #List the Office 365 instances bound to a User Group
+  result = api_instance.g_et_usergroups_group_id_office365s(group_id, accept, content_type, opts)
+  p result
+rescue JCAPIv2::ApiError => e
+  puts "Exception when calling GraphApi->g_et_usergroups_group_id_office365s: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **group_id** | **String**| ObjectID of the User Group. | 
+ **accept** | **String**|  | [default to application/x-pem-file]
+ **content_type** | **String**|  | [default to application/json]
+ **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
+ **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
+ **filter** | [**Array&lt;String&gt;**](String.md)| A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60; | [optional] 
+ **x_org_id** | **String**|  | [optional] [default to ]
+
+### Return type
+
+[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
+
+### Authorization
+
+[x-api-key](../README.md#x-api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **g_et_usergroups_group_id_radiusservers**
+> Array&lt;GraphObjectWithPaths&gt; g_et_usergroups_group_id_radiusservers(group_id, accept, content_type, opts)
+
+List the RADIUS Servers bound to a User Group
+
+This endpoint will return all RADIUS servers bound to a User Group, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this User Group to the corresponding RADIUS Server; this array represents all grouping and/or associations that would have to be removed to deprovision the RADIUS Server from this User Group.  See `/members` and `/associations` endpoints to manage those collections.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/usergroups/{GroupID}/radiusservers \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}'  ```
+
+### Example
+```ruby
+# load the gem
+require 'jcapiv2'
+# setup authorization
+JCAPIv2.configure do |config|
+  # Configure API key authorization: x-api-key
+  config.api_key['x-api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['x-api-key'] = 'Bearer'
+end
+
+api_instance = JCAPIv2::GraphApi.new
+
+group_id = "group_id_example" # String | ObjectID of the User Group.
+
+accept = "application/x-pem-file" # String | 
+
+content_type = "application/json" # String | 
+
+opts = { 
+  limit: 10, # Integer | The number of records to return at once. Limited to 100.
+  skip: 0, # Integer | The offset into the records to return.
+  filter: ["filter_example"], # Array<String> | A filter to apply to the query. **Filter structure**: `<field>:<operator>:<value>`. **field** = Populate with a valid field from an endpoint response. **operator** =  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** = Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** `GET /users?username=eq:testuser`
+  x_org_id: "" # String | 
+}
+
+begin
+  #List the RADIUS Servers bound to a User Group
+  result = api_instance.g_et_usergroups_group_id_radiusservers(group_id, accept, content_type, opts)
+  p result
+rescue JCAPIv2::ApiError => e
+  puts "Exception when calling GraphApi->g_et_usergroups_group_id_radiusservers: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **group_id** | **String**| ObjectID of the User Group. | 
+ **accept** | **String**|  | [default to application/x-pem-file]
+ **content_type** | **String**|  | [default to application/json]
+ **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
+ **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
+ **filter** | [**Array&lt;String&gt;**](String.md)| A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60; | [optional] 
+ **x_org_id** | **String**|  | [optional] [default to ]
+
+### Return type
+
+[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
+
+### Authorization
+
+[x-api-key](../README.md#x-api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **g_et_usergroups_group_id_systemgroups**
+> Array&lt;GraphObjectWithPaths&gt; g_et_usergroups_group_id_systemgroups(group_id, accept, content_type, opts)
+
+List the System Groups bound to User Groups
+
+This endpoint will return all System Groups bound to a User Group, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths.  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this User Group to the corresponding System Group; this array represents all grouping and/or associations that would have to be removed to deprovision the System Group from this User Group.  See `/members` and `/associations` endpoints to manage those collections.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/usergroups/{GroupID}/systemgroups \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
+
+### Example
+```ruby
+# load the gem
+require 'jcapiv2'
+# setup authorization
+JCAPIv2.configure do |config|
+  # Configure API key authorization: x-api-key
+  config.api_key['x-api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['x-api-key'] = 'Bearer'
+end
+
+api_instance = JCAPIv2::GraphApi.new
+
+group_id = "group_id_example" # String | ObjectID of the User Group.
+
+accept = "application/x-pem-file" # String | 
+
+content_type = "application/json" # String | 
+
+opts = { 
+  limit: 10, # Integer | The number of records to return at once. Limited to 100.
+  skip: 0, # Integer | The offset into the records to return.
+  filter: ["filter_example"], # Array<String> | A filter to apply to the query. **Filter structure**: `<field>:<operator>:<value>`. **field** = Populate with a valid field from an endpoint response. **operator** =  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** = Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** `GET /users?username=eq:testuser`
+  x_org_id: "" # String | 
+}
+
+begin
+  #List the System Groups bound to User Groups
+  result = api_instance.g_et_usergroups_group_id_systemgroups(group_id, accept, content_type, opts)
+  p result
+rescue JCAPIv2::ApiError => e
+  puts "Exception when calling GraphApi->g_et_usergroups_group_id_systemgroups: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **group_id** | **String**| ObjectID of the User Group. | 
+ **accept** | **String**|  | [default to application/x-pem-file]
+ **content_type** | **String**|  | [default to application/json]
+ **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
+ **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
+ **filter** | [**Array&lt;String&gt;**](String.md)| A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60; | [optional] 
+ **x_org_id** | **String**|  | [optional] [default to ]
+
+### Return type
+
+[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
+
+### Authorization
+
+[x-api-key](../README.md#x-api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **g_et_usergroups_group_id_systems**
+> Array&lt;GraphObjectWithPaths&gt; g_et_usergroups_group_id_systems(group_id, accept, content_type, opts)
+
+List the Systems bound to a User Group
+
+This endpoint will return all Systems bound to a User Group, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this User Group to the corresponding System; this array represents all grouping and/or associations that would have to be removed to deprovision the System from this User Group.  See `/members` and `/associations` endpoints to manage those collections.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/usergroups/{GroupID}/systems \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
+
+### Example
+```ruby
+# load the gem
+require 'jcapiv2'
+# setup authorization
+JCAPIv2.configure do |config|
+  # Configure API key authorization: x-api-key
+  config.api_key['x-api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['x-api-key'] = 'Bearer'
+end
+
+api_instance = JCAPIv2::GraphApi.new
+
+group_id = "group_id_example" # String | ObjectID of the User Group.
+
+accept = "application/x-pem-file" # String | 
+
+content_type = "application/json" # String | 
+
+opts = { 
+  limit: 10, # Integer | The number of records to return at once. Limited to 100.
+  skip: 0, # Integer | The offset into the records to return.
+  filter: ["filter_example"], # Array<String> | A filter to apply to the query. **Filter structure**: `<field>:<operator>:<value>`. **field** = Populate with a valid field from an endpoint response. **operator** =  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** = Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** `GET /users?username=eq:testuser`
+  x_org_id: "" # String | 
+}
+
+begin
+  #List the Systems bound to a User Group
+  result = api_instance.g_et_usergroups_group_id_systems(group_id, accept, content_type, opts)
+  p result
+rescue JCAPIv2::ApiError => e
+  puts "Exception when calling GraphApi->g_et_usergroups_group_id_systems: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **group_id** | **String**| ObjectID of the User Group. | 
+ **accept** | **String**|  | [default to application/x-pem-file]
+ **content_type** | **String**|  | [default to application/json]
+ **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
+ **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
+ **filter** | [**Array&lt;String&gt;**](String.md)| A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60; | [optional] 
+ **x_org_id** | **String**|  | [optional] [default to ]
+
+### Return type
+
+[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
+
+### Authorization
+
+[x-api-key](../README.md#x-api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **g_et_users_user_id_applications**
+> Array&lt;GraphObjectWithPaths&gt; g_et_users_user_id_applications(user_id, accept, content_type, opts)
+
+List the Applications bound to a User
+
+This endpoint will return all Applications bound to a User, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths.  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this User to the corresponding Application; this array represents all grouping and/or associations that would have to be removed to deprovision the Application from this User.  See `/members` and `/associations` endpoints to manage those collections.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/users/{UserID}/applications \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
+
+### Example
+```ruby
+# load the gem
+require 'jcapiv2'
+# setup authorization
+JCAPIv2.configure do |config|
+  # Configure API key authorization: x-api-key
+  config.api_key['x-api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['x-api-key'] = 'Bearer'
+end
+
+api_instance = JCAPIv2::GraphApi.new
+
+user_id = "user_id_example" # String | ObjectID of the User.
+
+accept = "application/x-pem-file" # String | 
+
+content_type = "application/json" # String | 
+
+opts = { 
+  limit: 10, # Integer | The number of records to return at once. Limited to 100.
+  skip: 0, # Integer | The offset into the records to return.
+  filter: ["filter_example"], # Array<String> | A filter to apply to the query. **Filter structure**: `<field>:<operator>:<value>`. **field** = Populate with a valid field from an endpoint response. **operator** =  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** = Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** `GET /users?username=eq:testuser`
+  x_org_id: "" # String | 
+}
+
+begin
+  #List the Applications bound to a User
+  result = api_instance.g_et_users_user_id_applications(user_id, accept, content_type, opts)
+  p result
+rescue JCAPIv2::ApiError => e
+  puts "Exception when calling GraphApi->g_et_users_user_id_applications: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user_id** | **String**| ObjectID of the User. | 
+ **accept** | **String**|  | [default to application/x-pem-file]
+ **content_type** | **String**|  | [default to application/json]
+ **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
+ **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
+ **filter** | [**Array&lt;String&gt;**](String.md)| A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60; | [optional] 
+ **x_org_id** | **String**|  | [optional] [default to ]
+
+### Return type
+
+[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
+
+### Authorization
+
+[x-api-key](../README.md#x-api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **g_et_users_user_id_associations**
+> Array&lt;GraphConnection&gt; g_et_users_user_id_associations(user_id, targets, accept, content_type, opts)
+
+List the associations of a User
+
+This endpoint returns the _direct_ associations of a User.  A direct association can be a non-homogeneous relationship between 2 different objects, for example Users and Systems.   #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/users/{UserID}/associations?targets=system_group \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}'  ```
+
+### Example
+```ruby
+# load the gem
+require 'jcapiv2'
+# setup authorization
+JCAPIv2.configure do |config|
+  # Configure API key authorization: x-api-key
+  config.api_key['x-api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['x-api-key'] = 'Bearer'
+end
+
+api_instance = JCAPIv2::GraphApi.new
+
+user_id = "user_id_example" # String | ObjectID of the User.
+
+targets = ["targets_example"] # Array<String> | 
+
+accept = "application/x-pem-file" # String | 
+
+content_type = "application/json" # String | 
+
+opts = { 
+  limit: 10, # Integer | The number of records to return at once. Limited to 100.
+  skip: 0, # Integer | The offset into the records to return.
+  x_org_id: "" # String | 
+}
+
+begin
+  #List the associations of a User
+  result = api_instance.g_et_users_user_id_associations(user_id, targets, accept, content_type, opts)
+  p result
+rescue JCAPIv2::ApiError => e
+  puts "Exception when calling GraphApi->g_et_users_user_id_associations: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user_id** | **String**| ObjectID of the User. | 
+ **targets** | [**Array&lt;String&gt;**](String.md)|  | 
+ **accept** | **String**|  | [default to application/x-pem-file]
+ **content_type** | **String**|  | [default to application/json]
+ **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
+ **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
+ **x_org_id** | **String**|  | [optional] [default to ]
+
+### Return type
+
+[**Array&lt;GraphConnection&gt;**](GraphConnection.md)
+
+### Authorization
+
+[x-api-key](../README.md#x-api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **g_et_users_user_id_directories**
+> Array&lt;GraphObjectWithPaths&gt; g_et_users_user_id_directories(user_id, accept, content_type, opts)
+
+List the Directories bound to a User
+
+This endpoint will return all Directories bound to a User, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths.  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this User to the corresponding Directory; this array represents all grouping and/or associations that would have to be removed to deprovision the Directory from this User.  See `/members` and `/associations` endpoints to manage those collections.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/users/{UserID}/directories \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
+
+### Example
+```ruby
+# load the gem
+require 'jcapiv2'
+# setup authorization
+JCAPIv2.configure do |config|
+  # Configure API key authorization: x-api-key
+  config.api_key['x-api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['x-api-key'] = 'Bearer'
+end
+
+api_instance = JCAPIv2::GraphApi.new
+
+user_id = "user_id_example" # String | ObjectID of the User.
+
+accept = "application/x-pem-file" # String | 
+
+content_type = "application/json" # String | 
+
+opts = { 
+  limit: 10, # Integer | The number of records to return at once. Limited to 100.
+  skip: 0, # Integer | The offset into the records to return.
+  filter: ["filter_example"], # Array<String> | A filter to apply to the query. **Filter structure**: `<field>:<operator>:<value>`. **field** = Populate with a valid field from an endpoint response. **operator** =  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** = Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** `GET /users?username=eq:testuser`
+  x_org_id: "" # String | 
+}
+
+begin
+  #List the Directories bound to a User
+  result = api_instance.g_et_users_user_id_directories(user_id, accept, content_type, opts)
+  p result
+rescue JCAPIv2::ApiError => e
+  puts "Exception when calling GraphApi->g_et_users_user_id_directories: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user_id** | **String**| ObjectID of the User. | 
+ **accept** | **String**|  | [default to application/x-pem-file]
+ **content_type** | **String**|  | [default to application/json]
+ **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
+ **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
+ **filter** | [**Array&lt;String&gt;**](String.md)| A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60; | [optional] 
+ **x_org_id** | **String**|  | [optional] [default to ]
+
+### Return type
+
+[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
+
+### Authorization
+
+[x-api-key](../README.md#x-api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **g_et_users_user_id_gsuites**
+> Array&lt;GraphObjectWithPaths&gt; g_et_users_user_id_gsuites(user_id, accept, content_type, opts)
+
+List the G Suite instances bound to a User
+
+This endpoint will return all G-Suite Instances bound to a User, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths.  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this User to the corresponding G Suite instance; this array represents all grouping and/or associations that would have to be removed to deprovision the G Suite instance from this User.  See `/members` and `/associations` endpoints to manage those collections.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/users/{UserID}/gsuites \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
+
+### Example
+```ruby
+# load the gem
+require 'jcapiv2'
+# setup authorization
+JCAPIv2.configure do |config|
+  # Configure API key authorization: x-api-key
+  config.api_key['x-api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['x-api-key'] = 'Bearer'
+end
+
+api_instance = JCAPIv2::GraphApi.new
+
+user_id = "user_id_example" # String | ObjectID of the User.
+
+accept = "application/x-pem-file" # String | 
+
+content_type = "application/json" # String | 
+
+opts = { 
+  limit: 10, # Integer | The number of records to return at once. Limited to 100.
+  skip: 0, # Integer | The offset into the records to return.
+  filter: ["filter_example"], # Array<String> | A filter to apply to the query. **Filter structure**: `<field>:<operator>:<value>`. **field** = Populate with a valid field from an endpoint response. **operator** =  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** = Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** `GET /users?username=eq:testuser`
+  x_org_id: "" # String | 
+}
+
+begin
+  #List the G Suite instances bound to a User
+  result = api_instance.g_et_users_user_id_gsuites(user_id, accept, content_type, opts)
+  p result
+rescue JCAPIv2::ApiError => e
+  puts "Exception when calling GraphApi->g_et_users_user_id_gsuites: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user_id** | **String**| ObjectID of the User. | 
+ **accept** | **String**|  | [default to application/x-pem-file]
+ **content_type** | **String**|  | [default to application/json]
+ **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
+ **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
+ **filter** | [**Array&lt;String&gt;**](String.md)| A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60; | [optional] 
+ **x_org_id** | **String**|  | [optional] [default to ]
+
+### Return type
+
+[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
+
+### Authorization
+
+[x-api-key](../README.md#x-api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **g_et_users_user_id_ldapservers**
+> Array&lt;GraphObjectWithPaths&gt; g_et_users_user_id_ldapservers(user_id, accept, content_type, opts)
+
+List the LDAP servers bound to a User
+
+This endpoint will return all LDAP Servers bound to a User, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths.  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this User to the corresponding LDAP Server; this array represents all grouping and/or associations that would have to be removed to deprovision the LDAP Server from this User.  See `/members` and `/associations` endpoints to manage those collections.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/users/{UserID}/ldapservers \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
+
+### Example
+```ruby
+# load the gem
+require 'jcapiv2'
+# setup authorization
+JCAPIv2.configure do |config|
+  # Configure API key authorization: x-api-key
+  config.api_key['x-api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['x-api-key'] = 'Bearer'
+end
+
+api_instance = JCAPIv2::GraphApi.new
+
+user_id = "user_id_example" # String | ObjectID of the User.
+
+accept = "application/x-pem-file" # String | 
+
+content_type = "application/json" # String | 
+
+opts = { 
+  limit: 10, # Integer | The number of records to return at once. Limited to 100.
+  skip: 0, # Integer | The offset into the records to return.
+  filter: ["filter_example"], # Array<String> | A filter to apply to the query. **Filter structure**: `<field>:<operator>:<value>`. **field** = Populate with a valid field from an endpoint response. **operator** =  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** = Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** `GET /users?username=eq:testuser`
+  x_org_id: "" # String | 
+}
+
+begin
+  #List the LDAP servers bound to a User
+  result = api_instance.g_et_users_user_id_ldapservers(user_id, accept, content_type, opts)
+  p result
+rescue JCAPIv2::ApiError => e
+  puts "Exception when calling GraphApi->g_et_users_user_id_ldapservers: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user_id** | **String**| ObjectID of the User. | 
+ **accept** | **String**|  | [default to application/x-pem-file]
+ **content_type** | **String**|  | [default to application/json]
+ **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
+ **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
+ **filter** | [**Array&lt;String&gt;**](String.md)| A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60; | [optional] 
+ **x_org_id** | **String**|  | [optional] [default to ]
+
+### Return type
+
+[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
+
+### Authorization
+
+[x-api-key](../README.md#x-api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **g_et_users_user_id_memberof**
+> Array&lt;GraphObjectWithPaths&gt; g_et_users_user_id_memberof(user_id, accept, content_type, opts)
+
+List the parent Groups of a User
+
+This endpoint returns all the User Groups a User is a member of.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/users/{UserID}/memberof \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
+
+### Example
+```ruby
+# load the gem
+require 'jcapiv2'
+# setup authorization
+JCAPIv2.configure do |config|
+  # Configure API key authorization: x-api-key
+  config.api_key['x-api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['x-api-key'] = 'Bearer'
+end
+
+api_instance = JCAPIv2::GraphApi.new
+
+user_id = "user_id_example" # String | ObjectID of the User.
+
+accept = "application/x-pem-file" # String | 
+
+content_type = "application/json" # String | 
+
+opts = { 
+  filter: ["filter_example"], # Array<String> | A filter to apply to the query. **Filter structure**: `<field>:<operator>:<value>`. **field** = Populate with a valid field from an endpoint response. **operator** =  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** = Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** `GET /users?username=eq:testuser`
+  limit: 10, # Integer | The number of records to return at once. Limited to 100.
+  skip: 0, # Integer | The offset into the records to return.
+  sort: ["sort_example"], # Array<String> | The comma separated fields used to sort the collection. Default sort is ascending, prefix with `-` to sort descending. 
+  x_org_id: "" # String | 
+}
+
+begin
+  #List the parent Groups of a User
+  result = api_instance.g_et_users_user_id_memberof(user_id, accept, content_type, opts)
+  p result
+rescue JCAPIv2::ApiError => e
+  puts "Exception when calling GraphApi->g_et_users_user_id_memberof: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user_id** | **String**| ObjectID of the User. | 
+ **accept** | **String**|  | [default to application/x-pem-file]
+ **content_type** | **String**|  | [default to application/json]
+ **filter** | [**Array&lt;String&gt;**](String.md)| A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60; | [optional] 
+ **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
+ **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
+ **sort** | [**Array&lt;String&gt;**](String.md)| The comma separated fields used to sort the collection. Default sort is ascending, prefix with &#x60;-&#x60; to sort descending.  | [optional] 
+ **x_org_id** | **String**|  | [optional] [default to ]
+
+### Return type
+
+[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
+
+### Authorization
+
+[x-api-key](../README.md#x-api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **g_et_users_user_id_office365s**
+> Array&lt;GraphObjectWithPaths&gt; g_et_users_user_id_office365s(user_id, accept, content_type, opts)
+
+List the Office 365 instances bound to a User
+
+This endpoint will return all Office 365 Instances bound to a User, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths.  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this User to the corresponding Office 365 instance; this array represents all grouping and/or associations that would have to be removed to deprovision the Office 365 instance from this User.  See `/members` and `/associations` endpoints to manage those collections.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/users/{UserID}/office365s \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
+
+### Example
+```ruby
+# load the gem
+require 'jcapiv2'
+# setup authorization
+JCAPIv2.configure do |config|
+  # Configure API key authorization: x-api-key
+  config.api_key['x-api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['x-api-key'] = 'Bearer'
+end
+
+api_instance = JCAPIv2::GraphApi.new
+
+user_id = "user_id_example" # String | ObjectID of the User.
+
+accept = "application/x-pem-file" # String | 
+
+content_type = "application/json" # String | 
+
+opts = { 
+  limit: 10, # Integer | The number of records to return at once. Limited to 100.
+  skip: 0, # Integer | The offset into the records to return.
+  filter: ["filter_example"], # Array<String> | A filter to apply to the query. **Filter structure**: `<field>:<operator>:<value>`. **field** = Populate with a valid field from an endpoint response. **operator** =  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** = Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** `GET /users?username=eq:testuser`
+  x_org_id: "" # String | 
+}
+
+begin
+  #List the Office 365 instances bound to a User
+  result = api_instance.g_et_users_user_id_office365s(user_id, accept, content_type, opts)
+  p result
+rescue JCAPIv2::ApiError => e
+  puts "Exception when calling GraphApi->g_et_users_user_id_office365s: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user_id** | **String**| ObjectID of the User. | 
+ **accept** | **String**|  | [default to application/x-pem-file]
+ **content_type** | **String**|  | [default to application/json]
+ **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
+ **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
+ **filter** | [**Array&lt;String&gt;**](String.md)| A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60; | [optional] 
+ **x_org_id** | **String**|  | [optional] [default to ]
+
+### Return type
+
+[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
+
+### Authorization
+
+[x-api-key](../README.md#x-api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **g_et_users_user_id_radiusservers**
+> Array&lt;GraphObjectWithPaths&gt; g_et_users_user_id_radiusservers(user_id, accept, content_type, opts)
+
+List the RADIUS Servers bound to a User
+
+This endpoint will return all RADIUS Servers bound to a User, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths.  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this User to the corresponding RADIUS Server; this array represents all grouping and/or associations that would have to be removed to deprovision the RADIUS Server from this User.  See `/members` and `/associations` endpoints to manage those collections.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/users/{UserID}/radiusservers \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
+
+### Example
+```ruby
+# load the gem
+require 'jcapiv2'
+# setup authorization
+JCAPIv2.configure do |config|
+  # Configure API key authorization: x-api-key
+  config.api_key['x-api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['x-api-key'] = 'Bearer'
+end
+
+api_instance = JCAPIv2::GraphApi.new
+
+user_id = "user_id_example" # String | ObjectID of the User.
+
+accept = "application/x-pem-file" # String | 
+
+content_type = "application/json" # String | 
+
+opts = { 
+  limit: 10, # Integer | The number of records to return at once. Limited to 100.
+  skip: 0, # Integer | The offset into the records to return.
+  filter: ["filter_example"], # Array<String> | A filter to apply to the query. **Filter structure**: `<field>:<operator>:<value>`. **field** = Populate with a valid field from an endpoint response. **operator** =  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** = Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** `GET /users?username=eq:testuser`
+  x_org_id: "" # String | 
+}
+
+begin
+  #List the RADIUS Servers bound to a User
+  result = api_instance.g_et_users_user_id_radiusservers(user_id, accept, content_type, opts)
+  p result
+rescue JCAPIv2::ApiError => e
+  puts "Exception when calling GraphApi->g_et_users_user_id_radiusservers: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user_id** | **String**| ObjectID of the User. | 
+ **accept** | **String**|  | [default to application/x-pem-file]
+ **content_type** | **String**|  | [default to application/json]
+ **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
+ **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
+ **filter** | [**Array&lt;String&gt;**](String.md)| A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60; | [optional] 
+ **x_org_id** | **String**|  | [optional] [default to ]
+
+### Return type
+
+[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
+
+### Authorization
+
+[x-api-key](../README.md#x-api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **g_et_users_user_id_systemgroups**
+> Array&lt;GraphObjectWithPaths&gt; g_et_users_user_id_systemgroups(user_id, accept, content_type, opts)
+
+List the System Groups bound to a User
+
+This endpoint will return all System Groups bound to a User, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths.  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this User to the corresponding System Group; this array represents all grouping and/or associations that would have to be removed to deprovision the System Group from this User.  See `/members` and `/associations` endpoints to manage those collections.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/users/{UserID}/systemgroups\\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
+
+### Example
+```ruby
+# load the gem
+require 'jcapiv2'
+# setup authorization
+JCAPIv2.configure do |config|
+  # Configure API key authorization: x-api-key
+  config.api_key['x-api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['x-api-key'] = 'Bearer'
+end
+
+api_instance = JCAPIv2::GraphApi.new
+
+user_id = "user_id_example" # String | ObjectID of the User.
+
+accept = "application/x-pem-file" # String | 
+
+content_type = "application/json" # String | 
+
+opts = { 
+  limit: 10, # Integer | The number of records to return at once. Limited to 100.
+  skip: 0, # Integer | The offset into the records to return.
+  filter: ["filter_example"], # Array<String> | A filter to apply to the query. **Filter structure**: `<field>:<operator>:<value>`. **field** = Populate with a valid field from an endpoint response. **operator** =  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** = Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** `GET /users?username=eq:testuser`
+  x_org_id: "" # String | 
+}
+
+begin
+  #List the System Groups bound to a User
+  result = api_instance.g_et_users_user_id_systemgroups(user_id, accept, content_type, opts)
+  p result
+rescue JCAPIv2::ApiError => e
+  puts "Exception when calling GraphApi->g_et_users_user_id_systemgroups: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user_id** | **String**| ObjectID of the User. | 
+ **accept** | **String**|  | [default to application/x-pem-file]
+ **content_type** | **String**|  | [default to application/json]
+ **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
+ **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
+ **filter** | [**Array&lt;String&gt;**](String.md)| A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60; | [optional] 
+ **x_org_id** | **String**|  | [optional] [default to ]
+
+### Return type
+
+[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
+
+### Authorization
+
+[x-api-key](../README.md#x-api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **g_et_users_user_id_systems**
+> Array&lt;GraphObjectWithPaths&gt; g_et_users_user_id_systems(user_id, accept, content_type, opts)
+
+List the Systems bound to a User
+
+This endpoint will return all Systems bound to a User, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths.  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this User to the corresponding System; this array represents all grouping and/or associations that would have to be removed to deprovision the System from this User.  See `/members` and `/associations` endpoints to manage those collections.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/users/{UserID}/systems\\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
+
+### Example
+```ruby
+# load the gem
+require 'jcapiv2'
+# setup authorization
+JCAPIv2.configure do |config|
+  # Configure API key authorization: x-api-key
+  config.api_key['x-api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['x-api-key'] = 'Bearer'
+end
+
+api_instance = JCAPIv2::GraphApi.new
+
+user_id = "user_id_example" # String | ObjectID of the User.
+
+accept = "application/x-pem-file" # String | 
+
+content_type = "application/json" # String | 
+
+opts = { 
+  limit: 10, # Integer | The number of records to return at once. Limited to 100.
+  skip: 0, # Integer | The offset into the records to return.
+  filter: ["filter_example"], # Array<String> | A filter to apply to the query. **Filter structure**: `<field>:<operator>:<value>`. **field** = Populate with a valid field from an endpoint response. **operator** =  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** = Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** `GET /users?username=eq:testuser`
+  x_org_id: "" # String | 
+}
+
+begin
+  #List the Systems bound to a User
+  result = api_instance.g_et_users_user_id_systems(user_id, accept, content_type, opts)
+  p result
+rescue JCAPIv2::ApiError => e
+  puts "Exception when calling GraphApi->g_et_users_user_id_systems: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user_id** | **String**| ObjectID of the User. | 
+ **accept** | **String**|  | [default to application/x-pem-file]
+ **content_type** | **String**|  | [default to application/json]
+ **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
+ **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
+ **filter** | [**Array&lt;String&gt;**](String.md)| A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60; | [optional] 
+ **x_org_id** | **String**|  | [optional] [default to ]
+
+### Return type
+
+[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
+
+### Authorization
+
+[x-api-key](../README.md#x-api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **p_ost_applications_application_id_associations**
+> p_ost_applications_application_id_associations(application_id, accept, content_type, opts)
+
+Manage the associations of an Application
+
+This endpoint allows you to manage the _direct_ associations of an Application. A direct association can be a non-homogeneous relationship between 2 different objects, for example Application and User Groups.  #### Sample Request ``` curl -X POST 'https://console.jumpcloud.com/api/v2/applications/{Application_ID}/associations' \\   -H 'accept: application/json' \\   -H 'content-type: application/json' \\   -H 'x-api-key: {API_KEY}' \\   -d '{     \"op\": \"add\",     \"type\": \"user_group\",     \"id\": \"{Group_ID}\" }' ```
+
+### Example
+```ruby
+# load the gem
+require 'jcapiv2'
+# setup authorization
+JCAPIv2.configure do |config|
+  # Configure API key authorization: x-api-key
+  config.api_key['x-api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['x-api-key'] = 'Bearer'
+end
+
+api_instance = JCAPIv2::GraphApi.new
+
+application_id = "application_id_example" # String | ObjectID of the Application.
+
+accept = "application/x-pem-file" # String | 
+
+content_type = "application/json" # String | 
+
+opts = { 
+  body: JCAPIv2::GraphManagementReq.new, # GraphManagementReq | 
+  x_org_id: "" # String | 
+}
+
+begin
+  #Manage the associations of an Application
+  api_instance.p_ost_applications_application_id_associations(application_id, accept, content_type, opts)
+rescue JCAPIv2::ApiError => e
+  puts "Exception when calling GraphApi->p_ost_applications_application_id_associations: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **application_id** | **String**| ObjectID of the Application. | 
+ **accept** | **String**|  | [default to application/x-pem-file]
+ **content_type** | **String**|  | [default to application/json]
+ **body** | [**GraphManagementReq**](GraphManagementReq.md)|  | [optional] 
+ **x_org_id** | **String**|  | [optional] [default to ]
+
+### Return type
+
+nil (empty response body)
+
+### Authorization
+
+[x-api-key](../README.md#x-api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **p_ost_commands_command_id_associations**
+> p_ost_commands_command_id_associations(command_id, accept, content_type, opts)
+
+Manage the associations of a Command
+
+This endpoint will allow you to manage the _direct_ associations of this Command.  A direct association can be a non-homogeneous relationship between 2 different objects, for example Commands and User Groups.   #### Sample Request ```  curl -X POST https://console.jumpcloud.com/api/v2/commands/{Command_ID}/associations \\   -H 'accept: application/json' \\   -H 'content-type: application/json' \\   -H 'x-api-key: {API_KEY}' \\   -d '{     \"op\": \"add\",     \"type\": \"system_group\",     \"id\": \"Group_ID\" }' ```
+
+### Example
+```ruby
+# load the gem
+require 'jcapiv2'
+# setup authorization
+JCAPIv2.configure do |config|
+  # Configure API key authorization: x-api-key
+  config.api_key['x-api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['x-api-key'] = 'Bearer'
+end
+
+api_instance = JCAPIv2::GraphApi.new
+
+command_id = "command_id_example" # String | ObjectID of the Command.
+
+accept = "application/x-pem-file" # String | 
+
+content_type = "application/json" # String | 
+
+opts = { 
+  body: JCAPIv2::GraphManagementReq.new, # GraphManagementReq | 
+  x_org_id: "" # String | 
+}
+
+begin
+  #Manage the associations of a Command
+  api_instance.p_ost_commands_command_id_associations(command_id, accept, content_type, opts)
+rescue JCAPIv2::ApiError => e
+  puts "Exception when calling GraphApi->p_ost_commands_command_id_associations: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **command_id** | **String**| ObjectID of the Command. | 
+ **accept** | **String**|  | [default to application/x-pem-file]
+ **content_type** | **String**|  | [default to application/json]
+ **body** | [**GraphManagementReq**](GraphManagementReq.md)|  | [optional] 
+ **x_org_id** | **String**|  | [optional] [default to ]
+
+### Return type
+
+nil (empty response body)
+
+### Authorization
+
+[x-api-key](../README.md#x-api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **p_ost_gsuites_gsuite_id_associations**
+> p_ost_gsuites_gsuite_id_associations(gsuite_id, opts)
 
 Manage the associations of a G Suite instance
 
@@ -1012,9 +4548,9 @@ opts = {
 
 begin
   #Manage the associations of a G Suite instance
-  api_instance.graph_g_suite_associations_post(gsuite_id, opts)
+  api_instance.p_ost_gsuites_gsuite_id_associations(gsuite_id, opts)
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GraphApi->graph_g_suite_associations_post: #{e}"
+  puts "Exception when calling GraphApi->p_ost_gsuites_gsuite_id_associations: #{e}"
 end
 ```
 
@@ -1041,219 +4577,8 @@ nil (empty response body)
 
 
 
-# **graph_g_suite_traverse_user**
-> Array&lt;GraphObjectWithPaths&gt; graph_g_suite_traverse_user(gsuite_id, content_type, accept, opts)
-
-List the Users bound to a G Suite instance
-
-This endpoint will return all Users bound to a G Suite instance, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths.  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this G Suite instance to the corresponding User; this array represents all grouping and/or associations that would have to be removed to deprovision the User from this G Suite instance.  See `/members` and `/associations` endpoints to manage those collections.  #### Sample Request ```   curl -X GET https://console.jumpcloud.com/api/v2/gsuites/{Gsuite_ID}/users \\   -H 'accept: application/json' \\   -H 'content-type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
-
-### Example
-```ruby
-# load the gem
-require 'jcapiv2'
-# setup authorization
-JCAPIv2.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['x-api-key'] = 'Bearer'
-end
-
-api_instance = JCAPIv2::GraphApi.new
-
-gsuite_id = "gsuite_id_example" # String | ObjectID of the G Suite instance.
-
-content_type = "application/json" # String | 
-
-accept = "application/json" # String | 
-
-opts = { 
-  limit: 10, # Integer | The number of records to return at once. Limited to 100.
-  x_org_id: "" # String | 
-  skip: 0, # Integer | The offset into the records to return.
-  filter: ["filter_example"], # Array<String> | Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
-}
-
-begin
-  #List the Users bound to a G Suite instance
-  result = api_instance.graph_g_suite_traverse_user(gsuite_id, content_type, accept, opts)
-  p result
-rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GraphApi->graph_g_suite_traverse_user: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **gsuite_id** | **String**| ObjectID of the G Suite instance. | 
- **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
- **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
- **x_org_id** | **String**|  | [optional] [default to ]
- **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
- **filter** | [**Array&lt;String&gt;**](String.md)| Supported operators are: eq, ne, gt, ge, lt, le, between, search, in | [optional] 
-
-### Return type
-
-[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
-
-### Authorization
-
-[x-api-key](../README.md#x-api-key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-# **graph_g_suite_traverse_user_group**
-> Array&lt;GraphObjectWithPaths&gt; graph_g_suite_traverse_user_group(gsuite_id, content_type, accept, opts)
-
-List the User Groups bound to a G Suite instance
-
-This endpoint will return all User Groups bound to an G Suite instance, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the group's type, id, attributes and paths.  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this G Suite instance to the corresponding User Group; this array represents all grouping and/or associations that would have to be removed to deprovision the User Group from this G Suite instance.  See `/members` and `/associations` endpoints to manage those collections.  #### Sample Request ```   curl -X GET https://console.jumpcloud.com/api/v2/gsuites/{GSuite_ID}/usergroups \\   -H 'accept: application/json' \\   -H 'content-type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
-
-### Example
-```ruby
-# load the gem
-require 'jcapiv2'
-# setup authorization
-JCAPIv2.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['x-api-key'] = 'Bearer'
-end
-
-api_instance = JCAPIv2::GraphApi.new
-
-gsuite_id = "gsuite_id_example" # String | ObjectID of the G Suite instance.
-
-content_type = "application/json" # String | 
-
-accept = "application/json" # String | 
-
-opts = { 
-  limit: 10, # Integer | The number of records to return at once. Limited to 100.
-  x_org_id: "" # String | 
-  skip: 0, # Integer | The offset into the records to return.
-  filter: ["filter_example"], # Array<String> | Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
-}
-
-begin
-  #List the User Groups bound to a G Suite instance
-  result = api_instance.graph_g_suite_traverse_user_group(gsuite_id, content_type, accept, opts)
-  p result
-rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GraphApi->graph_g_suite_traverse_user_group: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **gsuite_id** | **String**| ObjectID of the G Suite instance. | 
- **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
- **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
- **x_org_id** | **String**|  | [optional] [default to ]
- **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
- **filter** | [**Array&lt;String&gt;**](String.md)| Supported operators are: eq, ne, gt, ge, lt, le, between, search, in | [optional] 
-
-### Return type
-
-[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
-
-### Authorization
-
-[x-api-key](../README.md#x-api-key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-# **graph_ldap_server_associations_list**
-> Array&lt;GraphConnection&gt; graph_ldap_server_associations_list(ldapserver_id, targets, content_type, accept, opts)
-
-List the associations of a LDAP Server
-
-This endpoint returns the _direct_ associations of this LDAP Server.  A direct association can be a non-homogeneous relationship between 2 different objects, for example LDAP and Users.  #### Sample Request  ```  curl -X GET 'https://console.jumpcloud.com/api/v2/ldapservers/{LDAP_ID}/associations?targets=user_group \\   -H 'accept: application/json' \\   -H 'content-type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
-
-### Example
-```ruby
-# load the gem
-require 'jcapiv2'
-# setup authorization
-JCAPIv2.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['x-api-key'] = 'Bearer'
-end
-
-api_instance = JCAPIv2::GraphApi.new
-
-ldapserver_id = "ldapserver_id_example" # String | ObjectID of the LDAP Server.
-
-targets = ["targets_example"] # Array<String> | 
-
-content_type = "application/json" # String | 
-
-accept = "application/json" # String | 
-
-opts = { 
-  limit: 10, # Integer | The number of records to return at once. Limited to 100.
-  skip: 0, # Integer | The offset into the records to return.
-  x_org_id: "" # String | 
-}
-
-begin
-  #List the associations of a LDAP Server
-  result = api_instance.graph_ldap_server_associations_list(ldapserver_id, targets, content_type, accept, opts)
-  p result
-rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GraphApi->graph_ldap_server_associations_list: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **ldapserver_id** | **String**| ObjectID of the LDAP Server. | 
- **targets** | [**Array&lt;String&gt;**](String.md)|  | 
- **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
- **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
- **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
- **x_org_id** | **String**|  | [optional] [default to ]
-
-### Return type
-
-[**Array&lt;GraphConnection&gt;**](GraphConnection.md)
-
-### Authorization
-
-[x-api-key](../README.md#x-api-key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-# **graph_ldap_server_associations_post**
-> graph_ldap_server_associations_post(ldapserver_id, content_type, accept, opts)
+# **p_ost_ldapservers_ldapserver_id_associations**
+> p_ost_ldapservers_ldapserver_id_associations(ldapserver_id, accept, content_type, opts)
 
 Manage the associations of a LDAP Server
 
@@ -1275,9 +4600,9 @@ api_instance = JCAPIv2::GraphApi.new
 
 ldapserver_id = "ldapserver_id_example" # String | ObjectID of the LDAP Server.
 
-content_type = "application/json" # String | 
+accept = "application/x-pem-file" # String | 
 
-accept = "application/json" # String | 
+content_type = "application/json" # String | 
 
 opts = { 
   body: JCAPIv2::GraphManagementReq.new, # GraphManagementReq | 
@@ -1286,9 +4611,9 @@ opts = {
 
 begin
   #Manage the associations of a LDAP Server
-  api_instance.graph_ldap_server_associations_post(ldapserver_id, content_type, accept, opts)
+  api_instance.p_ost_ldapservers_ldapserver_id_associations(ldapserver_id, accept, content_type, opts)
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GraphApi->graph_ldap_server_associations_post: #{e}"
+  puts "Exception when calling GraphApi->p_ost_ldapservers_ldapserver_id_associations: #{e}"
 end
 ```
 
@@ -1297,8 +4622,8 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ldapserver_id** | **String**| ObjectID of the LDAP Server. | 
+ **accept** | **String**|  | [default to application/x-pem-file]
  **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
  **body** | [**GraphManagementReq**](GraphManagementReq.md)|  | [optional] 
  **x_org_id** | **String**|  | [optional] [default to ]
 
@@ -1317,223 +4642,12 @@ nil (empty response body)
 
 
 
-# **graph_ldap_server_traverse_user**
-> Array&lt;GraphObjectWithPaths&gt; graph_ldap_server_traverse_user(ldapserver_id, content_type, accept, opts)
-
-List the Users bound to a LDAP Server
-
-This endpoint will return all Users bound to an LDAP Server, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths.  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this LDAP server instance to the corresponding User; this array represents all grouping and/or associations that would have to be removed to deprovision the User from this LDAP server instance.  See `/members` and `/associations` endpoints to manage those collections.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/ldapservers/{LDAP_ID}/users \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
-
-### Example
-```ruby
-# load the gem
-require 'jcapiv2'
-# setup authorization
-JCAPIv2.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['x-api-key'] = 'Bearer'
-end
-
-api_instance = JCAPIv2::GraphApi.new
-
-ldapserver_id = "ldapserver_id_example" # String | ObjectID of the LDAP Server.
-
-content_type = "application/json" # String | 
-
-accept = "application/json" # String | 
-
-opts = { 
-  limit: 10, # Integer | The number of records to return at once. Limited to 100.
-  x_org_id: "" # String | 
-  skip: 0, # Integer | The offset into the records to return.
-  filter: ["filter_example"], # Array<String> | Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
-}
-
-begin
-  #List the Users bound to a LDAP Server
-  result = api_instance.graph_ldap_server_traverse_user(ldapserver_id, content_type, accept, opts)
-  p result
-rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GraphApi->graph_ldap_server_traverse_user: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **ldapserver_id** | **String**| ObjectID of the LDAP Server. | 
- **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
- **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
- **x_org_id** | **String**|  | [optional] [default to ]
- **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
- **filter** | [**Array&lt;String&gt;**](String.md)| Supported operators are: eq, ne, gt, ge, lt, le, between, search, in | [optional] 
-
-### Return type
-
-[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
-
-### Authorization
-
-[x-api-key](../README.md#x-api-key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-# **graph_ldap_server_traverse_user_group**
-> Array&lt;GraphObjectWithPaths&gt; graph_ldap_server_traverse_user_group(ldapserver_id, content_type, accept, opts)
-
-List the User Groups bound to a LDAP Server
-
-This endpoint will return all Users Groups bound to a LDAP Server, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the group's type, id, attributes and paths.  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this LDAP server instance to the corresponding User Group; this array represents all grouping and/or associations that would have to be removed to deprovision the User Group from this LDAP server instance.  See `/members` and `/associations` endpoints to manage those collections.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/ldapservers/{LDAP_ID}/usergroups \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
-
-### Example
-```ruby
-# load the gem
-require 'jcapiv2'
-# setup authorization
-JCAPIv2.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['x-api-key'] = 'Bearer'
-end
-
-api_instance = JCAPIv2::GraphApi.new
-
-ldapserver_id = "ldapserver_id_example" # String | ObjectID of the LDAP Server.
-
-content_type = "application/json" # String | 
-
-accept = "application/json" # String | 
-
-opts = { 
-  limit: 10, # Integer | The number of records to return at once. Limited to 100.
-  x_org_id: "" # String | 
-  skip: 0, # Integer | The offset into the records to return.
-  filter: ["filter_example"], # Array<String> | Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
-}
-
-begin
-  #List the User Groups bound to a LDAP Server
-  result = api_instance.graph_ldap_server_traverse_user_group(ldapserver_id, content_type, accept, opts)
-  p result
-rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GraphApi->graph_ldap_server_traverse_user_group: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **ldapserver_id** | **String**| ObjectID of the LDAP Server. | 
- **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
- **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
- **x_org_id** | **String**|  | [optional] [default to ]
- **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
- **filter** | [**Array&lt;String&gt;**](String.md)| Supported operators are: eq, ne, gt, ge, lt, le, between, search, in | [optional] 
-
-### Return type
-
-[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
-
-### Authorization
-
-[x-api-key](../README.md#x-api-key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-# **graph_office365_associations_list**
-> Array&lt;GraphConnection&gt; graph_office365_associations_list(office365_id, targets, content_type, accept, opts)
-
-List the associations of an Office 365 instance
-
-This endpoint returns _direct_ associations of an Office 365 instance.   A direct association can be a non-homogeneous relationship between 2 different objects, for example Office 365 and Users.  #### Sample Request ``` curl -X GET 'https://console.jumpcloud.com/api/v2/office365s/{O365_ID}/associations?targets=user_group \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}'  ```
-
-### Example
-```ruby
-# load the gem
-require 'jcapiv2'
-# setup authorization
-JCAPIv2.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['x-api-key'] = 'Bearer'
-end
-
-api_instance = JCAPIv2::GraphApi.new
-
-office365_id = "office365_id_example" # String | ObjectID of the Office 365 instance.
-
-targets = ["targets_example"] # Array<String> | 
-
-content_type = "application/json" # String | 
-
-accept = "application/json" # String | 
-
-opts = { 
-  limit: 10, # Integer | The number of records to return at once. Limited to 100.
-  skip: 0, # Integer | The offset into the records to return.
-  x_org_id: "" # String | 
-}
-
-begin
-  #List the associations of an Office 365 instance
-  result = api_instance.graph_office365_associations_list(office365_id, targets, content_type, accept, opts)
-  p result
-rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GraphApi->graph_office365_associations_list: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **office365_id** | **String**| ObjectID of the Office 365 instance. | 
- **targets** | [**Array&lt;String&gt;**](String.md)|  | 
- **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
- **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
- **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
- **x_org_id** | **String**|  | [optional] [default to ]
-
-### Return type
-
-[**Array&lt;GraphConnection&gt;**](GraphConnection.md)
-
-### Authorization
-
-[x-api-key](../README.md#x-api-key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-# **graph_office365_associations_post**
-> graph_office365_associations_post(office365_id, content_type, accept, opts)
+# **p_ost_office365s_office365_id_associations**
+> p_ost_office365s_office365_id_associations(office365_id, accept, content_type, opts)
 
 Manage the associations of an Office 365 instance
 
-This endpoint allows you to manage the _direct_ associations of a Office 365 instance.  A direct association can be a non-homogeneous relationship between 2 different objects, for example Office 365 and Users.  #### Sample Request ``` curl -X POST https://console.jumpcloud.com/api/v2/office365s/{O365_ID}/associations \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' \\   -d '{     \"op\": \"add\",     \"type\": \"user_group\",     \"id\": \"{Group_ID}\" }' ```
+This endpoint allows you to manage the _direct_ associations of a Office 365 instance.  A direct association can be a non-homogeneous relationship between 2 different objects, for example Office 365 and Users.  #### Sample Request ``` curl -X POST https://console.jumpcloud.com/api/v2/office365s/{OFFICE365_ID}/associations \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' \\   -d '{     \"op\": \"add\",     \"type\": \"user_group\",     \"id\": \"{Group_ID}\" }' ```
 
 ### Example
 ```ruby
@@ -1551,9 +4665,9 @@ api_instance = JCAPIv2::GraphApi.new
 
 office365_id = "office365_id_example" # String | ObjectID of the Office 365 instance.
 
-content_type = "application/json" # String | 
+accept = "application/x-pem-file" # String | 
 
-accept = "application/json" # String | 
+content_type = "application/json" # String | 
 
 opts = { 
   body: JCAPIv2::GraphManagementReq.new, # GraphManagementReq | 
@@ -1562,9 +4676,9 @@ opts = {
 
 begin
   #Manage the associations of an Office 365 instance
-  api_instance.graph_office365_associations_post(office365_id, content_type, accept, opts)
+  api_instance.p_ost_office365s_office365_id_associations(office365_id, accept, content_type, opts)
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GraphApi->graph_office365_associations_post: #{e}"
+  puts "Exception when calling GraphApi->p_ost_office365s_office365_id_associations: #{e}"
 end
 ```
 
@@ -1573,8 +4687,8 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **office365_id** | **String**| ObjectID of the Office 365 instance. | 
+ **accept** | **String**|  | [default to application/x-pem-file]
  **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
  **body** | [**GraphManagementReq**](GraphManagementReq.md)|  | [optional] 
  **x_org_id** | **String**|  | [optional] [default to ]
 
@@ -1593,219 +4707,8 @@ nil (empty response body)
 
 
 
-# **graph_office365_traverse_user**
-> Array&lt;GraphObjectWithPaths&gt; graph_office365_traverse_user(office365_id, content_type, accept, opts)
-
-List the Users bound to an Office 365 instance
-
-This endpoint will return all Users bound to an Office 365 instance, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths.  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this Office 365 instance to the corresponding User; this array represents all grouping and/or associations that would have to be removed to deprovision the User from this Office 365 instance.  See `/members` and `/associations` endpoints to manage those collections.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/office365s/{O365_ID}/users \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
-
-### Example
-```ruby
-# load the gem
-require 'jcapiv2'
-# setup authorization
-JCAPIv2.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['x-api-key'] = 'Bearer'
-end
-
-api_instance = JCAPIv2::GraphApi.new
-
-office365_id = "office365_id_example" # String | ObjectID of the Office 365 suite.
-
-content_type = "application/json" # String | 
-
-accept = "application/json" # String | 
-
-opts = { 
-  limit: 10, # Integer | The number of records to return at once. Limited to 100.
-  x_org_id: "" # String | 
-  skip: 0, # Integer | The offset into the records to return.
-  filter: ["filter_example"], # Array<String> | Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
-}
-
-begin
-  #List the Users bound to an Office 365 instance
-  result = api_instance.graph_office365_traverse_user(office365_id, content_type, accept, opts)
-  p result
-rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GraphApi->graph_office365_traverse_user: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **office365_id** | **String**| ObjectID of the Office 365 suite. | 
- **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
- **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
- **x_org_id** | **String**|  | [optional] [default to ]
- **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
- **filter** | [**Array&lt;String&gt;**](String.md)| Supported operators are: eq, ne, gt, ge, lt, le, between, search, in | [optional] 
-
-### Return type
-
-[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
-
-### Authorization
-
-[x-api-key](../README.md#x-api-key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-# **graph_office365_traverse_user_group**
-> Array&lt;GraphObjectWithPaths&gt; graph_office365_traverse_user_group(office365_id, content_type, accept, opts)
-
-List the User Groups bound to an Office 365 instance
-
-This endpoint will return all Users Groups bound to an Office 365 instance, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the group's type, id, attributes and paths.  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this Office 365 instance to the corresponding User Group; this array represents all grouping and/or associations that would have to be removed to deprovision the User Group from this Office 365 instance.  See `/members` and `/associations` endpoints to manage those collections.  #### Sample Request ```   curl -X GET https://console.jumpcloud.com/api/v2/office365s/{O365_ID/usergroups \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
-
-### Example
-```ruby
-# load the gem
-require 'jcapiv2'
-# setup authorization
-JCAPIv2.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['x-api-key'] = 'Bearer'
-end
-
-api_instance = JCAPIv2::GraphApi.new
-
-office365_id = "office365_id_example" # String | ObjectID of the Office 365 suite.
-
-content_type = "application/json" # String | 
-
-accept = "application/json" # String | 
-
-opts = { 
-  limit: 10, # Integer | The number of records to return at once. Limited to 100.
-  x_org_id: "" # String | 
-  skip: 0, # Integer | The offset into the records to return.
-  filter: ["filter_example"], # Array<String> | Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
-}
-
-begin
-  #List the User Groups bound to an Office 365 instance
-  result = api_instance.graph_office365_traverse_user_group(office365_id, content_type, accept, opts)
-  p result
-rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GraphApi->graph_office365_traverse_user_group: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **office365_id** | **String**| ObjectID of the Office 365 suite. | 
- **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
- **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
- **x_org_id** | **String**|  | [optional] [default to ]
- **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
- **filter** | [**Array&lt;String&gt;**](String.md)| Supported operators are: eq, ne, gt, ge, lt, le, between, search, in | [optional] 
-
-### Return type
-
-[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
-
-### Authorization
-
-[x-api-key](../README.md#x-api-key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-# **graph_policy_associations_list**
-> Array&lt;GraphConnection&gt; graph_policy_associations_list(policy_id, targets, content_type, accept, opts)
-
-List the associations of a Policy
-
-This endpoint returns the _direct_ associations of a Policy.  A direct association can be a non-homogeneous relationship between 2 different objects, for example Policies and Systems.  #### Sample Request ``` curl -X GET 'https://console.jumpcloud.com/api/v2/policies/{Policy_ID}/associations?targets=system_group \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
-
-### Example
-```ruby
-# load the gem
-require 'jcapiv2'
-# setup authorization
-JCAPIv2.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['x-api-key'] = 'Bearer'
-end
-
-api_instance = JCAPIv2::GraphApi.new
-
-policy_id = "policy_id_example" # String | ObjectID of the Policy.
-
-targets = ["targets_example"] # Array<String> | 
-
-content_type = "application/json" # String | 
-
-accept = "application/json" # String | 
-
-opts = { 
-  limit: 10, # Integer | The number of records to return at once. Limited to 100.
-  skip: 0, # Integer | The offset into the records to return.
-  x_org_id: "" # String | 
-}
-
-begin
-  #List the associations of a Policy
-  result = api_instance.graph_policy_associations_list(policy_id, targets, content_type, accept, opts)
-  p result
-rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GraphApi->graph_policy_associations_list: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **policy_id** | **String**| ObjectID of the Policy. | 
- **targets** | [**Array&lt;String&gt;**](String.md)|  | 
- **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
- **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
- **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
- **x_org_id** | **String**|  | [optional] [default to ]
-
-### Return type
-
-[**Array&lt;GraphConnection&gt;**](GraphConnection.md)
-
-### Authorization
-
-[x-api-key](../README.md#x-api-key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-# **graph_policy_associations_post**
-> graph_policy_associations_post(policy_id, content_type, accept, opts)
+# **p_ost_policies_policy_id_associations**
+> p_ost_policies_policy_id_associations(policy_id, accept, content_type, opts)
 
 Manage the associations of a Policy
 
@@ -1827,9 +4730,9 @@ api_instance = JCAPIv2::GraphApi.new
 
 policy_id = "policy_id_example" # String | ObjectID of the Policy.
 
-content_type = "application/json" # String | 
+accept = "application/x-pem-file" # String | 
 
-accept = "application/json" # String | 
+content_type = "application/json" # String | 
 
 opts = { 
   body: JCAPIv2::GraphManagementReq.new, # GraphManagementReq | 
@@ -1838,9 +4741,9 @@ opts = {
 
 begin
   #Manage the associations of a Policy
-  api_instance.graph_policy_associations_post(policy_id, content_type, accept, opts)
+  api_instance.p_ost_policies_policy_id_associations(policy_id, accept, content_type, opts)
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GraphApi->graph_policy_associations_post: #{e}"
+  puts "Exception when calling GraphApi->p_ost_policies_policy_id_associations: #{e}"
 end
 ```
 
@@ -1849,8 +4752,8 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **policy_id** | **String**| ObjectID of the Policy. | 
+ **accept** | **String**|  | [default to application/x-pem-file]
  **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
  **body** | [**GraphManagementReq**](GraphManagementReq.md)|  | [optional] 
  **x_org_id** | **String**|  | [optional] [default to ]
 
@@ -1869,219 +4772,8 @@ nil (empty response body)
 
 
 
-# **graph_policy_traverse_system**
-> Array&lt;GraphObjectWithPaths&gt; graph_policy_traverse_system(policy_id, content_type, accept, opts)
-
-List the Systems bound to a Policy
-
-This endpoint will return all Systems bound to a Policy, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths.  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this Policy to the corresponding System; this array represents all grouping and/or associations that would have to be removed to deprovision the System from this Policy.  See `/members` and `/associations` endpoints to manage those collections.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/policies/{Policy_ID}/systems \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
-
-### Example
-```ruby
-# load the gem
-require 'jcapiv2'
-# setup authorization
-JCAPIv2.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['x-api-key'] = 'Bearer'
-end
-
-api_instance = JCAPIv2::GraphApi.new
-
-policy_id = "policy_id_example" # String | ObjectID of the Command.
-
-content_type = "application/json" # String | 
-
-accept = "application/json" # String | 
-
-opts = { 
-  limit: 10, # Integer | The number of records to return at once. Limited to 100.
-  x_org_id: "" # String | 
-  skip: 0, # Integer | The offset into the records to return.
-  filter: ["filter_example"], # Array<String> | Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
-}
-
-begin
-  #List the Systems bound to a Policy
-  result = api_instance.graph_policy_traverse_system(policy_id, content_type, accept, opts)
-  p result
-rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GraphApi->graph_policy_traverse_system: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **policy_id** | **String**| ObjectID of the Command. | 
- **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
- **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
- **x_org_id** | **String**|  | [optional] [default to ]
- **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
- **filter** | [**Array&lt;String&gt;**](String.md)| Supported operators are: eq, ne, gt, ge, lt, le, between, search, in | [optional] 
-
-### Return type
-
-[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
-
-### Authorization
-
-[x-api-key](../README.md#x-api-key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-# **graph_policy_traverse_system_group**
-> Array&lt;GraphObjectWithPaths&gt; graph_policy_traverse_system_group(policy_id, content_type, accept, opts)
-
-List the System Groups bound to a Policy
-
-This endpoint will return all Systems Groups bound to a Policy, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the group's type, id, attributes and paths.  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this Policy to the corresponding System Group; this array represents all grouping and/or associations that would have to be removed to deprovision the System Group from this Policy.  See `/members` and `/associations` endpoints to manage those collections.  #### Sample Request ``` curl -X GET  https://console.jumpcloud.com/api/v2/policies/{Policy_ID}/systemgroups \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
-
-### Example
-```ruby
-# load the gem
-require 'jcapiv2'
-# setup authorization
-JCAPIv2.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['x-api-key'] = 'Bearer'
-end
-
-api_instance = JCAPIv2::GraphApi.new
-
-policy_id = "policy_id_example" # String | ObjectID of the Command.
-
-content_type = "application/json" # String | 
-
-accept = "application/json" # String | 
-
-opts = { 
-  limit: 10, # Integer | The number of records to return at once. Limited to 100.
-  x_org_id: "" # String | 
-  skip: 0, # Integer | The offset into the records to return.
-  filter: ["filter_example"], # Array<String> | Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
-}
-
-begin
-  #List the System Groups bound to a Policy
-  result = api_instance.graph_policy_traverse_system_group(policy_id, content_type, accept, opts)
-  p result
-rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GraphApi->graph_policy_traverse_system_group: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **policy_id** | **String**| ObjectID of the Command. | 
- **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
- **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
- **x_org_id** | **String**|  | [optional] [default to ]
- **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
- **filter** | [**Array&lt;String&gt;**](String.md)| Supported operators are: eq, ne, gt, ge, lt, le, between, search, in | [optional] 
-
-### Return type
-
-[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
-
-### Authorization
-
-[x-api-key](../README.md#x-api-key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-# **graph_radius_server_associations_list**
-> Array&lt;GraphConnection&gt; graph_radius_server_associations_list(radiusserver_id, targets, content_type, accept, opts)
-
-List the associations of a RADIUS  Server
-
-This endpoint returns the _direct_ associations of a Radius Server.  A direct association can be a non-homogeneous relationship between 2 different objects, for example Radius Servers and Users.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/radiusservers/{RADIUS_ID}/associations?targets=user_group \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
-
-### Example
-```ruby
-# load the gem
-require 'jcapiv2'
-# setup authorization
-JCAPIv2.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['x-api-key'] = 'Bearer'
-end
-
-api_instance = JCAPIv2::GraphApi.new
-
-radiusserver_id = "radiusserver_id_example" # String | ObjectID of the Radius Server.
-
-targets = ["targets_example"] # Array<String> | 
-
-content_type = "application/json" # String | 
-
-accept = "application/json" # String | 
-
-opts = { 
-  limit: 10, # Integer | The number of records to return at once. Limited to 100.
-  skip: 0, # Integer | The offset into the records to return.
-  x_org_id: "" # String | 
-}
-
-begin
-  #List the associations of a RADIUS  Server
-  result = api_instance.graph_radius_server_associations_list(radiusserver_id, targets, content_type, accept, opts)
-  p result
-rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GraphApi->graph_radius_server_associations_list: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **radiusserver_id** | **String**| ObjectID of the Radius Server. | 
- **targets** | [**Array&lt;String&gt;**](String.md)|  | 
- **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
- **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
- **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
- **x_org_id** | **String**|  | [optional] [default to ]
-
-### Return type
-
-[**Array&lt;GraphConnection&gt;**](GraphConnection.md)
-
-### Authorization
-
-[x-api-key](../README.md#x-api-key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-# **graph_radius_server_associations_post**
-> graph_radius_server_associations_post(radiusserver_id, content_type, accept, opts)
+# **p_ost_radiusservers_radiusserver_id_associations**
+> p_ost_radiusservers_radiusserver_id_associations(radiusserver_id, accept, content_type, opts)
 
 Manage the associations of a RADIUS Server
 
@@ -2103,9 +4795,9 @@ api_instance = JCAPIv2::GraphApi.new
 
 radiusserver_id = "radiusserver_id_example" # String | ObjectID of the Radius Server.
 
-content_type = "application/json" # String | 
+accept = "application/x-pem-file" # String | 
 
-accept = "application/json" # String | 
+content_type = "application/json" # String | 
 
 opts = { 
   body: JCAPIv2::GraphManagementReq.new, # GraphManagementReq | 
@@ -2114,9 +4806,9 @@ opts = {
 
 begin
   #Manage the associations of a RADIUS Server
-  api_instance.graph_radius_server_associations_post(radiusserver_id, content_type, accept, opts)
+  api_instance.p_ost_radiusservers_radiusserver_id_associations(radiusserver_id, accept, content_type, opts)
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GraphApi->graph_radius_server_associations_post: #{e}"
+  puts "Exception when calling GraphApi->p_ost_radiusservers_radiusserver_id_associations: #{e}"
 end
 ```
 
@@ -2125,8 +4817,8 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **radiusserver_id** | **String**| ObjectID of the Radius Server. | 
+ **accept** | **String**|  | [default to application/x-pem-file]
  **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
  **body** | [**GraphManagementReq**](GraphManagementReq.md)|  | [optional] 
  **x_org_id** | **String**|  | [optional] [default to ]
 
@@ -2145,82 +4837,12 @@ nil (empty response body)
 
 
 
-# **graph_radius_server_traverse_user**
-> Array&lt;GraphObjectWithPaths&gt; graph_radius_server_traverse_user(radiusserver_id, content_type, accept, opts)
+# **p_ost_software_apps_software_app_id_associations**
+> p_ost_software_apps_software_app_id_associations(software_app_id, accept, content_type, opts)
 
-List the Users bound to a RADIUS  Server
+Manage the associations of a software application.
 
-This endpoint will return all Users bound to a RADIUS Server, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths.  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this RADIUS server instance to the corresponding User; this array represents all grouping and/or associations that would have to be removed to deprovision the User from this RADIUS server instance.  See `/members` and `/associations` endpoints to manage those collections.   #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/ldapservers/{LDAP_ID}/users \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}'   ```
-
-### Example
-```ruby
-# load the gem
-require 'jcapiv2'
-# setup authorization
-JCAPIv2.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['x-api-key'] = 'Bearer'
-end
-
-api_instance = JCAPIv2::GraphApi.new
-
-radiusserver_id = "radiusserver_id_example" # String | ObjectID of the Radius Server.
-
-content_type = "application/json" # String | 
-
-accept = "application/json" # String | 
-
-opts = { 
-  limit: 10, # Integer | The number of records to return at once. Limited to 100.
-  x_org_id: "" # String | 
-  skip: 0, # Integer | The offset into the records to return.
-  filter: ["filter_example"], # Array<String> | Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
-}
-
-begin
-  #List the Users bound to a RADIUS  Server
-  result = api_instance.graph_radius_server_traverse_user(radiusserver_id, content_type, accept, opts)
-  p result
-rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GraphApi->graph_radius_server_traverse_user: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **radiusserver_id** | **String**| ObjectID of the Radius Server. | 
- **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
- **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
- **x_org_id** | **String**|  | [optional] [default to ]
- **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
- **filter** | [**Array&lt;String&gt;**](String.md)| Supported operators are: eq, ne, gt, ge, lt, le, between, search, in | [optional] 
-
-### Return type
-
-[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
-
-### Authorization
-
-[x-api-key](../README.md#x-api-key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-# **graph_radius_server_traverse_user_group**
-> Array&lt;GraphObjectWithPaths&gt; graph_radius_server_traverse_user_group(radiusserver_id, content_type, accept, opts)
-
-List the User Groups bound to a RADIUS  Server
-
-This endpoint will return all Users Groups bound to a RADIUS Server, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the group's type, id, attributes and paths.  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this RADIUS server instance to the corresponding User Group; this array represents all grouping and/or associations that would have to be removed to deprovision the User Group from this RADIUS server instance.  See `/members` and `/associations` endpoints to manage those collections.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/radiusservers/{RADIUS_ID}/usergroups \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
+This endpoint allows you to associate or disassociate a software application to a system or system group.  #### Sample Request ``` $ curl -X POST https://console.jumpcloud.com/api/v2/software_apps/{software_app_id}/associations \\ -H 'Accept: application/json' \\ -H 'Content-Type: application/json' \\ -H 'x-api-key: {API_KEY}' \\ -d '{   \"id\": \"<object_id>\",   \"op\": \"add\",   \"type\": \"system\"  }' ```
 
 ### Example
 ```ruby
@@ -2236,25 +4858,22 @@ end
 
 api_instance = JCAPIv2::GraphApi.new
 
-radiusserver_id = "radiusserver_id_example" # String | ObjectID of the Radius Server.
+software_app_id = "software_app_id_example" # String | ObjectID of the Software App.
+
+accept = "application/x-pem-file" # String | 
 
 content_type = "application/json" # String | 
 
-accept = "application/json" # String | 
-
 opts = { 
-  limit: 10, # Integer | The number of records to return at once. Limited to 100.
+  body: JCAPIv2::GraphManagementReq.new, # GraphManagementReq | 
   x_org_id: "" # String | 
-  skip: 0, # Integer | The offset into the records to return.
-  filter: ["filter_example"], # Array<String> | Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
 }
 
 begin
-  #List the User Groups bound to a RADIUS  Server
-  result = api_instance.graph_radius_server_traverse_user_group(radiusserver_id, content_type, accept, opts)
-  p result
+  #Manage the associations of a software application.
+  api_instance.p_ost_software_apps_software_app_id_associations(software_app_id, accept, content_type, opts)
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GraphApi->graph_radius_server_traverse_user_group: #{e}"
+  puts "Exception when calling GraphApi->p_ost_software_apps_software_app_id_associations: #{e}"
 end
 ```
 
@@ -2262,156 +4881,10 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **radiusserver_id** | **String**| ObjectID of the Radius Server. | 
+ **software_app_id** | **String**| ObjectID of the Software App. | 
+ **accept** | **String**|  | [default to application/x-pem-file]
  **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
- **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
- **x_org_id** | **String**|  | [optional] [default to ]
- **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
- **filter** | [**Array&lt;String&gt;**](String.md)| Supported operators are: eq, ne, gt, ge, lt, le, between, search, in | [optional] 
-
-### Return type
-
-[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
-
-### Authorization
-
-[x-api-key](../README.md#x-api-key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-# **graph_system_associations_list**
-> Array&lt;GraphConnection&gt; graph_system_associations_list(system_id, content_type, accepttargets, opts)
-
-List the associations of a System
-
-This endpoint returns the _direct_ associations of a System.  A direct association can be a non-homogeneous relationship between 2 different objects, for example Systems and Users.   #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/systems/{System_ID}/associations?targets=user \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}'  ```
-
-### Example
-```ruby
-# load the gem
-require 'jcapiv2'
-# setup authorization
-JCAPIv2.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['x-api-key'] = 'Bearer'
-end
-
-api_instance = JCAPIv2::GraphApi.new
-
-system_id = "system_id_example" # String | ObjectID of the System.
-
-content_type = "application/json" # String | 
-
-accept = "application/json" # String | 
-
-targets = ["targets_example"] # Array<String> | 
-
-opts = { 
-  limit: 10, # Integer | The number of records to return at once. Limited to 100.
-  skip: 0, # Integer | The offset into the records to return.
-  date: "date_example", # String | Current date header for the System Context API
-  authorization: "authorization_example", # String | Authorization header for the System Context API
-  x_org_id: "" # String | 
-}
-
-begin
-  #List the associations of a System
-  result = api_instance.graph_system_associations_list(system_id, content_type, accepttargets, opts)
-  p result
-rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GraphApi->graph_system_associations_list: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **system_id** | **String**| ObjectID of the System. | 
- **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
- **targets** | [**Array&lt;String&gt;**](String.md)|  | 
- **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
- **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
- **date** | **String**| Current date header for the System Context API | [optional] 
- **authorization** | **String**| Authorization header for the System Context API | [optional] 
- **x_org_id** | **String**|  | [optional] [default to ]
-
-### Return type
-
-[**Array&lt;GraphConnection&gt;**](GraphConnection.md)
-
-### Authorization
-
-[x-api-key](../README.md#x-api-key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-# **graph_system_associations_post**
-> graph_system_associations_post(system_id, content_type, accept, opts)
-
-Manage associations of a System
-
-This endpoint allows you to manage the _direct_ associations of a System.  A direct association can be a non-homogeneous relationship between 2 different objects, for example Systems and Users.   #### Sample Request ``` curl -X POST https://console.jumpcloud.com/api/v2/systems/{System_ID}/associations \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' \\   -d '{    \"attributes\": {       \"sudo\": {          \"enabled\": true,          \"withoutPassword\": false       }    },     \"op\": \"add\",     \"type\": \"user\",     \"id\": \"UserID\" }'  ```
-
-### Example
-```ruby
-# load the gem
-require 'jcapiv2'
-# setup authorization
-JCAPIv2.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['x-api-key'] = 'Bearer'
-end
-
-api_instance = JCAPIv2::GraphApi.new
-
-system_id = "system_id_example" # String | ObjectID of the System.
-
-content_type = "application/json" # String | 
-
-accept = "application/json" # String | 
-
-opts = { 
-  body: JCAPIv2::SystemGraphManagementReq.new, # SystemGraphManagementReq | 
-  date: "date_example", # String | Current date header for the System Context API
-  authorization: "authorization_example", # String | Authorization header for the System Context API
-  x_org_id: "" # String | 
-}
-
-begin
-  #Manage associations of a System
-  api_instance.graph_system_associations_post(system_id, content_type, accept, opts)
-rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GraphApi->graph_system_associations_post: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **system_id** | **String**| ObjectID of the System. | 
- **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
- **body** | [**SystemGraphManagementReq**](SystemGraphManagementReq.md)|  | [optional] 
- **date** | **String**| Current date header for the System Context API | [optional] 
- **authorization** | **String**| Authorization header for the System Context API | [optional] 
+ **body** | [**GraphManagementReq**](GraphManagementReq.md)|  | [optional] 
  **x_org_id** | **String**|  | [optional] [default to ]
 
 ### Return type
@@ -2429,79 +4902,8 @@ nil (empty response body)
 
 
 
-# **graph_system_group_associations_list**
-> Array&lt;GraphConnection&gt; graph_system_group_associations_list(group_id, content_type, accepttargets, opts)
-
-List the associations of a System Group
-
-This endpoint returns the _direct_ associations of a System Group.  A direct association can be a non-homogeneous relationship between 2 different objects, for example System Groups and Users.   #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/systemgroups/{GroupID}/associations?targets=user \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
-
-### Example
-```ruby
-# load the gem
-require 'jcapiv2'
-# setup authorization
-JCAPIv2.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['x-api-key'] = 'Bearer'
-end
-
-api_instance = JCAPIv2::GraphApi.new
-
-group_id = "group_id_example" # String | ObjectID of the System Group.
-
-content_type = "application/json" # String | 
-
-accept = "application/json" # String | 
-
-targets = ["targets_example"] # Array<String> | 
-
-opts = { 
-  limit: 10, # Integer | The number of records to return at once. Limited to 100.
-  skip: 0, # Integer | The offset into the records to return.
-  x_org_id: "" # String | 
-}
-
-begin
-  #List the associations of a System Group
-  result = api_instance.graph_system_group_associations_list(group_id, content_type, accepttargets, opts)
-  p result
-rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GraphApi->graph_system_group_associations_list: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **group_id** | **String**| ObjectID of the System Group. | 
- **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
- **targets** | [**Array&lt;String&gt;**](String.md)|  | 
- **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
- **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
- **x_org_id** | **String**|  | [optional] [default to ]
-
-### Return type
-
-[**Array&lt;GraphConnection&gt;**](GraphConnection.md)
-
-### Authorization
-
-[x-api-key](../README.md#x-api-key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-# **graph_system_group_associations_post**
-> graph_system_group_associations_post(group_id, content_type, accept, opts)
+# **p_ost_systemgroups_group_id_associations**
+> p_ost_systemgroups_group_id_associations(group_id, accept, content_type, opts)
 
 Manage the associations of a System Group
 
@@ -2523,9 +4925,9 @@ api_instance = JCAPIv2::GraphApi.new
 
 group_id = "group_id_example" # String | ObjectID of the System Group.
 
-content_type = "application/json" # String | 
+accept = "application/x-pem-file" # String | 
 
-accept = "application/json" # String | 
+content_type = "application/json" # String | 
 
 opts = { 
   body: JCAPIv2::SystemGroupGraphManagementReq.new, # SystemGroupGraphManagementReq | 
@@ -2534,9 +4936,9 @@ opts = {
 
 begin
   #Manage the associations of a System Group
-  api_instance.graph_system_group_associations_post(group_id, content_type, accept, opts)
+  api_instance.p_ost_systemgroups_group_id_associations(group_id, accept, content_type, opts)
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GraphApi->graph_system_group_associations_post: #{e}"
+  puts "Exception when calling GraphApi->p_ost_systemgroups_group_id_associations: #{e}"
 end
 ```
 
@@ -2545,8 +4947,8 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **group_id** | **String**| ObjectID of the System Group. | 
+ **accept** | **String**|  | [default to application/x-pem-file]
  **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
  **body** | [**SystemGroupGraphManagementReq**](SystemGroupGraphManagementReq.md)|  | [optional] 
  **x_org_id** | **String**|  | [optional] [default to ]
 
@@ -2565,148 +4967,8 @@ nil (empty response body)
 
 
 
-# **graph_system_group_member_of**
-> Array&lt;GraphObjectWithPaths&gt; graph_system_group_member_of(group_id, content_type, accept, opts)
-
-List the System Group's parents
-
-This endpoint returns all System Groups a System Group is a member of.  This endpoint is not yet public as we haven't completed the code yet.
-
-### Example
-```ruby
-# load the gem
-require 'jcapiv2'
-# setup authorization
-JCAPIv2.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['x-api-key'] = 'Bearer'
-end
-
-api_instance = JCAPIv2::GraphApi.new
-
-group_id = "group_id_example" # String | ObjectID of the System Group.
-
-content_type = "application/json" # String | 
-
-accept = "application/json" # String | 
-
-opts = { 
-  filter: ["filter_example"], # Array<String> | Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
-  limit: 10, # Integer | The number of records to return at once. Limited to 100.
-  skip: 0, # Integer | The offset into the records to return.
-  sort: ["sort_example"], # Array<String> | The comma separated fields used to sort the collection. Default sort is ascending, prefix with `-` to sort descending. 
-  x_org_id: "" # String | 
-}
-
-begin
-  #List the System Group's parents
-  result = api_instance.graph_system_group_member_of(group_id, content_type, accept, opts)
-  p result
-rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GraphApi->graph_system_group_member_of: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **group_id** | **String**| ObjectID of the System Group. | 
- **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
- **filter** | [**Array&lt;String&gt;**](String.md)| Supported operators are: eq, ne, gt, ge, lt, le, between, search, in | [optional] 
- **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
- **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
- **sort** | [**Array&lt;String&gt;**](String.md)| The comma separated fields used to sort the collection. Default sort is ascending, prefix with &#x60;-&#x60; to sort descending.  | [optional] 
- **x_org_id** | **String**|  | [optional] [default to ]
-
-### Return type
-
-[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
-
-### Authorization
-
-[x-api-key](../README.md#x-api-key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-# **graph_system_group_members_list**
-> Array&lt;GraphConnection&gt; graph_system_group_members_list(group_id, content_type, accept, opts)
-
-List the members of a System Group
-
-This endpoint returns the system members of a System Group.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/systemgroups/{Group_ID}/members \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}'  ```
-
-### Example
-```ruby
-# load the gem
-require 'jcapiv2'
-# setup authorization
-JCAPIv2.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['x-api-key'] = 'Bearer'
-end
-
-api_instance = JCAPIv2::GraphApi.new
-
-group_id = "group_id_example" # String | ObjectID of the System Group.
-
-content_type = "application/json" # String | 
-
-accept = "application/json" # String | 
-
-opts = { 
-  limit: 10, # Integer | The number of records to return at once. Limited to 100.
-  skip: 0, # Integer | The offset into the records to return.
-  x_org_id: "" # String | 
-}
-
-begin
-  #List the members of a System Group
-  result = api_instance.graph_system_group_members_list(group_id, content_type, accept, opts)
-  p result
-rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GraphApi->graph_system_group_members_list: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **group_id** | **String**| ObjectID of the System Group. | 
- **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
- **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
- **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
- **x_org_id** | **String**|  | [optional] [default to ]
-
-### Return type
-
-[**Array&lt;GraphConnection&gt;**](GraphConnection.md)
-
-### Authorization
-
-[x-api-key](../README.md#x-api-key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-# **graph_system_group_members_post**
-> graph_system_group_members_post(group_id, content_type, accept, opts)
+# **p_ost_systemgroups_group_id_members**
+> p_ost_systemgroups_group_id_members(group_id, accept, content_type, opts)
 
 Manage the members of a System Group
 
@@ -2728,22 +4990,22 @@ api_instance = JCAPIv2::GraphApi.new
 
 group_id = "group_id_example" # String | ObjectID of the System Group.
 
-content_type = "application/json" # String | 
+accept = "application/x-pem-file" # String | 
 
-accept = "application/json" # String | 
+content_type = "application/json" # String | 
 
 opts = { 
   body: JCAPIv2::SystemGroupMembersReq.new, # SystemGroupMembersReq | 
-  date: "date_example", # String | Current date header for the System Context API
   authorization: "authorization_example", # String | Authorization header for the System Context API
+  date: "date_example" # String | Current date header for the System Context API
   x_org_id: "" # String | 
 }
 
 begin
   #Manage the members of a System Group
-  api_instance.graph_system_group_members_post(group_id, content_type, accept, opts)
+  api_instance.p_ost_systemgroups_group_id_members(group_id, accept, content_type, opts)
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GraphApi->graph_system_group_members_post: #{e}"
+  puts "Exception when calling GraphApi->p_ost_systemgroups_group_id_members: #{e}"
 end
 ```
 
@@ -2752,11 +5014,11 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **group_id** | **String**| ObjectID of the System Group. | 
+ **accept** | **String**|  | [default to application/x-pem-file]
  **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
  **body** | [**SystemGroupMembersReq**](SystemGroupMembersReq.md)|  | [optional] 
- **date** | **String**| Current date header for the System Context API | [optional] 
  **authorization** | **String**| Authorization header for the System Context API | [optional] 
+ **date** | **String**| Current date header for the System Context API | [optional] 
  **x_org_id** | **String**|  | [optional] [default to ]
 
 ### Return type
@@ -2774,364 +5036,12 @@ nil (empty response body)
 
 
 
-# **graph_system_group_membership**
-> Array&lt;GraphObjectWithPaths&gt; graph_system_group_membership(group_id, content_type, accept, opts)
+# **p_ost_systems_system_id_associations**
+> p_ost_systems_system_id_associations(system_id, accept, content_type, opts)
 
-List the System Group's membership
+Manage associations of a System
 
-This endpoint returns all Systems that are a member of this System Group.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/systemgroups/{Group_ID/membership \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}'  ```
-
-### Example
-```ruby
-# load the gem
-require 'jcapiv2'
-# setup authorization
-JCAPIv2.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['x-api-key'] = 'Bearer'
-end
-
-api_instance = JCAPIv2::GraphApi.new
-
-group_id = "group_id_example" # String | ObjectID of the System Group.
-
-content_type = "application/json" # String | 
-
-accept = "application/json" # String | 
-
-opts = { 
-  limit: 10, # Integer | The number of records to return at once. Limited to 100.
-  skip: 0, # Integer | The offset into the records to return.
-  sort: ["sort_example"], # Array<String> | The comma separated fields used to sort the collection. Default sort is ascending, prefix with `-` to sort descending. 
-  filter: ["filter_example"], # Array<String> | Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
-  x_org_id: "" # String | 
-}
-
-begin
-  #List the System Group's membership
-  result = api_instance.graph_system_group_membership(group_id, content_type, accept, opts)
-  p result
-rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GraphApi->graph_system_group_membership: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **group_id** | **String**| ObjectID of the System Group. | 
- **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
- **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
- **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
- **sort** | [**Array&lt;String&gt;**](String.md)| The comma separated fields used to sort the collection. Default sort is ascending, prefix with &#x60;-&#x60; to sort descending.  | [optional] 
- **filter** | [**Array&lt;String&gt;**](String.md)| Supported operators are: eq, ne, gt, ge, lt, le, between, search, in | [optional] 
- **x_org_id** | **String**|  | [optional] [default to ]
-
-### Return type
-
-[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
-
-### Authorization
-
-[x-api-key](../README.md#x-api-key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-# **graph_system_group_traverse_command**
-> Array&lt;GraphObjectWithPaths&gt; graph_system_group_traverse_command(group_id, content_type, accept, opts)
-
-List the Commands bound to a System Group
-
-This endpoint will return all Commands bound to a System Group, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the group's type, id, attributes and paths.  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this System Group to the corresponding Command; this array represents all grouping and/or associations that would have to be removed to deprovision the Command from this System Group.  See `/members` and `/associations` endpoints to manage those collections.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/systemgroups/{GroupID}/commands \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
-
-### Example
-```ruby
-# load the gem
-require 'jcapiv2'
-# setup authorization
-JCAPIv2.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['x-api-key'] = 'Bearer'
-end
-
-api_instance = JCAPIv2::GraphApi.new
-
-group_id = "group_id_example" # String | ObjectID of the System Group.
-
-content_type = "application/json" # String | 
-
-accept = "application/json" # String | 
-
-opts = { 
-  limit: 10, # Integer | The number of records to return at once. Limited to 100.
-  x_org_id: "" # String | 
-  skip: 0, # Integer | The offset into the records to return.
-  filter: ["filter_example"], # Array<String> | Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
-}
-
-begin
-  #List the Commands bound to a System Group
-  result = api_instance.graph_system_group_traverse_command(group_id, content_type, accept, opts)
-  p result
-rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GraphApi->graph_system_group_traverse_command: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **group_id** | **String**| ObjectID of the System Group. | 
- **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
- **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
- **x_org_id** | **String**|  | [optional] [default to ]
- **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
- **filter** | [**Array&lt;String&gt;**](String.md)| Supported operators are: eq, ne, gt, ge, lt, le, between, search, in | [optional] 
-
-### Return type
-
-[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
-
-### Authorization
-
-[x-api-key](../README.md#x-api-key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-# **graph_system_group_traverse_policy**
-> Array&lt;GraphObjectWithPaths&gt; graph_system_group_traverse_policy(group_id, content_type, accept, opts)
-
-List the Policies bound to a System Group
-
-This endpoint will return all Policies bound to a System Group, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths.  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this System Group to the corresponding Policy; this array represents all grouping and/or associations that would have to be removed to deprovision the Policy from this System Group.  See `/members` and `/associations` endpoints to manage those collections.  This endpoint is not public yet as we haven't finished the code.  ##### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/systemgroups/{GroupID}/policies \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
-
-### Example
-```ruby
-# load the gem
-require 'jcapiv2'
-# setup authorization
-JCAPIv2.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['x-api-key'] = 'Bearer'
-end
-
-api_instance = JCAPIv2::GraphApi.new
-
-group_id = "group_id_example" # String | ObjectID of the System Group.
-
-content_type = "application/json" # String | 
-
-accept = "application/json" # String | 
-
-opts = { 
-  limit: 10, # Integer | The number of records to return at once. Limited to 100.
-  x_org_id: "" # String | 
-  skip: 0, # Integer | The offset into the records to return.
-  filter: ["filter_example"], # Array<String> | Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
-}
-
-begin
-  #List the Policies bound to a System Group
-  result = api_instance.graph_system_group_traverse_policy(group_id, content_type, accept, opts)
-  p result
-rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GraphApi->graph_system_group_traverse_policy: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **group_id** | **String**| ObjectID of the System Group. | 
- **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
- **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
- **x_org_id** | **String**|  | [optional] [default to ]
- **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
- **filter** | [**Array&lt;String&gt;**](String.md)| Supported operators are: eq, ne, gt, ge, lt, le, between, search, in | [optional] 
-
-### Return type
-
-[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
-
-### Authorization
-
-[x-api-key](../README.md#x-api-key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-# **graph_system_group_traverse_user**
-> Array&lt;GraphObjectWithPaths&gt; graph_system_group_traverse_user(group_id, content_type, accept, opts)
-
-List the Users bound to a System Group
-
-This endpoint will return all Users bound to a System Group, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths.  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this System Group to the corresponding User; this array represents all grouping and/or associations that would have to be removed to deprovision the User from this System Group.  See `/members` and `/associations` endpoints to manage those collections.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/systemgroups/{GroupID}/users \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
-
-### Example
-```ruby
-# load the gem
-require 'jcapiv2'
-# setup authorization
-JCAPIv2.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['x-api-key'] = 'Bearer'
-end
-
-api_instance = JCAPIv2::GraphApi.new
-
-group_id = "group_id_example" # String | ObjectID of the System Group.
-
-content_type = "application/json" # String | 
-
-accept = "application/json" # String | 
-
-opts = { 
-  limit: 10, # Integer | The number of records to return at once. Limited to 100.
-  x_org_id: "" # String | 
-  skip: 0, # Integer | The offset into the records to return.
-  filter: ["filter_example"], # Array<String> | Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
-}
-
-begin
-  #List the Users bound to a System Group
-  result = api_instance.graph_system_group_traverse_user(group_id, content_type, accept, opts)
-  p result
-rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GraphApi->graph_system_group_traverse_user: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **group_id** | **String**| ObjectID of the System Group. | 
- **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
- **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
- **x_org_id** | **String**|  | [optional] [default to ]
- **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
- **filter** | [**Array&lt;String&gt;**](String.md)| Supported operators are: eq, ne, gt, ge, lt, le, between, search, in | [optional] 
-
-### Return type
-
-[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
-
-### Authorization
-
-[x-api-key](../README.md#x-api-key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-# **graph_system_group_traverse_user_group**
-> Array&lt;GraphObjectWithPaths&gt; graph_system_group_traverse_user_group(group_id, content_type, accept, opts)
-
-List the User Groups bound to a System Group
-
-This endpoint will return all User Groups bound to a System Group, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths.  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this System Group to the corresponding User Group; this array represents all grouping and/or associations that would have to be removed to deprovision the User Group from this System Group.  See `/members` and `/associations` endpoints to manage those collections.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/systemgroups/{GroupID}/usergroups \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}'  ```
-
-### Example
-```ruby
-# load the gem
-require 'jcapiv2'
-# setup authorization
-JCAPIv2.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['x-api-key'] = 'Bearer'
-end
-
-api_instance = JCAPIv2::GraphApi.new
-
-group_id = "group_id_example" # String | ObjectID of the System Group.
-
-content_type = "application/json" # String | 
-
-accept = "application/json" # String | 
-
-opts = { 
-  limit: 10, # Integer | The number of records to return at once. Limited to 100.
-  x_org_id: "" # String | 
-  skip: 0, # Integer | The offset into the records to return.
-  filter: ["filter_example"], # Array<String> | Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
-}
-
-begin
-  #List the User Groups bound to a System Group
-  result = api_instance.graph_system_group_traverse_user_group(group_id, content_type, accept, opts)
-  p result
-rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GraphApi->graph_system_group_traverse_user_group: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **group_id** | **String**| ObjectID of the System Group. | 
- **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
- **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
- **x_org_id** | **String**|  | [optional] [default to ]
- **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
- **filter** | [**Array&lt;String&gt;**](String.md)| Supported operators are: eq, ne, gt, ge, lt, le, between, search, in | [optional] 
-
-### Return type
-
-[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
-
-### Authorization
-
-[x-api-key](../README.md#x-api-key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-# **graph_system_member_of**
-> Array&lt;GraphObjectWithPaths&gt; graph_system_member_of(system_id, content_type, accept, opts)
-
-List the parent Groups of a System
-
-This endpoint returns all the System Groups a System is a member of.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/systems/{System_ID}/memberof \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}'  ```
+This endpoint allows you to manage the _direct_ associations of a System.  A direct association can be a non-homogeneous relationship between 2 different objects, for example Systems and Users.   #### Sample Request ``` curl -X POST https://console.jumpcloud.com/api/v2/systems/{System_ID}/associations \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' \\   -d '{    \"attributes\": {       \"sudo\": {          \"enabled\": true,          \"withoutPassword\": false       }    },     \"op\": \"add\",     \"type\": \"user\",     \"id\": \"UserID\" }'  ```
 
 ### Example
 ```ruby
@@ -3149,26 +5059,22 @@ api_instance = JCAPIv2::GraphApi.new
 
 system_id = "system_id_example" # String | ObjectID of the System.
 
+accept = "application/x-pem-file" # String | 
+
 content_type = "application/json" # String | 
 
-accept = "application/json" # String | 
-
 opts = { 
-  filter: ["filter_example"], # Array<String> | Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
-  limit: 10, # Integer | The number of records to return at once. Limited to 100.
-  skip: 0, # Integer | The offset into the records to return.
-  date: "date_example", # String | Current date header for the System Context API
+  body: JCAPIv2::SystemGraphManagementReq.new, # SystemGraphManagementReq | 
   authorization: "authorization_example", # String | Authorization header for the System Context API
-  sort: ["sort_example"], # Array<String> | The comma separated fields used to sort the collection. Default sort is ascending, prefix with `-` to sort descending. 
+  date: "date_example" # String | Current date header for the System Context API
   x_org_id: "" # String | 
 }
 
 begin
-  #List the parent Groups of a System
-  result = api_instance.graph_system_member_of(system_id, content_type, accept, opts)
-  p result
+  #Manage associations of a System
+  api_instance.p_ost_systems_system_id_associations(system_id, accept, content_type, opts)
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GraphApi->graph_system_member_of: #{e}"
+  puts "Exception when calling GraphApi->p_ost_systems_system_id_associations: #{e}"
 end
 ```
 
@@ -3177,438 +5083,11 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **system_id** | **String**| ObjectID of the System. | 
+ **accept** | **String**|  | [default to application/x-pem-file]
  **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
- **filter** | [**Array&lt;String&gt;**](String.md)| Supported operators are: eq, ne, gt, ge, lt, le, between, search, in | [optional] 
- **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
- **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
- **date** | **String**| Current date header for the System Context API | [optional] 
+ **body** | [**SystemGraphManagementReq**](SystemGraphManagementReq.md)|  | [optional] 
  **authorization** | **String**| Authorization header for the System Context API | [optional] 
- **sort** | [**Array&lt;String&gt;**](String.md)| The comma separated fields used to sort the collection. Default sort is ascending, prefix with &#x60;-&#x60; to sort descending.  | [optional] 
- **x_org_id** | **String**|  | [optional] [default to ]
-
-### Return type
-
-[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
-
-### Authorization
-
-[x-api-key](../README.md#x-api-key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-# **graph_system_traverse_command**
-> Array&lt;GraphObjectWithPaths&gt; graph_system_traverse_command(system_id, content_type, accept, opts)
-
-List the Commands bound to a System
-
-This endpoint will return all Commands bound to a System, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths.  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this System to the corresponding Command; this array represents all grouping and/or associations that would have to be removed to deprovision the Command from this System.  See `/members` and `/associations` endpoints to manage those collections.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/systems/{System_ID}/commands \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}'  ```
-
-### Example
-```ruby
-# load the gem
-require 'jcapiv2'
-# setup authorization
-JCAPIv2.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['x-api-key'] = 'Bearer'
-end
-
-api_instance = JCAPIv2::GraphApi.new
-
-system_id = "system_id_example" # String | ObjectID of the System.
-
-content_type = "application/json" # String | 
-
-accept = "application/json" # String | 
-
-opts = { 
-  limit: 10, # Integer | The number of records to return at once. Limited to 100.
-  x_org_id: "" # String | 
-  skip: 0, # Integer | The offset into the records to return.
-  filter: ["filter_example"], # Array<String> | Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
-}
-
-begin
-  #List the Commands bound to a System
-  result = api_instance.graph_system_traverse_command(system_id, content_type, accept, opts)
-  p result
-rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GraphApi->graph_system_traverse_command: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **system_id** | **String**| ObjectID of the System. | 
- **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
- **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
- **x_org_id** | **String**|  | [optional] [default to ]
- **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
- **filter** | [**Array&lt;String&gt;**](String.md)| Supported operators are: eq, ne, gt, ge, lt, le, between, search, in | [optional] 
-
-### Return type
-
-[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
-
-### Authorization
-
-[x-api-key](../README.md#x-api-key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-# **graph_system_traverse_policy**
-> Array&lt;GraphObjectWithPaths&gt; graph_system_traverse_policy(system_id, content_type, accept, opts)
-
-List the Policies bound to a System
-
-This endpoint will return all Policies bound to a System, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths.  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this System to the corresponding Policy; this array represents all grouping and/or associations that would have to be removed to deprovision the Policy from this System.  See `/members` and `/associations` endpoints to manage those collections.  This endpoint is not yet public as we have finish the code.  ##### Sample Request  ``` curl -X GET https://console.jumpcloud.com/api/v2/{System_ID}/policies \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}'  ```
-
-### Example
-```ruby
-# load the gem
-require 'jcapiv2'
-# setup authorization
-JCAPIv2.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['x-api-key'] = 'Bearer'
-end
-
-api_instance = JCAPIv2::GraphApi.new
-
-system_id = "system_id_example" # String | ObjectID of the System.
-
-content_type = "application/json" # String | 
-
-accept = "application/json" # String | 
-
-opts = { 
-  limit: 10, # Integer | The number of records to return at once. Limited to 100.
-  x_org_id: "" # String | 
-  skip: 0, # Integer | The offset into the records to return.
-  filter: ["filter_example"], # Array<String> | Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
-}
-
-begin
-  #List the Policies bound to a System
-  result = api_instance.graph_system_traverse_policy(system_id, content_type, accept, opts)
-  p result
-rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GraphApi->graph_system_traverse_policy: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **system_id** | **String**| ObjectID of the System. | 
- **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
- **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
- **x_org_id** | **String**|  | [optional] [default to ]
- **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
- **filter** | [**Array&lt;String&gt;**](String.md)| Supported operators are: eq, ne, gt, ge, lt, le, between, search, in | [optional] 
-
-### Return type
-
-[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
-
-### Authorization
-
-[x-api-key](../README.md#x-api-key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-# **graph_system_traverse_user**
-> Array&lt;GraphObjectWithPaths&gt; graph_system_traverse_user(system_id, content_type, accept, opts)
-
-List the Users bound to a System
-
-This endpoint will return all Users bound to a System, either directly or indirectly essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths.  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this System to the corresponding User; this array represents all grouping and/or associations that would have to be removed to deprovision the User from this System.  See `/members` and `/associations` endpoints to manage those collections.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/systems/{System_ID}/users \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}'  ```
-
-### Example
-```ruby
-# load the gem
-require 'jcapiv2'
-# setup authorization
-JCAPIv2.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['x-api-key'] = 'Bearer'
-end
-
-api_instance = JCAPIv2::GraphApi.new
-
-system_id = "system_id_example" # String | ObjectID of the System.
-
-content_type = "application/json" # String | 
-
-accept = "application/json" # String | 
-
-opts = { 
-  limit: 10, # Integer | The number of records to return at once. Limited to 100.
-  x_org_id: "" # String | 
-  skip: 0, # Integer | The offset into the records to return.
-  date: "date_example", # String | Current date header for the System Context API
-  authorization: "authorization_example", # String | Authorization header for the System Context API
-  filter: ["filter_example"], # Array<String> | Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
-}
-
-begin
-  #List the Users bound to a System
-  result = api_instance.graph_system_traverse_user(system_id, content_type, accept, opts)
-  p result
-rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GraphApi->graph_system_traverse_user: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **system_id** | **String**| ObjectID of the System. | 
- **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
- **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
- **x_org_id** | **String**|  | [optional] [default to ]
- **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
  **date** | **String**| Current date header for the System Context API | [optional] 
- **authorization** | **String**| Authorization header for the System Context API | [optional] 
- **filter** | [**Array&lt;String&gt;**](String.md)| Supported operators are: eq, ne, gt, ge, lt, le, between, search, in | [optional] 
-
-### Return type
-
-[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
-
-### Authorization
-
-[x-api-key](../README.md#x-api-key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-# **graph_system_traverse_user_group**
-> Array&lt;GraphObjectWithPaths&gt; graph_system_traverse_user_group(system_id, content_type, accept, opts)
-
-List the User Groups bound to a System
-
-This endpoint will return all User Groups bound to a System, either directly or indirectly essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths.  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this System to the corresponding User Group; this array represents all grouping and/or associations that would have to be removed to deprovision the User Group from this System.  See `/members` and `/associations` endpoints to manage those collections.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/systems/{System_ID}/usergroups \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}'  ```
-
-### Example
-```ruby
-# load the gem
-require 'jcapiv2'
-# setup authorization
-JCAPIv2.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['x-api-key'] = 'Bearer'
-end
-
-api_instance = JCAPIv2::GraphApi.new
-
-system_id = "system_id_example" # String | ObjectID of the System.
-
-content_type = "application/json" # String | 
-
-accept = "application/json" # String | 
-
-opts = { 
-  limit: 10, # Integer | The number of records to return at once. Limited to 100.
-  x_org_id: "" # String | 
-  skip: 0, # Integer | The offset into the records to return.
-  date: "date_example", # String | Current date header for the System Context API
-  authorization: "authorization_example", # String | Authorization header for the System Context API
-  filter: ["filter_example"], # Array<String> | Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
-}
-
-begin
-  #List the User Groups bound to a System
-  result = api_instance.graph_system_traverse_user_group(system_id, content_type, accept, opts)
-  p result
-rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GraphApi->graph_system_traverse_user_group: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **system_id** | **String**| ObjectID of the System. | 
- **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
- **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
- **x_org_id** | **String**|  | [optional] [default to ]
- **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
- **date** | **String**| Current date header for the System Context API | [optional] 
- **authorization** | **String**| Authorization header for the System Context API | [optional] 
- **filter** | [**Array&lt;String&gt;**](String.md)| Supported operators are: eq, ne, gt, ge, lt, le, between, search, in | [optional] 
-
-### Return type
-
-[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
-
-### Authorization
-
-[x-api-key](../README.md#x-api-key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-# **graph_user_associations_list**
-> Array&lt;GraphConnection&gt; graph_user_associations_list(user_id, content_type, accepttargets, opts)
-
-List the associations of a User
-
-This endpoint returns the _direct_ associations of a User.  A direct association can be a non-homogeneous relationship between 2 different objects, for example Users and Systems.   #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/users/{UserID}/associations?targets=system_group \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}'  ```
-
-### Example
-```ruby
-# load the gem
-require 'jcapiv2'
-# setup authorization
-JCAPIv2.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['x-api-key'] = 'Bearer'
-end
-
-api_instance = JCAPIv2::GraphApi.new
-
-user_id = "user_id_example" # String | ObjectID of the User.
-
-content_type = "application/json" # String | 
-
-accept = "application/json" # String | 
-
-targets = ["targets_example"] # Array<String> | 
-
-opts = { 
-  limit: 10, # Integer | The number of records to return at once. Limited to 100.
-  skip: 0, # Integer | The offset into the records to return.
-  x_org_id: "" # String | 
-}
-
-begin
-  #List the associations of a User
-  result = api_instance.graph_user_associations_list(user_id, content_type, accepttargets, opts)
-  p result
-rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GraphApi->graph_user_associations_list: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **user_id** | **String**| ObjectID of the User. | 
- **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
- **targets** | [**Array&lt;String&gt;**](String.md)|  | 
- **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
- **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
- **x_org_id** | **String**|  | [optional] [default to ]
-
-### Return type
-
-[**Array&lt;GraphConnection&gt;**](GraphConnection.md)
-
-### Authorization
-
-[x-api-key](../README.md#x-api-key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-# **graph_user_associations_post**
-> graph_user_associations_post(user_id, content_type, accept, opts)
-
-Manage the associations of a User
-
-This endpoint allows you to manage the _direct_ associations of a User.  A direct association can be a non-homogeneous relationship between 2 different objects, for example Users and Systems.   #### Sample Request ``` curl -X POST https://console.jumpcloud.com/api/v2/users/{UserID}/associations \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' \\   -d '{    \"attributes\": {       \"sudo\": {          \"enabled\": true,          \"withoutPassword\": false       }    },    \"op\": \"add\",    \"type\": \"system_group\",    \"id\": \"{GroupID}\" }'
-
-### Example
-```ruby
-# load the gem
-require 'jcapiv2'
-# setup authorization
-JCAPIv2.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['x-api-key'] = 'Bearer'
-end
-
-api_instance = JCAPIv2::GraphApi.new
-
-user_id = "user_id_example" # String | ObjectID of the User.
-
-content_type = "application/json" # String | 
-
-accept = "application/json" # String | 
-
-opts = { 
-  body: JCAPIv2::UserGraphManagementReq.new, # UserGraphManagementReq | 
-  x_org_id: "" # String | 
-}
-
-begin
-  #Manage the associations of a User
-  api_instance.graph_user_associations_post(user_id, content_type, accept, opts)
-rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GraphApi->graph_user_associations_post: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **user_id** | **String**| ObjectID of the User. | 
- **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
- **body** | [**UserGraphManagementReq**](UserGraphManagementReq.md)|  | [optional] 
  **x_org_id** | **String**|  | [optional] [default to ]
 
 ### Return type
@@ -3626,79 +5105,8 @@ nil (empty response body)
 
 
 
-# **graph_user_group_associations_list**
-> Array&lt;GraphConnection&gt; graph_user_group_associations_list(group_id, content_type, accepttargets, opts)
-
-List the associations of a User Group.
-
-This endpoint returns the _direct_ associations of this User Group.  A direct association can be a non-homogeneous relationship between 2 different objects, for example User Groups and Users.   #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/usergroups/{GroupID}/associations?targets=system \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
-
-### Example
-```ruby
-# load the gem
-require 'jcapiv2'
-# setup authorization
-JCAPIv2.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['x-api-key'] = 'Bearer'
-end
-
-api_instance = JCAPIv2::GraphApi.new
-
-group_id = "group_id_example" # String | ObjectID of the User Group.
-
-content_type = "application/json" # String | 
-
-accept = "application/json" # String | 
-
-targets = ["targets_example"] # Array<String> | 
-
-opts = { 
-  limit: 10, # Integer | The number of records to return at once. Limited to 100.
-  skip: 0, # Integer | The offset into the records to return.
-  x_org_id: "" # String | 
-}
-
-begin
-  #List the associations of a User Group.
-  result = api_instance.graph_user_group_associations_list(group_id, content_type, accepttargets, opts)
-  p result
-rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GraphApi->graph_user_group_associations_list: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **group_id** | **String**| ObjectID of the User Group. | 
- **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
- **targets** | [**Array&lt;String&gt;**](String.md)|  | 
- **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
- **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
- **x_org_id** | **String**|  | [optional] [default to ]
-
-### Return type
-
-[**Array&lt;GraphConnection&gt;**](GraphConnection.md)
-
-### Authorization
-
-[x-api-key](../README.md#x-api-key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-# **graph_user_group_associations_post**
-> graph_user_group_associations_post(group_id, content_type, accept, opts)
+# **p_ost_usergroups_group_id_associations**
+> p_ost_usergroups_group_id_associations(group_id, accept, content_type, opts)
 
 Manage the associations of a User Group
 
@@ -3720,9 +5128,9 @@ api_instance = JCAPIv2::GraphApi.new
 
 group_id = "group_id_example" # String | ObjectID of the User Group.
 
-content_type = "application/json" # String | 
+accept = "application/x-pem-file" # String | 
 
-accept = "application/json" # String | 
+content_type = "application/json" # String | 
 
 opts = { 
   body: JCAPIv2::UserGroupGraphManagementReq.new, # UserGroupGraphManagementReq | 
@@ -3731,9 +5139,9 @@ opts = {
 
 begin
   #Manage the associations of a User Group
-  api_instance.graph_user_group_associations_post(group_id, content_type, accept, opts)
+  api_instance.p_ost_usergroups_group_id_associations(group_id, accept, content_type, opts)
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GraphApi->graph_user_group_associations_post: #{e}"
+  puts "Exception when calling GraphApi->p_ost_usergroups_group_id_associations: #{e}"
 end
 ```
 
@@ -3742,8 +5150,8 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **group_id** | **String**| ObjectID of the User Group. | 
+ **accept** | **String**|  | [default to application/x-pem-file]
  **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
  **body** | [**UserGroupGraphManagementReq**](UserGroupGraphManagementReq.md)|  | [optional] 
  **x_org_id** | **String**|  | [optional] [default to ]
 
@@ -3762,148 +5170,8 @@ nil (empty response body)
 
 
 
-# **graph_user_group_member_of**
-> Array&lt;GraphObjectWithPaths&gt; graph_user_group_member_of(group_id, content_type, accept, opts)
-
-List the User Group's parents
-
-This endpoint returns all User Groups a User Group is a member of.  #### Sample Request ``` https://console.jumpcloud.com/api/v2/usergroups/{group_id}/memberof ```  Not public yet, as the code is not finished,
-
-### Example
-```ruby
-# load the gem
-require 'jcapiv2'
-# setup authorization
-JCAPIv2.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['x-api-key'] = 'Bearer'
-end
-
-api_instance = JCAPIv2::GraphApi.new
-
-group_id = "group_id_example" # String | ObjectID of the User Group.
-
-content_type = "application/json" # String | 
-
-accept = "application/json" # String | 
-
-opts = { 
-  filter: ["filter_example"], # Array<String> | Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
-  limit: 10, # Integer | The number of records to return at once. Limited to 100.
-  skip: 0, # Integer | The offset into the records to return.
-  sort: ["sort_example"], # Array<String> | The comma separated fields used to sort the collection. Default sort is ascending, prefix with `-` to sort descending. 
-  x_org_id: "" # String | 
-}
-
-begin
-  #List the User Group's parents
-  result = api_instance.graph_user_group_member_of(group_id, content_type, accept, opts)
-  p result
-rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GraphApi->graph_user_group_member_of: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **group_id** | **String**| ObjectID of the User Group. | 
- **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
- **filter** | [**Array&lt;String&gt;**](String.md)| Supported operators are: eq, ne, gt, ge, lt, le, between, search, in | [optional] 
- **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
- **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
- **sort** | [**Array&lt;String&gt;**](String.md)| The comma separated fields used to sort the collection. Default sort is ascending, prefix with &#x60;-&#x60; to sort descending.  | [optional] 
- **x_org_id** | **String**|  | [optional] [default to ]
-
-### Return type
-
-[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
-
-### Authorization
-
-[x-api-key](../README.md#x-api-key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-# **graph_user_group_members_list**
-> Array&lt;GraphConnection&gt; graph_user_group_members_list(group_id, content_type, accept, opts)
-
-List the members of a User Group
-
-This endpoint returns the user members of a User Group.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/usergroups/{GroupID}/members \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
-
-### Example
-```ruby
-# load the gem
-require 'jcapiv2'
-# setup authorization
-JCAPIv2.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['x-api-key'] = 'Bearer'
-end
-
-api_instance = JCAPIv2::GraphApi.new
-
-group_id = "group_id_example" # String | ObjectID of the User Group.
-
-content_type = "application/json" # String | 
-
-accept = "application/json" # String | 
-
-opts = { 
-  limit: 10, # Integer | The number of records to return at once. Limited to 100.
-  skip: 0, # Integer | The offset into the records to return.
-  x_org_id: "" # String | 
-}
-
-begin
-  #List the members of a User Group
-  result = api_instance.graph_user_group_members_list(group_id, content_type, accept, opts)
-  p result
-rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GraphApi->graph_user_group_members_list: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **group_id** | **String**| ObjectID of the User Group. | 
- **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
- **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
- **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
- **x_org_id** | **String**|  | [optional] [default to ]
-
-### Return type
-
-[**Array&lt;GraphConnection&gt;**](GraphConnection.md)
-
-### Authorization
-
-[x-api-key](../README.md#x-api-key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-# **graph_user_group_members_post**
-> graph_user_group_members_post(group_id, content_type, accept, opts)
+# **p_ost_usergroups_group_id_members**
+> p_ost_usergroups_group_id_members(group_id, accept, content_type, opts)
 
 Manage the members of a User Group
 
@@ -3925,9 +5193,9 @@ api_instance = JCAPIv2::GraphApi.new
 
 group_id = "group_id_example" # String | ObjectID of the User Group.
 
-content_type = "application/json" # String | 
+accept = "application/x-pem-file" # String | 
 
-accept = "application/json" # String | 
+content_type = "application/json" # String | 
 
 opts = { 
   body: JCAPIv2::UserGroupMembersReq.new, # UserGroupMembersReq | 
@@ -3936,9 +5204,9 @@ opts = {
 
 begin
   #Manage the members of a User Group
-  api_instance.graph_user_group_members_post(group_id, content_type, accept, opts)
+  api_instance.p_ost_usergroups_group_id_members(group_id, accept, content_type, opts)
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GraphApi->graph_user_group_members_post: #{e}"
+  puts "Exception when calling GraphApi->p_ost_usergroups_group_id_members: #{e}"
 end
 ```
 
@@ -3947,8 +5215,8 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **group_id** | **String**| ObjectID of the User Group. | 
+ **accept** | **String**|  | [default to application/x-pem-file]
  **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
  **body** | [**UserGroupMembersReq**](UserGroupMembersReq.md)|  | [optional] 
  **x_org_id** | **String**|  | [optional] [default to ]
 
@@ -3967,714 +5235,12 @@ nil (empty response body)
 
 
 
-# **graph_user_group_membership**
-> Array&lt;GraphObjectWithPaths&gt; graph_user_group_membership(group_id, content_type, accept, opts)
+# **p_ost_users_user_id_associations**
+> p_ost_users_user_id_associations(user_id, accept, content_type, opts)
 
-List the User Group's membership
+Manage the associations of a User
 
-This endpoint returns all users members that are a member of this User Group.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/usergroups/{GroupID}/membership \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
-
-### Example
-```ruby
-# load the gem
-require 'jcapiv2'
-# setup authorization
-JCAPIv2.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['x-api-key'] = 'Bearer'
-end
-
-api_instance = JCAPIv2::GraphApi.new
-
-group_id = "group_id_example" # String | ObjectID of the User Group.
-
-content_type = "application/json" # String | 
-
-accept = "application/json" # String | 
-
-opts = { 
-  filter: ["filter_example"], # Array<String> | Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
-  limit: 10, # Integer | The number of records to return at once. Limited to 100.
-  skip: 0, # Integer | The offset into the records to return.
-  sort: ["sort_example"], # Array<String> | The comma separated fields used to sort the collection. Default sort is ascending, prefix with `-` to sort descending. 
-  x_org_id: "" # String | 
-}
-
-begin
-  #List the User Group's membership
-  result = api_instance.graph_user_group_membership(group_id, content_type, accept, opts)
-  p result
-rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GraphApi->graph_user_group_membership: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **group_id** | **String**| ObjectID of the User Group. | 
- **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
- **filter** | [**Array&lt;String&gt;**](String.md)| Supported operators are: eq, ne, gt, ge, lt, le, between, search, in | [optional] 
- **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
- **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
- **sort** | [**Array&lt;String&gt;**](String.md)| The comma separated fields used to sort the collection. Default sort is ascending, prefix with &#x60;-&#x60; to sort descending.  | [optional] 
- **x_org_id** | **String**|  | [optional] [default to ]
-
-### Return type
-
-[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
-
-### Authorization
-
-[x-api-key](../README.md#x-api-key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-# **graph_user_group_traverse_active_directory**
-> Array&lt;GraphObjectWithPaths&gt; graph_user_group_traverse_active_directory(group_id, content_type, accept, opts)
-
-List the Active Directories bound to a User Group
-
-This endpoint will return all Active Directory Instances bound to a User Group, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this User Group to the corresponding Active Directory; this array represents all grouping and/or associations that would have to be removed to deprovision the Active Directory from this User Group.  See `/members` and `/associations` endpoints to manage those collections.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/usergroups/{GroupID}/activedirectories \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
-
-### Example
-```ruby
-# load the gem
-require 'jcapiv2'
-# setup authorization
-JCAPIv2.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['x-api-key'] = 'Bearer'
-end
-
-api_instance = JCAPIv2::GraphApi.new
-
-group_id = "group_id_example" # String | ObjectID of the User Group.
-
-content_type = "application/json" # String | 
-
-accept = "application/json" # String | 
-
-opts = { 
-  limit: 10, # Integer | The number of records to return at once. Limited to 100.
-  x_org_id: "" # String | 
-  skip: 0, # Integer | The offset into the records to return.
-  filter: ["filter_example"], # Array<String> | Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
-}
-
-begin
-  #List the Active Directories bound to a User Group
-  result = api_instance.graph_user_group_traverse_active_directory(group_id, content_type, accept, opts)
-  p result
-rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GraphApi->graph_user_group_traverse_active_directory: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **group_id** | **String**| ObjectID of the User Group. | 
- **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
- **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
- **x_org_id** | **String**|  | [optional] [default to ]
- **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
- **filter** | [**Array&lt;String&gt;**](String.md)| Supported operators are: eq, ne, gt, ge, lt, le, between, search, in | [optional] 
-
-### Return type
-
-[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
-
-### Authorization
-
-[x-api-key](../README.md#x-api-key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-# **graph_user_group_traverse_application**
-> Array&lt;GraphObjectWithPaths&gt; graph_user_group_traverse_application(group_id, content_type, accept, opts)
-
-List the Applications bound to a User Group
-
-This endpoint will return all Applications bound to a User Group, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this User Group to the corresponding Application; this array represents all grouping and/or associations that would have to be removed to deprovision the Application from this User Group.  See `/members` and `/associations` endpoints to manage those collections.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/usergroups/{GroupID}/applications \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
-
-### Example
-```ruby
-# load the gem
-require 'jcapiv2'
-# setup authorization
-JCAPIv2.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['x-api-key'] = 'Bearer'
-end
-
-api_instance = JCAPIv2::GraphApi.new
-
-group_id = "group_id_example" # String | ObjectID of the User Group.
-
-content_type = "application/json" # String | 
-
-accept = "application/json" # String | 
-
-opts = { 
-  limit: 10, # Integer | The number of records to return at once. Limited to 100.
-  x_org_id: "" # String | 
-  skip: 0, # Integer | The offset into the records to return.
-  filter: ["filter_example"], # Array<String> | Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
-}
-
-begin
-  #List the Applications bound to a User Group
-  result = api_instance.graph_user_group_traverse_application(group_id, content_type, accept, opts)
-  p result
-rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GraphApi->graph_user_group_traverse_application: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **group_id** | **String**| ObjectID of the User Group. | 
- **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
- **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
- **x_org_id** | **String**|  | [optional] [default to ]
- **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
- **filter** | [**Array&lt;String&gt;**](String.md)| Supported operators are: eq, ne, gt, ge, lt, le, between, search, in | [optional] 
-
-### Return type
-
-[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
-
-### Authorization
-
-[x-api-key](../README.md#x-api-key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-# **graph_user_group_traverse_directory**
-> Array&lt;GraphObjectWithPaths&gt; graph_user_group_traverse_directory(group_id, content_type, accept, opts)
-
-List the Directories bound to a User Group
-
-This endpoint will return all Directories bound to a User Group, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this User Group to the corresponding Directory; this array represents all grouping and/or associations that would have to be removed to deprovision the Directories from this User Group.  See `/members` and `/associations` endpoints to manage those collections.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/usergroups/{GroupID}/directories \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}'  ```
-
-### Example
-```ruby
-# load the gem
-require 'jcapiv2'
-# setup authorization
-JCAPIv2.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['x-api-key'] = 'Bearer'
-end
-
-api_instance = JCAPIv2::GraphApi.new
-
-group_id = "group_id_example" # String | ObjectID of the User Group.
-
-content_type = "application/json" # String | 
-
-accept = "application/json" # String | 
-
-opts = { 
-  limit: 10, # Integer | The number of records to return at once. Limited to 100.
-  x_org_id: "" # String | 
-  skip: 0, # Integer | The offset into the records to return.
-  filter: ["filter_example"], # Array<String> | Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
-}
-
-begin
-  #List the Directories bound to a User Group
-  result = api_instance.graph_user_group_traverse_directory(group_id, content_type, accept, opts)
-  p result
-rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GraphApi->graph_user_group_traverse_directory: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **group_id** | **String**| ObjectID of the User Group. | 
- **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
- **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
- **x_org_id** | **String**|  | [optional] [default to ]
- **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
- **filter** | [**Array&lt;String&gt;**](String.md)| Supported operators are: eq, ne, gt, ge, lt, le, between, search, in | [optional] 
-
-### Return type
-
-[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
-
-### Authorization
-
-[x-api-key](../README.md#x-api-key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-# **graph_user_group_traverse_g_suite**
-> Array&lt;GraphObjectWithPaths&gt; graph_user_group_traverse_g_suite(group_id, content_type, accept, opts)
-
-List the G Suite instances bound to a User Group
-
-This endpoint will return all G Suite Instances bound to a User Group, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this User Group to the corresponding G Suite instance; this array represents all grouping and/or associations that would have to be removed to deprovision the G Suite instance from this User Group.  See `/members` and `/associations` endpoints to manage those collections.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/usergroups/{GroupID/gsuites \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}'  ```
-
-### Example
-```ruby
-# load the gem
-require 'jcapiv2'
-# setup authorization
-JCAPIv2.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['x-api-key'] = 'Bearer'
-end
-
-api_instance = JCAPIv2::GraphApi.new
-
-group_id = "group_id_example" # String | ObjectID of the User Group.
-
-content_type = "application/json" # String | 
-
-accept = "application/json" # String | 
-
-opts = { 
-  limit: 10, # Integer | The number of records to return at once. Limited to 100.
-  x_org_id: "" # String | 
-  skip: 0, # Integer | The offset into the records to return.
-  filter: ["filter_example"], # Array<String> | Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
-}
-
-begin
-  #List the G Suite instances bound to a User Group
-  result = api_instance.graph_user_group_traverse_g_suite(group_id, content_type, accept, opts)
-  p result
-rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GraphApi->graph_user_group_traverse_g_suite: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **group_id** | **String**| ObjectID of the User Group. | 
- **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
- **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
- **x_org_id** | **String**|  | [optional] [default to ]
- **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
- **filter** | [**Array&lt;String&gt;**](String.md)| Supported operators are: eq, ne, gt, ge, lt, le, between, search, in | [optional] 
-
-### Return type
-
-[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
-
-### Authorization
-
-[x-api-key](../README.md#x-api-key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-# **graph_user_group_traverse_ldap_server**
-> Array&lt;GraphObjectWithPaths&gt; graph_user_group_traverse_ldap_server(group_id, content_type, accept, opts)
-
-List the LDAP Servers bound to a User Group
-
-This endpoint will return all LDAP Servers bound to a User Group, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this User Group to the corresponding LDAP Server; this array represents all grouping and/or associations that would have to be removed to deprovision the LDAP Server from this User Group.  See `/members` and `/associations` endpoints to manage those collections.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/usergroups/{GroupID}/ldapservers \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
-
-### Example
-```ruby
-# load the gem
-require 'jcapiv2'
-# setup authorization
-JCAPIv2.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['x-api-key'] = 'Bearer'
-end
-
-api_instance = JCAPIv2::GraphApi.new
-
-group_id = "group_id_example" # String | ObjectID of the User Group.
-
-content_type = "application/json" # String | 
-
-accept = "application/json" # String | 
-
-opts = { 
-  limit: 10, # Integer | The number of records to return at once. Limited to 100.
-  x_org_id: "" # String | 
-  skip: 0, # Integer | The offset into the records to return.
-  filter: ["filter_example"], # Array<String> | Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
-}
-
-begin
-  #List the LDAP Servers bound to a User Group
-  result = api_instance.graph_user_group_traverse_ldap_server(group_id, content_type, accept, opts)
-  p result
-rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GraphApi->graph_user_group_traverse_ldap_server: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **group_id** | **String**| ObjectID of the User Group. | 
- **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
- **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
- **x_org_id** | **String**|  | [optional] [default to ]
- **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
- **filter** | [**Array&lt;String&gt;**](String.md)| Supported operators are: eq, ne, gt, ge, lt, le, between, search, in | [optional] 
-
-### Return type
-
-[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
-
-### Authorization
-
-[x-api-key](../README.md#x-api-key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-# **graph_user_group_traverse_office365**
-> Array&lt;GraphObjectWithPaths&gt; graph_user_group_traverse_office365(group_id, content_type, accept, opts)
-
-List the Office 365 instances bound to a User Group
-
-This endpoint will return all Office 365 instances bound to a User Group, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this User Group to the corresponding Office 365 instance; this array represents all grouping and/or associations that would have to be removed to deprovision the Office 365 instance from this User Group.  See `/members` and `/associations` endpoints to manage those collections.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/usergroups/{GroupID}/office365s \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
-
-### Example
-```ruby
-# load the gem
-require 'jcapiv2'
-# setup authorization
-JCAPIv2.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['x-api-key'] = 'Bearer'
-end
-
-api_instance = JCAPIv2::GraphApi.new
-
-group_id = "group_id_example" # String | ObjectID of the User Group.
-
-content_type = "application/json" # String | 
-
-accept = "application/json" # String | 
-
-opts = { 
-  limit: 10, # Integer | The number of records to return at once. Limited to 100.
-  x_org_id: "" # String | 
-  skip: 0, # Integer | The offset into the records to return.
-  filter: ["filter_example"], # Array<String> | Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
-}
-
-begin
-  #List the Office 365 instances bound to a User Group
-  result = api_instance.graph_user_group_traverse_office365(group_id, content_type, accept, opts)
-  p result
-rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GraphApi->graph_user_group_traverse_office365: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **group_id** | **String**| ObjectID of the User Group. | 
- **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
- **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
- **x_org_id** | **String**|  | [optional] [default to ]
- **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
- **filter** | [**Array&lt;String&gt;**](String.md)| Supported operators are: eq, ne, gt, ge, lt, le, between, search, in | [optional] 
-
-### Return type
-
-[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
-
-### Authorization
-
-[x-api-key](../README.md#x-api-key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-# **graph_user_group_traverse_radius_server**
-> Array&lt;GraphObjectWithPaths&gt; graph_user_group_traverse_radius_server(group_id, content_type, accept, opts)
-
-List the RADIUS Servers bound to a User Group
-
-This endpoint will return all RADIUS servers bound to a User Group, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this User Group to the corresponding RADIUS Server; this array represents all grouping and/or associations that would have to be removed to deprovision the RADIUS Server from this User Group.  See `/members` and `/associations` endpoints to manage those collections.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/usergroups/{GroupID}/radiusservers \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}'  ```
-
-### Example
-```ruby
-# load the gem
-require 'jcapiv2'
-# setup authorization
-JCAPIv2.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['x-api-key'] = 'Bearer'
-end
-
-api_instance = JCAPIv2::GraphApi.new
-
-group_id = "group_id_example" # String | ObjectID of the User Group.
-
-content_type = "application/json" # String | 
-
-accept = "application/json" # String | 
-
-opts = { 
-  limit: 10, # Integer | The number of records to return at once. Limited to 100.
-  x_org_id: "" # String | 
-  skip: 0, # Integer | The offset into the records to return.
-  filter: ["filter_example"], # Array<String> | Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
-}
-
-begin
-  #List the RADIUS Servers bound to a User Group
-  result = api_instance.graph_user_group_traverse_radius_server(group_id, content_type, accept, opts)
-  p result
-rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GraphApi->graph_user_group_traverse_radius_server: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **group_id** | **String**| ObjectID of the User Group. | 
- **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
- **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
- **x_org_id** | **String**|  | [optional] [default to ]
- **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
- **filter** | [**Array&lt;String&gt;**](String.md)| Supported operators are: eq, ne, gt, ge, lt, le, between, search, in | [optional] 
-
-### Return type
-
-[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
-
-### Authorization
-
-[x-api-key](../README.md#x-api-key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-# **graph_user_group_traverse_system**
-> Array&lt;GraphObjectWithPaths&gt; graph_user_group_traverse_system(group_id, content_type, accept, opts)
-
-List the Systems bound to a User Group
-
-This endpoint will return all Systems bound to a User Group, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this User Group to the corresponding System; this array represents all grouping and/or associations that would have to be removed to deprovision the System from this User Group.  See `/members` and `/associations` endpoints to manage those collections.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/usergroups/{GroupID}/systems \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
-
-### Example
-```ruby
-# load the gem
-require 'jcapiv2'
-# setup authorization
-JCAPIv2.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['x-api-key'] = 'Bearer'
-end
-
-api_instance = JCAPIv2::GraphApi.new
-
-group_id = "group_id_example" # String | ObjectID of the User Group.
-
-content_type = "application/json" # String | 
-
-accept = "application/json" # String | 
-
-opts = { 
-  limit: 10, # Integer | The number of records to return at once. Limited to 100.
-  x_org_id: "" # String | 
-  skip: 0, # Integer | The offset into the records to return.
-  filter: ["filter_example"], # Array<String> | Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
-}
-
-begin
-  #List the Systems bound to a User Group
-  result = api_instance.graph_user_group_traverse_system(group_id, content_type, accept, opts)
-  p result
-rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GraphApi->graph_user_group_traverse_system: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **group_id** | **String**| ObjectID of the User Group. | 
- **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
- **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
- **x_org_id** | **String**|  | [optional] [default to ]
- **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
- **filter** | [**Array&lt;String&gt;**](String.md)| Supported operators are: eq, ne, gt, ge, lt, le, between, search, in | [optional] 
-
-### Return type
-
-[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
-
-### Authorization
-
-[x-api-key](../README.md#x-api-key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-# **graph_user_group_traverse_system_group**
-> Array&lt;GraphObjectWithPaths&gt; graph_user_group_traverse_system_group(group_id, content_type, accept, opts)
-
-List the System Groups bound to User Groups
-
-This endpoint will return all System Groups bound to a User Group, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths.  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this User Group to the corresponding System Group; this array represents all grouping and/or associations that would have to be removed to deprovision the System Group from this User Group.  See `/members` and `/associations` endpoints to manage those collections.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/usergroups/{GroupID}/systemgroups \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
-
-### Example
-```ruby
-# load the gem
-require 'jcapiv2'
-# setup authorization
-JCAPIv2.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['x-api-key'] = 'Bearer'
-end
-
-api_instance = JCAPIv2::GraphApi.new
-
-group_id = "group_id_example" # String | ObjectID of the User Group.
-
-content_type = "application/json" # String | 
-
-accept = "application/json" # String | 
-
-opts = { 
-  limit: 10, # Integer | The number of records to return at once. Limited to 100.
-  x_org_id: "" # String | 
-  skip: 0, # Integer | The offset into the records to return.
-  filter: ["filter_example"], # Array<String> | Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
-}
-
-begin
-  #List the System Groups bound to User Groups
-  result = api_instance.graph_user_group_traverse_system_group(group_id, content_type, accept, opts)
-  p result
-rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GraphApi->graph_user_group_traverse_system_group: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **group_id** | **String**| ObjectID of the User Group. | 
- **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
- **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
- **x_org_id** | **String**|  | [optional] [default to ]
- **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
- **filter** | [**Array&lt;String&gt;**](String.md)| Supported operators are: eq, ne, gt, ge, lt, le, between, search, in | [optional] 
-
-### Return type
-
-[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
-
-### Authorization
-
-[x-api-key](../README.md#x-api-key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-# **graph_user_member_of**
-> Array&lt;GraphObjectWithPaths&gt; graph_user_member_of(user_id, content_type, accept, opts)
-
-List the parent Groups of a User
-
-This endpoint returns all the User Groups a User is a member of.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/users/{UserID}/memberof \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
+This endpoint allows you to manage the _direct_ associations of a User.  A direct association can be a non-homogeneous relationship between 2 different objects, for example Users and Systems.   #### Sample Request ``` curl -X POST https://console.jumpcloud.com/api/v2/users/{UserID}/associations \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' \\   -d '{    \"attributes\": {       \"sudo\": {          \"enabled\": true,          \"withoutPassword\": false       }    },    \"op\": \"add\",    \"type\": \"system_group\",    \"id\": \"{GroupID}\" }'
 
 ### Example
 ```ruby
@@ -4692,24 +5258,20 @@ api_instance = JCAPIv2::GraphApi.new
 
 user_id = "user_id_example" # String | ObjectID of the User.
 
+accept = "application/x-pem-file" # String | 
+
 content_type = "application/json" # String | 
 
-accept = "application/json" # String | 
-
 opts = { 
-  filter: ["filter_example"], # Array<String> | Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
-  limit: 10, # Integer | The number of records to return at once. Limited to 100.
-  skip: 0, # Integer | The offset into the records to return.
-  sort: ["sort_example"], # Array<String> | The comma separated fields used to sort the collection. Default sort is ascending, prefix with `-` to sort descending. 
+  body: JCAPIv2::UserGraphManagementReq.new, # UserGraphManagementReq | 
   x_org_id: "" # String | 
 }
 
 begin
-  #List the parent Groups of a User
-  result = api_instance.graph_user_member_of(user_id, content_type, accept, opts)
-  p result
+  #Manage the associations of a User
+  api_instance.p_ost_users_user_id_associations(user_id, accept, content_type, opts)
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GraphApi->graph_user_member_of: #{e}"
+  puts "Exception when calling GraphApi->p_ost_users_user_id_associations: #{e}"
 end
 ```
 
@@ -4718,721 +5280,14 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **String**| ObjectID of the User. | 
+ **accept** | **String**|  | [default to application/x-pem-file]
  **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
- **filter** | [**Array&lt;String&gt;**](String.md)| Supported operators are: eq, ne, gt, ge, lt, le, between, search, in | [optional] 
- **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
- **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
- **sort** | [**Array&lt;String&gt;**](String.md)| The comma separated fields used to sort the collection. Default sort is ascending, prefix with &#x60;-&#x60; to sort descending.  | [optional] 
+ **body** | [**UserGraphManagementReq**](UserGraphManagementReq.md)|  | [optional] 
  **x_org_id** | **String**|  | [optional] [default to ]
 
 ### Return type
 
-[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
-
-### Authorization
-
-[x-api-key](../README.md#x-api-key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-# **graph_user_traverse_active_directory**
-> Array&lt;GraphObjectWithPaths&gt; graph_user_traverse_active_directory(user_id, content_type, accept, opts)
-
-List the Active Directory instances bound to a User
-
-This endpoint will return all Active Directory Instances bound to a User, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths.  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this User to the corresponding Active Directory instance; this array represents all grouping and/or associations that would have to be removed to deprovision the Active Directory instance from this User.  See `/members` and `/associations` endpoints to manage those collections.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/users/{UserID}/activedirectories \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
-
-### Example
-```ruby
-# load the gem
-require 'jcapiv2'
-# setup authorization
-JCAPIv2.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['x-api-key'] = 'Bearer'
-end
-
-api_instance = JCAPIv2::GraphApi.new
-
-user_id = "user_id_example" # String | ObjectID of the User.
-
-content_type = "application/json" # String | 
-
-accept = "application/json" # String | 
-
-opts = { 
-  filter: ["filter_example"], # Array<String> | Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
-  limit: 10, # Integer | The number of records to return at once. Limited to 100.
-  x_org_id: "" # String | 
-  skip: 0, # Integer | The offset into the records to return.
-}
-
-begin
-  #List the Active Directory instances bound to a User
-  result = api_instance.graph_user_traverse_active_directory(user_id, content_type, accept, opts)
-  p result
-rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GraphApi->graph_user_traverse_active_directory: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **user_id** | **String**| ObjectID of the User. | 
- **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
- **filter** | [**Array&lt;String&gt;**](String.md)| Supported operators are: eq, ne, gt, ge, lt, le, between, search, in | [optional] 
- **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
- **x_org_id** | **String**|  | [optional] [default to ]
- **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
-
-### Return type
-
-[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
-
-### Authorization
-
-[x-api-key](../README.md#x-api-key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-# **graph_user_traverse_application**
-> Array&lt;GraphObjectWithPaths&gt; graph_user_traverse_application(user_id, content_type, accept, opts)
-
-List the Applications bound to a User
-
-This endpoint will return all Applications bound to a User, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths.  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this User to the corresponding Application; this array represents all grouping and/or associations that would have to be removed to deprovision the Application from this User.  See `/members` and `/associations` endpoints to manage those collections.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/users/{UserID}/applications \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
-
-### Example
-```ruby
-# load the gem
-require 'jcapiv2'
-# setup authorization
-JCAPIv2.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['x-api-key'] = 'Bearer'
-end
-
-api_instance = JCAPIv2::GraphApi.new
-
-user_id = "user_id_example" # String | ObjectID of the User.
-
-content_type = "application/json" # String | 
-
-accept = "application/json" # String | 
-
-opts = { 
-  limit: 10, # Integer | The number of records to return at once. Limited to 100.
-  x_org_id: "" # String | 
-  skip: 0, # Integer | The offset into the records to return.
-  filter: ["filter_example"], # Array<String> | Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
-}
-
-begin
-  #List the Applications bound to a User
-  result = api_instance.graph_user_traverse_application(user_id, content_type, accept, opts)
-  p result
-rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GraphApi->graph_user_traverse_application: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **user_id** | **String**| ObjectID of the User. | 
- **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
- **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
- **x_org_id** | **String**|  | [optional] [default to ]
- **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
- **filter** | [**Array&lt;String&gt;**](String.md)| Supported operators are: eq, ne, gt, ge, lt, le, between, search, in | [optional] 
-
-### Return type
-
-[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
-
-### Authorization
-
-[x-api-key](../README.md#x-api-key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-# **graph_user_traverse_directory**
-> Array&lt;GraphObjectWithPaths&gt; graph_user_traverse_directory(user_id, content_type, accept, opts)
-
-List the Directories bound to a User
-
-This endpoint will return all Directories bound to a User, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths.  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this User to the corresponding Directory; this array represents all grouping and/or associations that would have to be removed to deprovision the Directory from this User.  See `/members` and `/associations` endpoints to manage those collections.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/users/{UserID}/directories \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
-
-### Example
-```ruby
-# load the gem
-require 'jcapiv2'
-# setup authorization
-JCAPIv2.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['x-api-key'] = 'Bearer'
-end
-
-api_instance = JCAPIv2::GraphApi.new
-
-user_id = "user_id_example" # String | ObjectID of the User.
-
-content_type = "application/json" # String | 
-
-accept = "application/json" # String | 
-
-opts = { 
-  limit: 10, # Integer | The number of records to return at once. Limited to 100.
-  x_org_id: "" # String | 
-  skip: 0, # Integer | The offset into the records to return.
-  filter: ["filter_example"], # Array<String> | Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
-}
-
-begin
-  #List the Directories bound to a User
-  result = api_instance.graph_user_traverse_directory(user_id, content_type, accept, opts)
-  p result
-rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GraphApi->graph_user_traverse_directory: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **user_id** | **String**| ObjectID of the User. | 
- **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
- **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
- **x_org_id** | **String**|  | [optional] [default to ]
- **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
- **filter** | [**Array&lt;String&gt;**](String.md)| Supported operators are: eq, ne, gt, ge, lt, le, between, search, in | [optional] 
-
-### Return type
-
-[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
-
-### Authorization
-
-[x-api-key](../README.md#x-api-key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-# **graph_user_traverse_g_suite**
-> Array&lt;GraphObjectWithPaths&gt; graph_user_traverse_g_suite(user_id, content_type, accept, opts)
-
-List the G Suite instances bound to a User
-
-This endpoint will return all G-Suite Instances bound to a User, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths.  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this User to the corresponding G Suite instance; this array represents all grouping and/or associations that would have to be removed to deprovision the G Suite instance from this User.  See `/members` and `/associations` endpoints to manage those collections.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/users/{UserID}/gsuites \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
-
-### Example
-```ruby
-# load the gem
-require 'jcapiv2'
-# setup authorization
-JCAPIv2.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['x-api-key'] = 'Bearer'
-end
-
-api_instance = JCAPIv2::GraphApi.new
-
-user_id = "user_id_example" # String | ObjectID of the User.
-
-content_type = "application/json" # String | 
-
-accept = "application/json" # String | 
-
-opts = { 
-  limit: 10, # Integer | The number of records to return at once. Limited to 100.
-  x_org_id: "" # String | 
-  skip: 0, # Integer | The offset into the records to return.
-  filter: ["filter_example"], # Array<String> | Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
-}
-
-begin
-  #List the G Suite instances bound to a User
-  result = api_instance.graph_user_traverse_g_suite(user_id, content_type, accept, opts)
-  p result
-rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GraphApi->graph_user_traverse_g_suite: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **user_id** | **String**| ObjectID of the User. | 
- **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
- **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
- **x_org_id** | **String**|  | [optional] [default to ]
- **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
- **filter** | [**Array&lt;String&gt;**](String.md)| Supported operators are: eq, ne, gt, ge, lt, le, between, search, in | [optional] 
-
-### Return type
-
-[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
-
-### Authorization
-
-[x-api-key](../README.md#x-api-key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-# **graph_user_traverse_ldap_server**
-> Array&lt;GraphObjectWithPaths&gt; graph_user_traverse_ldap_server(user_id, content_type, accept, opts)
-
-List the LDAP servers bound to a User
-
-This endpoint will return all LDAP Servers bound to a User, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths.  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this User to the corresponding LDAP Server; this array represents all grouping and/or associations that would have to be removed to deprovision the LDAP Server from this User.  See `/members` and `/associations` endpoints to manage those collections.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/users/{UserID}/ldapservers \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
-
-### Example
-```ruby
-# load the gem
-require 'jcapiv2'
-# setup authorization
-JCAPIv2.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['x-api-key'] = 'Bearer'
-end
-
-api_instance = JCAPIv2::GraphApi.new
-
-user_id = "user_id_example" # String | ObjectID of the User.
-
-content_type = "application/json" # String | 
-
-accept = "application/json" # String | 
-
-opts = { 
-  limit: 10, # Integer | The number of records to return at once. Limited to 100.
-  x_org_id: "" # String | 
-  skip: 0, # Integer | The offset into the records to return.
-  filter: ["filter_example"], # Array<String> | Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
-}
-
-begin
-  #List the LDAP servers bound to a User
-  result = api_instance.graph_user_traverse_ldap_server(user_id, content_type, accept, opts)
-  p result
-rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GraphApi->graph_user_traverse_ldap_server: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **user_id** | **String**| ObjectID of the User. | 
- **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
- **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
- **x_org_id** | **String**|  | [optional] [default to ]
- **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
- **filter** | [**Array&lt;String&gt;**](String.md)| Supported operators are: eq, ne, gt, ge, lt, le, between, search, in | [optional] 
-
-### Return type
-
-[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
-
-### Authorization
-
-[x-api-key](../README.md#x-api-key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-# **graph_user_traverse_office365**
-> Array&lt;GraphObjectWithPaths&gt; graph_user_traverse_office365(user_id, content_type, accept, opts)
-
-List the Office 365 instances bound to a User
-
-This endpoint will return all Office 365 Instances bound to a User, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths.  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this User to the corresponding Office 365 instance; this array represents all grouping and/or associations that would have to be removed to deprovision the Office 365 instance from this User.  See `/members` and `/associations` endpoints to manage those collections.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/users/{UserID}/office365s \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
-
-### Example
-```ruby
-# load the gem
-require 'jcapiv2'
-# setup authorization
-JCAPIv2.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['x-api-key'] = 'Bearer'
-end
-
-api_instance = JCAPIv2::GraphApi.new
-
-user_id = "user_id_example" # String | ObjectID of the User.
-
-content_type = "application/json" # String | 
-
-accept = "application/json" # String | 
-
-opts = { 
-  limit: 10, # Integer | The number of records to return at once. Limited to 100.
-  x_org_id: "" # String | 
-  skip: 0, # Integer | The offset into the records to return.
-  filter: ["filter_example"], # Array<String> | Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
-}
-
-begin
-  #List the Office 365 instances bound to a User
-  result = api_instance.graph_user_traverse_office365(user_id, content_type, accept, opts)
-  p result
-rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GraphApi->graph_user_traverse_office365: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **user_id** | **String**| ObjectID of the User. | 
- **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
- **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
- **x_org_id** | **String**|  | [optional] [default to ]
- **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
- **filter** | [**Array&lt;String&gt;**](String.md)| Supported operators are: eq, ne, gt, ge, lt, le, between, search, in | [optional] 
-
-### Return type
-
-[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
-
-### Authorization
-
-[x-api-key](../README.md#x-api-key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-# **graph_user_traverse_radius_server**
-> Array&lt;GraphObjectWithPaths&gt; graph_user_traverse_radius_server(user_id, content_type, accept, opts)
-
-List the RADIUS Servers bound to a User
-
-This endpoint will return all RADIUS Servers bound to a User, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths.  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this User to the corresponding RADIUS Server; this array represents all grouping and/or associations that would have to be removed to deprovision the RADIUS Server from this User.  See `/members` and `/associations` endpoints to manage those collections.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/users/{UserID}/radiusservers \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
-
-### Example
-```ruby
-# load the gem
-require 'jcapiv2'
-# setup authorization
-JCAPIv2.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['x-api-key'] = 'Bearer'
-end
-
-api_instance = JCAPIv2::GraphApi.new
-
-user_id = "user_id_example" # String | ObjectID of the User.
-
-content_type = "application/json" # String | 
-
-accept = "application/json" # String | 
-
-opts = { 
-  limit: 10, # Integer | The number of records to return at once. Limited to 100.
-  x_org_id: "" # String | 
-  skip: 0, # Integer | The offset into the records to return.
-  filter: ["filter_example"], # Array<String> | Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
-}
-
-begin
-  #List the RADIUS Servers bound to a User
-  result = api_instance.graph_user_traverse_radius_server(user_id, content_type, accept, opts)
-  p result
-rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GraphApi->graph_user_traverse_radius_server: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **user_id** | **String**| ObjectID of the User. | 
- **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
- **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
- **x_org_id** | **String**|  | [optional] [default to ]
- **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
- **filter** | [**Array&lt;String&gt;**](String.md)| Supported operators are: eq, ne, gt, ge, lt, le, between, search, in | [optional] 
-
-### Return type
-
-[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
-
-### Authorization
-
-[x-api-key](../README.md#x-api-key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-# **graph_user_traverse_system**
-> Array&lt;GraphObjectWithPaths&gt; graph_user_traverse_system(user_id, content_type, accept, opts)
-
-List the Systems bound to a User
-
-This endpoint will return all Systems bound to a User, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths.  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this User to the corresponding System; this array represents all grouping and/or associations that would have to be removed to deprovision the System from this User.  See `/members` and `/associations` endpoints to manage those collections.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/users/{UserID}/systems\\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
-
-### Example
-```ruby
-# load the gem
-require 'jcapiv2'
-# setup authorization
-JCAPIv2.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['x-api-key'] = 'Bearer'
-end
-
-api_instance = JCAPIv2::GraphApi.new
-
-user_id = "user_id_example" # String | ObjectID of the User.
-
-content_type = "application/json" # String | 
-
-accept = "application/json" # String | 
-
-opts = { 
-  limit: 10, # Integer | The number of records to return at once. Limited to 100.
-  x_org_id: "" # String | 
-  skip: 0, # Integer | The offset into the records to return.
-  filter: ["filter_example"], # Array<String> | Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
-}
-
-begin
-  #List the Systems bound to a User
-  result = api_instance.graph_user_traverse_system(user_id, content_type, accept, opts)
-  p result
-rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GraphApi->graph_user_traverse_system: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **user_id** | **String**| ObjectID of the User. | 
- **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
- **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
- **x_org_id** | **String**|  | [optional] [default to ]
- **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
- **filter** | [**Array&lt;String&gt;**](String.md)| Supported operators are: eq, ne, gt, ge, lt, le, between, search, in | [optional] 
-
-### Return type
-
-[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
-
-### Authorization
-
-[x-api-key](../README.md#x-api-key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-# **graph_user_traverse_system_group**
-> Array&lt;GraphObjectWithPaths&gt; graph_user_traverse_system_group(user_id, content_type, accept, opts)
-
-List the System Groups bound to a User
-
-This endpoint will return all System Groups bound to a User, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths.  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this User to the corresponding System Group; this array represents all grouping and/or associations that would have to be removed to deprovision the System Group from this User.  See `/members` and `/associations` endpoints to manage those collections.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/users/{UserID}/systemgroups\\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
-
-### Example
-```ruby
-# load the gem
-require 'jcapiv2'
-# setup authorization
-JCAPIv2.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['x-api-key'] = 'Bearer'
-end
-
-api_instance = JCAPIv2::GraphApi.new
-
-user_id = "user_id_example" # String | ObjectID of the User.
-
-content_type = "application/json" # String | 
-
-accept = "application/json" # String | 
-
-opts = { 
-  limit: 10, # Integer | The number of records to return at once. Limited to 100.
-  x_org_id: "" # String | 
-  skip: 0, # Integer | The offset into the records to return.
-  filter: ["filter_example"], # Array<String> | Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
-}
-
-begin
-  #List the System Groups bound to a User
-  result = api_instance.graph_user_traverse_system_group(user_id, content_type, accept, opts)
-  p result
-rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GraphApi->graph_user_traverse_system_group: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **user_id** | **String**| ObjectID of the User. | 
- **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
- **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
- **x_org_id** | **String**|  | [optional] [default to ]
- **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
- **filter** | [**Array&lt;String&gt;**](String.md)| Supported operators are: eq, ne, gt, ge, lt, le, between, search, in | [optional] 
-
-### Return type
-
-[**Array&lt;GraphObjectWithPaths&gt;**](GraphObjectWithPaths.md)
-
-### Authorization
-
-[x-api-key](../README.md#x-api-key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-# **policystatuses_list**
-> Array&lt;PolicyResult&gt; policystatuses_list(system_id, content_type, accept, opts)
-
-List the policy statuses for a system
-
-This endpoint returns the policy results for a particular system.  ##### Sample Request  ``` curl -X GET https://console.jumpcloud.com/api/v2/systems/{System_ID}/policystatuses \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}'  ```
-
-### Example
-```ruby
-# load the gem
-require 'jcapiv2'
-# setup authorization
-JCAPIv2.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['x-api-key'] = 'Bearer'
-end
-
-api_instance = JCAPIv2::GraphApi.new
-
-system_id = "system_id_example" # String | ObjectID of the System.
-
-content_type = "application/json" # String | 
-
-accept = "application/json" # String | 
-
-opts = { 
-  fields: ["fields_example"], # Array<String> | The comma separated fields included in the returned records. If omitted, the default list of fields will be returned. 
-  filter: ["filter_example"], # Array<String> | Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
-  limit: 10, # Integer | The number of records to return at once. Limited to 100.
-  skip: 0, # Integer | The offset into the records to return.
-  sort: ["sort_example"], # Array<String> | The comma separated fields used to sort the collection. Default sort is ascending, prefix with `-` to sort descending. 
-  x_org_id: "" # String | 
-}
-
-begin
-  #List the policy statuses for a system
-  result = api_instance.policystatuses_list(system_id, content_type, accept, opts)
-  p result
-rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GraphApi->policystatuses_list: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **system_id** | **String**| ObjectID of the System. | 
- **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
- **fields** | [**Array&lt;String&gt;**](String.md)| The comma separated fields included in the returned records. If omitted, the default list of fields will be returned.  | [optional] 
- **filter** | [**Array&lt;String&gt;**](String.md)| Supported operators are: eq, ne, gt, ge, lt, le, between, search, in | [optional] 
- **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
- **skip** | **Integer**| The offset into the records to return. | [optional] [default to 0]
- **sort** | [**Array&lt;String&gt;**](String.md)| The comma separated fields used to sort the collection. Default sort is ascending, prefix with &#x60;-&#x60; to sort descending.  | [optional] 
- **x_org_id** | **String**|  | [optional] [default to ]
-
-### Return type
-
-[**Array&lt;PolicyResult&gt;**](PolicyResult.md)
+nil (empty response body)
 
 ### Authorization
 

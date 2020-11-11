@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**api_host** | **String** |  | [optional] 
-**integration_key** | **String** |  | [optional] 
-**name** | **String** |  | [optional] 
+**api_host** | **String** |  | 
+**integration_key** | **String** |  | 
+**name** | **String** |  | 
 **secret_key** | **String** |  | [optional] 
 
 

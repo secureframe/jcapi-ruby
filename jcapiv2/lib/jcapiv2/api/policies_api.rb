@@ -1,7 +1,7 @@
 =begin
 #JumpCloud APIs
 
-# JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
+#JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
 
 OpenAPI spec version: 2.0
 
@@ -20,374 +20,42 @@ module JCAPIv2
       @api_client = api_client
     end
 
-    # List the associations of a Policy
-    # This endpoint returns the _direct_ associations of a Policy.  A direct association can be a non-homogeneous relationship between 2 different objects, for example Policies and Systems.  #### Sample Request ``` curl -X GET 'https://console.jumpcloud.com/api/v2/policies/{Policy_ID}/associations?targets=system_group \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
-    # @param policy_id ObjectID of the Policy.
-    # @param targets 
-    # @param content_type 
-    # @param accept 
-    # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :limit The number of records to return at once. Limited to 100. (default to 10)
-    # @option opts [Integer] :skip The offset into the records to return. (default to 0)
-    # @option opts [String] :x_org_id  (default to )
-    # @return [Array<GraphConnection>]
-    def graph_policy_associations_list(policy_id, targets, content_type, accept, opts = {})
-      data, _status_code, _headers = graph_policy_associations_list_with_http_info(policy_id, targets, content_type, accept, opts)
-      return data
-    end
-
-    # List the associations of a Policy
-    # This endpoint returns the _direct_ associations of a Policy.  A direct association can be a non-homogeneous relationship between 2 different objects, for example Policies and Systems.  #### Sample Request &#x60;&#x60;&#x60; curl -X GET &#39;https://console.jumpcloud.com/api/v2/policies/{Policy_ID}/associations?targets&#x3D;system_group \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
-    # @param policy_id ObjectID of the Policy.
-    # @param targets 
-    # @param content_type 
-    # @param accept 
-    # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :limit The number of records to return at once. Limited to 100.
-    # @option opts [Integer] :skip The offset into the records to return.
-    # @option opts [String] :x_org_id 
-    # @return [Array<(Array<GraphConnection>, Fixnum, Hash)>] Array<GraphConnection> data, response status code and response headers
-    def graph_policy_associations_list_with_http_info(policy_id, targets, content_type, accept, opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: PoliciesApi.graph_policy_associations_list ..."
-      end
-      # verify the required parameter 'policy_id' is set
-      if @api_client.config.client_side_validation && policy_id.nil?
-        fail ArgumentError, "Missing the required parameter 'policy_id' when calling PoliciesApi.graph_policy_associations_list"
-      end
-      # verify the required parameter 'targets' is set
-      if @api_client.config.client_side_validation && targets.nil?
-        fail ArgumentError, "Missing the required parameter 'targets' when calling PoliciesApi.graph_policy_associations_list"
-      end
-      # verify the required parameter 'content_type' is set
-      if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling PoliciesApi.graph_policy_associations_list"
-      end
-      # verify the required parameter 'accept' is set
-      if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling PoliciesApi.graph_policy_associations_list"
-      end
-      if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling PoliciesApi.graph_policy_associations_list, must be greater than or equal to 0.'
-      end
-
-      # resource path
-      local_var_path = "/policies/{policy_id}/associations".sub('{' + 'policy_id' + '}', policy_id.to_s)
-
-      # query parameters
-      query_params = {}
-      query_params[:'targets'] = @api_client.build_collection_param(targets, :csv)
-      query_params[:'limit'] = opts[:'limit'] if !opts[:'limit'].nil?
-      query_params[:'skip'] = opts[:'skip'] if !opts[:'skip'].nil?
-
-      # header parameters
-      header_params = {}
-      # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
-      # HTTP header 'Content-Type'
-      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-      header_params[:'Content-Type'] = content_type
-      header_params[:'Accept'] = accept
-      header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
-
-      # form parameters
-      form_params = {}
-
-      # http body (model)
-      post_body = nil
-      auth_names = ['x-api-key']
-      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'Array<GraphConnection>')
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: PoliciesApi#graph_policy_associations_list\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-    # Manage the associations of a Policy
-    # This endpoint allows you to manage the _direct_ associations of a Policy.  A direct association can be a non-homogeneous relationship between 2 different objects, for example Policies and Systems.  #### Sample Request ``` curl -X POST https://console.jumpcloud.com/api/v2/policies/{Policy_ID}/associations/ \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' \\   -d '{     \"op\": \"add\",     \"type\": \"system_group\",     \"id\": \"{Group_ID}\" }' ```
-    # @param policy_id ObjectID of the Policy.
-    # @param content_type 
-    # @param accept 
-    # @param [Hash] opts the optional parameters
-    # @option opts [GraphManagementReq] :body 
-    # @option opts [String] :x_org_id  (default to )
-    # @return [nil]
-    def graph_policy_associations_post(policy_id, content_type, accept, opts = {})
-      graph_policy_associations_post_with_http_info(policy_id, content_type, accept, opts)
-      return nil
-    end
-
-    # Manage the associations of a Policy
-    # This endpoint allows you to manage the _direct_ associations of a Policy.  A direct association can be a non-homogeneous relationship between 2 different objects, for example Policies and Systems.  #### Sample Request &#x60;&#x60;&#x60; curl -X POST https://console.jumpcloud.com/api/v2/policies/{Policy_ID}/associations/ \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; \\   -d &#39;{     \&quot;op\&quot;: \&quot;add\&quot;,     \&quot;type\&quot;: \&quot;system_group\&quot;,     \&quot;id\&quot;: \&quot;{Group_ID}\&quot; }&#39; &#x60;&#x60;&#x60;
-    # @param policy_id ObjectID of the Policy.
-    # @param content_type 
-    # @param accept 
-    # @param [Hash] opts the optional parameters
-    # @option opts [GraphManagementReq] :body 
-    # @option opts [String] :x_org_id 
-    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
-    def graph_policy_associations_post_with_http_info(policy_id, content_type, accept, opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: PoliciesApi.graph_policy_associations_post ..."
-      end
-      # verify the required parameter 'policy_id' is set
-      if @api_client.config.client_side_validation && policy_id.nil?
-        fail ArgumentError, "Missing the required parameter 'policy_id' when calling PoliciesApi.graph_policy_associations_post"
-      end
-      # verify the required parameter 'content_type' is set
-      if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling PoliciesApi.graph_policy_associations_post"
-      end
-      # verify the required parameter 'accept' is set
-      if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling PoliciesApi.graph_policy_associations_post"
-      end
-      # resource path
-      local_var_path = "/policies/{policy_id}/associations".sub('{' + 'policy_id' + '}', policy_id.to_s)
-
-      # query parameters
-      query_params = {}
-
-      # header parameters
-      header_params = {}
-      # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
-      # HTTP header 'Content-Type'
-      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-      header_params[:'Content-Type'] = content_type
-      header_params[:'Accept'] = accept
-      header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
-
-      # form parameters
-      form_params = {}
-
-      # http body (model)
-      post_body = @api_client.object_to_http_body(opts[:'body'])
-      auth_names = ['x-api-key']
-      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names)
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: PoliciesApi#graph_policy_associations_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-    # List the Systems bound to a Policy
-    # This endpoint will return all Systems bound to a Policy, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths.  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this Policy to the corresponding System; this array represents all grouping and/or associations that would have to be removed to deprovision the System from this Policy.  See `/members` and `/associations` endpoints to manage those collections.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/policies/{Policy_ID}/systems \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
-    # @param policy_id ObjectID of the Command.
-    # @param content_type 
-    # @param accept 
-    # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :limit The number of records to return at once. Limited to 100. (default to 10)
-    # @option opts [String] :x_org_id  (default to )
-    # @option opts [Integer] :skip The offset into the records to return. (default to 0)
-    # @option opts [Array<String>] :filter Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
-    # @return [Array<GraphObjectWithPaths>]
-    def graph_policy_traverse_system(policy_id, content_type, accept, opts = {})
-      data, _status_code, _headers = graph_policy_traverse_system_with_http_info(policy_id, content_type, accept, opts)
-      return data
-    end
-
-    # List the Systems bound to a Policy
-    # This endpoint will return all Systems bound to a Policy, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths.  The &#x60;attributes&#x60; object is a key/value hash of compiled graph attributes for all paths followed.  The &#x60;paths&#x60; array enumerates each path from this Policy to the corresponding System; this array represents all grouping and/or associations that would have to be removed to deprovision the System from this Policy.  See &#x60;/members&#x60; and &#x60;/associations&#x60; endpoints to manage those collections.  #### Sample Request &#x60;&#x60;&#x60; curl -X GET https://console.jumpcloud.com/api/v2/policies/{Policy_ID}/systems \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
-    # @param policy_id ObjectID of the Command.
-    # @param content_type 
-    # @param accept 
-    # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :limit The number of records to return at once. Limited to 100.
-    # @option opts [String] :x_org_id 
-    # @option opts [Integer] :skip The offset into the records to return.
-    # @option opts [Array<String>] :filter Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
-    # @return [Array<(Array<GraphObjectWithPaths>, Fixnum, Hash)>] Array<GraphObjectWithPaths> data, response status code and response headers
-    def graph_policy_traverse_system_with_http_info(policy_id, content_type, accept, opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: PoliciesApi.graph_policy_traverse_system ..."
-      end
-      # verify the required parameter 'policy_id' is set
-      if @api_client.config.client_side_validation && policy_id.nil?
-        fail ArgumentError, "Missing the required parameter 'policy_id' when calling PoliciesApi.graph_policy_traverse_system"
-      end
-      # verify the required parameter 'content_type' is set
-      if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling PoliciesApi.graph_policy_traverse_system"
-      end
-      # verify the required parameter 'accept' is set
-      if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling PoliciesApi.graph_policy_traverse_system"
-      end
-      if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling PoliciesApi.graph_policy_traverse_system, must be greater than or equal to 0.'
-      end
-
-      # resource path
-      local_var_path = "/policies/{policy_id}/systems".sub('{' + 'policy_id' + '}', policy_id.to_s)
-
-      # query parameters
-      query_params = {}
-      query_params[:'limit'] = opts[:'limit'] if !opts[:'limit'].nil?
-      query_params[:'skip'] = opts[:'skip'] if !opts[:'skip'].nil?
-      query_params[:'filter'] = @api_client.build_collection_param(opts[:'filter'], :csv) if !opts[:'filter'].nil?
-
-      # header parameters
-      header_params = {}
-      # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
-      # HTTP header 'Content-Type'
-      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-      header_params[:'Content-Type'] = content_type
-      header_params[:'Accept'] = accept
-      header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
-
-      # form parameters
-      form_params = {}
-
-      # http body (model)
-      post_body = nil
-      auth_names = ['x-api-key']
-      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'Array<GraphObjectWithPaths>')
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: PoliciesApi#graph_policy_traverse_system\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-    # List the System Groups bound to a Policy
-    # This endpoint will return all Systems Groups bound to a Policy, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the group's type, id, attributes and paths.  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this Policy to the corresponding System Group; this array represents all grouping and/or associations that would have to be removed to deprovision the System Group from this Policy.  See `/members` and `/associations` endpoints to manage those collections.  #### Sample Request ``` curl -X GET  https://console.jumpcloud.com/api/v2/policies/{Policy_ID}/systemgroups \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
-    # @param policy_id ObjectID of the Command.
-    # @param content_type 
-    # @param accept 
-    # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :limit The number of records to return at once. Limited to 100. (default to 10)
-    # @option opts [String] :x_org_id  (default to )
-    # @option opts [Integer] :skip The offset into the records to return. (default to 0)
-    # @option opts [Array<String>] :filter Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
-    # @return [Array<GraphObjectWithPaths>]
-    def graph_policy_traverse_system_group(policy_id, content_type, accept, opts = {})
-      data, _status_code, _headers = graph_policy_traverse_system_group_with_http_info(policy_id, content_type, accept, opts)
-      return data
-    end
-
-    # List the System Groups bound to a Policy
-    # This endpoint will return all Systems Groups bound to a Policy, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the group&#39;s type, id, attributes and paths.  The &#x60;attributes&#x60; object is a key/value hash of compiled graph attributes for all paths followed.  The &#x60;paths&#x60; array enumerates each path from this Policy to the corresponding System Group; this array represents all grouping and/or associations that would have to be removed to deprovision the System Group from this Policy.  See &#x60;/members&#x60; and &#x60;/associations&#x60; endpoints to manage those collections.  #### Sample Request &#x60;&#x60;&#x60; curl -X GET  https://console.jumpcloud.com/api/v2/policies/{Policy_ID}/systemgroups \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
-    # @param policy_id ObjectID of the Command.
-    # @param content_type 
-    # @param accept 
-    # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :limit The number of records to return at once. Limited to 100.
-    # @option opts [String] :x_org_id 
-    # @option opts [Integer] :skip The offset into the records to return.
-    # @option opts [Array<String>] :filter Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
-    # @return [Array<(Array<GraphObjectWithPaths>, Fixnum, Hash)>] Array<GraphObjectWithPaths> data, response status code and response headers
-    def graph_policy_traverse_system_group_with_http_info(policy_id, content_type, accept, opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: PoliciesApi.graph_policy_traverse_system_group ..."
-      end
-      # verify the required parameter 'policy_id' is set
-      if @api_client.config.client_side_validation && policy_id.nil?
-        fail ArgumentError, "Missing the required parameter 'policy_id' when calling PoliciesApi.graph_policy_traverse_system_group"
-      end
-      # verify the required parameter 'content_type' is set
-      if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling PoliciesApi.graph_policy_traverse_system_group"
-      end
-      # verify the required parameter 'accept' is set
-      if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling PoliciesApi.graph_policy_traverse_system_group"
-      end
-      if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling PoliciesApi.graph_policy_traverse_system_group, must be greater than or equal to 0.'
-      end
-
-      # resource path
-      local_var_path = "/policies/{policy_id}/systemgroups".sub('{' + 'policy_id' + '}', policy_id.to_s)
-
-      # query parameters
-      query_params = {}
-      query_params[:'limit'] = opts[:'limit'] if !opts[:'limit'].nil?
-      query_params[:'skip'] = opts[:'skip'] if !opts[:'skip'].nil?
-      query_params[:'filter'] = @api_client.build_collection_param(opts[:'filter'], :csv) if !opts[:'filter'].nil?
-
-      # header parameters
-      header_params = {}
-      # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
-      # HTTP header 'Content-Type'
-      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-      header_params[:'Content-Type'] = content_type
-      header_params[:'Accept'] = accept
-      header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
-
-      # form parameters
-      form_params = {}
-
-      # http body (model)
-      post_body = nil
-      auth_names = ['x-api-key']
-      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'Array<GraphObjectWithPaths>')
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: PoliciesApi#graph_policy_traverse_system_group\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
     # Deletes a Policy
     # This endpoint allows you to delete a policy.  #### Sample Request  ``` curl -X DELETE https://console.jumpcloud.com/api/v2/policies/5a837ecd232e110d4291e6b9 \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}'   ```
     # @param id ObjectID of the Policy object.
-    # @param content_type 
     # @param accept 
+    # @param content_type 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :x_org_id  (default to )
     # @return [nil]
-    def policies_delete(id, content_type, accept, opts = {})
-      policies_delete_with_http_info(id, content_type, accept, opts)
+    def d_elete_policies_id(id, accept, content_type, opts = {})
+      d_elete_policies_id_with_http_info(id, accept, content_type, opts)
       return nil
     end
 
     # Deletes a Policy
     # This endpoint allows you to delete a policy.  #### Sample Request  &#x60;&#x60;&#x60; curl -X DELETE https://console.jumpcloud.com/api/v2/policies/5a837ecd232e110d4291e6b9 \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39;   &#x60;&#x60;&#x60;
     # @param id ObjectID of the Policy object.
-    # @param content_type 
     # @param accept 
+    # @param content_type 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :x_org_id 
     # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
-    def policies_delete_with_http_info(id, content_type, accept, opts = {})
+    def d_elete_policies_id_with_http_info(id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: PoliciesApi.policies_delete ..."
+        @api_client.config.logger.debug "Calling API: PoliciesApi.d_elete_policies_id ..."
       end
       # verify the required parameter 'id' is set
       if @api_client.config.client_side_validation && id.nil?
-        fail ArgumentError, "Missing the required parameter 'id' when calling PoliciesApi.policies_delete"
-      end
-      # verify the required parameter 'content_type' is set
-      if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling PoliciesApi.policies_delete"
+        fail ArgumentError, "Missing the required parameter 'id' when calling PoliciesApi.d_elete_policies_id"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling PoliciesApi.policies_delete"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling PoliciesApi.d_elete_policies_id"
+      end
+      # verify the required parameter 'content_type' is set
+      if @api_client.config.client_side_validation && content_type.nil?
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling PoliciesApi.d_elete_policies_id"
       end
       # resource path
       local_var_path = "/policies/{id}".sub('{' + 'id' + '}', id.to_s)
@@ -401,8 +69,8 @@ module JCAPIv2
       header_params['Accept'] = @api_client.select_header_accept(['application/json'])
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-      header_params[:'Content-Type'] = content_type
       header_params[:'Accept'] = accept
+      header_params[:'Content-Type'] = content_type
       header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
 
       # form parameters
@@ -418,126 +86,54 @@ module JCAPIv2
         :body => post_body,
         :auth_names => auth_names)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: PoliciesApi#policies_delete\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-    # Gets a specific Policy.
-    # This endpoint returns a specific policy.  ###### Sample Request  ```   curl -X GET https://console.jumpcloud.com/api/v2/policies/{PolicyID} \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}'   ```
-    # @param id ObjectID of the Policy object.
-    # @param content_type 
-    # @param accept 
-    # @param [Hash] opts the optional parameters
-    # @option opts [String] :x_org_id  (default to )
-    # @return [PolicyWithDetails]
-    def policies_get(id, content_type, accept, opts = {})
-      data, _status_code, _headers = policies_get_with_http_info(id, content_type, accept, opts)
-      return data
-    end
-
-    # Gets a specific Policy.
-    # This endpoint returns a specific policy.  ###### Sample Request  &#x60;&#x60;&#x60;   curl -X GET https://console.jumpcloud.com/api/v2/policies/{PolicyID} \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39;   &#x60;&#x60;&#x60;
-    # @param id ObjectID of the Policy object.
-    # @param content_type 
-    # @param accept 
-    # @param [Hash] opts the optional parameters
-    # @option opts [String] :x_org_id 
-    # @return [Array<(PolicyWithDetails, Fixnum, Hash)>] PolicyWithDetails data, response status code and response headers
-    def policies_get_with_http_info(id, content_type, accept, opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: PoliciesApi.policies_get ..."
-      end
-      # verify the required parameter 'id' is set
-      if @api_client.config.client_side_validation && id.nil?
-        fail ArgumentError, "Missing the required parameter 'id' when calling PoliciesApi.policies_get"
-      end
-      # verify the required parameter 'content_type' is set
-      if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling PoliciesApi.policies_get"
-      end
-      # verify the required parameter 'accept' is set
-      if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling PoliciesApi.policies_get"
-      end
-      # resource path
-      local_var_path = "/policies/{id}".sub('{' + 'id' + '}', id.to_s)
-
-      # query parameters
-      query_params = {}
-
-      # header parameters
-      header_params = {}
-      # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
-      # HTTP header 'Content-Type'
-      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-      header_params[:'Content-Type'] = content_type
-      header_params[:'Accept'] = accept
-      header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
-
-      # form parameters
-      form_params = {}
-
-      # http body (model)
-      post_body = nil
-      auth_names = ['x-api-key']
-      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'PolicyWithDetails')
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: PoliciesApi#policies_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: PoliciesApi#d_elete_policies_id\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
     # Lists all the Policies
     # This endpoint returns all policies.  ##### Sample Request  ```  curl -X GET  https://console.jumpcloud.com/api/v2/policies \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}'   ```
-    # @param content_type 
     # @param accept 
+    # @param content_type 
     # @param [Hash] opts the optional parameters
     # @option opts [Array<String>] :fields The comma separated fields included in the returned records. If omitted, the default list of fields will be returned. 
-    # @option opts [Array<String>] :filter Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
+    # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [Integer] :limit The number of records to return at once. Limited to 100. (default to 10)
     # @option opts [Integer] :skip The offset into the records to return. (default to 0)
     # @option opts [Array<String>] :sort The comma separated fields used to sort the collection. Default sort is ascending, prefix with &#x60;-&#x60; to sort descending. 
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<Policy>]
-    def policies_list(content_type, accept, opts = {})
-      data, _status_code, _headers = policies_list_with_http_info(content_type, accept, opts)
+    def g_et_policies(accept, content_type, opts = {})
+      data, _status_code, _headers = g_et_policies_with_http_info(accept, content_type, opts)
       return data
     end
 
     # Lists all the Policies
     # This endpoint returns all policies.  ##### Sample Request  &#x60;&#x60;&#x60;  curl -X GET  https://console.jumpcloud.com/api/v2/policies \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39;   &#x60;&#x60;&#x60;
-    # @param content_type 
     # @param accept 
+    # @param content_type 
     # @param [Hash] opts the optional parameters
     # @option opts [Array<String>] :fields The comma separated fields included in the returned records. If omitted, the default list of fields will be returned. 
-    # @option opts [Array<String>] :filter Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
+    # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [Integer] :limit The number of records to return at once. Limited to 100.
     # @option opts [Integer] :skip The offset into the records to return.
     # @option opts [Array<String>] :sort The comma separated fields used to sort the collection. Default sort is ascending, prefix with &#x60;-&#x60; to sort descending. 
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<Policy>, Fixnum, Hash)>] Array<Policy> data, response status code and response headers
-    def policies_list_with_http_info(content_type, accept, opts = {})
+    def g_et_policies_with_http_info(accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: PoliciesApi.policies_list ..."
-      end
-      # verify the required parameter 'content_type' is set
-      if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling PoliciesApi.policies_list"
+        @api_client.config.logger.debug "Calling API: PoliciesApi.g_et_policies ..."
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling PoliciesApi.policies_list"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling PoliciesApi.g_et_policies"
+      end
+      # verify the required parameter 'content_type' is set
+      if @api_client.config.client_side_validation && content_type.nil?
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling PoliciesApi.g_et_policies"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling PoliciesApi.policies_list, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling PoliciesApi.g_et_policies, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -557,8 +153,8 @@ module JCAPIv2
       header_params['Accept'] = @api_client.select_header_accept(['application/json'])
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-      header_params[:'Content-Type'] = content_type
       header_params[:'Accept'] = accept
+      header_params[:'Content-Type'] = content_type
       header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
 
       # form parameters
@@ -575,43 +171,961 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<Policy>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: PoliciesApi#policies_list\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: PoliciesApi#g_et_policies\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Gets a specific Policy.
+    # This endpoint returns a specific policy.  ###### Sample Request  ```   curl -X GET https://console.jumpcloud.com/api/v2/policies/{PolicyID} \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}'   ```
+    # @param id ObjectID of the Policy object.
+    # @param accept 
+    # @param content_type 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :x_org_id  (default to )
+    # @return [PolicyWithDetails]
+    def g_et_policies_id(id, accept, content_type, opts = {})
+      data, _status_code, _headers = g_et_policies_id_with_http_info(id, accept, content_type, opts)
+      return data
+    end
+
+    # Gets a specific Policy.
+    # This endpoint returns a specific policy.  ###### Sample Request  &#x60;&#x60;&#x60;   curl -X GET https://console.jumpcloud.com/api/v2/policies/{PolicyID} \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39;   &#x60;&#x60;&#x60;
+    # @param id ObjectID of the Policy object.
+    # @param accept 
+    # @param content_type 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :x_org_id 
+    # @return [Array<(PolicyWithDetails, Fixnum, Hash)>] PolicyWithDetails data, response status code and response headers
+    def g_et_policies_id_with_http_info(id, accept, content_type, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: PoliciesApi.g_et_policies_id ..."
+      end
+      # verify the required parameter 'id' is set
+      if @api_client.config.client_side_validation && id.nil?
+        fail ArgumentError, "Missing the required parameter 'id' when calling PoliciesApi.g_et_policies_id"
+      end
+      # verify the required parameter 'accept' is set
+      if @api_client.config.client_side_validation && accept.nil?
+        fail ArgumentError, "Missing the required parameter 'accept' when calling PoliciesApi.g_et_policies_id"
+      end
+      # verify the required parameter 'content_type' is set
+      if @api_client.config.client_side_validation && content_type.nil?
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling PoliciesApi.g_et_policies_id"
+      end
+      # resource path
+      local_var_path = "/policies/{id}".sub('{' + 'id' + '}', id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+      header_params[:'Accept'] = accept
+      header_params[:'Content-Type'] = content_type
+      header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      auth_names = ['x-api-key']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'PolicyWithDetails')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: PoliciesApi#g_et_policies_id\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # List the associations of a Policy
+    # This endpoint returns the _direct_ associations of a Policy.  A direct association can be a non-homogeneous relationship between 2 different objects, for example Policies and Systems.  #### Sample Request ``` curl -X GET 'https://console.jumpcloud.com/api/v2/policies/{Policy_ID}/associations?targets=system_group \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
+    # @param policy_id ObjectID of the Policy.
+    # @param targets 
+    # @param accept 
+    # @param content_type 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :limit The number of records to return at once. Limited to 100. (default to 10)
+    # @option opts [Integer] :skip The offset into the records to return. (default to 0)
+    # @option opts [String] :x_org_id  (default to )
+    # @return [Array<GraphConnection>]
+    def g_et_policies_policy_id_associations(policy_id, targets, accept, content_type, opts = {})
+      data, _status_code, _headers = g_et_policies_policy_id_associations_with_http_info(policy_id, targets, accept, content_type, opts)
+      return data
+    end
+
+    # List the associations of a Policy
+    # This endpoint returns the _direct_ associations of a Policy.  A direct association can be a non-homogeneous relationship between 2 different objects, for example Policies and Systems.  #### Sample Request &#x60;&#x60;&#x60; curl -X GET &#39;https://console.jumpcloud.com/api/v2/policies/{Policy_ID}/associations?targets&#x3D;system_group \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
+    # @param policy_id ObjectID of the Policy.
+    # @param targets 
+    # @param accept 
+    # @param content_type 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :limit The number of records to return at once. Limited to 100.
+    # @option opts [Integer] :skip The offset into the records to return.
+    # @option opts [String] :x_org_id 
+    # @return [Array<(Array<GraphConnection>, Fixnum, Hash)>] Array<GraphConnection> data, response status code and response headers
+    def g_et_policies_policy_id_associations_with_http_info(policy_id, targets, accept, content_type, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: PoliciesApi.g_et_policies_policy_id_associations ..."
+      end
+      # verify the required parameter 'policy_id' is set
+      if @api_client.config.client_side_validation && policy_id.nil?
+        fail ArgumentError, "Missing the required parameter 'policy_id' when calling PoliciesApi.g_et_policies_policy_id_associations"
+      end
+      # verify the required parameter 'targets' is set
+      if @api_client.config.client_side_validation && targets.nil?
+        fail ArgumentError, "Missing the required parameter 'targets' when calling PoliciesApi.g_et_policies_policy_id_associations"
+      end
+      # verify the required parameter 'accept' is set
+      if @api_client.config.client_side_validation && accept.nil?
+        fail ArgumentError, "Missing the required parameter 'accept' when calling PoliciesApi.g_et_policies_policy_id_associations"
+      end
+      # verify the required parameter 'content_type' is set
+      if @api_client.config.client_side_validation && content_type.nil?
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling PoliciesApi.g_et_policies_policy_id_associations"
+      end
+      if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling PoliciesApi.g_et_policies_policy_id_associations, must be greater than or equal to 0.'
+      end
+
+      # resource path
+      local_var_path = "/policies/{policy_id}/associations".sub('{' + 'policy_id' + '}', policy_id.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'targets'] = @api_client.build_collection_param(targets, :csv)
+      query_params[:'limit'] = opts[:'limit'] if !opts[:'limit'].nil?
+      query_params[:'skip'] = opts[:'skip'] if !opts[:'skip'].nil?
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+      header_params[:'Accept'] = accept
+      header_params[:'Content-Type'] = content_type
+      header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      auth_names = ['x-api-key']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'Array<GraphConnection>')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: PoliciesApi#g_et_policies_policy_id_associations\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Lists all the policy results of a policy.
+    # This endpoint returns all policies results for a specific policy.  ##### Sample Request  ```  curl -X GET https://console.jumpcloud.com/api/v2/policies/{Policy_ID}/policyresults \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}'   ```
+    # @param policy_id 
+    # @param accept 
+    # @param content_type 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :fields The comma separated fields included in the returned records. If omitted, the default list of fields will be returned. 
+    # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
+    # @option opts [Integer] :limit The number of records to return at once. Limited to 100. (default to 10)
+    # @option opts [Integer] :skip The offset into the records to return. (default to 0)
+    # @option opts [Array<String>] :sort The comma separated fields used to sort the collection. Default sort is ascending, prefix with &#x60;-&#x60; to sort descending. 
+    # @option opts [String] :x_org_id  (default to )
+    # @return [Array<PolicyResult>]
+    def g_et_policies_policy_id_policyresults(policy_id, accept, content_type, opts = {})
+      data, _status_code, _headers = g_et_policies_policy_id_policyresults_with_http_info(policy_id, accept, content_type, opts)
+      return data
+    end
+
+    # Lists all the policy results of a policy.
+    # This endpoint returns all policies results for a specific policy.  ##### Sample Request  &#x60;&#x60;&#x60;  curl -X GET https://console.jumpcloud.com/api/v2/policies/{Policy_ID}/policyresults \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39;   &#x60;&#x60;&#x60;
+    # @param policy_id 
+    # @param accept 
+    # @param content_type 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :fields The comma separated fields included in the returned records. If omitted, the default list of fields will be returned. 
+    # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
+    # @option opts [Integer] :limit The number of records to return at once. Limited to 100.
+    # @option opts [Integer] :skip The offset into the records to return.
+    # @option opts [Array<String>] :sort The comma separated fields used to sort the collection. Default sort is ascending, prefix with &#x60;-&#x60; to sort descending. 
+    # @option opts [String] :x_org_id 
+    # @return [Array<(Array<PolicyResult>, Fixnum, Hash)>] Array<PolicyResult> data, response status code and response headers
+    def g_et_policies_policy_id_policyresults_with_http_info(policy_id, accept, content_type, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: PoliciesApi.g_et_policies_policy_id_policyresults ..."
+      end
+      # verify the required parameter 'policy_id' is set
+      if @api_client.config.client_side_validation && policy_id.nil?
+        fail ArgumentError, "Missing the required parameter 'policy_id' when calling PoliciesApi.g_et_policies_policy_id_policyresults"
+      end
+      # verify the required parameter 'accept' is set
+      if @api_client.config.client_side_validation && accept.nil?
+        fail ArgumentError, "Missing the required parameter 'accept' when calling PoliciesApi.g_et_policies_policy_id_policyresults"
+      end
+      # verify the required parameter 'content_type' is set
+      if @api_client.config.client_side_validation && content_type.nil?
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling PoliciesApi.g_et_policies_policy_id_policyresults"
+      end
+      if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling PoliciesApi.g_et_policies_policy_id_policyresults, must be greater than or equal to 0.'
+      end
+
+      # resource path
+      local_var_path = "/policies/{policy_id}/policyresults".sub('{' + 'policy_id' + '}', policy_id.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'fields'] = @api_client.build_collection_param(opts[:'fields'], :csv) if !opts[:'fields'].nil?
+      query_params[:'filter'] = @api_client.build_collection_param(opts[:'filter'], :csv) if !opts[:'filter'].nil?
+      query_params[:'limit'] = opts[:'limit'] if !opts[:'limit'].nil?
+      query_params[:'skip'] = opts[:'skip'] if !opts[:'skip'].nil?
+      query_params[:'sort'] = @api_client.build_collection_param(opts[:'sort'], :csv) if !opts[:'sort'].nil?
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+      header_params[:'Accept'] = accept
+      header_params[:'Content-Type'] = content_type
+      header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      auth_names = ['x-api-key']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'Array<PolicyResult>')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: PoliciesApi#g_et_policies_policy_id_policyresults\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Lists the latest policy results of a policy.
+    # This endpoint returns the latest policies results for a specific policy.  ##### Sample Request  ```  curl -X GET https://console.jumpcloud.com/api/v2/policies/{Policy_ID}/policystatuses \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}'   ```
+    # @param policy_id 
+    # @param accept 
+    # @param content_type 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :fields The comma separated fields included in the returned records. If omitted, the default list of fields will be returned. 
+    # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
+    # @option opts [Integer] :limit The number of records to return at once. Limited to 100. (default to 10)
+    # @option opts [Integer] :skip The offset into the records to return. (default to 0)
+    # @option opts [Array<String>] :sort The comma separated fields used to sort the collection. Default sort is ascending, prefix with &#x60;-&#x60; to sort descending. 
+    # @option opts [String] :x_org_id  (default to )
+    # @return [Array<PolicyResult>]
+    def g_et_policies_policy_id_policystatuses(policy_id, accept, content_type, opts = {})
+      data, _status_code, _headers = g_et_policies_policy_id_policystatuses_with_http_info(policy_id, accept, content_type, opts)
+      return data
+    end
+
+    # Lists the latest policy results of a policy.
+    # This endpoint returns the latest policies results for a specific policy.  ##### Sample Request  &#x60;&#x60;&#x60;  curl -X GET https://console.jumpcloud.com/api/v2/policies/{Policy_ID}/policystatuses \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39;   &#x60;&#x60;&#x60;
+    # @param policy_id 
+    # @param accept 
+    # @param content_type 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :fields The comma separated fields included in the returned records. If omitted, the default list of fields will be returned. 
+    # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
+    # @option opts [Integer] :limit The number of records to return at once. Limited to 100.
+    # @option opts [Integer] :skip The offset into the records to return.
+    # @option opts [Array<String>] :sort The comma separated fields used to sort the collection. Default sort is ascending, prefix with &#x60;-&#x60; to sort descending. 
+    # @option opts [String] :x_org_id 
+    # @return [Array<(Array<PolicyResult>, Fixnum, Hash)>] Array<PolicyResult> data, response status code and response headers
+    def g_et_policies_policy_id_policystatuses_with_http_info(policy_id, accept, content_type, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: PoliciesApi.g_et_policies_policy_id_policystatuses ..."
+      end
+      # verify the required parameter 'policy_id' is set
+      if @api_client.config.client_side_validation && policy_id.nil?
+        fail ArgumentError, "Missing the required parameter 'policy_id' when calling PoliciesApi.g_et_policies_policy_id_policystatuses"
+      end
+      # verify the required parameter 'accept' is set
+      if @api_client.config.client_side_validation && accept.nil?
+        fail ArgumentError, "Missing the required parameter 'accept' when calling PoliciesApi.g_et_policies_policy_id_policystatuses"
+      end
+      # verify the required parameter 'content_type' is set
+      if @api_client.config.client_side_validation && content_type.nil?
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling PoliciesApi.g_et_policies_policy_id_policystatuses"
+      end
+      if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling PoliciesApi.g_et_policies_policy_id_policystatuses, must be greater than or equal to 0.'
+      end
+
+      # resource path
+      local_var_path = "/policies/{policy_id}/policystatuses".sub('{' + 'policy_id' + '}', policy_id.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'fields'] = @api_client.build_collection_param(opts[:'fields'], :csv) if !opts[:'fields'].nil?
+      query_params[:'filter'] = @api_client.build_collection_param(opts[:'filter'], :csv) if !opts[:'filter'].nil?
+      query_params[:'limit'] = opts[:'limit'] if !opts[:'limit'].nil?
+      query_params[:'skip'] = opts[:'skip'] if !opts[:'skip'].nil?
+      query_params[:'sort'] = @api_client.build_collection_param(opts[:'sort'], :csv) if !opts[:'sort'].nil?
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+      header_params[:'Accept'] = accept
+      header_params[:'Content-Type'] = content_type
+      header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      auth_names = ['x-api-key']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'Array<PolicyResult>')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: PoliciesApi#g_et_policies_policy_id_policystatuses\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # List the System Groups bound to a Policy
+    # This endpoint will return all Systems Groups bound to a Policy, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the group's type, id, attributes and paths.  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this Policy to the corresponding System Group; this array represents all grouping and/or associations that would have to be removed to deprovision the System Group from this Policy.  See `/members` and `/associations` endpoints to manage those collections.  #### Sample Request ``` curl -X GET  https://console.jumpcloud.com/api/v2/policies/{Policy_ID}/systemgroups \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
+    # @param policy_id ObjectID of the Command.
+    # @param accept 
+    # @param content_type 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :limit The number of records to return at once. Limited to 100. (default to 10)
+    # @option opts [Integer] :skip The offset into the records to return. (default to 0)
+    # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
+    # @option opts [String] :x_org_id  (default to )
+    # @return [Array<GraphObjectWithPaths>]
+    def g_et_policies_policy_id_systemgroups(policy_id, accept, content_type, opts = {})
+      data, _status_code, _headers = g_et_policies_policy_id_systemgroups_with_http_info(policy_id, accept, content_type, opts)
+      return data
+    end
+
+    # List the System Groups bound to a Policy
+    # This endpoint will return all Systems Groups bound to a Policy, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the group&#39;s type, id, attributes and paths.  The &#x60;attributes&#x60; object is a key/value hash of compiled graph attributes for all paths followed.  The &#x60;paths&#x60; array enumerates each path from this Policy to the corresponding System Group; this array represents all grouping and/or associations that would have to be removed to deprovision the System Group from this Policy.  See &#x60;/members&#x60; and &#x60;/associations&#x60; endpoints to manage those collections.  #### Sample Request &#x60;&#x60;&#x60; curl -X GET  https://console.jumpcloud.com/api/v2/policies/{Policy_ID}/systemgroups \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
+    # @param policy_id ObjectID of the Command.
+    # @param accept 
+    # @param content_type 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :limit The number of records to return at once. Limited to 100.
+    # @option opts [Integer] :skip The offset into the records to return.
+    # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
+    # @option opts [String] :x_org_id 
+    # @return [Array<(Array<GraphObjectWithPaths>, Fixnum, Hash)>] Array<GraphObjectWithPaths> data, response status code and response headers
+    def g_et_policies_policy_id_systemgroups_with_http_info(policy_id, accept, content_type, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: PoliciesApi.g_et_policies_policy_id_systemgroups ..."
+      end
+      # verify the required parameter 'policy_id' is set
+      if @api_client.config.client_side_validation && policy_id.nil?
+        fail ArgumentError, "Missing the required parameter 'policy_id' when calling PoliciesApi.g_et_policies_policy_id_systemgroups"
+      end
+      # verify the required parameter 'accept' is set
+      if @api_client.config.client_side_validation && accept.nil?
+        fail ArgumentError, "Missing the required parameter 'accept' when calling PoliciesApi.g_et_policies_policy_id_systemgroups"
+      end
+      # verify the required parameter 'content_type' is set
+      if @api_client.config.client_side_validation && content_type.nil?
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling PoliciesApi.g_et_policies_policy_id_systemgroups"
+      end
+      if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling PoliciesApi.g_et_policies_policy_id_systemgroups, must be greater than or equal to 0.'
+      end
+
+      # resource path
+      local_var_path = "/policies/{policy_id}/systemgroups".sub('{' + 'policy_id' + '}', policy_id.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'limit'] = opts[:'limit'] if !opts[:'limit'].nil?
+      query_params[:'skip'] = opts[:'skip'] if !opts[:'skip'].nil?
+      query_params[:'filter'] = @api_client.build_collection_param(opts[:'filter'], :csv) if !opts[:'filter'].nil?
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+      header_params[:'Accept'] = accept
+      header_params[:'Content-Type'] = content_type
+      header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      auth_names = ['x-api-key']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'Array<GraphObjectWithPaths>')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: PoliciesApi#g_et_policies_policy_id_systemgroups\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # List the Systems bound to a Policy
+    # This endpoint will return all Systems bound to a Policy, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths.  The `attributes` object is a key/value hash of compiled graph attributes for all paths followed.  The `paths` array enumerates each path from this Policy to the corresponding System; this array represents all grouping and/or associations that would have to be removed to deprovision the System from this Policy.  See `/members` and `/associations` endpoints to manage those collections.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/policies/{Policy_ID}/systems \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
+    # @param policy_id ObjectID of the Command.
+    # @param accept 
+    # @param content_type 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :limit The number of records to return at once. Limited to 100. (default to 10)
+    # @option opts [Integer] :skip The offset into the records to return. (default to 0)
+    # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
+    # @option opts [String] :x_org_id  (default to )
+    # @return [Array<GraphObjectWithPaths>]
+    def g_et_policies_policy_id_systems(policy_id, accept, content_type, opts = {})
+      data, _status_code, _headers = g_et_policies_policy_id_systems_with_http_info(policy_id, accept, content_type, opts)
+      return data
+    end
+
+    # List the Systems bound to a Policy
+    # This endpoint will return all Systems bound to a Policy, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths.  The &#x60;attributes&#x60; object is a key/value hash of compiled graph attributes for all paths followed.  The &#x60;paths&#x60; array enumerates each path from this Policy to the corresponding System; this array represents all grouping and/or associations that would have to be removed to deprovision the System from this Policy.  See &#x60;/members&#x60; and &#x60;/associations&#x60; endpoints to manage those collections.  #### Sample Request &#x60;&#x60;&#x60; curl -X GET https://console.jumpcloud.com/api/v2/policies/{Policy_ID}/systems \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
+    # @param policy_id ObjectID of the Command.
+    # @param accept 
+    # @param content_type 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :limit The number of records to return at once. Limited to 100.
+    # @option opts [Integer] :skip The offset into the records to return.
+    # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
+    # @option opts [String] :x_org_id 
+    # @return [Array<(Array<GraphObjectWithPaths>, Fixnum, Hash)>] Array<GraphObjectWithPaths> data, response status code and response headers
+    def g_et_policies_policy_id_systems_with_http_info(policy_id, accept, content_type, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: PoliciesApi.g_et_policies_policy_id_systems ..."
+      end
+      # verify the required parameter 'policy_id' is set
+      if @api_client.config.client_side_validation && policy_id.nil?
+        fail ArgumentError, "Missing the required parameter 'policy_id' when calling PoliciesApi.g_et_policies_policy_id_systems"
+      end
+      # verify the required parameter 'accept' is set
+      if @api_client.config.client_side_validation && accept.nil?
+        fail ArgumentError, "Missing the required parameter 'accept' when calling PoliciesApi.g_et_policies_policy_id_systems"
+      end
+      # verify the required parameter 'content_type' is set
+      if @api_client.config.client_side_validation && content_type.nil?
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling PoliciesApi.g_et_policies_policy_id_systems"
+      end
+      if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling PoliciesApi.g_et_policies_policy_id_systems, must be greater than or equal to 0.'
+      end
+
+      # resource path
+      local_var_path = "/policies/{policy_id}/systems".sub('{' + 'policy_id' + '}', policy_id.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'limit'] = opts[:'limit'] if !opts[:'limit'].nil?
+      query_params[:'skip'] = opts[:'skip'] if !opts[:'skip'].nil?
+      query_params[:'filter'] = @api_client.build_collection_param(opts[:'filter'], :csv) if !opts[:'filter'].nil?
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+      header_params[:'Accept'] = accept
+      header_params[:'Content-Type'] = content_type
+      header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      auth_names = ['x-api-key']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'Array<GraphObjectWithPaths>')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: PoliciesApi#g_et_policies_policy_id_systems\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Lists all the policy results for an organization.
+    # This endpoint returns all policies results for an organization.  ##### Sample Request  ```  curl -X GET https://console.jumpcloud.com/api/v2/policyresults \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}'   ```
+    # @param accept 
+    # @param content_type 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :fields The comma separated fields included in the returned records. If omitted, the default list of fields will be returned. 
+    # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
+    # @option opts [Integer] :limit The number of records to return at once. Limited to 100. (default to 10)
+    # @option opts [Integer] :skip The offset into the records to return. (default to 0)
+    # @option opts [Array<String>] :sort The comma separated fields used to sort the collection. Default sort is ascending, prefix with &#x60;-&#x60; to sort descending. 
+    # @option opts [String] :x_org_id  (default to )
+    # @return [Array<PolicyResult>]
+    def g_et_policyresults(accept, content_type, opts = {})
+      data, _status_code, _headers = g_et_policyresults_with_http_info(accept, content_type, opts)
+      return data
+    end
+
+    # Lists all the policy results for an organization.
+    # This endpoint returns all policies results for an organization.  ##### Sample Request  &#x60;&#x60;&#x60;  curl -X GET https://console.jumpcloud.com/api/v2/policyresults \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39;   &#x60;&#x60;&#x60;
+    # @param accept 
+    # @param content_type 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :fields The comma separated fields included in the returned records. If omitted, the default list of fields will be returned. 
+    # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
+    # @option opts [Integer] :limit The number of records to return at once. Limited to 100.
+    # @option opts [Integer] :skip The offset into the records to return.
+    # @option opts [Array<String>] :sort The comma separated fields used to sort the collection. Default sort is ascending, prefix with &#x60;-&#x60; to sort descending. 
+    # @option opts [String] :x_org_id 
+    # @return [Array<(Array<PolicyResult>, Fixnum, Hash)>] Array<PolicyResult> data, response status code and response headers
+    def g_et_policyresults_with_http_info(accept, content_type, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: PoliciesApi.g_et_policyresults ..."
+      end
+      # verify the required parameter 'accept' is set
+      if @api_client.config.client_side_validation && accept.nil?
+        fail ArgumentError, "Missing the required parameter 'accept' when calling PoliciesApi.g_et_policyresults"
+      end
+      # verify the required parameter 'content_type' is set
+      if @api_client.config.client_side_validation && content_type.nil?
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling PoliciesApi.g_et_policyresults"
+      end
+      if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling PoliciesApi.g_et_policyresults, must be greater than or equal to 0.'
+      end
+
+      # resource path
+      local_var_path = "/policyresults"
+
+      # query parameters
+      query_params = {}
+      query_params[:'fields'] = @api_client.build_collection_param(opts[:'fields'], :csv) if !opts[:'fields'].nil?
+      query_params[:'filter'] = @api_client.build_collection_param(opts[:'filter'], :csv) if !opts[:'filter'].nil?
+      query_params[:'limit'] = opts[:'limit'] if !opts[:'limit'].nil?
+      query_params[:'skip'] = opts[:'skip'] if !opts[:'skip'].nil?
+      query_params[:'sort'] = @api_client.build_collection_param(opts[:'sort'], :csv) if !opts[:'sort'].nil?
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+      header_params[:'Accept'] = accept
+      header_params[:'Content-Type'] = content_type
+      header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      auth_names = ['x-api-key']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'Array<PolicyResult>')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: PoliciesApi#g_et_policyresults\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get a specific Policy Result.
+    # This endpoint will return the policy results for a specific policy.  ##### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/policyresults/{Policy_ID} \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}'   ```
+    # @param id ObjectID of the Policy Result.
+    # @param accept 
+    # @param content_type 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :x_org_id  (default to )
+    # @return [PolicyResult]
+    def g_et_policyresults_id(id, accept, content_type, opts = {})
+      data, _status_code, _headers = g_et_policyresults_id_with_http_info(id, accept, content_type, opts)
+      return data
+    end
+
+    # Get a specific Policy Result.
+    # This endpoint will return the policy results for a specific policy.  ##### Sample Request &#x60;&#x60;&#x60; curl -X GET https://console.jumpcloud.com/api/v2/policyresults/{Policy_ID} \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39;   &#x60;&#x60;&#x60;
+    # @param id ObjectID of the Policy Result.
+    # @param accept 
+    # @param content_type 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :x_org_id 
+    # @return [Array<(PolicyResult, Fixnum, Hash)>] PolicyResult data, response status code and response headers
+    def g_et_policyresults_id_with_http_info(id, accept, content_type, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: PoliciesApi.g_et_policyresults_id ..."
+      end
+      # verify the required parameter 'id' is set
+      if @api_client.config.client_side_validation && id.nil?
+        fail ArgumentError, "Missing the required parameter 'id' when calling PoliciesApi.g_et_policyresults_id"
+      end
+      # verify the required parameter 'accept' is set
+      if @api_client.config.client_side_validation && accept.nil?
+        fail ArgumentError, "Missing the required parameter 'accept' when calling PoliciesApi.g_et_policyresults_id"
+      end
+      # verify the required parameter 'content_type' is set
+      if @api_client.config.client_side_validation && content_type.nil?
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling PoliciesApi.g_et_policyresults_id"
+      end
+      # resource path
+      local_var_path = "/policyresults/{id}".sub('{' + 'id' + '}', id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+      header_params[:'Accept'] = accept
+      header_params[:'Content-Type'] = content_type
+      header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      auth_names = ['x-api-key']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'PolicyResult')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: PoliciesApi#g_et_policyresults_id\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Lists all of the Policy Templates
+    # This endpoint returns all policy templates.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/policytemplates \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}'   ```
+    # @param accept 
+    # @param content_type 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :fields The comma separated fields included in the returned records. If omitted, the default list of fields will be returned. 
+    # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
+    # @option opts [Integer] :limit The number of records to return at once. Limited to 100. (default to 10)
+    # @option opts [Integer] :skip The offset into the records to return. (default to 0)
+    # @option opts [Array<String>] :sort The comma separated fields used to sort the collection. Default sort is ascending, prefix with &#x60;-&#x60; to sort descending. 
+    # @option opts [String] :x_org_id  (default to )
+    # @return [Array<PolicyTemplate>]
+    def g_et_policytemplates(accept, content_type, opts = {})
+      data, _status_code, _headers = g_et_policytemplates_with_http_info(accept, content_type, opts)
+      return data
+    end
+
+    # Lists all of the Policy Templates
+    # This endpoint returns all policy templates.  #### Sample Request &#x60;&#x60;&#x60; curl -X GET https://console.jumpcloud.com/api/v2/policytemplates \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39;   &#x60;&#x60;&#x60;
+    # @param accept 
+    # @param content_type 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :fields The comma separated fields included in the returned records. If omitted, the default list of fields will be returned. 
+    # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
+    # @option opts [Integer] :limit The number of records to return at once. Limited to 100.
+    # @option opts [Integer] :skip The offset into the records to return.
+    # @option opts [Array<String>] :sort The comma separated fields used to sort the collection. Default sort is ascending, prefix with &#x60;-&#x60; to sort descending. 
+    # @option opts [String] :x_org_id 
+    # @return [Array<(Array<PolicyTemplate>, Fixnum, Hash)>] Array<PolicyTemplate> data, response status code and response headers
+    def g_et_policytemplates_with_http_info(accept, content_type, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: PoliciesApi.g_et_policytemplates ..."
+      end
+      # verify the required parameter 'accept' is set
+      if @api_client.config.client_side_validation && accept.nil?
+        fail ArgumentError, "Missing the required parameter 'accept' when calling PoliciesApi.g_et_policytemplates"
+      end
+      # verify the required parameter 'content_type' is set
+      if @api_client.config.client_side_validation && content_type.nil?
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling PoliciesApi.g_et_policytemplates"
+      end
+      if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling PoliciesApi.g_et_policytemplates, must be greater than or equal to 0.'
+      end
+
+      # resource path
+      local_var_path = "/policytemplates"
+
+      # query parameters
+      query_params = {}
+      query_params[:'fields'] = @api_client.build_collection_param(opts[:'fields'], :csv) if !opts[:'fields'].nil?
+      query_params[:'filter'] = @api_client.build_collection_param(opts[:'filter'], :csv) if !opts[:'filter'].nil?
+      query_params[:'limit'] = opts[:'limit'] if !opts[:'limit'].nil?
+      query_params[:'skip'] = opts[:'skip'] if !opts[:'skip'].nil?
+      query_params[:'sort'] = @api_client.build_collection_param(opts[:'sort'], :csv) if !opts[:'sort'].nil?
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+      header_params[:'Accept'] = accept
+      header_params[:'Content-Type'] = content_type
+      header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      auth_names = ['x-api-key']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'Array<PolicyTemplate>')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: PoliciesApi#g_et_policytemplates\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get a specific Policy Template
+    # This endpoint returns a specific policy template.  #### Sample Request ```  curl -X GET https://console.jumpcloud.com/api/v2/policies/{Policy_ID}\\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
+    # @param id ObjectID of the Policy Template.
+    # @param accept 
+    # @param content_type 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :x_org_id  (default to )
+    # @return [PolicyTemplateWithDetails]
+    def g_et_policytemplates_id(id, accept, content_type, opts = {})
+      data, _status_code, _headers = g_et_policytemplates_id_with_http_info(id, accept, content_type, opts)
+      return data
+    end
+
+    # Get a specific Policy Template
+    # This endpoint returns a specific policy template.  #### Sample Request &#x60;&#x60;&#x60;  curl -X GET https://console.jumpcloud.com/api/v2/policies/{Policy_ID}\\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
+    # @param id ObjectID of the Policy Template.
+    # @param accept 
+    # @param content_type 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :x_org_id 
+    # @return [Array<(PolicyTemplateWithDetails, Fixnum, Hash)>] PolicyTemplateWithDetails data, response status code and response headers
+    def g_et_policytemplates_id_with_http_info(id, accept, content_type, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: PoliciesApi.g_et_policytemplates_id ..."
+      end
+      # verify the required parameter 'id' is set
+      if @api_client.config.client_side_validation && id.nil?
+        fail ArgumentError, "Missing the required parameter 'id' when calling PoliciesApi.g_et_policytemplates_id"
+      end
+      # verify the required parameter 'accept' is set
+      if @api_client.config.client_side_validation && accept.nil?
+        fail ArgumentError, "Missing the required parameter 'accept' when calling PoliciesApi.g_et_policytemplates_id"
+      end
+      # verify the required parameter 'content_type' is set
+      if @api_client.config.client_side_validation && content_type.nil?
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling PoliciesApi.g_et_policytemplates_id"
+      end
+      # resource path
+      local_var_path = "/policytemplates/{id}".sub('{' + 'id' + '}', id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+      header_params[:'Accept'] = accept
+      header_params[:'Content-Type'] = content_type
+      header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      auth_names = ['x-api-key']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'PolicyTemplateWithDetails')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: PoliciesApi#g_et_policytemplates_id\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # List the policy statuses for a system
+    # This endpoint returns the policy results for a particular system.  ##### Sample Request  ``` curl -X GET https://console.jumpcloud.com/api/v2/systems/{System_ID}/policystatuses \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}'  ```
+    # @param system_id ObjectID of the System.
+    # @param accept 
+    # @param content_type 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :fields The comma separated fields included in the returned records. If omitted, the default list of fields will be returned. 
+    # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
+    # @option opts [Integer] :limit The number of records to return at once. Limited to 100. (default to 10)
+    # @option opts [Integer] :skip The offset into the records to return. (default to 0)
+    # @option opts [Array<String>] :sort The comma separated fields used to sort the collection. Default sort is ascending, prefix with &#x60;-&#x60; to sort descending. 
+    # @option opts [String] :x_org_id  (default to )
+    # @return [Array<PolicyResult>]
+    def g_et_systems_system_id_policystatuses(system_id, accept, content_type, opts = {})
+      data, _status_code, _headers = g_et_systems_system_id_policystatuses_with_http_info(system_id, accept, content_type, opts)
+      return data
+    end
+
+    # List the policy statuses for a system
+    # This endpoint returns the policy results for a particular system.  ##### Sample Request  &#x60;&#x60;&#x60; curl -X GET https://console.jumpcloud.com/api/v2/systems/{System_ID}/policystatuses \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39;  &#x60;&#x60;&#x60;
+    # @param system_id ObjectID of the System.
+    # @param accept 
+    # @param content_type 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Array<String>] :fields The comma separated fields included in the returned records. If omitted, the default list of fields will be returned. 
+    # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
+    # @option opts [Integer] :limit The number of records to return at once. Limited to 100.
+    # @option opts [Integer] :skip The offset into the records to return.
+    # @option opts [Array<String>] :sort The comma separated fields used to sort the collection. Default sort is ascending, prefix with &#x60;-&#x60; to sort descending. 
+    # @option opts [String] :x_org_id 
+    # @return [Array<(Array<PolicyResult>, Fixnum, Hash)>] Array<PolicyResult> data, response status code and response headers
+    def g_et_systems_system_id_policystatuses_with_http_info(system_id, accept, content_type, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: PoliciesApi.g_et_systems_system_id_policystatuses ..."
+      end
+      # verify the required parameter 'system_id' is set
+      if @api_client.config.client_side_validation && system_id.nil?
+        fail ArgumentError, "Missing the required parameter 'system_id' when calling PoliciesApi.g_et_systems_system_id_policystatuses"
+      end
+      # verify the required parameter 'accept' is set
+      if @api_client.config.client_side_validation && accept.nil?
+        fail ArgumentError, "Missing the required parameter 'accept' when calling PoliciesApi.g_et_systems_system_id_policystatuses"
+      end
+      # verify the required parameter 'content_type' is set
+      if @api_client.config.client_side_validation && content_type.nil?
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling PoliciesApi.g_et_systems_system_id_policystatuses"
+      end
+      if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling PoliciesApi.g_et_systems_system_id_policystatuses, must be greater than or equal to 0.'
+      end
+
+      # resource path
+      local_var_path = "/systems/{system_id}/policystatuses".sub('{' + 'system_id' + '}', system_id.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'fields'] = @api_client.build_collection_param(opts[:'fields'], :csv) if !opts[:'fields'].nil?
+      query_params[:'filter'] = @api_client.build_collection_param(opts[:'filter'], :csv) if !opts[:'filter'].nil?
+      query_params[:'limit'] = opts[:'limit'] if !opts[:'limit'].nil?
+      query_params[:'skip'] = opts[:'skip'] if !opts[:'skip'].nil?
+      query_params[:'sort'] = @api_client.build_collection_param(opts[:'sort'], :csv) if !opts[:'sort'].nil?
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+      header_params[:'Accept'] = accept
+      header_params[:'Content-Type'] = content_type
+      header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      auth_names = ['x-api-key']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'Array<PolicyResult>')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: PoliciesApi#g_et_systems_system_id_policystatuses\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
     # Create a new Policy
     # This endpoint allows you to create a policy. Given the amount of configurable parameters required to create a Policy, we suggest you use the JumpCloud Admin Console to create new policies.  ##### Sample Request ``` curl -X POST https://console.jumpcloud.com/api/v2/policies \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' \\   -d '{   {Policy_Parameters} }'  ```
-    # @param content_type 
     # @param accept 
+    # @param content_type 
     # @param [Hash] opts the optional parameters
     # @option opts [PolicyRequest] :body 
     # @option opts [String] :x_org_id  (default to )
     # @return [PolicyWithDetails]
-    def policies_post(content_type, accept, opts = {})
-      data, _status_code, _headers = policies_post_with_http_info(content_type, accept, opts)
+    def p_ost_policies(accept, content_type, opts = {})
+      data, _status_code, _headers = p_ost_policies_with_http_info(accept, content_type, opts)
       return data
     end
 
     # Create a new Policy
     # This endpoint allows you to create a policy. Given the amount of configurable parameters required to create a Policy, we suggest you use the JumpCloud Admin Console to create new policies.  ##### Sample Request &#x60;&#x60;&#x60; curl -X POST https://console.jumpcloud.com/api/v2/policies \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; \\   -d &#39;{   {Policy_Parameters} }&#39;  &#x60;&#x60;&#x60;
-    # @param content_type 
     # @param accept 
+    # @param content_type 
     # @param [Hash] opts the optional parameters
     # @option opts [PolicyRequest] :body 
     # @option opts [String] :x_org_id 
     # @return [Array<(PolicyWithDetails, Fixnum, Hash)>] PolicyWithDetails data, response status code and response headers
-    def policies_post_with_http_info(content_type, accept, opts = {})
+    def p_ost_policies_with_http_info(accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: PoliciesApi.policies_post ..."
-      end
-      # verify the required parameter 'content_type' is set
-      if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling PoliciesApi.policies_post"
+        @api_client.config.logger.debug "Calling API: PoliciesApi.p_ost_policies ..."
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling PoliciesApi.policies_post"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling PoliciesApi.p_ost_policies"
+      end
+      # verify the required parameter 'content_type' is set
+      if @api_client.config.client_side_validation && content_type.nil?
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling PoliciesApi.p_ost_policies"
       end
       # resource path
       local_var_path = "/policies"
@@ -625,8 +1139,8 @@ module JCAPIv2
       header_params['Accept'] = @api_client.select_header_accept(['application/json'])
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-      header_params[:'Content-Type'] = content_type
       header_params[:'Accept'] = accept
+      header_params[:'Content-Type'] = content_type
       header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
 
       # form parameters
@@ -643,7 +1157,80 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'PolicyWithDetails')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: PoliciesApi#policies_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: PoliciesApi#p_ost_policies\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Manage the associations of a Policy
+    # This endpoint allows you to manage the _direct_ associations of a Policy.  A direct association can be a non-homogeneous relationship between 2 different objects, for example Policies and Systems.  #### Sample Request ``` curl -X POST https://console.jumpcloud.com/api/v2/policies/{Policy_ID}/associations/ \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' \\   -d '{     \"op\": \"add\",     \"type\": \"system_group\",     \"id\": \"{Group_ID}\" }' ```
+    # @param policy_id ObjectID of the Policy.
+    # @param accept 
+    # @param content_type 
+    # @param [Hash] opts the optional parameters
+    # @option opts [GraphManagementReq] :body 
+    # @option opts [String] :x_org_id  (default to )
+    # @return [nil]
+    def p_ost_policies_policy_id_associations(policy_id, accept, content_type, opts = {})
+      p_ost_policies_policy_id_associations_with_http_info(policy_id, accept, content_type, opts)
+      return nil
+    end
+
+    # Manage the associations of a Policy
+    # This endpoint allows you to manage the _direct_ associations of a Policy.  A direct association can be a non-homogeneous relationship between 2 different objects, for example Policies and Systems.  #### Sample Request &#x60;&#x60;&#x60; curl -X POST https://console.jumpcloud.com/api/v2/policies/{Policy_ID}/associations/ \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; \\   -d &#39;{     \&quot;op\&quot;: \&quot;add\&quot;,     \&quot;type\&quot;: \&quot;system_group\&quot;,     \&quot;id\&quot;: \&quot;{Group_ID}\&quot; }&#39; &#x60;&#x60;&#x60;
+    # @param policy_id ObjectID of the Policy.
+    # @param accept 
+    # @param content_type 
+    # @param [Hash] opts the optional parameters
+    # @option opts [GraphManagementReq] :body 
+    # @option opts [String] :x_org_id 
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
+    def p_ost_policies_policy_id_associations_with_http_info(policy_id, accept, content_type, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: PoliciesApi.p_ost_policies_policy_id_associations ..."
+      end
+      # verify the required parameter 'policy_id' is set
+      if @api_client.config.client_side_validation && policy_id.nil?
+        fail ArgumentError, "Missing the required parameter 'policy_id' when calling PoliciesApi.p_ost_policies_policy_id_associations"
+      end
+      # verify the required parameter 'accept' is set
+      if @api_client.config.client_side_validation && accept.nil?
+        fail ArgumentError, "Missing the required parameter 'accept' when calling PoliciesApi.p_ost_policies_policy_id_associations"
+      end
+      # verify the required parameter 'content_type' is set
+      if @api_client.config.client_side_validation && content_type.nil?
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling PoliciesApi.p_ost_policies_policy_id_associations"
+      end
+      # resource path
+      local_var_path = "/policies/{policy_id}/associations".sub('{' + 'policy_id' + '}', policy_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+      header_params[:'Accept'] = accept
+      header_params[:'Content-Type'] = content_type
+      header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(opts[:'body'])
+      auth_names = ['x-api-key']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: PoliciesApi#p_ost_policies_policy_id_associations\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -655,8 +1242,8 @@ module JCAPIv2
     # @option opts [PolicyRequest] :body 
     # @option opts [String] :x_org_id  (default to )
     # @return [Policy]
-    def policies_put(id, opts = {})
-      data, _status_code, _headers = policies_put_with_http_info(id, opts)
+    def p_ut_policies_id(id, opts = {})
+      data, _status_code, _headers = p_ut_policies_id_with_http_info(id, opts)
       return data
     end
 
@@ -667,13 +1254,13 @@ module JCAPIv2
     # @option opts [PolicyRequest] :body 
     # @option opts [String] :x_org_id 
     # @return [Array<(Policy, Fixnum, Hash)>] Policy data, response status code and response headers
-    def policies_put_with_http_info(id, opts = {})
+    def p_ut_policies_id_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: PoliciesApi.policies_put ..."
+        @api_client.config.logger.debug "Calling API: PoliciesApi.p_ut_policies_id ..."
       end
       # verify the required parameter 'id' is set
       if @api_client.config.client_side_validation && id.nil?
-        fail ArgumentError, "Missing the required parameter 'id' when calling PoliciesApi.policies_put"
+        fail ArgumentError, "Missing the required parameter 'id' when calling PoliciesApi.p_ut_policies_id"
       end
       # resource path
       local_var_path = "/policies/{id}".sub('{' + 'id' + '}', id.to_s)
@@ -703,594 +1290,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Policy')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: PoliciesApi#policies_put\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-    # Get a specific Policy Result.
-    # This endpoint will return the policy results for a specific policy.  ##### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/policyresults/{Policy_ID} \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}'   ```
-    # @param id ObjectID of the Policy Result.
-    # @param content_type 
-    # @param accept 
-    # @param [Hash] opts the optional parameters
-    # @option opts [String] :x_org_id  (default to )
-    # @return [PolicyResult]
-    def policyresults_get(id, content_type, accept, opts = {})
-      data, _status_code, _headers = policyresults_get_with_http_info(id, content_type, accept, opts)
-      return data
-    end
-
-    # Get a specific Policy Result.
-    # This endpoint will return the policy results for a specific policy.  ##### Sample Request &#x60;&#x60;&#x60; curl -X GET https://console.jumpcloud.com/api/v2/policyresults/{Policy_ID} \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39;   &#x60;&#x60;&#x60;
-    # @param id ObjectID of the Policy Result.
-    # @param content_type 
-    # @param accept 
-    # @param [Hash] opts the optional parameters
-    # @option opts [String] :x_org_id 
-    # @return [Array<(PolicyResult, Fixnum, Hash)>] PolicyResult data, response status code and response headers
-    def policyresults_get_with_http_info(id, content_type, accept, opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: PoliciesApi.policyresults_get ..."
-      end
-      # verify the required parameter 'id' is set
-      if @api_client.config.client_side_validation && id.nil?
-        fail ArgumentError, "Missing the required parameter 'id' when calling PoliciesApi.policyresults_get"
-      end
-      # verify the required parameter 'content_type' is set
-      if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling PoliciesApi.policyresults_get"
-      end
-      # verify the required parameter 'accept' is set
-      if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling PoliciesApi.policyresults_get"
-      end
-      # resource path
-      local_var_path = "/policyresults/{id}".sub('{' + 'id' + '}', id.to_s)
-
-      # query parameters
-      query_params = {}
-
-      # header parameters
-      header_params = {}
-      # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
-      # HTTP header 'Content-Type'
-      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-      header_params[:'Content-Type'] = content_type
-      header_params[:'Accept'] = accept
-      header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
-
-      # form parameters
-      form_params = {}
-
-      # http body (model)
-      post_body = nil
-      auth_names = ['x-api-key']
-      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'PolicyResult')
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: PoliciesApi#policyresults_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-    # Lists all the policy results of a policy.
-    # This endpoint returns all policies results for a specific policy.  ##### Sample Request  ```  curl -X GET https://console.jumpcloud.com/api/v2/policies/{Policy_ID}/policyresults \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}'   ```
-    # @param policy_id 
-    # @param content_type 
-    # @param accept 
-    # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :fields The comma separated fields included in the returned records. If omitted, the default list of fields will be returned. 
-    # @option opts [Array<String>] :filter Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
-    # @option opts [Integer] :limit The number of records to return at once. Limited to 100. (default to 10)
-    # @option opts [String] :x_org_id  (default to )
-    # @option opts [Integer] :skip The offset into the records to return. (default to 0)
-    # @option opts [Array<String>] :sort The comma separated fields used to sort the collection. Default sort is ascending, prefix with &#x60;-&#x60; to sort descending. 
-    # @return [Array<PolicyResult>]
-    def policyresults_list(policy_id, content_type, accept, opts = {})
-      data, _status_code, _headers = policyresults_list_with_http_info(policy_id, content_type, accept, opts)
-      return data
-    end
-
-    # Lists all the policy results of a policy.
-    # This endpoint returns all policies results for a specific policy.  ##### Sample Request  &#x60;&#x60;&#x60;  curl -X GET https://console.jumpcloud.com/api/v2/policies/{Policy_ID}/policyresults \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39;   &#x60;&#x60;&#x60;
-    # @param policy_id 
-    # @param content_type 
-    # @param accept 
-    # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :fields The comma separated fields included in the returned records. If omitted, the default list of fields will be returned. 
-    # @option opts [Array<String>] :filter Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
-    # @option opts [Integer] :limit The number of records to return at once. Limited to 100.
-    # @option opts [String] :x_org_id 
-    # @option opts [Integer] :skip The offset into the records to return.
-    # @option opts [Array<String>] :sort The comma separated fields used to sort the collection. Default sort is ascending, prefix with &#x60;-&#x60; to sort descending. 
-    # @return [Array<(Array<PolicyResult>, Fixnum, Hash)>] Array<PolicyResult> data, response status code and response headers
-    def policyresults_list_with_http_info(policy_id, content_type, accept, opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: PoliciesApi.policyresults_list ..."
-      end
-      # verify the required parameter 'policy_id' is set
-      if @api_client.config.client_side_validation && policy_id.nil?
-        fail ArgumentError, "Missing the required parameter 'policy_id' when calling PoliciesApi.policyresults_list"
-      end
-      # verify the required parameter 'content_type' is set
-      if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling PoliciesApi.policyresults_list"
-      end
-      # verify the required parameter 'accept' is set
-      if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling PoliciesApi.policyresults_list"
-      end
-      if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling PoliciesApi.policyresults_list, must be greater than or equal to 0.'
-      end
-
-      # resource path
-      local_var_path = "/policies/{policy_id}/policyresults".sub('{' + 'policy_id' + '}', policy_id.to_s)
-
-      # query parameters
-      query_params = {}
-      query_params[:'fields'] = @api_client.build_collection_param(opts[:'fields'], :csv) if !opts[:'fields'].nil?
-      query_params[:'filter'] = @api_client.build_collection_param(opts[:'filter'], :csv) if !opts[:'filter'].nil?
-      query_params[:'limit'] = opts[:'limit'] if !opts[:'limit'].nil?
-      query_params[:'skip'] = opts[:'skip'] if !opts[:'skip'].nil?
-      query_params[:'sort'] = @api_client.build_collection_param(opts[:'sort'], :csv) if !opts[:'sort'].nil?
-
-      # header parameters
-      header_params = {}
-      # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
-      # HTTP header 'Content-Type'
-      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-      header_params[:'Content-Type'] = content_type
-      header_params[:'Accept'] = accept
-      header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
-
-      # form parameters
-      form_params = {}
-
-      # http body (model)
-      post_body = nil
-      auth_names = ['x-api-key']
-      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'Array<PolicyResult>')
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: PoliciesApi#policyresults_list\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-    # Lists all the policy results for an organization.
-    # This endpoint returns all policies results for an organization.  ##### Sample Request  ```  curl -X GET https://console.jumpcloud.com/api/v2/policyresults \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}'   ```
-    # @param content_type 
-    # @param accept 
-    # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :fields The comma separated fields included in the returned records. If omitted, the default list of fields will be returned. 
-    # @option opts [Array<String>] :filter Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
-    # @option opts [Integer] :limit The number of records to return at once. Limited to 100. (default to 10)
-    # @option opts [String] :x_org_id  (default to )
-    # @option opts [Integer] :skip The offset into the records to return. (default to 0)
-    # @option opts [Array<String>] :sort The comma separated fields used to sort the collection. Default sort is ascending, prefix with &#x60;-&#x60; to sort descending. 
-    # @return [Array<PolicyResult>]
-    def policyresults_org_list(content_type, accept, opts = {})
-      data, _status_code, _headers = policyresults_org_list_with_http_info(content_type, accept, opts)
-      return data
-    end
-
-    # Lists all the policy results for an organization.
-    # This endpoint returns all policies results for an organization.  ##### Sample Request  &#x60;&#x60;&#x60;  curl -X GET https://console.jumpcloud.com/api/v2/policyresults \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39;   &#x60;&#x60;&#x60;
-    # @param content_type 
-    # @param accept 
-    # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :fields The comma separated fields included in the returned records. If omitted, the default list of fields will be returned. 
-    # @option opts [Array<String>] :filter Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
-    # @option opts [Integer] :limit The number of records to return at once. Limited to 100.
-    # @option opts [String] :x_org_id 
-    # @option opts [Integer] :skip The offset into the records to return.
-    # @option opts [Array<String>] :sort The comma separated fields used to sort the collection. Default sort is ascending, prefix with &#x60;-&#x60; to sort descending. 
-    # @return [Array<(Array<PolicyResult>, Fixnum, Hash)>] Array<PolicyResult> data, response status code and response headers
-    def policyresults_org_list_with_http_info(content_type, accept, opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: PoliciesApi.policyresults_org_list ..."
-      end
-      # verify the required parameter 'content_type' is set
-      if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling PoliciesApi.policyresults_org_list"
-      end
-      # verify the required parameter 'accept' is set
-      if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling PoliciesApi.policyresults_org_list"
-      end
-      if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling PoliciesApi.policyresults_org_list, must be greater than or equal to 0.'
-      end
-
-      # resource path
-      local_var_path = "/policyresults"
-
-      # query parameters
-      query_params = {}
-      query_params[:'fields'] = @api_client.build_collection_param(opts[:'fields'], :csv) if !opts[:'fields'].nil?
-      query_params[:'filter'] = @api_client.build_collection_param(opts[:'filter'], :csv) if !opts[:'filter'].nil?
-      query_params[:'limit'] = opts[:'limit'] if !opts[:'limit'].nil?
-      query_params[:'skip'] = opts[:'skip'] if !opts[:'skip'].nil?
-      query_params[:'sort'] = @api_client.build_collection_param(opts[:'sort'], :csv) if !opts[:'sort'].nil?
-
-      # header parameters
-      header_params = {}
-      # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
-      # HTTP header 'Content-Type'
-      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-      header_params[:'Content-Type'] = content_type
-      header_params[:'Accept'] = accept
-      header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
-
-      # form parameters
-      form_params = {}
-
-      # http body (model)
-      post_body = nil
-      auth_names = ['x-api-key']
-      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'Array<PolicyResult>')
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: PoliciesApi#policyresults_org_list\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-    # Lists the latest policy results of a policy.
-    # This endpoint returns the latest policies results for a specific policy.  ##### Sample Request  ```  curl -X GET https://console.jumpcloud.com/api/v2/policies/{Policy_ID}/policystatuses \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}'   ```
-    # @param policy_id 
-    # @param content_type 
-    # @param accept 
-    # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :fields The comma separated fields included in the returned records. If omitted, the default list of fields will be returned. 
-    # @option opts [Array<String>] :filter Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
-    # @option opts [Integer] :limit The number of records to return at once. Limited to 100. (default to 10)
-    # @option opts [Integer] :skip The offset into the records to return. (default to 0)
-    # @option opts [Array<String>] :sort The comma separated fields used to sort the collection. Default sort is ascending, prefix with &#x60;-&#x60; to sort descending. 
-    # @option opts [String] :x_org_id  (default to )
-    # @return [Array<PolicyResult>]
-    def policystatuses_list(policy_id, content_type, accept, opts = {})
-      data, _status_code, _headers = policystatuses_list_with_http_info(policy_id, content_type, accept, opts)
-      return data
-    end
-
-    # Lists the latest policy results of a policy.
-    # This endpoint returns the latest policies results for a specific policy.  ##### Sample Request  &#x60;&#x60;&#x60;  curl -X GET https://console.jumpcloud.com/api/v2/policies/{Policy_ID}/policystatuses \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39;   &#x60;&#x60;&#x60;
-    # @param policy_id 
-    # @param content_type 
-    # @param accept 
-    # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :fields The comma separated fields included in the returned records. If omitted, the default list of fields will be returned. 
-    # @option opts [Array<String>] :filter Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
-    # @option opts [Integer] :limit The number of records to return at once. Limited to 100.
-    # @option opts [Integer] :skip The offset into the records to return.
-    # @option opts [Array<String>] :sort The comma separated fields used to sort the collection. Default sort is ascending, prefix with &#x60;-&#x60; to sort descending. 
-    # @option opts [String] :x_org_id 
-    # @return [Array<(Array<PolicyResult>, Fixnum, Hash)>] Array<PolicyResult> data, response status code and response headers
-    def policystatuses_list_with_http_info(policy_id, content_type, accept, opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: PoliciesApi.policystatuses_list ..."
-      end
-      # verify the required parameter 'policy_id' is set
-      if @api_client.config.client_side_validation && policy_id.nil?
-        fail ArgumentError, "Missing the required parameter 'policy_id' when calling PoliciesApi.policystatuses_list"
-      end
-      # verify the required parameter 'content_type' is set
-      if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling PoliciesApi.policystatuses_list"
-      end
-      # verify the required parameter 'accept' is set
-      if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling PoliciesApi.policystatuses_list"
-      end
-      if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling PoliciesApi.policystatuses_list, must be greater than or equal to 0.'
-      end
-
-      # resource path
-      local_var_path = "/policies/{policy_id}/policystatuses".sub('{' + 'policy_id' + '}', policy_id.to_s)
-
-      # query parameters
-      query_params = {}
-      query_params[:'fields'] = @api_client.build_collection_param(opts[:'fields'], :csv) if !opts[:'fields'].nil?
-      query_params[:'filter'] = @api_client.build_collection_param(opts[:'filter'], :csv) if !opts[:'filter'].nil?
-      query_params[:'limit'] = opts[:'limit'] if !opts[:'limit'].nil?
-      query_params[:'skip'] = opts[:'skip'] if !opts[:'skip'].nil?
-      query_params[:'sort'] = @api_client.build_collection_param(opts[:'sort'], :csv) if !opts[:'sort'].nil?
-
-      # header parameters
-      header_params = {}
-      # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
-      # HTTP header 'Content-Type'
-      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-      header_params[:'Content-Type'] = content_type
-      header_params[:'Accept'] = accept
-      header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
-
-      # form parameters
-      form_params = {}
-
-      # http body (model)
-      post_body = nil
-      auth_names = ['x-api-key']
-      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'Array<PolicyResult>')
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: PoliciesApi#policystatuses_list\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-    # List the policy statuses for a system
-    # This endpoint returns the policy results for a particular system.  ##### Sample Request  ``` curl -X GET https://console.jumpcloud.com/api/v2/systems/{System_ID}/policystatuses \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}'  ```
-    # @param system_id ObjectID of the System.
-    # @param content_type 
-    # @param accept 
-    # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :fields The comma separated fields included in the returned records. If omitted, the default list of fields will be returned. 
-    # @option opts [Array<String>] :filter Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
-    # @option opts [Integer] :limit The number of records to return at once. Limited to 100. (default to 10)
-    # @option opts [Integer] :skip The offset into the records to return. (default to 0)
-    # @option opts [Array<String>] :sort The comma separated fields used to sort the collection. Default sort is ascending, prefix with &#x60;-&#x60; to sort descending. 
-    # @option opts [String] :x_org_id  (default to )
-    # @return [Array<PolicyResult>]
-    def policystatuses_list_0(system_id, content_type, accept, opts = {})
-      data, _status_code, _headers = policystatuses_list_0_with_http_info(system_id, content_type, accept, opts)
-      return data
-    end
-
-    # List the policy statuses for a system
-    # This endpoint returns the policy results for a particular system.  ##### Sample Request  &#x60;&#x60;&#x60; curl -X GET https://console.jumpcloud.com/api/v2/systems/{System_ID}/policystatuses \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39;  &#x60;&#x60;&#x60;
-    # @param system_id ObjectID of the System.
-    # @param content_type 
-    # @param accept 
-    # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :fields The comma separated fields included in the returned records. If omitted, the default list of fields will be returned. 
-    # @option opts [Array<String>] :filter Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
-    # @option opts [Integer] :limit The number of records to return at once. Limited to 100.
-    # @option opts [Integer] :skip The offset into the records to return.
-    # @option opts [Array<String>] :sort The comma separated fields used to sort the collection. Default sort is ascending, prefix with &#x60;-&#x60; to sort descending. 
-    # @option opts [String] :x_org_id 
-    # @return [Array<(Array<PolicyResult>, Fixnum, Hash)>] Array<PolicyResult> data, response status code and response headers
-    def policystatuses_list_0_with_http_info(system_id, content_type, accept, opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: PoliciesApi.policystatuses_list_0 ..."
-      end
-      # verify the required parameter 'system_id' is set
-      if @api_client.config.client_side_validation && system_id.nil?
-        fail ArgumentError, "Missing the required parameter 'system_id' when calling PoliciesApi.policystatuses_list_0"
-      end
-      # verify the required parameter 'content_type' is set
-      if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling PoliciesApi.policystatuses_list_0"
-      end
-      # verify the required parameter 'accept' is set
-      if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling PoliciesApi.policystatuses_list_0"
-      end
-      if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling PoliciesApi.policystatuses_list_0, must be greater than or equal to 0.'
-      end
-
-      # resource path
-      local_var_path = "/systems/{system_id}/policystatuses".sub('{' + 'system_id' + '}', system_id.to_s)
-
-      # query parameters
-      query_params = {}
-      query_params[:'fields'] = @api_client.build_collection_param(opts[:'fields'], :csv) if !opts[:'fields'].nil?
-      query_params[:'filter'] = @api_client.build_collection_param(opts[:'filter'], :csv) if !opts[:'filter'].nil?
-      query_params[:'limit'] = opts[:'limit'] if !opts[:'limit'].nil?
-      query_params[:'skip'] = opts[:'skip'] if !opts[:'skip'].nil?
-      query_params[:'sort'] = @api_client.build_collection_param(opts[:'sort'], :csv) if !opts[:'sort'].nil?
-
-      # header parameters
-      header_params = {}
-      # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
-      # HTTP header 'Content-Type'
-      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-      header_params[:'Content-Type'] = content_type
-      header_params[:'Accept'] = accept
-      header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
-
-      # form parameters
-      form_params = {}
-
-      # http body (model)
-      post_body = nil
-      auth_names = ['x-api-key']
-      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'Array<PolicyResult>')
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: PoliciesApi#policystatuses_list_0\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-    # Get a specific Policy Template
-    # This endpoint returns a specific policy template.  #### Sample Request ```  curl -X GET https://console.jumpcloud.com/api/v2/policies/{Policy_ID}\\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
-    # @param id ObjectID of the Policy Template.
-    # @param content_type 
-    # @param accept 
-    # @param [Hash] opts the optional parameters
-    # @option opts [String] :x_org_id  (default to )
-    # @return [PolicyTemplateWithDetails]
-    def policytemplates_get(id, content_type, accept, opts = {})
-      data, _status_code, _headers = policytemplates_get_with_http_info(id, content_type, accept, opts)
-      return data
-    end
-
-    # Get a specific Policy Template
-    # This endpoint returns a specific policy template.  #### Sample Request &#x60;&#x60;&#x60;  curl -X GET https://console.jumpcloud.com/api/v2/policies/{Policy_ID}\\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
-    # @param id ObjectID of the Policy Template.
-    # @param content_type 
-    # @param accept 
-    # @param [Hash] opts the optional parameters
-    # @option opts [String] :x_org_id 
-    # @return [Array<(PolicyTemplateWithDetails, Fixnum, Hash)>] PolicyTemplateWithDetails data, response status code and response headers
-    def policytemplates_get_with_http_info(id, content_type, accept, opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: PoliciesApi.policytemplates_get ..."
-      end
-      # verify the required parameter 'id' is set
-      if @api_client.config.client_side_validation && id.nil?
-        fail ArgumentError, "Missing the required parameter 'id' when calling PoliciesApi.policytemplates_get"
-      end
-      # verify the required parameter 'content_type' is set
-      if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling PoliciesApi.policytemplates_get"
-      end
-      # verify the required parameter 'accept' is set
-      if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling PoliciesApi.policytemplates_get"
-      end
-      # resource path
-      local_var_path = "/policytemplates/{id}".sub('{' + 'id' + '}', id.to_s)
-
-      # query parameters
-      query_params = {}
-
-      # header parameters
-      header_params = {}
-      # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
-      # HTTP header 'Content-Type'
-      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-      header_params[:'Content-Type'] = content_type
-      header_params[:'Accept'] = accept
-      header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
-
-      # form parameters
-      form_params = {}
-
-      # http body (model)
-      post_body = nil
-      auth_names = ['x-api-key']
-      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'PolicyTemplateWithDetails')
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: PoliciesApi#policytemplates_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-    # Lists all of the Policy Templates
-    # This endpoint returns all policy templates.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/policytemplates \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}'   ```
-    # @param content_type 
-    # @param accept 
-    # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :fields The comma separated fields included in the returned records. If omitted, the default list of fields will be returned. 
-    # @option opts [Array<String>] :filter Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
-    # @option opts [Integer] :limit The number of records to return at once. Limited to 100. (default to 10)
-    # @option opts [Integer] :skip The offset into the records to return. (default to 0)
-    # @option opts [Array<String>] :sort The comma separated fields used to sort the collection. Default sort is ascending, prefix with &#x60;-&#x60; to sort descending. 
-    # @option opts [String] :x_org_id  (default to )
-    # @return [Array<PolicyTemplate>]
-    def policytemplates_list(content_type, accept, opts = {})
-      data, _status_code, _headers = policytemplates_list_with_http_info(content_type, accept, opts)
-      return data
-    end
-
-    # Lists all of the Policy Templates
-    # This endpoint returns all policy templates.  #### Sample Request &#x60;&#x60;&#x60; curl -X GET https://console.jumpcloud.com/api/v2/policytemplates \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39;   &#x60;&#x60;&#x60;
-    # @param content_type 
-    # @param accept 
-    # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :fields The comma separated fields included in the returned records. If omitted, the default list of fields will be returned. 
-    # @option opts [Array<String>] :filter Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
-    # @option opts [Integer] :limit The number of records to return at once. Limited to 100.
-    # @option opts [Integer] :skip The offset into the records to return.
-    # @option opts [Array<String>] :sort The comma separated fields used to sort the collection. Default sort is ascending, prefix with &#x60;-&#x60; to sort descending. 
-    # @option opts [String] :x_org_id 
-    # @return [Array<(Array<PolicyTemplate>, Fixnum, Hash)>] Array<PolicyTemplate> data, response status code and response headers
-    def policytemplates_list_with_http_info(content_type, accept, opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: PoliciesApi.policytemplates_list ..."
-      end
-      # verify the required parameter 'content_type' is set
-      if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling PoliciesApi.policytemplates_list"
-      end
-      # verify the required parameter 'accept' is set
-      if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling PoliciesApi.policytemplates_list"
-      end
-      if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling PoliciesApi.policytemplates_list, must be greater than or equal to 0.'
-      end
-
-      # resource path
-      local_var_path = "/policytemplates"
-
-      # query parameters
-      query_params = {}
-      query_params[:'fields'] = @api_client.build_collection_param(opts[:'fields'], :csv) if !opts[:'fields'].nil?
-      query_params[:'filter'] = @api_client.build_collection_param(opts[:'filter'], :csv) if !opts[:'filter'].nil?
-      query_params[:'limit'] = opts[:'limit'] if !opts[:'limit'].nil?
-      query_params[:'skip'] = opts[:'skip'] if !opts[:'skip'].nil?
-      query_params[:'sort'] = @api_client.build_collection_param(opts[:'sort'], :csv) if !opts[:'sort'].nil?
-
-      # header parameters
-      header_params = {}
-      # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
-      # HTTP header 'Content-Type'
-      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-      header_params[:'Content-Type'] = content_type
-      header_params[:'Accept'] = accept
-      header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
-
-      # form parameters
-      form_params = {}
-
-      # http body (model)
-      post_body = nil
-      auth_names = ['x-api-key']
-      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'Array<PolicyTemplate>')
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: PoliciesApi#policytemplates_list\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: PoliciesApi#p_ut_policies_id\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

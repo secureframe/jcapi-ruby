@@ -1,7 +1,7 @@
 =begin
 #JumpCloud APIs
 
-# JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
+#JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
 
 OpenAPI spec version: 2.0
 
@@ -17,6 +17,12 @@ module JCAPIv2
   class UserGroupPut
     attr_accessor :attributes
 
+    # Email address of a User Group
+    attr_accessor :email
+
+    # Description of a User Group
+    attr_accessor :description
+
     # Display name of a User Group.
     attr_accessor :name
 
@@ -25,6 +31,8 @@ module JCAPIv2
     def self.attribute_map
       {
         :'attributes' => :'attributes',
+        :'email' => :'email',
+        :'description' => :'description',
         :'name' => :'name'
       }
     end
@@ -33,6 +41,8 @@ module JCAPIv2
     def self.swagger_types
       {
         :'attributes' => :'UserGroupAttributes',
+        :'email' => :'String',
+        :'description' => :'String',
         :'name' => :'String'
       }
     end
@@ -47,6 +57,14 @@ module JCAPIv2
 
       if attributes.has_key?(:'attributes')
         self.attributes = attributes[:'attributes']
+      end
+
+      if attributes.has_key?(:'email')
+        self.email = attributes[:'email']
+      end
+
+      if attributes.has_key?(:'description')
+        self.description = attributes[:'description']
       end
 
       if attributes.has_key?(:'name')
@@ -79,6 +97,8 @@ module JCAPIv2
       return true if self.equal?(o)
       self.class == o.class &&
           attributes == o.attributes &&
+          email == o.email &&
+          description == o.description &&
           name == o.name
     end
 
@@ -91,7 +111,7 @@ module JCAPIv2
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [attributes, name].hash
+      [attributes, email, description, name].hash
     end
 
     # Builds the object from hash

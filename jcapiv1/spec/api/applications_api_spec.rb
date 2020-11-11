@@ -1,7 +1,7 @@
 =begin
 #JumpCloud APIs
 
-# JumpCloud's V1 API. This set of endpoints allows JumpCloud customers to manage commands, systems, & system users.
+#JumpCloud's V1 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
 
 OpenAPI spec version: 1.0
 
@@ -32,7 +32,7 @@ describe 'ApplicationsApi' do
     end
   end
 
-  # unit tests for applications_delete
+  # unit tests for d_elete_applications_id
   # Delete an Application
   # The endpoint deletes an SSO / SAML Application.
   # @param id 
@@ -41,13 +41,32 @@ describe 'ApplicationsApi' do
   # @option opts [String] :accept 
   # @option opts [String] :x_org_id 
   # @return [Application]
-  describe 'applications_delete test' do
+  describe 'd_elete_applications_id test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for applications_get
+  # unit tests for g_et_applications
+  # Applications
+  # The endpoint returns all your SSO / SAML Applications.  #### Sample Request &#x60;&#x60;&#x60; curl -X GET https://console.jumpcloud.com/api/applications \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39;   &#x60;&#x60;&#x60;
+  # @param accept 
+  # @param content_type 
+  # @param [Hash] opts the optional parameters
+  # @option opts [String] :fields The comma separated fields included in the returned records. If omitted the default list of fields will be returned.
+  # @option opts [Integer] :limit The number of records to return at once.
+  # @option opts [Integer] :skip The offset into the records to return.
+  # @option opts [String] :sort 
+  # @option opts [String] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
+  # @option opts [String] :x_org_id 
+  # @return [Applicationslist]
+  describe 'g_et_applications test' do
+    it "should work" do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for g_et_applications_id
   # Get an Application
   # The endpoint retrieves an SSO / SAML Application.
   # @param id 
@@ -56,32 +75,13 @@ describe 'ApplicationsApi' do
   # @option opts [String] :accept 
   # @option opts [String] :x_org_id 
   # @return [Application]
-  describe 'applications_get test' do
+  describe 'g_et_applications_id test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for applications_list
-  # Applications
-  # The endpoint returns all your SSO / SAML Applications.  #### Sample Request &#x60;&#x60;&#x60; curl -X GET https://console.jumpcloud.com/api/applications \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39;  &#x60;&#x60;&#x60;
-  # @param content_type 
-  # @param accept 
-  # @param [Hash] opts the optional parameters
-  # @option opts [String] :fields The comma separated fields included in the returned records. If omitted the default list of fields will be returned.
-  # @option opts [Integer] :limit The number of records to return at once.
-  # @option opts [Integer] :skip The offset into the records to return.
-  # @option opts [String] :sort 
-  # @option opts [String] :filter A filter to apply to the query.
-  # @option opts [String] :x_org_id 
-  # @return [Applicationslist]
-  describe 'applications_list test' do
-    it "should work" do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
-  # unit tests for applications_post
+  # unit tests for p_ost_applications
   # Create an Application
   # The endpoint adds a new SSO / SAML Applications.
   # @param [Hash] opts the optional parameters
@@ -90,13 +90,13 @@ describe 'ApplicationsApi' do
   # @option opts [String] :accept 
   # @option opts [String] :x_org_id 
   # @return [Application]
-  describe 'applications_post test' do
+  describe 'p_ost_applications test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for applications_put
+  # unit tests for p_ut_applications_id
   # Update an Application
   # The endpoint updates a SSO / SAML Application.
   # @param id 
@@ -106,7 +106,7 @@ describe 'ApplicationsApi' do
   # @option opts [String] :accept 
   # @option opts [String] :x_org_id 
   # @return [Application]
-  describe 'applications_put test' do
+  describe 'p_ut_applications_id test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

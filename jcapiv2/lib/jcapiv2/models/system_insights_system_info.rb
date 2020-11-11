@@ -1,7 +1,7 @@
 =begin
 #JumpCloud APIs
 
-# JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
+#JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
 
 OpenAPI spec version: 2.0
 
@@ -17,59 +17,14 @@ module JCAPIv2
   class SystemInsightsSystemInfo
     attr_accessor :collection_time
 
-    attr_accessor :computer_name
-
-    attr_accessor :cpu_brand
-
-    attr_accessor :cpu_logical_cores
-
-    attr_accessor :cpu_microcode
-
-    attr_accessor :cpu_physical_cores
-
-    attr_accessor :cpu_subtype
-
-    attr_accessor :cpu_type
-
-    attr_accessor :hardware_model
-
-    attr_accessor :hardware_serial
-
-    attr_accessor :hardware_vendor
-
-    attr_accessor :hardware_version
-
-    attr_accessor :hostname
-
-    attr_accessor :local_hostname
-
-    attr_accessor :physical_memory
-
     attr_accessor :system_id
-
-    attr_accessor :uuid
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         :'collection_time' => :'collection_time',
-        :'computer_name' => :'computer_name',
-        :'cpu_brand' => :'cpu_brand',
-        :'cpu_logical_cores' => :'cpu_logical_cores',
-        :'cpu_microcode' => :'cpu_microcode',
-        :'cpu_physical_cores' => :'cpu_physical_cores',
-        :'cpu_subtype' => :'cpu_subtype',
-        :'cpu_type' => :'cpu_type',
-        :'hardware_model' => :'hardware_model',
-        :'hardware_serial' => :'hardware_serial',
-        :'hardware_vendor' => :'hardware_vendor',
-        :'hardware_version' => :'hardware_version',
-        :'hostname' => :'hostname',
-        :'local_hostname' => :'local_hostname',
-        :'physical_memory' => :'physical_memory',
-        :'system_id' => :'system_id',
-        :'uuid' => :'uuid'
+        :'system_id' => :'system_id'
       }
     end
 
@@ -77,22 +32,7 @@ module JCAPIv2
     def self.swagger_types
       {
         :'collection_time' => :'String',
-        :'computer_name' => :'String',
-        :'cpu_brand' => :'String',
-        :'cpu_logical_cores' => :'Integer',
-        :'cpu_microcode' => :'String',
-        :'cpu_physical_cores' => :'Integer',
-        :'cpu_subtype' => :'String',
-        :'cpu_type' => :'String',
-        :'hardware_model' => :'String',
-        :'hardware_serial' => :'String',
-        :'hardware_vendor' => :'String',
-        :'hardware_version' => :'String',
-        :'hostname' => :'String',
-        :'local_hostname' => :'String',
-        :'physical_memory' => :'String',
-        :'system_id' => :'String',
-        :'uuid' => :'String'
+        :'system_id' => :'String'
       }
     end
 
@@ -108,68 +48,8 @@ module JCAPIv2
         self.collection_time = attributes[:'collection_time']
       end
 
-      if attributes.has_key?(:'computer_name')
-        self.computer_name = attributes[:'computer_name']
-      end
-
-      if attributes.has_key?(:'cpu_brand')
-        self.cpu_brand = attributes[:'cpu_brand']
-      end
-
-      if attributes.has_key?(:'cpu_logical_cores')
-        self.cpu_logical_cores = attributes[:'cpu_logical_cores']
-      end
-
-      if attributes.has_key?(:'cpu_microcode')
-        self.cpu_microcode = attributes[:'cpu_microcode']
-      end
-
-      if attributes.has_key?(:'cpu_physical_cores')
-        self.cpu_physical_cores = attributes[:'cpu_physical_cores']
-      end
-
-      if attributes.has_key?(:'cpu_subtype')
-        self.cpu_subtype = attributes[:'cpu_subtype']
-      end
-
-      if attributes.has_key?(:'cpu_type')
-        self.cpu_type = attributes[:'cpu_type']
-      end
-
-      if attributes.has_key?(:'hardware_model')
-        self.hardware_model = attributes[:'hardware_model']
-      end
-
-      if attributes.has_key?(:'hardware_serial')
-        self.hardware_serial = attributes[:'hardware_serial']
-      end
-
-      if attributes.has_key?(:'hardware_vendor')
-        self.hardware_vendor = attributes[:'hardware_vendor']
-      end
-
-      if attributes.has_key?(:'hardware_version')
-        self.hardware_version = attributes[:'hardware_version']
-      end
-
-      if attributes.has_key?(:'hostname')
-        self.hostname = attributes[:'hostname']
-      end
-
-      if attributes.has_key?(:'local_hostname')
-        self.local_hostname = attributes[:'local_hostname']
-      end
-
-      if attributes.has_key?(:'physical_memory')
-        self.physical_memory = attributes[:'physical_memory']
-      end
-
       if attributes.has_key?(:'system_id')
         self.system_id = attributes[:'system_id']
-      end
-
-      if attributes.has_key?(:'uuid')
-        self.uuid = attributes[:'uuid']
       end
 
     end
@@ -193,22 +73,7 @@ module JCAPIv2
       return true if self.equal?(o)
       self.class == o.class &&
           collection_time == o.collection_time &&
-          computer_name == o.computer_name &&
-          cpu_brand == o.cpu_brand &&
-          cpu_logical_cores == o.cpu_logical_cores &&
-          cpu_microcode == o.cpu_microcode &&
-          cpu_physical_cores == o.cpu_physical_cores &&
-          cpu_subtype == o.cpu_subtype &&
-          cpu_type == o.cpu_type &&
-          hardware_model == o.hardware_model &&
-          hardware_serial == o.hardware_serial &&
-          hardware_vendor == o.hardware_vendor &&
-          hardware_version == o.hardware_version &&
-          hostname == o.hostname &&
-          local_hostname == o.local_hostname &&
-          physical_memory == o.physical_memory &&
-          system_id == o.system_id &&
-          uuid == o.uuid
+          system_id == o.system_id
     end
 
     # @see the `==` method
@@ -220,7 +85,7 @@ module JCAPIv2
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [collection_time, computer_name, cpu_brand, cpu_logical_cores, cpu_microcode, cpu_physical_cores, cpu_subtype, cpu_type, hardware_model, hardware_serial, hardware_vendor, hardware_version, hostname, local_hostname, physical_memory, system_id, uuid].hash
+      [collection_time, system_id].hash
     end
 
     # Builds the object from hash

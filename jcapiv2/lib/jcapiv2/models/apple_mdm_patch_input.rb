@@ -1,7 +1,7 @@
 =begin
 #JumpCloud APIs
 
-# JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
+#JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
 
 OpenAPI spec version: 2.0
 
@@ -18,15 +18,22 @@ module JCAPIv2
     # A signed certificate obtained from Apple after providing Apple with the plist file provided on POST.
     attr_accessor :apple_signed_cert
 
+    # The S/MIME encoded DEP Server Token returned by Apple Business Manager when creating an MDM instance.
+    attr_accessor :encrypted_dep_server_token
+
     # A new name for the Apple MDM configuration.
     attr_accessor :name
+
+    attr_accessor :dep
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         :'apple_signed_cert' => :'appleSignedCert',
-        :'name' => :'name'
+        :'encrypted_dep_server_token' => :'encryptedDepServerToken',
+        :'name' => :'name',
+        :'dep' => :'dep'
       }
     end
 
@@ -34,7 +41,9 @@ module JCAPIv2
     def self.swagger_types
       {
         :'apple_signed_cert' => :'String',
-        :'name' => :'String'
+        :'encrypted_dep_server_token' => :'String',
+        :'name' => :'String',
+        :'dep' => :'DEP'
       }
     end
 
@@ -50,8 +59,16 @@ module JCAPIv2
         self.apple_signed_cert = attributes[:'appleSignedCert']
       end
 
+      if attributes.has_key?(:'encryptedDepServerToken')
+        self.encrypted_dep_server_token = attributes[:'encryptedDepServerToken']
+      end
+
       if attributes.has_key?(:'name')
         self.name = attributes[:'name']
+      end
+
+      if attributes.has_key?(:'dep')
+        self.dep = attributes[:'dep']
       end
 
     end
@@ -91,7 +108,9 @@ module JCAPIv2
       return true if self.equal?(o)
       self.class == o.class &&
           apple_signed_cert == o.apple_signed_cert &&
-          name == o.name
+          encrypted_dep_server_token == o.encrypted_dep_server_token &&
+          name == o.name &&
+          dep == o.dep
     end
 
     # @see the `==` method
@@ -103,7 +122,7 @@ module JCAPIv2
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [apple_signed_cert, name].hash
+      [apple_signed_cert, encrypted_dep_server_token, name, dep].hash
     end
 
     # Builds the object from hash

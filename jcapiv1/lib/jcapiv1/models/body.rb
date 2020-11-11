@@ -1,7 +1,7 @@
 =begin
 #JumpCloud APIs
 
-# JumpCloud's V1 API. This set of endpoints allows JumpCloud customers to manage commands, systems, & system users.
+#JumpCloud's V1 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
 
 OpenAPI spec version: 1.0
 
@@ -26,6 +26,8 @@ module JCAPIv1
     attr_accessor :user_lockout_action
 
     attr_accessor :user_password_expiration_action
+
+    attr_accessor :shared_secret
 
     class EnumAttributeValidator
       attr_reader :datatype
@@ -57,7 +59,8 @@ module JCAPIv1
         :'network_source_ip' => :'networkSourceIp',
         :'tags' => :'tags',
         :'user_lockout_action' => :'userLockoutAction',
-        :'user_password_expiration_action' => :'userPasswordExpirationAction'
+        :'user_password_expiration_action' => :'userPasswordExpirationAction',
+        :'shared_secret' => :'sharedSecret'
       }
     end
 
@@ -69,7 +72,8 @@ module JCAPIv1
         :'network_source_ip' => :'String',
         :'tags' => :'Array<String>',
         :'user_lockout_action' => :'String',
-        :'user_password_expiration_action' => :'String'
+        :'user_password_expiration_action' => :'String',
+        :'shared_secret' => :'String'
       }
     end
 
@@ -107,6 +111,10 @@ module JCAPIv1
         self.user_password_expiration_action = attributes[:'userPasswordExpirationAction']
       end
 
+      if attributes.has_key?(:'sharedSecret')
+        self.shared_secret = attributes[:'sharedSecret']
+      end
+
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -121,6 +129,10 @@ module JCAPIv1
         invalid_properties.push("invalid value for 'network_source_ip', network_source_ip cannot be nil.")
       end
 
+      if @shared_secret.nil?
+        invalid_properties.push("invalid value for 'shared_secret', shared_secret cannot be nil.")
+      end
+
       return invalid_properties
     end
 
@@ -131,6 +143,7 @@ module JCAPIv1
       return false unless mfa_validator.valid?(@mfa)
       return false if @name.nil?
       return false if @network_source_ip.nil?
+      return false if @shared_secret.nil?
       return true
     end
 
@@ -154,7 +167,8 @@ module JCAPIv1
           network_source_ip == o.network_source_ip &&
           tags == o.tags &&
           user_lockout_action == o.user_lockout_action &&
-          user_password_expiration_action == o.user_password_expiration_action
+          user_password_expiration_action == o.user_password_expiration_action &&
+          shared_secret == o.shared_secret
     end
 
     # @see the `==` method
@@ -166,7 +180,7 @@ module JCAPIv1
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [mfa, name, network_source_ip, tags, user_lockout_action, user_password_expiration_action].hash
+      [mfa, name, network_source_ip, tags, user_lockout_action, user_password_expiration_action, shared_secret].hash
     end
 
     # Builds the object from hash

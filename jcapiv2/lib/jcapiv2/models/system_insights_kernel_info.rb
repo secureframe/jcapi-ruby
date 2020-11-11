@@ -1,7 +1,7 @@
 =begin
 #JumpCloud APIs
 
-# JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
+#JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
 
 OpenAPI spec version: 2.0
 
@@ -15,40 +15,24 @@ require 'date'
 module JCAPIv2
 
   class SystemInsightsKernelInfo
-    attr_accessor :arguments
-
     attr_accessor :collection_time
 
-    attr_accessor :device
-
-    attr_accessor :path
-
     attr_accessor :system_id
-
-    attr_accessor :version
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'arguments' => :'arguments',
         :'collection_time' => :'collection_time',
-        :'device' => :'device',
-        :'path' => :'path',
-        :'system_id' => :'system_id',
-        :'version' => :'version'
+        :'system_id' => :'system_id'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'arguments' => :'String',
         :'collection_time' => :'String',
-        :'device' => :'String',
-        :'path' => :'String',
-        :'system_id' => :'String',
-        :'version' => :'String'
+        :'system_id' => :'String'
       }
     end
 
@@ -60,28 +44,12 @@ module JCAPIv2
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'arguments')
-        self.arguments = attributes[:'arguments']
-      end
-
       if attributes.has_key?(:'collection_time')
         self.collection_time = attributes[:'collection_time']
       end
 
-      if attributes.has_key?(:'device')
-        self.device = attributes[:'device']
-      end
-
-      if attributes.has_key?(:'path')
-        self.path = attributes[:'path']
-      end
-
       if attributes.has_key?(:'system_id')
         self.system_id = attributes[:'system_id']
-      end
-
-      if attributes.has_key?(:'version')
-        self.version = attributes[:'version']
       end
 
     end
@@ -104,12 +72,8 @@ module JCAPIv2
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          arguments == o.arguments &&
           collection_time == o.collection_time &&
-          device == o.device &&
-          path == o.path &&
-          system_id == o.system_id &&
-          version == o.version
+          system_id == o.system_id
     end
 
     # @see the `==` method
@@ -121,7 +85,7 @@ module JCAPIv2
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [arguments, collection_time, device, path, system_id, version].hash
+      [collection_time, system_id].hash
     end
 
     # Builds the object from hash

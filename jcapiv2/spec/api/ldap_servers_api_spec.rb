@@ -1,7 +1,7 @@
 =begin
 #JumpCloud APIs
 
-# JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
+#JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
 
 OpenAPI spec version: 2.0
 
@@ -32,122 +32,122 @@ describe 'LDAPServersApi' do
     end
   end
 
-  # unit tests for graph_ldap_server_associations_list
-  # List the associations of a LDAP Server
-  # This endpoint returns the _direct_ associations of this LDAP Server.  A direct association can be a non-homogeneous relationship between 2 different objects, for example LDAP and Users.  #### Sample Request  &#x60;&#x60;&#x60;  curl -X GET &#39;https://console.jumpcloud.com/api/v2/ldapservers/{LDAP_ID}/associations?targets&#x3D;user_group \\   -H &#39;accept: application/json&#39; \\   -H &#39;content-type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
-  # @param ldapserver_id ObjectID of the LDAP Server.
-  # @param targets 
-  # @param content_type 
-  # @param accept 
-  # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :limit The number of records to return at once. Limited to 100.
-  # @option opts [Integer] :skip The offset into the records to return.
-  # @option opts [String] :x_org_id 
-  # @return [Array<GraphConnection>]
-  describe 'graph_ldap_server_associations_list test' do
-    it "should work" do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
-  # unit tests for graph_ldap_server_associations_post
-  # Manage the associations of a LDAP Server
-  # This endpoint allows you to manage the _direct_ associations of a LDAP Server.  A direct association can be a non-homogeneous relationship between 2 different objects, for example LDAP and Users.  #### Sample Request &#x60;&#x60;&#x60; curl -X POST https://console.jumpcloud.com/api/v2/ldapservers/{LDAP_ID}/associations \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; \\   -d &#39;{     \&quot;op\&quot;: \&quot;add\&quot;,     \&quot;type\&quot;: \&quot;user\&quot;,     \&quot;id\&quot;: \&quot;{User_ID}\&quot; }&#39; &#x60;&#x60;&#x60;
-  # @param ldapserver_id ObjectID of the LDAP Server.
-  # @param content_type 
-  # @param accept 
-  # @param [Hash] opts the optional parameters
-  # @option opts [GraphManagementReq] :body 
-  # @option opts [String] :x_org_id 
-  # @return [nil]
-  describe 'graph_ldap_server_associations_post test' do
-    it "should work" do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
-  # unit tests for graph_ldap_server_traverse_user
-  # List the Users bound to a LDAP Server
-  # This endpoint will return all Users bound to an LDAP Server, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths.  The &#x60;attributes&#x60; object is a key/value hash of compiled graph attributes for all paths followed.  The &#x60;paths&#x60; array enumerates each path from this LDAP server instance to the corresponding User; this array represents all grouping and/or associations that would have to be removed to deprovision the User from this LDAP server instance.  See &#x60;/members&#x60; and &#x60;/associations&#x60; endpoints to manage those collections.  #### Sample Request &#x60;&#x60;&#x60; curl -X GET https://console.jumpcloud.com/api/v2/ldapservers/{LDAP_ID}/users \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
-  # @param ldapserver_id ObjectID of the LDAP Server.
-  # @param content_type 
-  # @param accept 
-  # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :limit The number of records to return at once. Limited to 100.
-  # @option opts [String] :x_org_id 
-  # @option opts [Integer] :skip The offset into the records to return.
-  # @option opts [Array<String>] :filter Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
-  # @return [Array<GraphObjectWithPaths>]
-  describe 'graph_ldap_server_traverse_user test' do
-    it "should work" do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
-  # unit tests for graph_ldap_server_traverse_user_group
-  # List the User Groups bound to a LDAP Server
-  # This endpoint will return all Users Groups bound to a LDAP Server, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the group&#39;s type, id, attributes and paths.  The &#x60;attributes&#x60; object is a key/value hash of compiled graph attributes for all paths followed.  The &#x60;paths&#x60; array enumerates each path from this LDAP server instance to the corresponding User Group; this array represents all grouping and/or associations that would have to be removed to deprovision the User Group from this LDAP server instance.  See &#x60;/members&#x60; and &#x60;/associations&#x60; endpoints to manage those collections.  #### Sample Request &#x60;&#x60;&#x60; curl -X GET https://console.jumpcloud.com/api/v2/ldapservers/{LDAP_ID}/usergroups \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
-  # @param ldapserver_id ObjectID of the LDAP Server.
-  # @param content_type 
-  # @param accept 
-  # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :limit The number of records to return at once. Limited to 100.
-  # @option opts [String] :x_org_id 
-  # @option opts [Integer] :skip The offset into the records to return.
-  # @option opts [Array<String>] :filter Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
-  # @return [Array<GraphObjectWithPaths>]
-  describe 'graph_ldap_server_traverse_user_group test' do
-    it "should work" do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
-  # unit tests for ldapservers_get
-  # Get LDAP Server
-  # This endpoint returns a specific LDAP server.  ##### Sample Request  &#x60;&#x60;&#x60;  curl -X GET https://console.jumpcloud.com/api/v2/ldapservers/{LDAP_ID} \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
-  # @param id Unique identifier of the LDAP server.
-  # @param content_type 
-  # @param accept 
-  # @param [Hash] opts the optional parameters
-  # @option opts [String] :x_org_id 
-  # @return [LdapServerOutput]
-  describe 'ldapservers_get test' do
-    it "should work" do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
-  # unit tests for ldapservers_list
+  # unit tests for g_et_ldapservers
   # List LDAP Servers
   # This endpoint returns the object IDs of your LDAP servers.   ##### Sample Request  &#x60;&#x60;&#x60;   curl -X GET https://console.jumpcloud.com/api/v2/ldapservers/ \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39;
-  # @param content_type 
   # @param accept 
+  # @param content_type 
   # @param [Hash] opts the optional parameters
   # @option opts [Array<String>] :fields The comma separated fields included in the returned records. If omitted, the default list of fields will be returned. 
-  # @option opts [Array<String>] :filter Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
+  # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
   # @option opts [Integer] :limit The number of records to return at once. Limited to 100.
   # @option opts [Integer] :skip The offset into the records to return.
   # @option opts [Array<String>] :sort The comma separated fields used to sort the collection. Default sort is ascending, prefix with &#x60;-&#x60; to sort descending. 
   # @option opts [String] :x_org_id 
   # @return [Array<LdapServerOutput>]
-  describe 'ldapservers_list test' do
+  describe 'g_et_ldapservers test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for ldapservers_patch
+  # unit tests for g_et_ldapservers_id
+  # Get LDAP Server
+  # This endpoint returns a specific LDAP server.  ##### Sample Request  &#x60;&#x60;&#x60;  curl -X GET https://console.jumpcloud.com/api/v2/ldapservers/{LDAP_ID} \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
+  # @param id Unique identifier of the LDAP server.
+  # @param accept 
+  # @param content_type 
+  # @param [Hash] opts the optional parameters
+  # @option opts [String] :x_org_id 
+  # @return [LdapServerOutput]
+  describe 'g_et_ldapservers_id test' do
+    it "should work" do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for g_et_ldapservers_ldapserver_id_associations
+  # List the associations of a LDAP Server
+  # This endpoint returns the _direct_ associations of this LDAP Server.  A direct association can be a non-homogeneous relationship between 2 different objects, for example LDAP and Users.  #### Sample Request  &#x60;&#x60;&#x60;  curl -X GET &#39;https://console.jumpcloud.com/api/v2/ldapservers/{LDAP_ID}/associations?targets&#x3D;user_group \\   -H &#39;accept: application/json&#39; \\   -H &#39;content-type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
+  # @param ldapserver_id ObjectID of the LDAP Server.
+  # @param targets 
+  # @param accept 
+  # @param content_type 
+  # @param [Hash] opts the optional parameters
+  # @option opts [Integer] :limit The number of records to return at once. Limited to 100.
+  # @option opts [Integer] :skip The offset into the records to return.
+  # @option opts [String] :x_org_id 
+  # @return [Array<GraphConnection>]
+  describe 'g_et_ldapservers_ldapserver_id_associations test' do
+    it "should work" do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for g_et_ldapservers_ldapserver_id_usergroups
+  # List the User Groups bound to a LDAP Server
+  # This endpoint will return all Users Groups bound to a LDAP Server, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the group&#39;s type, id, attributes and paths.  The &#x60;attributes&#x60; object is a key/value hash of compiled graph attributes for all paths followed.  The &#x60;paths&#x60; array enumerates each path from this LDAP server instance to the corresponding User Group; this array represents all grouping and/or associations that would have to be removed to deprovision the User Group from this LDAP server instance.  See &#x60;/members&#x60; and &#x60;/associations&#x60; endpoints to manage those collections.  #### Sample Request &#x60;&#x60;&#x60; curl -X GET https://console.jumpcloud.com/api/v2/ldapservers/{LDAP_ID}/usergroups \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
+  # @param ldapserver_id ObjectID of the LDAP Server.
+  # @param accept 
+  # @param content_type 
+  # @param [Hash] opts the optional parameters
+  # @option opts [Integer] :limit The number of records to return at once. Limited to 100.
+  # @option opts [Integer] :skip The offset into the records to return.
+  # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
+  # @option opts [String] :x_org_id 
+  # @return [Array<GraphObjectWithPaths>]
+  describe 'g_et_ldapservers_ldapserver_id_usergroups test' do
+    it "should work" do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for g_et_ldapservers_ldapserver_id_users
+  # List the Users bound to a LDAP Server
+  # This endpoint will return all Users bound to an LDAP Server, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths.  The &#x60;attributes&#x60; object is a key/value hash of compiled graph attributes for all paths followed.  The &#x60;paths&#x60; array enumerates each path from this LDAP server instance to the corresponding User; this array represents all grouping and/or associations that would have to be removed to deprovision the User from this LDAP server instance.  See &#x60;/members&#x60; and &#x60;/associations&#x60; endpoints to manage those collections.  #### Sample Request &#x60;&#x60;&#x60; curl -X GET https://console.jumpcloud.com/api/v2/ldapservers/{LDAP_ID}/users \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
+  # @param ldapserver_id ObjectID of the LDAP Server.
+  # @param accept 
+  # @param content_type 
+  # @param [Hash] opts the optional parameters
+  # @option opts [Integer] :limit The number of records to return at once. Limited to 100.
+  # @option opts [Integer] :skip The offset into the records to return.
+  # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
+  # @option opts [String] :x_org_id 
+  # @return [Array<GraphObjectWithPaths>]
+  describe 'g_et_ldapservers_ldapserver_id_users test' do
+    it "should work" do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for p_atch_ldapservers_id
   # Update existing LDAP server
   # This endpoint allows updating some attributes of an LDAP server.  Sample Request  &#x60;&#x60;&#x60; curl -X PATCH https://console.jumpcloud.com/api/v2/ldapservers/{LDAP_ID} \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; \\   -d &#39;{     \&quot;userLockoutAction\&quot;: \&quot;remove\&quot;,     \&quot;userPasswordExpirationAction\&quot;: \&quot;disable\&quot;   }&#39; &#x60;&#x60;&#x60;
   # @param id Unique identifier of the LDAP server.
-  # @param content_type 
   # @param accept 
+  # @param content_type 
   # @param [Hash] opts the optional parameters
-  # @option opts [Body3] :body 
+  # @option opts [Body1] :body 
   # @option opts [String] :x_api_key 
   # @option opts [String] :x_org_id 
-  # @return [InlineResponse200]
-  describe 'ldapservers_patch test' do
+  # @return [InlineResponse2001]
+  describe 'p_atch_ldapservers_id test' do
+    it "should work" do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for p_ost_ldapservers_ldapserver_id_associations
+  # Manage the associations of a LDAP Server
+  # This endpoint allows you to manage the _direct_ associations of a LDAP Server.  A direct association can be a non-homogeneous relationship between 2 different objects, for example LDAP and Users.  #### Sample Request &#x60;&#x60;&#x60; curl -X POST https://console.jumpcloud.com/api/v2/ldapservers/{LDAP_ID}/associations \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; \\   -d &#39;{     \&quot;op\&quot;: \&quot;add\&quot;,     \&quot;type\&quot;: \&quot;user\&quot;,     \&quot;id\&quot;: \&quot;{User_ID}\&quot; }&#39; &#x60;&#x60;&#x60;
+  # @param ldapserver_id ObjectID of the LDAP Server.
+  # @param accept 
+  # @param content_type 
+  # @param [Hash] opts the optional parameters
+  # @option opts [GraphManagementReq] :body 
+  # @option opts [String] :x_org_id 
+  # @return [nil]
+  describe 'p_ost_ldapservers_ldapserver_id_associations test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

@@ -1,7 +1,7 @@
 =begin
 #JumpCloud APIs
 
-# JumpCloud's V1 API. This set of endpoints allows JumpCloud customers to manage commands, systems, & system users.
+#JumpCloud's V1 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
 
 OpenAPI spec version: 1.0
 
@@ -32,20 +32,51 @@ describe 'OrganizationsApi' do
     end
   end
 
-  # unit tests for organization_list
+  # unit tests for g_et_organizations
   # Get Organization Details
-  # This endpoint returns Organization Details.  #### Sample Request  &#x60;&#x60;&#x60; curl -X GET \\   https://console.jumpcloud.com/api/organizations \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39;   &#x60;&#x60;&#x60;
-  # @param content_type 
+  # This endpoint returns Organization Details.  #### Sample Request   &#x60;&#x60;&#x60; curl -X GET \\   https://console.jumpcloud.com/api/organizations \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39;   &#x60;&#x60;&#x60;
   # @param accept 
+  # @param content_type 
   # @param [Hash] opts the optional parameters
   # @option opts [String] :fields Use a space seperated string of field parameters to include the data in the response. If omitted, the default list of fields will be returned. 
-  # @option opts [String] :filter A filter to apply to the query.
+  # @option opts [String] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
   # @option opts [Integer] :limit The number of records to return at once. Limited to 100.
+  # @option opts [String] :search A nested object containing a string &#x60;searchTerm&#x60; and a list of &#x60;fields&#x60; to search on.
   # @option opts [Integer] :skip The offset into the records to return.
   # @option opts [String] :sort Use space separated sort parameters to sort the collection. Default sort is ascending. Prefix with &#x60;-&#x60; to sort descending. 
-  # @option opts [String] :search A nested object containing a string &#x60;searchTerm&#x60; and a list of &#x60;fields&#x60; to search on.
   # @return [Organizationslist]
-  describe 'organization_list test' do
+  describe 'g_et_organizations test' do
+    it "should work" do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for g_et_organizations_id
+  # Get an Organization
+  # This endpoint returns a particular Organization.  #### Sample Request  &#x60;&#x60;&#x60; curl -X GET https://console.jumpcloud.com/api/organizations/{OrganizationID} \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
+  # @param id 
+  # @param accept 
+  # @param content_type 
+  # @param [Hash] opts the optional parameters
+  # @option opts [String] :fields Use a space seperated string of field parameters to include the data in the response. If omitted, the default list of fields will be returned. 
+  # @option opts [String] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
+  # @return [Organization]
+  describe 'g_et_organizations_id test' do
+    it "should work" do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for p_ut_organizations_id
+  # Update an Organization
+  # This endpoint allows you to update an Organization.  Note: &#x60;passwordPolicy&#x60; settings are only used when &#x60;passwordCompliance&#x60; is set to \&quot;custom\&quot;. We discourage the use of non-custom passwordCompliance values.  &#x60;hasStripeCustomerId&#x60; is deprecated and will be removed.  #### Sample Request  &#x60;&#x60;&#x60; curl -X PUT https://console.jumpcloud.com/api/organizations/{OrganizationID} \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; \\   -d &#39;{   \&quot;settings\&quot;: {     \&quot;contactName\&quot;: \&quot;Admin Name\&quot;,     \&quot;contactEmail\&quot;: \&quot;admin@company.com\&quot;,     \&quot;systemUsersCanEdit\&quot;:true,     \&quot;passwordPolicy\&quot;: {       \&quot;enableMaxHistory\&quot;: true,       \&quot;maxHistory\&quot;: 3     }   } }&#39; &#x60;&#x60;&#x60;
+  # @param id 
+  # @param accept 
+  # @param content_type 
+  # @param [Hash] opts the optional parameters
+  # @option opts [Body2] :body 
+  # @return [Organization]
+  describe 'p_ut_organizations_id test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

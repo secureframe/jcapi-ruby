@@ -1,7 +1,7 @@
 =begin
 #JumpCloud APIs
 
-# JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
+#JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
 
 OpenAPI spec version: 2.0
 
@@ -13,7 +13,7 @@ Swagger Codegen version: 2.3.1
 require 'date'
 
 module JCAPIv2
-
+  # 
   class Directory
     # The ObjectID of the directory.
     attr_accessor :id

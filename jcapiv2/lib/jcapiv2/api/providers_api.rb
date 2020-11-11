@@ -1,7 +1,7 @@
 =begin
 #JumpCloud APIs
 
-# JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
+#JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
 
 OpenAPI spec version: 2.0
 
@@ -21,52 +21,52 @@ module JCAPIv2
     end
 
     # List Provider Administrators
-    # This endpoint returns a list of the Administrators associated with the Provider.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/providers/{ProviderID}/administrators \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
+    # This endpoint returns a list of the Administrators associated with the Provider. You must be associated with the provider to use this route.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/providers/{ProviderID}/administrators \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
     # @param provider_id 
-    # @param content_type 
     # @param accept 
+    # @param content_type 
     # @param [Hash] opts the optional parameters
     # @option opts [Array<String>] :fields The comma separated fields included in the returned records. If omitted, the default list of fields will be returned. 
-    # @option opts [Array<String>] :filter Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
+    # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [Integer] :limit The number of records to return at once. Limited to 100. (default to 10)
     # @option opts [Integer] :skip The offset into the records to return. (default to 0)
     # @option opts [Array<String>] :sort The comma separated fields used to sort the collection. Default sort is ascending, prefix with &#x60;-&#x60; to sort descending. 
-    # @return [InlineResponse2001]
-    def providers_list_administrators(provider_id, content_type, accept, opts = {})
-      data, _status_code, _headers = providers_list_administrators_with_http_info(provider_id, content_type, accept, opts)
+    # @return [InlineResponse200]
+    def g_et_providers_provider_id_administrators(provider_id, accept, content_type, opts = {})
+      data, _status_code, _headers = g_et_providers_provider_id_administrators_with_http_info(provider_id, accept, content_type, opts)
       return data
     end
 
     # List Provider Administrators
-    # This endpoint returns a list of the Administrators associated with the Provider.  #### Sample Request &#x60;&#x60;&#x60; curl -X GET https://console.jumpcloud.com/api/v2/providers/{ProviderID}/administrators \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
+    # This endpoint returns a list of the Administrators associated with the Provider. You must be associated with the provider to use this route.  #### Sample Request &#x60;&#x60;&#x60; curl -X GET https://console.jumpcloud.com/api/v2/providers/{ProviderID}/administrators \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
     # @param provider_id 
-    # @param content_type 
     # @param accept 
+    # @param content_type 
     # @param [Hash] opts the optional parameters
     # @option opts [Array<String>] :fields The comma separated fields included in the returned records. If omitted, the default list of fields will be returned. 
-    # @option opts [Array<String>] :filter Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
+    # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [Integer] :limit The number of records to return at once. Limited to 100.
     # @option opts [Integer] :skip The offset into the records to return.
     # @option opts [Array<String>] :sort The comma separated fields used to sort the collection. Default sort is ascending, prefix with &#x60;-&#x60; to sort descending. 
-    # @return [Array<(InlineResponse2001, Fixnum, Hash)>] InlineResponse2001 data, response status code and response headers
-    def providers_list_administrators_with_http_info(provider_id, content_type, accept, opts = {})
+    # @return [Array<(InlineResponse200, Fixnum, Hash)>] InlineResponse200 data, response status code and response headers
+    def g_et_providers_provider_id_administrators_with_http_info(provider_id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: ProvidersApi.providers_list_administrators ..."
+        @api_client.config.logger.debug "Calling API: ProvidersApi.g_et_providers_provider_id_administrators ..."
       end
       # verify the required parameter 'provider_id' is set
       if @api_client.config.client_side_validation && provider_id.nil?
-        fail ArgumentError, "Missing the required parameter 'provider_id' when calling ProvidersApi.providers_list_administrators"
-      end
-      # verify the required parameter 'content_type' is set
-      if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling ProvidersApi.providers_list_administrators"
+        fail ArgumentError, "Missing the required parameter 'provider_id' when calling ProvidersApi.g_et_providers_provider_id_administrators"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling ProvidersApi.providers_list_administrators"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling ProvidersApi.g_et_providers_provider_id_administrators"
+      end
+      # verify the required parameter 'content_type' is set
+      if @api_client.config.client_side_validation && content_type.nil?
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling ProvidersApi.g_et_providers_provider_id_administrators"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling ProvidersApi.providers_list_administrators, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling ProvidersApi.g_et_providers_provider_id_administrators, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -86,8 +86,8 @@ module JCAPIv2
       header_params['Accept'] = @api_client.select_header_accept(['application/json'])
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-      header_params[:'Content-Type'] = content_type
       header_params[:'Accept'] = accept
+      header_params[:'Content-Type'] = content_type
 
       # form parameters
       form_params = {}
@@ -101,49 +101,49 @@ module JCAPIv2
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'InlineResponse2001')
+        :return_type => 'InlineResponse200')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: ProvidersApi#providers_list_administrators\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: ProvidersApi#g_et_providers_provider_id_administrators\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
     # Create a new Provider Administrator
-    # This endpoint allows you to create a provider administrator. You must be associated to the provider to use this route.  **Sample Request**  ``` curl -X POST https://console.jumpcloud.com/api/v2/providers/{ProviderID}/administrators \\     -H 'Accept: application/json' \\     -H 'Context-Type: application/json' \\     -H 'x-api-key: {API_KEY}' \\     -d '{       \"email\":\"{ADMIN_EMAIL}\"     }' ```
+    # This endpoint allows you to create a provider administrator. You must be associated with the provider to use this route.  #### Sample Request ``` curl -X POST https://console.jumpcloud.com/api/v2/providers/{ProviderID}/administrators \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' \\   -d '{     \"email\":\"{ADMIN_EMAIL}\"   }' ```
     # @param provider_id 
-    # @param content_type 
     # @param accept 
+    # @param content_type 
     # @param [Hash] opts the optional parameters
     # @option opts [ProviderAdminReq] :body 
     # @return [Administrator]
-    def providers_post_admins(provider_id, content_type, accept, opts = {})
-      data, _status_code, _headers = providers_post_admins_with_http_info(provider_id, content_type, accept, opts)
+    def p_ost_providers_provider_id_administrators(provider_id, accept, content_type, opts = {})
+      data, _status_code, _headers = p_ost_providers_provider_id_administrators_with_http_info(provider_id, accept, content_type, opts)
       return data
     end
 
     # Create a new Provider Administrator
-    # This endpoint allows you to create a provider administrator. You must be associated to the provider to use this route.  **Sample Request**  &#x60;&#x60;&#x60; curl -X POST https://console.jumpcloud.com/api/v2/providers/{ProviderID}/administrators \\     -H &#39;Accept: application/json&#39; \\     -H &#39;Context-Type: application/json&#39; \\     -H &#39;x-api-key: {API_KEY}&#39; \\     -d &#39;{       \&quot;email\&quot;:\&quot;{ADMIN_EMAIL}\&quot;     }&#39; &#x60;&#x60;&#x60;
+    # This endpoint allows you to create a provider administrator. You must be associated with the provider to use this route.  #### Sample Request &#x60;&#x60;&#x60; curl -X POST https://console.jumpcloud.com/api/v2/providers/{ProviderID}/administrators \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; \\   -d &#39;{     \&quot;email\&quot;:\&quot;{ADMIN_EMAIL}\&quot;   }&#39; &#x60;&#x60;&#x60;
     # @param provider_id 
-    # @param content_type 
     # @param accept 
+    # @param content_type 
     # @param [Hash] opts the optional parameters
     # @option opts [ProviderAdminReq] :body 
     # @return [Array<(Administrator, Fixnum, Hash)>] Administrator data, response status code and response headers
-    def providers_post_admins_with_http_info(provider_id, content_type, accept, opts = {})
+    def p_ost_providers_provider_id_administrators_with_http_info(provider_id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: ProvidersApi.providers_post_admins ..."
+        @api_client.config.logger.debug "Calling API: ProvidersApi.p_ost_providers_provider_id_administrators ..."
       end
       # verify the required parameter 'provider_id' is set
       if @api_client.config.client_side_validation && provider_id.nil?
-        fail ArgumentError, "Missing the required parameter 'provider_id' when calling ProvidersApi.providers_post_admins"
-      end
-      # verify the required parameter 'content_type' is set
-      if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling ProvidersApi.providers_post_admins"
+        fail ArgumentError, "Missing the required parameter 'provider_id' when calling ProvidersApi.p_ost_providers_provider_id_administrators"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling ProvidersApi.providers_post_admins"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling ProvidersApi.p_ost_providers_provider_id_administrators"
+      end
+      # verify the required parameter 'content_type' is set
+      if @api_client.config.client_side_validation && content_type.nil?
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling ProvidersApi.p_ost_providers_provider_id_administrators"
       end
       # resource path
       local_var_path = "/providers/{provider_id}/administrators".sub('{' + 'provider_id' + '}', provider_id.to_s)
@@ -157,8 +157,8 @@ module JCAPIv2
       header_params['Accept'] = @api_client.select_header_accept(['application/json'])
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-      header_params[:'Content-Type'] = content_type
       header_params[:'Accept'] = accept
+      header_params[:'Content-Type'] = content_type
 
       # form parameters
       form_params = {}
@@ -174,7 +174,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Administrator')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: ProvidersApi#providers_post_admins\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: ProvidersApi#p_ost_providers_provider_id_administrators\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

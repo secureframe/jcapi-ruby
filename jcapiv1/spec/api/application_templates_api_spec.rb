@@ -1,7 +1,7 @@
 =begin
 #JumpCloud APIs
 
-# JumpCloud's V1 API. This set of endpoints allows JumpCloud customers to manage commands, systems, & system users.
+#JumpCloud's V1 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
 
 OpenAPI spec version: 1.0
 
@@ -32,40 +32,40 @@ describe 'ApplicationTemplatesApi' do
     end
   end
 
-  # unit tests for application_templates_get
-  # Get an Application Template
-  # The endpoint returns a specific SSO / SAML Application Template.  #### Sample Request &#x60;&#x60;&#x60; curl -X GET https://console.jumpcloud.com/api/application-templates/{id} \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39;  &#x60;&#x60;&#x60;
-  # @param id 
-  # @param content_type 
+  # unit tests for g_et_application_templates
+  # List Application Templates
+  # The endpoint returns all the SSO / SAML Application Templates.  #### Sample Request &#x60;&#x60;&#x60; curl -X GET https://console.jumpcloud.com/api/application-templates \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39;   &#x60;&#x60;&#x60;
   # @param accept 
+  # @param content_type 
   # @param [Hash] opts the optional parameters
   # @option opts [String] :fields The comma separated fields included in the returned records. If omitted the default list of fields will be returned.
   # @option opts [Integer] :limit The number of records to return at once.
   # @option opts [Integer] :skip The offset into the records to return.
   # @option opts [String] :sort 
-  # @option opts [String] :filter A filter to apply to the query.
+  # @option opts [String] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
   # @option opts [String] :x_org_id 
-  # @return [Applicationtemplate]
-  describe 'application_templates_get test' do
+  # @return [Applicationtemplateslist]
+  describe 'g_et_application_templates test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for application_templates_list
-  # List Application Templates
-  # The endpoint returns all the SSO / SAML Application Templates.  #### Sample Request &#x60;&#x60;&#x60; curl -X GET https://console.jumpcloud.com/api/application-templates \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39;  &#x60;&#x60;&#x60;
-  # @param content_type 
+  # unit tests for g_et_application_templates_id
+  # Get an Application Template
+  # The endpoint returns a specific SSO / SAML Application Template.  #### Sample Request &#x60;&#x60;&#x60; curl -X GET https://console.jumpcloud.com/api/application-templates/{id} \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39;   &#x60;&#x60;&#x60;
+  # @param id 
   # @param accept 
+  # @param content_type 
   # @param [Hash] opts the optional parameters
   # @option opts [String] :fields The comma separated fields included in the returned records. If omitted the default list of fields will be returned.
   # @option opts [Integer] :limit The number of records to return at once.
   # @option opts [Integer] :skip The offset into the records to return.
   # @option opts [String] :sort 
-  # @option opts [String] :filter A filter to apply to the query.
+  # @option opts [String] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
   # @option opts [String] :x_org_id 
-  # @return [Applicationtemplateslist]
-  describe 'application_templates_list test' do
+  # @return [Applicationtemplate]
+  describe 'g_et_application_templates_id test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

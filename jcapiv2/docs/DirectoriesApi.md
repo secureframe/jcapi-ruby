@@ -4,11 +4,11 @@ All URIs are relative to *https://console.jumpcloud.com/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**directories_list**](DirectoriesApi.md#directories_list) | **GET** /directories | List All Directories
+[**g_et_directories**](DirectoriesApi.md#g_et_directories) | **GET** /directories | List All Directories
 
 
-# **directories_list**
-> Array&lt;Directory&gt; directories_list(content_type, accept, opts)
+# **g_et_directories**
+> Array&lt;Directory&gt; g_et_directories(accept, content_type, opts)
 
 List All Directories
 
@@ -28,9 +28,9 @@ end
 
 api_instance = JCAPIv2::DirectoriesApi.new
 
-content_type = "application/json" # String | 
+accept = "application/x-pem-file" # String | 
 
-accept = "application/json" # String | 
+content_type = "application/json" # String | 
 
 opts = { 
   fields: ["fields_example"], # Array<String> | The comma separated fields included in the returned records. If omitted, the default list of fields will be returned. 
@@ -42,10 +42,10 @@ opts = {
 
 begin
   #List All Directories
-  result = api_instance.directories_list(content_type, accept, opts)
+  result = api_instance.g_et_directories(accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling DirectoriesApi->directories_list: #{e}"
+  puts "Exception when calling DirectoriesApi->g_et_directories: #{e}"
 end
 ```
 
@@ -53,8 +53,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **accept** | **String**|  | [default to application/x-pem-file]
  **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
  **fields** | [**Array&lt;String&gt;**](String.md)| The comma separated fields included in the returned records. If omitted, the default list of fields will be returned.  | [optional] 
  **limit** | **Integer**| The number of records to return at once. Limited to 100. | [optional] [default to 10]
  **sort** | [**Array&lt;String&gt;**](String.md)| The comma separated fields used to sort the collection. Default sort is ascending, prefix with &#x60;-&#x60; to sort descending.  | [optional] 

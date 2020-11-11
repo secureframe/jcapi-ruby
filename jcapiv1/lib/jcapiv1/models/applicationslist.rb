@@ -1,7 +1,7 @@
 =begin
 #JumpCloud APIs
 
-# JumpCloud's V1 API. This set of endpoints allows JumpCloud customers to manage commands, systems, & system users.
+#JumpCloud's V1 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
 
 OpenAPI spec version: 1.0
 
@@ -15,6 +15,8 @@ require 'date'
 module JCAPIv1
 
   class Applicationslist
+    attr_accessor :name
+
     # The list of applications.
     attr_accessor :results
 
@@ -25,6 +27,7 @@ module JCAPIv1
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        :'name' => :'name',
         :'results' => :'results',
         :'total_count' => :'totalCount'
       }
@@ -33,6 +36,7 @@ module JCAPIv1
     # Attribute type mapping.
     def self.swagger_types
       {
+        :'name' => :'String',
         :'results' => :'Array<Application>',
         :'total_count' => :'Integer'
       }
@@ -45,6 +49,10 @@ module JCAPIv1
 
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
+
+      if attributes.has_key?(:'name')
+        self.name = attributes[:'name']
+      end
 
       if attributes.has_key?(:'results')
         if (value = attributes[:'results']).is_a?(Array)
@@ -76,6 +84,7 @@ module JCAPIv1
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
+          name == o.name &&
           results == o.results &&
           total_count == o.total_count
     end
@@ -89,7 +98,7 @@ module JCAPIv1
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [results, total_count].hash
+      [name, results, total_count].hash
     end
 
     # Builds the object from hash

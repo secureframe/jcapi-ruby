@@ -1,7 +1,7 @@
 =begin
 #JumpCloud APIs
 
-# JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
+#JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
 
 OpenAPI spec version: 2.0
 
@@ -15,28 +15,21 @@ require 'date'
 module JCAPIv2
 
   class Body2
-    attr_accessor :groups
-
-    attr_accessor :name
-
-    attr_accessor :users
+    # 6-digit PIN required to erase the device
+    attr_accessor :pin
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'groups' => :'groups',
-        :'name' => :'name',
-        :'users' => :'users'
+        :'pin' => :'pin'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'groups' => :'Array<String>',
-        :'name' => :'String',
-        :'users' => :'Array<String>'
+        :'pin' => :'String'
       }
     end
 
@@ -48,20 +41,8 @@ module JCAPIv2
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'groups')
-        if (value = attributes[:'groups']).is_a?(Array)
-          self.groups = value
-        end
-      end
-
-      if attributes.has_key?(:'name')
-        self.name = attributes[:'name']
-      end
-
-      if attributes.has_key?(:'users')
-        if (value = attributes[:'users']).is_a?(Array)
-          self.users = value
-        end
+      if attributes.has_key?(:'pin')
+        self.pin = attributes[:'pin']
       end
 
     end
@@ -70,13 +51,37 @@ module JCAPIv2
     # @return Array for valid properties with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @pin.nil?
+        invalid_properties.push("invalid value for 'pin', pin cannot be nil.")
+      end
+
+      if @pin !~ Regexp.new(/^[0-9]{6}$/)
+        invalid_properties.push("invalid value for 'pin', must conform to the pattern /^[0-9]{6}$/.")
+      end
+
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @pin.nil?
+      return false if @pin !~ Regexp.new(/^[0-9]{6}$/)
       return true
+    end
+
+    # Custom attribute writer method with validation
+    # @param [Object] pin Value to be assigned
+    def pin=(pin)
+      if pin.nil?
+        fail ArgumentError, "pin cannot be nil"
+      end
+
+      if pin !~ Regexp.new(/^[0-9]{6}$/)
+        fail ArgumentError, "invalid value for 'pin', must conform to the pattern /^[0-9]{6}$/."
+      end
+
+      @pin = pin
     end
 
     # Checks equality by comparing each attribute.
@@ -84,9 +89,7 @@ module JCAPIv2
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          groups == o.groups &&
-          name == o.name &&
-          users == o.users
+          pin == o.pin
     end
 
     # @see the `==` method
@@ -98,7 +101,7 @@ module JCAPIv2
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [groups, name, users].hash
+      [pin].hash
     end
 
     # Builds the object from hash

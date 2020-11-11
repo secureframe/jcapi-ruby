@@ -1,7 +1,7 @@
 =begin
 #JumpCloud APIs
 
-# JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
+#JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
 
 OpenAPI spec version: 2.0
 
@@ -15,6 +15,12 @@ require 'date'
 module JCAPIv2
 
   class Group
+    # Description of a Group
+    attr_accessor :description
+
+    # E-mail address associated with a Group
+    attr_accessor :email
+
     # ObjectId uniquely identifying a Group.
     attr_accessor :id
 
@@ -27,6 +33,8 @@ module JCAPIv2
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        :'description' => :'description',
+        :'email' => :'email',
         :'id' => :'id',
         :'name' => :'name',
         :'type' => :'type'
@@ -36,6 +44,8 @@ module JCAPIv2
     # Attribute type mapping.
     def self.swagger_types
       {
+        :'description' => :'String',
+        :'email' => :'String',
         :'id' => :'String',
         :'name' => :'String',
         :'type' => :'GroupType'
@@ -49,6 +59,14 @@ module JCAPIv2
 
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
+
+      if attributes.has_key?(:'description')
+        self.description = attributes[:'description']
+      end
+
+      if attributes.has_key?(:'email')
+        self.email = attributes[:'email']
+      end
 
       if attributes.has_key?(:'id')
         self.id = attributes[:'id']
@@ -82,6 +100,8 @@ module JCAPIv2
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
+          description == o.description &&
+          email == o.email &&
           id == o.id &&
           name == o.name &&
           type == o.type
@@ -96,7 +116,7 @@ module JCAPIv2
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, type].hash
+      [description, email, id, name, type].hash
     end
 
     # Builds the object from hash

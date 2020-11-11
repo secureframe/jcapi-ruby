@@ -1,7 +1,7 @@
 =begin
 #JumpCloud APIs
 
-# JumpCloud's V1 API. This set of endpoints allows JumpCloud customers to manage commands, systems, & system users.
+#JumpCloud's V1 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
 
 OpenAPI spec version: 1.0
 
@@ -41,6 +41,10 @@ module JCAPIv1
 
     attr_accessor :fde
 
+    attr_accessor :file_system
+
+    attr_accessor :has_service_account
+
     attr_accessor :hostname
 
     attr_accessor :last_contact
@@ -69,6 +73,8 @@ module JCAPIv1
 
     attr_accessor :version
 
+    attr_accessor :mdm
+
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -86,6 +92,8 @@ module JCAPIv1
         :'created' => :'created',
         :'display_name' => :'displayName',
         :'fde' => :'fde',
+        :'file_system' => :'fileSystem',
+        :'has_service_account' => :'hasServiceAccount',
         :'hostname' => :'hostname',
         :'last_contact' => :'lastContact',
         :'modify_sshd_config' => :'modifySSHDConfig',
@@ -99,7 +107,8 @@ module JCAPIv1
         :'system_timezone' => :'systemTimezone',
         :'tags' => :'tags',
         :'template_name' => :'templateName',
-        :'version' => :'version'
+        :'version' => :'version',
+        :'mdm' => :'mdm'
       }
     end
 
@@ -119,6 +128,8 @@ module JCAPIv1
         :'created' => :'String',
         :'display_name' => :'String',
         :'fde' => :'Fde',
+        :'file_system' => :'String',
+        :'has_service_account' => :'BOOLEAN',
         :'hostname' => :'String',
         :'last_contact' => :'String',
         :'modify_sshd_config' => :'BOOLEAN',
@@ -132,7 +143,8 @@ module JCAPIv1
         :'system_timezone' => :'Integer',
         :'tags' => :'Array<String>',
         :'template_name' => :'String',
-        :'version' => :'String'
+        :'version' => :'String',
+        :'mdm' => :'SystemMdm'
       }
     end
 
@@ -198,6 +210,14 @@ module JCAPIv1
         self.fde = attributes[:'fde']
       end
 
+      if attributes.has_key?(:'fileSystem')
+        self.file_system = attributes[:'fileSystem']
+      end
+
+      if attributes.has_key?(:'hasServiceAccount')
+        self.has_service_account = attributes[:'hasServiceAccount']
+      end
+
       if attributes.has_key?(:'hostname')
         self.hostname = attributes[:'hostname']
       end
@@ -260,6 +280,10 @@ module JCAPIv1
         self.version = attributes[:'version']
       end
 
+      if attributes.has_key?(:'mdm')
+        self.mdm = attributes[:'mdm']
+      end
+
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -293,6 +317,8 @@ module JCAPIv1
           created == o.created &&
           display_name == o.display_name &&
           fde == o.fde &&
+          file_system == o.file_system &&
+          has_service_account == o.has_service_account &&
           hostname == o.hostname &&
           last_contact == o.last_contact &&
           modify_sshd_config == o.modify_sshd_config &&
@@ -306,7 +332,8 @@ module JCAPIv1
           system_timezone == o.system_timezone &&
           tags == o.tags &&
           template_name == o.template_name &&
-          version == o.version
+          version == o.version &&
+          mdm == o.mdm
     end
 
     # @see the `==` method
@@ -318,7 +345,7 @@ module JCAPIv1
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [_id, active, agent_version, allow_multi_factor_authentication, allow_public_key_authentication, allow_ssh_password_authentication, allow_ssh_root_login, amazon_instance_id, arch, connection_history, created, display_name, fde, hostname, last_contact, modify_sshd_config, network_interfaces, organization, os, remote_ip, ssh_root_enabled, sshd_params, system_insights, system_timezone, tags, template_name, version].hash
+      [_id, active, agent_version, allow_multi_factor_authentication, allow_public_key_authentication, allow_ssh_password_authentication, allow_ssh_root_login, amazon_instance_id, arch, connection_history, created, display_name, fde, file_system, has_service_account, hostname, last_contact, modify_sshd_config, network_interfaces, organization, os, remote_ip, ssh_root_enabled, sshd_params, system_insights, system_timezone, tags, template_name, version, mdm].hash
     end
 
     # Builds the object from hash

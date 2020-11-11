@@ -1,7 +1,7 @@
 =begin
 #JumpCloud APIs
 
-# JumpCloud's V1 API. This set of endpoints allows JumpCloud customers to manage commands, systems, & system users.
+#JumpCloud's V1 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
 
 OpenAPI spec version: 1.0
 
@@ -59,6 +59,9 @@ module JCAPIv1
     # The ID of the system user to run the command as. This field is required when creating a command with a commandType of \"mac\" or \"linux\".
     attr_accessor :user
 
+    # The shell used to run the command.
+    attr_accessor :shell
+
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -77,7 +80,8 @@ module JCAPIv1
         :'systems' => :'systems',
         :'timeout' => :'timeout',
         :'trigger' => :'trigger',
-        :'user' => :'user'
+        :'user' => :'user',
+        :'shell' => :'shell'
       }
     end
 
@@ -98,7 +102,8 @@ module JCAPIv1
         :'systems' => :'Array<String>',
         :'timeout' => :'String',
         :'trigger' => :'String',
-        :'user' => :'String'
+        :'user' => :'String',
+        :'shell' => :'String'
       }
     end
 
@@ -176,6 +181,10 @@ module JCAPIv1
         self.user = attributes[:'user']
       end
 
+      if attributes.has_key?(:'shell')
+        self.shell = attributes[:'shell']
+      end
+
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -215,7 +224,8 @@ module JCAPIv1
           systems == o.systems &&
           timeout == o.timeout &&
           trigger == o.trigger &&
-          user == o.user
+          user == o.user &&
+          shell == o.shell
     end
 
     # @see the `==` method
@@ -227,7 +237,7 @@ module JCAPIv1
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [command, command_runners, command_type, files, launch_type, listens_to, name, organization, schedule, schedule_repeat_type, sudo, systems, timeout, trigger, user].hash
+      [command, command_runners, command_type, files, launch_type, listens_to, name, organization, schedule, schedule_repeat_type, sudo, systems, timeout, trigger, user, shell].hash
     end
 
     # Builds the object from hash

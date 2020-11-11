@@ -1,7 +1,7 @@
 =begin
 #JumpCloud APIs
 
-# JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
+#JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
 
 OpenAPI spec version: 2.0
 
@@ -17,47 +17,14 @@ module JCAPIv2
   class SystemInsightsDiskInfo
     attr_accessor :collection_time
 
-    attr_accessor :description
-
-    attr_accessor :disk_index
-
-    attr_accessor :disk_size
-
-    attr_accessor :hardware_model
-
-    attr_accessor :id
-
-    attr_accessor :manufacturer
-
-    attr_accessor :name
-
-    attr_accessor :partitions
-
-    attr_accessor :pnp_device_id
-
-    attr_accessor :serial
-
     attr_accessor :system_id
-
-    attr_accessor :type
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         :'collection_time' => :'collection_time',
-        :'description' => :'description',
-        :'disk_index' => :'disk_index',
-        :'disk_size' => :'disk_size',
-        :'hardware_model' => :'hardware_model',
-        :'id' => :'id',
-        :'manufacturer' => :'manufacturer',
-        :'name' => :'name',
-        :'partitions' => :'partitions',
-        :'pnp_device_id' => :'pnp_device_id',
-        :'serial' => :'serial',
-        :'system_id' => :'system_id',
-        :'type' => :'type'
+        :'system_id' => :'system_id'
       }
     end
 
@@ -65,18 +32,7 @@ module JCAPIv2
     def self.swagger_types
       {
         :'collection_time' => :'String',
-        :'description' => :'String',
-        :'disk_index' => :'Integer',
-        :'disk_size' => :'String',
-        :'hardware_model' => :'String',
-        :'id' => :'String',
-        :'manufacturer' => :'String',
-        :'name' => :'String',
-        :'partitions' => :'Integer',
-        :'pnp_device_id' => :'String',
-        :'serial' => :'String',
-        :'system_id' => :'String',
-        :'type' => :'String'
+        :'system_id' => :'String'
       }
     end
 
@@ -92,52 +48,8 @@ module JCAPIv2
         self.collection_time = attributes[:'collection_time']
       end
 
-      if attributes.has_key?(:'description')
-        self.description = attributes[:'description']
-      end
-
-      if attributes.has_key?(:'disk_index')
-        self.disk_index = attributes[:'disk_index']
-      end
-
-      if attributes.has_key?(:'disk_size')
-        self.disk_size = attributes[:'disk_size']
-      end
-
-      if attributes.has_key?(:'hardware_model')
-        self.hardware_model = attributes[:'hardware_model']
-      end
-
-      if attributes.has_key?(:'id')
-        self.id = attributes[:'id']
-      end
-
-      if attributes.has_key?(:'manufacturer')
-        self.manufacturer = attributes[:'manufacturer']
-      end
-
-      if attributes.has_key?(:'name')
-        self.name = attributes[:'name']
-      end
-
-      if attributes.has_key?(:'partitions')
-        self.partitions = attributes[:'partitions']
-      end
-
-      if attributes.has_key?(:'pnp_device_id')
-        self.pnp_device_id = attributes[:'pnp_device_id']
-      end
-
-      if attributes.has_key?(:'serial')
-        self.serial = attributes[:'serial']
-      end
-
       if attributes.has_key?(:'system_id')
         self.system_id = attributes[:'system_id']
-      end
-
-      if attributes.has_key?(:'type')
-        self.type = attributes[:'type']
       end
 
     end
@@ -161,18 +73,7 @@ module JCAPIv2
       return true if self.equal?(o)
       self.class == o.class &&
           collection_time == o.collection_time &&
-          description == o.description &&
-          disk_index == o.disk_index &&
-          disk_size == o.disk_size &&
-          hardware_model == o.hardware_model &&
-          id == o.id &&
-          manufacturer == o.manufacturer &&
-          name == o.name &&
-          partitions == o.partitions &&
-          pnp_device_id == o.pnp_device_id &&
-          serial == o.serial &&
-          system_id == o.system_id &&
-          type == o.type
+          system_id == o.system_id
     end
 
     # @see the `==` method
@@ -184,7 +85,7 @@ module JCAPIv2
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [collection_time, description, disk_index, disk_size, hardware_model, id, manufacturer, name, partitions, pnp_device_id, serial, system_id, type].hash
+      [collection_time, system_id].hash
     end
 
     # Builds the object from hash

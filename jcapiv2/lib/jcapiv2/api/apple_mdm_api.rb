@@ -1,7 +1,7 @@
 =begin
 #JumpCloud APIs
 
-# JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
+#JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
 
 OpenAPI spec version: 2.0
 
@@ -22,43 +22,43 @@ module JCAPIv2
 
     # Delete an Apple MDM
     # Removes an Apple MDM configuration.  Warning: This is a destructive operation and will remove your Apple Push Certificates.  We will no longer be able to manage your devices and the only recovery option is to re-register all devices into MDM.  #### Sample Request ``` curl -X DELETE https://console.jumpcloud.com/api/v2/applemdms/{id} \\   -H 'accept: application/json' \\   -H 'content-type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
-    # @param apple_mdm_id 
-    # @param content_type 
+    # @param id 
     # @param accept 
+    # @param content_type 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :x_org_id  (default to )
     # @return [AppleMDM]
-    def applemdms_delete(apple_mdm_id, content_type, accept, opts = {})
-      data, _status_code, _headers = applemdms_delete_with_http_info(apple_mdm_id, content_type, accept, opts)
+    def d_elete_applemdms_id(id, accept, content_type, opts = {})
+      data, _status_code, _headers = d_elete_applemdms_id_with_http_info(id, accept, content_type, opts)
       return data
     end
 
     # Delete an Apple MDM
     # Removes an Apple MDM configuration.  Warning: This is a destructive operation and will remove your Apple Push Certificates.  We will no longer be able to manage your devices and the only recovery option is to re-register all devices into MDM.  #### Sample Request &#x60;&#x60;&#x60; curl -X DELETE https://console.jumpcloud.com/api/v2/applemdms/{id} \\   -H &#39;accept: application/json&#39; \\   -H &#39;content-type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
-    # @param apple_mdm_id 
-    # @param content_type 
+    # @param id 
     # @param accept 
+    # @param content_type 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :x_org_id 
     # @return [Array<(AppleMDM, Fixnum, Hash)>] AppleMDM data, response status code and response headers
-    def applemdms_delete_with_http_info(apple_mdm_id, content_type, accept, opts = {})
+    def d_elete_applemdms_id_with_http_info(id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: AppleMDMApi.applemdms_delete ..."
+        @api_client.config.logger.debug "Calling API: AppleMDMApi.d_elete_applemdms_id ..."
       end
-      # verify the required parameter 'apple_mdm_id' is set
-      if @api_client.config.client_side_validation && apple_mdm_id.nil?
-        fail ArgumentError, "Missing the required parameter 'apple_mdm_id' when calling AppleMDMApi.applemdms_delete"
-      end
-      # verify the required parameter 'content_type' is set
-      if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling AppleMDMApi.applemdms_delete"
+      # verify the required parameter 'id' is set
+      if @api_client.config.client_side_validation && id.nil?
+        fail ArgumentError, "Missing the required parameter 'id' when calling AppleMDMApi.d_elete_applemdms_id"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling AppleMDMApi.applemdms_delete"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling AppleMDMApi.d_elete_applemdms_id"
+      end
+      # verify the required parameter 'content_type' is set
+      if @api_client.config.client_side_validation && content_type.nil?
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling AppleMDMApi.d_elete_applemdms_id"
       end
       # resource path
-      local_var_path = "/applemdms/{apple_mdm_id}".sub('{' + 'apple_mdm_id' + '}', apple_mdm_id.to_s)
+      local_var_path = "/applemdms/{id}".sub('{' + 'id' + '}', id.to_s)
 
       # query parameters
       query_params = {}
@@ -69,8 +69,8 @@ module JCAPIv2
       header_params['Accept'] = @api_client.select_header_accept(['application/json'])
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-      header_params[:'Content-Type'] = content_type
       header_params[:'Accept'] = accept
+      header_params[:'Content-Type'] = content_type
       header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
 
       # form parameters
@@ -87,41 +87,41 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'AppleMDM')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: AppleMDMApi#applemdms_delete\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: AppleMDMApi#d_elete_applemdms_id\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
     # List Apple MDMs
     # Get a list of all Apple MDM configurations.  An empty topic indicates that a signed certificate from Apple has not been provided to the PUT endpoint yet.  Note: currently only one MDM configuration per organization is supported.  #### Sample Request ``` curl https://console.jumpcloud.com/api/v2/applemdms \\   -H 'accept: application/json' \\   -H 'content-type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
-    # @param content_type 
     # @param accept 
+    # @param content_type 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<AppleMDM>]
-    def applemdms_list(content_type, accept, opts = {})
-      data, _status_code, _headers = applemdms_list_with_http_info(content_type, accept, opts)
+    def g_et_applemdms(accept, content_type, opts = {})
+      data, _status_code, _headers = g_et_applemdms_with_http_info(accept, content_type, opts)
       return data
     end
 
     # List Apple MDMs
     # Get a list of all Apple MDM configurations.  An empty topic indicates that a signed certificate from Apple has not been provided to the PUT endpoint yet.  Note: currently only one MDM configuration per organization is supported.  #### Sample Request &#x60;&#x60;&#x60; curl https://console.jumpcloud.com/api/v2/applemdms \\   -H &#39;accept: application/json&#39; \\   -H &#39;content-type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
-    # @param content_type 
     # @param accept 
+    # @param content_type 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<AppleMDM>, Fixnum, Hash)>] Array<AppleMDM> data, response status code and response headers
-    def applemdms_list_with_http_info(content_type, accept, opts = {})
+    def g_et_applemdms_with_http_info(accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: AppleMDMApi.applemdms_list ..."
-      end
-      # verify the required parameter 'content_type' is set
-      if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling AppleMDMApi.applemdms_list"
+        @api_client.config.logger.debug "Calling API: AppleMDMApi.g_et_applemdms ..."
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling AppleMDMApi.applemdms_list"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling AppleMDMApi.g_et_applemdms"
+      end
+      # verify the required parameter 'content_type' is set
+      if @api_client.config.client_side_validation && content_type.nil?
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling AppleMDMApi.g_et_applemdms"
       end
       # resource path
       local_var_path = "/applemdms"
@@ -135,8 +135,8 @@ module JCAPIv2
       header_params['Accept'] = @api_client.select_header_accept(['application/json'])
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-      header_params[:'Content-Type'] = content_type
       header_params[:'Accept'] = accept
+      header_params[:'Content-Type'] = content_type
       header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
 
       # form parameters
@@ -153,120 +153,274 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<AppleMDM>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: AppleMDMApi#applemdms_list\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: AppleMDMApi#g_et_applemdms\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
-    # Create Apple MDM
-    # Creates an Apple MDM Enrollment for an organization. Only one enrollment per organization will be allowed.  Note that this is the first step in completly setting up an MDM Enrollment.  The user must supply the returned plist to Apple for signing, and then provide the certificate provided by Apple back into the PUT API.  #### Sample Request ```   curl -X POST https://console.jumpcloud.com/api/v2/organizations/{Organization_ID}/mdm \\   -H 'accept: application/json' \\   -H 'content-type: application/json' \\   -H 'x-api-key: {API_KEY}' \\   -d '{}' ```
-    # @param content_type 
+    # Get Apple MDM CSR Plist
+    # Retrieves an Apple MDM signed CSR Plist for an organization.  The user must supply the returned plist to Apple for signing, and then provide the certificate provided by Apple back into the PUT API.  #### Sample Request ```   curl -X GET https://console.jumpcloud.com/api/v2/applemdms/{APPLE_MDM_ID}/csr \\   -H 'accept: application/json' \\   -H 'content-type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
+    # @param apple_mdm_id 
     # @param accept 
+    # @param content_type 
     # @param [Hash] opts the optional parameters
-    # @option opts [Body] :body 
     # @option opts [String] :x_org_id  (default to )
-    # @return [InlineResponse201]
-    def applemdms_post(content_type, accept, opts = {})
-      data, _status_code, _headers = applemdms_post_with_http_info(content_type, accept, opts)
+    # @return [AppleMdmSignedCsrPlist]
+    def g_et_applemdms_apple_mdm_id_csr(apple_mdm_id, accept, content_type, opts = {})
+      data, _status_code, _headers = g_et_applemdms_apple_mdm_id_csr_with_http_info(apple_mdm_id, accept, content_type, opts)
       return data
     end
 
-    # Create Apple MDM
-    # Creates an Apple MDM Enrollment for an organization. Only one enrollment per organization will be allowed.  Note that this is the first step in completly setting up an MDM Enrollment.  The user must supply the returned plist to Apple for signing, and then provide the certificate provided by Apple back into the PUT API.  #### Sample Request &#x60;&#x60;&#x60;   curl -X POST https://console.jumpcloud.com/api/v2/organizations/{Organization_ID}/mdm \\   -H &#39;accept: application/json&#39; \\   -H &#39;content-type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; \\   -d &#39;{}&#39; &#x60;&#x60;&#x60;
-    # @param content_type 
-    # @param accept 
-    # @param [Hash] opts the optional parameters
-    # @option opts [Body] :body 
-    # @option opts [String] :x_org_id 
-    # @return [Array<(InlineResponse201, Fixnum, Hash)>] InlineResponse201 data, response status code and response headers
-    def applemdms_post_with_http_info(content_type, accept, opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: AppleMDMApi.applemdms_post ..."
-      end
-      # verify the required parameter 'content_type' is set
-      if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling AppleMDMApi.applemdms_post"
-      end
-      # verify the required parameter 'accept' is set
-      if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling AppleMDMApi.applemdms_post"
-      end
-      # resource path
-      local_var_path = "/applemdms"
-
-      # query parameters
-      query_params = {}
-
-      # header parameters
-      header_params = {}
-      # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
-      # HTTP header 'Content-Type'
-      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-      header_params[:'Content-Type'] = content_type
-      header_params[:'Accept'] = accept
-      header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
-
-      # form parameters
-      form_params = {}
-
-      # http body (model)
-      post_body = @api_client.object_to_http_body(opts[:'body'])
-      auth_names = ['x-api-key']
-      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'InlineResponse201')
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: AppleMDMApi#applemdms_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-    # Update an Apple MDM
-    # Updates an Apple MDM configuration.  This endpoint is used to supply JumpCloud with a signed certificate from Apple in order to finalize the setup and allow JumpCloud to manage your devices.  #### Sample Request ```   curl -X PUT https://console.jumpcloud.com/api/v2/applemdms/{ID} \\   -H 'accept: application/json' \\   -H 'content-type: application/json' \\   -H 'x-api-key: {API_KEY}' \\   -d '{     \"name\": \"MDM name\",     \"appleSignedCert\": \"{CERTIFICATE}\"   }' ```
+    # Get Apple MDM CSR Plist
+    # Retrieves an Apple MDM signed CSR Plist for an organization.  The user must supply the returned plist to Apple for signing, and then provide the certificate provided by Apple back into the PUT API.  #### Sample Request &#x60;&#x60;&#x60;   curl -X GET https://console.jumpcloud.com/api/v2/applemdms/{APPLE_MDM_ID}/csr \\   -H &#39;accept: application/json&#39; \\   -H &#39;content-type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
     # @param apple_mdm_id 
-    # @param content_type 
     # @param accept 
-    # @param [Hash] opts the optional parameters
-    # @option opts [AppleMdmPatchInput] :body 
-    # @option opts [String] :x_org_id  (default to )
-    # @return [AppleMDM]
-    def applemdms_put(apple_mdm_id, content_type, accept, opts = {})
-      data, _status_code, _headers = applemdms_put_with_http_info(apple_mdm_id, content_type, accept, opts)
-      return data
-    end
-
-    # Update an Apple MDM
-    # Updates an Apple MDM configuration.  This endpoint is used to supply JumpCloud with a signed certificate from Apple in order to finalize the setup and allow JumpCloud to manage your devices.  #### Sample Request &#x60;&#x60;&#x60;   curl -X PUT https://console.jumpcloud.com/api/v2/applemdms/{ID} \\   -H &#39;accept: application/json&#39; \\   -H &#39;content-type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; \\   -d &#39;{     \&quot;name\&quot;: \&quot;MDM name\&quot;,     \&quot;appleSignedCert\&quot;: \&quot;{CERTIFICATE}\&quot;   }&#39; &#x60;&#x60;&#x60;
-    # @param apple_mdm_id 
     # @param content_type 
-    # @param accept 
     # @param [Hash] opts the optional parameters
-    # @option opts [AppleMdmPatchInput] :body 
     # @option opts [String] :x_org_id 
-    # @return [Array<(AppleMDM, Fixnum, Hash)>] AppleMDM data, response status code and response headers
-    def applemdms_put_with_http_info(apple_mdm_id, content_type, accept, opts = {})
+    # @return [Array<(AppleMdmSignedCsrPlist, Fixnum, Hash)>] AppleMdmSignedCsrPlist data, response status code and response headers
+    def g_et_applemdms_apple_mdm_id_csr_with_http_info(apple_mdm_id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: AppleMDMApi.applemdms_put ..."
+        @api_client.config.logger.debug "Calling API: AppleMDMApi.g_et_applemdms_apple_mdm_id_csr ..."
       end
       # verify the required parameter 'apple_mdm_id' is set
       if @api_client.config.client_side_validation && apple_mdm_id.nil?
-        fail ArgumentError, "Missing the required parameter 'apple_mdm_id' when calling AppleMDMApi.applemdms_put"
-      end
-      # verify the required parameter 'content_type' is set
-      if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling AppleMDMApi.applemdms_put"
+        fail ArgumentError, "Missing the required parameter 'apple_mdm_id' when calling AppleMDMApi.g_et_applemdms_apple_mdm_id_csr"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling AppleMDMApi.applemdms_put"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling AppleMDMApi.g_et_applemdms_apple_mdm_id_csr"
+      end
+      # verify the required parameter 'content_type' is set
+      if @api_client.config.client_side_validation && content_type.nil?
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling AppleMDMApi.g_et_applemdms_apple_mdm_id_csr"
       end
       # resource path
-      local_var_path = "/applemdms/{apple_mdm_id}".sub('{' + 'apple_mdm_id' + '}', apple_mdm_id.to_s)
+      local_var_path = "/applemdms/{apple_mdm_id}/csr".sub('{' + 'apple_mdm_id' + '}', apple_mdm_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/octet-stream'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+      header_params[:'Accept'] = accept
+      header_params[:'Content-Type'] = content_type
+      header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      auth_names = ['x-api-key']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'AppleMdmSignedCsrPlist')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: AppleMDMApi#g_et_applemdms_apple_mdm_id_csr\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get Apple MDM DEP Public Key
+    # Retrieves an Apple MDM DEP Public Key.
+    # @param apple_mdm_id 
+    # @param accept 
+    # @param content_type 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :x_org_id  (default to )
+    # @return [AppleMdmPublicKeyCert]
+    def g_et_applemdms_apple_mdm_id_depkey(apple_mdm_id, accept, content_type, opts = {})
+      data, _status_code, _headers = g_et_applemdms_apple_mdm_id_depkey_with_http_info(apple_mdm_id, accept, content_type, opts)
+      return data
+    end
+
+    # Get Apple MDM DEP Public Key
+    # Retrieves an Apple MDM DEP Public Key.
+    # @param apple_mdm_id 
+    # @param accept 
+    # @param content_type 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :x_org_id 
+    # @return [Array<(AppleMdmPublicKeyCert, Fixnum, Hash)>] AppleMdmPublicKeyCert data, response status code and response headers
+    def g_et_applemdms_apple_mdm_id_depkey_with_http_info(apple_mdm_id, accept, content_type, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: AppleMDMApi.g_et_applemdms_apple_mdm_id_depkey ..."
+      end
+      # verify the required parameter 'apple_mdm_id' is set
+      if @api_client.config.client_side_validation && apple_mdm_id.nil?
+        fail ArgumentError, "Missing the required parameter 'apple_mdm_id' when calling AppleMDMApi.g_et_applemdms_apple_mdm_id_depkey"
+      end
+      # verify the required parameter 'accept' is set
+      if @api_client.config.client_side_validation && accept.nil?
+        fail ArgumentError, "Missing the required parameter 'accept' when calling AppleMDMApi.g_et_applemdms_apple_mdm_id_depkey"
+      end
+      # verify the required parameter 'content_type' is set
+      if @api_client.config.client_side_validation && content_type.nil?
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling AppleMDMApi.g_et_applemdms_apple_mdm_id_depkey"
+      end
+      # resource path
+      local_var_path = "/applemdms/{apple_mdm_id}/depkey".sub('{' + 'apple_mdm_id' + '}', apple_mdm_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/x-pem-file'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+      header_params[:'Accept'] = accept
+      header_params[:'Content-Type'] = content_type
+      header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      auth_names = ['x-api-key']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'AppleMdmPublicKeyCert')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: AppleMDMApi#g_et_applemdms_apple_mdm_id_depkey\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # List AppleMDM Devices
+    # Lists all Apple MDM devices.  The filter and sort queries will allow the following fields: `createdAt` `depRegistered` `enrolled` `id` `osVersion` `serialNumber` `udid`  #### Sample Request ```   curl -X GET https://console.jumpcloud.com/api/v2/applemdms/{apple_mdm_id}/devices \\   -H 'accept: application/json' \\   -H 'x-api-key: {API_KEY}' \\   -d '{}' ```
+    # @param apple_mdm_id 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :limit The number of records to return at once. Limited to 100. (default to 10)
+    # @option opts [Integer] :skip The offset into the records to return. (default to 0)
+    # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
+    # @option opts [Array<String>] :sort The comma separated fields used to sort the collection. Default sort is ascending, prefix with &#x60;-&#x60; to sort descending. 
+    # @option opts [String] :x_org_id  (default to )
+    # @option opts [Integer] :x_total_count 
+    # @option opts [Integer] :x_unfiltered_total_count If provided in the request with any non-empty value, this header will be returned on the response populated with the total count of objects without filters taken into account
+    # @return [Array<AppleMdmDevice>]
+    def g_et_applemdms_apple_mdm_id_devices(apple_mdm_id, opts = {})
+      data, _status_code, _headers = g_et_applemdms_apple_mdm_id_devices_with_http_info(apple_mdm_id, opts)
+      return data
+    end
+
+    # List AppleMDM Devices
+    # Lists all Apple MDM devices.  The filter and sort queries will allow the following fields: &#x60;createdAt&#x60; &#x60;depRegistered&#x60; &#x60;enrolled&#x60; &#x60;id&#x60; &#x60;osVersion&#x60; &#x60;serialNumber&#x60; &#x60;udid&#x60;  #### Sample Request &#x60;&#x60;&#x60;   curl -X GET https://console.jumpcloud.com/api/v2/applemdms/{apple_mdm_id}/devices \\   -H &#39;accept: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; \\   -d &#39;{}&#39; &#x60;&#x60;&#x60;
+    # @param apple_mdm_id 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :limit The number of records to return at once. Limited to 100.
+    # @option opts [Integer] :skip The offset into the records to return.
+    # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
+    # @option opts [Array<String>] :sort The comma separated fields used to sort the collection. Default sort is ascending, prefix with &#x60;-&#x60; to sort descending. 
+    # @option opts [String] :x_org_id 
+    # @option opts [Integer] :x_total_count 
+    # @option opts [Integer] :x_unfiltered_total_count If provided in the request with any non-empty value, this header will be returned on the response populated with the total count of objects without filters taken into account
+    # @return [Array<(Array<AppleMdmDevice>, Fixnum, Hash)>] Array<AppleMdmDevice> data, response status code and response headers
+    def g_et_applemdms_apple_mdm_id_devices_with_http_info(apple_mdm_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: AppleMDMApi.g_et_applemdms_apple_mdm_id_devices ..."
+      end
+      # verify the required parameter 'apple_mdm_id' is set
+      if @api_client.config.client_side_validation && apple_mdm_id.nil?
+        fail ArgumentError, "Missing the required parameter 'apple_mdm_id' when calling AppleMDMApi.g_et_applemdms_apple_mdm_id_devices"
+      end
+      if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling AppleMDMApi.g_et_applemdms_apple_mdm_id_devices, must be greater than or equal to 0.'
+      end
+
+      # resource path
+      local_var_path = "/applemdms/{apple_mdm_id}/devices".sub('{' + 'apple_mdm_id' + '}', apple_mdm_id.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'limit'] = opts[:'limit'] if !opts[:'limit'].nil?
+      query_params[:'skip'] = opts[:'skip'] if !opts[:'skip'].nil?
+      query_params[:'filter'] = @api_client.build_collection_param(opts[:'filter'], :csv) if !opts[:'filter'].nil?
+      query_params[:'sort'] = @api_client.build_collection_param(opts[:'sort'], :csv) if !opts[:'sort'].nil?
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+      header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
+      header_params[:'x-total-count'] = opts[:'x_total_count'] if !opts[:'x_total_count'].nil?
+      header_params[:'x-unfiltered-total-count'] = opts[:'x_unfiltered_total_count'] if !opts[:'x_unfiltered_total_count'].nil?
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      auth_names = ['x-api-key']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'Array<AppleMdmDevice>')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: AppleMDMApi#g_et_applemdms_apple_mdm_id_devices\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # List Apple MDM Enrollment Profiles
+    # Get a list of enrollment profiles for an apple mdm.  Note: currently only one enrollment profile is supported.  #### Sample Request ```  curl https://console.jumpcloud.com/api/v2/applemdms/{APPLE_MDM_ID}/enrollmentprofiles \\   -H 'accept: application/json' \\   -H 'content-type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
+    # @param apple_mdm_id 
+    # @param accept 
+    # @param content_type 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :x_org_id  (default to )
+    # @return [Array<AppleMDM>]
+    def g_et_applemdms_apple_mdm_id_enrollmentprofiles(apple_mdm_id, accept, content_type, opts = {})
+      data, _status_code, _headers = g_et_applemdms_apple_mdm_id_enrollmentprofiles_with_http_info(apple_mdm_id, accept, content_type, opts)
+      return data
+    end
+
+    # List Apple MDM Enrollment Profiles
+    # Get a list of enrollment profiles for an apple mdm.  Note: currently only one enrollment profile is supported.  #### Sample Request &#x60;&#x60;&#x60;  curl https://console.jumpcloud.com/api/v2/applemdms/{APPLE_MDM_ID}/enrollmentprofiles \\   -H &#39;accept: application/json&#39; \\   -H &#39;content-type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
+    # @param apple_mdm_id 
+    # @param accept 
+    # @param content_type 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :x_org_id 
+    # @return [Array<(Array<AppleMDM>, Fixnum, Hash)>] Array<AppleMDM> data, response status code and response headers
+    def g_et_applemdms_apple_mdm_id_enrollmentprofiles_with_http_info(apple_mdm_id, accept, content_type, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: AppleMDMApi.g_et_applemdms_apple_mdm_id_enrollmentprofiles ..."
+      end
+      # verify the required parameter 'apple_mdm_id' is set
+      if @api_client.config.client_side_validation && apple_mdm_id.nil?
+        fail ArgumentError, "Missing the required parameter 'apple_mdm_id' when calling AppleMDMApi.g_et_applemdms_apple_mdm_id_enrollmentprofiles"
+      end
+      # verify the required parameter 'accept' is set
+      if @api_client.config.client_side_validation && accept.nil?
+        fail ArgumentError, "Missing the required parameter 'accept' when calling AppleMDMApi.g_et_applemdms_apple_mdm_id_enrollmentprofiles"
+      end
+      # verify the required parameter 'content_type' is set
+      if @api_client.config.client_side_validation && content_type.nil?
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling AppleMDMApi.g_et_applemdms_apple_mdm_id_enrollmentprofiles"
+      end
+      # resource path
+      local_var_path = "/applemdms/{apple_mdm_id}/enrollmentprofiles".sub('{' + 'apple_mdm_id' + '}', apple_mdm_id.to_s)
 
       # query parameters
       query_params = {}
@@ -277,74 +431,74 @@ module JCAPIv2
       header_params['Accept'] = @api_client.select_header_accept(['application/json'])
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-      header_params[:'Content-Type'] = content_type
       header_params[:'Accept'] = accept
+      header_params[:'Content-Type'] = content_type
       header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
 
       # form parameters
       form_params = {}
 
       # http body (model)
-      post_body = @api_client.object_to_http_body(opts[:'body'])
+      post_body = nil
       auth_names = ['x-api-key']
-      data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'AppleMDM')
+        :return_type => 'Array<AppleMDM>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: AppleMDMApi#applemdms_put\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: AppleMDMApi#g_et_applemdms_apple_mdm_id_enrollmentprofiles\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
     # Get an Apple MDM Enrollment Profile
-    # Get an enrollment profile  Currently only requesting the mobileconfig is supported.  #### Sample Request  ``` curl https://console.jumpcloud.com/api/v2/applemdms/{APPLE_MDM_ID}/enrollmentprofiles/{ENROLLMENT_PROFILE_ID} \\   -H 'accept: application/x-apple-aspen-config' \\   -H 'content-type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
+    # Get an enrollment profile  Currently only requesting the mobileconfig is supported.  #### Sample Request  ``` curl https://console.jumpcloud.com/api/v2/applemdms/{APPLE_MDM_ID}/enrollmentprofiles/{ID} \\   -H 'accept: application/x-apple-aspen-config' \\   -H 'content-type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
     # @param apple_mdm_id 
-    # @param enrollment_profile_id 
-    # @param content_type 
+    # @param id 
     # @param accept 
+    # @param content_type 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :x_org_id  (default to )
     # @return [Mobileconfig]
-    def enrollmentprofiles_get(apple_mdm_id, enrollment_profile_id, content_type, accept, opts = {})
-      data, _status_code, _headers = enrollmentprofiles_get_with_http_info(apple_mdm_id, enrollment_profile_id, content_type, accept, opts)
+    def g_et_applemdms_apple_mdm_id_enrollmentprofiles_id(apple_mdm_id, id, accept, content_type, opts = {})
+      data, _status_code, _headers = g_et_applemdms_apple_mdm_id_enrollmentprofiles_id_with_http_info(apple_mdm_id, id, accept, content_type, opts)
       return data
     end
 
     # Get an Apple MDM Enrollment Profile
-    # Get an enrollment profile  Currently only requesting the mobileconfig is supported.  #### Sample Request  &#x60;&#x60;&#x60; curl https://console.jumpcloud.com/api/v2/applemdms/{APPLE_MDM_ID}/enrollmentprofiles/{ENROLLMENT_PROFILE_ID} \\   -H &#39;accept: application/x-apple-aspen-config&#39; \\   -H &#39;content-type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
+    # Get an enrollment profile  Currently only requesting the mobileconfig is supported.  #### Sample Request  &#x60;&#x60;&#x60; curl https://console.jumpcloud.com/api/v2/applemdms/{APPLE_MDM_ID}/enrollmentprofiles/{ID} \\   -H &#39;accept: application/x-apple-aspen-config&#39; \\   -H &#39;content-type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
     # @param apple_mdm_id 
-    # @param enrollment_profile_id 
-    # @param content_type 
+    # @param id 
     # @param accept 
+    # @param content_type 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :x_org_id 
     # @return [Array<(Mobileconfig, Fixnum, Hash)>] Mobileconfig data, response status code and response headers
-    def enrollmentprofiles_get_with_http_info(apple_mdm_id, enrollment_profile_id, content_type, accept, opts = {})
+    def g_et_applemdms_apple_mdm_id_enrollmentprofiles_id_with_http_info(apple_mdm_id, id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: AppleMDMApi.enrollmentprofiles_get ..."
+        @api_client.config.logger.debug "Calling API: AppleMDMApi.g_et_applemdms_apple_mdm_id_enrollmentprofiles_id ..."
       end
       # verify the required parameter 'apple_mdm_id' is set
       if @api_client.config.client_side_validation && apple_mdm_id.nil?
-        fail ArgumentError, "Missing the required parameter 'apple_mdm_id' when calling AppleMDMApi.enrollmentprofiles_get"
+        fail ArgumentError, "Missing the required parameter 'apple_mdm_id' when calling AppleMDMApi.g_et_applemdms_apple_mdm_id_enrollmentprofiles_id"
       end
-      # verify the required parameter 'enrollment_profile_id' is set
-      if @api_client.config.client_side_validation && enrollment_profile_id.nil?
-        fail ArgumentError, "Missing the required parameter 'enrollment_profile_id' when calling AppleMDMApi.enrollmentprofiles_get"
-      end
-      # verify the required parameter 'content_type' is set
-      if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling AppleMDMApi.enrollmentprofiles_get"
+      # verify the required parameter 'id' is set
+      if @api_client.config.client_side_validation && id.nil?
+        fail ArgumentError, "Missing the required parameter 'id' when calling AppleMDMApi.g_et_applemdms_apple_mdm_id_enrollmentprofiles_id"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling AppleMDMApi.enrollmentprofiles_get"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling AppleMDMApi.g_et_applemdms_apple_mdm_id_enrollmentprofiles_id"
+      end
+      # verify the required parameter 'content_type' is set
+      if @api_client.config.client_side_validation && content_type.nil?
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling AppleMDMApi.g_et_applemdms_apple_mdm_id_enrollmentprofiles_id"
       end
       # resource path
-      local_var_path = "/applemdms/{apple_mdm_id}/enrollmentprofiles/{enrollment_profile_id}".sub('{' + 'apple_mdm_id' + '}', apple_mdm_id.to_s).sub('{' + 'enrollment_profile_id' + '}', enrollment_profile_id.to_s)
+      local_var_path = "/applemdms/{apple_mdm_id}/enrollmentprofiles/{id}".sub('{' + 'apple_mdm_id' + '}', apple_mdm_id.to_s).sub('{' + 'id' + '}', id.to_s)
 
       # query parameters
       query_params = {}
@@ -355,8 +509,8 @@ module JCAPIv2
       header_params['Accept'] = @api_client.select_header_accept(['application/x-apple-aspen-config'])
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-      header_params[:'Content-Type'] = content_type
       header_params[:'Accept'] = accept
+      header_params[:'Content-Type'] = content_type
       header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
 
       # form parameters
@@ -373,50 +527,58 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Mobileconfig')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: AppleMDMApi#enrollmentprofiles_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: AppleMDMApi#g_et_applemdms_apple_mdm_id_enrollmentprofiles_id\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
-    # List Apple MDM Enrollment Profiles
-    # Get a list of enrollment profiles for an apple mdm.  Note: currently only one enrollment profile is supported.  #### Sample Request ``` curl https://console.jumpcloud.com/api/v2/applemdms/{APPLE_MDM_ID}/enrollmentprofiles \\   -H 'accept: application/json' \\   -H 'content-type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
+    # Erase Device
+    # Erases a DEP-enrolled device.  #### Sample Request ```   curl -X POST https://console.jumpcloud.com/api/v2/applemdms/{apple_mdm_id}/devices/{device_id}/erase \\   -H 'accept: application/json' \\   -H 'content-type: application/json' \\   -H 'x-api-key: {API_KEY}' \\   -d '{}' ```
     # @param apple_mdm_id 
-    # @param content_type 
+    # @param device_id 
     # @param accept 
+    # @param content_type 
     # @param [Hash] opts the optional parameters
+    # @option opts [Body2] :body 
     # @option opts [String] :x_org_id  (default to )
-    # @return [Array<AppleMDM>]
-    def enrollmentprofiles_list(apple_mdm_id, content_type, accept, opts = {})
-      data, _status_code, _headers = enrollmentprofiles_list_with_http_info(apple_mdm_id, content_type, accept, opts)
-      return data
+    # @return [nil]
+    def p_ost_applemdms_apple_mdm_id_devices_device_id_erase(apple_mdm_id, device_id, accept, content_type, opts = {})
+      p_ost_applemdms_apple_mdm_id_devices_device_id_erase_with_http_info(apple_mdm_id, device_id, accept, content_type, opts)
+      return nil
     end
 
-    # List Apple MDM Enrollment Profiles
-    # Get a list of enrollment profiles for an apple mdm.  Note: currently only one enrollment profile is supported.  #### Sample Request &#x60;&#x60;&#x60; curl https://console.jumpcloud.com/api/v2/applemdms/{APPLE_MDM_ID}/enrollmentprofiles \\   -H &#39;accept: application/json&#39; \\   -H &#39;content-type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
+    # Erase Device
+    # Erases a DEP-enrolled device.  #### Sample Request &#x60;&#x60;&#x60;   curl -X POST https://console.jumpcloud.com/api/v2/applemdms/{apple_mdm_id}/devices/{device_id}/erase \\   -H &#39;accept: application/json&#39; \\   -H &#39;content-type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; \\   -d &#39;{}&#39; &#x60;&#x60;&#x60;
     # @param apple_mdm_id 
-    # @param content_type 
+    # @param device_id 
     # @param accept 
+    # @param content_type 
     # @param [Hash] opts the optional parameters
+    # @option opts [Body2] :body 
     # @option opts [String] :x_org_id 
-    # @return [Array<(Array<AppleMDM>, Fixnum, Hash)>] Array<AppleMDM> data, response status code and response headers
-    def enrollmentprofiles_list_with_http_info(apple_mdm_id, content_type, accept, opts = {})
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
+    def p_ost_applemdms_apple_mdm_id_devices_device_id_erase_with_http_info(apple_mdm_id, device_id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: AppleMDMApi.enrollmentprofiles_list ..."
+        @api_client.config.logger.debug "Calling API: AppleMDMApi.p_ost_applemdms_apple_mdm_id_devices_device_id_erase ..."
       end
       # verify the required parameter 'apple_mdm_id' is set
       if @api_client.config.client_side_validation && apple_mdm_id.nil?
-        fail ArgumentError, "Missing the required parameter 'apple_mdm_id' when calling AppleMDMApi.enrollmentprofiles_list"
+        fail ArgumentError, "Missing the required parameter 'apple_mdm_id' when calling AppleMDMApi.p_ost_applemdms_apple_mdm_id_devices_device_id_erase"
       end
-      # verify the required parameter 'content_type' is set
-      if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling AppleMDMApi.enrollmentprofiles_list"
+      # verify the required parameter 'device_id' is set
+      if @api_client.config.client_side_validation && device_id.nil?
+        fail ArgumentError, "Missing the required parameter 'device_id' when calling AppleMDMApi.p_ost_applemdms_apple_mdm_id_devices_device_id_erase"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling AppleMDMApi.enrollmentprofiles_list"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling AppleMDMApi.p_ost_applemdms_apple_mdm_id_devices_device_id_erase"
+      end
+      # verify the required parameter 'content_type' is set
+      if @api_client.config.client_side_validation && content_type.nil?
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling AppleMDMApi.p_ost_applemdms_apple_mdm_id_devices_device_id_erase"
       end
       # resource path
-      local_var_path = "/applemdms/{apple_mdm_id}/enrollmentprofiles".sub('{' + 'apple_mdm_id' + '}', apple_mdm_id.to_s)
+      local_var_path = "/applemdms/{apple_mdm_id}/devices/{device_id}/erase".sub('{' + 'apple_mdm_id' + '}', apple_mdm_id.to_s).sub('{' + 'device_id' + '}', device_id.to_s)
 
       # query parameters
       query_params = {}
@@ -427,8 +589,164 @@ module JCAPIv2
       header_params['Accept'] = @api_client.select_header_accept(['application/json'])
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-      header_params[:'Content-Type'] = content_type
       header_params[:'Accept'] = accept
+      header_params[:'Content-Type'] = content_type
+      header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(opts[:'body'])
+      auth_names = ['x-api-key']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: AppleMDMApi#p_ost_applemdms_apple_mdm_id_devices_device_id_erase\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Lock Device
+    # Locks a DEP-enrolled device.  #### Sample Request ```   curl -X POST https://console.jumpcloud.com/api/v2/applemdms/{apple_mdm_id}/devices/{device_id}/lock \\   -H 'accept: application/json' \\   -H 'content-type: application/json' \\   -H 'x-api-key: {API_KEY}' \\   -d '{}' ```
+    # @param apple_mdm_id 
+    # @param device_id 
+    # @param accept 
+    # @param content_type 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Body] :body 
+    # @option opts [String] :x_org_id  (default to )
+    # @return [nil]
+    def p_ost_applemdms_apple_mdm_id_devices_device_id_lock(apple_mdm_id, device_id, accept, content_type, opts = {})
+      p_ost_applemdms_apple_mdm_id_devices_device_id_lock_with_http_info(apple_mdm_id, device_id, accept, content_type, opts)
+      return nil
+    end
+
+    # Lock Device
+    # Locks a DEP-enrolled device.  #### Sample Request &#x60;&#x60;&#x60;   curl -X POST https://console.jumpcloud.com/api/v2/applemdms/{apple_mdm_id}/devices/{device_id}/lock \\   -H &#39;accept: application/json&#39; \\   -H &#39;content-type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; \\   -d &#39;{}&#39; &#x60;&#x60;&#x60;
+    # @param apple_mdm_id 
+    # @param device_id 
+    # @param accept 
+    # @param content_type 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Body] :body 
+    # @option opts [String] :x_org_id 
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
+    def p_ost_applemdms_apple_mdm_id_devices_device_id_lock_with_http_info(apple_mdm_id, device_id, accept, content_type, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: AppleMDMApi.p_ost_applemdms_apple_mdm_id_devices_device_id_lock ..."
+      end
+      # verify the required parameter 'apple_mdm_id' is set
+      if @api_client.config.client_side_validation && apple_mdm_id.nil?
+        fail ArgumentError, "Missing the required parameter 'apple_mdm_id' when calling AppleMDMApi.p_ost_applemdms_apple_mdm_id_devices_device_id_lock"
+      end
+      # verify the required parameter 'device_id' is set
+      if @api_client.config.client_side_validation && device_id.nil?
+        fail ArgumentError, "Missing the required parameter 'device_id' when calling AppleMDMApi.p_ost_applemdms_apple_mdm_id_devices_device_id_lock"
+      end
+      # verify the required parameter 'accept' is set
+      if @api_client.config.client_side_validation && accept.nil?
+        fail ArgumentError, "Missing the required parameter 'accept' when calling AppleMDMApi.p_ost_applemdms_apple_mdm_id_devices_device_id_lock"
+      end
+      # verify the required parameter 'content_type' is set
+      if @api_client.config.client_side_validation && content_type.nil?
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling AppleMDMApi.p_ost_applemdms_apple_mdm_id_devices_device_id_lock"
+      end
+      # resource path
+      local_var_path = "/applemdms/{apple_mdm_id}/devices/{device_id}/lock".sub('{' + 'apple_mdm_id' + '}', apple_mdm_id.to_s).sub('{' + 'device_id' + '}', device_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+      header_params[:'Accept'] = accept
+      header_params[:'Content-Type'] = content_type
+      header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(opts[:'body'])
+      auth_names = ['x-api-key']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: AppleMDMApi#p_ost_applemdms_apple_mdm_id_devices_device_id_lock\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Restart Device
+    # Restarts a DEP-enrolled device.  #### Sample Request ```   curl -X POST https://console.jumpcloud.com/api/v2/applemdms/{apple_mdm_id}/devices/{device_id}/restart \\   -H 'accept: application/json' \\   -H 'content-type: application/json' \\   -H 'x-api-key: {API_KEY}' \\   -d '{}' ```
+    # @param apple_mdm_id 
+    # @param device_id 
+    # @param accept 
+    # @param content_type 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :x_org_id  (default to )
+    # @return [nil]
+    def p_ost_applemdms_apple_mdm_id_devices_device_id_restart(apple_mdm_id, device_id, accept, content_type, opts = {})
+      p_ost_applemdms_apple_mdm_id_devices_device_id_restart_with_http_info(apple_mdm_id, device_id, accept, content_type, opts)
+      return nil
+    end
+
+    # Restart Device
+    # Restarts a DEP-enrolled device.  #### Sample Request &#x60;&#x60;&#x60;   curl -X POST https://console.jumpcloud.com/api/v2/applemdms/{apple_mdm_id}/devices/{device_id}/restart \\   -H &#39;accept: application/json&#39; \\   -H &#39;content-type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; \\   -d &#39;{}&#39; &#x60;&#x60;&#x60;
+    # @param apple_mdm_id 
+    # @param device_id 
+    # @param accept 
+    # @param content_type 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :x_org_id 
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
+    def p_ost_applemdms_apple_mdm_id_devices_device_id_restart_with_http_info(apple_mdm_id, device_id, accept, content_type, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: AppleMDMApi.p_ost_applemdms_apple_mdm_id_devices_device_id_restart ..."
+      end
+      # verify the required parameter 'apple_mdm_id' is set
+      if @api_client.config.client_side_validation && apple_mdm_id.nil?
+        fail ArgumentError, "Missing the required parameter 'apple_mdm_id' when calling AppleMDMApi.p_ost_applemdms_apple_mdm_id_devices_device_id_restart"
+      end
+      # verify the required parameter 'device_id' is set
+      if @api_client.config.client_side_validation && device_id.nil?
+        fail ArgumentError, "Missing the required parameter 'device_id' when calling AppleMDMApi.p_ost_applemdms_apple_mdm_id_devices_device_id_restart"
+      end
+      # verify the required parameter 'accept' is set
+      if @api_client.config.client_side_validation && accept.nil?
+        fail ArgumentError, "Missing the required parameter 'accept' when calling AppleMDMApi.p_ost_applemdms_apple_mdm_id_devices_device_id_restart"
+      end
+      # verify the required parameter 'content_type' is set
+      if @api_client.config.client_side_validation && content_type.nil?
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling AppleMDMApi.p_ost_applemdms_apple_mdm_id_devices_device_id_restart"
+      end
+      # resource path
+      local_var_path = "/applemdms/{apple_mdm_id}/devices/{device_id}/restart".sub('{' + 'apple_mdm_id' + '}', apple_mdm_id.to_s).sub('{' + 'device_id' + '}', device_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+      header_params[:'Accept'] = accept
+      header_params[:'Content-Type'] = content_type
       header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
 
       # form parameters
@@ -437,15 +755,236 @@ module JCAPIv2
       # http body (model)
       post_body = nil
       auth_names = ['x-api-key']
-      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: AppleMDMApi#p_ost_applemdms_apple_mdm_id_devices_device_id_restart\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Shut Down Device
+    # Shuts down a DEP-enrolled device.  #### Sample Request ```   curl -X POST https://console.jumpcloud.com/api/v2/applemdms/{apple_mdm_id}/devices/{device_id}/shutdown \\   -H 'accept: application/json' \\   -H 'content-type: application/json' \\   -H 'x-api-key: {API_KEY}' \\   -d '{}' ```
+    # @param apple_mdm_id 
+    # @param device_id 
+    # @param accept 
+    # @param content_type 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :x_org_id  (default to )
+    # @return [nil]
+    def p_ost_applemdms_apple_mdm_id_devices_device_id_shutdown(apple_mdm_id, device_id, accept, content_type, opts = {})
+      p_ost_applemdms_apple_mdm_id_devices_device_id_shutdown_with_http_info(apple_mdm_id, device_id, accept, content_type, opts)
+      return nil
+    end
+
+    # Shut Down Device
+    # Shuts down a DEP-enrolled device.  #### Sample Request &#x60;&#x60;&#x60;   curl -X POST https://console.jumpcloud.com/api/v2/applemdms/{apple_mdm_id}/devices/{device_id}/shutdown \\   -H &#39;accept: application/json&#39; \\   -H &#39;content-type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; \\   -d &#39;{}&#39; &#x60;&#x60;&#x60;
+    # @param apple_mdm_id 
+    # @param device_id 
+    # @param accept 
+    # @param content_type 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :x_org_id 
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
+    def p_ost_applemdms_apple_mdm_id_devices_device_id_shutdown_with_http_info(apple_mdm_id, device_id, accept, content_type, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: AppleMDMApi.p_ost_applemdms_apple_mdm_id_devices_device_id_shutdown ..."
+      end
+      # verify the required parameter 'apple_mdm_id' is set
+      if @api_client.config.client_side_validation && apple_mdm_id.nil?
+        fail ArgumentError, "Missing the required parameter 'apple_mdm_id' when calling AppleMDMApi.p_ost_applemdms_apple_mdm_id_devices_device_id_shutdown"
+      end
+      # verify the required parameter 'device_id' is set
+      if @api_client.config.client_side_validation && device_id.nil?
+        fail ArgumentError, "Missing the required parameter 'device_id' when calling AppleMDMApi.p_ost_applemdms_apple_mdm_id_devices_device_id_shutdown"
+      end
+      # verify the required parameter 'accept' is set
+      if @api_client.config.client_side_validation && accept.nil?
+        fail ArgumentError, "Missing the required parameter 'accept' when calling AppleMDMApi.p_ost_applemdms_apple_mdm_id_devices_device_id_shutdown"
+      end
+      # verify the required parameter 'content_type' is set
+      if @api_client.config.client_side_validation && content_type.nil?
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling AppleMDMApi.p_ost_applemdms_apple_mdm_id_devices_device_id_shutdown"
+      end
+      # resource path
+      local_var_path = "/applemdms/{apple_mdm_id}/devices/{device_id}/shutdown".sub('{' + 'apple_mdm_id' + '}', apple_mdm_id.to_s).sub('{' + 'device_id' + '}', device_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+      header_params[:'Accept'] = accept
+      header_params[:'Content-Type'] = content_type
+      header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      auth_names = ['x-api-key']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: AppleMDMApi#p_ost_applemdms_apple_mdm_id_devices_device_id_shutdown\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Refresh DEP Devices
+    # Refreshes the list of devices that a JumpCloud admin has added to their virtual MDM in Apple Business Manager - ABM so that they can be DEP enrolled with JumpCloud.  #### Sample Request ```   curl -X POST https://console.jumpcloud.com/api/v2/applemdms/{apple_mdm_id}/refreshdepdevices \\   -H 'accept: application/json' \\   -H 'content-type: application/json' \\   -H 'x-api-key: {API_KEY}' \\   -d '{}' ```
+    # @param apple_mdm_id 
+    # @param accept 
+    # @param content_type 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :x_org_id  (default to )
+    # @return [nil]
+    def p_ost_applemdms_apple_mdm_id_refreshdepdevices(apple_mdm_id, accept, content_type, opts = {})
+      p_ost_applemdms_apple_mdm_id_refreshdepdevices_with_http_info(apple_mdm_id, accept, content_type, opts)
+      return nil
+    end
+
+    # Refresh DEP Devices
+    # Refreshes the list of devices that a JumpCloud admin has added to their virtual MDM in Apple Business Manager - ABM so that they can be DEP enrolled with JumpCloud.  #### Sample Request &#x60;&#x60;&#x60;   curl -X POST https://console.jumpcloud.com/api/v2/applemdms/{apple_mdm_id}/refreshdepdevices \\   -H &#39;accept: application/json&#39; \\   -H &#39;content-type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; \\   -d &#39;{}&#39; &#x60;&#x60;&#x60;
+    # @param apple_mdm_id 
+    # @param accept 
+    # @param content_type 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :x_org_id 
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
+    def p_ost_applemdms_apple_mdm_id_refreshdepdevices_with_http_info(apple_mdm_id, accept, content_type, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: AppleMDMApi.p_ost_applemdms_apple_mdm_id_refreshdepdevices ..."
+      end
+      # verify the required parameter 'apple_mdm_id' is set
+      if @api_client.config.client_side_validation && apple_mdm_id.nil?
+        fail ArgumentError, "Missing the required parameter 'apple_mdm_id' when calling AppleMDMApi.p_ost_applemdms_apple_mdm_id_refreshdepdevices"
+      end
+      # verify the required parameter 'accept' is set
+      if @api_client.config.client_side_validation && accept.nil?
+        fail ArgumentError, "Missing the required parameter 'accept' when calling AppleMDMApi.p_ost_applemdms_apple_mdm_id_refreshdepdevices"
+      end
+      # verify the required parameter 'content_type' is set
+      if @api_client.config.client_side_validation && content_type.nil?
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling AppleMDMApi.p_ost_applemdms_apple_mdm_id_refreshdepdevices"
+      end
+      # resource path
+      local_var_path = "/applemdms/{apple_mdm_id}/refreshdepdevices".sub('{' + 'apple_mdm_id' + '}', apple_mdm_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+      header_params[:'Accept'] = accept
+      header_params[:'Content-Type'] = content_type
+      header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      auth_names = ['x-api-key']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: AppleMDMApi#p_ost_applemdms_apple_mdm_id_refreshdepdevices\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Update an Apple MDM
+    # Updates an Apple MDM configuration.  This endpoint is used to supply JumpCloud with a signed certificate from Apple in order to finalize the setup and allow JumpCloud to manage your devices.  It may also be used to update the DEP Settings.  #### Sample Request ```   curl -X PUT https://console.jumpcloud.com/api/v2/applemdms/{ID} \\   -H 'accept: application/json' \\   -H 'content-type: application/json' \\   -H 'x-api-key: {API_KEY}' \\   -d '{     \"name\": \"MDM name\",     \"appleSignedCert\": \"{CERTIFICATE}\",     \"encryptedDepServerToken\": \"{SERVER_TOKEN}\",     \"dep\": {       \"welcomeScreen\": {         \"title\": \"Welcome\",         \"paragraph\": \"In just a few steps, you will be working securely from your Mac.\",         \"button\": \"continue\",       },     },   }' ```
+    # @param id 
+    # @param accept 
+    # @param content_type 
+    # @param [Hash] opts the optional parameters
+    # @option opts [AppleMdmPatchInput] :body 
+    # @option opts [String] :x_org_id  (default to )
+    # @return [AppleMDM]
+    def p_ut_applemdms_id(id, accept, content_type, opts = {})
+      data, _status_code, _headers = p_ut_applemdms_id_with_http_info(id, accept, content_type, opts)
+      return data
+    end
+
+    # Update an Apple MDM
+    # Updates an Apple MDM configuration.  This endpoint is used to supply JumpCloud with a signed certificate from Apple in order to finalize the setup and allow JumpCloud to manage your devices.  It may also be used to update the DEP Settings.  #### Sample Request &#x60;&#x60;&#x60;   curl -X PUT https://console.jumpcloud.com/api/v2/applemdms/{ID} \\   -H &#39;accept: application/json&#39; \\   -H &#39;content-type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; \\   -d &#39;{     \&quot;name\&quot;: \&quot;MDM name\&quot;,     \&quot;appleSignedCert\&quot;: \&quot;{CERTIFICATE}\&quot;,     \&quot;encryptedDepServerToken\&quot;: \&quot;{SERVER_TOKEN}\&quot;,     \&quot;dep\&quot;: {       \&quot;welcomeScreen\&quot;: {         \&quot;title\&quot;: \&quot;Welcome\&quot;,         \&quot;paragraph\&quot;: \&quot;In just a few steps, you will be working securely from your Mac.\&quot;,         \&quot;button\&quot;: \&quot;continue\&quot;,       },     },   }&#39; &#x60;&#x60;&#x60;
+    # @param id 
+    # @param accept 
+    # @param content_type 
+    # @param [Hash] opts the optional parameters
+    # @option opts [AppleMdmPatchInput] :body 
+    # @option opts [String] :x_org_id 
+    # @return [Array<(AppleMDM, Fixnum, Hash)>] AppleMDM data, response status code and response headers
+    def p_ut_applemdms_id_with_http_info(id, accept, content_type, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: AppleMDMApi.p_ut_applemdms_id ..."
+      end
+      # verify the required parameter 'id' is set
+      if @api_client.config.client_side_validation && id.nil?
+        fail ArgumentError, "Missing the required parameter 'id' when calling AppleMDMApi.p_ut_applemdms_id"
+      end
+      # verify the required parameter 'accept' is set
+      if @api_client.config.client_side_validation && accept.nil?
+        fail ArgumentError, "Missing the required parameter 'accept' when calling AppleMDMApi.p_ut_applemdms_id"
+      end
+      # verify the required parameter 'content_type' is set
+      if @api_client.config.client_side_validation && content_type.nil?
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling AppleMDMApi.p_ut_applemdms_id"
+      end
+      # resource path
+      local_var_path = "/applemdms/{id}".sub('{' + 'id' + '}', id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+      header_params[:'Accept'] = accept
+      header_params[:'Content-Type'] = content_type
+      header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(opts[:'body'])
+      auth_names = ['x-api-key']
+      data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'Array<AppleMDM>')
+        :return_type => 'AppleMDM')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: AppleMDMApi#enrollmentprofiles_list\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: AppleMDMApi#p_ut_applemdms_id\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

@@ -1,7 +1,7 @@
 =begin
 #JumpCloud APIs
 
-# JumpCloud's V1 API. This set of endpoints allows JumpCloud customers to manage commands, systems, & system users.
+#JumpCloud's V1 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
 
 OpenAPI spec version: 1.0
 
@@ -19,7 +19,15 @@ module JCAPIv1
 
     attr_accessor :beta
 
+    attr_accessor :color
+
     attr_accessor :config
+
+    attr_accessor :created
+
+    attr_accessor :database_attributes
+
+    attr_accessor :description
 
     attr_accessor :display_label
 
@@ -27,22 +35,50 @@ module JCAPIv1
 
     attr_accessor :learn_more
 
+    attr_accessor :logo
+
     attr_accessor :name
 
     attr_accessor :organization
 
     attr_accessor :sso_url
 
+    class EnumAttributeValidator
+      attr_reader :datatype
+      attr_reader :allowable_values
+
+      def initialize(datatype, allowable_values)
+        @allowable_values = allowable_values.map do |value|
+          case datatype.to_s
+          when /Integer/i
+            value.to_i
+          when /Float/i
+            value.to_f
+          else
+            value
+          end
+        end
+      end
+
+      def valid?(value)
+        !value || allowable_values.include?(value)
+      end
+    end
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         :'_id' => :'_id',
         :'beta' => :'beta',
+        :'color' => :'color',
         :'config' => :'config',
+        :'created' => :'created',
+        :'database_attributes' => :'databaseAttributes',
+        :'description' => :'description',
         :'display_label' => :'displayLabel',
         :'display_name' => :'displayName',
         :'learn_more' => :'learnMore',
+        :'logo' => :'logo',
         :'name' => :'name',
         :'organization' => :'organization',
         :'sso_url' => :'ssoUrl'
@@ -54,10 +90,15 @@ module JCAPIv1
       {
         :'_id' => :'String',
         :'beta' => :'BOOLEAN',
+        :'color' => :'String',
         :'config' => :'ApplicationConfig',
+        :'created' => :'String',
+        :'database_attributes' => :'Array<Object>',
+        :'description' => :'String',
         :'display_label' => :'String',
         :'display_name' => :'String',
         :'learn_more' => :'String',
+        :'logo' => :'ApplicationLogo',
         :'name' => :'String',
         :'organization' => :'String',
         :'sso_url' => :'String'
@@ -80,8 +121,26 @@ module JCAPIv1
         self.beta = attributes[:'beta']
       end
 
+      if attributes.has_key?(:'color')
+        self.color = attributes[:'color']
+      end
+
       if attributes.has_key?(:'config')
         self.config = attributes[:'config']
+      end
+
+      if attributes.has_key?(:'created')
+        self.created = attributes[:'created']
+      end
+
+      if attributes.has_key?(:'databaseAttributes')
+        if (value = attributes[:'databaseAttributes']).is_a?(Array)
+          self.database_attributes = value
+        end
+      end
+
+      if attributes.has_key?(:'description')
+        self.description = attributes[:'description']
       end
 
       if attributes.has_key?(:'displayLabel')
@@ -94,6 +153,10 @@ module JCAPIv1
 
       if attributes.has_key?(:'learnMore')
         self.learn_more = attributes[:'learnMore']
+      end
+
+      if attributes.has_key?(:'logo')
+        self.logo = attributes[:'logo']
       end
 
       if attributes.has_key?(:'name')
@@ -114,13 +177,41 @@ module JCAPIv1
     # @return Array for valid properties with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if !@description.nil? && @description.to_s.length > 256
+        invalid_properties.push("invalid value for 'description', the character length must be smaller than or equal to 256.")
+      end
+
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      color_validator = EnumAttributeValidator.new('String', ["", "#202D38", "#005466", "#3E8696", "#006CAC", "#0617AC", "#7C6ADA", "#D5779D", "#9E2F00", "#FFB000", "#58C469", "#57C49F", "#FF6C03"])
+      return false unless color_validator.valid?(@color)
+      return false if !@description.nil? && @description.to_s.length > 256
       return true
+    end
+
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] color Object to be assigned
+    def color=(color)
+      validator = EnumAttributeValidator.new('String', ["", "#202D38", "#005466", "#3E8696", "#006CAC", "#0617AC", "#7C6ADA", "#D5779D", "#9E2F00", "#FFB000", "#58C469", "#57C49F", "#FF6C03"])
+      unless validator.valid?(color)
+        fail ArgumentError, "invalid value for 'color', must be one of #{validator.allowable_values}."
+      end
+      @color = color
+    end
+
+    # Custom attribute writer method with validation
+    # @param [Object] description Value to be assigned
+    def description=(description)
+
+      if !description.nil? && description.to_s.length > 256
+        fail ArgumentError, "invalid value for 'description', the character length must be smaller than or equal to 256."
+      end
+
+      @description = description
     end
 
     # Checks equality by comparing each attribute.
@@ -130,10 +221,15 @@ module JCAPIv1
       self.class == o.class &&
           _id == o._id &&
           beta == o.beta &&
+          color == o.color &&
           config == o.config &&
+          created == o.created &&
+          database_attributes == o.database_attributes &&
+          description == o.description &&
           display_label == o.display_label &&
           display_name == o.display_name &&
           learn_more == o.learn_more &&
+          logo == o.logo &&
           name == o.name &&
           organization == o.organization &&
           sso_url == o.sso_url
@@ -148,7 +244,7 @@ module JCAPIv1
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [_id, beta, config, display_label, display_name, learn_more, name, organization, sso_url].hash
+      [_id, beta, color, config, created, database_attributes, description, display_label, display_name, learn_more, logo, name, organization, sso_url].hash
     end
 
     # Builds the object from hash

@@ -1,7 +1,7 @@
 =begin
 #JumpCloud APIs
 
-# JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
+#JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
 
 OpenAPI spec version: 2.0
 
@@ -17,44 +17,14 @@ module JCAPIv2
   class SystemInsightsUsers
     attr_accessor :collection_time
 
-    attr_accessor :description
-
-    attr_accessor :directory
-
-    attr_accessor :gid
-
-    attr_accessor :gid_signed
-
-    attr_accessor :shell
-
     attr_accessor :system_id
-
-    attr_accessor :type
-
-    attr_accessor :uid
-
-    attr_accessor :uid_signed
-
-    attr_accessor :username
-
-    attr_accessor :uuid
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         :'collection_time' => :'collection_time',
-        :'description' => :'description',
-        :'directory' => :'directory',
-        :'gid' => :'gid',
-        :'gid_signed' => :'gid_signed',
-        :'shell' => :'shell',
-        :'system_id' => :'system_id',
-        :'type' => :'type',
-        :'uid' => :'uid',
-        :'uid_signed' => :'uid_signed',
-        :'username' => :'username',
-        :'uuid' => :'uuid'
+        :'system_id' => :'system_id'
       }
     end
 
@@ -62,17 +32,7 @@ module JCAPIv2
     def self.swagger_types
       {
         :'collection_time' => :'String',
-        :'description' => :'String',
-        :'directory' => :'String',
-        :'gid' => :'String',
-        :'gid_signed' => :'String',
-        :'shell' => :'String',
-        :'system_id' => :'String',
-        :'type' => :'String',
-        :'uid' => :'String',
-        :'uid_signed' => :'String',
-        :'username' => :'String',
-        :'uuid' => :'String'
+        :'system_id' => :'String'
       }
     end
 
@@ -88,48 +48,8 @@ module JCAPIv2
         self.collection_time = attributes[:'collection_time']
       end
 
-      if attributes.has_key?(:'description')
-        self.description = attributes[:'description']
-      end
-
-      if attributes.has_key?(:'directory')
-        self.directory = attributes[:'directory']
-      end
-
-      if attributes.has_key?(:'gid')
-        self.gid = attributes[:'gid']
-      end
-
-      if attributes.has_key?(:'gid_signed')
-        self.gid_signed = attributes[:'gid_signed']
-      end
-
-      if attributes.has_key?(:'shell')
-        self.shell = attributes[:'shell']
-      end
-
       if attributes.has_key?(:'system_id')
         self.system_id = attributes[:'system_id']
-      end
-
-      if attributes.has_key?(:'type')
-        self.type = attributes[:'type']
-      end
-
-      if attributes.has_key?(:'uid')
-        self.uid = attributes[:'uid']
-      end
-
-      if attributes.has_key?(:'uid_signed')
-        self.uid_signed = attributes[:'uid_signed']
-      end
-
-      if attributes.has_key?(:'username')
-        self.username = attributes[:'username']
-      end
-
-      if attributes.has_key?(:'uuid')
-        self.uuid = attributes[:'uuid']
       end
 
     end
@@ -153,17 +73,7 @@ module JCAPIv2
       return true if self.equal?(o)
       self.class == o.class &&
           collection_time == o.collection_time &&
-          description == o.description &&
-          directory == o.directory &&
-          gid == o.gid &&
-          gid_signed == o.gid_signed &&
-          shell == o.shell &&
-          system_id == o.system_id &&
-          type == o.type &&
-          uid == o.uid &&
-          uid_signed == o.uid_signed &&
-          username == o.username &&
-          uuid == o.uuid
+          system_id == o.system_id
     end
 
     # @see the `==` method
@@ -175,7 +85,7 @@ module JCAPIv2
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [collection_time, description, directory, gid, gid_signed, shell, system_id, type, uid, uid_signed, username, uuid].hash
+      [collection_time, system_id].hash
     end
 
     # Builds the object from hash

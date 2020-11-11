@@ -1,7 +1,7 @@
 =begin
 #JumpCloud APIs
 
-# JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
+#JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
 
 OpenAPI spec version: 2.0
 
@@ -15,64 +15,24 @@ require 'date'
 module JCAPIv2
 
   class SystemInsightsOsVersion
-    attr_accessor :build
-
-    attr_accessor :codename
-
     attr_accessor :collection_time
 
-    attr_accessor :install_date
-
-    attr_accessor :major
-
-    attr_accessor :minor
-
-    attr_accessor :name
-
-    attr_accessor :patch
-
-    attr_accessor :platform
-
-    attr_accessor :platform_like
-
     attr_accessor :system_id
-
-    attr_accessor :version
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'build' => :'build',
-        :'codename' => :'codename',
         :'collection_time' => :'collection_time',
-        :'install_date' => :'install_date',
-        :'major' => :'major',
-        :'minor' => :'minor',
-        :'name' => :'name',
-        :'patch' => :'patch',
-        :'platform' => :'platform',
-        :'platform_like' => :'platform_like',
-        :'system_id' => :'system_id',
-        :'version' => :'version'
+        :'system_id' => :'system_id'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'build' => :'String',
-        :'codename' => :'String',
         :'collection_time' => :'String',
-        :'install_date' => :'String',
-        :'major' => :'Integer',
-        :'minor' => :'Integer',
-        :'name' => :'String',
-        :'patch' => :'Integer',
-        :'platform' => :'String',
-        :'platform_like' => :'String',
-        :'system_id' => :'String',
-        :'version' => :'String'
+        :'system_id' => :'String'
       }
     end
 
@@ -84,52 +44,12 @@ module JCAPIv2
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'build')
-        self.build = attributes[:'build']
-      end
-
-      if attributes.has_key?(:'codename')
-        self.codename = attributes[:'codename']
-      end
-
       if attributes.has_key?(:'collection_time')
         self.collection_time = attributes[:'collection_time']
       end
 
-      if attributes.has_key?(:'install_date')
-        self.install_date = attributes[:'install_date']
-      end
-
-      if attributes.has_key?(:'major')
-        self.major = attributes[:'major']
-      end
-
-      if attributes.has_key?(:'minor')
-        self.minor = attributes[:'minor']
-      end
-
-      if attributes.has_key?(:'name')
-        self.name = attributes[:'name']
-      end
-
-      if attributes.has_key?(:'patch')
-        self.patch = attributes[:'patch']
-      end
-
-      if attributes.has_key?(:'platform')
-        self.platform = attributes[:'platform']
-      end
-
-      if attributes.has_key?(:'platform_like')
-        self.platform_like = attributes[:'platform_like']
-      end
-
       if attributes.has_key?(:'system_id')
         self.system_id = attributes[:'system_id']
-      end
-
-      if attributes.has_key?(:'version')
-        self.version = attributes[:'version']
       end
 
     end
@@ -152,18 +72,8 @@ module JCAPIv2
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          build == o.build &&
-          codename == o.codename &&
           collection_time == o.collection_time &&
-          install_date == o.install_date &&
-          major == o.major &&
-          minor == o.minor &&
-          name == o.name &&
-          patch == o.patch &&
-          platform == o.platform &&
-          platform_like == o.platform_like &&
-          system_id == o.system_id &&
-          version == o.version
+          system_id == o.system_id
     end
 
     # @see the `==` method
@@ -175,7 +85,7 @@ module JCAPIv2
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [build, codename, collection_time, install_date, major, minor, name, patch, platform, platform_like, system_id, version].hash
+      [collection_time, system_id].hash
     end
 
     # Builds the object from hash

@@ -1,7 +1,7 @@
 =begin
 #JumpCloud APIs
 
-# JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
+#JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
 
 OpenAPI spec version: 2.0
 
@@ -15,32 +15,24 @@ require 'date'
 module JCAPIv2
 
   class InlineResponse200
-    attr_accessor :id
+    attr_accessor :results
 
-    attr_accessor :name
-
-    attr_accessor :user_lockout_action
-
-    attr_accessor :user_password_expiration_action
+    attr_accessor :total_count
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'id' => :'id',
-        :'name' => :'name',
-        :'user_lockout_action' => :'userLockoutAction',
-        :'user_password_expiration_action' => :'userPasswordExpirationAction'
+        :'results' => :'results',
+        :'total_count' => :'totalCount'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'id' => :'String',
-        :'name' => :'String',
-        :'user_lockout_action' => :'LdapServerAction',
-        :'user_password_expiration_action' => :'LdapServerAction'
+        :'results' => :'Array<Administrator>',
+        :'total_count' => :'Integer'
       }
     end
 
@@ -52,20 +44,14 @@ module JCAPIv2
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'id')
-        self.id = attributes[:'id']
+      if attributes.has_key?(:'results')
+        if (value = attributes[:'results']).is_a?(Array)
+          self.results = value
+        end
       end
 
-      if attributes.has_key?(:'name')
-        self.name = attributes[:'name']
-      end
-
-      if attributes.has_key?(:'userLockoutAction')
-        self.user_lockout_action = attributes[:'userLockoutAction']
-      end
-
-      if attributes.has_key?(:'userPasswordExpirationAction')
-        self.user_password_expiration_action = attributes[:'userPasswordExpirationAction']
+      if attributes.has_key?(:'totalCount')
+        self.total_count = attributes[:'totalCount']
       end
 
     end
@@ -88,10 +74,8 @@ module JCAPIv2
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          id == o.id &&
-          name == o.name &&
-          user_lockout_action == o.user_lockout_action &&
-          user_password_expiration_action == o.user_password_expiration_action
+          results == o.results &&
+          total_count == o.total_count
     end
 
     # @see the `==` method
@@ -103,7 +87,7 @@ module JCAPIv2
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, user_lockout_action, user_password_expiration_action].hash
+      [results, total_count].hash
     end
 
     # Builds the object from hash

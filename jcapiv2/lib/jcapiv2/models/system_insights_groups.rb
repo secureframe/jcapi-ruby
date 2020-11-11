@@ -1,7 +1,7 @@
 =begin
 #JumpCloud APIs
 
-# JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
+#JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
 
 OpenAPI spec version: 2.0
 
@@ -17,16 +17,6 @@ module JCAPIv2
   class SystemInsightsGroups
     attr_accessor :collection_time
 
-    attr_accessor :comment
-
-    attr_accessor :gid
-
-    attr_accessor :gid_signed
-
-    attr_accessor :group_sid
-
-    attr_accessor :groupname
-
     attr_accessor :system_id
 
 
@@ -34,11 +24,6 @@ module JCAPIv2
     def self.attribute_map
       {
         :'collection_time' => :'collection_time',
-        :'comment' => :'comment',
-        :'gid' => :'gid',
-        :'gid_signed' => :'gid_signed',
-        :'group_sid' => :'group_sid',
-        :'groupname' => :'groupname',
         :'system_id' => :'system_id'
       }
     end
@@ -47,11 +32,6 @@ module JCAPIv2
     def self.swagger_types
       {
         :'collection_time' => :'String',
-        :'comment' => :'String',
-        :'gid' => :'String',
-        :'gid_signed' => :'String',
-        :'group_sid' => :'String',
-        :'groupname' => :'String',
         :'system_id' => :'String'
       }
     end
@@ -66,26 +46,6 @@ module JCAPIv2
 
       if attributes.has_key?(:'collection_time')
         self.collection_time = attributes[:'collection_time']
-      end
-
-      if attributes.has_key?(:'comment')
-        self.comment = attributes[:'comment']
-      end
-
-      if attributes.has_key?(:'gid')
-        self.gid = attributes[:'gid']
-      end
-
-      if attributes.has_key?(:'gid_signed')
-        self.gid_signed = attributes[:'gid_signed']
-      end
-
-      if attributes.has_key?(:'group_sid')
-        self.group_sid = attributes[:'group_sid']
-      end
-
-      if attributes.has_key?(:'groupname')
-        self.groupname = attributes[:'groupname']
       end
 
       if attributes.has_key?(:'system_id')
@@ -113,11 +73,6 @@ module JCAPIv2
       return true if self.equal?(o)
       self.class == o.class &&
           collection_time == o.collection_time &&
-          comment == o.comment &&
-          gid == o.gid &&
-          gid_signed == o.gid_signed &&
-          group_sid == o.group_sid &&
-          groupname == o.groupname &&
           system_id == o.system_id
     end
 
@@ -130,7 +85,7 @@ module JCAPIv2
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [collection_time, comment, gid, gid_signed, group_sid, groupname, system_id].hash
+      [collection_time, system_id].hash
     end
 
     # Builds the object from hash

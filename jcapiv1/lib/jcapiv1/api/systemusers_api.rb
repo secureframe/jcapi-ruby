@@ -1,7 +1,7 @@
 =begin
 #JumpCloud APIs
 
-# JumpCloud's V1 API. This set of endpoints allows JumpCloud customers to manage commands, systems, & system users.
+#JumpCloud's V1 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
 
 OpenAPI spec version: 1.0
 
@@ -20,17 +20,85 @@ module JCAPIv1
       @api_client = api_client
     end
 
+    # Delete a system user
+    # This endpoint allows you to delete a particular system user.  #### Sample Request ``` curl -X DELETE https://console.jumpcloud.com/api/systemusers/{UserID} \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}'  ```
+    # @param id 
+    # @param accept 
+    # @param content_type 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :x_org_id  (default to )
+    # @return [Systemuserreturn]
+    def d_elete_systemusers_id(id, accept, content_type, opts = {})
+      data, _status_code, _headers = d_elete_systemusers_id_with_http_info(id, accept, content_type, opts)
+      return data
+    end
+
+    # Delete a system user
+    # This endpoint allows you to delete a particular system user.  #### Sample Request &#x60;&#x60;&#x60; curl -X DELETE https://console.jumpcloud.com/api/systemusers/{UserID} \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39;  &#x60;&#x60;&#x60;
+    # @param id 
+    # @param accept 
+    # @param content_type 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :x_org_id 
+    # @return [Array<(Systemuserreturn, Fixnum, Hash)>] Systemuserreturn data, response status code and response headers
+    def d_elete_systemusers_id_with_http_info(id, accept, content_type, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: SystemusersApi.d_elete_systemusers_id ..."
+      end
+      # verify the required parameter 'id' is set
+      if @api_client.config.client_side_validation && id.nil?
+        fail ArgumentError, "Missing the required parameter 'id' when calling SystemusersApi.d_elete_systemusers_id"
+      end
+      # verify the required parameter 'accept' is set
+      if @api_client.config.client_side_validation && accept.nil?
+        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemusersApi.d_elete_systemusers_id"
+      end
+      # verify the required parameter 'content_type' is set
+      if @api_client.config.client_side_validation && content_type.nil?
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemusersApi.d_elete_systemusers_id"
+      end
+      # resource path
+      local_var_path = "/systemusers/{id}".sub('{' + 'id' + '}', id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+      header_params[:'Accept'] = accept
+      header_params[:'Content-Type'] = content_type
+      header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      auth_names = ['x-api-key']
+      data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'Systemuserreturn')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: SystemusersApi#d_elete_systemusers_id\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Delete a system user's Public SSH Keys
     # This endpoint will delete a specific System User's SSH Key.
     # @param systemuser_id 
     # @param id 
-    # @param content_type 
     # @param accept 
+    # @param content_type 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :x_org_id  (default to )
     # @return [nil]
-    def sshkey_delete(systemuser_id, id, content_type, accept, opts = {})
-      sshkey_delete_with_http_info(systemuser_id, id, content_type, accept, opts)
+    def d_elete_systemusers_systemuser_id_sshkeys_id(systemuser_id, id, accept, content_type, opts = {})
+      d_elete_systemusers_systemuser_id_sshkeys_id_with_http_info(systemuser_id, id, accept, content_type, opts)
       return nil
     end
 
@@ -38,30 +106,30 @@ module JCAPIv1
     # This endpoint will delete a specific System User&#39;s SSH Key.
     # @param systemuser_id 
     # @param id 
-    # @param content_type 
     # @param accept 
+    # @param content_type 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :x_org_id 
     # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
-    def sshkey_delete_with_http_info(systemuser_id, id, content_type, accept, opts = {})
+    def d_elete_systemusers_systemuser_id_sshkeys_id_with_http_info(systemuser_id, id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SystemusersApi.sshkey_delete ..."
+        @api_client.config.logger.debug "Calling API: SystemusersApi.d_elete_systemusers_systemuser_id_sshkeys_id ..."
       end
       # verify the required parameter 'systemuser_id' is set
       if @api_client.config.client_side_validation && systemuser_id.nil?
-        fail ArgumentError, "Missing the required parameter 'systemuser_id' when calling SystemusersApi.sshkey_delete"
+        fail ArgumentError, "Missing the required parameter 'systemuser_id' when calling SystemusersApi.d_elete_systemusers_systemuser_id_sshkeys_id"
       end
       # verify the required parameter 'id' is set
       if @api_client.config.client_side_validation && id.nil?
-        fail ArgumentError, "Missing the required parameter 'id' when calling SystemusersApi.sshkey_delete"
-      end
-      # verify the required parameter 'content_type' is set
-      if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemusersApi.sshkey_delete"
+        fail ArgumentError, "Missing the required parameter 'id' when calling SystemusersApi.d_elete_systemusers_systemuser_id_sshkeys_id"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemusersApi.sshkey_delete"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemusersApi.d_elete_systemusers_systemuser_id_sshkeys_id"
+      end
+      # verify the required parameter 'content_type' is set
+      if @api_client.config.client_side_validation && content_type.nil?
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemusersApi.d_elete_systemusers_systemuser_id_sshkeys_id"
       end
       # resource path
       local_var_path = "/systemusers/{systemuser_id}/sshkeys/{id}".sub('{' + 'systemuser_id' + '}', systemuser_id.to_s).sub('{' + 'id' + '}', id.to_s)
@@ -71,12 +139,8 @@ module JCAPIv1
 
       # header parameters
       header_params = {}
-      # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
-      # HTTP header 'Content-Type'
-      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-      header_params[:'Content-Type'] = content_type
       header_params[:'Accept'] = accept
+      header_params[:'Content-Type'] = content_type
       header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
 
       # form parameters
@@ -92,349 +156,53 @@ module JCAPIv1
         :body => post_body,
         :auth_names => auth_names)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SystemusersApi#sshkey_delete\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-    # List a system user's public SSH keys
-    # This endpoint will return a specific System User's public SSH key.
-    # @param id 
-    # @param content_type 
-    # @param accept 
-    # @param [Hash] opts the optional parameters
-    # @option opts [String] :x_org_id  (default to )
-    # @return [Array<Sshkeylist>]
-    def sshkey_list(id, content_type, accept, opts = {})
-      data, _status_code, _headers = sshkey_list_with_http_info(id, content_type, accept, opts)
-      return data
-    end
-
-    # List a system user&#39;s public SSH keys
-    # This endpoint will return a specific System User&#39;s public SSH key.
-    # @param id 
-    # @param content_type 
-    # @param accept 
-    # @param [Hash] opts the optional parameters
-    # @option opts [String] :x_org_id 
-    # @return [Array<(Array<Sshkeylist>, Fixnum, Hash)>] Array<Sshkeylist> data, response status code and response headers
-    def sshkey_list_with_http_info(id, content_type, accept, opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SystemusersApi.sshkey_list ..."
-      end
-      # verify the required parameter 'id' is set
-      if @api_client.config.client_side_validation && id.nil?
-        fail ArgumentError, "Missing the required parameter 'id' when calling SystemusersApi.sshkey_list"
-      end
-      # verify the required parameter 'content_type' is set
-      if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemusersApi.sshkey_list"
-      end
-      # verify the required parameter 'accept' is set
-      if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemusersApi.sshkey_list"
-      end
-      # resource path
-      local_var_path = "/systemusers/{id}/sshkeys".sub('{' + 'id' + '}', id.to_s)
-
-      # query parameters
-      query_params = {}
-
-      # header parameters
-      header_params = {}
-      # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
-      # HTTP header 'Content-Type'
-      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-      header_params[:'Content-Type'] = content_type
-      header_params[:'Accept'] = accept
-      header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
-
-      # form parameters
-      form_params = {}
-
-      # http body (model)
-      post_body = nil
-      auth_names = ['x-api-key']
-      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'Array<Sshkeylist>')
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SystemusersApi#sshkey_list\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-    # Create a system user's Public SSH Key
-    # This endpoint will create a specific System User's Public SSH Key.
-    # @param id 
-    # @param content_type 
-    # @param accept 
-    # @param [Hash] opts the optional parameters
-    # @option opts [Sshkeypost] :body 
-    # @option opts [String] :x_org_id  (default to )
-    # @return [Sshkeylist]
-    def sshkey_post(id, content_type, accept, opts = {})
-      data, _status_code, _headers = sshkey_post_with_http_info(id, content_type, accept, opts)
-      return data
-    end
-
-    # Create a system user&#39;s Public SSH Key
-    # This endpoint will create a specific System User&#39;s Public SSH Key.
-    # @param id 
-    # @param content_type 
-    # @param accept 
-    # @param [Hash] opts the optional parameters
-    # @option opts [Sshkeypost] :body 
-    # @option opts [String] :x_org_id 
-    # @return [Array<(Sshkeylist, Fixnum, Hash)>] Sshkeylist data, response status code and response headers
-    def sshkey_post_with_http_info(id, content_type, accept, opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SystemusersApi.sshkey_post ..."
-      end
-      # verify the required parameter 'id' is set
-      if @api_client.config.client_side_validation && id.nil?
-        fail ArgumentError, "Missing the required parameter 'id' when calling SystemusersApi.sshkey_post"
-      end
-      # verify the required parameter 'content_type' is set
-      if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemusersApi.sshkey_post"
-      end
-      # verify the required parameter 'accept' is set
-      if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemusersApi.sshkey_post"
-      end
-      # resource path
-      local_var_path = "/systemusers/{id}/sshkeys".sub('{' + 'id' + '}', id.to_s)
-
-      # query parameters
-      query_params = {}
-
-      # header parameters
-      header_params = {}
-      # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
-      # HTTP header 'Content-Type'
-      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-      header_params[:'Content-Type'] = content_type
-      header_params[:'Accept'] = accept
-      header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
-
-      # form parameters
-      form_params = {}
-
-      # http body (model)
-      post_body = @api_client.object_to_http_body(opts[:'body'])
-      auth_names = ['x-api-key']
-      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'Sshkeylist')
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SystemusersApi#sshkey_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-    # Delete a system user
-    # This endpoint allows you to delete a particular system user.  #### Sample Request ``` curl -X DELETE https://console.jumpcloud.com/api/systemusers/{UserID} \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
-    # @param id 
-    # @param content_type 
-    # @param accept 
-    # @param [Hash] opts the optional parameters
-    # @option opts [String] :x_org_id  (default to )
-    # @return [Systemuserreturn]
-    def systemusers_delete(id, content_type, accept, opts = {})
-      data, _status_code, _headers = systemusers_delete_with_http_info(id, content_type, accept, opts)
-      return data
-    end
-
-    # Delete a system user
-    # This endpoint allows you to delete a particular system user.  #### Sample Request &#x60;&#x60;&#x60; curl -X DELETE https://console.jumpcloud.com/api/systemusers/{UserID} \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
-    # @param id 
-    # @param content_type 
-    # @param accept 
-    # @param [Hash] opts the optional parameters
-    # @option opts [String] :x_org_id 
-    # @return [Array<(Systemuserreturn, Fixnum, Hash)>] Systemuserreturn data, response status code and response headers
-    def systemusers_delete_with_http_info(id, content_type, accept, opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SystemusersApi.systemusers_delete ..."
-      end
-      # verify the required parameter 'id' is set
-      if @api_client.config.client_side_validation && id.nil?
-        fail ArgumentError, "Missing the required parameter 'id' when calling SystemusersApi.systemusers_delete"
-      end
-      # verify the required parameter 'content_type' is set
-      if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemusersApi.systemusers_delete"
-      end
-      # verify the required parameter 'accept' is set
-      if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemusersApi.systemusers_delete"
-      end
-      # resource path
-      local_var_path = "/systemusers/{id}".sub('{' + 'id' + '}', id.to_s)
-
-      # query parameters
-      query_params = {}
-
-      # header parameters
-      header_params = {}
-      # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
-      # HTTP header 'Content-Type'
-      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-      header_params[:'Content-Type'] = content_type
-      header_params[:'Accept'] = accept
-      header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
-
-      # form parameters
-      form_params = {}
-
-      # http body (model)
-      post_body = nil
-      auth_names = ['x-api-key']
-      data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'Systemuserreturn')
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SystemusersApi#systemusers_delete\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-    # List a system user
-    # This endpoint returns a particular System User.  #### Sample Request  ``` curl -X GET https://console.jumpcloud.com/api/systemusers/{UserID} \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
-    # @param id 
-    # @param content_type 
-    # @param accept 
-    # @param [Hash] opts the optional parameters
-    # @option opts [String] :fields Use a space seperated string of field parameters to include the data in the response. If omitted, the default list of fields will be returned.  (default to )
-    # @option opts [String] :filter A filter to apply to the query.
-    # @option opts [String] :x_org_id  (default to )
-    # @return [Systemuserreturn]
-    def systemusers_get(id, content_type, accept, opts = {})
-      data, _status_code, _headers = systemusers_get_with_http_info(id, content_type, accept, opts)
-      return data
-    end
-
-    # List a system user
-    # This endpoint returns a particular System User.  #### Sample Request  &#x60;&#x60;&#x60; curl -X GET https://console.jumpcloud.com/api/systemusers/{UserID} \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
-    # @param id 
-    # @param content_type 
-    # @param accept 
-    # @param [Hash] opts the optional parameters
-    # @option opts [String] :fields Use a space seperated string of field parameters to include the data in the response. If omitted, the default list of fields will be returned. 
-    # @option opts [String] :filter A filter to apply to the query.
-    # @option opts [String] :x_org_id 
-    # @return [Array<(Systemuserreturn, Fixnum, Hash)>] Systemuserreturn data, response status code and response headers
-    def systemusers_get_with_http_info(id, content_type, accept, opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SystemusersApi.systemusers_get ..."
-      end
-      # verify the required parameter 'id' is set
-      if @api_client.config.client_side_validation && id.nil?
-        fail ArgumentError, "Missing the required parameter 'id' when calling SystemusersApi.systemusers_get"
-      end
-      # verify the required parameter 'content_type' is set
-      if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemusersApi.systemusers_get"
-      end
-      # verify the required parameter 'accept' is set
-      if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemusersApi.systemusers_get"
-      end
-      # resource path
-      local_var_path = "/systemusers/{id}".sub('{' + 'id' + '}', id.to_s)
-
-      # query parameters
-      query_params = {}
-      query_params[:'fields'] = opts[:'fields'] if !opts[:'fields'].nil?
-      query_params[:'filter'] = opts[:'filter'] if !opts[:'filter'].nil?
-
-      # header parameters
-      header_params = {}
-      # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
-      # HTTP header 'Content-Type'
-      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-      header_params[:'Content-Type'] = content_type
-      header_params[:'Accept'] = accept
-      header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
-
-      # form parameters
-      form_params = {}
-
-      # http body (model)
-      post_body = nil
-      auth_names = ['x-api-key']
-      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'Systemuserreturn')
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SystemusersApi#systemusers_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SystemusersApi#d_elete_systemusers_systemuser_id_sshkeys_id\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
     # List all system users
     # This endpoint returns all systemusers.  #### Sample Request  ``` curl -X GET https://console.jumpcloud.com/api/systemusers \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
-    # @param content_type 
     # @param accept 
+    # @param content_type 
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :limit The number of records to return at once. (default to 10)
     # @option opts [Integer] :skip The offset into the records to return. (default to 0)
     # @option opts [String] :sort The comma separated fields used to sort the collection. Default sort is ascending, prefix with &#x60;-&#x60; to sort descending.  (default to )
     # @option opts [String] :fields The comma separated fields included in the returned records. If omitted the default list of fields will be returned.  (default to )
-    # @option opts [String] :x_org_id  (default to )
+    # @option opts [String] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :search A nested object containing a string &#x60;searchTerm&#x60; and a list of &#x60;fields&#x60; to search on.
-    # @option opts [String] :filter A filter to apply to the query.
+    # @option opts [String] :x_org_id  (default to )
     # @return [Systemuserslist]
-    def systemusers_list(content_type, accept, opts = {})
-      data, _status_code, _headers = systemusers_list_with_http_info(content_type, accept, opts)
+    def g_et_systemusers(accept, content_type, opts = {})
+      data, _status_code, _headers = g_et_systemusers_with_http_info(accept, content_type, opts)
       return data
     end
 
     # List all system users
     # This endpoint returns all systemusers.  #### Sample Request  &#x60;&#x60;&#x60; curl -X GET https://console.jumpcloud.com/api/systemusers \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
-    # @param content_type 
     # @param accept 
+    # @param content_type 
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :limit The number of records to return at once.
     # @option opts [Integer] :skip The offset into the records to return.
     # @option opts [String] :sort The comma separated fields used to sort the collection. Default sort is ascending, prefix with &#x60;-&#x60; to sort descending. 
     # @option opts [String] :fields The comma separated fields included in the returned records. If omitted the default list of fields will be returned. 
-    # @option opts [String] :x_org_id 
+    # @option opts [String] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :search A nested object containing a string &#x60;searchTerm&#x60; and a list of &#x60;fields&#x60; to search on.
-    # @option opts [String] :filter A filter to apply to the query.
+    # @option opts [String] :x_org_id 
     # @return [Array<(Systemuserslist, Fixnum, Hash)>] Systemuserslist data, response status code and response headers
-    def systemusers_list_with_http_info(content_type, accept, opts = {})
+    def g_et_systemusers_with_http_info(accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SystemusersApi.systemusers_list ..."
-      end
-      # verify the required parameter 'content_type' is set
-      if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemusersApi.systemusers_list"
+        @api_client.config.logger.debug "Calling API: SystemusersApi.g_et_systemusers ..."
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemusersApi.systemusers_list"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemusersApi.g_et_systemusers"
+      end
+      # verify the required parameter 'content_type' is set
+      if @api_client.config.client_side_validation && content_type.nil?
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemusersApi.g_et_systemusers"
       end
       # resource path
       local_var_path = "/systemusers"
@@ -445,17 +213,13 @@ module JCAPIv1
       query_params[:'skip'] = opts[:'skip'] if !opts[:'skip'].nil?
       query_params[:'sort'] = opts[:'sort'] if !opts[:'sort'].nil?
       query_params[:'fields'] = opts[:'fields'] if !opts[:'fields'].nil?
-      query_params[:'search'] = opts[:'search'] if !opts[:'search'].nil?
       query_params[:'filter'] = opts[:'filter'] if !opts[:'filter'].nil?
+      query_params[:'search'] = opts[:'search'] if !opts[:'search'].nil?
 
       # header parameters
       header_params = {}
-      # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
-      # HTTP header 'Content-Type'
-      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-      header_params[:'Content-Type'] = content_type
       header_params[:'Accept'] = accept
+      header_params[:'Content-Type'] = content_type
       header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
 
       # form parameters
@@ -472,296 +236,64 @@ module JCAPIv1
         :auth_names => auth_names,
         :return_type => 'Systemuserslist')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SystemusersApi#systemusers_list\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SystemusersApi#g_et_systemusers\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
-    # Create a system user
-    # This endpoint allows you to create a new system user.  #### Sample Request  ``` curl -X POST https://console.jumpcloud.com/api/systemusers \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' \\   -d '{  \"username\":\"{username}\",  \"email\":\"{email_address}\",  \"firstname\":\"{Name}\",  \"lastname\":\"{Name}\" }' ```
-    # @param content_type 
+    # List a system user
+    # This endpoint returns a particular System User.  #### Sample Request  ``` curl -X GET https://console.jumpcloud.com/api/systemusers/{UserID} \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
+    # @param id 
     # @param accept 
+    # @param content_type 
     # @param [Hash] opts the optional parameters
-    # @option opts [Systemuserputpost] :body 
+    # @option opts [String] :fields Use a space seperated string of field parameters to include the data in the response. If omitted, the default list of fields will be returned.  (default to )
+    # @option opts [String] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id  (default to )
     # @return [Systemuserreturn]
-    def systemusers_post(content_type, accept, opts = {})
-      data, _status_code, _headers = systemusers_post_with_http_info(content_type, accept, opts)
+    def g_et_systemusers_id(id, accept, content_type, opts = {})
+      data, _status_code, _headers = g_et_systemusers_id_with_http_info(id, accept, content_type, opts)
       return data
     end
 
-    # Create a system user
-    # This endpoint allows you to create a new system user.  #### Sample Request  &#x60;&#x60;&#x60; curl -X POST https://console.jumpcloud.com/api/systemusers \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; \\   -d &#39;{  \&quot;username\&quot;:\&quot;{username}\&quot;,  \&quot;email\&quot;:\&quot;{email_address}\&quot;,  \&quot;firstname\&quot;:\&quot;{Name}\&quot;,  \&quot;lastname\&quot;:\&quot;{Name}\&quot; }&#39; &#x60;&#x60;&#x60;
-    # @param content_type 
+    # List a system user
+    # This endpoint returns a particular System User.  #### Sample Request  &#x60;&#x60;&#x60; curl -X GET https://console.jumpcloud.com/api/systemusers/{UserID} \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
+    # @param id 
     # @param accept 
+    # @param content_type 
     # @param [Hash] opts the optional parameters
-    # @option opts [Systemuserputpost] :body 
+    # @option opts [String] :fields Use a space seperated string of field parameters to include the data in the response. If omitted, the default list of fields will be returned. 
+    # @option opts [String] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id 
     # @return [Array<(Systemuserreturn, Fixnum, Hash)>] Systemuserreturn data, response status code and response headers
-    def systemusers_post_with_http_info(content_type, accept, opts = {})
+    def g_et_systemusers_id_with_http_info(id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SystemusersApi.systemusers_post ..."
-      end
-      # verify the required parameter 'content_type' is set
-      if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemusersApi.systemusers_post"
-      end
-      # verify the required parameter 'accept' is set
-      if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemusersApi.systemusers_post"
-      end
-      # resource path
-      local_var_path = "/systemusers"
-
-      # query parameters
-      query_params = {}
-
-      # header parameters
-      header_params = {}
-      # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
-      # HTTP header 'Content-Type'
-      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-      header_params[:'Content-Type'] = content_type
-      header_params[:'Accept'] = accept
-      header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
-
-      # form parameters
-      form_params = {}
-
-      # http body (model)
-      post_body = @api_client.object_to_http_body(opts[:'body'])
-      auth_names = ['x-api-key']
-      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'Systemuserreturn')
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SystemusersApi#systemusers_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-    # Update a system user
-    # This endpoint allows you to update a system user.  #### Sample Request  ``` curl -X PUT https://console.jumpcloud.com/api/systemusers/{UserID} \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' \\   -d '{  \"email\":\"{email_address}\",  \"firstname\":\"{Name}\",  \"lastname\":\"{Name}\" }' ```
-    # @param id 
-    # @param content_type 
-    # @param accept 
-    # @param [Hash] opts the optional parameters
-    # @option opts [Systemuserput] :body 
-    # @option opts [String] :x_org_id  (default to )
-    # @return [Systemuserreturn]
-    def systemusers_put(id, content_type, accept, opts = {})
-      data, _status_code, _headers = systemusers_put_with_http_info(id, content_type, accept, opts)
-      return data
-    end
-
-    # Update a system user
-    # This endpoint allows you to update a system user.  #### Sample Request  &#x60;&#x60;&#x60; curl -X PUT https://console.jumpcloud.com/api/systemusers/{UserID} \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; \\   -d &#39;{  \&quot;email\&quot;:\&quot;{email_address}\&quot;,  \&quot;firstname\&quot;:\&quot;{Name}\&quot;,  \&quot;lastname\&quot;:\&quot;{Name}\&quot; }&#39; &#x60;&#x60;&#x60;
-    # @param id 
-    # @param content_type 
-    # @param accept 
-    # @param [Hash] opts the optional parameters
-    # @option opts [Systemuserput] :body 
-    # @option opts [String] :x_org_id 
-    # @return [Array<(Systemuserreturn, Fixnum, Hash)>] Systemuserreturn data, response status code and response headers
-    def systemusers_put_with_http_info(id, content_type, accept, opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SystemusersApi.systemusers_put ..."
+        @api_client.config.logger.debug "Calling API: SystemusersApi.g_et_systemusers_id ..."
       end
       # verify the required parameter 'id' is set
       if @api_client.config.client_side_validation && id.nil?
-        fail ArgumentError, "Missing the required parameter 'id' when calling SystemusersApi.systemusers_put"
-      end
-      # verify the required parameter 'content_type' is set
-      if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemusersApi.systemusers_put"
+        fail ArgumentError, "Missing the required parameter 'id' when calling SystemusersApi.g_et_systemusers_id"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemusersApi.systemusers_put"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemusersApi.g_et_systemusers_id"
+      end
+      # verify the required parameter 'content_type' is set
+      if @api_client.config.client_side_validation && content_type.nil?
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemusersApi.g_et_systemusers_id"
       end
       # resource path
       local_var_path = "/systemusers/{id}".sub('{' + 'id' + '}', id.to_s)
 
       # query parameters
       query_params = {}
-
-      # header parameters
-      header_params = {}
-      # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
-      # HTTP header 'Content-Type'
-      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-      header_params[:'Content-Type'] = content_type
-      header_params[:'Accept'] = accept
-      header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
-
-      # form parameters
-      form_params = {}
-
-      # http body (model)
-      post_body = @api_client.object_to_http_body(opts[:'body'])
-      auth_names = ['x-api-key']
-      data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'Systemuserreturn')
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SystemusersApi#systemusers_put\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-    # Reset a system user's MFA token
-    # This endpoint allows you to reset the TOTP key for a specified system user and put them in an TOTP MFA enrollment period. This will result in the user being prompted to setup TOTP MFA when logging into userportal. Please be aware that if the user does not complete TOTP MFA setup before the `exclusionUntil` date, they will be locked out of any resources that require TOTP MFA.  Please refer to our [Knowledge Base Article](https://support.jumpcloud.com/customer/en/portal/articles/2959138-using-multifactor-authentication-with-jumpcloud) on setting up MFA for more information.  #### Sample Request ``` curl -X POST \\   https://console.jumpcloud.com/api/systemusers/{UserID}/resetmfa \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' \\   -d '{\"exclusion\": true, \"exclusionUntil\": \"{date-time}\"}'   ```
-    # @param id 
-    # @param content_type 
-    # @param accept 
-    # @param [Hash] opts the optional parameters
-    # @option opts [Body1] :body 
-    # @option opts [String] :x_org_id  (default to )
-    # @return [nil]
-    def systemusers_resetmfa(id, content_type, accept, opts = {})
-      systemusers_resetmfa_with_http_info(id, content_type, accept, opts)
-      return nil
-    end
-
-    # Reset a system user&#39;s MFA token
-    # This endpoint allows you to reset the TOTP key for a specified system user and put them in an TOTP MFA enrollment period. This will result in the user being prompted to setup TOTP MFA when logging into userportal. Please be aware that if the user does not complete TOTP MFA setup before the &#x60;exclusionUntil&#x60; date, they will be locked out of any resources that require TOTP MFA.  Please refer to our [Knowledge Base Article](https://support.jumpcloud.com/customer/en/portal/articles/2959138-using-multifactor-authentication-with-jumpcloud) on setting up MFA for more information.  #### Sample Request &#x60;&#x60;&#x60; curl -X POST \\   https://console.jumpcloud.com/api/systemusers/{UserID}/resetmfa \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; \\   -d &#39;{\&quot;exclusion\&quot;: true, \&quot;exclusionUntil\&quot;: \&quot;{date-time}\&quot;}&#39;   &#x60;&#x60;&#x60;
-    # @param id 
-    # @param content_type 
-    # @param accept 
-    # @param [Hash] opts the optional parameters
-    # @option opts [Body1] :body 
-    # @option opts [String] :x_org_id 
-    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
-    def systemusers_resetmfa_with_http_info(id, content_type, accept, opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SystemusersApi.systemusers_resetmfa ..."
-      end
-      # verify the required parameter 'id' is set
-      if @api_client.config.client_side_validation && id.nil?
-        fail ArgumentError, "Missing the required parameter 'id' when calling SystemusersApi.systemusers_resetmfa"
-      end
-      # verify the required parameter 'content_type' is set
-      if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemusersApi.systemusers_resetmfa"
-      end
-      # verify the required parameter 'accept' is set
-      if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemusersApi.systemusers_resetmfa"
-      end
-      # resource path
-      local_var_path = "/systemusers/{id}/resetmfa".sub('{' + 'id' + '}', id.to_s)
-
-      # query parameters
-      query_params = {}
-
-      # header parameters
-      header_params = {}
-      # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
-      # HTTP header 'Content-Type'
-      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-      header_params[:'Content-Type'] = content_type
-      header_params[:'Accept'] = accept
-      header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
-
-      # form parameters
-      form_params = {}
-
-      # http body (model)
-      post_body = @api_client.object_to_http_body(opts[:'body'])
-      auth_names = ['x-api-key']
-      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names)
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SystemusersApi#systemusers_resetmfa\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-    # List system user binding
-    # Hidden as Tags is deprecated  Adds or removes a system binding for a user.  This endpoint is only used for users still using JumpCloud Tags. If you are using JumpCloud Groups please refer to the documentation found [here](https://docs.jumpcloud.com/2.0/systems/manage-associations-of-a-system).   List system bindings for a specific system user in a system and user binding format.  ### Examples  #### List system bindings for specific system user  ``` curl \\   -H 'Content-Type: application/json' \\   -H \"x-api-key: [YOUR_API_KEY_HERE]\" \\   \"https://console.jumpcloud.com/api/systemusers/[SYSTEM_USER_ID_HERE]/systems\" ```
-    # @param id 
-    # @param content_type 
-    # @param accept 
-    # @param [Hash] opts the optional parameters
-    # @option opts [String] :fields Use a space seperated string of field parameters to include the data in the response. If omitted, the default list of fields will be returned.  (default to )
-    # @option opts [Integer] :limit The number of records to return at once. Limited to 100. (default to 10)
-    # @option opts [Integer] :skip The offset into the records to return. (default to 0)
-    # @option opts [String] :sort Use space separated sort parameters to sort the collection. Default sort is ascending. Prefix with &#x60;-&#x60; to sort descending.  (default to )
-    # @option opts [String] :filter A filter to apply to the query.
-    # @option opts [String] :x_org_id  (default to )
-    # @return [Object]
-    def systemusers_systems_binding_list(id, content_type, accept, opts = {})
-      data, _status_code, _headers = systemusers_systems_binding_list_with_http_info(id, content_type, accept, opts)
-      return data
-    end
-
-    # List system user binding
-    # Hidden as Tags is deprecated  Adds or removes a system binding for a user.  This endpoint is only used for users still using JumpCloud Tags. If you are using JumpCloud Groups please refer to the documentation found [here](https://docs.jumpcloud.com/2.0/systems/manage-associations-of-a-system).   List system bindings for a specific system user in a system and user binding format.  ### Examples  #### List system bindings for specific system user  &#x60;&#x60;&#x60; curl \\   -H &#39;Content-Type: application/json&#39; \\   -H \&quot;x-api-key: [YOUR_API_KEY_HERE]\&quot; \\   \&quot;https://console.jumpcloud.com/api/systemusers/[SYSTEM_USER_ID_HERE]/systems\&quot; &#x60;&#x60;&#x60;
-    # @param id 
-    # @param content_type 
-    # @param accept 
-    # @param [Hash] opts the optional parameters
-    # @option opts [String] :fields Use a space seperated string of field parameters to include the data in the response. If omitted, the default list of fields will be returned. 
-    # @option opts [Integer] :limit The number of records to return at once. Limited to 100.
-    # @option opts [Integer] :skip The offset into the records to return.
-    # @option opts [String] :sort Use space separated sort parameters to sort the collection. Default sort is ascending. Prefix with &#x60;-&#x60; to sort descending. 
-    # @option opts [String] :filter A filter to apply to the query.
-    # @option opts [String] :x_org_id 
-    # @return [Array<(Object, Fixnum, Hash)>] Object data, response status code and response headers
-    def systemusers_systems_binding_list_with_http_info(id, content_type, accept, opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SystemusersApi.systemusers_systems_binding_list ..."
-      end
-      # verify the required parameter 'id' is set
-      if @api_client.config.client_side_validation && id.nil?
-        fail ArgumentError, "Missing the required parameter 'id' when calling SystemusersApi.systemusers_systems_binding_list"
-      end
-      # verify the required parameter 'content_type' is set
-      if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemusersApi.systemusers_systems_binding_list"
-      end
-      # verify the required parameter 'accept' is set
-      if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemusersApi.systemusers_systems_binding_list"
-      end
-      if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemusersApi.systemusers_systems_binding_list, must be greater than or equal to 0.'
-      end
-
-      # resource path
-      local_var_path = "/systemusers/{id}/systems".sub('{' + 'id' + '}', id.to_s)
-
-      # query parameters
-      query_params = {}
       query_params[:'fields'] = opts[:'fields'] if !opts[:'fields'].nil?
-      query_params[:'limit'] = opts[:'limit'] if !opts[:'limit'].nil?
-      query_params[:'skip'] = opts[:'skip'] if !opts[:'skip'].nil?
-      query_params[:'sort'] = opts[:'sort'] if !opts[:'sort'].nil?
       query_params[:'filter'] = opts[:'filter'] if !opts[:'filter'].nil?
 
       # header parameters
       header_params = {}
-      # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
-      # HTTP header 'Content-Type'
-      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-      header_params[:'Content-Type'] = content_type
       header_params[:'Accept'] = accept
+      header_params[:'Content-Type'] = content_type
       header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
 
       # form parameters
@@ -776,66 +308,124 @@ module JCAPIv1
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'Object')
+        :return_type => 'Systemuserreturn')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SystemusersApi#systemusers_systems_binding_list\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SystemusersApi#g_et_systemusers_id\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
-    # Update a system user binding
-    # Hidden as Tags is deprecated  Adds or removes a system binding for a user.  This endpoint is only used for users still using JumpCloud Tags. If you are using JumpCloud Groups please refer to the documentation found [here](https://docs.jumpcloud.com/2.0/systems/manage-associations-of-a-system).  ### Example  #### Add (or remove) system to system user  ``` curl \\   -d '{ \"add\": [\"[SYSTEM_ID_TO_ADD_HERE]\"], \"remove\": [\"[SYSTEM_ID_TO_REMOVE_HERE]\"] }' \\   -X PUT \\   -H 'Content-Type: application/json' \\   -H 'Accept: application/json' \\   -H \"x-api-key: [YOUR_API_KEY_HERE]\" \\   \"https://console.jumpcloud.com/api/systemusers/[SYSTEM_USER_ID_HERE]/systems\" ```
+    # List a system user's public SSH keys
+    # This endpoint will return a specific System User's public SSH key.
     # @param id 
-    # @param content_type 
     # @param accept 
+    # @param content_type 
     # @param [Hash] opts the optional parameters
-    # @option opts [Usersystembindingsput] :body 
     # @option opts [String] :x_org_id  (default to )
-    # @return [Usersystembinding]
-    def systemusers_systems_binding_put(id, content_type, accept, opts = {})
-      data, _status_code, _headers = systemusers_systems_binding_put_with_http_info(id, content_type, accept, opts)
+    # @return [Array<Sshkeylist>]
+    def g_et_systemusers_id_sshkeys(id, accept, content_type, opts = {})
+      data, _status_code, _headers = g_et_systemusers_id_sshkeys_with_http_info(id, accept, content_type, opts)
       return data
     end
 
-    # Update a system user binding
-    # Hidden as Tags is deprecated  Adds or removes a system binding for a user.  This endpoint is only used for users still using JumpCloud Tags. If you are using JumpCloud Groups please refer to the documentation found [here](https://docs.jumpcloud.com/2.0/systems/manage-associations-of-a-system).  ### Example  #### Add (or remove) system to system user  &#x60;&#x60;&#x60; curl \\   -d &#39;{ \&quot;add\&quot;: [\&quot;[SYSTEM_ID_TO_ADD_HERE]\&quot;], \&quot;remove\&quot;: [\&quot;[SYSTEM_ID_TO_REMOVE_HERE]\&quot;] }&#39; \\   -X PUT \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;Accept: application/json&#39; \\   -H \&quot;x-api-key: [YOUR_API_KEY_HERE]\&quot; \\   \&quot;https://console.jumpcloud.com/api/systemusers/[SYSTEM_USER_ID_HERE]/systems\&quot; &#x60;&#x60;&#x60;
+    # List a system user&#39;s public SSH keys
+    # This endpoint will return a specific System User&#39;s public SSH key.
     # @param id 
-    # @param content_type 
     # @param accept 
+    # @param content_type 
     # @param [Hash] opts the optional parameters
-    # @option opts [Usersystembindingsput] :body 
     # @option opts [String] :x_org_id 
-    # @return [Array<(Usersystembinding, Fixnum, Hash)>] Usersystembinding data, response status code and response headers
-    def systemusers_systems_binding_put_with_http_info(id, content_type, accept, opts = {})
+    # @return [Array<(Array<Sshkeylist>, Fixnum, Hash)>] Array<Sshkeylist> data, response status code and response headers
+    def g_et_systemusers_id_sshkeys_with_http_info(id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SystemusersApi.systemusers_systems_binding_put ..."
+        @api_client.config.logger.debug "Calling API: SystemusersApi.g_et_systemusers_id_sshkeys ..."
       end
       # verify the required parameter 'id' is set
       if @api_client.config.client_side_validation && id.nil?
-        fail ArgumentError, "Missing the required parameter 'id' when calling SystemusersApi.systemusers_systems_binding_put"
-      end
-      # verify the required parameter 'content_type' is set
-      if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemusersApi.systemusers_systems_binding_put"
+        fail ArgumentError, "Missing the required parameter 'id' when calling SystemusersApi.g_et_systemusers_id_sshkeys"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemusersApi.systemusers_systems_binding_put"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemusersApi.g_et_systemusers_id_sshkeys"
+      end
+      # verify the required parameter 'content_type' is set
+      if @api_client.config.client_side_validation && content_type.nil?
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemusersApi.g_et_systemusers_id_sshkeys"
       end
       # resource path
-      local_var_path = "/systemusers/{id}/systems".sub('{' + 'id' + '}', id.to_s)
+      local_var_path = "/systemusers/{id}/sshkeys".sub('{' + 'id' + '}', id.to_s)
 
       # query parameters
       query_params = {}
 
       # header parameters
       header_params = {}
-      # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
-      # HTTP header 'Content-Type'
-      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-      header_params[:'Content-Type'] = content_type
       header_params[:'Accept'] = accept
+      header_params[:'Content-Type'] = content_type
+      header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      auth_names = ['x-api-key']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'Array<Sshkeylist>')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: SystemusersApi#g_et_systemusers_id_sshkeys\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Create a system user
+    # This endpoint allows you to create a new system user.  #### Sample Request  ``` curl -X POST https://console.jumpcloud.com/api/systemusers \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' \\   -d '{  \"username\":\"{username}\",  \"email\":\"{email_address}\",  \"firstname\":\"{Name}\",  \"lastname\":\"{Name}\" }' ```
+    # @param accept 
+    # @param content_type 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Systemuserputpost] :body 
+    # @option opts [String] :x_org_id  (default to )
+    # @return [Systemuserreturn]
+    def p_ost_systemusers(accept, content_type, opts = {})
+      data, _status_code, _headers = p_ost_systemusers_with_http_info(accept, content_type, opts)
+      return data
+    end
+
+    # Create a system user
+    # This endpoint allows you to create a new system user.  #### Sample Request  &#x60;&#x60;&#x60; curl -X POST https://console.jumpcloud.com/api/systemusers \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; \\   -d &#39;{  \&quot;username\&quot;:\&quot;{username}\&quot;,  \&quot;email\&quot;:\&quot;{email_address}\&quot;,  \&quot;firstname\&quot;:\&quot;{Name}\&quot;,  \&quot;lastname\&quot;:\&quot;{Name}\&quot; }&#39; &#x60;&#x60;&#x60;
+    # @param accept 
+    # @param content_type 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Systemuserputpost] :body 
+    # @option opts [String] :x_org_id 
+    # @return [Array<(Systemuserreturn, Fixnum, Hash)>] Systemuserreturn data, response status code and response headers
+    def p_ost_systemusers_with_http_info(accept, content_type, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: SystemusersApi.p_ost_systemusers ..."
+      end
+      # verify the required parameter 'accept' is set
+      if @api_client.config.client_side_validation && accept.nil?
+        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemusersApi.p_ost_systemusers"
+      end
+      # verify the required parameter 'content_type' is set
+      if @api_client.config.client_side_validation && content_type.nil?
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemusersApi.p_ost_systemusers"
+      end
+      # resource path
+      local_var_path = "/systemusers"
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+      header_params[:'Accept'] = accept
+      header_params[:'Content-Type'] = content_type
       header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
 
       # form parameters
@@ -844,70 +434,66 @@ module JCAPIv1
       # http body (model)
       post_body = @api_client.object_to_http_body(opts[:'body'])
       auth_names = ['x-api-key']
-      data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'Usersystembinding')
+        :return_type => 'Systemuserreturn')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SystemusersApi#systemusers_systems_binding_put\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SystemusersApi#p_ost_systemusers\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
-    # Unlock a system user
-    # This endpoint allows you to unlock a user's account.
+    # Expire a system user's password
+    # This endpoint allows you to expire a user's password.
     # @param id 
-    # @param content_type 
     # @param accept 
+    # @param content_type 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :x_org_id  (default to )
     # @return [nil]
-    def systemusers_unlock(id, content_type, accept, opts = {})
-      systemusers_unlock_with_http_info(id, content_type, accept, opts)
+    def p_ost_systemusers_id_expire(id, accept, content_type, opts = {})
+      p_ost_systemusers_id_expire_with_http_info(id, accept, content_type, opts)
       return nil
     end
 
-    # Unlock a system user
-    # This endpoint allows you to unlock a user&#39;s account.
+    # Expire a system user&#39;s password
+    # This endpoint allows you to expire a user&#39;s password.
     # @param id 
-    # @param content_type 
     # @param accept 
+    # @param content_type 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :x_org_id 
     # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
-    def systemusers_unlock_with_http_info(id, content_type, accept, opts = {})
+    def p_ost_systemusers_id_expire_with_http_info(id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SystemusersApi.systemusers_unlock ..."
+        @api_client.config.logger.debug "Calling API: SystemusersApi.p_ost_systemusers_id_expire ..."
       end
       # verify the required parameter 'id' is set
       if @api_client.config.client_side_validation && id.nil?
-        fail ArgumentError, "Missing the required parameter 'id' when calling SystemusersApi.systemusers_unlock"
-      end
-      # verify the required parameter 'content_type' is set
-      if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemusersApi.systemusers_unlock"
+        fail ArgumentError, "Missing the required parameter 'id' when calling SystemusersApi.p_ost_systemusers_id_expire"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemusersApi.systemusers_unlock"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemusersApi.p_ost_systemusers_id_expire"
+      end
+      # verify the required parameter 'content_type' is set
+      if @api_client.config.client_side_validation && content_type.nil?
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemusersApi.p_ost_systemusers_id_expire"
       end
       # resource path
-      local_var_path = "/systemusers/{id}/unlock".sub('{' + 'id' + '}', id.to_s)
+      local_var_path = "/systemusers/{id}/expire".sub('{' + 'id' + '}', id.to_s)
 
       # query parameters
       query_params = {}
 
       # header parameters
       header_params = {}
-      # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
-      # HTTP header 'Content-Type'
-      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-      header_params[:'Content-Type'] = content_type
       header_params[:'Accept'] = accept
+      header_params[:'Content-Type'] = content_type
       header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
 
       # form parameters
@@ -923,7 +509,283 @@ module JCAPIv1
         :body => post_body,
         :auth_names => auth_names)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SystemusersApi#systemusers_unlock\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SystemusersApi#p_ost_systemusers_id_expire\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Reset a system user's MFA token
+    # This endpoint allows you to reset the TOTP key for a specified system user and put them in an TOTP MFA enrollment period. This will result in the user being prompted to setup TOTP MFA when logging into userportal. Please be aware that if the user does not complete TOTP MFA setup before the `exclusionUntil` date, they will be locked out of any resources that require TOTP MFA.  Please refer to our [Knowledge Base Article](https://support.jumpcloud.com/customer/en/portal/articles/2959138-using-multifactor-authentication-with-jumpcloud) on setting up MFA for more information.   #### Sample Request  ``` curl -X POST \\   https://console.jumpcloud.com/api/systemusers/{UserID}/resetmfa \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' \\   -d '{\"exclusion\": true, \"exclusionUntil\": \"{date-time}\"}'     ```
+    # @param id 
+    # @param accept 
+    # @param content_type 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Body1] :body 
+    # @option opts [String] :x_org_id  (default to )
+    # @return [nil]
+    def p_ost_systemusers_id_resetmfa(id, accept, content_type, opts = {})
+      p_ost_systemusers_id_resetmfa_with_http_info(id, accept, content_type, opts)
+      return nil
+    end
+
+    # Reset a system user&#39;s MFA token
+    # This endpoint allows you to reset the TOTP key for a specified system user and put them in an TOTP MFA enrollment period. This will result in the user being prompted to setup TOTP MFA when logging into userportal. Please be aware that if the user does not complete TOTP MFA setup before the &#x60;exclusionUntil&#x60; date, they will be locked out of any resources that require TOTP MFA.  Please refer to our [Knowledge Base Article](https://support.jumpcloud.com/customer/en/portal/articles/2959138-using-multifactor-authentication-with-jumpcloud) on setting up MFA for more information.   #### Sample Request  &#x60;&#x60;&#x60; curl -X POST \\   https://console.jumpcloud.com/api/systemusers/{UserID}/resetmfa \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; \\   -d &#39;{\&quot;exclusion\&quot;: true, \&quot;exclusionUntil\&quot;: \&quot;{date-time}\&quot;}&#39;     &#x60;&#x60;&#x60;
+    # @param id 
+    # @param accept 
+    # @param content_type 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Body1] :body 
+    # @option opts [String] :x_org_id 
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
+    def p_ost_systemusers_id_resetmfa_with_http_info(id, accept, content_type, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: SystemusersApi.p_ost_systemusers_id_resetmfa ..."
+      end
+      # verify the required parameter 'id' is set
+      if @api_client.config.client_side_validation && id.nil?
+        fail ArgumentError, "Missing the required parameter 'id' when calling SystemusersApi.p_ost_systemusers_id_resetmfa"
+      end
+      # verify the required parameter 'accept' is set
+      if @api_client.config.client_side_validation && accept.nil?
+        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemusersApi.p_ost_systemusers_id_resetmfa"
+      end
+      # verify the required parameter 'content_type' is set
+      if @api_client.config.client_side_validation && content_type.nil?
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemusersApi.p_ost_systemusers_id_resetmfa"
+      end
+      # resource path
+      local_var_path = "/systemusers/{id}/resetmfa".sub('{' + 'id' + '}', id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+      header_params[:'Accept'] = accept
+      header_params[:'Content-Type'] = content_type
+      header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(opts[:'body'])
+      auth_names = ['x-api-key']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: SystemusersApi#p_ost_systemusers_id_resetmfa\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Create a system user's Public SSH Key
+    # This endpoint will create a specific System User's Public SSH Key.
+    # @param id 
+    # @param accept 
+    # @param content_type 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Sshkeypost] :body 
+    # @option opts [String] :x_org_id  (default to )
+    # @return [Sshkeylist]
+    def p_ost_systemusers_id_sshkeys(id, accept, content_type, opts = {})
+      data, _status_code, _headers = p_ost_systemusers_id_sshkeys_with_http_info(id, accept, content_type, opts)
+      return data
+    end
+
+    # Create a system user&#39;s Public SSH Key
+    # This endpoint will create a specific System User&#39;s Public SSH Key.
+    # @param id 
+    # @param accept 
+    # @param content_type 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Sshkeypost] :body 
+    # @option opts [String] :x_org_id 
+    # @return [Array<(Sshkeylist, Fixnum, Hash)>] Sshkeylist data, response status code and response headers
+    def p_ost_systemusers_id_sshkeys_with_http_info(id, accept, content_type, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: SystemusersApi.p_ost_systemusers_id_sshkeys ..."
+      end
+      # verify the required parameter 'id' is set
+      if @api_client.config.client_side_validation && id.nil?
+        fail ArgumentError, "Missing the required parameter 'id' when calling SystemusersApi.p_ost_systemusers_id_sshkeys"
+      end
+      # verify the required parameter 'accept' is set
+      if @api_client.config.client_side_validation && accept.nil?
+        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemusersApi.p_ost_systemusers_id_sshkeys"
+      end
+      # verify the required parameter 'content_type' is set
+      if @api_client.config.client_side_validation && content_type.nil?
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemusersApi.p_ost_systemusers_id_sshkeys"
+      end
+      # resource path
+      local_var_path = "/systemusers/{id}/sshkeys".sub('{' + 'id' + '}', id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+      header_params[:'Accept'] = accept
+      header_params[:'Content-Type'] = content_type
+      header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(opts[:'body'])
+      auth_names = ['x-api-key']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'Sshkeylist')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: SystemusersApi#p_ost_systemusers_id_sshkeys\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Unlock a system user
+    # This endpoint allows you to unlock a user's account.
+    # @param id 
+    # @param accept 
+    # @param content_type 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :x_org_id  (default to )
+    # @return [nil]
+    def p_ost_systemusers_id_unlock(id, accept, content_type, opts = {})
+      p_ost_systemusers_id_unlock_with_http_info(id, accept, content_type, opts)
+      return nil
+    end
+
+    # Unlock a system user
+    # This endpoint allows you to unlock a user&#39;s account.
+    # @param id 
+    # @param accept 
+    # @param content_type 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :x_org_id 
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
+    def p_ost_systemusers_id_unlock_with_http_info(id, accept, content_type, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: SystemusersApi.p_ost_systemusers_id_unlock ..."
+      end
+      # verify the required parameter 'id' is set
+      if @api_client.config.client_side_validation && id.nil?
+        fail ArgumentError, "Missing the required parameter 'id' when calling SystemusersApi.p_ost_systemusers_id_unlock"
+      end
+      # verify the required parameter 'accept' is set
+      if @api_client.config.client_side_validation && accept.nil?
+        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemusersApi.p_ost_systemusers_id_unlock"
+      end
+      # verify the required parameter 'content_type' is set
+      if @api_client.config.client_side_validation && content_type.nil?
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemusersApi.p_ost_systemusers_id_unlock"
+      end
+      # resource path
+      local_var_path = "/systemusers/{id}/unlock".sub('{' + 'id' + '}', id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+      header_params[:'Accept'] = accept
+      header_params[:'Content-Type'] = content_type
+      header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      auth_names = ['x-api-key']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: SystemusersApi#p_ost_systemusers_id_unlock\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Update a system user
+    # This endpoint allows you to update a system user.  #### Sample Request  ``` curl -X PUT https://console.jumpcloud.com/api/systemusers/{UserID} \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' \\   -d '{  \"email\":\"{email_address}\",  \"firstname\":\"{Name}\",  \"lastname\":\"{Name}\" }' ```
+    # @param id 
+    # @param accept 
+    # @param content_type 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Systemuserput] :body 
+    # @option opts [String] :x_org_id  (default to )
+    # @return [Systemuserreturn]
+    def p_ut_systemusers_id(id, accept, content_type, opts = {})
+      data, _status_code, _headers = p_ut_systemusers_id_with_http_info(id, accept, content_type, opts)
+      return data
+    end
+
+    # Update a system user
+    # This endpoint allows you to update a system user.  #### Sample Request  &#x60;&#x60;&#x60; curl -X PUT https://console.jumpcloud.com/api/systemusers/{UserID} \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; \\   -d &#39;{  \&quot;email\&quot;:\&quot;{email_address}\&quot;,  \&quot;firstname\&quot;:\&quot;{Name}\&quot;,  \&quot;lastname\&quot;:\&quot;{Name}\&quot; }&#39; &#x60;&#x60;&#x60;
+    # @param id 
+    # @param accept 
+    # @param content_type 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Systemuserput] :body 
+    # @option opts [String] :x_org_id 
+    # @return [Array<(Systemuserreturn, Fixnum, Hash)>] Systemuserreturn data, response status code and response headers
+    def p_ut_systemusers_id_with_http_info(id, accept, content_type, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: SystemusersApi.p_ut_systemusers_id ..."
+      end
+      # verify the required parameter 'id' is set
+      if @api_client.config.client_side_validation && id.nil?
+        fail ArgumentError, "Missing the required parameter 'id' when calling SystemusersApi.p_ut_systemusers_id"
+      end
+      # verify the required parameter 'accept' is set
+      if @api_client.config.client_side_validation && accept.nil?
+        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemusersApi.p_ut_systemusers_id"
+      end
+      # verify the required parameter 'content_type' is set
+      if @api_client.config.client_side_validation && content_type.nil?
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemusersApi.p_ut_systemusers_id"
+      end
+      # resource path
+      local_var_path = "/systemusers/{id}".sub('{' + 'id' + '}', id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+      header_params[:'Accept'] = accept
+      header_params[:'Content-Type'] = content_type
+      header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(opts[:'body'])
+      auth_names = ['x-api-key']
+      data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'Systemuserreturn')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: SystemusersApi#p_ut_systemusers_id\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

@@ -1,7 +1,7 @@
 =begin
 #JumpCloud APIs
 
-# JumpCloud's V1 API. This set of endpoints allows JumpCloud customers to manage commands, systems, & system users.
+#JumpCloud's V1 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
 
 OpenAPI spec version: 1.0
 
@@ -32,7 +32,7 @@ module JCAPIv1
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'results' => :'CommandfilereturnResults',
+        :'results' => :'Array<CommandfilereturnResults>',
         :'total_count' => :'Integer'
       }
     end
@@ -46,7 +46,9 @@ module JCAPIv1
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       if attributes.has_key?(:'results')
-        self.results = attributes[:'results']
+        if (value = attributes[:'results']).is_a?(Array)
+          self.results = value
+        end
       end
 
       if attributes.has_key?(:'totalCount')

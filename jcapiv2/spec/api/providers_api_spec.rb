@@ -1,7 +1,7 @@
 =begin
 #JumpCloud APIs
 
-# JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
+#JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
 
 OpenAPI spec version: 2.0
 
@@ -32,35 +32,35 @@ describe 'ProvidersApi' do
     end
   end
 
-  # unit tests for providers_list_administrators
+  # unit tests for g_et_providers_provider_id_administrators
   # List Provider Administrators
-  # This endpoint returns a list of the Administrators associated with the Provider.  #### Sample Request &#x60;&#x60;&#x60; curl -X GET https://console.jumpcloud.com/api/v2/providers/{ProviderID}/administrators \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
+  # This endpoint returns a list of the Administrators associated with the Provider. You must be associated with the provider to use this route.  #### Sample Request &#x60;&#x60;&#x60; curl -X GET https://console.jumpcloud.com/api/v2/providers/{ProviderID}/administrators \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
   # @param provider_id 
-  # @param content_type 
   # @param accept 
+  # @param content_type 
   # @param [Hash] opts the optional parameters
   # @option opts [Array<String>] :fields The comma separated fields included in the returned records. If omitted, the default list of fields will be returned. 
-  # @option opts [Array<String>] :filter Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
+  # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
   # @option opts [Integer] :limit The number of records to return at once. Limited to 100.
   # @option opts [Integer] :skip The offset into the records to return.
   # @option opts [Array<String>] :sort The comma separated fields used to sort the collection. Default sort is ascending, prefix with &#x60;-&#x60; to sort descending. 
-  # @return [InlineResponse2001]
-  describe 'providers_list_administrators test' do
+  # @return [InlineResponse200]
+  describe 'g_et_providers_provider_id_administrators test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for providers_post_admins
+  # unit tests for p_ost_providers_provider_id_administrators
   # Create a new Provider Administrator
-  # This endpoint allows you to create a provider administrator. You must be associated to the provider to use this route.  **Sample Request**  &#x60;&#x60;&#x60; curl -X POST https://console.jumpcloud.com/api/v2/providers/{ProviderID}/administrators \\     -H &#39;Accept: application/json&#39; \\     -H &#39;Context-Type: application/json&#39; \\     -H &#39;x-api-key: {API_KEY}&#39; \\     -d &#39;{       \&quot;email\&quot;:\&quot;{ADMIN_EMAIL}\&quot;     }&#39; &#x60;&#x60;&#x60;
+  # This endpoint allows you to create a provider administrator. You must be associated with the provider to use this route.  #### Sample Request &#x60;&#x60;&#x60; curl -X POST https://console.jumpcloud.com/api/v2/providers/{ProviderID}/administrators \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; \\   -d &#39;{     \&quot;email\&quot;:\&quot;{ADMIN_EMAIL}\&quot;   }&#39; &#x60;&#x60;&#x60;
   # @param provider_id 
-  # @param content_type 
   # @param accept 
+  # @param content_type 
   # @param [Hash] opts the optional parameters
   # @option opts [ProviderAdminReq] :body 
   # @return [Administrator]
-  describe 'providers_post_admins test' do
+  describe 'p_ost_providers_provider_id_administrators test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

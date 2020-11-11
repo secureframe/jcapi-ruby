@@ -1,7 +1,7 @@
 =begin
 #JumpCloud APIs
 
-# JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
+#JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
 
 OpenAPI spec version: 2.0
 
@@ -17,26 +17,14 @@ module JCAPIv2
   class SystemInsightsIeExtensions
     attr_accessor :collection_time
 
-    attr_accessor :name
-
-    attr_accessor :path
-
-    attr_accessor :registry_path
-
     attr_accessor :system_id
-
-    attr_accessor :version
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         :'collection_time' => :'collection_time',
-        :'name' => :'name',
-        :'path' => :'path',
-        :'registry_path' => :'registry_path',
-        :'system_id' => :'system_id',
-        :'version' => :'version'
+        :'system_id' => :'system_id'
       }
     end
 
@@ -44,11 +32,7 @@ module JCAPIv2
     def self.swagger_types
       {
         :'collection_time' => :'String',
-        :'name' => :'String',
-        :'path' => :'String',
-        :'registry_path' => :'String',
-        :'system_id' => :'String',
-        :'version' => :'String'
+        :'system_id' => :'String'
       }
     end
 
@@ -64,24 +48,8 @@ module JCAPIv2
         self.collection_time = attributes[:'collection_time']
       end
 
-      if attributes.has_key?(:'name')
-        self.name = attributes[:'name']
-      end
-
-      if attributes.has_key?(:'path')
-        self.path = attributes[:'path']
-      end
-
-      if attributes.has_key?(:'registry_path')
-        self.registry_path = attributes[:'registry_path']
-      end
-
       if attributes.has_key?(:'system_id')
         self.system_id = attributes[:'system_id']
-      end
-
-      if attributes.has_key?(:'version')
-        self.version = attributes[:'version']
       end
 
     end
@@ -105,11 +73,7 @@ module JCAPIv2
       return true if self.equal?(o)
       self.class == o.class &&
           collection_time == o.collection_time &&
-          name == o.name &&
-          path == o.path &&
-          registry_path == o.registry_path &&
-          system_id == o.system_id &&
-          version == o.version
+          system_id == o.system_id
     end
 
     # @see the `==` method
@@ -121,7 +85,7 @@ module JCAPIv2
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [collection_time, name, path, registry_path, system_id, version].hash
+      [collection_time, system_id].hash
     end
 
     # Builds the object from hash

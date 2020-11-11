@@ -1,7 +1,7 @@
 =begin
 #JumpCloud APIs
 
-# JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
+#JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
 
 OpenAPI spec version: 2.0
 
@@ -74,12 +74,27 @@ module JCAPIv2
     # @return Array for valid properties with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @api_host.nil?
+        invalid_properties.push("invalid value for 'api_host', api_host cannot be nil.")
+      end
+
+      if @integration_key.nil?
+        invalid_properties.push("invalid value for 'integration_key', integration_key cannot be nil.")
+      end
+
+      if @name.nil?
+        invalid_properties.push("invalid value for 'name', name cannot be nil.")
+      end
+
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @api_host.nil?
+      return false if @integration_key.nil?
+      return false if @name.nil?
       return true
     end
 

@@ -1,7 +1,7 @@
 =begin
 #JumpCloud APIs
 
-# JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
+#JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
 
 OpenAPI spec version: 2.0
 
@@ -17,29 +17,14 @@ module JCAPIv2
   class SystemInsightsUptime
     attr_accessor :collection_time
 
-    attr_accessor :days
-
-    attr_accessor :hours
-
-    attr_accessor :minutes
-
-    attr_accessor :seconds
-
     attr_accessor :system_id
-
-    attr_accessor :total_seconds
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         :'collection_time' => :'collection_time',
-        :'days' => :'days',
-        :'hours' => :'hours',
-        :'minutes' => :'minutes',
-        :'seconds' => :'seconds',
-        :'system_id' => :'system_id',
-        :'total_seconds' => :'total_seconds'
+        :'system_id' => :'system_id'
       }
     end
 
@@ -47,12 +32,7 @@ module JCAPIv2
     def self.swagger_types
       {
         :'collection_time' => :'String',
-        :'days' => :'Integer',
-        :'hours' => :'Integer',
-        :'minutes' => :'Integer',
-        :'seconds' => :'Integer',
-        :'system_id' => :'String',
-        :'total_seconds' => :'String'
+        :'system_id' => :'String'
       }
     end
 
@@ -68,28 +48,8 @@ module JCAPIv2
         self.collection_time = attributes[:'collection_time']
       end
 
-      if attributes.has_key?(:'days')
-        self.days = attributes[:'days']
-      end
-
-      if attributes.has_key?(:'hours')
-        self.hours = attributes[:'hours']
-      end
-
-      if attributes.has_key?(:'minutes')
-        self.minutes = attributes[:'minutes']
-      end
-
-      if attributes.has_key?(:'seconds')
-        self.seconds = attributes[:'seconds']
-      end
-
       if attributes.has_key?(:'system_id')
         self.system_id = attributes[:'system_id']
-      end
-
-      if attributes.has_key?(:'total_seconds')
-        self.total_seconds = attributes[:'total_seconds']
       end
 
     end
@@ -113,12 +73,7 @@ module JCAPIv2
       return true if self.equal?(o)
       self.class == o.class &&
           collection_time == o.collection_time &&
-          days == o.days &&
-          hours == o.hours &&
-          minutes == o.minutes &&
-          seconds == o.seconds &&
-          system_id == o.system_id &&
-          total_seconds == o.total_seconds
+          system_id == o.system_id
     end
 
     # @see the `==` method
@@ -130,7 +85,7 @@ module JCAPIv2
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [collection_time, days, hours, minutes, seconds, system_id, total_seconds].hash
+      [collection_time, system_id].hash
     end
 
     # Builds the object from hash

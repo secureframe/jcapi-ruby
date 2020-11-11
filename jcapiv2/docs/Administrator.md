@@ -9,5 +9,6 @@ Name | Type | Description | Notes
 **id** | **String** |  | [optional] 
 **lastname** | **String** |  | [optional] 
 **registered** | **BOOLEAN** |  | [optional] 
+**suspended** | **BOOLEAN** |  | [optional] 
 
 

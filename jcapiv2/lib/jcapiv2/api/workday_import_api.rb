@@ -1,7 +1,7 @@
 =begin
 #JumpCloud APIs
 
-# JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
+#JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
 
 OpenAPI spec version: 2.0
 
@@ -20,115 +20,42 @@ module JCAPIv2
       @api_client = api_client
     end
 
-    # Authorize Workday
-    # This endpoint adds an authorization method to a workday instance.  You must supply a username and password for `Basic Authentication` that is the same as your WorkDay Integrator System User.  Failure to provide these credentials  will result in the request being rejected.  Currently `O-Auth` isn't a supported authentication protocol for WorkDay, but will be in the future.  #### Sample Request  ``` curl -X POST https://console.jumpcloud.com/api/v2/workdays/{WorkDayID}/auth \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' \\   -d '{  \"auth\":{    \"basic\": {   \"username\": \"someDeveloper\",      \"password\": \"notTheRealPassword\"     }  } }'  ```
-    # @param workday_id 
-    # @param content_type 
-    # @param accept 
-    # @param [Hash] opts the optional parameters
-    # @option opts [AuthInputObject] :body 
-    # @option opts [String] :x_org_id  (default to )
-    # @return [nil]
-    def workdays_authorize(workday_id, content_type, accept, opts = {})
-      workdays_authorize_with_http_info(workday_id, content_type, accept, opts)
-      return nil
-    end
-
-    # Authorize Workday
-    # This endpoint adds an authorization method to a workday instance.  You must supply a username and password for &#x60;Basic Authentication&#x60; that is the same as your WorkDay Integrator System User.  Failure to provide these credentials  will result in the request being rejected.  Currently &#x60;O-Auth&#x60; isn&#39;t a supported authentication protocol for WorkDay, but will be in the future.  #### Sample Request  &#x60;&#x60;&#x60; curl -X POST https://console.jumpcloud.com/api/v2/workdays/{WorkDayID}/auth \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; \\   -d &#39;{  \&quot;auth\&quot;:{    \&quot;basic\&quot;: {   \&quot;username\&quot;: \&quot;someDeveloper\&quot;,      \&quot;password\&quot;: \&quot;notTheRealPassword\&quot;     }  } }&#39;  &#x60;&#x60;&#x60;
-    # @param workday_id 
-    # @param content_type 
-    # @param accept 
-    # @param [Hash] opts the optional parameters
-    # @option opts [AuthInputObject] :body 
-    # @option opts [String] :x_org_id 
-    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
-    def workdays_authorize_with_http_info(workday_id, content_type, accept, opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: WorkdayImportApi.workdays_authorize ..."
-      end
-      # verify the required parameter 'workday_id' is set
-      if @api_client.config.client_side_validation && workday_id.nil?
-        fail ArgumentError, "Missing the required parameter 'workday_id' when calling WorkdayImportApi.workdays_authorize"
-      end
-      # verify the required parameter 'content_type' is set
-      if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling WorkdayImportApi.workdays_authorize"
-      end
-      # verify the required parameter 'accept' is set
-      if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling WorkdayImportApi.workdays_authorize"
-      end
-      # resource path
-      local_var_path = "/workdays/{workday_id}/auth".sub('{' + 'workday_id' + '}', workday_id.to_s)
-
-      # query parameters
-      query_params = {}
-
-      # header parameters
-      header_params = {}
-      # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
-      # HTTP header 'Content-Type'
-      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-      header_params[:'Content-Type'] = content_type
-      header_params[:'Accept'] = accept
-      header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
-
-      # form parameters
-      form_params = {}
-
-      # http body (model)
-      post_body = @api_client.object_to_http_body(opts[:'body'])
-      auth_names = ['x-api-key']
-      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names)
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: WorkdayImportApi#workdays_authorize\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
     # Deauthorize Workday
     # Removes any and all authorization methods from the workday instance  ##### Sample Request ``` curl -X DELETE https://console.jumpcloud.com/api/v2/workdays/{WorkDayID}/auth \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
     # @param workday_id 
-    # @param content_type 
     # @param accept 
+    # @param content_type 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :x_org_id  (default to )
     # @return [nil]
-    def workdays_deauthorize(workday_id, content_type, accept, opts = {})
-      workdays_deauthorize_with_http_info(workday_id, content_type, accept, opts)
+    def d_elete_workdays_workday_id_auth(workday_id, accept, content_type, opts = {})
+      d_elete_workdays_workday_id_auth_with_http_info(workday_id, accept, content_type, opts)
       return nil
     end
 
     # Deauthorize Workday
     # Removes any and all authorization methods from the workday instance  ##### Sample Request &#x60;&#x60;&#x60; curl -X DELETE https://console.jumpcloud.com/api/v2/workdays/{WorkDayID}/auth \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
     # @param workday_id 
-    # @param content_type 
     # @param accept 
+    # @param content_type 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :x_org_id 
     # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
-    def workdays_deauthorize_with_http_info(workday_id, content_type, accept, opts = {})
+    def d_elete_workdays_workday_id_auth_with_http_info(workday_id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: WorkdayImportApi.workdays_deauthorize ..."
+        @api_client.config.logger.debug "Calling API: WorkdayImportApi.d_elete_workdays_workday_id_auth ..."
       end
       # verify the required parameter 'workday_id' is set
       if @api_client.config.client_side_validation && workday_id.nil?
-        fail ArgumentError, "Missing the required parameter 'workday_id' when calling WorkdayImportApi.workdays_deauthorize"
-      end
-      # verify the required parameter 'content_type' is set
-      if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling WorkdayImportApi.workdays_deauthorize"
+        fail ArgumentError, "Missing the required parameter 'workday_id' when calling WorkdayImportApi.d_elete_workdays_workday_id_auth"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling WorkdayImportApi.workdays_deauthorize"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling WorkdayImportApi.d_elete_workdays_workday_id_auth"
+      end
+      # verify the required parameter 'content_type' is set
+      if @api_client.config.client_side_validation && content_type.nil?
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling WorkdayImportApi.d_elete_workdays_workday_id_auth"
       end
       # resource path
       local_var_path = "/workdays/{workday_id}/auth".sub('{' + 'workday_id' + '}', workday_id.to_s)
@@ -142,8 +69,8 @@ module JCAPIv2
       header_params['Accept'] = @api_client.select_header_accept(['application/json'])
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-      header_params[:'Content-Type'] = content_type
       header_params[:'Accept'] = accept
+      header_params[:'Content-Type'] = content_type
       header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
 
       # form parameters
@@ -159,360 +86,54 @@ module JCAPIv2
         :body => post_body,
         :auth_names => auth_names)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: WorkdayImportApi#workdays_deauthorize\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-    # Delete Workday
-    # This endpoint allows you to delete an instance of Workday.  **This functionality is currently not enable for users.**
-    # @param id 
-    # @param content_type 
-    # @param accept 
-    # @param [Hash] opts the optional parameters
-    # @option opts [String] :x_org_id  (default to )
-    # @return [Object]
-    def workdays_delete(id, content_type, accept, opts = {})
-      data, _status_code, _headers = workdays_delete_with_http_info(id, content_type, accept, opts)
-      return data
-    end
-
-    # Delete Workday
-    # This endpoint allows you to delete an instance of Workday.  **This functionality is currently not enable for users.**
-    # @param id 
-    # @param content_type 
-    # @param accept 
-    # @param [Hash] opts the optional parameters
-    # @option opts [String] :x_org_id 
-    # @return [Array<(Object, Fixnum, Hash)>] Object data, response status code and response headers
-    def workdays_delete_with_http_info(id, content_type, accept, opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: WorkdayImportApi.workdays_delete ..."
-      end
-      # verify the required parameter 'id' is set
-      if @api_client.config.client_side_validation && id.nil?
-        fail ArgumentError, "Missing the required parameter 'id' when calling WorkdayImportApi.workdays_delete"
-      end
-      # verify the required parameter 'content_type' is set
-      if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling WorkdayImportApi.workdays_delete"
-      end
-      # verify the required parameter 'accept' is set
-      if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling WorkdayImportApi.workdays_delete"
-      end
-      # resource path
-      local_var_path = "/workdays/{id}".sub('{' + 'id' + '}', id.to_s)
-
-      # query parameters
-      query_params = {}
-
-      # header parameters
-      header_params = {}
-      # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
-      # HTTP header 'Content-Type'
-      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-      header_params[:'Content-Type'] = content_type
-      header_params[:'Accept'] = accept
-      header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
-
-      # form parameters
-      form_params = {}
-
-      # http body (model)
-      post_body = nil
-      auth_names = ['x-api-key']
-      data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'Object')
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: WorkdayImportApi#workdays_delete\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-    # Get Workday
-    # This endpoint will return  all the available information about an instance of Workday.  #### Sample Request  ``` curl -X GET https://console.jumpcloud.com/api/v2/workdays/ \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}'   ```
-    # @param id 
-    # @param content_type 
-    # @param accept 
-    # @param [Hash] opts the optional parameters
-    # @option opts [String] :x_org_id  (default to )
-    # @return [WorkdayOutput]
-    def workdays_get(id, content_type, accept, opts = {})
-      data, _status_code, _headers = workdays_get_with_http_info(id, content_type, accept, opts)
-      return data
-    end
-
-    # Get Workday
-    # This endpoint will return  all the available information about an instance of Workday.  #### Sample Request  &#x60;&#x60;&#x60; curl -X GET https://console.jumpcloud.com/api/v2/workdays/ \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39;   &#x60;&#x60;&#x60;
-    # @param id 
-    # @param content_type 
-    # @param accept 
-    # @param [Hash] opts the optional parameters
-    # @option opts [String] :x_org_id 
-    # @return [Array<(WorkdayOutput, Fixnum, Hash)>] WorkdayOutput data, response status code and response headers
-    def workdays_get_with_http_info(id, content_type, accept, opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: WorkdayImportApi.workdays_get ..."
-      end
-      # verify the required parameter 'id' is set
-      if @api_client.config.client_side_validation && id.nil?
-        fail ArgumentError, "Missing the required parameter 'id' when calling WorkdayImportApi.workdays_get"
-      end
-      # verify the required parameter 'content_type' is set
-      if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling WorkdayImportApi.workdays_get"
-      end
-      # verify the required parameter 'accept' is set
-      if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling WorkdayImportApi.workdays_get"
-      end
-      # resource path
-      local_var_path = "/workdays/{id}".sub('{' + 'id' + '}', id.to_s)
-
-      # query parameters
-      query_params = {}
-
-      # header parameters
-      header_params = {}
-      # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
-      # HTTP header 'Content-Type'
-      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-      header_params[:'Content-Type'] = content_type
-      header_params[:'Accept'] = accept
-      header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
-
-      # form parameters
-      form_params = {}
-
-      # http body (model)
-      post_body = nil
-      auth_names = ['x-api-key']
-      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'WorkdayOutput')
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: WorkdayImportApi#workdays_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-    # Workday Import
-    # The endpoint allows you to create a Workday Import request.  #### Sample Request  ``` curl -X POST https://console.jumpcloud.com/api/v2/workdays/{WorkdayID}/import \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' \\   -d '[  {   \"email\":\"{email}\",   \"firstname\":\"{firstname}\",   \"lastname\":\"{firstname}\",   \"username\":\"{username}\",   \"attributes\":[    {\"name\":\"EmployeeID\",\"value\":\"0000\"},    {\"name\":\"WorkdayID\",\"value\":\"name.name\"}    ]     } ] ```
-    # @param workday_id 
-    # @param content_type 
-    # @param accept 
-    # @param [Hash] opts the optional parameters
-    # @option opts [Array<BulkUserCreate>] :body 
-    # @option opts [String] :x_org_id  (default to )
-    # @return [JobId]
-    def workdays_import(workday_id, content_type, accept, opts = {})
-      data, _status_code, _headers = workdays_import_with_http_info(workday_id, content_type, accept, opts)
-      return data
-    end
-
-    # Workday Import
-    # The endpoint allows you to create a Workday Import request.  #### Sample Request  &#x60;&#x60;&#x60; curl -X POST https://console.jumpcloud.com/api/v2/workdays/{WorkdayID}/import \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; \\   -d &#39;[  {   \&quot;email\&quot;:\&quot;{email}\&quot;,   \&quot;firstname\&quot;:\&quot;{firstname}\&quot;,   \&quot;lastname\&quot;:\&quot;{firstname}\&quot;,   \&quot;username\&quot;:\&quot;{username}\&quot;,   \&quot;attributes\&quot;:[    {\&quot;name\&quot;:\&quot;EmployeeID\&quot;,\&quot;value\&quot;:\&quot;0000\&quot;},    {\&quot;name\&quot;:\&quot;WorkdayID\&quot;,\&quot;value\&quot;:\&quot;name.name\&quot;}    ]     } ] &#x60;&#x60;&#x60;
-    # @param workday_id 
-    # @param content_type 
-    # @param accept 
-    # @param [Hash] opts the optional parameters
-    # @option opts [Array<BulkUserCreate>] :body 
-    # @option opts [String] :x_org_id 
-    # @return [Array<(JobId, Fixnum, Hash)>] JobId data, response status code and response headers
-    def workdays_import_with_http_info(workday_id, content_type, accept, opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: WorkdayImportApi.workdays_import ..."
-      end
-      # verify the required parameter 'workday_id' is set
-      if @api_client.config.client_side_validation && workday_id.nil?
-        fail ArgumentError, "Missing the required parameter 'workday_id' when calling WorkdayImportApi.workdays_import"
-      end
-      # verify the required parameter 'content_type' is set
-      if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling WorkdayImportApi.workdays_import"
-      end
-      # verify the required parameter 'accept' is set
-      if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling WorkdayImportApi.workdays_import"
-      end
-      # resource path
-      local_var_path = "/workdays/{workday_id}/import".sub('{' + 'workday_id' + '}', workday_id.to_s)
-
-      # query parameters
-      query_params = {}
-
-      # header parameters
-      header_params = {}
-      # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
-      # HTTP header 'Content-Type'
-      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-      header_params[:'Content-Type'] = content_type
-      header_params[:'Accept'] = accept
-      header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
-
-      # form parameters
-      form_params = {}
-
-      # http body (model)
-      post_body = @api_client.object_to_http_body(opts[:'body'])
-      auth_names = ['x-api-key']
-      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'JobId')
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: WorkdayImportApi#workdays_import\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-    # List Import Results
-    # This endpoint provides a list of job results from the workday import and will contain all imported data from Workday.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/workdays/{WorkdayID}/import/{ImportJobID}/results \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
-    # @param id 
-    # @param job_id 
-    # @param content_type 
-    # @param accept 
-    # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :limit The number of records to return at once. Limited to 100. (default to 10)
-    # @option opts [Integer] :skip The offset into the records to return. (default to 0)
-    # @option opts [String] :x_org_id  (default to )
-    # @return [Array<JobWorkresult>]
-    def workdays_importresults(id, job_id, content_type, accept, opts = {})
-      data, _status_code, _headers = workdays_importresults_with_http_info(id, job_id, content_type, accept, opts)
-      return data
-    end
-
-    # List Import Results
-    # This endpoint provides a list of job results from the workday import and will contain all imported data from Workday.  #### Sample Request &#x60;&#x60;&#x60; curl -X GET https://console.jumpcloud.com/api/v2/workdays/{WorkdayID}/import/{ImportJobID}/results \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
-    # @param id 
-    # @param job_id 
-    # @param content_type 
-    # @param accept 
-    # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :limit The number of records to return at once. Limited to 100.
-    # @option opts [Integer] :skip The offset into the records to return.
-    # @option opts [String] :x_org_id 
-    # @return [Array<(Array<JobWorkresult>, Fixnum, Hash)>] Array<JobWorkresult> data, response status code and response headers
-    def workdays_importresults_with_http_info(id, job_id, content_type, accept, opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: WorkdayImportApi.workdays_importresults ..."
-      end
-      # verify the required parameter 'id' is set
-      if @api_client.config.client_side_validation && id.nil?
-        fail ArgumentError, "Missing the required parameter 'id' when calling WorkdayImportApi.workdays_importresults"
-      end
-      # verify the required parameter 'job_id' is set
-      if @api_client.config.client_side_validation && job_id.nil?
-        fail ArgumentError, "Missing the required parameter 'job_id' when calling WorkdayImportApi.workdays_importresults"
-      end
-      # verify the required parameter 'content_type' is set
-      if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling WorkdayImportApi.workdays_importresults"
-      end
-      # verify the required parameter 'accept' is set
-      if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling WorkdayImportApi.workdays_importresults"
-      end
-      if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling WorkdayImportApi.workdays_importresults, must be greater than or equal to 0.'
-      end
-
-      # resource path
-      local_var_path = "/workdays/{id}/import/{job_id}/results".sub('{' + 'id' + '}', id.to_s).sub('{' + 'job_id' + '}', job_id.to_s)
-
-      # query parameters
-      query_params = {}
-      query_params[:'limit'] = opts[:'limit'] if !opts[:'limit'].nil?
-      query_params[:'skip'] = opts[:'skip'] if !opts[:'skip'].nil?
-
-      # header parameters
-      header_params = {}
-      # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
-      # HTTP header 'Content-Type'
-      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-      header_params[:'Content-Type'] = content_type
-      header_params[:'Accept'] = accept
-      header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
-
-      # form parameters
-      form_params = {}
-
-      # http body (model)
-      post_body = nil
-      auth_names = ['x-api-key']
-      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'Array<JobWorkresult>')
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: WorkdayImportApi#workdays_importresults\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: WorkdayImportApi#d_elete_workdays_workday_id_auth\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
     # List Workdays
     # This endpoint will return  all the available information about all your instances of Workday.  ##### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/workdays/ \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}'   ```
-    # @param content_type 
     # @param accept 
+    # @param content_type 
     # @param [Hash] opts the optional parameters
     # @option opts [Array<String>] :fields The comma separated fields included in the returned records. If omitted, the default list of fields will be returned. 
     # @option opts [Integer] :limit The number of records to return at once. Limited to 100. (default to 10)
     # @option opts [Integer] :skip The offset into the records to return. (default to 0)
     # @option opts [Array<String>] :sort The comma separated fields used to sort the collection. Default sort is ascending, prefix with &#x60;-&#x60; to sort descending. 
-    # @option opts [Array<String>] :filter Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
+    # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<WorkdayOutput>]
-    def workdays_list(content_type, accept, opts = {})
-      data, _status_code, _headers = workdays_list_with_http_info(content_type, accept, opts)
+    def g_et_workdays(accept, content_type, opts = {})
+      data, _status_code, _headers = g_et_workdays_with_http_info(accept, content_type, opts)
       return data
     end
 
     # List Workdays
     # This endpoint will return  all the available information about all your instances of Workday.  ##### Sample Request &#x60;&#x60;&#x60; curl -X GET https://console.jumpcloud.com/api/v2/workdays/ \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39;   &#x60;&#x60;&#x60;
-    # @param content_type 
     # @param accept 
+    # @param content_type 
     # @param [Hash] opts the optional parameters
     # @option opts [Array<String>] :fields The comma separated fields included in the returned records. If omitted, the default list of fields will be returned. 
     # @option opts [Integer] :limit The number of records to return at once. Limited to 100.
     # @option opts [Integer] :skip The offset into the records to return.
     # @option opts [Array<String>] :sort The comma separated fields used to sort the collection. Default sort is ascending, prefix with &#x60;-&#x60; to sort descending. 
-    # @option opts [Array<String>] :filter Supported operators are: eq, ne, gt, ge, lt, le, between, search, in
+    # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<WorkdayOutput>, Fixnum, Hash)>] Array<WorkdayOutput> data, response status code and response headers
-    def workdays_list_with_http_info(content_type, accept, opts = {})
+    def g_et_workdays_with_http_info(accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: WorkdayImportApi.workdays_list ..."
-      end
-      # verify the required parameter 'content_type' is set
-      if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling WorkdayImportApi.workdays_list"
+        @api_client.config.logger.debug "Calling API: WorkdayImportApi.g_et_workdays ..."
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling WorkdayImportApi.workdays_list"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling WorkdayImportApi.g_et_workdays"
+      end
+      # verify the required parameter 'content_type' is set
+      if @api_client.config.client_side_validation && content_type.nil?
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling WorkdayImportApi.g_et_workdays"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling WorkdayImportApi.workdays_list, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling WorkdayImportApi.g_et_workdays, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -532,8 +153,8 @@ module JCAPIv2
       header_params['Accept'] = @api_client.select_header_accept(['application/json'])
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-      header_params[:'Content-Type'] = content_type
       header_params[:'Accept'] = accept
+      header_params[:'Content-Type'] = content_type
       header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
 
       # form parameters
@@ -550,116 +171,47 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<WorkdayOutput>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: WorkdayImportApi#workdays_list\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: WorkdayImportApi#g_et_workdays\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
-    # Create new Workday
-    # This endpoint allows you to create a new workday instance.  You must supply a username and password for `Basic Authentication` that is the same as your WorkDay Integrator System User.  Failure to provide these credentials  will result in the request being rejected.  Currently `O-Auth` isn't a supported authentication protocol for WorkDay, but will be in the future.  Currently, only one instance is allowed and it must be `Workday Import`.  #### Sample Request ``` curl -X POST https://console.jumpcloud.com/api/v2/workdays/ \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' \\   -d '{   \"name\": \"Workday2\",   \"reportUrl\":\"https://workday.com/ccx/service/customreport2/gms/user/reportname?format=json\",   \"auth\": {     \"basic\": {       \"username\": \"someDeveloper\",       \"password\": \"notTheRealPassword\"     }   } }' ```
-    # @param content_type 
-    # @param accept 
-    # @param [Hash] opts the optional parameters
-    # @option opts [WorkdayInput] :body 
-    # @option opts [String] :x_org_id  (default to )
-    # @return [nil]
-    def workdays_post(content_type, accept, opts = {})
-      workdays_post_with_http_info(content_type, accept, opts)
-      return nil
-    end
-
-    # Create new Workday
-    # This endpoint allows you to create a new workday instance.  You must supply a username and password for &#x60;Basic Authentication&#x60; that is the same as your WorkDay Integrator System User.  Failure to provide these credentials  will result in the request being rejected.  Currently &#x60;O-Auth&#x60; isn&#39;t a supported authentication protocol for WorkDay, but will be in the future.  Currently, only one instance is allowed and it must be &#x60;Workday Import&#x60;.  #### Sample Request &#x60;&#x60;&#x60; curl -X POST https://console.jumpcloud.com/api/v2/workdays/ \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; \\   -d &#39;{   \&quot;name\&quot;: \&quot;Workday2\&quot;,   \&quot;reportUrl\&quot;:\&quot;https://workday.com/ccx/service/customreport2/gms/user/reportname?format&#x3D;json\&quot;,   \&quot;auth\&quot;: {     \&quot;basic\&quot;: {       \&quot;username\&quot;: \&quot;someDeveloper\&quot;,       \&quot;password\&quot;: \&quot;notTheRealPassword\&quot;     }   } }&#39; &#x60;&#x60;&#x60;
-    # @param content_type 
-    # @param accept 
-    # @param [Hash] opts the optional parameters
-    # @option opts [WorkdayInput] :body 
-    # @option opts [String] :x_org_id 
-    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
-    def workdays_post_with_http_info(content_type, accept, opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: WorkdayImportApi.workdays_post ..."
-      end
-      # verify the required parameter 'content_type' is set
-      if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling WorkdayImportApi.workdays_post"
-      end
-      # verify the required parameter 'accept' is set
-      if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling WorkdayImportApi.workdays_post"
-      end
-      # resource path
-      local_var_path = "/workdays"
-
-      # query parameters
-      query_params = {}
-
-      # header parameters
-      header_params = {}
-      # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
-      # HTTP header 'Content-Type'
-      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-      header_params[:'Content-Type'] = content_type
-      header_params[:'Accept'] = accept
-      header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
-
-      # form parameters
-      form_params = {}
-
-      # http body (model)
-      post_body = @api_client.object_to_http_body(opts[:'body'])
-      auth_names = ['x-api-key']
-      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names)
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: WorkdayImportApi#workdays_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-    # Update Workday
-    # This endpoint allows you to update the name and Custom Report URL for a Workday Instance.  Currently, the name can not be changed from the default of `Workday Import`.  ##### Sample Request ``` curl -X PUT https://console.jumpcloud.com/api/v2/workdays/{WorkdayID} \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' \\   -d '{  \"reportUrl\":\"{Report_URL}\",  \"name\":\"{Name}\" } ' ```
+    # Get Workday
+    # This endpoint will return  all the available information about an instance of Workday.  #### Sample Request  ``` curl -X GET https://console.jumpcloud.com/api/v2/workdays/ \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}'   ```
     # @param id 
-    # @param content_type 
     # @param accept 
+    # @param content_type 
     # @param [Hash] opts the optional parameters
-    # @option opts [WorkdayFields] :body 
     # @option opts [String] :x_org_id  (default to )
     # @return [WorkdayOutput]
-    def workdays_put(id, content_type, accept, opts = {})
-      data, _status_code, _headers = workdays_put_with_http_info(id, content_type, accept, opts)
+    def g_et_workdays_id(id, accept, content_type, opts = {})
+      data, _status_code, _headers = g_et_workdays_id_with_http_info(id, accept, content_type, opts)
       return data
     end
 
-    # Update Workday
-    # This endpoint allows you to update the name and Custom Report URL for a Workday Instance.  Currently, the name can not be changed from the default of &#x60;Workday Import&#x60;.  ##### Sample Request &#x60;&#x60;&#x60; curl -X PUT https://console.jumpcloud.com/api/v2/workdays/{WorkdayID} \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; \\   -d &#39;{  \&quot;reportUrl\&quot;:\&quot;{Report_URL}\&quot;,  \&quot;name\&quot;:\&quot;{Name}\&quot; } &#39; &#x60;&#x60;&#x60;
+    # Get Workday
+    # This endpoint will return  all the available information about an instance of Workday.  #### Sample Request  &#x60;&#x60;&#x60; curl -X GET https://console.jumpcloud.com/api/v2/workdays/ \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39;   &#x60;&#x60;&#x60;
     # @param id 
-    # @param content_type 
     # @param accept 
+    # @param content_type 
     # @param [Hash] opts the optional parameters
-    # @option opts [WorkdayFields] :body 
     # @option opts [String] :x_org_id 
     # @return [Array<(WorkdayOutput, Fixnum, Hash)>] WorkdayOutput data, response status code and response headers
-    def workdays_put_with_http_info(id, content_type, accept, opts = {})
+    def g_et_workdays_id_with_http_info(id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: WorkdayImportApi.workdays_put ..."
+        @api_client.config.logger.debug "Calling API: WorkdayImportApi.g_et_workdays_id ..."
       end
       # verify the required parameter 'id' is set
       if @api_client.config.client_side_validation && id.nil?
-        fail ArgumentError, "Missing the required parameter 'id' when calling WorkdayImportApi.workdays_put"
-      end
-      # verify the required parameter 'content_type' is set
-      if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling WorkdayImportApi.workdays_put"
+        fail ArgumentError, "Missing the required parameter 'id' when calling WorkdayImportApi.g_et_workdays_id"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling WorkdayImportApi.workdays_put"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling WorkdayImportApi.g_et_workdays_id"
+      end
+      # verify the required parameter 'content_type' is set
+      if @api_client.config.client_side_validation && content_type.nil?
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling WorkdayImportApi.g_et_workdays_id"
       end
       # resource path
       local_var_path = "/workdays/{id}".sub('{' + 'id' + '}', id.to_s)
@@ -673,77 +225,8 @@ module JCAPIv2
       header_params['Accept'] = @api_client.select_header_accept(['application/json'])
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-      header_params[:'Content-Type'] = content_type
       header_params[:'Accept'] = accept
-      header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
-
-      # form parameters
-      form_params = {}
-
-      # http body (model)
-      post_body = @api_client.object_to_http_body(opts[:'body'])
-      auth_names = ['x-api-key']
-      data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'WorkdayOutput')
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: WorkdayImportApi#workdays_put\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-    # Get Workday Settings (incomplete)
-    # This endpoint allows you to obtain all settings needed for creating a workday instance, specifically the URL to initiate Basic Authentication with WorkDay.  **This functionality is currently not enable for users.**
-    # @param content_type 
-    # @param accept 
-    # @param [Hash] opts the optional parameters
-    # @option opts [String] :state 
-    # @option opts [String] :x_org_id  (default to )
-    # @return [nil]
-    def workdays_settings(content_type, accept, opts = {})
-      workdays_settings_with_http_info(content_type, accept, opts)
-      return nil
-    end
-
-    # Get Workday Settings (incomplete)
-    # This endpoint allows you to obtain all settings needed for creating a workday instance, specifically the URL to initiate Basic Authentication with WorkDay.  **This functionality is currently not enable for users.**
-    # @param content_type 
-    # @param accept 
-    # @param [Hash] opts the optional parameters
-    # @option opts [String] :state 
-    # @option opts [String] :x_org_id 
-    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
-    def workdays_settings_with_http_info(content_type, accept, opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: WorkdayImportApi.workdays_settings ..."
-      end
-      # verify the required parameter 'content_type' is set
-      if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling WorkdayImportApi.workdays_settings"
-      end
-      # verify the required parameter 'accept' is set
-      if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling WorkdayImportApi.workdays_settings"
-      end
-      # resource path
-      local_var_path = "/workdays/settings"
-
-      # query parameters
-      query_params = {}
-      query_params[:'state'] = opts[:'state'] if !opts[:'state'].nil?
-
-      # header parameters
-      header_params = {}
-      # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
-      # HTTP header 'Content-Type'
-      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
       header_params[:'Content-Type'] = content_type
-      header_params[:'Accept'] = accept
       header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
 
       # form parameters
@@ -757,9 +240,98 @@ module JCAPIv2
         :query_params => query_params,
         :form_params => form_params,
         :body => post_body,
-        :auth_names => auth_names)
+        :auth_names => auth_names,
+        :return_type => 'WorkdayOutput')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: WorkdayImportApi#workdays_settings\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: WorkdayImportApi#g_et_workdays_id\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # List Import Results
+    # This endpoint provides a list of job results from the workday import and will contain all imported data from Workday.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/v2/workdays/{WorkdayID}/import/{ImportJobID}/results \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
+    # @param id 
+    # @param job_id 
+    # @param accept 
+    # @param content_type 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :limit The number of records to return at once. Limited to 100. (default to 10)
+    # @option opts [Integer] :skip The offset into the records to return. (default to 0)
+    # @option opts [String] :x_org_id  (default to )
+    # @return [Array<JobWorkresult>]
+    def g_et_workdays_id_import_job_id_results(id, job_id, accept, content_type, opts = {})
+      data, _status_code, _headers = g_et_workdays_id_import_job_id_results_with_http_info(id, job_id, accept, content_type, opts)
+      return data
+    end
+
+    # List Import Results
+    # This endpoint provides a list of job results from the workday import and will contain all imported data from Workday.  #### Sample Request &#x60;&#x60;&#x60; curl -X GET https://console.jumpcloud.com/api/v2/workdays/{WorkdayID}/import/{ImportJobID}/results \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
+    # @param id 
+    # @param job_id 
+    # @param accept 
+    # @param content_type 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :limit The number of records to return at once. Limited to 100.
+    # @option opts [Integer] :skip The offset into the records to return.
+    # @option opts [String] :x_org_id 
+    # @return [Array<(Array<JobWorkresult>, Fixnum, Hash)>] Array<JobWorkresult> data, response status code and response headers
+    def g_et_workdays_id_import_job_id_results_with_http_info(id, job_id, accept, content_type, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: WorkdayImportApi.g_et_workdays_id_import_job_id_results ..."
+      end
+      # verify the required parameter 'id' is set
+      if @api_client.config.client_side_validation && id.nil?
+        fail ArgumentError, "Missing the required parameter 'id' when calling WorkdayImportApi.g_et_workdays_id_import_job_id_results"
+      end
+      # verify the required parameter 'job_id' is set
+      if @api_client.config.client_side_validation && job_id.nil?
+        fail ArgumentError, "Missing the required parameter 'job_id' when calling WorkdayImportApi.g_et_workdays_id_import_job_id_results"
+      end
+      # verify the required parameter 'accept' is set
+      if @api_client.config.client_side_validation && accept.nil?
+        fail ArgumentError, "Missing the required parameter 'accept' when calling WorkdayImportApi.g_et_workdays_id_import_job_id_results"
+      end
+      # verify the required parameter 'content_type' is set
+      if @api_client.config.client_side_validation && content_type.nil?
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling WorkdayImportApi.g_et_workdays_id_import_job_id_results"
+      end
+      if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling WorkdayImportApi.g_et_workdays_id_import_job_id_results, must be greater than or equal to 0.'
+      end
+
+      # resource path
+      local_var_path = "/workdays/{id}/import/{job_id}/results".sub('{' + 'id' + '}', id.to_s).sub('{' + 'job_id' + '}', job_id.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'limit'] = opts[:'limit'] if !opts[:'limit'].nil?
+      query_params[:'skip'] = opts[:'skip'] if !opts[:'skip'].nil?
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+      header_params[:'Accept'] = accept
+      header_params[:'Content-Type'] = content_type
+      header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      auth_names = ['x-api-key']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'Array<JobWorkresult>')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: WorkdayImportApi#g_et_workdays_id_import_job_id_results\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -767,48 +339,48 @@ module JCAPIv2
     # List Workday Workers
     # This endpoint will return all of the data in your WorkDay Custom Report that has been associated with your WorkDay Instance in JumpCloud.  ##### Sample Request  ``` curl -X GET https://console.jumpcloud.com/api/v2/workdays/{WorkDayID}/workers \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}'   ```
     # @param workday_id 
-    # @param content_type 
     # @param accept 
+    # @param content_type 
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :limit The number of records to return at once. Limited to 100. (default to 10)
     # @option opts [Integer] :skip The offset into the records to return. (default to 0)
     # @option opts [Array<String>] :sort The comma separated fields used to sort the collection. Default sort is ascending, prefix with &#x60;-&#x60; to sort descending. 
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<WorkdayWorker>]
-    def workdays_workers(workday_id, content_type, accept, opts = {})
-      data, _status_code, _headers = workdays_workers_with_http_info(workday_id, content_type, accept, opts)
+    def g_et_workdays_workday_id_workers(workday_id, accept, content_type, opts = {})
+      data, _status_code, _headers = g_et_workdays_workday_id_workers_with_http_info(workday_id, accept, content_type, opts)
       return data
     end
 
     # List Workday Workers
     # This endpoint will return all of the data in your WorkDay Custom Report that has been associated with your WorkDay Instance in JumpCloud.  ##### Sample Request  &#x60;&#x60;&#x60; curl -X GET https://console.jumpcloud.com/api/v2/workdays/{WorkDayID}/workers \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39;   &#x60;&#x60;&#x60;
     # @param workday_id 
-    # @param content_type 
     # @param accept 
+    # @param content_type 
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :limit The number of records to return at once. Limited to 100.
     # @option opts [Integer] :skip The offset into the records to return.
     # @option opts [Array<String>] :sort The comma separated fields used to sort the collection. Default sort is ascending, prefix with &#x60;-&#x60; to sort descending. 
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<WorkdayWorker>, Fixnum, Hash)>] Array<WorkdayWorker> data, response status code and response headers
-    def workdays_workers_with_http_info(workday_id, content_type, accept, opts = {})
+    def g_et_workdays_workday_id_workers_with_http_info(workday_id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: WorkdayImportApi.workdays_workers ..."
+        @api_client.config.logger.debug "Calling API: WorkdayImportApi.g_et_workdays_workday_id_workers ..."
       end
       # verify the required parameter 'workday_id' is set
       if @api_client.config.client_side_validation && workday_id.nil?
-        fail ArgumentError, "Missing the required parameter 'workday_id' when calling WorkdayImportApi.workdays_workers"
-      end
-      # verify the required parameter 'content_type' is set
-      if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling WorkdayImportApi.workdays_workers"
+        fail ArgumentError, "Missing the required parameter 'workday_id' when calling WorkdayImportApi.g_et_workdays_workday_id_workers"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling WorkdayImportApi.workdays_workers"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling WorkdayImportApi.g_et_workdays_workday_id_workers"
+      end
+      # verify the required parameter 'content_type' is set
+      if @api_client.config.client_side_validation && content_type.nil?
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling WorkdayImportApi.g_et_workdays_workday_id_workers"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling WorkdayImportApi.workdays_workers, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling WorkdayImportApi.g_et_workdays_workday_id_workers, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -826,8 +398,8 @@ module JCAPIv2
       header_params['Accept'] = @api_client.select_header_accept(['application/json'])
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-      header_params[:'Content-Type'] = content_type
       header_params[:'Accept'] = accept
+      header_params[:'Content-Type'] = content_type
       header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
 
       # form parameters
@@ -844,7 +416,296 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<WorkdayWorker>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: WorkdayImportApi#workdays_workers\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: WorkdayImportApi#g_et_workdays_workday_id_workers\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Create new Workday
+    # This endpoint allows you to create a new workday instance.  You must supply a username and password for `Basic Authentication` that is the same as your WorkDay Integrator System User.  Failure to provide these credentials  will result in the request being rejected.  Currently `O-Auth` isn't a supported authentication protocol for WorkDay, but will be in the future.  Currently, only one instance is allowed and it must be `Workday Import`.  #### Sample Request ``` curl -X POST https://console.jumpcloud.com/api/v2/workdays/ \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' \\   -d '{   \"name\": \"Workday2\",   \"reportUrl\":\"https://workday.com/ccx/service/customreport2/gms/user/reportname?format=json\",   \"auth\": {     \"basic\": {       \"username\": \"someDeveloper\",       \"password\": \"notTheRealPassword\"     }   } }' ```
+    # @param accept 
+    # @param content_type 
+    # @param [Hash] opts the optional parameters
+    # @option opts [WorkdayInput] :body 
+    # @option opts [String] :x_org_id  (default to )
+    # @return [WorkdayOutput]
+    def p_ost_workdays(accept, content_type, opts = {})
+      data, _status_code, _headers = p_ost_workdays_with_http_info(accept, content_type, opts)
+      return data
+    end
+
+    # Create new Workday
+    # This endpoint allows you to create a new workday instance.  You must supply a username and password for &#x60;Basic Authentication&#x60; that is the same as your WorkDay Integrator System User.  Failure to provide these credentials  will result in the request being rejected.  Currently &#x60;O-Auth&#x60; isn&#39;t a supported authentication protocol for WorkDay, but will be in the future.  Currently, only one instance is allowed and it must be &#x60;Workday Import&#x60;.  #### Sample Request &#x60;&#x60;&#x60; curl -X POST https://console.jumpcloud.com/api/v2/workdays/ \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; \\   -d &#39;{   \&quot;name\&quot;: \&quot;Workday2\&quot;,   \&quot;reportUrl\&quot;:\&quot;https://workday.com/ccx/service/customreport2/gms/user/reportname?format&#x3D;json\&quot;,   \&quot;auth\&quot;: {     \&quot;basic\&quot;: {       \&quot;username\&quot;: \&quot;someDeveloper\&quot;,       \&quot;password\&quot;: \&quot;notTheRealPassword\&quot;     }   } }&#39; &#x60;&#x60;&#x60;
+    # @param accept 
+    # @param content_type 
+    # @param [Hash] opts the optional parameters
+    # @option opts [WorkdayInput] :body 
+    # @option opts [String] :x_org_id 
+    # @return [Array<(WorkdayOutput, Fixnum, Hash)>] WorkdayOutput data, response status code and response headers
+    def p_ost_workdays_with_http_info(accept, content_type, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: WorkdayImportApi.p_ost_workdays ..."
+      end
+      # verify the required parameter 'accept' is set
+      if @api_client.config.client_side_validation && accept.nil?
+        fail ArgumentError, "Missing the required parameter 'accept' when calling WorkdayImportApi.p_ost_workdays"
+      end
+      # verify the required parameter 'content_type' is set
+      if @api_client.config.client_side_validation && content_type.nil?
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling WorkdayImportApi.p_ost_workdays"
+      end
+      # resource path
+      local_var_path = "/workdays"
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+      header_params[:'Accept'] = accept
+      header_params[:'Content-Type'] = content_type
+      header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(opts[:'body'])
+      auth_names = ['x-api-key']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'WorkdayOutput')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: WorkdayImportApi#p_ost_workdays\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Authorize Workday
+    # This endpoint adds an authorization method to a workday instance.  You must supply a username and password for `Basic Authentication` that is the same as your WorkDay Integrator System User.  Failure to provide these credentials  will result in the request being rejected.  Currently `O-Auth` isn't a supported authentication protocol for WorkDay, but will be in the future.  #### Sample Request  ``` curl -X POST https://console.jumpcloud.com/api/v2/workdays/{WorkDayID}/auth \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' \\   -d '{  \"auth\":{    \"basic\": {   \"username\": \"someDeveloper\",      \"password\": \"notTheRealPassword\"     }  } }'  ```
+    # @param workday_id 
+    # @param accept 
+    # @param content_type 
+    # @param [Hash] opts the optional parameters
+    # @option opts [AuthInputObject] :body 
+    # @option opts [String] :x_org_id  (default to )
+    # @return [nil]
+    def p_ost_workdays_workday_id_auth(workday_id, accept, content_type, opts = {})
+      p_ost_workdays_workday_id_auth_with_http_info(workday_id, accept, content_type, opts)
+      return nil
+    end
+
+    # Authorize Workday
+    # This endpoint adds an authorization method to a workday instance.  You must supply a username and password for &#x60;Basic Authentication&#x60; that is the same as your WorkDay Integrator System User.  Failure to provide these credentials  will result in the request being rejected.  Currently &#x60;O-Auth&#x60; isn&#39;t a supported authentication protocol for WorkDay, but will be in the future.  #### Sample Request  &#x60;&#x60;&#x60; curl -X POST https://console.jumpcloud.com/api/v2/workdays/{WorkDayID}/auth \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; \\   -d &#39;{  \&quot;auth\&quot;:{    \&quot;basic\&quot;: {   \&quot;username\&quot;: \&quot;someDeveloper\&quot;,      \&quot;password\&quot;: \&quot;notTheRealPassword\&quot;     }  } }&#39;  &#x60;&#x60;&#x60;
+    # @param workday_id 
+    # @param accept 
+    # @param content_type 
+    # @param [Hash] opts the optional parameters
+    # @option opts [AuthInputObject] :body 
+    # @option opts [String] :x_org_id 
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
+    def p_ost_workdays_workday_id_auth_with_http_info(workday_id, accept, content_type, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: WorkdayImportApi.p_ost_workdays_workday_id_auth ..."
+      end
+      # verify the required parameter 'workday_id' is set
+      if @api_client.config.client_side_validation && workday_id.nil?
+        fail ArgumentError, "Missing the required parameter 'workday_id' when calling WorkdayImportApi.p_ost_workdays_workday_id_auth"
+      end
+      # verify the required parameter 'accept' is set
+      if @api_client.config.client_side_validation && accept.nil?
+        fail ArgumentError, "Missing the required parameter 'accept' when calling WorkdayImportApi.p_ost_workdays_workday_id_auth"
+      end
+      # verify the required parameter 'content_type' is set
+      if @api_client.config.client_side_validation && content_type.nil?
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling WorkdayImportApi.p_ost_workdays_workday_id_auth"
+      end
+      # resource path
+      local_var_path = "/workdays/{workday_id}/auth".sub('{' + 'workday_id' + '}', workday_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+      header_params[:'Accept'] = accept
+      header_params[:'Content-Type'] = content_type
+      header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(opts[:'body'])
+      auth_names = ['x-api-key']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: WorkdayImportApi#p_ost_workdays_workday_id_auth\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Workday Import
+    # The endpoint allows you to create a Workday Import request.  #### Sample Request  ``` curl -X POST https://console.jumpcloud.com/api/v2/workdays/{WorkdayID}/import \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' \\   -d '[  {   \"email\":\"{email}\",   \"firstname\":\"{firstname}\",   \"lastname\":\"{firstname}\",   \"username\":\"{username}\",   \"attributes\":[    {\"name\":\"EmployeeID\",\"value\":\"0000\"},    {\"name\":\"WorkdayID\",\"value\":\"name.name\"}    ]     } ] ```
+    # @param workday_id 
+    # @param accept 
+    # @param content_type 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Array<BulkUserCreate>] :body 
+    # @option opts [String] :x_org_id  (default to )
+    # @return [JobId]
+    def p_ost_workdays_workday_id_import(workday_id, accept, content_type, opts = {})
+      data, _status_code, _headers = p_ost_workdays_workday_id_import_with_http_info(workday_id, accept, content_type, opts)
+      return data
+    end
+
+    # Workday Import
+    # The endpoint allows you to create a Workday Import request.  #### Sample Request  &#x60;&#x60;&#x60; curl -X POST https://console.jumpcloud.com/api/v2/workdays/{WorkdayID}/import \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; \\   -d &#39;[  {   \&quot;email\&quot;:\&quot;{email}\&quot;,   \&quot;firstname\&quot;:\&quot;{firstname}\&quot;,   \&quot;lastname\&quot;:\&quot;{firstname}\&quot;,   \&quot;username\&quot;:\&quot;{username}\&quot;,   \&quot;attributes\&quot;:[    {\&quot;name\&quot;:\&quot;EmployeeID\&quot;,\&quot;value\&quot;:\&quot;0000\&quot;},    {\&quot;name\&quot;:\&quot;WorkdayID\&quot;,\&quot;value\&quot;:\&quot;name.name\&quot;}    ]     } ] &#x60;&#x60;&#x60;
+    # @param workday_id 
+    # @param accept 
+    # @param content_type 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Array<BulkUserCreate>] :body 
+    # @option opts [String] :x_org_id 
+    # @return [Array<(JobId, Fixnum, Hash)>] JobId data, response status code and response headers
+    def p_ost_workdays_workday_id_import_with_http_info(workday_id, accept, content_type, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: WorkdayImportApi.p_ost_workdays_workday_id_import ..."
+      end
+      # verify the required parameter 'workday_id' is set
+      if @api_client.config.client_side_validation && workday_id.nil?
+        fail ArgumentError, "Missing the required parameter 'workday_id' when calling WorkdayImportApi.p_ost_workdays_workday_id_import"
+      end
+      # verify the required parameter 'accept' is set
+      if @api_client.config.client_side_validation && accept.nil?
+        fail ArgumentError, "Missing the required parameter 'accept' when calling WorkdayImportApi.p_ost_workdays_workday_id_import"
+      end
+      # verify the required parameter 'content_type' is set
+      if @api_client.config.client_side_validation && content_type.nil?
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling WorkdayImportApi.p_ost_workdays_workday_id_import"
+      end
+      # resource path
+      local_var_path = "/workdays/{workday_id}/import".sub('{' + 'workday_id' + '}', workday_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+      header_params[:'Accept'] = accept
+      header_params[:'Content-Type'] = content_type
+      header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(opts[:'body'])
+      auth_names = ['x-api-key']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'JobId')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: WorkdayImportApi#p_ost_workdays_workday_id_import\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Update Workday
+    # This endpoint allows you to update the name and Custom Report URL for a Workday Instance.  Currently, the name can not be changed from the default of `Workday Import`.  ##### Sample Request ``` curl -X PUT https://console.jumpcloud.com/api/v2/workdays/{WorkdayID} \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}' \\   -d '{  \"reportUrl\":\"{Report_URL}\",  \"name\":\"{Name}\" } ' ```
+    # @param id 
+    # @param accept 
+    # @param content_type 
+    # @param [Hash] opts the optional parameters
+    # @option opts [WorkdayFields] :body 
+    # @option opts [String] :x_org_id  (default to )
+    # @return [WorkdayOutput]
+    def p_ut_workdays_id(id, accept, content_type, opts = {})
+      data, _status_code, _headers = p_ut_workdays_id_with_http_info(id, accept, content_type, opts)
+      return data
+    end
+
+    # Update Workday
+    # This endpoint allows you to update the name and Custom Report URL for a Workday Instance.  Currently, the name can not be changed from the default of &#x60;Workday Import&#x60;.  ##### Sample Request &#x60;&#x60;&#x60; curl -X PUT https://console.jumpcloud.com/api/v2/workdays/{WorkdayID} \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; \\   -d &#39;{  \&quot;reportUrl\&quot;:\&quot;{Report_URL}\&quot;,  \&quot;name\&quot;:\&quot;{Name}\&quot; } &#39; &#x60;&#x60;&#x60;
+    # @param id 
+    # @param accept 
+    # @param content_type 
+    # @param [Hash] opts the optional parameters
+    # @option opts [WorkdayFields] :body 
+    # @option opts [String] :x_org_id 
+    # @return [Array<(WorkdayOutput, Fixnum, Hash)>] WorkdayOutput data, response status code and response headers
+    def p_ut_workdays_id_with_http_info(id, accept, content_type, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: WorkdayImportApi.p_ut_workdays_id ..."
+      end
+      # verify the required parameter 'id' is set
+      if @api_client.config.client_side_validation && id.nil?
+        fail ArgumentError, "Missing the required parameter 'id' when calling WorkdayImportApi.p_ut_workdays_id"
+      end
+      # verify the required parameter 'accept' is set
+      if @api_client.config.client_side_validation && accept.nil?
+        fail ArgumentError, "Missing the required parameter 'accept' when calling WorkdayImportApi.p_ut_workdays_id"
+      end
+      # verify the required parameter 'content_type' is set
+      if @api_client.config.client_side_validation && content_type.nil?
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling WorkdayImportApi.p_ut_workdays_id"
+      end
+      # resource path
+      local_var_path = "/workdays/{id}".sub('{' + 'id' + '}', id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+      header_params[:'Accept'] = accept
+      header_params[:'Content-Type'] = content_type
+      header_params[:'x-org-id'] = opts[:'x_org_id'] if !opts[:'x_org_id'].nil?
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(opts[:'body'])
+      auth_names = ['x-api-key']
+      data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'WorkdayOutput')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: WorkdayImportApi#p_ut_workdays_id\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

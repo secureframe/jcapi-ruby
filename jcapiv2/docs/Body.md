@@ -3,6 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **String** | The name used to identify this AppleMDM. | [optional] 
+**pin** | **String** | 6-digit PIN required to erase the device | 
 
 

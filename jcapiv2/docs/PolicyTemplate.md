@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **activation** | **String** | Requirements before the policy can be activated. | [optional] 
 **behavior** | **String** | Specifics about the behavior of the policy. | [optional] 
+**delivery_types** | **Array&lt;String&gt;** | The supported delivery mechanisms for this policy template. | [optional] 
 **description** | **String** | The default description for the Policy. | [optional] 
 **display_name** | **String** | The default display name for the Policy. | [optional] 
 **id** | **String** | ObjectId uniquely identifying a Policy Template. | [optional] 

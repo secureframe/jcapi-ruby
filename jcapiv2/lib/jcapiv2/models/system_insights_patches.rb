@@ -1,7 +1,7 @@
 =begin
 #JumpCloud APIs
 
-# JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
+#JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
 
 OpenAPI spec version: 2.0
 
@@ -15,23 +15,7 @@ require 'date'
 module JCAPIv2
 
   class SystemInsightsPatches
-    attr_accessor :caption
-
     attr_accessor :collection_time
-
-    attr_accessor :csname
-
-    attr_accessor :description
-
-    attr_accessor :fix_comments
-
-    attr_accessor :hotfix_id
-
-    attr_accessor :install_date
-
-    attr_accessor :installed_by
-
-    attr_accessor :installed_on
 
     attr_accessor :system_id
 
@@ -39,15 +23,7 @@ module JCAPIv2
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'caption' => :'caption',
         :'collection_time' => :'collection_time',
-        :'csname' => :'csname',
-        :'description' => :'description',
-        :'fix_comments' => :'fix_comments',
-        :'hotfix_id' => :'hotfix_id',
-        :'install_date' => :'install_date',
-        :'installed_by' => :'installed_by',
-        :'installed_on' => :'installed_on',
         :'system_id' => :'system_id'
       }
     end
@@ -55,15 +31,7 @@ module JCAPIv2
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'caption' => :'String',
         :'collection_time' => :'String',
-        :'csname' => :'String',
-        :'description' => :'String',
-        :'fix_comments' => :'String',
-        :'hotfix_id' => :'String',
-        :'install_date' => :'String',
-        :'installed_by' => :'String',
-        :'installed_on' => :'String',
         :'system_id' => :'String'
       }
     end
@@ -76,40 +44,8 @@ module JCAPIv2
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'caption')
-        self.caption = attributes[:'caption']
-      end
-
       if attributes.has_key?(:'collection_time')
         self.collection_time = attributes[:'collection_time']
-      end
-
-      if attributes.has_key?(:'csname')
-        self.csname = attributes[:'csname']
-      end
-
-      if attributes.has_key?(:'description')
-        self.description = attributes[:'description']
-      end
-
-      if attributes.has_key?(:'fix_comments')
-        self.fix_comments = attributes[:'fix_comments']
-      end
-
-      if attributes.has_key?(:'hotfix_id')
-        self.hotfix_id = attributes[:'hotfix_id']
-      end
-
-      if attributes.has_key?(:'install_date')
-        self.install_date = attributes[:'install_date']
-      end
-
-      if attributes.has_key?(:'installed_by')
-        self.installed_by = attributes[:'installed_by']
-      end
-
-      if attributes.has_key?(:'installed_on')
-        self.installed_on = attributes[:'installed_on']
       end
 
       if attributes.has_key?(:'system_id')
@@ -136,15 +72,7 @@ module JCAPIv2
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          caption == o.caption &&
           collection_time == o.collection_time &&
-          csname == o.csname &&
-          description == o.description &&
-          fix_comments == o.fix_comments &&
-          hotfix_id == o.hotfix_id &&
-          install_date == o.install_date &&
-          installed_by == o.installed_by &&
-          installed_on == o.installed_on &&
           system_id == o.system_id
     end
 
@@ -157,7 +85,7 @@ module JCAPIv2
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [caption, collection_time, csname, description, fix_comments, hotfix_id, install_date, installed_by, installed_on, system_id].hash
+      [collection_time, system_id].hash
     end
 
     # Builds the object from hash

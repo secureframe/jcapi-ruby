@@ -4,15 +4,15 @@ All URIs are relative to *https://console.jumpcloud.com/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**applications_delete**](ApplicationsApi.md#applications_delete) | **DELETE** /applications/{id} | Delete an Application
-[**applications_get**](ApplicationsApi.md#applications_get) | **GET** /applications/{id} | Get an Application
-[**applications_list**](ApplicationsApi.md#applications_list) | **GET** /applications | Applications
-[**applications_post**](ApplicationsApi.md#applications_post) | **POST** /applications | Create an Application
-[**applications_put**](ApplicationsApi.md#applications_put) | **PUT** /applications/{id} | Update an Application
+[**d_elete_applications_id**](ApplicationsApi.md#d_elete_applications_id) | **DELETE** /applications/{id} | Delete an Application
+[**g_et_applications**](ApplicationsApi.md#g_et_applications) | **GET** /applications | Applications
+[**g_et_applications_id**](ApplicationsApi.md#g_et_applications_id) | **GET** /applications/{id} | Get an Application
+[**p_ost_applications**](ApplicationsApi.md#p_ost_applications) | **POST** /applications | Create an Application
+[**p_ut_applications_id**](ApplicationsApi.md#p_ut_applications_id) | **PUT** /applications/{id} | Update an Application
 
 
-# **applications_delete**
-> Application applications_delete(id, opts)
+# **d_elete_applications_id**
+> Application d_elete_applications_id(id, opts)
 
 Delete an Application
 
@@ -42,10 +42,10 @@ opts = {
 
 begin
   #Delete an Application
-  result = api_instance.applications_delete(id, opts)
+  result = api_instance.d_elete_applications_id(id, opts)
   p result
 rescue JCAPIv1::ApiError => e
-  puts "Exception when calling ApplicationsApi->applications_delete: #{e}"
+  puts "Exception when calling ApplicationsApi->d_elete_applications_id: #{e}"
 end
 ```
 
@@ -68,13 +68,84 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 
 
-# **applications_get**
-> Application applications_get(id, opts)
+# **g_et_applications**
+> Applicationslist g_et_applications(accept, content_type, opts)
+
+Applications
+
+The endpoint returns all your SSO / SAML Applications.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/applications \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}'   ```
+
+### Example
+```ruby
+# load the gem
+require 'jcapiv1'
+# setup authorization
+JCAPIv1.configure do |config|
+  # Configure API key authorization: x-api-key
+  config.api_key['x-api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['x-api-key'] = 'Bearer'
+end
+
+api_instance = JCAPIv1::ApplicationsApi.new
+
+accept = "application/json" # String | 
+
+content_type = "application/json" # String | 
+
+opts = { 
+  fields: "fields_example", # String | The comma separated fields included in the returned records. If omitted the default list of fields will be returned.
+  limit: 56, # Integer | The number of records to return at once.
+  skip: 56, # Integer | The offset into the records to return.
+  sort: "The comma separated fields used to sort the collection. Default sort is ascending, prefix with - to sort descending.", # String | 
+  filter: "filter_example", # String | A filter to apply to the query. **Filter structure**: `<field>:<operator>:<value>`. **field** = Populate with a valid field from an endpoint response. **operator** =  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** = Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** `GET /users?username=eq:testuser`
+  x_org_id: "" # String | 
+}
+
+begin
+  #Applications
+  result = api_instance.g_et_applications(accept, content_type, opts)
+  p result
+rescue JCAPIv1::ApiError => e
+  puts "Exception when calling ApplicationsApi->g_et_applications: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accept** | **String**|  | [default to application/json]
+ **content_type** | **String**|  | [default to application/json]
+ **fields** | **String**| The comma separated fields included in the returned records. If omitted the default list of fields will be returned. | [optional] 
+ **limit** | **Integer**| The number of records to return at once. | [optional] 
+ **skip** | **Integer**| The offset into the records to return. | [optional] 
+ **sort** | **String**|  | [optional] [default to The comma separated fields used to sort the collection. Default sort is ascending, prefix with - to sort descending.]
+ **filter** | **String**| A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60; | [optional] 
+ **x_org_id** | **String**|  | [optional] [default to ]
+
+### Return type
+
+[**Applicationslist**](Applicationslist.md)
+
+### Authorization
+
+[x-api-key](../README.md#x-api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+
+# **g_et_applications_id**
+> Application g_et_applications_id(id, opts)
 
 Get an Application
 
@@ -104,10 +175,10 @@ opts = {
 
 begin
   #Get an Application
-  result = api_instance.applications_get(id, opts)
+  result = api_instance.g_et_applications_id(id, opts)
   p result
 rescue JCAPIv1::ApiError => e
-  puts "Exception when calling ApplicationsApi->applications_get: #{e}"
+  puts "Exception when calling ApplicationsApi->g_et_applications_id: #{e}"
 end
 ```
 
@@ -130,84 +201,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 
 
-# **applications_list**
-> Applicationslist applications_list(content_type, accept, opts)
-
-Applications
-
-The endpoint returns all your SSO / SAML Applications.  #### Sample Request ``` curl -X GET https://console.jumpcloud.com/api/applications \\   -H 'Accept: application/json' \\   -H 'Content-Type: application/json' \\   -H 'x-api-key: {API_KEY}'  ```
-
-### Example
-```ruby
-# load the gem
-require 'jcapiv1'
-# setup authorization
-JCAPIv1.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['x-api-key'] = 'Bearer'
-end
-
-api_instance = JCAPIv1::ApplicationsApi.new
-
-content_type = "application/json" # String | 
-
-accept = "application/json" # String | 
-
-opts = { 
-  fields: "fields_example", # String | The comma separated fields included in the returned records. If omitted the default list of fields will be returned.
-  limit: 56, # Integer | The number of records to return at once.
-  skip: 56, # Integer | The offset into the records to return.
-  sort: "The comma separated fields used to sort the collection. Default sort is ascending, prefix with - to sort descending.", # String | 
-  filter: "filter_example" # String | A filter to apply to the query.
-  x_org_id: "" # String | 
-}
-
-begin
-  #Applications
-  result = api_instance.applications_list(content_type, accept, opts)
-  p result
-rescue JCAPIv1::ApiError => e
-  puts "Exception when calling ApplicationsApi->applications_list: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
- **fields** | **String**| The comma separated fields included in the returned records. If omitted the default list of fields will be returned. | [optional] 
- **limit** | **Integer**| The number of records to return at once. | [optional] 
- **skip** | **Integer**| The offset into the records to return. | [optional] 
- **sort** | **String**|  | [optional] [default to The comma separated fields used to sort the collection. Default sort is ascending, prefix with - to sort descending.]
- **filter** | **String**| A filter to apply to the query. | [optional] 
- **x_org_id** | **String**|  | [optional] [default to ]
-
-### Return type
-
-[**Applicationslist**](Applicationslist.md)
-
-### Authorization
-
-[x-api-key](../README.md#x-api-key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-# **applications_post**
-> Application applications_post(opts)
+# **p_ost_applications**
+> Application p_ost_applications(opts)
 
 Create an Application
 
@@ -236,10 +236,10 @@ opts = {
 
 begin
   #Create an Application
-  result = api_instance.applications_post(opts)
+  result = api_instance.p_ost_applications(opts)
   p result
 rescue JCAPIv1::ApiError => e
-  puts "Exception when calling ApplicationsApi->applications_post: #{e}"
+  puts "Exception when calling ApplicationsApi->p_ost_applications: #{e}"
 end
 ```
 
@@ -262,13 +262,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 
 
-# **applications_put**
-> Application applications_put(id, opts)
+# **p_ut_applications_id**
+> Application p_ut_applications_id(id, opts)
 
 Update an Application
 
@@ -299,10 +299,10 @@ opts = {
 
 begin
   #Update an Application
-  result = api_instance.applications_put(id, opts)
+  result = api_instance.p_ut_applications_id(id, opts)
   p result
 rescue JCAPIv1::ApiError => e
-  puts "Exception when calling ApplicationsApi->applications_put: #{e}"
+  puts "Exception when calling ApplicationsApi->p_ut_applications_id: #{e}"
 end
 ```
 
@@ -326,8 +326,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 
 

@@ -4,269 +4,19 @@ All URIs are relative to *https://console.jumpcloud.com/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**duo_account_delete**](DuoApi.md#duo_account_delete) | **DELETE** /duo/accounts/{id} | Delete a Duo Account
-[**duo_account_get**](DuoApi.md#duo_account_get) | **GET** /duo/accounts/{id} | Get a Duo Acount
-[**duo_account_list**](DuoApi.md#duo_account_list) | **GET** /duo/accounts | List Duo Acounts
-[**duo_account_post**](DuoApi.md#duo_account_post) | **POST** /duo/accounts | Create Duo Account
-[**duo_application_delete**](DuoApi.md#duo_application_delete) | **DELETE** /duo/accounts/{account_id}/applications/{application_id} | Delete a Duo Application
-[**duo_application_get**](DuoApi.md#duo_application_get) | **GET** /duo/accounts/{account_id}/applications/{application_id} | Get a Duo application
-[**duo_application_list**](DuoApi.md#duo_application_list) | **GET** /duo/accounts/{account_id}/applications | List Duo Applications
-[**duo_application_post**](DuoApi.md#duo_application_post) | **POST** /duo/accounts/{account_id}/applications | Create Duo Application
-[**duo_application_update**](DuoApi.md#duo_application_update) | **PUT** /duo/accounts/{account_id}/applications/{application_id} | Update Duo Application
-
-
-# **duo_account_delete**
-> DuoAccount duo_account_delete(id, content_type, accept, opts)
-
-Delete a Duo Account
-
-Removes the specified Duo account, an error will be returned if the account has some Duo application used in a protected resource.  #### Sample Request ``` curl -X DELETE https://console.jumpcloud.com/api/v2/duo/accounts/{id} \\   -H 'accept: application/json' \\   -H 'content-type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
-
-### Example
-```ruby
-# load the gem
-require 'jcapiv2'
-# setup authorization
-JCAPIv2.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['x-api-key'] = 'Bearer'
-end
-
-api_instance = JCAPIv2::DuoApi.new
-
-id = "id_example" # String | ObjectID of the Duo Account
-
-content_type = "application/json" # String | 
-
-accept = "application/json" # String | 
-
-opts = { 
-  x_org_id: "" # String | 
-}
-
-begin
-  #Delete a Duo Account
-  result = api_instance.duo_account_delete(id, content_type, accept, opts)
-  p result
-rescue JCAPIv2::ApiError => e
-  puts "Exception when calling DuoApi->duo_account_delete: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **String**| ObjectID of the Duo Account | 
- **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
- **x_org_id** | **String**|  | [optional] [default to ]
-
-### Return type
-
-[**DuoAccount**](DuoAccount.md)
-
-### Authorization
-
-[x-api-key](../README.md#x-api-key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-# **duo_account_get**
-> DuoAccount duo_account_get(id, content_type, accept, opts)
-
-Get a Duo Acount
-
-This endpoint returns a specific Duo account.  #### Sample Request ``` curl https://console.jumpcloud.com/api/v2/duo/accounts/{id} \\   -H 'accept: application/json' \\   -H 'content-type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
-
-### Example
-```ruby
-# load the gem
-require 'jcapiv2'
-# setup authorization
-JCAPIv2.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['x-api-key'] = 'Bearer'
-end
-
-api_instance = JCAPIv2::DuoApi.new
-
-id = "id_example" # String | ObjectID of the Duo Account
-
-content_type = "application/json" # String | 
-
-accept = "application/json" # String | 
-
-opts = { 
-  x_org_id: "" # String | 
-}
-
-begin
-  #Get a Duo Acount
-  result = api_instance.duo_account_get(id, content_type, accept, opts)
-  p result
-rescue JCAPIv2::ApiError => e
-  puts "Exception when calling DuoApi->duo_account_get: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **String**| ObjectID of the Duo Account | 
- **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
- **x_org_id** | **String**|  | [optional] [default to ]
-
-### Return type
-
-[**DuoAccount**](DuoAccount.md)
-
-### Authorization
-
-[x-api-key](../README.md#x-api-key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-# **duo_account_list**
-> Array&lt;DuoAccount&gt; duo_account_list(content_type, accept, opts)
-
-List Duo Acounts
-
-This endpoint returns all the Duo accounts for your organization. Note: There can currently only be one Duo account for your organization.  #### Sample Request ``` curl https://console.jumpcloud.com/api/v2/duo/accounts \\   -H 'accept: application/json' \\   -H 'content-type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
-
-### Example
-```ruby
-# load the gem
-require 'jcapiv2'
-# setup authorization
-JCAPIv2.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['x-api-key'] = 'Bearer'
-end
-
-api_instance = JCAPIv2::DuoApi.new
-
-content_type = "application/json" # String | 
-
-accept = "application/json" # String | 
-
-opts = { 
-  x_org_id: "" # String | 
-}
-
-begin
-  #List Duo Acounts
-  result = api_instance.duo_account_list(content_type, accept, opts)
-  p result
-rescue JCAPIv2::ApiError => e
-  puts "Exception when calling DuoApi->duo_account_list: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
- **x_org_id** | **String**|  | [optional] [default to ]
-
-### Return type
-
-[**Array&lt;DuoAccount&gt;**](DuoAccount.md)
-
-### Authorization
-
-[x-api-key](../README.md#x-api-key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-# **duo_account_post**
-> DuoAccount duo_account_post(content_type, accept, opts)
-
-Create Duo Account
-
-Registers a Duo account for an organization. Only one Duo account will be allowed, in case an organization has a Duo account already a 409 (Conflict) code will be returned.  #### Sample Request ```   curl -X POST https://console.jumpcloud.com/api/v2/duo/accounts \\   -H 'accept: application/json' \\   -H 'content-type: application/json' \\   -H 'x-api-key: {API_KEY}' \\   -d '{}' ```
-
-### Example
-```ruby
-# load the gem
-require 'jcapiv2'
-# setup authorization
-JCAPIv2.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['x-api-key'] = 'Bearer'
-end
-
-api_instance = JCAPIv2::DuoApi.new
-
-content_type = "application/json" # String | 
-
-accept = "application/json" # String | 
-
-opts = { 
-  x_org_id: "" # String | 
-}
-
-begin
-  #Create Duo Account
-  result = api_instance.duo_account_post(content_type, accept, opts)
-  p result
-rescue JCAPIv2::ApiError => e
-  puts "Exception when calling DuoApi->duo_account_post: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
- **x_org_id** | **String**|  | [optional] [default to ]
-
-### Return type
-
-[**DuoAccount**](DuoAccount.md)
-
-### Authorization
-
-[x-api-key](../README.md#x-api-key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-# **duo_application_delete**
-> DuoApplication duo_application_delete(account_id, application_id, content_type, accept, opts)
+[**d_elete_duo_accounts_account_id_applications_application_id**](DuoApi.md#d_elete_duo_accounts_account_id_applications_application_id) | **DELETE** /duo/accounts/{account_id}/applications/{application_id} | Delete a Duo Application
+[**d_elete_duo_accounts_id**](DuoApi.md#d_elete_duo_accounts_id) | **DELETE** /duo/accounts/{id} | Delete a Duo Account
+[**g_et_duo_accounts**](DuoApi.md#g_et_duo_accounts) | **GET** /duo/accounts | List Duo Accounts
+[**g_et_duo_accounts_account_id_applications**](DuoApi.md#g_et_duo_accounts_account_id_applications) | **GET** /duo/accounts/{account_id}/applications | List Duo Applications
+[**g_et_duo_accounts_account_id_applications_application_id**](DuoApi.md#g_et_duo_accounts_account_id_applications_application_id) | **GET** /duo/accounts/{account_id}/applications/{application_id} | Get a Duo application
+[**g_et_duo_accounts_id**](DuoApi.md#g_et_duo_accounts_id) | **GET** /duo/accounts/{id} | Get a Duo Acount
+[**p_ost_duo_accounts**](DuoApi.md#p_ost_duo_accounts) | **POST** /duo/accounts | Create Duo Account
+[**p_ost_duo_accounts_account_id_applications**](DuoApi.md#p_ost_duo_accounts_account_id_applications) | **POST** /duo/accounts/{account_id}/applications | Create Duo Application
+[**p_ut_duo_accounts_account_id_applications_application_id**](DuoApi.md#p_ut_duo_accounts_account_id_applications_application_id) | **PUT** /duo/accounts/{account_id}/applications/{application_id} | Update Duo Application
+
+
+# **d_elete_duo_accounts_account_id_applications_application_id**
+> DuoApplication d_elete_duo_accounts_account_id_applications_application_id(account_id, application_id, accept, content_type, opts)
 
 Delete a Duo Application
 
@@ -290,9 +40,9 @@ account_id = "account_id_example" # String |
 
 application_id = "application_id_example" # String | 
 
-content_type = "application/json" # String | 
+accept = "application/x-pem-file" # String | 
 
-accept = "application/json" # String | 
+content_type = "application/json" # String | 
 
 opts = { 
   x_org_id: "" # String | 
@@ -300,10 +50,10 @@ opts = {
 
 begin
   #Delete a Duo Application
-  result = api_instance.duo_application_delete(account_id, application_id, content_type, accept, opts)
+  result = api_instance.d_elete_duo_accounts_account_id_applications_application_id(account_id, application_id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling DuoApi->duo_application_delete: #{e}"
+  puts "Exception when calling DuoApi->d_elete_duo_accounts_account_id_applications_application_id: #{e}"
 end
 ```
 
@@ -313,8 +63,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **account_id** | **String**|  | 
  **application_id** | **String**|  | 
+ **accept** | **String**|  | [default to application/x-pem-file]
  **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
  **x_org_id** | **String**|  | [optional] [default to ]
 
 ### Return type
@@ -332,8 +82,197 @@ Name | Type | Description  | Notes
 
 
 
-# **duo_application_get**
-> DuoApplication duo_application_get(account_id, application_id, content_type, accept, opts)
+# **d_elete_duo_accounts_id**
+> DuoAccount d_elete_duo_accounts_id(id, accept, content_type, opts)
+
+Delete a Duo Account
+
+Removes the specified Duo account, an error will be returned if the account has some Duo application used in a protected resource.  #### Sample Request ``` curl -X DELETE https://console.jumpcloud.com/api/v2/duo/accounts/{id} \\   -H 'accept: application/json' \\   -H 'content-type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
+
+### Example
+```ruby
+# load the gem
+require 'jcapiv2'
+# setup authorization
+JCAPIv2.configure do |config|
+  # Configure API key authorization: x-api-key
+  config.api_key['x-api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['x-api-key'] = 'Bearer'
+end
+
+api_instance = JCAPIv2::DuoApi.new
+
+id = "id_example" # String | ObjectID of the Duo Account
+
+accept = "application/x-pem-file" # String | 
+
+content_type = "application/json" # String | 
+
+opts = { 
+  x_org_id: "" # String | 
+}
+
+begin
+  #Delete a Duo Account
+  result = api_instance.d_elete_duo_accounts_id(id, accept, content_type, opts)
+  p result
+rescue JCAPIv2::ApiError => e
+  puts "Exception when calling DuoApi->d_elete_duo_accounts_id: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**| ObjectID of the Duo Account | 
+ **accept** | **String**|  | [default to application/x-pem-file]
+ **content_type** | **String**|  | [default to application/json]
+ **x_org_id** | **String**|  | [optional] [default to ]
+
+### Return type
+
+[**DuoAccount**](DuoAccount.md)
+
+### Authorization
+
+[x-api-key](../README.md#x-api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **g_et_duo_accounts**
+> Array&lt;DuoAccount&gt; g_et_duo_accounts(accept, content_type, opts)
+
+List Duo Accounts
+
+This endpoint returns all the Duo accounts for your organization. Note: There can currently only be one Duo account for your organization.  #### Sample Request ``` curl https://console.jumpcloud.com/api/v2/duo/accounts \\   -H 'accept: application/json' \\   -H 'content-type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
+
+### Example
+```ruby
+# load the gem
+require 'jcapiv2'
+# setup authorization
+JCAPIv2.configure do |config|
+  # Configure API key authorization: x-api-key
+  config.api_key['x-api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['x-api-key'] = 'Bearer'
+end
+
+api_instance = JCAPIv2::DuoApi.new
+
+accept = "application/x-pem-file" # String | 
+
+content_type = "application/json" # String | 
+
+opts = { 
+  x_org_id: "" # String | 
+}
+
+begin
+  #List Duo Accounts
+  result = api_instance.g_et_duo_accounts(accept, content_type, opts)
+  p result
+rescue JCAPIv2::ApiError => e
+  puts "Exception when calling DuoApi->g_et_duo_accounts: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accept** | **String**|  | [default to application/x-pem-file]
+ **content_type** | **String**|  | [default to application/json]
+ **x_org_id** | **String**|  | [optional] [default to ]
+
+### Return type
+
+[**Array&lt;DuoAccount&gt;**](DuoAccount.md)
+
+### Authorization
+
+[x-api-key](../README.md#x-api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **g_et_duo_accounts_account_id_applications**
+> Array&lt;DuoApplication&gt; g_et_duo_accounts_account_id_applications(account_id, accept, content_type, opts)
+
+List Duo Applications
+
+This endpoint returns all the Duo applications for the specified Duo account. Note: There can currently only be one Duo application for your organization.  #### Sample Request ```   curl https://console.jumpcloud.com/api/v2/duo/accounts/{ACCOUNT_ID}/applications \\   -H 'accept: application/json' \\   -H 'content-type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
+
+### Example
+```ruby
+# load the gem
+require 'jcapiv2'
+# setup authorization
+JCAPIv2.configure do |config|
+  # Configure API key authorization: x-api-key
+  config.api_key['x-api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['x-api-key'] = 'Bearer'
+end
+
+api_instance = JCAPIv2::DuoApi.new
+
+account_id = "account_id_example" # String | 
+
+accept = "application/x-pem-file" # String | 
+
+content_type = "application/json" # String | 
+
+opts = { 
+  x_org_id: "" # String | 
+}
+
+begin
+  #List Duo Applications
+  result = api_instance.g_et_duo_accounts_account_id_applications(account_id, accept, content_type, opts)
+  p result
+rescue JCAPIv2::ApiError => e
+  puts "Exception when calling DuoApi->g_et_duo_accounts_account_id_applications: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **account_id** | **String**|  | 
+ **accept** | **String**|  | [default to application/x-pem-file]
+ **content_type** | **String**|  | [default to application/json]
+ **x_org_id** | **String**|  | [optional] [default to ]
+
+### Return type
+
+[**Array&lt;DuoApplication&gt;**](DuoApplication.md)
+
+### Authorization
+
+[x-api-key](../README.md#x-api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **g_et_duo_accounts_account_id_applications_application_id**
+> DuoApplication g_et_duo_accounts_account_id_applications_application_id(account_id, application_id, accept, content_type, opts)
 
 Get a Duo application
 
@@ -357,9 +296,9 @@ account_id = "account_id_example" # String |
 
 application_id = "application_id_example" # String | 
 
-content_type = "application/json" # String | 
+accept = "application/x-pem-file" # String | 
 
-accept = "application/json" # String | 
+content_type = "application/json" # String | 
 
 opts = { 
   x_org_id: "" # String | 
@@ -367,10 +306,10 @@ opts = {
 
 begin
   #Get a Duo application
-  result = api_instance.duo_application_get(account_id, application_id, content_type, accept, opts)
+  result = api_instance.g_et_duo_accounts_account_id_applications_application_id(account_id, application_id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling DuoApi->duo_application_get: #{e}"
+  puts "Exception when calling DuoApi->g_et_duo_accounts_account_id_applications_application_id: #{e}"
 end
 ```
 
@@ -380,8 +319,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **account_id** | **String**|  | 
  **application_id** | **String**|  | 
+ **accept** | **String**|  | [default to application/x-pem-file]
  **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
  **x_org_id** | **String**|  | [optional] [default to ]
 
 ### Return type
@@ -399,12 +338,12 @@ Name | Type | Description  | Notes
 
 
 
-# **duo_application_list**
-> Array&lt;DuoApplication&gt; duo_application_list(account_id, content_type, accept, opts)
+# **g_et_duo_accounts_id**
+> DuoAccount g_et_duo_accounts_id(id, accept, content_type, opts)
 
-List Duo Applications
+Get a Duo Acount
 
-This endpoint returns all the Duo applications for the specified Duo account. Note: There can currently only be one Duo application for your organization.  #### Sample Request ```   curl https://console.jumpcloud.com/api/v2/duo/accounts/{ACCOUNT_ID}/applications \\   -H 'accept: application/json' \\   -H 'content-type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
+This endpoint returns a specific Duo account.  #### Sample Request ``` curl https://console.jumpcloud.com/api/v2/duo/accounts/{id} \\   -H 'accept: application/json' \\   -H 'content-type: application/json' \\   -H 'x-api-key: {API_KEY}' ```
 
 ### Example
 ```ruby
@@ -420,22 +359,22 @@ end
 
 api_instance = JCAPIv2::DuoApi.new
 
-account_id = "account_id_example" # String | 
+id = "id_example" # String | ObjectID of the Duo Account
+
+accept = "application/x-pem-file" # String | 
 
 content_type = "application/json" # String | 
-
-accept = "application/json" # String | 
 
 opts = { 
   x_org_id: "" # String | 
 }
 
 begin
-  #List Duo Applications
-  result = api_instance.duo_application_list(account_id, content_type, accept, opts)
+  #Get a Duo Acount
+  result = api_instance.g_et_duo_accounts_id(id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling DuoApi->duo_application_list: #{e}"
+  puts "Exception when calling DuoApi->g_et_duo_accounts_id: #{e}"
 end
 ```
 
@@ -443,14 +382,14 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **account_id** | **String**|  | 
+ **id** | **String**| ObjectID of the Duo Account | 
+ **accept** | **String**|  | [default to application/x-pem-file]
  **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
  **x_org_id** | **String**|  | [optional] [default to ]
 
 ### Return type
 
-[**Array&lt;DuoApplication&gt;**](DuoApplication.md)
+[**DuoAccount**](DuoAccount.md)
 
 ### Authorization
 
@@ -463,8 +402,69 @@ Name | Type | Description  | Notes
 
 
 
-# **duo_application_post**
-> DuoApplication duo_application_post(account_id, content_type, accept, opts)
+# **p_ost_duo_accounts**
+> DuoAccount p_ost_duo_accounts(accept, content_type, opts)
+
+Create Duo Account
+
+Registers a Duo account for an organization. Only one Duo account will be allowed, in case an organization has a Duo account already a 409 (Conflict) code will be returned.  #### Sample Request ```   curl -X POST https://console.jumpcloud.com/api/v2/duo/accounts \\   -H 'accept: application/json' \\   -H 'content-type: application/json' \\   -H 'x-api-key: {API_KEY}' \\   -d '{}' ```
+
+### Example
+```ruby
+# load the gem
+require 'jcapiv2'
+# setup authorization
+JCAPIv2.configure do |config|
+  # Configure API key authorization: x-api-key
+  config.api_key['x-api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['x-api-key'] = 'Bearer'
+end
+
+api_instance = JCAPIv2::DuoApi.new
+
+accept = "application/x-pem-file" # String | 
+
+content_type = "application/json" # String | 
+
+opts = { 
+  x_org_id: "" # String | 
+}
+
+begin
+  #Create Duo Account
+  result = api_instance.p_ost_duo_accounts(accept, content_type, opts)
+  p result
+rescue JCAPIv2::ApiError => e
+  puts "Exception when calling DuoApi->p_ost_duo_accounts: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accept** | **String**|  | [default to application/x-pem-file]
+ **content_type** | **String**|  | [default to application/json]
+ **x_org_id** | **String**|  | [optional] [default to ]
+
+### Return type
+
+[**DuoAccount**](DuoAccount.md)
+
+### Authorization
+
+[x-api-key](../README.md#x-api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **p_ost_duo_accounts_account_id_applications**
+> DuoApplication p_ost_duo_accounts_account_id_applications(account_id, accept, content_type, opts)
 
 Create Duo Application
 
@@ -486,9 +486,9 @@ api_instance = JCAPIv2::DuoApi.new
 
 account_id = "account_id_example" # String | 
 
-content_type = "application/json" # String | 
+accept = "application/x-pem-file" # String | 
 
-accept = "application/json" # String | 
+content_type = "application/json" # String | 
 
 opts = { 
   body: JCAPIv2::DuoApplicationReq.new, # DuoApplicationReq | 
@@ -497,10 +497,10 @@ opts = {
 
 begin
   #Create Duo Application
-  result = api_instance.duo_application_post(account_id, content_type, accept, opts)
+  result = api_instance.p_ost_duo_accounts_account_id_applications(account_id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling DuoApi->duo_application_post: #{e}"
+  puts "Exception when calling DuoApi->p_ost_duo_accounts_account_id_applications: #{e}"
 end
 ```
 
@@ -509,8 +509,8 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **account_id** | **String**|  | 
+ **accept** | **String**|  | [default to application/x-pem-file]
  **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
  **body** | [**DuoApplicationReq**](DuoApplicationReq.md)|  | [optional] 
  **x_org_id** | **String**|  | [optional] [default to ]
 
@@ -529,8 +529,8 @@ Name | Type | Description  | Notes
 
 
 
-# **duo_application_update**
-> DuoApplication duo_application_update(account_id, application_id, content_type, accept, opts)
+# **p_ut_duo_accounts_account_id_applications_application_id**
+> DuoApplication p_ut_duo_accounts_account_id_applications_application_id(account_id, application_id, accept, content_type, opts)
 
 Update Duo Application
 
@@ -554,9 +554,9 @@ account_id = "account_id_example" # String |
 
 application_id = "application_id_example" # String | 
 
-content_type = "application/json" # String | 
+accept = "application/x-pem-file" # String | 
 
-accept = "application/json" # String | 
+content_type = "application/json" # String | 
 
 opts = { 
   body: JCAPIv2::DuoApplicationUpdateReq.new, # DuoApplicationUpdateReq | 
@@ -565,10 +565,10 @@ opts = {
 
 begin
   #Update Duo Application
-  result = api_instance.duo_application_update(account_id, application_id, content_type, accept, opts)
+  result = api_instance.p_ut_duo_accounts_account_id_applications_application_id(account_id, application_id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling DuoApi->duo_application_update: #{e}"
+  puts "Exception when calling DuoApi->p_ut_duo_accounts_account_id_applications_application_id: #{e}"
 end
 ```
 
@@ -578,8 +578,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **account_id** | **String**|  | 
  **application_id** | **String**|  | 
+ **accept** | **String**|  | [default to application/x-pem-file]
  **content_type** | **String**|  | [default to application/json]
- **accept** | **String**|  | [default to application/json]
  **body** | [**DuoApplicationUpdateReq**](DuoApplicationUpdateReq.md)|  | [optional] 
  **x_org_id** | **String**|  | [optional] [default to ]
 

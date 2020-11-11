@@ -4,11 +4,11 @@ All URIs are relative to *https://console.jumpcloud.com/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**command_trigger_webhook_post**](CommandTriggersApi.md#command_trigger_webhook_post) | **POST** /command/trigger/{triggername} | Launch a command via a Trigger
+[**p_ost_command_trigger_triggername**](CommandTriggersApi.md#p_ost_command_trigger_triggername) | **POST** /command/trigger/{triggername} | Launch a command via a Trigger
 
 
-# **command_trigger_webhook_post**
-> command_trigger_webhook_post(triggername, content_type, accept, opts)
+# **p_ost_command_trigger_triggername**
+> Triggerreturn p_ost_command_trigger_triggername(triggername, accept, content_type, opts)
 
 Launch a command via a Trigger
 
@@ -30,9 +30,9 @@ api_instance = JCAPIv1::CommandTriggersApi.new
 
 triggername = "triggername_example" # String | 
 
-content_type = "application/json" # String | 
-
 accept = "application/json" # String | 
+
+content_type = "application/json" # String | 
 
 opts = { 
   x_org_id: "" # String | 
@@ -40,9 +40,10 @@ opts = {
 
 begin
   #Launch a command via a Trigger
-  api_instance.command_trigger_webhook_post(triggername, content_type, accept, opts)
+  result = api_instance.p_ost_command_trigger_triggername(triggername, accept, content_type, opts)
+  p result
 rescue JCAPIv1::ApiError => e
-  puts "Exception when calling CommandTriggersApi->command_trigger_webhook_post: #{e}"
+  puts "Exception when calling CommandTriggersApi->p_ost_command_trigger_triggername: #{e}"
 end
 ```
 
@@ -51,13 +52,13 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **triggername** | **String**|  | 
- **content_type** | **String**|  | [default to application/json]
  **accept** | **String**|  | [default to application/json]
+ **content_type** | **String**|  | [default to application/json]
  **x_org_id** | **String**|  | [optional] [default to ]
 
 ### Return type
 
-nil (empty response body)
+[**Triggerreturn**](Triggerreturn.md)
 
 ### Authorization
 
@@ -65,8 +66,8 @@ nil (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 
 

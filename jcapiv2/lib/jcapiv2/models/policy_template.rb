@@ -1,7 +1,7 @@
 =begin
 #JumpCloud APIs
 
-# JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
+#JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
 
 OpenAPI spec version: 2.0
 
@@ -20,6 +20,9 @@ module JCAPIv2
 
     # Specifics about the behavior of the policy.
     attr_accessor :behavior
+
+    # The supported delivery mechanisms for this policy template.
+    attr_accessor :delivery_types
 
     # The default description for the Policy.
     attr_accessor :description
@@ -65,6 +68,7 @@ module JCAPIv2
       {
         :'activation' => :'activation',
         :'behavior' => :'behavior',
+        :'delivery_types' => :'deliveryTypes',
         :'description' => :'description',
         :'display_name' => :'displayName',
         :'id' => :'id',
@@ -79,6 +83,7 @@ module JCAPIv2
       {
         :'activation' => :'String',
         :'behavior' => :'String',
+        :'delivery_types' => :'Array<String>',
         :'description' => :'String',
         :'display_name' => :'String',
         :'id' => :'String',
@@ -102,6 +107,12 @@ module JCAPIv2
 
       if attributes.has_key?(:'behavior')
         self.behavior = attributes[:'behavior']
+      end
+
+      if attributes.has_key?(:'deliveryTypes')
+        if (value = attributes[:'deliveryTypes']).is_a?(Array)
+          self.delivery_types = value
+        end
       end
 
       if attributes.has_key?(:'description')
@@ -164,6 +175,7 @@ module JCAPIv2
       self.class == o.class &&
           activation == o.activation &&
           behavior == o.behavior &&
+          delivery_types == o.delivery_types &&
           description == o.description &&
           display_name == o.display_name &&
           id == o.id &&
@@ -181,7 +193,7 @@ module JCAPIv2
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [activation, behavior, description, display_name, id, name, os_meta_family, state].hash
+      [activation, behavior, delivery_types, description, display_name, id, name, os_meta_family, state].hash
     end
 
     # Builds the object from hash

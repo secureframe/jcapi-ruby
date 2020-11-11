@@ -1,7 +1,7 @@
 =begin
 #JumpCloud APIs
 
-# JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
+#JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
 
 OpenAPI spec version: 2.0
 
@@ -38,6 +38,16 @@ describe 'AppleMDM' do
     end
   end
 
+  describe 'test attribute "dep_server_token_state"' do
+    it 'should work' do
+       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+       #validator = Petstore::EnumTest::EnumAttributeValidator.new('String', ["unknown", "missing", "valid", "expired"])
+       #validator.allowable_values.each do |value|
+       #  expect { @instance.dep_server_token_state = value }.not_to raise_error
+       #end
+    end
+  end
+
   describe 'test attribute "id"' do
     it 'should work' do
        # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -45,6 +55,12 @@ describe 'AppleMDM' do
   end
 
   describe 'test attribute "name"' do
+    it 'should work' do
+       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  describe 'test attribute "dep"' do
     it 'should work' do
        # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

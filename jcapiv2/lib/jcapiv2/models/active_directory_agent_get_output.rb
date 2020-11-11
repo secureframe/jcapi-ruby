@@ -1,7 +1,7 @@
 =begin
 #JumpCloud APIs
 
-# JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
+#JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
 
 OpenAPI spec version: 2.0
 
@@ -21,12 +21,36 @@ module JCAPIv2
     # ObjectID of this Active Directory Agent.
     attr_accessor :id
 
+    attr_accessor :state
+
+    class EnumAttributeValidator
+      attr_reader :datatype
+      attr_reader :allowable_values
+
+      def initialize(datatype, allowable_values)
+        @allowable_values = allowable_values.map do |value|
+          case datatype.to_s
+          when /Integer/i
+            value.to_i
+          when /Float/i
+            value.to_f
+          else
+            value
+          end
+        end
+      end
+
+      def valid?(value)
+        !value || allowable_values.include?(value)
+      end
+    end
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         :'connect_key' => :'connectKey',
-        :'id' => :'id'
+        :'id' => :'id',
+        :'state' => :'state'
       }
     end
 
@@ -34,7 +58,8 @@ module JCAPIv2
     def self.swagger_types
       {
         :'connect_key' => :'String',
-        :'id' => :'String'
+        :'id' => :'String',
+        :'state' => :'String'
       }
     end
 
@@ -54,6 +79,10 @@ module JCAPIv2
         self.id = attributes[:'id']
       end
 
+      if attributes.has_key?(:'state')
+        self.state = attributes[:'state']
+      end
+
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -71,7 +100,19 @@ module JCAPIv2
     # @return true if the model is valid
     def valid?
       return false if @id.nil?
+      state_validator = EnumAttributeValidator.new('String', ["unsealed", "active", "inactive"])
+      return false unless state_validator.valid?(@state)
       return true
+    end
+
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] state Object to be assigned
+    def state=(state)
+      validator = EnumAttributeValidator.new('String', ["unsealed", "active", "inactive"])
+      unless validator.valid?(state)
+        fail ArgumentError, "invalid value for 'state', must be one of #{validator.allowable_values}."
+      end
+      @state = state
     end
 
     # Checks equality by comparing each attribute.
@@ -80,7 +121,8 @@ module JCAPIv2
       return true if self.equal?(o)
       self.class == o.class &&
           connect_key == o.connect_key &&
-          id == o.id
+          id == o.id &&
+          state == o.state
     end
 
     # @see the `==` method
@@ -92,7 +134,7 @@ module JCAPIv2
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [connect_key, id].hash
+      [connect_key, id, state].hash
     end
 
     # Builds the object from hash

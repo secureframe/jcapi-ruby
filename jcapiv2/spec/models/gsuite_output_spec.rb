@@ -1,7 +1,7 @@
 =begin
 #JumpCloud APIs
 
-# JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
+#JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
 
 OpenAPI spec version: 2.0
 
@@ -51,10 +51,16 @@ describe 'GsuiteOutput' do
   describe 'test attribute "user_password_expiration_action"' do
     it 'should work' do
        # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-       #validator = Petstore::EnumTest::EnumAttributeValidator.new('String', ["suspend", "maintain"])
+       #validator = Petstore::EnumTest::EnumAttributeValidator.new('String', ["suspend", "maintain", "remove_access"])
        #validator.allowable_values.each do |value|
        #  expect { @instance.user_password_expiration_action = value }.not_to raise_error
        #end
+    end
+  end
+
+  describe 'test attribute "name"' do
+    it 'should work' do
+       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 

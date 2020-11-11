@@ -1,7 +1,7 @@
 =begin
 #JumpCloud APIs
 
-# JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
+#JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
 
 OpenAPI spec version: 2.0
 
@@ -17,18 +17,6 @@ module JCAPIv2
   class SystemInsightsBitlockerInfo
     attr_accessor :collection_time
 
-    attr_accessor :conversion_status
-
-    attr_accessor :device_id
-
-    attr_accessor :drive_letter
-
-    attr_accessor :encryption_method
-
-    attr_accessor :persistent_volume_id
-
-    attr_accessor :protection_status
-
     attr_accessor :system_id
 
 
@@ -36,12 +24,6 @@ module JCAPIv2
     def self.attribute_map
       {
         :'collection_time' => :'collection_time',
-        :'conversion_status' => :'conversion_status',
-        :'device_id' => :'device_id',
-        :'drive_letter' => :'drive_letter',
-        :'encryption_method' => :'encryption_method',
-        :'persistent_volume_id' => :'persistent_volume_id',
-        :'protection_status' => :'protection_status',
         :'system_id' => :'system_id'
       }
     end
@@ -50,12 +32,6 @@ module JCAPIv2
     def self.swagger_types
       {
         :'collection_time' => :'String',
-        :'conversion_status' => :'Integer',
-        :'device_id' => :'String',
-        :'drive_letter' => :'String',
-        :'encryption_method' => :'String',
-        :'persistent_volume_id' => :'String',
-        :'protection_status' => :'Integer',
         :'system_id' => :'String'
       }
     end
@@ -70,30 +46,6 @@ module JCAPIv2
 
       if attributes.has_key?(:'collection_time')
         self.collection_time = attributes[:'collection_time']
-      end
-
-      if attributes.has_key?(:'conversion_status')
-        self.conversion_status = attributes[:'conversion_status']
-      end
-
-      if attributes.has_key?(:'device_id')
-        self.device_id = attributes[:'device_id']
-      end
-
-      if attributes.has_key?(:'drive_letter')
-        self.drive_letter = attributes[:'drive_letter']
-      end
-
-      if attributes.has_key?(:'encryption_method')
-        self.encryption_method = attributes[:'encryption_method']
-      end
-
-      if attributes.has_key?(:'persistent_volume_id')
-        self.persistent_volume_id = attributes[:'persistent_volume_id']
-      end
-
-      if attributes.has_key?(:'protection_status')
-        self.protection_status = attributes[:'protection_status']
       end
 
       if attributes.has_key?(:'system_id')
@@ -121,12 +73,6 @@ module JCAPIv2
       return true if self.equal?(o)
       self.class == o.class &&
           collection_time == o.collection_time &&
-          conversion_status == o.conversion_status &&
-          device_id == o.device_id &&
-          drive_letter == o.drive_letter &&
-          encryption_method == o.encryption_method &&
-          persistent_volume_id == o.persistent_volume_id &&
-          protection_status == o.protection_status &&
           system_id == o.system_id
     end
 
@@ -139,7 +85,7 @@ module JCAPIv2
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [collection_time, conversion_status, device_id, drive_letter, encryption_method, persistent_volume_id, protection_status, system_id].hash
+      [collection_time, system_id].hash
     end
 
     # Builds the object from hash

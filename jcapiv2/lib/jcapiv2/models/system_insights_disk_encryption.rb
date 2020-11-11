@@ -1,7 +1,7 @@
 =begin
 #JumpCloud APIs
 
-# JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
+#JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
 
 OpenAPI spec version: 2.0
 
@@ -17,35 +17,14 @@ module JCAPIv2
   class SystemInsightsDiskEncryption
     attr_accessor :collection_time
 
-    attr_accessor :encrypted
-
-    attr_accessor :encryption_status
-
-    attr_accessor :name
-
     attr_accessor :system_id
-
-    attr_accessor :type
-
-    attr_accessor :uid
-
-    attr_accessor :user_uuid
-
-    attr_accessor :uuid
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         :'collection_time' => :'collection_time',
-        :'encrypted' => :'encrypted',
-        :'encryption_status' => :'encryption_status',
-        :'name' => :'name',
-        :'system_id' => :'system_id',
-        :'type' => :'type',
-        :'uid' => :'uid',
-        :'user_uuid' => :'user_uuid',
-        :'uuid' => :'uuid'
+        :'system_id' => :'system_id'
       }
     end
 
@@ -53,14 +32,7 @@ module JCAPIv2
     def self.swagger_types
       {
         :'collection_time' => :'String',
-        :'encrypted' => :'Integer',
-        :'encryption_status' => :'String',
-        :'name' => :'String',
-        :'system_id' => :'String',
-        :'type' => :'String',
-        :'uid' => :'String',
-        :'user_uuid' => :'String',
-        :'uuid' => :'String'
+        :'system_id' => :'String'
       }
     end
 
@@ -76,36 +48,8 @@ module JCAPIv2
         self.collection_time = attributes[:'collection_time']
       end
 
-      if attributes.has_key?(:'encrypted')
-        self.encrypted = attributes[:'encrypted']
-      end
-
-      if attributes.has_key?(:'encryption_status')
-        self.encryption_status = attributes[:'encryption_status']
-      end
-
-      if attributes.has_key?(:'name')
-        self.name = attributes[:'name']
-      end
-
       if attributes.has_key?(:'system_id')
         self.system_id = attributes[:'system_id']
-      end
-
-      if attributes.has_key?(:'type')
-        self.type = attributes[:'type']
-      end
-
-      if attributes.has_key?(:'uid')
-        self.uid = attributes[:'uid']
-      end
-
-      if attributes.has_key?(:'user_uuid')
-        self.user_uuid = attributes[:'user_uuid']
-      end
-
-      if attributes.has_key?(:'uuid')
-        self.uuid = attributes[:'uuid']
       end
 
     end
@@ -129,14 +73,7 @@ module JCAPIv2
       return true if self.equal?(o)
       self.class == o.class &&
           collection_time == o.collection_time &&
-          encrypted == o.encrypted &&
-          encryption_status == o.encryption_status &&
-          name == o.name &&
-          system_id == o.system_id &&
-          type == o.type &&
-          uid == o.uid &&
-          user_uuid == o.user_uuid &&
-          uuid == o.uuid
+          system_id == o.system_id
     end
 
     # @see the `==` method
@@ -148,7 +85,7 @@ module JCAPIv2
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [collection_time, encrypted, encryption_status, name, system_id, type, uid, user_uuid, uuid].hash
+      [collection_time, system_id].hash
     end
 
     # Builds the object from hash

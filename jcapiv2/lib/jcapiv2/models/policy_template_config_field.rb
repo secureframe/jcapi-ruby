@@ -1,7 +1,7 @@
 =begin
 #JumpCloud APIs
 
-# JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
+#JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
 
 OpenAPI spec version: 2.0
 
@@ -148,7 +148,7 @@ module JCAPIv2
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      display_type_validator = EnumAttributeValidator.new('String', ["checkbox", "date", "email", "number", "select", "text", "textarea"])
+      display_type_validator = EnumAttributeValidator.new('String', ["checkbox", "date", "email", "file", "number", "select", "text", "textarea", "singlelistbox", "doublelistbox", "table"])
       return false unless display_type_validator.valid?(@display_type)
       return false if @id.nil?
       return false if @name.nil?
@@ -158,7 +158,7 @@ module JCAPIv2
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] display_type Object to be assigned
     def display_type=(display_type)
-      validator = EnumAttributeValidator.new('String', ["checkbox", "date", "email", "number", "select", "text", "textarea"])
+      validator = EnumAttributeValidator.new('String', ["checkbox", "date", "email", "file", "number", "select", "text", "textarea", "singlelistbox", "doublelistbox", "table"])
       unless validator.valid?(display_type)
         fail ArgumentError, "invalid value for 'display_type', must be one of #{validator.allowable_values}."
       end

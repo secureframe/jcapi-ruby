@@ -1,7 +1,7 @@
 =begin
 #JumpCloud APIs
 
-# JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
+#JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
 
 OpenAPI spec version: 2.0
 
@@ -17,41 +17,14 @@ module JCAPIv2
   class SystemInsightsPrograms
     attr_accessor :collection_time
 
-    attr_accessor :identifying_number
-
-    attr_accessor :install_date
-
-    attr_accessor :install_location
-
-    attr_accessor :install_source
-
-    attr_accessor :language
-
-    attr_accessor :name
-
-    attr_accessor :publisher
-
     attr_accessor :system_id
-
-    attr_accessor :uninstall_string
-
-    attr_accessor :version
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         :'collection_time' => :'collection_time',
-        :'identifying_number' => :'identifying_number',
-        :'install_date' => :'install_date',
-        :'install_location' => :'install_location',
-        :'install_source' => :'install_source',
-        :'language' => :'language',
-        :'name' => :'name',
-        :'publisher' => :'publisher',
-        :'system_id' => :'system_id',
-        :'uninstall_string' => :'uninstall_string',
-        :'version' => :'version'
+        :'system_id' => :'system_id'
       }
     end
 
@@ -59,16 +32,7 @@ module JCAPIv2
     def self.swagger_types
       {
         :'collection_time' => :'String',
-        :'identifying_number' => :'String',
-        :'install_date' => :'String',
-        :'install_location' => :'String',
-        :'install_source' => :'String',
-        :'language' => :'String',
-        :'name' => :'String',
-        :'publisher' => :'String',
-        :'system_id' => :'String',
-        :'uninstall_string' => :'String',
-        :'version' => :'String'
+        :'system_id' => :'String'
       }
     end
 
@@ -84,44 +48,8 @@ module JCAPIv2
         self.collection_time = attributes[:'collection_time']
       end
 
-      if attributes.has_key?(:'identifying_number')
-        self.identifying_number = attributes[:'identifying_number']
-      end
-
-      if attributes.has_key?(:'install_date')
-        self.install_date = attributes[:'install_date']
-      end
-
-      if attributes.has_key?(:'install_location')
-        self.install_location = attributes[:'install_location']
-      end
-
-      if attributes.has_key?(:'install_source')
-        self.install_source = attributes[:'install_source']
-      end
-
-      if attributes.has_key?(:'language')
-        self.language = attributes[:'language']
-      end
-
-      if attributes.has_key?(:'name')
-        self.name = attributes[:'name']
-      end
-
-      if attributes.has_key?(:'publisher')
-        self.publisher = attributes[:'publisher']
-      end
-
       if attributes.has_key?(:'system_id')
         self.system_id = attributes[:'system_id']
-      end
-
-      if attributes.has_key?(:'uninstall_string')
-        self.uninstall_string = attributes[:'uninstall_string']
-      end
-
-      if attributes.has_key?(:'version')
-        self.version = attributes[:'version']
       end
 
     end
@@ -145,16 +73,7 @@ module JCAPIv2
       return true if self.equal?(o)
       self.class == o.class &&
           collection_time == o.collection_time &&
-          identifying_number == o.identifying_number &&
-          install_date == o.install_date &&
-          install_location == o.install_location &&
-          install_source == o.install_source &&
-          language == o.language &&
-          name == o.name &&
-          publisher == o.publisher &&
-          system_id == o.system_id &&
-          uninstall_string == o.uninstall_string &&
-          version == o.version
+          system_id == o.system_id
     end
 
     # @see the `==` method
@@ -166,7 +85,7 @@ module JCAPIv2
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [collection_time, identifying_number, install_date, install_location, install_source, language, name, publisher, system_id, uninstall_string, version].hash
+      [collection_time, system_id].hash
     end
 
     # Builds the object from hash

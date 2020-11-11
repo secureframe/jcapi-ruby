@@ -1,7 +1,7 @@
 =begin
 #JumpCloud APIs
 
-# JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
+#JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
 
 OpenAPI spec version: 2.0
 
@@ -18,19 +18,47 @@ module JCAPIv2
     # The push topic assigned to this enrollment by Apple after uploading the Signed CSR plist.
     attr_accessor :apns_push_topic
 
+    # The state of the dep server token, presence and expiry.
+    attr_accessor :dep_server_token_state
+
     # ObjectId uniquely identifying an MDM Enrollment,
     attr_accessor :id
 
     # A friendly name to identify this enrollment.  Not required to be unique.
     attr_accessor :name
 
+    attr_accessor :dep
+
+    class EnumAttributeValidator
+      attr_reader :datatype
+      attr_reader :allowable_values
+
+      def initialize(datatype, allowable_values)
+        @allowable_values = allowable_values.map do |value|
+          case datatype.to_s
+          when /Integer/i
+            value.to_i
+          when /Float/i
+            value.to_f
+          else
+            value
+          end
+        end
+      end
+
+      def valid?(value)
+        !value || allowable_values.include?(value)
+      end
+    end
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         :'apns_push_topic' => :'apnsPushTopic',
+        :'dep_server_token_state' => :'depServerTokenState',
         :'id' => :'id',
-        :'name' => :'name'
+        :'name' => :'name',
+        :'dep' => :'dep'
       }
     end
 
@@ -38,8 +66,10 @@ module JCAPIv2
     def self.swagger_types
       {
         :'apns_push_topic' => :'String',
+        :'dep_server_token_state' => :'String',
         :'id' => :'String',
-        :'name' => :'String'
+        :'name' => :'String',
+        :'dep' => :'DEP'
       }
     end
 
@@ -55,12 +85,20 @@ module JCAPIv2
         self.apns_push_topic = attributes[:'apnsPushTopic']
       end
 
+      if attributes.has_key?(:'depServerTokenState')
+        self.dep_server_token_state = attributes[:'depServerTokenState']
+      end
+
       if attributes.has_key?(:'id')
         self.id = attributes[:'id']
       end
 
       if attributes.has_key?(:'name')
         self.name = attributes[:'name']
+      end
+
+      if attributes.has_key?(:'dep')
+        self.dep = attributes[:'dep']
       end
 
     end
@@ -83,9 +121,21 @@ module JCAPIv2
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      dep_server_token_state_validator = EnumAttributeValidator.new('String', ["unknown", "missing", "valid", "expired"])
+      return false unless dep_server_token_state_validator.valid?(@dep_server_token_state)
       return false if @id.nil?
       return false if !@name.nil? && @name.to_s.length > 255
       return true
+    end
+
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] dep_server_token_state Object to be assigned
+    def dep_server_token_state=(dep_server_token_state)
+      validator = EnumAttributeValidator.new('String', ["unknown", "missing", "valid", "expired"])
+      unless validator.valid?(dep_server_token_state)
+        fail ArgumentError, "invalid value for 'dep_server_token_state', must be one of #{validator.allowable_values}."
+      end
+      @dep_server_token_state = dep_server_token_state
     end
 
     # Custom attribute writer method with validation
@@ -105,8 +155,10 @@ module JCAPIv2
       return true if self.equal?(o)
       self.class == o.class &&
           apns_push_topic == o.apns_push_topic &&
+          dep_server_token_state == o.dep_server_token_state &&
           id == o.id &&
-          name == o.name
+          name == o.name &&
+          dep == o.dep
     end
 
     # @see the `==` method
@@ -118,7 +170,7 @@ module JCAPIv2
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [apns_push_topic, id, name].hash
+      [apns_push_topic, dep_server_token_state, id, name, dep].hash
     end
 
     # Builds the object from hash

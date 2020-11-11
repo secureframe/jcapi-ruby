@@ -1,7 +1,7 @@
 =begin
 #JumpCloud APIs
 
-# JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
+#JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
 
 OpenAPI spec version: 2.0
 
@@ -41,6 +41,16 @@ describe 'ActiveDirectoryAgentGetOutput' do
   describe 'test attribute "id"' do
     it 'should work' do
        # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  describe 'test attribute "state"' do
+    it 'should work' do
+       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+       #validator = Petstore::EnumTest::EnumAttributeValidator.new('String', ["unsealed", "active", "inactive"])
+       #validator.allowable_values.each do |value|
+       #  expect { @instance.state = value }.not_to raise_error
+       #end
     end
   end
 

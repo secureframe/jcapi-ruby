@@ -4,11 +4,11 @@ All URIs are relative to *https://console.jumpcloud.com/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**systems_get_fde_key**](FdeApi.md#systems_get_fde_key) | **GET** /systems/{system_id}/fdekey | Get System FDE Key
+[**g_et_systems_system_id_fdekey**](FdeApi.md#g_et_systems_system_id_fdekey) | **GET** /systems/{system_id}/fdekey | Get System FDE Key
 
 
-# **systems_get_fde_key**
-> Systemfdekey systems_get_fde_key(system_id, opts)
+# **g_et_systems_system_id_fdekey**
+> Systemfdekey g_et_systems_system_id_fdekey(system_id, opts)
 
 Get System FDE Key
 
@@ -36,10 +36,10 @@ opts = {
 
 begin
   #Get System FDE Key
-  result = api_instance.systems_get_fde_key(system_id, opts)
+  result = api_instance.g_et_systems_system_id_fdekey(system_id, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling FdeApi->systems_get_fde_key: #{e}"
+  puts "Exception when calling FdeApi->g_et_systems_system_id_fdekey: #{e}"
 end
 ```
 

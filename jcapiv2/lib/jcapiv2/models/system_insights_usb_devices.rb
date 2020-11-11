@@ -1,7 +1,7 @@
 =begin
 #JumpCloud APIs
 
-# JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
+#JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
 
 OpenAPI spec version: 2.0
 
@@ -15,72 +15,24 @@ require 'date'
 module JCAPIv2
 
   class SystemInsightsUsbDevices
-    attr_accessor :_class
-
     attr_accessor :collection_time
 
-    attr_accessor :model
-
-    attr_accessor :model_id
-
-    attr_accessor :protocol
-
-    attr_accessor :removable
-
-    attr_accessor :serial
-
-    attr_accessor :subclass
-
     attr_accessor :system_id
-
-    attr_accessor :usb_address
-
-    attr_accessor :usb_port
-
-    attr_accessor :vendor
-
-    attr_accessor :vendor_id
-
-    attr_accessor :version
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'_class' => :'class',
         :'collection_time' => :'collection_time',
-        :'model' => :'model',
-        :'model_id' => :'model_id',
-        :'protocol' => :'protocol',
-        :'removable' => :'removable',
-        :'serial' => :'serial',
-        :'subclass' => :'subclass',
-        :'system_id' => :'system_id',
-        :'usb_address' => :'usb_address',
-        :'usb_port' => :'usb_port',
-        :'vendor' => :'vendor',
-        :'vendor_id' => :'vendor_id',
-        :'version' => :'version'
+        :'system_id' => :'system_id'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'_class' => :'String',
         :'collection_time' => :'String',
-        :'model' => :'String',
-        :'model_id' => :'String',
-        :'protocol' => :'String',
-        :'removable' => :'Integer',
-        :'serial' => :'String',
-        :'subclass' => :'String',
-        :'system_id' => :'String',
-        :'usb_address' => :'Integer',
-        :'usb_port' => :'Integer',
-        :'vendor' => :'String',
-        :'vendor_id' => :'String',
-        :'version' => :'String'
+        :'system_id' => :'String'
       }
     end
 
@@ -92,60 +44,12 @@ module JCAPIv2
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'class')
-        self._class = attributes[:'class']
-      end
-
       if attributes.has_key?(:'collection_time')
         self.collection_time = attributes[:'collection_time']
       end
 
-      if attributes.has_key?(:'model')
-        self.model = attributes[:'model']
-      end
-
-      if attributes.has_key?(:'model_id')
-        self.model_id = attributes[:'model_id']
-      end
-
-      if attributes.has_key?(:'protocol')
-        self.protocol = attributes[:'protocol']
-      end
-
-      if attributes.has_key?(:'removable')
-        self.removable = attributes[:'removable']
-      end
-
-      if attributes.has_key?(:'serial')
-        self.serial = attributes[:'serial']
-      end
-
-      if attributes.has_key?(:'subclass')
-        self.subclass = attributes[:'subclass']
-      end
-
       if attributes.has_key?(:'system_id')
         self.system_id = attributes[:'system_id']
-      end
-
-      if attributes.has_key?(:'usb_address')
-        self.usb_address = attributes[:'usb_address']
-      end
-
-      if attributes.has_key?(:'usb_port')
-        self.usb_port = attributes[:'usb_port']
-      end
-
-      if attributes.has_key?(:'vendor')
-        self.vendor = attributes[:'vendor']
-      end
-
-      if attributes.has_key?(:'vendor_id')
-        self.vendor_id = attributes[:'vendor_id']
-      end
-
-      if attributes.has_key?(:'version')
-        self.version = attributes[:'version']
       end
 
     end
@@ -168,20 +72,8 @@ module JCAPIv2
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          _class == o._class &&
           collection_time == o.collection_time &&
-          model == o.model &&
-          model_id == o.model_id &&
-          protocol == o.protocol &&
-          removable == o.removable &&
-          serial == o.serial &&
-          subclass == o.subclass &&
-          system_id == o.system_id &&
-          usb_address == o.usb_address &&
-          usb_port == o.usb_port &&
-          vendor == o.vendor &&
-          vendor_id == o.vendor_id &&
-          version == o.version
+          system_id == o.system_id
     end
 
     # @see the `==` method
@@ -193,7 +85,7 @@ module JCAPIv2
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [_class, collection_time, model, model_id, protocol, removable, serial, subclass, system_id, usb_address, usb_port, vendor, vendor_id, version].hash
+      [collection_time, system_id].hash
     end
 
     # Builds the object from hash

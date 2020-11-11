@@ -1,7 +1,7 @@
 =begin
 #JumpCloud APIs
 
-# JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
+#JumpCloud's V2 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
 
 OpenAPI spec version: 2.0
 
@@ -17,44 +17,14 @@ module JCAPIv2
   class SystemInsightsBrowserPlugins
     attr_accessor :collection_time
 
-    attr_accessor :description
-
-    attr_accessor :development_region
-
-    attr_accessor :disabled
-
-    attr_accessor :identifier
-
-    attr_accessor :name
-
-    attr_accessor :native
-
-    attr_accessor :path
-
-    attr_accessor :sdk
-
     attr_accessor :system_id
-
-    attr_accessor :uid
-
-    attr_accessor :version
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         :'collection_time' => :'collection_time',
-        :'description' => :'description',
-        :'development_region' => :'development_region',
-        :'disabled' => :'disabled',
-        :'identifier' => :'identifier',
-        :'name' => :'name',
-        :'native' => :'native',
-        :'path' => :'path',
-        :'sdk' => :'sdk',
-        :'system_id' => :'system_id',
-        :'uid' => :'uid',
-        :'version' => :'version'
+        :'system_id' => :'system_id'
       }
     end
 
@@ -62,17 +32,7 @@ module JCAPIv2
     def self.swagger_types
       {
         :'collection_time' => :'String',
-        :'description' => :'String',
-        :'development_region' => :'String',
-        :'disabled' => :'Integer',
-        :'identifier' => :'String',
-        :'name' => :'String',
-        :'native' => :'Integer',
-        :'path' => :'String',
-        :'sdk' => :'String',
-        :'system_id' => :'String',
-        :'uid' => :'String',
-        :'version' => :'String'
+        :'system_id' => :'String'
       }
     end
 
@@ -88,48 +48,8 @@ module JCAPIv2
         self.collection_time = attributes[:'collection_time']
       end
 
-      if attributes.has_key?(:'description')
-        self.description = attributes[:'description']
-      end
-
-      if attributes.has_key?(:'development_region')
-        self.development_region = attributes[:'development_region']
-      end
-
-      if attributes.has_key?(:'disabled')
-        self.disabled = attributes[:'disabled']
-      end
-
-      if attributes.has_key?(:'identifier')
-        self.identifier = attributes[:'identifier']
-      end
-
-      if attributes.has_key?(:'name')
-        self.name = attributes[:'name']
-      end
-
-      if attributes.has_key?(:'native')
-        self.native = attributes[:'native']
-      end
-
-      if attributes.has_key?(:'path')
-        self.path = attributes[:'path']
-      end
-
-      if attributes.has_key?(:'sdk')
-        self.sdk = attributes[:'sdk']
-      end
-
       if attributes.has_key?(:'system_id')
         self.system_id = attributes[:'system_id']
-      end
-
-      if attributes.has_key?(:'uid')
-        self.uid = attributes[:'uid']
-      end
-
-      if attributes.has_key?(:'version')
-        self.version = attributes[:'version']
       end
 
     end
@@ -153,17 +73,7 @@ module JCAPIv2
       return true if self.equal?(o)
       self.class == o.class &&
           collection_time == o.collection_time &&
-          description == o.description &&
-          development_region == o.development_region &&
-          disabled == o.disabled &&
-          identifier == o.identifier &&
-          name == o.name &&
-          native == o.native &&
-          path == o.path &&
-          sdk == o.sdk &&
-          system_id == o.system_id &&
-          uid == o.uid &&
-          version == o.version
+          system_id == o.system_id
     end
 
     # @see the `==` method
@@ -175,7 +85,7 @@ module JCAPIv2
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [collection_time, description, development_region, disabled, identifier, name, native, path, sdk, system_id, uid, version].hash
+      [collection_time, system_id].hash
     end
 
     # Builds the object from hash

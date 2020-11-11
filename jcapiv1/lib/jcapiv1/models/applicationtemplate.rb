@@ -1,7 +1,7 @@
 =begin
 #JumpCloud APIs
 
-# JumpCloud's V1 API. This set of endpoints allows JumpCloud customers to manage commands, systems, & system users.
+#JumpCloud's V1 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
 
 OpenAPI spec version: 1.0
 
@@ -19,6 +19,8 @@ module JCAPIv1
 
     attr_accessor :beta
 
+    attr_accessor :status
+
     attr_accessor :color
 
     attr_accessor :config
@@ -33,16 +35,44 @@ module JCAPIv1
 
     attr_accessor :learn_more
 
+    attr_accessor :logo
+
     attr_accessor :name
 
     attr_accessor :sso_url
 
+    attr_accessor :test
+
+    attr_accessor :keywords
+
+    class EnumAttributeValidator
+      attr_reader :datatype
+      attr_reader :allowable_values
+
+      def initialize(datatype, allowable_values)
+        @allowable_values = allowable_values.map do |value|
+          case datatype.to_s
+          when /Integer/i
+            value.to_i
+          when /Float/i
+            value.to_f
+          else
+            value
+          end
+        end
+      end
+
+      def valid?(value)
+        !value || allowable_values.include?(value)
+      end
+    end
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         :'_id' => :'_id',
         :'beta' => :'beta',
+        :'status' => :'status',
         :'color' => :'color',
         :'config' => :'config',
         :'display_label' => :'displayLabel',
@@ -50,8 +80,11 @@ module JCAPIv1
         :'is_configured' => :'isConfigured',
         :'jit' => :'jit',
         :'learn_more' => :'learnMore',
+        :'logo' => :'logo',
         :'name' => :'name',
-        :'sso_url' => :'ssoUrl'
+        :'sso_url' => :'ssoUrl',
+        :'test' => :'test',
+        :'keywords' => :'keywords'
       }
     end
 
@@ -60,6 +93,7 @@ module JCAPIv1
       {
         :'_id' => :'String',
         :'beta' => :'BOOLEAN',
+        :'status' => :'String',
         :'color' => :'String',
         :'config' => :'ApplicationConfig',
         :'display_label' => :'String',
@@ -67,8 +101,11 @@ module JCAPIv1
         :'is_configured' => :'BOOLEAN',
         :'jit' => :'ApplicationtemplateJit',
         :'learn_more' => :'String',
+        :'logo' => :'ApplicationtemplateLogo',
         :'name' => :'String',
-        :'sso_url' => :'String'
+        :'sso_url' => :'String',
+        :'test' => :'String',
+        :'keywords' => :'Array<String>'
       }
     end
 
@@ -86,6 +123,10 @@ module JCAPIv1
 
       if attributes.has_key?(:'beta')
         self.beta = attributes[:'beta']
+      end
+
+      if attributes.has_key?(:'status')
+        self.status = attributes[:'status']
       end
 
       if attributes.has_key?(:'color')
@@ -116,12 +157,26 @@ module JCAPIv1
         self.learn_more = attributes[:'learnMore']
       end
 
+      if attributes.has_key?(:'logo')
+        self.logo = attributes[:'logo']
+      end
+
       if attributes.has_key?(:'name')
         self.name = attributes[:'name']
       end
 
       if attributes.has_key?(:'ssoUrl')
         self.sso_url = attributes[:'ssoUrl']
+      end
+
+      if attributes.has_key?(:'test')
+        self.test = attributes[:'test']
+      end
+
+      if attributes.has_key?(:'keywords')
+        if (value = attributes[:'keywords']).is_a?(Array)
+          self.keywords = value
+        end
       end
 
     end
@@ -136,7 +191,31 @@ module JCAPIv1
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      status_validator = EnumAttributeValidator.new('String', ["", "end_of_life", "end_of_support", "beta"])
+      return false unless status_validator.valid?(@status)
+      color_validator = EnumAttributeValidator.new('String', ["", "#202D38", "#005466", "#3E8696", "#006CAC", "#0617AC", "#7C6ADA", "#D5779D", "#9E2F00", "#FFB000", "#58C469", "#57C49F", "#FF6C03"])
+      return false unless color_validator.valid?(@color)
       return true
+    end
+
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] status Object to be assigned
+    def status=(status)
+      validator = EnumAttributeValidator.new('String', ["", "end_of_life", "end_of_support", "beta"])
+      unless validator.valid?(status)
+        fail ArgumentError, "invalid value for 'status', must be one of #{validator.allowable_values}."
+      end
+      @status = status
+    end
+
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] color Object to be assigned
+    def color=(color)
+      validator = EnumAttributeValidator.new('String', ["", "#202D38", "#005466", "#3E8696", "#006CAC", "#0617AC", "#7C6ADA", "#D5779D", "#9E2F00", "#FFB000", "#58C469", "#57C49F", "#FF6C03"])
+      unless validator.valid?(color)
+        fail ArgumentError, "invalid value for 'color', must be one of #{validator.allowable_values}."
+      end
+      @color = color
     end
 
     # Checks equality by comparing each attribute.
@@ -146,6 +225,7 @@ module JCAPIv1
       self.class == o.class &&
           _id == o._id &&
           beta == o.beta &&
+          status == o.status &&
           color == o.color &&
           config == o.config &&
           display_label == o.display_label &&
@@ -153,8 +233,11 @@ module JCAPIv1
           is_configured == o.is_configured &&
           jit == o.jit &&
           learn_more == o.learn_more &&
+          logo == o.logo &&
           name == o.name &&
-          sso_url == o.sso_url
+          sso_url == o.sso_url &&
+          test == o.test &&
+          keywords == o.keywords
     end
 
     # @see the `==` method
@@ -166,7 +249,7 @@ module JCAPIv1
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [_id, beta, color, config, display_label, display_name, is_configured, jit, learn_more, name, sso_url].hash
+      [_id, beta, status, color, config, display_label, display_name, is_configured, jit, learn_more, logo, name, sso_url, test, keywords].hash
     end
 
     # Builds the object from hash

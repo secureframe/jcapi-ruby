@@ -1,7 +1,7 @@
 =begin
 #JumpCloud APIs
 
-# JumpCloud's V1 API. This set of endpoints allows JumpCloud customers to manage commands, systems, & system users.
+#JumpCloud's V1 API. This set of endpoints allows JumpCloud customers to manage objects, groupings and mappings and interact with the JumpCloud Graph.
 
 OpenAPI spec version: 1.0
 
@@ -46,6 +46,8 @@ module JCAPIv1
     attr_accessor :enable_user_portal_multifactor
 
     attr_accessor :external_dn
+
+    attr_accessor :external_password_expiration_date
 
     attr_accessor :external_source_type
 
@@ -110,6 +112,7 @@ module JCAPIv1
         :'enable_managed_uid' => :'enable_managed_uid',
         :'enable_user_portal_multifactor' => :'enable_user_portal_multifactor',
         :'external_dn' => :'external_dn',
+        :'external_password_expiration_date' => :'external_password_expiration_date',
         :'external_source_type' => :'external_source_type',
         :'externally_managed' => :'externally_managed',
         :'firstname' => :'firstname',
@@ -153,6 +156,7 @@ module JCAPIv1
         :'enable_managed_uid' => :'BOOLEAN',
         :'enable_user_portal_multifactor' => :'BOOLEAN',
         :'external_dn' => :'String',
+        :'external_password_expiration_date' => :'String',
         :'external_source_type' => :'String',
         :'externally_managed' => :'BOOLEAN',
         :'firstname' => :'String',
@@ -248,6 +252,10 @@ module JCAPIv1
 
       if attributes.has_key?(:'external_dn')
         self.external_dn = attributes[:'external_dn']
+      end
+
+      if attributes.has_key?(:'external_password_expiration_date')
+        self.external_password_expiration_date = attributes[:'external_password_expiration_date']
       end
 
       if attributes.has_key?(:'external_source_type')
@@ -637,6 +645,7 @@ module JCAPIv1
           enable_managed_uid == o.enable_managed_uid &&
           enable_user_portal_multifactor == o.enable_user_portal_multifactor &&
           external_dn == o.external_dn &&
+          external_password_expiration_date == o.external_password_expiration_date &&
           external_source_type == o.external_source_type &&
           externally_managed == o.externally_managed &&
           firstname == o.firstname &&
@@ -670,7 +679,7 @@ module JCAPIv1
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [account_locked, addresses, allow_public_key, attributes, company, cost_center, department, description, displayname, email, employee_identifier, employee_type, enable_managed_uid, enable_user_portal_multifactor, external_dn, external_source_type, externally_managed, firstname, job_title, lastname, ldap_binding_user, location, mfa, middlename, password, password_never_expires, phone_numbers, public_key, relationships, samba_service_user, ssh_keys, sudo, suspended, tags, unix_guid, unix_uid, username].hash
+      [account_locked, addresses, allow_public_key, attributes, company, cost_center, department, description, displayname, email, employee_identifier, employee_type, enable_managed_uid, enable_user_portal_multifactor, external_dn, external_password_expiration_date, external_source_type, externally_managed, firstname, job_title, lastname, ldap_binding_user, location, mfa, middlename, password, password_never_expires, phone_numbers, public_key, relationships, samba_service_user, ssh_keys, sudo, suspended, tags, unix_guid, unix_uid, username].hash
     end
 
     # Builds the object from hash

@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**groups** | **Array&lt;String&gt;** |  | [optional] 
-**name** | **String** |  | [optional] 
-**users** | **Array&lt;String&gt;** |  | [optional] 
+**id** | **String** |  | [optional] 
+**user_lockout_action** | [**LdapServerAction**](LdapServerAction.md) |  | [optional] 
+**user_password_expiration_action** | [**LdapServerAction**](LdapServerAction.md) |  | [optional] 
 
 

@@ -19,6 +19,7 @@ Name | Type | Description | Notes
 **enable_managed_uid** | **BOOLEAN** |  | [optional] 
 **enable_user_portal_multifactor** | **BOOLEAN** |  | [optional] 
 **external_dn** | **String** |  | [optional] 
+**external_password_expiration_date** | **DateTime** |  | [optional] 
 **external_source_type** | **String** |  | [optional] 
 **externally_managed** | **BOOLEAN** |  | [optional] 
 **firstname** | **String** |  | [optional] 
