@@ -32,7 +32,7 @@ describe 'BulkJobRequestsApi' do
     end
   end
 
-  # unit tests for g_et_bulk_users_job_id_results
+  # unit tests for get_bulk_users_job_id_results
   # List Bulk Users Results
   # This endpoint will return the results of particular user import or update job request.  #### Sample Request &#x60;&#x60;&#x60; curl -X GET \\   https://console.jumpcloud.com/api/v2/bulk/users/{ImportJobID}/results \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39;   &#x60;&#x60;&#x60;
   # @param job_id 
@@ -43,7 +43,7 @@ describe 'BulkJobRequestsApi' do
   # @option opts [Integer] :skip The offset into the records to return.
   # @option opts [String] :x_org_id 
   # @return [Array<JobWorkresult>]
-  describe 'g_et_bulk_users_job_id_results test' do
+  describe 'get_bulk_users_job_id_results test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

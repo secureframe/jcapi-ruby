@@ -32,8 +32,8 @@ module JCAPIv1
     # @option opts [String] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id  (default to )
     # @return [Applicationtemplateslist]
-    def g_et_application_templates(accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_application_templates_with_http_info(accept, content_type, opts)
+    def get_application_templates(accept, content_type, opts = {})
+      data, _status_code, _headers = get_application_templates_with_http_info(accept, content_type, opts)
       return data
     end
 
@@ -49,17 +49,17 @@ module JCAPIv1
     # @option opts [String] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id 
     # @return [Array<(Applicationtemplateslist, Fixnum, Hash)>] Applicationtemplateslist data, response status code and response headers
-    def g_et_application_templates_with_http_info(accept, content_type, opts = {})
+    def get_application_templates_with_http_info(accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: ApplicationTemplatesApi.g_et_application_templates ..."
+        @api_client.config.logger.debug "Calling API: ApplicationTemplatesApi.get_application_templates ..."
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling ApplicationTemplatesApi.g_et_application_templates"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling ApplicationTemplatesApi.get_application_templates"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling ApplicationTemplatesApi.g_et_application_templates"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling ApplicationTemplatesApi.get_application_templates"
       end
       # resource path
       local_var_path = "/application-templates"
@@ -92,7 +92,7 @@ module JCAPIv1
         :auth_names => auth_names,
         :return_type => 'Applicationtemplateslist')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: ApplicationTemplatesApi#g_et_application_templates\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: ApplicationTemplatesApi#get_application_templates\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -110,8 +110,8 @@ module JCAPIv1
     # @option opts [String] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id  (default to )
     # @return [Applicationtemplate]
-    def g_et_application_templates_id(id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_application_templates_id_with_http_info(id, accept, content_type, opts)
+    def get_application_templates_id(id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_application_templates_id_with_http_info(id, accept, content_type, opts)
       return data
     end
 
@@ -128,21 +128,21 @@ module JCAPIv1
     # @option opts [String] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id 
     # @return [Array<(Applicationtemplate, Fixnum, Hash)>] Applicationtemplate data, response status code and response headers
-    def g_et_application_templates_id_with_http_info(id, accept, content_type, opts = {})
+    def get_application_templates_id_with_http_info(id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: ApplicationTemplatesApi.g_et_application_templates_id ..."
+        @api_client.config.logger.debug "Calling API: ApplicationTemplatesApi.get_application_templates_id ..."
       end
       # verify the required parameter 'id' is set
       if @api_client.config.client_side_validation && id.nil?
-        fail ArgumentError, "Missing the required parameter 'id' when calling ApplicationTemplatesApi.g_et_application_templates_id"
+        fail ArgumentError, "Missing the required parameter 'id' when calling ApplicationTemplatesApi.get_application_templates_id"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling ApplicationTemplatesApi.g_et_application_templates_id"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling ApplicationTemplatesApi.get_application_templates_id"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling ApplicationTemplatesApi.g_et_application_templates_id"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling ApplicationTemplatesApi.get_application_templates_id"
       end
       # resource path
       local_var_path = "/application-templates/{id}".sub('{' + 'id' + '}', id.to_s)
@@ -175,7 +175,7 @@ module JCAPIv1
         :auth_names => auth_names,
         :return_type => 'Applicationtemplate')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: ApplicationTemplatesApi#g_et_application_templates_id\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: ApplicationTemplatesApi#get_application_templates_id\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

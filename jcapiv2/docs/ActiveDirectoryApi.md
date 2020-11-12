@@ -4,14 +4,14 @@ All URIs are relative to *https://console.jumpcloud.com/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**g_et_activedirectories**](ActiveDirectoryApi.md#g_et_activedirectories) | **GET** /activedirectories | List Active Directories
-[**g_et_activedirectories_activedirectory_id_associations**](ActiveDirectoryApi.md#g_et_activedirectories_activedirectory_id_associations) | **GET** /activedirectories/{activedirectory_id}/associations | List the associations of an Active Directory instance
-[**g_et_activedirectories_activedirectory_id_usergroups**](ActiveDirectoryApi.md#g_et_activedirectories_activedirectory_id_usergroups) | **GET** /activedirectories/{activedirectory_id}/usergroups | List the User Groups bound to an Active Directory instance
-[**g_et_activedirectories_id**](ActiveDirectoryApi.md#g_et_activedirectories_id) | **GET** /activedirectories/{id} | Get an Active Directory
+[**get_activedirectories**](ActiveDirectoryApi.md#get_activedirectories) | **GET** /activedirectories | List Active Directories
+[**get_activedirectories_activedirectory_id_associations**](ActiveDirectoryApi.md#get_activedirectories_activedirectory_id_associations) | **GET** /activedirectories/{activedirectory_id}/associations | List the associations of an Active Directory instance
+[**get_activedirectories_activedirectory_id_usergroups**](ActiveDirectoryApi.md#get_activedirectories_activedirectory_id_usergroups) | **GET** /activedirectories/{activedirectory_id}/usergroups | List the User Groups bound to an Active Directory instance
+[**get_activedirectories_id**](ActiveDirectoryApi.md#get_activedirectories_id) | **GET** /activedirectories/{id} | Get an Active Directory
 
 
-# **g_et_activedirectories**
-> Array&lt;ActiveDirectoryOutput&gt; g_et_activedirectories(accept, content_type, opts)
+# **get_activedirectories**
+> Array&lt;ActiveDirectoryOutput&gt; get_activedirectories(accept, content_type, opts)
 
 List Active Directories
 
@@ -46,10 +46,10 @@ opts = {
 
 begin
   #List Active Directories
-  result = api_instance.g_et_activedirectories(accept, content_type, opts)
+  result = api_instance.get_activedirectories(accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling ActiveDirectoryApi->g_et_activedirectories: #{e}"
+  puts "Exception when calling ActiveDirectoryApi->get_activedirectories: #{e}"
 end
 ```
 
@@ -81,8 +81,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_activedirectories_activedirectory_id_associations**
-> Array&lt;GraphConnection&gt; g_et_activedirectories_activedirectory_id_associations(activedirectory_id, targets, accept, content_type, opts)
+# **get_activedirectories_activedirectory_id_associations**
+> Array&lt;GraphConnection&gt; get_activedirectories_activedirectory_id_associations(activedirectory_id, targets, accept, content_type, opts)
 
 List the associations of an Active Directory instance
 
@@ -118,10 +118,10 @@ opts = {
 
 begin
   #List the associations of an Active Directory instance
-  result = api_instance.g_et_activedirectories_activedirectory_id_associations(activedirectory_id, targets, accept, content_type, opts)
+  result = api_instance.get_activedirectories_activedirectory_id_associations(activedirectory_id, targets, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling ActiveDirectoryApi->g_et_activedirectories_activedirectory_id_associations: #{e}"
+  puts "Exception when calling ActiveDirectoryApi->get_activedirectories_activedirectory_id_associations: #{e}"
 end
 ```
 
@@ -152,8 +152,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_activedirectories_activedirectory_id_usergroups**
-> Array&lt;GraphObjectWithPaths&gt; g_et_activedirectories_activedirectory_id_usergroups(activedirectory_id, accept, content_type, opts)
+# **get_activedirectories_activedirectory_id_usergroups**
+> Array&lt;GraphObjectWithPaths&gt; get_activedirectories_activedirectory_id_usergroups(activedirectory_id, accept, content_type, opts)
 
 List the User Groups bound to an Active Directory instance
 
@@ -188,10 +188,10 @@ opts = {
 
 begin
   #List the User Groups bound to an Active Directory instance
-  result = api_instance.g_et_activedirectories_activedirectory_id_usergroups(activedirectory_id, accept, content_type, opts)
+  result = api_instance.get_activedirectories_activedirectory_id_usergroups(activedirectory_id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling ActiveDirectoryApi->g_et_activedirectories_activedirectory_id_usergroups: #{e}"
+  puts "Exception when calling ActiveDirectoryApi->get_activedirectories_activedirectory_id_usergroups: #{e}"
 end
 ```
 
@@ -222,8 +222,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_activedirectories_id**
-> ActiveDirectoryOutput g_et_activedirectories_id(id, accept, content_type, opts)
+# **get_activedirectories_id**
+> ActiveDirectoryOutput get_activedirectories_id(id, accept, content_type, opts)
 
 Get an Active Directory
 
@@ -255,10 +255,10 @@ opts = {
 
 begin
   #Get an Active Directory
-  result = api_instance.g_et_activedirectories_id(id, accept, content_type, opts)
+  result = api_instance.get_activedirectories_id(id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling ActiveDirectoryApi->g_et_activedirectories_id: #{e}"
+  puts "Exception when calling ActiveDirectoryApi->get_activedirectories_id: #{e}"
 end
 ```
 

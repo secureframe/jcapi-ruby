@@ -99,8 +99,8 @@ module JCAPIv2
     # @param [Hash] opts the optional parameters
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<AppleMDM>]
-    def g_et_applemdms(accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_applemdms_with_http_info(accept, content_type, opts)
+    def get_applemdms(accept, content_type, opts = {})
+      data, _status_code, _headers = get_applemdms_with_http_info(accept, content_type, opts)
       return data
     end
 
@@ -111,17 +111,17 @@ module JCAPIv2
     # @param [Hash] opts the optional parameters
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<AppleMDM>, Fixnum, Hash)>] Array<AppleMDM> data, response status code and response headers
-    def g_et_applemdms_with_http_info(accept, content_type, opts = {})
+    def get_applemdms_with_http_info(accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: AppleMDMApi.g_et_applemdms ..."
+        @api_client.config.logger.debug "Calling API: AppleMDMApi.get_applemdms ..."
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling AppleMDMApi.g_et_applemdms"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling AppleMDMApi.get_applemdms"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling AppleMDMApi.g_et_applemdms"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling AppleMDMApi.get_applemdms"
       end
       # resource path
       local_var_path = "/applemdms"
@@ -153,7 +153,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<AppleMDM>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: AppleMDMApi#g_et_applemdms\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: AppleMDMApi#get_applemdms\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -166,8 +166,8 @@ module JCAPIv2
     # @param [Hash] opts the optional parameters
     # @option opts [String] :x_org_id  (default to )
     # @return [AppleMdmSignedCsrPlist]
-    def g_et_applemdms_apple_mdm_id_csr(apple_mdm_id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_applemdms_apple_mdm_id_csr_with_http_info(apple_mdm_id, accept, content_type, opts)
+    def get_applemdms_apple_mdm_id_csr(apple_mdm_id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_applemdms_apple_mdm_id_csr_with_http_info(apple_mdm_id, accept, content_type, opts)
       return data
     end
 
@@ -179,21 +179,21 @@ module JCAPIv2
     # @param [Hash] opts the optional parameters
     # @option opts [String] :x_org_id 
     # @return [Array<(AppleMdmSignedCsrPlist, Fixnum, Hash)>] AppleMdmSignedCsrPlist data, response status code and response headers
-    def g_et_applemdms_apple_mdm_id_csr_with_http_info(apple_mdm_id, accept, content_type, opts = {})
+    def get_applemdms_apple_mdm_id_csr_with_http_info(apple_mdm_id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: AppleMDMApi.g_et_applemdms_apple_mdm_id_csr ..."
+        @api_client.config.logger.debug "Calling API: AppleMDMApi.get_applemdms_apple_mdm_id_csr ..."
       end
       # verify the required parameter 'apple_mdm_id' is set
       if @api_client.config.client_side_validation && apple_mdm_id.nil?
-        fail ArgumentError, "Missing the required parameter 'apple_mdm_id' when calling AppleMDMApi.g_et_applemdms_apple_mdm_id_csr"
+        fail ArgumentError, "Missing the required parameter 'apple_mdm_id' when calling AppleMDMApi.get_applemdms_apple_mdm_id_csr"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling AppleMDMApi.g_et_applemdms_apple_mdm_id_csr"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling AppleMDMApi.get_applemdms_apple_mdm_id_csr"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling AppleMDMApi.g_et_applemdms_apple_mdm_id_csr"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling AppleMDMApi.get_applemdms_apple_mdm_id_csr"
       end
       # resource path
       local_var_path = "/applemdms/{apple_mdm_id}/csr".sub('{' + 'apple_mdm_id' + '}', apple_mdm_id.to_s)
@@ -225,7 +225,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'AppleMdmSignedCsrPlist')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: AppleMDMApi#g_et_applemdms_apple_mdm_id_csr\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: AppleMDMApi#get_applemdms_apple_mdm_id_csr\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -238,8 +238,8 @@ module JCAPIv2
     # @param [Hash] opts the optional parameters
     # @option opts [String] :x_org_id  (default to )
     # @return [AppleMdmPublicKeyCert]
-    def g_et_applemdms_apple_mdm_id_depkey(apple_mdm_id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_applemdms_apple_mdm_id_depkey_with_http_info(apple_mdm_id, accept, content_type, opts)
+    def get_applemdms_apple_mdm_id_depkey(apple_mdm_id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_applemdms_apple_mdm_id_depkey_with_http_info(apple_mdm_id, accept, content_type, opts)
       return data
     end
 
@@ -251,21 +251,21 @@ module JCAPIv2
     # @param [Hash] opts the optional parameters
     # @option opts [String] :x_org_id 
     # @return [Array<(AppleMdmPublicKeyCert, Fixnum, Hash)>] AppleMdmPublicKeyCert data, response status code and response headers
-    def g_et_applemdms_apple_mdm_id_depkey_with_http_info(apple_mdm_id, accept, content_type, opts = {})
+    def get_applemdms_apple_mdm_id_depkey_with_http_info(apple_mdm_id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: AppleMDMApi.g_et_applemdms_apple_mdm_id_depkey ..."
+        @api_client.config.logger.debug "Calling API: AppleMDMApi.get_applemdms_apple_mdm_id_depkey ..."
       end
       # verify the required parameter 'apple_mdm_id' is set
       if @api_client.config.client_side_validation && apple_mdm_id.nil?
-        fail ArgumentError, "Missing the required parameter 'apple_mdm_id' when calling AppleMDMApi.g_et_applemdms_apple_mdm_id_depkey"
+        fail ArgumentError, "Missing the required parameter 'apple_mdm_id' when calling AppleMDMApi.get_applemdms_apple_mdm_id_depkey"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling AppleMDMApi.g_et_applemdms_apple_mdm_id_depkey"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling AppleMDMApi.get_applemdms_apple_mdm_id_depkey"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling AppleMDMApi.g_et_applemdms_apple_mdm_id_depkey"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling AppleMDMApi.get_applemdms_apple_mdm_id_depkey"
       end
       # resource path
       local_var_path = "/applemdms/{apple_mdm_id}/depkey".sub('{' + 'apple_mdm_id' + '}', apple_mdm_id.to_s)
@@ -297,7 +297,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'AppleMdmPublicKeyCert')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: AppleMDMApi#g_et_applemdms_apple_mdm_id_depkey\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: AppleMDMApi#get_applemdms_apple_mdm_id_depkey\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -314,8 +314,8 @@ module JCAPIv2
     # @option opts [Integer] :x_total_count 
     # @option opts [Integer] :x_unfiltered_total_count If provided in the request with any non-empty value, this header will be returned on the response populated with the total count of objects without filters taken into account
     # @return [Array<AppleMdmDevice>]
-    def g_et_applemdms_apple_mdm_id_devices(apple_mdm_id, opts = {})
-      data, _status_code, _headers = g_et_applemdms_apple_mdm_id_devices_with_http_info(apple_mdm_id, opts)
+    def get_applemdms_apple_mdm_id_devices(apple_mdm_id, opts = {})
+      data, _status_code, _headers = get_applemdms_apple_mdm_id_devices_with_http_info(apple_mdm_id, opts)
       return data
     end
 
@@ -331,16 +331,16 @@ module JCAPIv2
     # @option opts [Integer] :x_total_count 
     # @option opts [Integer] :x_unfiltered_total_count If provided in the request with any non-empty value, this header will be returned on the response populated with the total count of objects without filters taken into account
     # @return [Array<(Array<AppleMdmDevice>, Fixnum, Hash)>] Array<AppleMdmDevice> data, response status code and response headers
-    def g_et_applemdms_apple_mdm_id_devices_with_http_info(apple_mdm_id, opts = {})
+    def get_applemdms_apple_mdm_id_devices_with_http_info(apple_mdm_id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: AppleMDMApi.g_et_applemdms_apple_mdm_id_devices ..."
+        @api_client.config.logger.debug "Calling API: AppleMDMApi.get_applemdms_apple_mdm_id_devices ..."
       end
       # verify the required parameter 'apple_mdm_id' is set
       if @api_client.config.client_side_validation && apple_mdm_id.nil?
-        fail ArgumentError, "Missing the required parameter 'apple_mdm_id' when calling AppleMDMApi.g_et_applemdms_apple_mdm_id_devices"
+        fail ArgumentError, "Missing the required parameter 'apple_mdm_id' when calling AppleMDMApi.get_applemdms_apple_mdm_id_devices"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling AppleMDMApi.g_et_applemdms_apple_mdm_id_devices, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling AppleMDMApi.get_applemdms_apple_mdm_id_devices, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -377,7 +377,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<AppleMdmDevice>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: AppleMDMApi#g_et_applemdms_apple_mdm_id_devices\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: AppleMDMApi#get_applemdms_apple_mdm_id_devices\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -390,8 +390,8 @@ module JCAPIv2
     # @param [Hash] opts the optional parameters
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<AppleMDM>]
-    def g_et_applemdms_apple_mdm_id_enrollmentprofiles(apple_mdm_id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_applemdms_apple_mdm_id_enrollmentprofiles_with_http_info(apple_mdm_id, accept, content_type, opts)
+    def get_applemdms_apple_mdm_id_enrollmentprofiles(apple_mdm_id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_applemdms_apple_mdm_id_enrollmentprofiles_with_http_info(apple_mdm_id, accept, content_type, opts)
       return data
     end
 
@@ -403,21 +403,21 @@ module JCAPIv2
     # @param [Hash] opts the optional parameters
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<AppleMDM>, Fixnum, Hash)>] Array<AppleMDM> data, response status code and response headers
-    def g_et_applemdms_apple_mdm_id_enrollmentprofiles_with_http_info(apple_mdm_id, accept, content_type, opts = {})
+    def get_applemdms_apple_mdm_id_enrollmentprofiles_with_http_info(apple_mdm_id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: AppleMDMApi.g_et_applemdms_apple_mdm_id_enrollmentprofiles ..."
+        @api_client.config.logger.debug "Calling API: AppleMDMApi.get_applemdms_apple_mdm_id_enrollmentprofiles ..."
       end
       # verify the required parameter 'apple_mdm_id' is set
       if @api_client.config.client_side_validation && apple_mdm_id.nil?
-        fail ArgumentError, "Missing the required parameter 'apple_mdm_id' when calling AppleMDMApi.g_et_applemdms_apple_mdm_id_enrollmentprofiles"
+        fail ArgumentError, "Missing the required parameter 'apple_mdm_id' when calling AppleMDMApi.get_applemdms_apple_mdm_id_enrollmentprofiles"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling AppleMDMApi.g_et_applemdms_apple_mdm_id_enrollmentprofiles"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling AppleMDMApi.get_applemdms_apple_mdm_id_enrollmentprofiles"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling AppleMDMApi.g_et_applemdms_apple_mdm_id_enrollmentprofiles"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling AppleMDMApi.get_applemdms_apple_mdm_id_enrollmentprofiles"
       end
       # resource path
       local_var_path = "/applemdms/{apple_mdm_id}/enrollmentprofiles".sub('{' + 'apple_mdm_id' + '}', apple_mdm_id.to_s)
@@ -449,7 +449,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<AppleMDM>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: AppleMDMApi#g_et_applemdms_apple_mdm_id_enrollmentprofiles\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: AppleMDMApi#get_applemdms_apple_mdm_id_enrollmentprofiles\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -463,8 +463,8 @@ module JCAPIv2
     # @param [Hash] opts the optional parameters
     # @option opts [String] :x_org_id  (default to )
     # @return [Mobileconfig]
-    def g_et_applemdms_apple_mdm_id_enrollmentprofiles_id(apple_mdm_id, id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_applemdms_apple_mdm_id_enrollmentprofiles_id_with_http_info(apple_mdm_id, id, accept, content_type, opts)
+    def get_applemdms_apple_mdm_id_enrollmentprofiles_id(apple_mdm_id, id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_applemdms_apple_mdm_id_enrollmentprofiles_id_with_http_info(apple_mdm_id, id, accept, content_type, opts)
       return data
     end
 
@@ -477,25 +477,25 @@ module JCAPIv2
     # @param [Hash] opts the optional parameters
     # @option opts [String] :x_org_id 
     # @return [Array<(Mobileconfig, Fixnum, Hash)>] Mobileconfig data, response status code and response headers
-    def g_et_applemdms_apple_mdm_id_enrollmentprofiles_id_with_http_info(apple_mdm_id, id, accept, content_type, opts = {})
+    def get_applemdms_apple_mdm_id_enrollmentprofiles_id_with_http_info(apple_mdm_id, id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: AppleMDMApi.g_et_applemdms_apple_mdm_id_enrollmentprofiles_id ..."
+        @api_client.config.logger.debug "Calling API: AppleMDMApi.get_applemdms_apple_mdm_id_enrollmentprofiles_id ..."
       end
       # verify the required parameter 'apple_mdm_id' is set
       if @api_client.config.client_side_validation && apple_mdm_id.nil?
-        fail ArgumentError, "Missing the required parameter 'apple_mdm_id' when calling AppleMDMApi.g_et_applemdms_apple_mdm_id_enrollmentprofiles_id"
+        fail ArgumentError, "Missing the required parameter 'apple_mdm_id' when calling AppleMDMApi.get_applemdms_apple_mdm_id_enrollmentprofiles_id"
       end
       # verify the required parameter 'id' is set
       if @api_client.config.client_side_validation && id.nil?
-        fail ArgumentError, "Missing the required parameter 'id' when calling AppleMDMApi.g_et_applemdms_apple_mdm_id_enrollmentprofiles_id"
+        fail ArgumentError, "Missing the required parameter 'id' when calling AppleMDMApi.get_applemdms_apple_mdm_id_enrollmentprofiles_id"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling AppleMDMApi.g_et_applemdms_apple_mdm_id_enrollmentprofiles_id"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling AppleMDMApi.get_applemdms_apple_mdm_id_enrollmentprofiles_id"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling AppleMDMApi.g_et_applemdms_apple_mdm_id_enrollmentprofiles_id"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling AppleMDMApi.get_applemdms_apple_mdm_id_enrollmentprofiles_id"
       end
       # resource path
       local_var_path = "/applemdms/{apple_mdm_id}/enrollmentprofiles/{id}".sub('{' + 'apple_mdm_id' + '}', apple_mdm_id.to_s).sub('{' + 'id' + '}', id.to_s)
@@ -527,7 +527,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Mobileconfig')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: AppleMDMApi#g_et_applemdms_apple_mdm_id_enrollmentprofiles_id\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: AppleMDMApi#get_applemdms_apple_mdm_id_enrollmentprofiles_id\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

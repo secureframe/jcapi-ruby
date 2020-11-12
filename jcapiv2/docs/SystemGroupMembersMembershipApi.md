@@ -4,13 +4,13 @@ All URIs are relative to *https://console.jumpcloud.com/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**g_et_systemgroups_group_id_members**](SystemGroupMembersMembershipApi.md#g_et_systemgroups_group_id_members) | **GET** /systemgroups/{group_id}/members | List the members of a System Group
-[**g_et_systemgroups_group_id_membership**](SystemGroupMembersMembershipApi.md#g_et_systemgroups_group_id_membership) | **GET** /systemgroups/{group_id}/membership | List the System Group&#39;s membership
+[**get_systemgroups_group_id_members**](SystemGroupMembersMembershipApi.md#get_systemgroups_group_id_members) | **GET** /systemgroups/{group_id}/members | List the members of a System Group
+[**get_systemgroups_group_id_membership**](SystemGroupMembersMembershipApi.md#get_systemgroups_group_id_membership) | **GET** /systemgroups/{group_id}/membership | List the System Group&#39;s membership
 [**p_ost_systemgroups_group_id_members**](SystemGroupMembersMembershipApi.md#p_ost_systemgroups_group_id_members) | **POST** /systemgroups/{group_id}/members | Manage the members of a System Group
 
 
-# **g_et_systemgroups_group_id_members**
-> Array&lt;GraphConnection&gt; g_et_systemgroups_group_id_members(group_id, accept, content_type, opts)
+# **get_systemgroups_group_id_members**
+> Array&lt;GraphConnection&gt; get_systemgroups_group_id_members(group_id, accept, content_type, opts)
 
 List the members of a System Group
 
@@ -44,10 +44,10 @@ opts = {
 
 begin
   #List the members of a System Group
-  result = api_instance.g_et_systemgroups_group_id_members(group_id, accept, content_type, opts)
+  result = api_instance.get_systemgroups_group_id_members(group_id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling SystemGroupMembersMembershipApi->g_et_systemgroups_group_id_members: #{e}"
+  puts "Exception when calling SystemGroupMembersMembershipApi->get_systemgroups_group_id_members: #{e}"
 end
 ```
 
@@ -77,8 +77,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_systemgroups_group_id_membership**
-> Array&lt;GraphObjectWithPaths&gt; g_et_systemgroups_group_id_membership(group_id, accept, content_type, opts)
+# **get_systemgroups_group_id_membership**
+> Array&lt;GraphObjectWithPaths&gt; get_systemgroups_group_id_membership(group_id, accept, content_type, opts)
 
 List the System Group's membership
 
@@ -114,10 +114,10 @@ opts = {
 
 begin
   #List the System Group's membership
-  result = api_instance.g_et_systemgroups_group_id_membership(group_id, accept, content_type, opts)
+  result = api_instance.get_systemgroups_group_id_membership(group_id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling SystemGroupMembersMembershipApi->g_et_systemgroups_group_id_membership: #{e}"
+  puts "Exception when calling SystemGroupMembersMembershipApi->get_systemgroups_group_id_membership: #{e}"
 end
 ```
 

@@ -4,13 +4,13 @@ All URIs are relative to *https://console.jumpcloud.com/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**g_et_bulk_users_job_id_results**](BulkJobRequestsApi.md#g_et_bulk_users_job_id_results) | **GET** /bulk/users/{job_id}/results | List Bulk Users Results
+[**get_bulk_users_job_id_results**](BulkJobRequestsApi.md#get_bulk_users_job_id_results) | **GET** /bulk/users/{job_id}/results | List Bulk Users Results
 [**p_atch_bulk_users**](BulkJobRequestsApi.md#p_atch_bulk_users) | **PATCH** /bulk/users | Bulk Users Update
 [**p_ost_bulk_users**](BulkJobRequestsApi.md#p_ost_bulk_users) | **POST** /bulk/users | Bulk Users Create
 
 
-# **g_et_bulk_users_job_id_results**
-> Array&lt;JobWorkresult&gt; g_et_bulk_users_job_id_results(job_id, accept, content_type, opts)
+# **get_bulk_users_job_id_results**
+> Array&lt;JobWorkresult&gt; get_bulk_users_job_id_results(job_id, accept, content_type, opts)
 
 List Bulk Users Results
 
@@ -44,10 +44,10 @@ opts = {
 
 begin
   #List Bulk Users Results
-  result = api_instance.g_et_bulk_users_job_id_results(job_id, accept, content_type, opts)
+  result = api_instance.get_bulk_users_job_id_results(job_id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling BulkJobRequestsApi->g_et_bulk_users_job_id_results: #{e}"
+  puts "Exception when calling BulkJobRequestsApi->get_bulk_users_job_id_results: #{e}"
 end
 ```
 

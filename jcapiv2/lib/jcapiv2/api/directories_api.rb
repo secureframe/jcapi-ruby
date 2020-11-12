@@ -31,8 +31,8 @@ module JCAPIv2
     # @option opts [Integer] :skip The offset into the records to return. (default to 0)
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<Directory>]
-    def g_et_directories(accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_directories_with_http_info(accept, content_type, opts)
+    def get_directories(accept, content_type, opts = {})
+      data, _status_code, _headers = get_directories_with_http_info(accept, content_type, opts)
       return data
     end
 
@@ -47,20 +47,20 @@ module JCAPIv2
     # @option opts [Integer] :skip The offset into the records to return.
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<Directory>, Fixnum, Hash)>] Array<Directory> data, response status code and response headers
-    def g_et_directories_with_http_info(accept, content_type, opts = {})
+    def get_directories_with_http_info(accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: DirectoriesApi.g_et_directories ..."
+        @api_client.config.logger.debug "Calling API: DirectoriesApi.get_directories ..."
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling DirectoriesApi.g_et_directories"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling DirectoriesApi.get_directories"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling DirectoriesApi.g_et_directories"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling DirectoriesApi.get_directories"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling DirectoriesApi.g_et_directories, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling DirectoriesApi.get_directories, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -97,7 +97,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<Directory>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: DirectoriesApi#g_et_directories\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: DirectoriesApi#get_directories\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

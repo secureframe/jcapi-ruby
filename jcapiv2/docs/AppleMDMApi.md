@@ -5,12 +5,12 @@ All URIs are relative to *https://console.jumpcloud.com/api/v2*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**d_elete_applemdms_id**](AppleMDMApi.md#d_elete_applemdms_id) | **DELETE** /applemdms/{id} | Delete an Apple MDM
-[**g_et_applemdms**](AppleMDMApi.md#g_et_applemdms) | **GET** /applemdms | List Apple MDMs
-[**g_et_applemdms_apple_mdm_id_csr**](AppleMDMApi.md#g_et_applemdms_apple_mdm_id_csr) | **GET** /applemdms/{apple_mdm_id}/csr | Get Apple MDM CSR Plist
-[**g_et_applemdms_apple_mdm_id_depkey**](AppleMDMApi.md#g_et_applemdms_apple_mdm_id_depkey) | **GET** /applemdms/{apple_mdm_id}/depkey | Get Apple MDM DEP Public Key
-[**g_et_applemdms_apple_mdm_id_devices**](AppleMDMApi.md#g_et_applemdms_apple_mdm_id_devices) | **GET** /applemdms/{apple_mdm_id}/devices | List AppleMDM Devices
-[**g_et_applemdms_apple_mdm_id_enrollmentprofiles**](AppleMDMApi.md#g_et_applemdms_apple_mdm_id_enrollmentprofiles) | **GET** /applemdms/{apple_mdm_id}/enrollmentprofiles | List Apple MDM Enrollment Profiles
-[**g_et_applemdms_apple_mdm_id_enrollmentprofiles_id**](AppleMDMApi.md#g_et_applemdms_apple_mdm_id_enrollmentprofiles_id) | **GET** /applemdms/{apple_mdm_id}/enrollmentprofiles/{id} | Get an Apple MDM Enrollment Profile
+[**get_applemdms**](AppleMDMApi.md#get_applemdms) | **GET** /applemdms | List Apple MDMs
+[**get_applemdms_apple_mdm_id_csr**](AppleMDMApi.md#get_applemdms_apple_mdm_id_csr) | **GET** /applemdms/{apple_mdm_id}/csr | Get Apple MDM CSR Plist
+[**get_applemdms_apple_mdm_id_depkey**](AppleMDMApi.md#get_applemdms_apple_mdm_id_depkey) | **GET** /applemdms/{apple_mdm_id}/depkey | Get Apple MDM DEP Public Key
+[**get_applemdms_apple_mdm_id_devices**](AppleMDMApi.md#get_applemdms_apple_mdm_id_devices) | **GET** /applemdms/{apple_mdm_id}/devices | List AppleMDM Devices
+[**get_applemdms_apple_mdm_id_enrollmentprofiles**](AppleMDMApi.md#get_applemdms_apple_mdm_id_enrollmentprofiles) | **GET** /applemdms/{apple_mdm_id}/enrollmentprofiles | List Apple MDM Enrollment Profiles
+[**get_applemdms_apple_mdm_id_enrollmentprofiles_id**](AppleMDMApi.md#get_applemdms_apple_mdm_id_enrollmentprofiles_id) | **GET** /applemdms/{apple_mdm_id}/enrollmentprofiles/{id} | Get an Apple MDM Enrollment Profile
 [**p_ost_applemdms_apple_mdm_id_devices_device_id_erase**](AppleMDMApi.md#p_ost_applemdms_apple_mdm_id_devices_device_id_erase) | **POST** /applemdms/{apple_mdm_id}/devices/{device_id}/erase | Erase Device
 [**p_ost_applemdms_apple_mdm_id_devices_device_id_lock**](AppleMDMApi.md#p_ost_applemdms_apple_mdm_id_devices_device_id_lock) | **POST** /applemdms/{apple_mdm_id}/devices/{device_id}/lock | Lock Device
 [**p_ost_applemdms_apple_mdm_id_devices_device_id_restart**](AppleMDMApi.md#p_ost_applemdms_apple_mdm_id_devices_device_id_restart) | **POST** /applemdms/{apple_mdm_id}/devices/{device_id}/restart | Restart Device
@@ -83,8 +83,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_applemdms**
-> Array&lt;AppleMDM&gt; g_et_applemdms(accept, content_type, opts)
+# **get_applemdms**
+> Array&lt;AppleMDM&gt; get_applemdms(accept, content_type, opts)
 
 List Apple MDMs
 
@@ -114,10 +114,10 @@ opts = {
 
 begin
   #List Apple MDMs
-  result = api_instance.g_et_applemdms(accept, content_type, opts)
+  result = api_instance.get_applemdms(accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling AppleMDMApi->g_et_applemdms: #{e}"
+  puts "Exception when calling AppleMDMApi->get_applemdms: #{e}"
 end
 ```
 
@@ -144,8 +144,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_applemdms_apple_mdm_id_csr**
-> AppleMdmSignedCsrPlist g_et_applemdms_apple_mdm_id_csr(apple_mdm_id, accept, content_type, opts)
+# **get_applemdms_apple_mdm_id_csr**
+> AppleMdmSignedCsrPlist get_applemdms_apple_mdm_id_csr(apple_mdm_id, accept, content_type, opts)
 
 Get Apple MDM CSR Plist
 
@@ -177,10 +177,10 @@ opts = {
 
 begin
   #Get Apple MDM CSR Plist
-  result = api_instance.g_et_applemdms_apple_mdm_id_csr(apple_mdm_id, accept, content_type, opts)
+  result = api_instance.get_applemdms_apple_mdm_id_csr(apple_mdm_id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling AppleMDMApi->g_et_applemdms_apple_mdm_id_csr: #{e}"
+  puts "Exception when calling AppleMDMApi->get_applemdms_apple_mdm_id_csr: #{e}"
 end
 ```
 
@@ -208,8 +208,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_applemdms_apple_mdm_id_depkey**
-> AppleMdmPublicKeyCert g_et_applemdms_apple_mdm_id_depkey(apple_mdm_id, accept, content_type, opts)
+# **get_applemdms_apple_mdm_id_depkey**
+> AppleMdmPublicKeyCert get_applemdms_apple_mdm_id_depkey(apple_mdm_id, accept, content_type, opts)
 
 Get Apple MDM DEP Public Key
 
@@ -241,10 +241,10 @@ opts = {
 
 begin
   #Get Apple MDM DEP Public Key
-  result = api_instance.g_et_applemdms_apple_mdm_id_depkey(apple_mdm_id, accept, content_type, opts)
+  result = api_instance.get_applemdms_apple_mdm_id_depkey(apple_mdm_id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling AppleMDMApi->g_et_applemdms_apple_mdm_id_depkey: #{e}"
+  puts "Exception when calling AppleMDMApi->get_applemdms_apple_mdm_id_depkey: #{e}"
 end
 ```
 
@@ -272,8 +272,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_applemdms_apple_mdm_id_devices**
-> Array&lt;AppleMdmDevice&gt; g_et_applemdms_apple_mdm_id_devices(apple_mdm_id, opts)
+# **get_applemdms_apple_mdm_id_devices**
+> Array&lt;AppleMdmDevice&gt; get_applemdms_apple_mdm_id_devices(apple_mdm_id, opts)
 
 List AppleMDM Devices
 
@@ -307,10 +307,10 @@ opts = {
 
 begin
   #List AppleMDM Devices
-  result = api_instance.g_et_applemdms_apple_mdm_id_devices(apple_mdm_id, opts)
+  result = api_instance.get_applemdms_apple_mdm_id_devices(apple_mdm_id, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling AppleMDMApi->g_et_applemdms_apple_mdm_id_devices: #{e}"
+  puts "Exception when calling AppleMDMApi->get_applemdms_apple_mdm_id_devices: #{e}"
 end
 ```
 
@@ -342,8 +342,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_applemdms_apple_mdm_id_enrollmentprofiles**
-> Array&lt;AppleMDM&gt; g_et_applemdms_apple_mdm_id_enrollmentprofiles(apple_mdm_id, accept, content_type, opts)
+# **get_applemdms_apple_mdm_id_enrollmentprofiles**
+> Array&lt;AppleMDM&gt; get_applemdms_apple_mdm_id_enrollmentprofiles(apple_mdm_id, accept, content_type, opts)
 
 List Apple MDM Enrollment Profiles
 
@@ -375,10 +375,10 @@ opts = {
 
 begin
   #List Apple MDM Enrollment Profiles
-  result = api_instance.g_et_applemdms_apple_mdm_id_enrollmentprofiles(apple_mdm_id, accept, content_type, opts)
+  result = api_instance.get_applemdms_apple_mdm_id_enrollmentprofiles(apple_mdm_id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling AppleMDMApi->g_et_applemdms_apple_mdm_id_enrollmentprofiles: #{e}"
+  puts "Exception when calling AppleMDMApi->get_applemdms_apple_mdm_id_enrollmentprofiles: #{e}"
 end
 ```
 
@@ -406,8 +406,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_applemdms_apple_mdm_id_enrollmentprofiles_id**
-> Mobileconfig g_et_applemdms_apple_mdm_id_enrollmentprofiles_id(apple_mdm_id, id, accept, content_type, opts)
+# **get_applemdms_apple_mdm_id_enrollmentprofiles_id**
+> Mobileconfig get_applemdms_apple_mdm_id_enrollmentprofiles_id(apple_mdm_id, id, accept, content_type, opts)
 
 Get an Apple MDM Enrollment Profile
 
@@ -441,10 +441,10 @@ opts = {
 
 begin
   #Get an Apple MDM Enrollment Profile
-  result = api_instance.g_et_applemdms_apple_mdm_id_enrollmentprofiles_id(apple_mdm_id, id, accept, content_type, opts)
+  result = api_instance.get_applemdms_apple_mdm_id_enrollmentprofiles_id(apple_mdm_id, id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling AppleMDMApi->g_et_applemdms_apple_mdm_id_enrollmentprofiles_id: #{e}"
+  puts "Exception when calling AppleMDMApi->get_applemdms_apple_mdm_id_enrollmentprofiles_id: #{e}"
 end
 ```
 

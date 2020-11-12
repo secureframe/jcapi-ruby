@@ -32,14 +32,14 @@ describe 'FdeApi' do
     end
   end
 
-  # unit tests for g_et_systems_system_id_fdekey
+  # unit tests for get_systems_system_id_fdekey
   # Get System FDE Key
   # This endpoint will return the current (latest) fde key saved for a system.
   # @param system_id 
   # @param [Hash] opts the optional parameters
   # @option opts [String] :x_org_id 
   # @return [Systemfdekey]
-  describe 'g_et_systems_system_id_fdekey test' do
+  describe 'get_systems_system_id_fdekey test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

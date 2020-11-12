@@ -4,21 +4,21 @@ All URIs are relative to *https://console.jumpcloud.com/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**g_et_users_user_id_applications**](UsersApi.md#g_et_users_user_id_applications) | **GET** /users/{user_id}/applications | List the Applications bound to a User
-[**g_et_users_user_id_associations**](UsersApi.md#g_et_users_user_id_associations) | **GET** /users/{user_id}/associations | List the associations of a User
-[**g_et_users_user_id_directories**](UsersApi.md#g_et_users_user_id_directories) | **GET** /users/{user_id}/directories | List the Directories bound to a User
-[**g_et_users_user_id_gsuites**](UsersApi.md#g_et_users_user_id_gsuites) | **GET** /users/{user_id}/gsuites | List the G Suite instances bound to a User
-[**g_et_users_user_id_ldapservers**](UsersApi.md#g_et_users_user_id_ldapservers) | **GET** /users/{user_id}/ldapservers | List the LDAP servers bound to a User
-[**g_et_users_user_id_memberof**](UsersApi.md#g_et_users_user_id_memberof) | **GET** /users/{user_id}/memberof | List the parent Groups of a User
-[**g_et_users_user_id_office365s**](UsersApi.md#g_et_users_user_id_office365s) | **GET** /users/{user_id}/office365s | List the Office 365 instances bound to a User
-[**g_et_users_user_id_radiusservers**](UsersApi.md#g_et_users_user_id_radiusservers) | **GET** /users/{user_id}/radiusservers | List the RADIUS Servers bound to a User
-[**g_et_users_user_id_systemgroups**](UsersApi.md#g_et_users_user_id_systemgroups) | **GET** /users/{user_id}/systemgroups | List the System Groups bound to a User
-[**g_et_users_user_id_systems**](UsersApi.md#g_et_users_user_id_systems) | **GET** /users/{user_id}/systems | List the Systems bound to a User
+[**get_users_user_id_applications**](UsersApi.md#get_users_user_id_applications) | **GET** /users/{user_id}/applications | List the Applications bound to a User
+[**get_users_user_id_associations**](UsersApi.md#get_users_user_id_associations) | **GET** /users/{user_id}/associations | List the associations of a User
+[**get_users_user_id_directories**](UsersApi.md#get_users_user_id_directories) | **GET** /users/{user_id}/directories | List the Directories bound to a User
+[**get_users_user_id_gsuites**](UsersApi.md#get_users_user_id_gsuites) | **GET** /users/{user_id}/gsuites | List the G Suite instances bound to a User
+[**get_users_user_id_ldapservers**](UsersApi.md#get_users_user_id_ldapservers) | **GET** /users/{user_id}/ldapservers | List the LDAP servers bound to a User
+[**get_users_user_id_memberof**](UsersApi.md#get_users_user_id_memberof) | **GET** /users/{user_id}/memberof | List the parent Groups of a User
+[**get_users_user_id_office365s**](UsersApi.md#get_users_user_id_office365s) | **GET** /users/{user_id}/office365s | List the Office 365 instances bound to a User
+[**get_users_user_id_radiusservers**](UsersApi.md#get_users_user_id_radiusservers) | **GET** /users/{user_id}/radiusservers | List the RADIUS Servers bound to a User
+[**get_users_user_id_systemgroups**](UsersApi.md#get_users_user_id_systemgroups) | **GET** /users/{user_id}/systemgroups | List the System Groups bound to a User
+[**get_users_user_id_systems**](UsersApi.md#get_users_user_id_systems) | **GET** /users/{user_id}/systems | List the Systems bound to a User
 [**p_ost_users_user_id_associations**](UsersApi.md#p_ost_users_user_id_associations) | **POST** /users/{user_id}/associations | Manage the associations of a User
 
 
-# **g_et_users_user_id_applications**
-> Array&lt;GraphObjectWithPaths&gt; g_et_users_user_id_applications(user_id, accept, content_type, opts)
+# **get_users_user_id_applications**
+> Array&lt;GraphObjectWithPaths&gt; get_users_user_id_applications(user_id, accept, content_type, opts)
 
 List the Applications bound to a User
 
@@ -53,10 +53,10 @@ opts = {
 
 begin
   #List the Applications bound to a User
-  result = api_instance.g_et_users_user_id_applications(user_id, accept, content_type, opts)
+  result = api_instance.get_users_user_id_applications(user_id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling UsersApi->g_et_users_user_id_applications: #{e}"
+  puts "Exception when calling UsersApi->get_users_user_id_applications: #{e}"
 end
 ```
 
@@ -87,8 +87,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_users_user_id_associations**
-> Array&lt;GraphConnection&gt; g_et_users_user_id_associations(user_id, targets, accept, content_type, opts)
+# **get_users_user_id_associations**
+> Array&lt;GraphConnection&gt; get_users_user_id_associations(user_id, targets, accept, content_type, opts)
 
 List the associations of a User
 
@@ -124,10 +124,10 @@ opts = {
 
 begin
   #List the associations of a User
-  result = api_instance.g_et_users_user_id_associations(user_id, targets, accept, content_type, opts)
+  result = api_instance.get_users_user_id_associations(user_id, targets, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling UsersApi->g_et_users_user_id_associations: #{e}"
+  puts "Exception when calling UsersApi->get_users_user_id_associations: #{e}"
 end
 ```
 
@@ -158,8 +158,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_users_user_id_directories**
-> Array&lt;GraphObjectWithPaths&gt; g_et_users_user_id_directories(user_id, accept, content_type, opts)
+# **get_users_user_id_directories**
+> Array&lt;GraphObjectWithPaths&gt; get_users_user_id_directories(user_id, accept, content_type, opts)
 
 List the Directories bound to a User
 
@@ -194,10 +194,10 @@ opts = {
 
 begin
   #List the Directories bound to a User
-  result = api_instance.g_et_users_user_id_directories(user_id, accept, content_type, opts)
+  result = api_instance.get_users_user_id_directories(user_id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling UsersApi->g_et_users_user_id_directories: #{e}"
+  puts "Exception when calling UsersApi->get_users_user_id_directories: #{e}"
 end
 ```
 
@@ -228,8 +228,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_users_user_id_gsuites**
-> Array&lt;GraphObjectWithPaths&gt; g_et_users_user_id_gsuites(user_id, accept, content_type, opts)
+# **get_users_user_id_gsuites**
+> Array&lt;GraphObjectWithPaths&gt; get_users_user_id_gsuites(user_id, accept, content_type, opts)
 
 List the G Suite instances bound to a User
 
@@ -264,10 +264,10 @@ opts = {
 
 begin
   #List the G Suite instances bound to a User
-  result = api_instance.g_et_users_user_id_gsuites(user_id, accept, content_type, opts)
+  result = api_instance.get_users_user_id_gsuites(user_id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling UsersApi->g_et_users_user_id_gsuites: #{e}"
+  puts "Exception when calling UsersApi->get_users_user_id_gsuites: #{e}"
 end
 ```
 
@@ -298,8 +298,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_users_user_id_ldapservers**
-> Array&lt;GraphObjectWithPaths&gt; g_et_users_user_id_ldapservers(user_id, accept, content_type, opts)
+# **get_users_user_id_ldapservers**
+> Array&lt;GraphObjectWithPaths&gt; get_users_user_id_ldapservers(user_id, accept, content_type, opts)
 
 List the LDAP servers bound to a User
 
@@ -334,10 +334,10 @@ opts = {
 
 begin
   #List the LDAP servers bound to a User
-  result = api_instance.g_et_users_user_id_ldapservers(user_id, accept, content_type, opts)
+  result = api_instance.get_users_user_id_ldapservers(user_id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling UsersApi->g_et_users_user_id_ldapservers: #{e}"
+  puts "Exception when calling UsersApi->get_users_user_id_ldapservers: #{e}"
 end
 ```
 
@@ -368,8 +368,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_users_user_id_memberof**
-> Array&lt;GraphObjectWithPaths&gt; g_et_users_user_id_memberof(user_id, accept, content_type, opts)
+# **get_users_user_id_memberof**
+> Array&lt;GraphObjectWithPaths&gt; get_users_user_id_memberof(user_id, accept, content_type, opts)
 
 List the parent Groups of a User
 
@@ -405,10 +405,10 @@ opts = {
 
 begin
   #List the parent Groups of a User
-  result = api_instance.g_et_users_user_id_memberof(user_id, accept, content_type, opts)
+  result = api_instance.get_users_user_id_memberof(user_id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling UsersApi->g_et_users_user_id_memberof: #{e}"
+  puts "Exception when calling UsersApi->get_users_user_id_memberof: #{e}"
 end
 ```
 
@@ -440,8 +440,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_users_user_id_office365s**
-> Array&lt;GraphObjectWithPaths&gt; g_et_users_user_id_office365s(user_id, accept, content_type, opts)
+# **get_users_user_id_office365s**
+> Array&lt;GraphObjectWithPaths&gt; get_users_user_id_office365s(user_id, accept, content_type, opts)
 
 List the Office 365 instances bound to a User
 
@@ -476,10 +476,10 @@ opts = {
 
 begin
   #List the Office 365 instances bound to a User
-  result = api_instance.g_et_users_user_id_office365s(user_id, accept, content_type, opts)
+  result = api_instance.get_users_user_id_office365s(user_id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling UsersApi->g_et_users_user_id_office365s: #{e}"
+  puts "Exception when calling UsersApi->get_users_user_id_office365s: #{e}"
 end
 ```
 
@@ -510,8 +510,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_users_user_id_radiusservers**
-> Array&lt;GraphObjectWithPaths&gt; g_et_users_user_id_radiusservers(user_id, accept, content_type, opts)
+# **get_users_user_id_radiusservers**
+> Array&lt;GraphObjectWithPaths&gt; get_users_user_id_radiusservers(user_id, accept, content_type, opts)
 
 List the RADIUS Servers bound to a User
 
@@ -546,10 +546,10 @@ opts = {
 
 begin
   #List the RADIUS Servers bound to a User
-  result = api_instance.g_et_users_user_id_radiusservers(user_id, accept, content_type, opts)
+  result = api_instance.get_users_user_id_radiusservers(user_id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling UsersApi->g_et_users_user_id_radiusservers: #{e}"
+  puts "Exception when calling UsersApi->get_users_user_id_radiusservers: #{e}"
 end
 ```
 
@@ -580,8 +580,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_users_user_id_systemgroups**
-> Array&lt;GraphObjectWithPaths&gt; g_et_users_user_id_systemgroups(user_id, accept, content_type, opts)
+# **get_users_user_id_systemgroups**
+> Array&lt;GraphObjectWithPaths&gt; get_users_user_id_systemgroups(user_id, accept, content_type, opts)
 
 List the System Groups bound to a User
 
@@ -616,10 +616,10 @@ opts = {
 
 begin
   #List the System Groups bound to a User
-  result = api_instance.g_et_users_user_id_systemgroups(user_id, accept, content_type, opts)
+  result = api_instance.get_users_user_id_systemgroups(user_id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling UsersApi->g_et_users_user_id_systemgroups: #{e}"
+  puts "Exception when calling UsersApi->get_users_user_id_systemgroups: #{e}"
 end
 ```
 
@@ -650,8 +650,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_users_user_id_systems**
-> Array&lt;GraphObjectWithPaths&gt; g_et_users_user_id_systems(user_id, accept, content_type, opts)
+# **get_users_user_id_systems**
+> Array&lt;GraphObjectWithPaths&gt; get_users_user_id_systems(user_id, accept, content_type, opts)
 
 List the Systems bound to a User
 
@@ -686,10 +686,10 @@ opts = {
 
 begin
   #List the Systems bound to a User
-  result = api_instance.g_et_users_user_id_systems(user_id, accept, content_type, opts)
+  result = api_instance.get_users_user_id_systems(user_id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling UsersApi->g_et_users_user_id_systems: #{e}"
+  puts "Exception when calling UsersApi->get_users_user_id_systems: #{e}"
 end
 ```
 

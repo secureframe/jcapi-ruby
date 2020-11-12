@@ -174,8 +174,8 @@ module JCAPIv1
     # @option opts [String] :search A nested object containing a string &#x60;searchTerm&#x60; and a list of &#x60;fields&#x60; to search on.
     # @option opts [String] :x_org_id  (default to )
     # @return [Systemuserslist]
-    def g_et_systemusers(accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_systemusers_with_http_info(accept, content_type, opts)
+    def get_systemusers(accept, content_type, opts = {})
+      data, _status_code, _headers = get_systemusers_with_http_info(accept, content_type, opts)
       return data
     end
 
@@ -192,17 +192,17 @@ module JCAPIv1
     # @option opts [String] :search A nested object containing a string &#x60;searchTerm&#x60; and a list of &#x60;fields&#x60; to search on.
     # @option opts [String] :x_org_id 
     # @return [Array<(Systemuserslist, Fixnum, Hash)>] Systemuserslist data, response status code and response headers
-    def g_et_systemusers_with_http_info(accept, content_type, opts = {})
+    def get_systemusers_with_http_info(accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SystemusersApi.g_et_systemusers ..."
+        @api_client.config.logger.debug "Calling API: SystemusersApi.get_systemusers ..."
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemusersApi.g_et_systemusers"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemusersApi.get_systemusers"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemusersApi.g_et_systemusers"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemusersApi.get_systemusers"
       end
       # resource path
       local_var_path = "/systemusers"
@@ -236,7 +236,7 @@ module JCAPIv1
         :auth_names => auth_names,
         :return_type => 'Systemuserslist')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SystemusersApi#g_et_systemusers\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SystemusersApi#get_systemusers\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -251,8 +251,8 @@ module JCAPIv1
     # @option opts [String] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id  (default to )
     # @return [Systemuserreturn]
-    def g_et_systemusers_id(id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_systemusers_id_with_http_info(id, accept, content_type, opts)
+    def get_systemusers_id(id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_systemusers_id_with_http_info(id, accept, content_type, opts)
       return data
     end
 
@@ -266,21 +266,21 @@ module JCAPIv1
     # @option opts [String] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id 
     # @return [Array<(Systemuserreturn, Fixnum, Hash)>] Systemuserreturn data, response status code and response headers
-    def g_et_systemusers_id_with_http_info(id, accept, content_type, opts = {})
+    def get_systemusers_id_with_http_info(id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SystemusersApi.g_et_systemusers_id ..."
+        @api_client.config.logger.debug "Calling API: SystemusersApi.get_systemusers_id ..."
       end
       # verify the required parameter 'id' is set
       if @api_client.config.client_side_validation && id.nil?
-        fail ArgumentError, "Missing the required parameter 'id' when calling SystemusersApi.g_et_systemusers_id"
+        fail ArgumentError, "Missing the required parameter 'id' when calling SystemusersApi.get_systemusers_id"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemusersApi.g_et_systemusers_id"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemusersApi.get_systemusers_id"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemusersApi.g_et_systemusers_id"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemusersApi.get_systemusers_id"
       end
       # resource path
       local_var_path = "/systemusers/{id}".sub('{' + 'id' + '}', id.to_s)
@@ -310,7 +310,7 @@ module JCAPIv1
         :auth_names => auth_names,
         :return_type => 'Systemuserreturn')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SystemusersApi#g_et_systemusers_id\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SystemusersApi#get_systemusers_id\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -323,8 +323,8 @@ module JCAPIv1
     # @param [Hash] opts the optional parameters
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<Sshkeylist>]
-    def g_et_systemusers_id_sshkeys(id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_systemusers_id_sshkeys_with_http_info(id, accept, content_type, opts)
+    def get_systemusers_id_sshkeys(id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_systemusers_id_sshkeys_with_http_info(id, accept, content_type, opts)
       return data
     end
 
@@ -336,21 +336,21 @@ module JCAPIv1
     # @param [Hash] opts the optional parameters
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<Sshkeylist>, Fixnum, Hash)>] Array<Sshkeylist> data, response status code and response headers
-    def g_et_systemusers_id_sshkeys_with_http_info(id, accept, content_type, opts = {})
+    def get_systemusers_id_sshkeys_with_http_info(id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SystemusersApi.g_et_systemusers_id_sshkeys ..."
+        @api_client.config.logger.debug "Calling API: SystemusersApi.get_systemusers_id_sshkeys ..."
       end
       # verify the required parameter 'id' is set
       if @api_client.config.client_side_validation && id.nil?
-        fail ArgumentError, "Missing the required parameter 'id' when calling SystemusersApi.g_et_systemusers_id_sshkeys"
+        fail ArgumentError, "Missing the required parameter 'id' when calling SystemusersApi.get_systemusers_id_sshkeys"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemusersApi.g_et_systemusers_id_sshkeys"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemusersApi.get_systemusers_id_sshkeys"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemusersApi.g_et_systemusers_id_sshkeys"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemusersApi.get_systemusers_id_sshkeys"
       end
       # resource path
       local_var_path = "/systemusers/{id}/sshkeys".sub('{' + 'id' + '}', id.to_s)
@@ -378,7 +378,7 @@ module JCAPIv1
         :auth_names => auth_names,
         :return_type => 'Array<Sshkeylist>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SystemusersApi#g_et_systemusers_id_sshkeys\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SystemusersApi#get_systemusers_id_sshkeys\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

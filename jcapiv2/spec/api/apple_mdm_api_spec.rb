@@ -47,7 +47,7 @@ describe 'AppleMDMApi' do
     end
   end
 
-  # unit tests for g_et_applemdms
+  # unit tests for get_applemdms
   # List Apple MDMs
   # Get a list of all Apple MDM configurations.  An empty topic indicates that a signed certificate from Apple has not been provided to the PUT endpoint yet.  Note: currently only one MDM configuration per organization is supported.  #### Sample Request &#x60;&#x60;&#x60; curl https://console.jumpcloud.com/api/v2/applemdms \\   -H &#39;accept: application/json&#39; \\   -H &#39;content-type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
   # @param accept 
@@ -55,13 +55,13 @@ describe 'AppleMDMApi' do
   # @param [Hash] opts the optional parameters
   # @option opts [String] :x_org_id 
   # @return [Array<AppleMDM>]
-  describe 'g_et_applemdms test' do
+  describe 'get_applemdms test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_applemdms_apple_mdm_id_csr
+  # unit tests for get_applemdms_apple_mdm_id_csr
   # Get Apple MDM CSR Plist
   # Retrieves an Apple MDM signed CSR Plist for an organization.  The user must supply the returned plist to Apple for signing, and then provide the certificate provided by Apple back into the PUT API.  #### Sample Request &#x60;&#x60;&#x60;   curl -X GET https://console.jumpcloud.com/api/v2/applemdms/{APPLE_MDM_ID}/csr \\   -H &#39;accept: application/json&#39; \\   -H &#39;content-type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
   # @param apple_mdm_id 
@@ -70,13 +70,13 @@ describe 'AppleMDMApi' do
   # @param [Hash] opts the optional parameters
   # @option opts [String] :x_org_id 
   # @return [AppleMdmSignedCsrPlist]
-  describe 'g_et_applemdms_apple_mdm_id_csr test' do
+  describe 'get_applemdms_apple_mdm_id_csr test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_applemdms_apple_mdm_id_depkey
+  # unit tests for get_applemdms_apple_mdm_id_depkey
   # Get Apple MDM DEP Public Key
   # Retrieves an Apple MDM DEP Public Key.
   # @param apple_mdm_id 
@@ -85,13 +85,13 @@ describe 'AppleMDMApi' do
   # @param [Hash] opts the optional parameters
   # @option opts [String] :x_org_id 
   # @return [AppleMdmPublicKeyCert]
-  describe 'g_et_applemdms_apple_mdm_id_depkey test' do
+  describe 'get_applemdms_apple_mdm_id_depkey test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_applemdms_apple_mdm_id_devices
+  # unit tests for get_applemdms_apple_mdm_id_devices
   # List AppleMDM Devices
   # Lists all Apple MDM devices.  The filter and sort queries will allow the following fields: &#x60;createdAt&#x60; &#x60;depRegistered&#x60; &#x60;enrolled&#x60; &#x60;id&#x60; &#x60;osVersion&#x60; &#x60;serialNumber&#x60; &#x60;udid&#x60;  #### Sample Request &#x60;&#x60;&#x60;   curl -X GET https://console.jumpcloud.com/api/v2/applemdms/{apple_mdm_id}/devices \\   -H &#39;accept: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; \\   -d &#39;{}&#39; &#x60;&#x60;&#x60;
   # @param apple_mdm_id 
@@ -104,13 +104,13 @@ describe 'AppleMDMApi' do
   # @option opts [Integer] :x_total_count 
   # @option opts [Integer] :x_unfiltered_total_count If provided in the request with any non-empty value, this header will be returned on the response populated with the total count of objects without filters taken into account
   # @return [Array<AppleMdmDevice>]
-  describe 'g_et_applemdms_apple_mdm_id_devices test' do
+  describe 'get_applemdms_apple_mdm_id_devices test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_applemdms_apple_mdm_id_enrollmentprofiles
+  # unit tests for get_applemdms_apple_mdm_id_enrollmentprofiles
   # List Apple MDM Enrollment Profiles
   # Get a list of enrollment profiles for an apple mdm.  Note: currently only one enrollment profile is supported.  #### Sample Request &#x60;&#x60;&#x60;  curl https://console.jumpcloud.com/api/v2/applemdms/{APPLE_MDM_ID}/enrollmentprofiles \\   -H &#39;accept: application/json&#39; \\   -H &#39;content-type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
   # @param apple_mdm_id 
@@ -119,13 +119,13 @@ describe 'AppleMDMApi' do
   # @param [Hash] opts the optional parameters
   # @option opts [String] :x_org_id 
   # @return [Array<AppleMDM>]
-  describe 'g_et_applemdms_apple_mdm_id_enrollmentprofiles test' do
+  describe 'get_applemdms_apple_mdm_id_enrollmentprofiles test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_applemdms_apple_mdm_id_enrollmentprofiles_id
+  # unit tests for get_applemdms_apple_mdm_id_enrollmentprofiles_id
   # Get an Apple MDM Enrollment Profile
   # Get an enrollment profile  Currently only requesting the mobileconfig is supported.  #### Sample Request  &#x60;&#x60;&#x60; curl https://console.jumpcloud.com/api/v2/applemdms/{APPLE_MDM_ID}/enrollmentprofiles/{ID} \\   -H &#39;accept: application/x-apple-aspen-config&#39; \\   -H &#39;content-type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
   # @param apple_mdm_id 
@@ -135,7 +135,7 @@ describe 'AppleMDMApi' do
   # @param [Hash] opts the optional parameters
   # @option opts [String] :x_org_id 
   # @return [Mobileconfig]
-  describe 'g_et_applemdms_apple_mdm_id_enrollmentprofiles_id test' do
+  describe 'get_applemdms_apple_mdm_id_enrollmentprofiles_id test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

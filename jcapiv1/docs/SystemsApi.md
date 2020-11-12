@@ -5,8 +5,8 @@ All URIs are relative to *https://console.jumpcloud.com/api*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**d_elete_systems_id**](SystemsApi.md#d_elete_systems_id) | **DELETE** /systems/{id} | Delete a System
-[**g_et_systems**](SystemsApi.md#g_et_systems) | **GET** /systems | List All Systems
-[**g_et_systems_id**](SystemsApi.md#g_et_systems_id) | **GET** /systems/{id} | List an individual system
+[**get_systems**](SystemsApi.md#get_systems) | **GET** /systems | List All Systems
+[**get_systems_id**](SystemsApi.md#get_systems_id) | **GET** /systems/{id} | List an individual system
 [**p_ut_systems_id**](SystemsApi.md#p_ut_systems_id) | **PUT** /systems/{id} | Update a system
 
 
@@ -78,8 +78,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_systems**
-> Systemslist g_et_systems(accept, content_type, opts)
+# **get_systems**
+> Systemslist get_systems(accept, content_type, opts)
 
 List All Systems
 
@@ -115,10 +115,10 @@ opts = {
 
 begin
   #List All Systems
-  result = api_instance.g_et_systems(accept, content_type, opts)
+  result = api_instance.get_systems(accept, content_type, opts)
   p result
 rescue JCAPIv1::ApiError => e
-  puts "Exception when calling SystemsApi->g_et_systems: #{e}"
+  puts "Exception when calling SystemsApi->get_systems: #{e}"
 end
 ```
 
@@ -151,8 +151,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_systems_id**
-> System g_et_systems_id(id, accept, content_type, opts)
+# **get_systems_id**
+> System get_systems_id(id, accept, content_type, opts)
 
 List an individual system
 
@@ -188,10 +188,10 @@ opts = {
 
 begin
   #List an individual system
-  result = api_instance.g_et_systems_id(id, accept, content_type, opts)
+  result = api_instance.get_systems_id(id, accept, content_type, opts)
   p result
 rescue JCAPIv1::ApiError => e
-  puts "Exception when calling SystemsApi->g_et_systems_id: #{e}"
+  puts "Exception when calling SystemsApi->get_systems_id: #{e}"
 end
 ```
 

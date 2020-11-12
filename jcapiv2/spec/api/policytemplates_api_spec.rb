@@ -32,7 +32,7 @@ describe 'PolicytemplatesApi' do
     end
   end
 
-  # unit tests for g_et_policytemplates
+  # unit tests for get_policytemplates
   # Lists all of the Policy Templates
   # This endpoint returns all policy templates.  #### Sample Request &#x60;&#x60;&#x60; curl -X GET https://console.jumpcloud.com/api/v2/policytemplates \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39;   &#x60;&#x60;&#x60;
   # @param accept 
@@ -45,13 +45,13 @@ describe 'PolicytemplatesApi' do
   # @option opts [Array<String>] :sort The comma separated fields used to sort the collection. Default sort is ascending, prefix with &#x60;-&#x60; to sort descending. 
   # @option opts [String] :x_org_id 
   # @return [Array<PolicyTemplate>]
-  describe 'g_et_policytemplates test' do
+  describe 'get_policytemplates test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_policytemplates_id
+  # unit tests for get_policytemplates_id
   # Get a specific Policy Template
   # This endpoint returns a specific policy template.  #### Sample Request &#x60;&#x60;&#x60;  curl -X GET https://console.jumpcloud.com/api/v2/policies/{Policy_ID}\\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
   # @param id ObjectID of the Policy Template.
@@ -60,7 +60,7 @@ describe 'PolicytemplatesApi' do
   # @param [Hash] opts the optional parameters
   # @option opts [String] :x_org_id 
   # @return [PolicyTemplateWithDetails]
-  describe 'g_et_policytemplates_id test' do
+  describe 'get_policytemplates_id test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

@@ -32,7 +32,7 @@ describe 'SystemInsightsApi' do
     end
   end
 
-  # unit tests for g_et_systeminsights_alf
+  # unit tests for get_systeminsights_alf
   # List System Insights ALF
   # Valid filter fields are &#x60;system_id&#x60; and &#x60;global_state&#x60;.
   # @param accept 
@@ -44,13 +44,13 @@ describe 'SystemInsightsApi' do
   # @option opts [Integer] :limit 
   # @option opts [String] :x_org_id 
   # @return [Array<SystemInsightsAlf>]
-  describe 'g_et_systeminsights_alf test' do
+  describe 'get_systeminsights_alf test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_systeminsights_alf_exceptions
+  # unit tests for get_systeminsights_alf_exceptions
   # List System Insights ALF Exceptions
   # Valid filter fields are &#x60;system_id&#x60; and &#x60;state&#x60;.
   # @param accept 
@@ -62,13 +62,13 @@ describe 'SystemInsightsApi' do
   # @option opts [Integer] :limit 
   # @option opts [String] :x_org_id 
   # @return [Array<SystemInsightsAlfExceptions>]
-  describe 'g_et_systeminsights_alf_exceptions test' do
+  describe 'get_systeminsights_alf_exceptions test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_systeminsights_alf_explicit_auths
+  # unit tests for get_systeminsights_alf_explicit_auths
   # List System Insights ALF Explicit Authentications
   # Valid filter fields are &#x60;system_id&#x60; and &#x60;process&#x60;.
   # @param accept 
@@ -80,13 +80,13 @@ describe 'SystemInsightsApi' do
   # @option opts [Integer] :limit 
   # @option opts [String] :x_org_id 
   # @return [Array<SystemInsightsAlfExplicitAuths>]
-  describe 'g_et_systeminsights_alf_explicit_auths test' do
+  describe 'get_systeminsights_alf_explicit_auths test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_systeminsights_appcompat_shims
+  # unit tests for get_systeminsights_appcompat_shims
   # List System Insights Application Compatibility Shims
   # Valid filter fields are &#x60;system_id&#x60; and &#x60;enabled&#x60;.
   # @param accept 
@@ -98,13 +98,13 @@ describe 'SystemInsightsApi' do
   # @option opts [Integer] :limit 
   # @option opts [String] :x_org_id 
   # @return [Array<SystemInsightsAppcompatShims>]
-  describe 'g_et_systeminsights_appcompat_shims test' do
+  describe 'get_systeminsights_appcompat_shims test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_systeminsights_apps
+  # unit tests for get_systeminsights_apps
   # List System Insights Apps
   # Valid filter fields are &#x60;system_id&#x60; and &#x60;bundle_name&#x60;.
   # @param accept 
@@ -116,13 +116,13 @@ describe 'SystemInsightsApi' do
   # @option opts [Integer] :limit 
   # @option opts [String] :x_org_id 
   # @return [Array<SystemInsightsApps>]
-  describe 'g_et_systeminsights_apps test' do
+  describe 'get_systeminsights_apps test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_systeminsights_authorized_keys
+  # unit tests for get_systeminsights_authorized_keys
   # List System Insights Authorized Keys
   # Valid filter fields are &#x60;system_id&#x60; and &#x60;uid&#x60;.
   # @param accept 
@@ -134,13 +134,13 @@ describe 'SystemInsightsApi' do
   # @option opts [Integer] :limit 
   # @option opts [String] :x_org_id 
   # @return [Array<SystemInsightsAuthorizedKeys>]
-  describe 'g_et_systeminsights_authorized_keys test' do
+  describe 'get_systeminsights_authorized_keys test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_systeminsights_battery
+  # unit tests for get_systeminsights_battery
   # List System Insights Battery
   # Valid filter fields are &#x60;system_id&#x60; and &#x60;health&#x60;.
   # @param accept 
@@ -152,13 +152,13 @@ describe 'SystemInsightsApi' do
   # @option opts [Integer] :limit 
   # @option opts [String] :x_org_id 
   # @return [Array<SystemInsightsBattery>]
-  describe 'g_et_systeminsights_battery test' do
+  describe 'get_systeminsights_battery test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_systeminsights_bitlocker_info
+  # unit tests for get_systeminsights_bitlocker_info
   # List System Insights Bitlocker Info
   # Valid filter fields are &#x60;system_id&#x60; and &#x60;protection_status&#x60;.
   # @param accept 
@@ -170,13 +170,13 @@ describe 'SystemInsightsApi' do
   # @option opts [Integer] :limit 
   # @option opts [String] :x_org_id 
   # @return [Array<SystemInsightsBitlockerInfo>]
-  describe 'g_et_systeminsights_bitlocker_info test' do
+  describe 'get_systeminsights_bitlocker_info test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_systeminsights_browser_plugins
+  # unit tests for get_systeminsights_browser_plugins
   # List System Insights Browser Plugins
   # Valid filter fields are &#x60;system_id&#x60; and &#x60;name&#x60;.
   # @param accept 
@@ -188,13 +188,13 @@ describe 'SystemInsightsApi' do
   # @option opts [Integer] :limit 
   # @option opts [String] :x_org_id 
   # @return [Array<SystemInsightsBrowserPlugins>]
-  describe 'g_et_systeminsights_browser_plugins test' do
+  describe 'get_systeminsights_browser_plugins test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_systeminsights_certificates
+  # unit tests for get_systeminsights_certificates
   # List System Insights Certificates
   # Valid filter fields are &#x60;system_id&#x60; and &#x60;common_name&#x60;.
   # @param accept 
@@ -206,13 +206,13 @@ describe 'SystemInsightsApi' do
   # @option opts [Integer] :limit 
   # @option opts [String] :x_org_id 
   # @return [Array<SystemInsightsCertificates>]
-  describe 'g_et_systeminsights_certificates test' do
+  describe 'get_systeminsights_certificates test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_systeminsights_chrome_extensions
+  # unit tests for get_systeminsights_chrome_extensions
   # List System Insights Chrome Extensions
   # Valid filter fields are &#x60;system_id&#x60; and &#x60;name&#x60;.
   # @param accept 
@@ -224,13 +224,13 @@ describe 'SystemInsightsApi' do
   # @option opts [Integer] :limit 
   # @option opts [String] :x_org_id 
   # @return [Array<SystemInsightsChromeExtensions>]
-  describe 'g_et_systeminsights_chrome_extensions test' do
+  describe 'get_systeminsights_chrome_extensions test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_systeminsights_connectivity
+  # unit tests for get_systeminsights_connectivity
   # List System Insights Connectivity
   # The only valid filter field is &#x60;system_id&#x60;.
   # @param accept 
@@ -242,13 +242,13 @@ describe 'SystemInsightsApi' do
   # @option opts [Integer] :limit 
   # @option opts [String] :x_org_id 
   # @return [Array<SystemInsightsConnectivity>]
-  describe 'g_et_systeminsights_connectivity test' do
+  describe 'get_systeminsights_connectivity test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_systeminsights_crashes
+  # unit tests for get_systeminsights_crashes
   # List System Insights Crashes
   # Valid filter fields are &#x60;system_id&#x60; and &#x60;identifier&#x60;.
   # @param accept 
@@ -260,13 +260,13 @@ describe 'SystemInsightsApi' do
   # @option opts [Integer] :limit 
   # @option opts [String] :x_org_id 
   # @return [Array<SystemInsightsCrashes>]
-  describe 'g_et_systeminsights_crashes test' do
+  describe 'get_systeminsights_crashes test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_systeminsights_cups_destinations
+  # unit tests for get_systeminsights_cups_destinations
   # List System Insights CUPS Destinations
   # Valid filter fields are &#x60;system_id&#x60; and &#x60;name&#x60;.
   # @param accept 
@@ -278,13 +278,13 @@ describe 'SystemInsightsApi' do
   # @option opts [Integer] :limit 
   # @option opts [String] :x_org_id 
   # @return [Array<SystemInsightsCupsDestinations>]
-  describe 'g_et_systeminsights_cups_destinations test' do
+  describe 'get_systeminsights_cups_destinations test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_systeminsights_disk_encryption
+  # unit tests for get_systeminsights_disk_encryption
   # List System Insights Disk Encryption
   # Valid filter fields are &#x60;system_id&#x60; and &#x60;encryption_status&#x60;.
   # @param accept 
@@ -296,13 +296,13 @@ describe 'SystemInsightsApi' do
   # @option opts [Integer] :limit 
   # @option opts [String] :x_org_id 
   # @return [Array<SystemInsightsDiskEncryption>]
-  describe 'g_et_systeminsights_disk_encryption test' do
+  describe 'get_systeminsights_disk_encryption test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_systeminsights_disk_info
+  # unit tests for get_systeminsights_disk_info
   # List System Insights Disk Info
   # Valid filter fields are &#x60;system_id&#x60; and &#x60;disk_index&#x60;.
   # @param accept 
@@ -314,13 +314,13 @@ describe 'SystemInsightsApi' do
   # @option opts [Integer] :limit 
   # @option opts [String] :x_org_id 
   # @return [Array<SystemInsightsDiskInfo>]
-  describe 'g_et_systeminsights_disk_info test' do
+  describe 'get_systeminsights_disk_info test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_systeminsights_dns_resolvers
+  # unit tests for get_systeminsights_dns_resolvers
   # List System Insights DNS Resolvers
   # Valid filter fields are &#x60;system_id&#x60; and &#x60;type&#x60;.
   # @param accept 
@@ -332,13 +332,13 @@ describe 'SystemInsightsApi' do
   # @option opts [Integer] :limit 
   # @option opts [String] :x_org_id 
   # @return [Array<SystemInsightsDnsResolvers>]
-  describe 'g_et_systeminsights_dns_resolvers test' do
+  describe 'get_systeminsights_dns_resolvers test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_systeminsights_etc_hosts
+  # unit tests for get_systeminsights_etc_hosts
   # List System Insights Etc Hosts
   # Valid filter fields are &#x60;system_id&#x60; and &#x60;address&#x60;.
   # @param accept 
@@ -350,13 +350,13 @@ describe 'SystemInsightsApi' do
   # @option opts [Integer] :limit 
   # @option opts [String] :x_org_id 
   # @return [Array<SystemInsightsEtcHosts>]
-  describe 'g_et_systeminsights_etc_hosts test' do
+  describe 'get_systeminsights_etc_hosts test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_systeminsights_firefox_addons
+  # unit tests for get_systeminsights_firefox_addons
   # List System Insights Firefox Addons
   # Valid filter fields are &#x60;system_id&#x60; and &#x60;name&#x60;.
   # @param accept 
@@ -368,13 +368,13 @@ describe 'SystemInsightsApi' do
   # @option opts [Integer] :limit 
   # @option opts [String] :x_org_id 
   # @return [Array<SystemInsightsFirefoxAddons>]
-  describe 'g_et_systeminsights_firefox_addons test' do
+  describe 'get_systeminsights_firefox_addons test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_systeminsights_groups
+  # unit tests for get_systeminsights_groups
   # List System Insights Groups
   # Valid filter fields are &#x60;system_id&#x60; and &#x60;groupname&#x60;.
   # @param accept 
@@ -386,13 +386,13 @@ describe 'SystemInsightsApi' do
   # @option opts [Integer] :limit 
   # @option opts [String] :x_org_id 
   # @return [Array<SystemInsightsGroups>]
-  describe 'g_et_systeminsights_groups test' do
+  describe 'get_systeminsights_groups test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_systeminsights_ie_extensions
+  # unit tests for get_systeminsights_ie_extensions
   # List System Insights IE Extensions
   # Valid filter fields are &#x60;system_id&#x60; and &#x60;name&#x60;.
   # @param accept 
@@ -404,13 +404,13 @@ describe 'SystemInsightsApi' do
   # @option opts [Integer] :limit 
   # @option opts [String] :x_org_id 
   # @return [Array<SystemInsightsIeExtensions>]
-  describe 'g_et_systeminsights_ie_extensions test' do
+  describe 'get_systeminsights_ie_extensions test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_systeminsights_interface_addresses
+  # unit tests for get_systeminsights_interface_addresses
   # List System Insights Interface Addresses
   # Valid filter fields are &#x60;system_id&#x60; and &#x60;address&#x60;.
   # @param accept 
@@ -422,13 +422,13 @@ describe 'SystemInsightsApi' do
   # @option opts [Integer] :limit 
   # @option opts [String] :x_org_id 
   # @return [Array<SystemInsightsInterfaceAddresses>]
-  describe 'g_et_systeminsights_interface_addresses test' do
+  describe 'get_systeminsights_interface_addresses test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_systeminsights_interface_details
+  # unit tests for get_systeminsights_interface_details
   # List System Insights Interface Details
   # Valid filter fields are &#x60;system_id&#x60; and &#x60;interface&#x60;.
   # @param accept 
@@ -440,13 +440,13 @@ describe 'SystemInsightsApi' do
   # @option opts [Integer] :limit 
   # @option opts [String] :x_org_id 
   # @return [Array<SystemInsightsInterfaceDetails>]
-  describe 'g_et_systeminsights_interface_details test' do
+  describe 'get_systeminsights_interface_details test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_systeminsights_kernel_info
+  # unit tests for get_systeminsights_kernel_info
   # List System Insights Kernel Info
   # Valid filter fields are &#x60;system_id&#x60; and &#x60;version&#x60;.
   # @param accept 
@@ -458,13 +458,13 @@ describe 'SystemInsightsApi' do
   # @option opts [Integer] :limit 
   # @option opts [String] :x_org_id 
   # @return [Array<SystemInsightsKernelInfo>]
-  describe 'g_et_systeminsights_kernel_info test' do
+  describe 'get_systeminsights_kernel_info test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_systeminsights_launchd
+  # unit tests for get_systeminsights_launchd
   # List System Insights Launchd
   # Valid filter fields are &#x60;system_id&#x60; and &#x60;name&#x60;.
   # @param accept 
@@ -476,13 +476,13 @@ describe 'SystemInsightsApi' do
   # @option opts [Integer] :limit 
   # @option opts [String] :x_org_id 
   # @return [Array<SystemInsightsLaunchd>]
-  describe 'g_et_systeminsights_launchd test' do
+  describe 'get_systeminsights_launchd test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_systeminsights_logged_in_users
+  # unit tests for get_systeminsights_logged_in_users
   # List System Insights Logged-In Users
   # Valid filter fields are &#x60;system_id&#x60; and &#x60;user&#x60;.
   # @param accept 
@@ -494,13 +494,13 @@ describe 'SystemInsightsApi' do
   # @option opts [Integer] :limit 
   # @option opts [String] :x_org_id 
   # @return [Array<SystemInsightsLoggedInUsers>]
-  describe 'g_et_systeminsights_logged_in_users test' do
+  describe 'get_systeminsights_logged_in_users test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_systeminsights_logical_drives
+  # unit tests for get_systeminsights_logical_drives
   # List System Insights Logical Drives
   # Valid filter fields are &#x60;system_id&#x60; and &#x60;device_id&#x60;.
   # @param accept 
@@ -512,13 +512,13 @@ describe 'SystemInsightsApi' do
   # @option opts [Integer] :limit 
   # @option opts [String] :x_org_id 
   # @return [Array<SystemInsightsLogicalDrives>]
-  describe 'g_et_systeminsights_logical_drives test' do
+  describe 'get_systeminsights_logical_drives test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_systeminsights_managed_policies
+  # unit tests for get_systeminsights_managed_policies
   # List System Insights Managed Policies
   # Valid filter fields are &#x60;system_id&#x60; and &#x60;domain&#x60;.
   # @param accept 
@@ -530,13 +530,13 @@ describe 'SystemInsightsApi' do
   # @option opts [Integer] :limit 
   # @option opts [String] :x_org_id 
   # @return [Array<SystemInsightsManagedPolicies>]
-  describe 'g_et_systeminsights_managed_policies test' do
+  describe 'get_systeminsights_managed_policies test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_systeminsights_mounts
+  # unit tests for get_systeminsights_mounts
   # List System Insights Mounts
   # Valid filter fields are &#x60;system_id&#x60; and &#x60;path&#x60;.
   # @param accept 
@@ -548,13 +548,13 @@ describe 'SystemInsightsApi' do
   # @option opts [Integer] :limit 
   # @option opts [String] :x_org_id 
   # @return [Array<SystemInsightsMounts>]
-  describe 'g_et_systeminsights_mounts test' do
+  describe 'get_systeminsights_mounts test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_systeminsights_os_version
+  # unit tests for get_systeminsights_os_version
   # List System Insights OS Version
   # Valid filter fields are &#x60;system_id&#x60; and &#x60;version&#x60;.
   # @param accept 
@@ -566,13 +566,13 @@ describe 'SystemInsightsApi' do
   # @option opts [Integer] :limit 
   # @option opts [String] :x_org_id 
   # @return [Array<SystemInsightsOsVersion>]
-  describe 'g_et_systeminsights_os_version test' do
+  describe 'get_systeminsights_os_version test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_systeminsights_patches
+  # unit tests for get_systeminsights_patches
   # List System Insights Patches
   # Valid filter fields are &#x60;system_id&#x60; and &#x60;hotfix_id&#x60;.
   # @param accept 
@@ -584,13 +584,13 @@ describe 'SystemInsightsApi' do
   # @option opts [Integer] :limit 
   # @option opts [String] :x_org_id 
   # @return [Array<SystemInsightsPatches>]
-  describe 'g_et_systeminsights_patches test' do
+  describe 'get_systeminsights_patches test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_systeminsights_programs
+  # unit tests for get_systeminsights_programs
   # List System Insights Programs
   # Valid filter fields are &#x60;system_id&#x60; and &#x60;name&#x60;.
   # @param accept 
@@ -602,13 +602,13 @@ describe 'SystemInsightsApi' do
   # @option opts [Integer] :limit 
   # @option opts [String] :x_org_id 
   # @return [Array<SystemInsightsPrograms>]
-  describe 'g_et_systeminsights_programs test' do
+  describe 'get_systeminsights_programs test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_systeminsights_python_packages
+  # unit tests for get_systeminsights_python_packages
   # List System Insights Python Packages
   # Valid filter fields are &#x60;system_id&#x60; and &#x60;name&#x60;.
   # @param accept 
@@ -620,13 +620,13 @@ describe 'SystemInsightsApi' do
   # @option opts [Integer] :limit 
   # @option opts [String] :x_org_id 
   # @return [Array<SystemInsightsPythonPackages>]
-  describe 'g_et_systeminsights_python_packages test' do
+  describe 'get_systeminsights_python_packages test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_systeminsights_safari_extensions
+  # unit tests for get_systeminsights_safari_extensions
   # List System Insights Safari Extensions
   # Valid filter fields are &#x60;system_id&#x60; and &#x60;name&#x60;.
   # @param accept 
@@ -638,13 +638,13 @@ describe 'SystemInsightsApi' do
   # @option opts [Integer] :limit 
   # @option opts [String] :x_org_id 
   # @return [Array<SystemInsightsSafariExtensions>]
-  describe 'g_et_systeminsights_safari_extensions test' do
+  describe 'get_systeminsights_safari_extensions test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_systeminsights_scheduled_tasks
+  # unit tests for get_systeminsights_scheduled_tasks
   # List System Insights Scheduled Tasks
   # Valid filter fields are &#x60;system_id&#x60; and &#x60;enabled&#x60;.
   # @param accept 
@@ -656,13 +656,13 @@ describe 'SystemInsightsApi' do
   # @option opts [Integer] :limit 
   # @option opts [String] :x_org_id 
   # @return [Array<SystemInsightsScheduledTasks>]
-  describe 'g_et_systeminsights_scheduled_tasks test' do
+  describe 'get_systeminsights_scheduled_tasks test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_systeminsights_services
+  # unit tests for get_systeminsights_services
   # List System Insights Services
   # Valid filter fields are &#x60;system_id&#x60; and &#x60;name&#x60;.
   # @param accept 
@@ -674,13 +674,13 @@ describe 'SystemInsightsApi' do
   # @option opts [Integer] :limit 
   # @option opts [String] :x_org_id 
   # @return [Array<SystemInsightsServices>]
-  describe 'g_et_systeminsights_services test' do
+  describe 'get_systeminsights_services test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_systeminsights_shadow
+  # unit tests for get_systeminsights_shadow
   # LIst System Insights Shadow
   # Valid filter fields are &#x60;system_id&#x60; and &#x60;username&#x60;.
   # @param accept 
@@ -692,13 +692,13 @@ describe 'SystemInsightsApi' do
   # @option opts [Integer] :limit 
   # @option opts [String] :x_org_id 
   # @return [Array<SystemInsightsShadow>]
-  describe 'g_et_systeminsights_shadow test' do
+  describe 'get_systeminsights_shadow test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_systeminsights_shared_folders
+  # unit tests for get_systeminsights_shared_folders
   # List System Insights Shared Folders
   # Valid filter fields are &#x60;system_id&#x60; and &#x60;name&#x60;.
   # @param accept 
@@ -710,13 +710,13 @@ describe 'SystemInsightsApi' do
   # @option opts [Integer] :limit 
   # @option opts [String] :x_org_id 
   # @return [Array<SystemInsightsSharedFolders>]
-  describe 'g_et_systeminsights_shared_folders test' do
+  describe 'get_systeminsights_shared_folders test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_systeminsights_shared_resources
+  # unit tests for get_systeminsights_shared_resources
   # List System Insights Shared Resources
   # Valid filter fields are &#x60;system_id&#x60; and &#x60;type&#x60;.
   # @param accept 
@@ -728,13 +728,13 @@ describe 'SystemInsightsApi' do
   # @option opts [Integer] :limit 
   # @option opts [String] :x_org_id 
   # @return [Array<SystemInsightsSharedResources>]
-  describe 'g_et_systeminsights_shared_resources test' do
+  describe 'get_systeminsights_shared_resources test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_systeminsights_sharing_preferences
+  # unit tests for get_systeminsights_sharing_preferences
   # List System Insights Sharing Preferences
   # Only valid filed field is &#x60;system_id&#x60;.
   # @param accept 
@@ -746,13 +746,13 @@ describe 'SystemInsightsApi' do
   # @option opts [Integer] :limit 
   # @option opts [String] :x_org_id 
   # @return [Array<SystemInsightsSharingPreferences>]
-  describe 'g_et_systeminsights_sharing_preferences test' do
+  describe 'get_systeminsights_sharing_preferences test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_systeminsights_sip_config
+  # unit tests for get_systeminsights_sip_config
   # List System Insights SIP Config
   # Valid filter fields are &#x60;system_id&#x60; and &#x60;enabled&#x60;.
   # @param accept 
@@ -764,13 +764,13 @@ describe 'SystemInsightsApi' do
   # @option opts [Integer] :limit 
   # @option opts [String] :x_org_id 
   # @return [Array<SystemInsightsSipConfig>]
-  describe 'g_et_systeminsights_sip_config test' do
+  describe 'get_systeminsights_sip_config test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_systeminsights_startup_items
+  # unit tests for get_systeminsights_startup_items
   # List System Insights Startup Items
   # Valid filter fields are &#x60;system_id&#x60; and &#x60;name&#x60;.
   # @param accept 
@@ -782,13 +782,13 @@ describe 'SystemInsightsApi' do
   # @option opts [Integer] :limit 
   # @option opts [String] :x_org_id 
   # @return [Array<SystemInsightsStartupItems>]
-  describe 'g_et_systeminsights_startup_items test' do
+  describe 'get_systeminsights_startup_items test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_systeminsights_system_controls
+  # unit tests for get_systeminsights_system_controls
   # List System Insights System Control
   # Valid filter fields are &#x60;system_id&#x60; and &#x60;name&#x60;.
   # @param accept 
@@ -800,13 +800,13 @@ describe 'SystemInsightsApi' do
   # @option opts [Integer] :limit 
   # @option opts [String] :x_org_id 
   # @return [Array<SystemInsightsSystemControls>]
-  describe 'g_et_systeminsights_system_controls test' do
+  describe 'get_systeminsights_system_controls test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_systeminsights_system_info
+  # unit tests for get_systeminsights_system_info
   # List System Insights System Info
   # Valid filter fields are &#x60;system_id&#x60; and &#x60;cpu_subtype&#x60;.
   # @param accept 
@@ -818,13 +818,13 @@ describe 'SystemInsightsApi' do
   # @option opts [Integer] :limit 
   # @option opts [String] :x_org_id 
   # @return [Array<SystemInsightsSystemInfo>]
-  describe 'g_et_systeminsights_system_info test' do
+  describe 'get_systeminsights_system_info test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_systeminsights_uptime
+  # unit tests for get_systeminsights_uptime
   # List System Insights Uptime
   # Valid filter fields are &#x60;system_id&#x60; and &#x60;days&#x60;.
   # @param accept 
@@ -836,13 +836,13 @@ describe 'SystemInsightsApi' do
   # @option opts [Integer] :limit 
   # @option opts [String] :x_org_id 
   # @return [Array<SystemInsightsUptime>]
-  describe 'g_et_systeminsights_uptime test' do
+  describe 'get_systeminsights_uptime test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_systeminsights_usb_devices
+  # unit tests for get_systeminsights_usb_devices
   # List System Insights USB Devices
   # Valid filter fields are &#x60;system_id&#x60; and &#x60;model&#x60;.
   # @param accept 
@@ -854,13 +854,13 @@ describe 'SystemInsightsApi' do
   # @option opts [Integer] :limit 
   # @option opts [String] :x_org_id 
   # @return [Array<SystemInsightsUsbDevices>]
-  describe 'g_et_systeminsights_usb_devices test' do
+  describe 'get_systeminsights_usb_devices test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_systeminsights_user_groups
+  # unit tests for get_systeminsights_user_groups
   # List System Insights User Groups
   # Only valid filter field is &#x60;system_id&#x60;.
   # @param accept 
@@ -872,13 +872,13 @@ describe 'SystemInsightsApi' do
   # @option opts [Integer] :limit 
   # @option opts [String] :x_org_id 
   # @return [Array<SystemInsightsUserGroups>]
-  describe 'g_et_systeminsights_user_groups test' do
+  describe 'get_systeminsights_user_groups test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_systeminsights_user_ssh_keys
+  # unit tests for get_systeminsights_user_ssh_keys
   # List System Insights User SSH Keys
   # Valid filter fields are &#x60;system_id&#x60; and &#x60;uid&#x60;.
   # @param accept 
@@ -890,13 +890,13 @@ describe 'SystemInsightsApi' do
   # @option opts [Integer] :limit 
   # @option opts [String] :x_org_id 
   # @return [Array<SystemInsightsUserSshKeys>]
-  describe 'g_et_systeminsights_user_ssh_keys test' do
+  describe 'get_systeminsights_user_ssh_keys test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_systeminsights_users
+  # unit tests for get_systeminsights_users
   # List System Insights Users
   # Valid filter fields are &#x60;system_id&#x60; and &#x60;username&#x60;.
   # @param accept 
@@ -908,13 +908,13 @@ describe 'SystemInsightsApi' do
   # @option opts [Integer] :limit 
   # @option opts [String] :x_org_id 
   # @return [Array<SystemInsightsUsers>]
-  describe 'g_et_systeminsights_users test' do
+  describe 'get_systeminsights_users test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_systeminsights_wifi_networks
+  # unit tests for get_systeminsights_wifi_networks
   # List System Insights WiFi Networks
   # Valid filter fields are &#x60;system_id&#x60; and &#x60;security_type&#x60;.
   # @param accept 
@@ -926,13 +926,13 @@ describe 'SystemInsightsApi' do
   # @option opts [Integer] :limit 
   # @option opts [String] :x_org_id 
   # @return [Array<SystemInsightsWifiNetworks>]
-  describe 'g_et_systeminsights_wifi_networks test' do
+  describe 'get_systeminsights_wifi_networks test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_systeminsights_wifi_status
+  # unit tests for get_systeminsights_wifi_status
   # List System Insights WiFi Status
   # Valid filter fields are &#x60;system_id&#x60; and &#x60;security_type&#x60;.
   # @param accept 
@@ -944,13 +944,13 @@ describe 'SystemInsightsApi' do
   # @option opts [Integer] :limit 
   # @option opts [String] :x_org_id 
   # @return [Array<SystemInsightsWifiStatus>]
-  describe 'g_et_systeminsights_wifi_status test' do
+  describe 'get_systeminsights_wifi_status test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_systeminsights_windows_security_products
+  # unit tests for get_systeminsights_windows_security_products
   # List System Insights Windows Security Products
   # Valid filter fields are &#x60;system_id&#x60; and &#x60;state&#x60;.
   # @param accept 
@@ -962,7 +962,7 @@ describe 'SystemInsightsApi' do
   # @option opts [Integer] :limit 
   # @option opts [String] :x_org_id 
   # @return [Array<SystemInsightsWindowsSecurityProducts>]
-  describe 'g_et_systeminsights_windows_security_products test' do
+  describe 'get_systeminsights_windows_security_products test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

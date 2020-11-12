@@ -47,7 +47,7 @@ describe 'Office365Api' do
     end
   end
 
-  # unit tests for g_et_office365s_office365_id
+  # unit tests for get_office365s_office365_id
   # Get Office 365 instance
   # This endpoint returns a specific Office 365 instance.  #####  Sample Request  &#x60;&#x60;&#x60; curl -X GET https://console.jumpcloud.com/api/v2/office365s/{OFFICE365_ID} \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39;  &#x60;&#x60;&#x60;
   # @param office365_id ObjectID of the Office 365 instance.
@@ -56,13 +56,13 @@ describe 'Office365Api' do
   # @param [Hash] opts the optional parameters
   # @option opts [String] :x_org_id 
   # @return [Office365Output]
-  describe 'g_et_office365s_office365_id test' do
+  describe 'get_office365s_office365_id test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_office365s_office365_id_associations
+  # unit tests for get_office365s_office365_id_associations
   # List the associations of an Office 365 instance
   # This endpoint returns _direct_ associations of an Office 365 instance.   A direct association can be a non-homogeneous relationship between 2 different objects, for example Office 365 and Users.  #### Sample Request &#x60;&#x60;&#x60; curl -X GET &#39;https://console.jumpcloud.com/api/v2/office365s/{OFFICE365_ID}/associations?targets&#x3D;user_group&#39; \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39;  &#x60;&#x60;&#x60;
   # @param office365_id ObjectID of the Office 365 instance.
@@ -74,13 +74,13 @@ describe 'Office365Api' do
   # @option opts [Integer] :skip The offset into the records to return.
   # @option opts [String] :x_org_id 
   # @return [Array<GraphConnection>]
-  describe 'g_et_office365s_office365_id_associations test' do
+  describe 'get_office365s_office365_id_associations test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_office365s_office365_id_translationrules
+  # unit tests for get_office365s_office365_id_translationrules
   # List all the Office 365 Translation Rules
   # This endpoint returns all translation rules for a specific Office 365 instance. These rules specify how JumpCloud attributes translate to [Microsoft Graph](https://developer.microsoft.com/en-us/graph) attributes.  ##### Sample Request  &#x60;&#x60;&#x60;  curl -X GET  https://console.jumpcloud.com/api/v2/office365s/{office365_id}/translationrules \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39;   &#x60;&#x60;&#x60;
   # @param office365_id 
@@ -93,13 +93,13 @@ describe 'Office365Api' do
   # @option opts [Integer] :skip The offset into the records to return.
   # @option opts [Array<String>] :sort The comma separated fields used to sort the collection. Default sort is ascending, prefix with &#x60;-&#x60; to sort descending. 
   # @return [Array<Office365TranslationRule>]
-  describe 'g_et_office365s_office365_id_translationrules test' do
+  describe 'get_office365s_office365_id_translationrules test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_office365s_office365_id_translationrules_id
+  # unit tests for get_office365s_office365_id_translationrules_id
   # Gets a specific Office 365 translation rule
   # This endpoint returns a specific translation rule for a specific Office 365 instance. These rules specify how JumpCloud attributes translate to [Microsoft Graph](https://developer.microsoft.com/en-us/graph) attributes.  ###### Sample Request  &#x60;&#x60;&#x60;   curl -X GET https://console.jumpcloud.com/api/v2/office365s/{office365_id}/translationrules/{id} \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39;   &#x60;&#x60;&#x60;
   # @param office365_id 
@@ -108,13 +108,13 @@ describe 'Office365Api' do
   # @param content_type 
   # @param [Hash] opts the optional parameters
   # @return [Office365TranslationRule]
-  describe 'g_et_office365s_office365_id_translationrules_id test' do
+  describe 'get_office365s_office365_id_translationrules_id test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_office365s_office365_id_usergroups
+  # unit tests for get_office365s_office365_id_usergroups
   # List the User Groups bound to an Office 365 instance
   # This endpoint will return all Users Groups bound to an Office 365 instance, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the group&#39;s type, id, attributes and paths.  The &#x60;attributes&#x60; object is a key/value hash of compiled graph attributes for all paths followed.  The &#x60;paths&#x60; array enumerates each path from this Office 365 instance to the corresponding User Group; this array represents all grouping and/or associations that would have to be removed to deprovision the User Group from this Office 365 instance.  See &#x60;/members&#x60; and &#x60;/associations&#x60; endpoints to manage those collections.  #### Sample Request &#x60;&#x60;&#x60;   curl -X GET https://console.jumpcloud.com/api/v2/office365s/{OFFICE365_ID/usergroups \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
   # @param office365_id ObjectID of the Office 365 suite.
@@ -126,13 +126,13 @@ describe 'Office365Api' do
   # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
   # @option opts [String] :x_org_id 
   # @return [Array<GraphObjectWithPaths>]
-  describe 'g_et_office365s_office365_id_usergroups test' do
+  describe 'get_office365s_office365_id_usergroups test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_office365s_office365_id_users
+  # unit tests for get_office365s_office365_id_users
   # List the Users bound to an Office 365 instance
   # This endpoint will return all Users bound to an Office 365 instance, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths.  The &#x60;attributes&#x60; object is a key/value hash of compiled graph attributes for all paths followed.  The &#x60;paths&#x60; array enumerates each path from this Office 365 instance to the corresponding User; this array represents all grouping and/or associations that would have to be removed to deprovision the User from this Office 365 instance.  See &#x60;/members&#x60; and &#x60;/associations&#x60; endpoints to manage those collections.  #### Sample Request &#x60;&#x60;&#x60; curl -X GET https://console.jumpcloud.com/api/v2/office365s/{OFFICE365_ID}/users \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
   # @param office365_id ObjectID of the Office 365 suite.
@@ -144,7 +144,7 @@ describe 'Office365Api' do
   # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
   # @option opts [String] :x_org_id 
   # @return [Array<GraphObjectWithPaths>]
-  describe 'g_et_office365s_office365_id_users test' do
+  describe 'get_office365s_office365_id_users test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

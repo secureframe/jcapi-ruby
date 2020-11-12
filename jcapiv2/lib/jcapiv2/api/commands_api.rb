@@ -31,8 +31,8 @@ module JCAPIv2
     # @option opts [Integer] :skip The offset into the records to return. (default to 0)
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<GraphConnection>]
-    def g_et_commands_command_id_associations(command_id, targets, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_commands_command_id_associations_with_http_info(command_id, targets, accept, content_type, opts)
+    def get_commands_command_id_associations(command_id, targets, accept, content_type, opts = {})
+      data, _status_code, _headers = get_commands_command_id_associations_with_http_info(command_id, targets, accept, content_type, opts)
       return data
     end
 
@@ -47,28 +47,28 @@ module JCAPIv2
     # @option opts [Integer] :skip The offset into the records to return.
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<GraphConnection>, Fixnum, Hash)>] Array<GraphConnection> data, response status code and response headers
-    def g_et_commands_command_id_associations_with_http_info(command_id, targets, accept, content_type, opts = {})
+    def get_commands_command_id_associations_with_http_info(command_id, targets, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CommandsApi.g_et_commands_command_id_associations ..."
+        @api_client.config.logger.debug "Calling API: CommandsApi.get_commands_command_id_associations ..."
       end
       # verify the required parameter 'command_id' is set
       if @api_client.config.client_side_validation && command_id.nil?
-        fail ArgumentError, "Missing the required parameter 'command_id' when calling CommandsApi.g_et_commands_command_id_associations"
+        fail ArgumentError, "Missing the required parameter 'command_id' when calling CommandsApi.get_commands_command_id_associations"
       end
       # verify the required parameter 'targets' is set
       if @api_client.config.client_side_validation && targets.nil?
-        fail ArgumentError, "Missing the required parameter 'targets' when calling CommandsApi.g_et_commands_command_id_associations"
+        fail ArgumentError, "Missing the required parameter 'targets' when calling CommandsApi.get_commands_command_id_associations"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling CommandsApi.g_et_commands_command_id_associations"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling CommandsApi.get_commands_command_id_associations"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling CommandsApi.g_et_commands_command_id_associations"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling CommandsApi.get_commands_command_id_associations"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling CommandsApi.g_et_commands_command_id_associations, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling CommandsApi.get_commands_command_id_associations, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -104,7 +104,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<GraphConnection>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CommandsApi#g_et_commands_command_id_associations\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CommandsApi#get_commands_command_id_associations\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -120,8 +120,8 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<GraphObjectWithPaths>]
-    def g_et_commands_command_id_systemgroups(command_id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_commands_command_id_systemgroups_with_http_info(command_id, accept, content_type, opts)
+    def get_commands_command_id_systemgroups(command_id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_commands_command_id_systemgroups_with_http_info(command_id, accept, content_type, opts)
       return data
     end
 
@@ -136,24 +136,24 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<GraphObjectWithPaths>, Fixnum, Hash)>] Array<GraphObjectWithPaths> data, response status code and response headers
-    def g_et_commands_command_id_systemgroups_with_http_info(command_id, accept, content_type, opts = {})
+    def get_commands_command_id_systemgroups_with_http_info(command_id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CommandsApi.g_et_commands_command_id_systemgroups ..."
+        @api_client.config.logger.debug "Calling API: CommandsApi.get_commands_command_id_systemgroups ..."
       end
       # verify the required parameter 'command_id' is set
       if @api_client.config.client_side_validation && command_id.nil?
-        fail ArgumentError, "Missing the required parameter 'command_id' when calling CommandsApi.g_et_commands_command_id_systemgroups"
+        fail ArgumentError, "Missing the required parameter 'command_id' when calling CommandsApi.get_commands_command_id_systemgroups"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling CommandsApi.g_et_commands_command_id_systemgroups"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling CommandsApi.get_commands_command_id_systemgroups"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling CommandsApi.g_et_commands_command_id_systemgroups"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling CommandsApi.get_commands_command_id_systemgroups"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling CommandsApi.g_et_commands_command_id_systemgroups, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling CommandsApi.get_commands_command_id_systemgroups, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -189,7 +189,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<GraphObjectWithPaths>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CommandsApi#g_et_commands_command_id_systemgroups\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CommandsApi#get_commands_command_id_systemgroups\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -205,8 +205,8 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<GraphObjectWithPaths>]
-    def g_et_commands_command_id_systems(command_id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_commands_command_id_systems_with_http_info(command_id, accept, content_type, opts)
+    def get_commands_command_id_systems(command_id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_commands_command_id_systems_with_http_info(command_id, accept, content_type, opts)
       return data
     end
 
@@ -221,24 +221,24 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<GraphObjectWithPaths>, Fixnum, Hash)>] Array<GraphObjectWithPaths> data, response status code and response headers
-    def g_et_commands_command_id_systems_with_http_info(command_id, accept, content_type, opts = {})
+    def get_commands_command_id_systems_with_http_info(command_id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CommandsApi.g_et_commands_command_id_systems ..."
+        @api_client.config.logger.debug "Calling API: CommandsApi.get_commands_command_id_systems ..."
       end
       # verify the required parameter 'command_id' is set
       if @api_client.config.client_side_validation && command_id.nil?
-        fail ArgumentError, "Missing the required parameter 'command_id' when calling CommandsApi.g_et_commands_command_id_systems"
+        fail ArgumentError, "Missing the required parameter 'command_id' when calling CommandsApi.get_commands_command_id_systems"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling CommandsApi.g_et_commands_command_id_systems"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling CommandsApi.get_commands_command_id_systems"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling CommandsApi.g_et_commands_command_id_systems"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling CommandsApi.get_commands_command_id_systems"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling CommandsApi.g_et_commands_command_id_systems, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling CommandsApi.get_commands_command_id_systems, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -274,7 +274,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<GraphObjectWithPaths>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CommandsApi#g_et_commands_command_id_systems\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CommandsApi#get_commands_command_id_systems\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

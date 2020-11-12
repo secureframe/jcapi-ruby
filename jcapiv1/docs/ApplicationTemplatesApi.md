@@ -4,12 +4,12 @@ All URIs are relative to *https://console.jumpcloud.com/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**g_et_application_templates**](ApplicationTemplatesApi.md#g_et_application_templates) | **GET** /application-templates | List Application Templates
-[**g_et_application_templates_id**](ApplicationTemplatesApi.md#g_et_application_templates_id) | **GET** /application-templates/{id} | Get an Application Template
+[**get_application_templates**](ApplicationTemplatesApi.md#get_application_templates) | **GET** /application-templates | List Application Templates
+[**get_application_templates_id**](ApplicationTemplatesApi.md#get_application_templates_id) | **GET** /application-templates/{id} | Get an Application Template
 
 
-# **g_et_application_templates**
-> Applicationtemplateslist g_et_application_templates(accept, content_type, opts)
+# **get_application_templates**
+> Applicationtemplateslist get_application_templates(accept, content_type, opts)
 
 List Application Templates
 
@@ -44,10 +44,10 @@ opts = {
 
 begin
   #List Application Templates
-  result = api_instance.g_et_application_templates(accept, content_type, opts)
+  result = api_instance.get_application_templates(accept, content_type, opts)
   p result
 rescue JCAPIv1::ApiError => e
-  puts "Exception when calling ApplicationTemplatesApi->g_et_application_templates: #{e}"
+  puts "Exception when calling ApplicationTemplatesApi->get_application_templates: #{e}"
 end
 ```
 
@@ -79,8 +79,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_application_templates_id**
-> Applicationtemplate g_et_application_templates_id(id, accept, content_type, opts)
+# **get_application_templates_id**
+> Applicationtemplate get_application_templates_id(id, accept, content_type, opts)
 
 Get an Application Template
 
@@ -117,10 +117,10 @@ opts = {
 
 begin
   #Get an Application Template
-  result = api_instance.g_et_application_templates_id(id, accept, content_type, opts)
+  result = api_instance.get_application_templates_id(id, accept, content_type, opts)
   p result
 rescue JCAPIv1::ApiError => e
-  puts "Exception when calling ApplicationTemplatesApi->g_et_application_templates_id: #{e}"
+  puts "Exception when calling ApplicationTemplatesApi->get_application_templates_id: #{e}"
 end
 ```
 

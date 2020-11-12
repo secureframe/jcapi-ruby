@@ -32,7 +32,7 @@ describe 'UserGroupMembersMembershipApi' do
     end
   end
 
-  # unit tests for g_et_usergroups_group_id_members
+  # unit tests for get_usergroups_group_id_members
   # List the members of a User Group
   # This endpoint returns the user members of a User Group.  #### Sample Request &#x60;&#x60;&#x60; curl -X GET https://console.jumpcloud.com/api/v2/usergroups/{GroupID}/members \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
   # @param group_id ObjectID of the User Group.
@@ -43,13 +43,13 @@ describe 'UserGroupMembersMembershipApi' do
   # @option opts [Integer] :skip The offset into the records to return.
   # @option opts [String] :x_org_id 
   # @return [Array<GraphConnection>]
-  describe 'g_et_usergroups_group_id_members test' do
+  describe 'get_usergroups_group_id_members test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_usergroups_group_id_membership
+  # unit tests for get_usergroups_group_id_membership
   # List the User Group&#39;s membership
   # This endpoint returns all users members that are a member of this User Group.  #### Sample Request &#x60;&#x60;&#x60; curl -X GET https://console.jumpcloud.com/api/v2/usergroups/{GroupID}/membership \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
   # @param group_id ObjectID of the User Group.
@@ -62,7 +62,7 @@ describe 'UserGroupMembersMembershipApi' do
   # @option opts [Array<String>] :sort The comma separated fields used to sort the collection. Default sort is ascending, prefix with &#x60;-&#x60; to sort descending. 
   # @option opts [String] :x_org_id 
   # @return [Array<GraphObjectWithPaths>]
-  describe 'g_et_usergroups_group_id_membership test' do
+  describe 'get_usergroups_group_id_membership test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

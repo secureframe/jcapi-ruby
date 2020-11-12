@@ -5,12 +5,12 @@ All URIs are relative to *https://console.jumpcloud.com/api/v2*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**d_elete_office365s_office365_id_translationrules_id**](Office365Api.md#d_elete_office365s_office365_id_translationrules_id) | **DELETE** /office365s/{office365_id}/translationrules/{id} | Deletes a Office 365 translation rule
-[**g_et_office365s_office365_id**](Office365Api.md#g_et_office365s_office365_id) | **GET** /office365s/{office365_id} | Get Office 365 instance
-[**g_et_office365s_office365_id_associations**](Office365Api.md#g_et_office365s_office365_id_associations) | **GET** /office365s/{office365_id}/associations | List the associations of an Office 365 instance
-[**g_et_office365s_office365_id_translationrules**](Office365Api.md#g_et_office365s_office365_id_translationrules) | **GET** /office365s/{office365_id}/translationrules | List all the Office 365 Translation Rules
-[**g_et_office365s_office365_id_translationrules_id**](Office365Api.md#g_et_office365s_office365_id_translationrules_id) | **GET** /office365s/{office365_id}/translationrules/{id} | Gets a specific Office 365 translation rule
-[**g_et_office365s_office365_id_usergroups**](Office365Api.md#g_et_office365s_office365_id_usergroups) | **GET** /office365s/{office365_id}/usergroups | List the User Groups bound to an Office 365 instance
-[**g_et_office365s_office365_id_users**](Office365Api.md#g_et_office365s_office365_id_users) | **GET** /office365s/{office365_id}/users | List the Users bound to an Office 365 instance
+[**get_office365s_office365_id**](Office365Api.md#get_office365s_office365_id) | **GET** /office365s/{office365_id} | Get Office 365 instance
+[**get_office365s_office365_id_associations**](Office365Api.md#get_office365s_office365_id_associations) | **GET** /office365s/{office365_id}/associations | List the associations of an Office 365 instance
+[**get_office365s_office365_id_translationrules**](Office365Api.md#get_office365s_office365_id_translationrules) | **GET** /office365s/{office365_id}/translationrules | List all the Office 365 Translation Rules
+[**get_office365s_office365_id_translationrules_id**](Office365Api.md#get_office365s_office365_id_translationrules_id) | **GET** /office365s/{office365_id}/translationrules/{id} | Gets a specific Office 365 translation rule
+[**get_office365s_office365_id_usergroups**](Office365Api.md#get_office365s_office365_id_usergroups) | **GET** /office365s/{office365_id}/usergroups | List the User Groups bound to an Office 365 instance
+[**get_office365s_office365_id_users**](Office365Api.md#get_office365s_office365_id_users) | **GET** /office365s/{office365_id}/users | List the Users bound to an Office 365 instance
 [**p_atch_office365s_office365_id**](Office365Api.md#p_atch_office365s_office365_id) | **PATCH** /office365s/{office365_id} | Update existing Office 365 instance.
 [**p_ost_office365s_office365_id_associations**](Office365Api.md#p_ost_office365s_office365_id_associations) | **POST** /office365s/{office365_id}/associations | Manage the associations of an Office 365 instance
 [**p_ost_office365s_office365_id_translationrules**](Office365Api.md#p_ost_office365s_office365_id_translationrules) | **POST** /office365s/{office365_id}/translationrules | Create a new Office 365 Translation Rule
@@ -78,8 +78,8 @@ nil (empty response body)
 
 
 
-# **g_et_office365s_office365_id**
-> Office365Output g_et_office365s_office365_id(office365_id, accept, content_type, opts)
+# **get_office365s_office365_id**
+> Office365Output get_office365s_office365_id(office365_id, accept, content_type, opts)
 
 Get Office 365 instance
 
@@ -111,10 +111,10 @@ opts = {
 
 begin
   #Get Office 365 instance
-  result = api_instance.g_et_office365s_office365_id(office365_id, accept, content_type, opts)
+  result = api_instance.get_office365s_office365_id(office365_id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling Office365Api->g_et_office365s_office365_id: #{e}"
+  puts "Exception when calling Office365Api->get_office365s_office365_id: #{e}"
 end
 ```
 
@@ -142,8 +142,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_office365s_office365_id_associations**
-> Array&lt;GraphConnection&gt; g_et_office365s_office365_id_associations(office365_id, targets, accept, content_type, opts)
+# **get_office365s_office365_id_associations**
+> Array&lt;GraphConnection&gt; get_office365s_office365_id_associations(office365_id, targets, accept, content_type, opts)
 
 List the associations of an Office 365 instance
 
@@ -179,10 +179,10 @@ opts = {
 
 begin
   #List the associations of an Office 365 instance
-  result = api_instance.g_et_office365s_office365_id_associations(office365_id, targets, accept, content_type, opts)
+  result = api_instance.get_office365s_office365_id_associations(office365_id, targets, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling Office365Api->g_et_office365s_office365_id_associations: #{e}"
+  puts "Exception when calling Office365Api->get_office365s_office365_id_associations: #{e}"
 end
 ```
 
@@ -213,8 +213,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_office365s_office365_id_translationrules**
-> Array&lt;Office365TranslationRule&gt; g_et_office365s_office365_id_translationrules(office365_id, accept, content_type, opts)
+# **get_office365s_office365_id_translationrules**
+> Array&lt;Office365TranslationRule&gt; get_office365s_office365_id_translationrules(office365_id, accept, content_type, opts)
 
 List all the Office 365 Translation Rules
 
@@ -250,10 +250,10 @@ opts = {
 
 begin
   #List all the Office 365 Translation Rules
-  result = api_instance.g_et_office365s_office365_id_translationrules(office365_id, accept, content_type, opts)
+  result = api_instance.get_office365s_office365_id_translationrules(office365_id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling Office365Api->g_et_office365s_office365_id_translationrules: #{e}"
+  puts "Exception when calling Office365Api->get_office365s_office365_id_translationrules: #{e}"
 end
 ```
 
@@ -285,8 +285,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_office365s_office365_id_translationrules_id**
-> Office365TranslationRule g_et_office365s_office365_id_translationrules_id(office365_id, id, accept, content_type)
+# **get_office365s_office365_id_translationrules_id**
+> Office365TranslationRule get_office365s_office365_id_translationrules_id(office365_id, id, accept, content_type)
 
 Gets a specific Office 365 translation rule
 
@@ -317,10 +317,10 @@ content_type = "application/json" # String |
 
 begin
   #Gets a specific Office 365 translation rule
-  result = api_instance.g_et_office365s_office365_id_translationrules_id(office365_id, id, accept, content_type)
+  result = api_instance.get_office365s_office365_id_translationrules_id(office365_id, id, accept, content_type)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling Office365Api->g_et_office365s_office365_id_translationrules_id: #{e}"
+  puts "Exception when calling Office365Api->get_office365s_office365_id_translationrules_id: #{e}"
 end
 ```
 
@@ -348,8 +348,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_office365s_office365_id_usergroups**
-> Array&lt;GraphObjectWithPaths&gt; g_et_office365s_office365_id_usergroups(office365_id, accept, content_type, opts)
+# **get_office365s_office365_id_usergroups**
+> Array&lt;GraphObjectWithPaths&gt; get_office365s_office365_id_usergroups(office365_id, accept, content_type, opts)
 
 List the User Groups bound to an Office 365 instance
 
@@ -384,10 +384,10 @@ opts = {
 
 begin
   #List the User Groups bound to an Office 365 instance
-  result = api_instance.g_et_office365s_office365_id_usergroups(office365_id, accept, content_type, opts)
+  result = api_instance.get_office365s_office365_id_usergroups(office365_id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling Office365Api->g_et_office365s_office365_id_usergroups: #{e}"
+  puts "Exception when calling Office365Api->get_office365s_office365_id_usergroups: #{e}"
 end
 ```
 
@@ -418,8 +418,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_office365s_office365_id_users**
-> Array&lt;GraphObjectWithPaths&gt; g_et_office365s_office365_id_users(office365_id, accept, content_type, opts)
+# **get_office365s_office365_id_users**
+> Array&lt;GraphObjectWithPaths&gt; get_office365s_office365_id_users(office365_id, accept, content_type, opts)
 
 List the Users bound to an Office 365 instance
 
@@ -454,10 +454,10 @@ opts = {
 
 begin
   #List the Users bound to an Office 365 instance
-  result = api_instance.g_et_office365s_office365_id_users(office365_id, accept, content_type, opts)
+  result = api_instance.get_office365s_office365_id_users(office365_id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling Office365Api->g_et_office365s_office365_id_users: #{e}"
+  puts "Exception when calling Office365Api->get_office365s_office365_id_users: #{e}"
 end
 ```
 

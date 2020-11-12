@@ -32,7 +32,7 @@ describe 'ProvidersApi' do
     end
   end
 
-  # unit tests for g_et_providers_provider_id_administrators
+  # unit tests for get_providers_provider_id_administrators
   # List Provider Administrators
   # This endpoint returns a list of the Administrators associated with the Provider. You must be associated with the provider to use this route.  #### Sample Request &#x60;&#x60;&#x60; curl -X GET https://console.jumpcloud.com/api/v2/providers/{ProviderID}/administrators \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
   # @param provider_id 
@@ -45,7 +45,7 @@ describe 'ProvidersApi' do
   # @option opts [Integer] :skip The offset into the records to return.
   # @option opts [Array<String>] :sort The comma separated fields used to sort the collection. Default sort is ascending, prefix with &#x60;-&#x60; to sort descending. 
   # @return [InlineResponse200]
-  describe 'g_et_providers_provider_id_administrators test' do
+  describe 'get_providers_provider_id_administrators test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

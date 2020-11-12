@@ -4,18 +4,18 @@ All URIs are relative to *https://console.jumpcloud.com/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**g_et_systems_system_id_associations**](SystemsApi.md#g_et_systems_system_id_associations) | **GET** /systems/{system_id}/associations | List the associations of a System
-[**g_et_systems_system_id_commands**](SystemsApi.md#g_et_systems_system_id_commands) | **GET** /systems/{system_id}/commands | List the Commands bound to a System
-[**g_et_systems_system_id_fdekey**](SystemsApi.md#g_et_systems_system_id_fdekey) | **GET** /systems/{system_id}/fdekey | Get System FDE Key
-[**g_et_systems_system_id_memberof**](SystemsApi.md#g_et_systems_system_id_memberof) | **GET** /systems/{system_id}/memberof | List the parent Groups of a System
-[**g_et_systems_system_id_policies**](SystemsApi.md#g_et_systems_system_id_policies) | **GET** /systems/{system_id}/policies | List the Policies bound to a System
-[**g_et_systems_system_id_usergroups**](SystemsApi.md#g_et_systems_system_id_usergroups) | **GET** /systems/{system_id}/usergroups | List the User Groups bound to a System
-[**g_et_systems_system_id_users**](SystemsApi.md#g_et_systems_system_id_users) | **GET** /systems/{system_id}/users | List the Users bound to a System
+[**get_systems_system_id_associations**](SystemsApi.md#get_systems_system_id_associations) | **GET** /systems/{system_id}/associations | List the associations of a System
+[**get_systems_system_id_commands**](SystemsApi.md#get_systems_system_id_commands) | **GET** /systems/{system_id}/commands | List the Commands bound to a System
+[**get_systems_system_id_fdekey**](SystemsApi.md#get_systems_system_id_fdekey) | **GET** /systems/{system_id}/fdekey | Get System FDE Key
+[**get_systems_system_id_memberof**](SystemsApi.md#get_systems_system_id_memberof) | **GET** /systems/{system_id}/memberof | List the parent Groups of a System
+[**get_systems_system_id_policies**](SystemsApi.md#get_systems_system_id_policies) | **GET** /systems/{system_id}/policies | List the Policies bound to a System
+[**get_systems_system_id_usergroups**](SystemsApi.md#get_systems_system_id_usergroups) | **GET** /systems/{system_id}/usergroups | List the User Groups bound to a System
+[**get_systems_system_id_users**](SystemsApi.md#get_systems_system_id_users) | **GET** /systems/{system_id}/users | List the Users bound to a System
 [**p_ost_systems_system_id_associations**](SystemsApi.md#p_ost_systems_system_id_associations) | **POST** /systems/{system_id}/associations | Manage associations of a System
 
 
-# **g_et_systems_system_id_associations**
-> Array&lt;GraphConnection&gt; g_et_systems_system_id_associations(system_id, targets, accept, content_type, opts)
+# **get_systems_system_id_associations**
+> Array&lt;GraphConnection&gt; get_systems_system_id_associations(system_id, targets, accept, content_type, opts)
 
 List the associations of a System
 
@@ -53,10 +53,10 @@ opts = {
 
 begin
   #List the associations of a System
-  result = api_instance.g_et_systems_system_id_associations(system_id, targets, accept, content_type, opts)
+  result = api_instance.get_systems_system_id_associations(system_id, targets, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling SystemsApi->g_et_systems_system_id_associations: #{e}"
+  puts "Exception when calling SystemsApi->get_systems_system_id_associations: #{e}"
 end
 ```
 
@@ -89,8 +89,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_systems_system_id_commands**
-> Array&lt;GraphObjectWithPaths&gt; g_et_systems_system_id_commands(system_id, accept, content_type, opts)
+# **get_systems_system_id_commands**
+> Array&lt;GraphObjectWithPaths&gt; get_systems_system_id_commands(system_id, accept, content_type, opts)
 
 List the Commands bound to a System
 
@@ -125,10 +125,10 @@ opts = {
 
 begin
   #List the Commands bound to a System
-  result = api_instance.g_et_systems_system_id_commands(system_id, accept, content_type, opts)
+  result = api_instance.get_systems_system_id_commands(system_id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling SystemsApi->g_et_systems_system_id_commands: #{e}"
+  puts "Exception when calling SystemsApi->get_systems_system_id_commands: #{e}"
 end
 ```
 
@@ -159,8 +159,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_systems_system_id_fdekey**
-> Systemfdekey g_et_systems_system_id_fdekey(system_id, opts)
+# **get_systems_system_id_fdekey**
+> Systemfdekey get_systems_system_id_fdekey(system_id, opts)
 
 Get System FDE Key
 
@@ -188,10 +188,10 @@ opts = {
 
 begin
   #Get System FDE Key
-  result = api_instance.g_et_systems_system_id_fdekey(system_id, opts)
+  result = api_instance.get_systems_system_id_fdekey(system_id, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling SystemsApi->g_et_systems_system_id_fdekey: #{e}"
+  puts "Exception when calling SystemsApi->get_systems_system_id_fdekey: #{e}"
 end
 ```
 
@@ -217,8 +217,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_systems_system_id_memberof**
-> Array&lt;GraphObjectWithPaths&gt; g_et_systems_system_id_memberof(system_id, accept, content_type, opts)
+# **get_systems_system_id_memberof**
+> Array&lt;GraphObjectWithPaths&gt; get_systems_system_id_memberof(system_id, accept, content_type, opts)
 
 List the parent Groups of a System
 
@@ -256,10 +256,10 @@ opts = {
 
 begin
   #List the parent Groups of a System
-  result = api_instance.g_et_systems_system_id_memberof(system_id, accept, content_type, opts)
+  result = api_instance.get_systems_system_id_memberof(system_id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling SystemsApi->g_et_systems_system_id_memberof: #{e}"
+  puts "Exception when calling SystemsApi->get_systems_system_id_memberof: #{e}"
 end
 ```
 
@@ -293,8 +293,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_systems_system_id_policies**
-> Array&lt;GraphObjectWithPaths&gt; g_et_systems_system_id_policies(system_id, accept, content_type, opts)
+# **get_systems_system_id_policies**
+> Array&lt;GraphObjectWithPaths&gt; get_systems_system_id_policies(system_id, accept, content_type, opts)
 
 List the Policies bound to a System
 
@@ -329,10 +329,10 @@ opts = {
 
 begin
   #List the Policies bound to a System
-  result = api_instance.g_et_systems_system_id_policies(system_id, accept, content_type, opts)
+  result = api_instance.get_systems_system_id_policies(system_id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling SystemsApi->g_et_systems_system_id_policies: #{e}"
+  puts "Exception when calling SystemsApi->get_systems_system_id_policies: #{e}"
 end
 ```
 
@@ -363,8 +363,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_systems_system_id_usergroups**
-> Array&lt;GraphObjectWithPaths&gt; g_et_systems_system_id_usergroups(system_id, accept, content_type, opts)
+# **get_systems_system_id_usergroups**
+> Array&lt;GraphObjectWithPaths&gt; get_systems_system_id_usergroups(system_id, accept, content_type, opts)
 
 List the User Groups bound to a System
 
@@ -401,10 +401,10 @@ opts = {
 
 begin
   #List the User Groups bound to a System
-  result = api_instance.g_et_systems_system_id_usergroups(system_id, accept, content_type, opts)
+  result = api_instance.get_systems_system_id_usergroups(system_id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling SystemsApi->g_et_systems_system_id_usergroups: #{e}"
+  puts "Exception when calling SystemsApi->get_systems_system_id_usergroups: #{e}"
 end
 ```
 
@@ -437,8 +437,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_systems_system_id_users**
-> Array&lt;GraphObjectWithPaths&gt; g_et_systems_system_id_users(system_id, accept, content_type, opts)
+# **get_systems_system_id_users**
+> Array&lt;GraphObjectWithPaths&gt; get_systems_system_id_users(system_id, accept, content_type, opts)
 
 List the Users bound to a System
 
@@ -475,10 +475,10 @@ opts = {
 
 begin
   #List the Users bound to a System
-  result = api_instance.g_et_systems_system_id_users(system_id, accept, content_type, opts)
+  result = api_instance.get_systems_system_id_users(system_id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling SystemsApi->g_et_systems_system_id_users: #{e}"
+  puts "Exception when calling SystemsApi->get_systems_system_id_users: #{e}"
 end
 ```
 

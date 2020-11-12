@@ -4,11 +4,11 @@ All URIs are relative to *https://console.jumpcloud.com/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**g_et_directories**](DirectoriesApi.md#g_et_directories) | **GET** /directories | List All Directories
+[**get_directories**](DirectoriesApi.md#get_directories) | **GET** /directories | List All Directories
 
 
-# **g_et_directories**
-> Array&lt;Directory&gt; g_et_directories(accept, content_type, opts)
+# **get_directories**
+> Array&lt;Directory&gt; get_directories(accept, content_type, opts)
 
 List All Directories
 
@@ -42,10 +42,10 @@ opts = {
 
 begin
   #List All Directories
-  result = api_instance.g_et_directories(accept, content_type, opts)
+  result = api_instance.get_directories(accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling DirectoriesApi->g_et_directories: #{e}"
+  puts "Exception when calling DirectoriesApi->get_directories: #{e}"
 end
 ```
 

@@ -4,11 +4,11 @@ All URIs are relative to *https://console.jumpcloud.com/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**g_et_groups**](GroupsApi.md#g_et_groups) | **GET** /groups | List All Groups
+[**get_groups**](GroupsApi.md#get_groups) | **GET** /groups | List All Groups
 
 
-# **g_et_groups**
-> Array&lt;Group&gt; g_et_groups(accept, content_type, opts)
+# **get_groups**
+> Array&lt;Group&gt; get_groups(accept, content_type, opts)
 
 List All Groups
 
@@ -45,10 +45,10 @@ opts = {
 
 begin
   #List All Groups
-  result = api_instance.g_et_groups(accept, content_type, opts)
+  result = api_instance.get_groups(accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GroupsApi->g_et_groups: #{e}"
+  puts "Exception when calling GroupsApi->get_groups: #{e}"
 end
 ```
 

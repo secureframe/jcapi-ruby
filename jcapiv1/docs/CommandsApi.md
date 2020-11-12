@@ -5,9 +5,9 @@ All URIs are relative to *https://console.jumpcloud.com/api*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**d_elete_commands_id**](CommandsApi.md#d_elete_commands_id) | **DELETE** /commands/{id} | Delete a Command
-[**g_et_commands**](CommandsApi.md#g_et_commands) | **GET** /commands | List All Commands
-[**g_et_commands_id**](CommandsApi.md#g_et_commands_id) | **GET** /commands/{id} | List an individual Command
-[**g_et_files_command_id**](CommandsApi.md#g_et_files_command_id) | **GET** /files/command/{id} | Get a Command File
+[**get_commands**](CommandsApi.md#get_commands) | **GET** /commands | List All Commands
+[**get_commands_id**](CommandsApi.md#get_commands_id) | **GET** /commands/{id} | List an individual Command
+[**get_files_command_id**](CommandsApi.md#get_files_command_id) | **GET** /files/command/{id} | Get a Command File
 [**p_ost_commands**](CommandsApi.md#p_ost_commands) | **POST** /commands | Create A Command
 [**p_ut_commands_id**](CommandsApi.md#p_ut_commands_id) | **PUT** /commands/{id} | Update a Command
 
@@ -75,8 +75,8 @@ nil (empty response body)
 
 
 
-# **g_et_commands**
-> Commandslist g_et_commands(accept, content_type, opts)
+# **get_commands**
+> Commandslist get_commands(accept, content_type, opts)
 
 List All Commands
 
@@ -111,10 +111,10 @@ opts = {
 
 begin
   #List All Commands
-  result = api_instance.g_et_commands(accept, content_type, opts)
+  result = api_instance.get_commands(accept, content_type, opts)
   p result
 rescue JCAPIv1::ApiError => e
-  puts "Exception when calling CommandsApi->g_et_commands: #{e}"
+  puts "Exception when calling CommandsApi->get_commands: #{e}"
 end
 ```
 
@@ -146,8 +146,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_commands_id**
-> Command g_et_commands_id(id, accept, content_type, opts)
+# **get_commands_id**
+> Command get_commands_id(id, accept, content_type, opts)
 
 List an individual Command
 
@@ -180,10 +180,10 @@ opts = {
 
 begin
   #List an individual Command
-  result = api_instance.g_et_commands_id(id, accept, content_type, opts)
+  result = api_instance.get_commands_id(id, accept, content_type, opts)
   p result
 rescue JCAPIv1::ApiError => e
-  puts "Exception when calling CommandsApi->g_et_commands_id: #{e}"
+  puts "Exception when calling CommandsApi->get_commands_id: #{e}"
 end
 ```
 
@@ -212,8 +212,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_files_command_id**
-> Commandfilereturn g_et_files_command_id(id, accept, content_type, opts)
+# **get_files_command_id**
+> Commandfilereturn get_files_command_id(id, accept, content_type, opts)
 
 Get a Command File
 
@@ -248,10 +248,10 @@ opts = {
 
 begin
   #Get a Command File
-  result = api_instance.g_et_files_command_id(id, accept, content_type, opts)
+  result = api_instance.get_files_command_id(id, accept, content_type, opts)
   p result
 rescue JCAPIv1::ApiError => e
-  puts "Exception when calling CommandsApi->g_et_files_command_id: #{e}"
+  puts "Exception when calling CommandsApi->get_files_command_id: #{e}"
 end
 ```
 

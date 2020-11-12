@@ -4,16 +4,16 @@ All URIs are relative to *https://console.jumpcloud.com/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**g_et_systemgroups_group_id_associations**](SystemGroupAssociationsApi.md#g_et_systemgroups_group_id_associations) | **GET** /systemgroups/{group_id}/associations | List the associations of a System Group
-[**g_et_systemgroups_group_id_commands**](SystemGroupAssociationsApi.md#g_et_systemgroups_group_id_commands) | **GET** /systemgroups/{group_id}/commands | List the Commands bound to a System Group
-[**g_et_systemgroups_group_id_policies**](SystemGroupAssociationsApi.md#g_et_systemgroups_group_id_policies) | **GET** /systemgroups/{group_id}/policies | List the Policies bound to a System Group
-[**g_et_systemgroups_group_id_usergroups**](SystemGroupAssociationsApi.md#g_et_systemgroups_group_id_usergroups) | **GET** /systemgroups/{group_id}/usergroups | List the User Groups bound to a System Group
-[**g_et_systemgroups_group_id_users**](SystemGroupAssociationsApi.md#g_et_systemgroups_group_id_users) | **GET** /systemgroups/{group_id}/users | List the Users bound to a System Group
+[**get_systemgroups_group_id_associations**](SystemGroupAssociationsApi.md#get_systemgroups_group_id_associations) | **GET** /systemgroups/{group_id}/associations | List the associations of a System Group
+[**get_systemgroups_group_id_commands**](SystemGroupAssociationsApi.md#get_systemgroups_group_id_commands) | **GET** /systemgroups/{group_id}/commands | List the Commands bound to a System Group
+[**get_systemgroups_group_id_policies**](SystemGroupAssociationsApi.md#get_systemgroups_group_id_policies) | **GET** /systemgroups/{group_id}/policies | List the Policies bound to a System Group
+[**get_systemgroups_group_id_usergroups**](SystemGroupAssociationsApi.md#get_systemgroups_group_id_usergroups) | **GET** /systemgroups/{group_id}/usergroups | List the User Groups bound to a System Group
+[**get_systemgroups_group_id_users**](SystemGroupAssociationsApi.md#get_systemgroups_group_id_users) | **GET** /systemgroups/{group_id}/users | List the Users bound to a System Group
 [**p_ost_systemgroups_group_id_associations**](SystemGroupAssociationsApi.md#p_ost_systemgroups_group_id_associations) | **POST** /systemgroups/{group_id}/associations | Manage the associations of a System Group
 
 
-# **g_et_systemgroups_group_id_associations**
-> Array&lt;GraphConnection&gt; g_et_systemgroups_group_id_associations(group_id, targets, accept, content_type, opts)
+# **get_systemgroups_group_id_associations**
+> Array&lt;GraphConnection&gt; get_systemgroups_group_id_associations(group_id, targets, accept, content_type, opts)
 
 List the associations of a System Group
 
@@ -49,10 +49,10 @@ opts = {
 
 begin
   #List the associations of a System Group
-  result = api_instance.g_et_systemgroups_group_id_associations(group_id, targets, accept, content_type, opts)
+  result = api_instance.get_systemgroups_group_id_associations(group_id, targets, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling SystemGroupAssociationsApi->g_et_systemgroups_group_id_associations: #{e}"
+  puts "Exception when calling SystemGroupAssociationsApi->get_systemgroups_group_id_associations: #{e}"
 end
 ```
 
@@ -83,8 +83,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_systemgroups_group_id_commands**
-> Array&lt;GraphObjectWithPaths&gt; g_et_systemgroups_group_id_commands(group_id, accept, content_type, opts)
+# **get_systemgroups_group_id_commands**
+> Array&lt;GraphObjectWithPaths&gt; get_systemgroups_group_id_commands(group_id, accept, content_type, opts)
 
 List the Commands bound to a System Group
 
@@ -119,10 +119,10 @@ opts = {
 
 begin
   #List the Commands bound to a System Group
-  result = api_instance.g_et_systemgroups_group_id_commands(group_id, accept, content_type, opts)
+  result = api_instance.get_systemgroups_group_id_commands(group_id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling SystemGroupAssociationsApi->g_et_systemgroups_group_id_commands: #{e}"
+  puts "Exception when calling SystemGroupAssociationsApi->get_systemgroups_group_id_commands: #{e}"
 end
 ```
 
@@ -153,8 +153,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_systemgroups_group_id_policies**
-> Array&lt;GraphObjectWithPaths&gt; g_et_systemgroups_group_id_policies(group_id, accept, content_type, opts)
+# **get_systemgroups_group_id_policies**
+> Array&lt;GraphObjectWithPaths&gt; get_systemgroups_group_id_policies(group_id, accept, content_type, opts)
 
 List the Policies bound to a System Group
 
@@ -189,10 +189,10 @@ opts = {
 
 begin
   #List the Policies bound to a System Group
-  result = api_instance.g_et_systemgroups_group_id_policies(group_id, accept, content_type, opts)
+  result = api_instance.get_systemgroups_group_id_policies(group_id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling SystemGroupAssociationsApi->g_et_systemgroups_group_id_policies: #{e}"
+  puts "Exception when calling SystemGroupAssociationsApi->get_systemgroups_group_id_policies: #{e}"
 end
 ```
 
@@ -223,8 +223,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_systemgroups_group_id_usergroups**
-> Array&lt;GraphObjectWithPaths&gt; g_et_systemgroups_group_id_usergroups(group_id, accept, content_type, opts)
+# **get_systemgroups_group_id_usergroups**
+> Array&lt;GraphObjectWithPaths&gt; get_systemgroups_group_id_usergroups(group_id, accept, content_type, opts)
 
 List the User Groups bound to a System Group
 
@@ -259,10 +259,10 @@ opts = {
 
 begin
   #List the User Groups bound to a System Group
-  result = api_instance.g_et_systemgroups_group_id_usergroups(group_id, accept, content_type, opts)
+  result = api_instance.get_systemgroups_group_id_usergroups(group_id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling SystemGroupAssociationsApi->g_et_systemgroups_group_id_usergroups: #{e}"
+  puts "Exception when calling SystemGroupAssociationsApi->get_systemgroups_group_id_usergroups: #{e}"
 end
 ```
 
@@ -293,8 +293,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_systemgroups_group_id_users**
-> Array&lt;GraphObjectWithPaths&gt; g_et_systemgroups_group_id_users(group_id, accept, content_type, opts)
+# **get_systemgroups_group_id_users**
+> Array&lt;GraphObjectWithPaths&gt; get_systemgroups_group_id_users(group_id, accept, content_type, opts)
 
 List the Users bound to a System Group
 
@@ -329,10 +329,10 @@ opts = {
 
 begin
   #List the Users bound to a System Group
-  result = api_instance.g_et_systemgroups_group_id_users(group_id, accept, content_type, opts)
+  result = api_instance.get_systemgroups_group_id_users(group_id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling SystemGroupAssociationsApi->g_et_systemgroups_group_id_users: #{e}"
+  puts "Exception when calling SystemGroupAssociationsApi->get_systemgroups_group_id_users: #{e}"
 end
 ```
 

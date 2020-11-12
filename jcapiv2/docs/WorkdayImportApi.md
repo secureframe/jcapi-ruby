@@ -5,10 +5,10 @@ All URIs are relative to *https://console.jumpcloud.com/api/v2*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**d_elete_workdays_workday_id_auth**](WorkdayImportApi.md#d_elete_workdays_workday_id_auth) | **DELETE** /workdays/{workday_id}/auth | Deauthorize Workday
-[**g_et_workdays**](WorkdayImportApi.md#g_et_workdays) | **GET** /workdays | List Workdays
-[**g_et_workdays_id**](WorkdayImportApi.md#g_et_workdays_id) | **GET** /workdays/{id} | Get Workday
-[**g_et_workdays_id_import_job_id_results**](WorkdayImportApi.md#g_et_workdays_id_import_job_id_results) | **GET** /workdays/{id}/import/{job_id}/results | List Import Results
-[**g_et_workdays_workday_id_workers**](WorkdayImportApi.md#g_et_workdays_workday_id_workers) | **GET** /workdays/{workday_id}/workers | List Workday Workers
+[**get_workdays**](WorkdayImportApi.md#get_workdays) | **GET** /workdays | List Workdays
+[**get_workdays_id**](WorkdayImportApi.md#get_workdays_id) | **GET** /workdays/{id} | Get Workday
+[**get_workdays_id_import_job_id_results**](WorkdayImportApi.md#get_workdays_id_import_job_id_results) | **GET** /workdays/{id}/import/{job_id}/results | List Import Results
+[**get_workdays_workday_id_workers**](WorkdayImportApi.md#get_workdays_workday_id_workers) | **GET** /workdays/{workday_id}/workers | List Workday Workers
 [**p_ost_workdays**](WorkdayImportApi.md#p_ost_workdays) | **POST** /workdays | Create new Workday
 [**p_ost_workdays_workday_id_auth**](WorkdayImportApi.md#p_ost_workdays_workday_id_auth) | **POST** /workdays/{workday_id}/auth | Authorize Workday
 [**p_ost_workdays_workday_id_import**](WorkdayImportApi.md#p_ost_workdays_workday_id_import) | **POST** /workdays/{workday_id}/import | Workday Import
@@ -78,8 +78,8 @@ nil (empty response body)
 
 
 
-# **g_et_workdays**
-> Array&lt;WorkdayOutput&gt; g_et_workdays(accept, content_type, opts)
+# **get_workdays**
+> Array&lt;WorkdayOutput&gt; get_workdays(accept, content_type, opts)
 
 List Workdays
 
@@ -114,10 +114,10 @@ opts = {
 
 begin
   #List Workdays
-  result = api_instance.g_et_workdays(accept, content_type, opts)
+  result = api_instance.get_workdays(accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling WorkdayImportApi->g_et_workdays: #{e}"
+  puts "Exception when calling WorkdayImportApi->get_workdays: #{e}"
 end
 ```
 
@@ -149,8 +149,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_workdays_id**
-> WorkdayOutput g_et_workdays_id(id, accept, content_type, opts)
+# **get_workdays_id**
+> WorkdayOutput get_workdays_id(id, accept, content_type, opts)
 
 Get Workday
 
@@ -182,10 +182,10 @@ opts = {
 
 begin
   #Get Workday
-  result = api_instance.g_et_workdays_id(id, accept, content_type, opts)
+  result = api_instance.get_workdays_id(id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling WorkdayImportApi->g_et_workdays_id: #{e}"
+  puts "Exception when calling WorkdayImportApi->get_workdays_id: #{e}"
 end
 ```
 
@@ -213,8 +213,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_workdays_id_import_job_id_results**
-> Array&lt;JobWorkresult&gt; g_et_workdays_id_import_job_id_results(id, job_id, accept, content_type, opts)
+# **get_workdays_id_import_job_id_results**
+> Array&lt;JobWorkresult&gt; get_workdays_id_import_job_id_results(id, job_id, accept, content_type, opts)
 
 List Import Results
 
@@ -250,10 +250,10 @@ opts = {
 
 begin
   #List Import Results
-  result = api_instance.g_et_workdays_id_import_job_id_results(id, job_id, accept, content_type, opts)
+  result = api_instance.get_workdays_id_import_job_id_results(id, job_id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling WorkdayImportApi->g_et_workdays_id_import_job_id_results: #{e}"
+  puts "Exception when calling WorkdayImportApi->get_workdays_id_import_job_id_results: #{e}"
 end
 ```
 
@@ -284,8 +284,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_workdays_workday_id_workers**
-> Array&lt;WorkdayWorker&gt; g_et_workdays_workday_id_workers(workday_id, accept, content_type, opts)
+# **get_workdays_workday_id_workers**
+> Array&lt;WorkdayWorker&gt; get_workdays_workday_id_workers(workday_id, accept, content_type, opts)
 
 List Workday Workers
 
@@ -320,10 +320,10 @@ opts = {
 
 begin
   #List Workday Workers
-  result = api_instance.g_et_workdays_workday_id_workers(workday_id, accept, content_type, opts)
+  result = api_instance.get_workdays_workday_id_workers(workday_id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling WorkdayImportApi->g_et_workdays_workday_id_workers: #{e}"
+  puts "Exception when calling WorkdayImportApi->get_workdays_workday_id_workers: #{e}"
 end
 ```
 

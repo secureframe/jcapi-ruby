@@ -47,7 +47,7 @@ describe 'WorkdayImportApi' do
     end
   end
 
-  # unit tests for g_et_workdays
+  # unit tests for get_workdays
   # List Workdays
   # This endpoint will return  all the available information about all your instances of Workday.  ##### Sample Request &#x60;&#x60;&#x60; curl -X GET https://console.jumpcloud.com/api/v2/workdays/ \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39;   &#x60;&#x60;&#x60;
   # @param accept 
@@ -60,13 +60,13 @@ describe 'WorkdayImportApi' do
   # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
   # @option opts [String] :x_org_id 
   # @return [Array<WorkdayOutput>]
-  describe 'g_et_workdays test' do
+  describe 'get_workdays test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_workdays_id
+  # unit tests for get_workdays_id
   # Get Workday
   # This endpoint will return  all the available information about an instance of Workday.  #### Sample Request  &#x60;&#x60;&#x60; curl -X GET https://console.jumpcloud.com/api/v2/workdays/ \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39;   &#x60;&#x60;&#x60;
   # @param id 
@@ -75,13 +75,13 @@ describe 'WorkdayImportApi' do
   # @param [Hash] opts the optional parameters
   # @option opts [String] :x_org_id 
   # @return [WorkdayOutput]
-  describe 'g_et_workdays_id test' do
+  describe 'get_workdays_id test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_workdays_id_import_job_id_results
+  # unit tests for get_workdays_id_import_job_id_results
   # List Import Results
   # This endpoint provides a list of job results from the workday import and will contain all imported data from Workday.  #### Sample Request &#x60;&#x60;&#x60; curl -X GET https://console.jumpcloud.com/api/v2/workdays/{WorkdayID}/import/{ImportJobID}/results \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
   # @param id 
@@ -93,13 +93,13 @@ describe 'WorkdayImportApi' do
   # @option opts [Integer] :skip The offset into the records to return.
   # @option opts [String] :x_org_id 
   # @return [Array<JobWorkresult>]
-  describe 'g_et_workdays_id_import_job_id_results test' do
+  describe 'get_workdays_id_import_job_id_results test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_workdays_workday_id_workers
+  # unit tests for get_workdays_workday_id_workers
   # List Workday Workers
   # This endpoint will return all of the data in your WorkDay Custom Report that has been associated with your WorkDay Instance in JumpCloud.  ##### Sample Request  &#x60;&#x60;&#x60; curl -X GET https://console.jumpcloud.com/api/v2/workdays/{WorkDayID}/workers \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39;   &#x60;&#x60;&#x60;
   # @param workday_id 
@@ -111,7 +111,7 @@ describe 'WorkdayImportApi' do
   # @option opts [Array<String>] :sort The comma separated fields used to sort the collection. Default sort is ascending, prefix with &#x60;-&#x60; to sort descending. 
   # @option opts [String] :x_org_id 
   # @return [Array<WorkdayWorker>]
-  describe 'g_et_workdays_workday_id_workers test' do
+  describe 'get_workdays_workday_id_workers test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

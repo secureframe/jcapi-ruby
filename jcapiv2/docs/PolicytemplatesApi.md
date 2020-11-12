@@ -4,12 +4,12 @@ All URIs are relative to *https://console.jumpcloud.com/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**g_et_policytemplates**](PolicytemplatesApi.md#g_et_policytemplates) | **GET** /policytemplates | Lists all of the Policy Templates
-[**g_et_policytemplates_id**](PolicytemplatesApi.md#g_et_policytemplates_id) | **GET** /policytemplates/{id} | Get a specific Policy Template
+[**get_policytemplates**](PolicytemplatesApi.md#get_policytemplates) | **GET** /policytemplates | Lists all of the Policy Templates
+[**get_policytemplates_id**](PolicytemplatesApi.md#get_policytemplates_id) | **GET** /policytemplates/{id} | Get a specific Policy Template
 
 
-# **g_et_policytemplates**
-> Array&lt;PolicyTemplate&gt; g_et_policytemplates(accept, content_type, opts)
+# **get_policytemplates**
+> Array&lt;PolicyTemplate&gt; get_policytemplates(accept, content_type, opts)
 
 Lists all of the Policy Templates
 
@@ -44,10 +44,10 @@ opts = {
 
 begin
   #Lists all of the Policy Templates
-  result = api_instance.g_et_policytemplates(accept, content_type, opts)
+  result = api_instance.get_policytemplates(accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling PolicytemplatesApi->g_et_policytemplates: #{e}"
+  puts "Exception when calling PolicytemplatesApi->get_policytemplates: #{e}"
 end
 ```
 
@@ -79,8 +79,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_policytemplates_id**
-> PolicyTemplateWithDetails g_et_policytemplates_id(id, accept, content_type, opts)
+# **get_policytemplates_id**
+> PolicyTemplateWithDetails get_policytemplates_id(id, accept, content_type, opts)
 
 Get a specific Policy Template
 
@@ -112,10 +112,10 @@ opts = {
 
 begin
   #Get a specific Policy Template
-  result = api_instance.g_et_policytemplates_id(id, accept, content_type, opts)
+  result = api_instance.get_policytemplates_id(id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling PolicytemplatesApi->g_et_policytemplates_id: #{e}"
+  puts "Exception when calling PolicytemplatesApi->get_policytemplates_id: #{e}"
 end
 ```
 

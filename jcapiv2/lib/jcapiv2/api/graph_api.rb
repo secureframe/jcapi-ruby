@@ -31,8 +31,8 @@ module JCAPIv2
     # @option opts [Integer] :skip The offset into the records to return. (default to 0)
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<GraphConnection>]
-    def g_et_activedirectories_activedirectory_id_associations(activedirectory_id, targets, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_activedirectories_activedirectory_id_associations_with_http_info(activedirectory_id, targets, accept, content_type, opts)
+    def get_activedirectories_activedirectory_id_associations(activedirectory_id, targets, accept, content_type, opts = {})
+      data, _status_code, _headers = get_activedirectories_activedirectory_id_associations_with_http_info(activedirectory_id, targets, accept, content_type, opts)
       return data
     end
 
@@ -47,28 +47,28 @@ module JCAPIv2
     # @option opts [Integer] :skip The offset into the records to return.
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<GraphConnection>, Fixnum, Hash)>] Array<GraphConnection> data, response status code and response headers
-    def g_et_activedirectories_activedirectory_id_associations_with_http_info(activedirectory_id, targets, accept, content_type, opts = {})
+    def get_activedirectories_activedirectory_id_associations_with_http_info(activedirectory_id, targets, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GraphApi.g_et_activedirectories_activedirectory_id_associations ..."
+        @api_client.config.logger.debug "Calling API: GraphApi.get_activedirectories_activedirectory_id_associations ..."
       end
       # verify the required parameter 'activedirectory_id' is set
       if @api_client.config.client_side_validation && activedirectory_id.nil?
-        fail ArgumentError, "Missing the required parameter 'activedirectory_id' when calling GraphApi.g_et_activedirectories_activedirectory_id_associations"
+        fail ArgumentError, "Missing the required parameter 'activedirectory_id' when calling GraphApi.get_activedirectories_activedirectory_id_associations"
       end
       # verify the required parameter 'targets' is set
       if @api_client.config.client_side_validation && targets.nil?
-        fail ArgumentError, "Missing the required parameter 'targets' when calling GraphApi.g_et_activedirectories_activedirectory_id_associations"
+        fail ArgumentError, "Missing the required parameter 'targets' when calling GraphApi.get_activedirectories_activedirectory_id_associations"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.g_et_activedirectories_activedirectory_id_associations"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.get_activedirectories_activedirectory_id_associations"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.g_et_activedirectories_activedirectory_id_associations"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.get_activedirectories_activedirectory_id_associations"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.g_et_activedirectories_activedirectory_id_associations, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.get_activedirectories_activedirectory_id_associations, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -104,7 +104,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<GraphConnection>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GraphApi#g_et_activedirectories_activedirectory_id_associations\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GraphApi#get_activedirectories_activedirectory_id_associations\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -120,8 +120,8 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<GraphObjectWithPaths>]
-    def g_et_activedirectories_activedirectory_id_usergroups(activedirectory_id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_activedirectories_activedirectory_id_usergroups_with_http_info(activedirectory_id, accept, content_type, opts)
+    def get_activedirectories_activedirectory_id_usergroups(activedirectory_id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_activedirectories_activedirectory_id_usergroups_with_http_info(activedirectory_id, accept, content_type, opts)
       return data
     end
 
@@ -136,24 +136,24 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<GraphObjectWithPaths>, Fixnum, Hash)>] Array<GraphObjectWithPaths> data, response status code and response headers
-    def g_et_activedirectories_activedirectory_id_usergroups_with_http_info(activedirectory_id, accept, content_type, opts = {})
+    def get_activedirectories_activedirectory_id_usergroups_with_http_info(activedirectory_id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GraphApi.g_et_activedirectories_activedirectory_id_usergroups ..."
+        @api_client.config.logger.debug "Calling API: GraphApi.get_activedirectories_activedirectory_id_usergroups ..."
       end
       # verify the required parameter 'activedirectory_id' is set
       if @api_client.config.client_side_validation && activedirectory_id.nil?
-        fail ArgumentError, "Missing the required parameter 'activedirectory_id' when calling GraphApi.g_et_activedirectories_activedirectory_id_usergroups"
+        fail ArgumentError, "Missing the required parameter 'activedirectory_id' when calling GraphApi.get_activedirectories_activedirectory_id_usergroups"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.g_et_activedirectories_activedirectory_id_usergroups"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.get_activedirectories_activedirectory_id_usergroups"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.g_et_activedirectories_activedirectory_id_usergroups"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.get_activedirectories_activedirectory_id_usergroups"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.g_et_activedirectories_activedirectory_id_usergroups, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.get_activedirectories_activedirectory_id_usergroups, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -189,7 +189,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<GraphObjectWithPaths>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GraphApi#g_et_activedirectories_activedirectory_id_usergroups\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GraphApi#get_activedirectories_activedirectory_id_usergroups\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -205,8 +205,8 @@ module JCAPIv2
     # @option opts [Integer] :skip The offset into the records to return. (default to 0)
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<GraphConnection>]
-    def g_et_applications_application_id_associations(application_id, targets, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_applications_application_id_associations_with_http_info(application_id, targets, accept, content_type, opts)
+    def get_applications_application_id_associations(application_id, targets, accept, content_type, opts = {})
+      data, _status_code, _headers = get_applications_application_id_associations_with_http_info(application_id, targets, accept, content_type, opts)
       return data
     end
 
@@ -221,28 +221,28 @@ module JCAPIv2
     # @option opts [Integer] :skip The offset into the records to return.
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<GraphConnection>, Fixnum, Hash)>] Array<GraphConnection> data, response status code and response headers
-    def g_et_applications_application_id_associations_with_http_info(application_id, targets, accept, content_type, opts = {})
+    def get_applications_application_id_associations_with_http_info(application_id, targets, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GraphApi.g_et_applications_application_id_associations ..."
+        @api_client.config.logger.debug "Calling API: GraphApi.get_applications_application_id_associations ..."
       end
       # verify the required parameter 'application_id' is set
       if @api_client.config.client_side_validation && application_id.nil?
-        fail ArgumentError, "Missing the required parameter 'application_id' when calling GraphApi.g_et_applications_application_id_associations"
+        fail ArgumentError, "Missing the required parameter 'application_id' when calling GraphApi.get_applications_application_id_associations"
       end
       # verify the required parameter 'targets' is set
       if @api_client.config.client_side_validation && targets.nil?
-        fail ArgumentError, "Missing the required parameter 'targets' when calling GraphApi.g_et_applications_application_id_associations"
+        fail ArgumentError, "Missing the required parameter 'targets' when calling GraphApi.get_applications_application_id_associations"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.g_et_applications_application_id_associations"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.get_applications_application_id_associations"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.g_et_applications_application_id_associations"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.get_applications_application_id_associations"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.g_et_applications_application_id_associations, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.get_applications_application_id_associations, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -278,7 +278,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<GraphConnection>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GraphApi#g_et_applications_application_id_associations\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GraphApi#get_applications_application_id_associations\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -294,8 +294,8 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<GraphObjectWithPaths>]
-    def g_et_applications_application_id_usergroups(application_id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_applications_application_id_usergroups_with_http_info(application_id, accept, content_type, opts)
+    def get_applications_application_id_usergroups(application_id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_applications_application_id_usergroups_with_http_info(application_id, accept, content_type, opts)
       return data
     end
 
@@ -310,24 +310,24 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<GraphObjectWithPaths>, Fixnum, Hash)>] Array<GraphObjectWithPaths> data, response status code and response headers
-    def g_et_applications_application_id_usergroups_with_http_info(application_id, accept, content_type, opts = {})
+    def get_applications_application_id_usergroups_with_http_info(application_id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GraphApi.g_et_applications_application_id_usergroups ..."
+        @api_client.config.logger.debug "Calling API: GraphApi.get_applications_application_id_usergroups ..."
       end
       # verify the required parameter 'application_id' is set
       if @api_client.config.client_side_validation && application_id.nil?
-        fail ArgumentError, "Missing the required parameter 'application_id' when calling GraphApi.g_et_applications_application_id_usergroups"
+        fail ArgumentError, "Missing the required parameter 'application_id' when calling GraphApi.get_applications_application_id_usergroups"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.g_et_applications_application_id_usergroups"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.get_applications_application_id_usergroups"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.g_et_applications_application_id_usergroups"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.get_applications_application_id_usergroups"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.g_et_applications_application_id_usergroups, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.get_applications_application_id_usergroups, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -363,7 +363,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<GraphObjectWithPaths>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GraphApi#g_et_applications_application_id_usergroups\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GraphApi#get_applications_application_id_usergroups\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -379,8 +379,8 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<GraphObjectWithPaths>]
-    def g_et_applications_application_id_users(application_id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_applications_application_id_users_with_http_info(application_id, accept, content_type, opts)
+    def get_applications_application_id_users(application_id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_applications_application_id_users_with_http_info(application_id, accept, content_type, opts)
       return data
     end
 
@@ -395,24 +395,24 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<GraphObjectWithPaths>, Fixnum, Hash)>] Array<GraphObjectWithPaths> data, response status code and response headers
-    def g_et_applications_application_id_users_with_http_info(application_id, accept, content_type, opts = {})
+    def get_applications_application_id_users_with_http_info(application_id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GraphApi.g_et_applications_application_id_users ..."
+        @api_client.config.logger.debug "Calling API: GraphApi.get_applications_application_id_users ..."
       end
       # verify the required parameter 'application_id' is set
       if @api_client.config.client_side_validation && application_id.nil?
-        fail ArgumentError, "Missing the required parameter 'application_id' when calling GraphApi.g_et_applications_application_id_users"
+        fail ArgumentError, "Missing the required parameter 'application_id' when calling GraphApi.get_applications_application_id_users"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.g_et_applications_application_id_users"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.get_applications_application_id_users"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.g_et_applications_application_id_users"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.get_applications_application_id_users"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.g_et_applications_application_id_users, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.get_applications_application_id_users, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -448,7 +448,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<GraphObjectWithPaths>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GraphApi#g_et_applications_application_id_users\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GraphApi#get_applications_application_id_users\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -464,8 +464,8 @@ module JCAPIv2
     # @option opts [Integer] :skip The offset into the records to return. (default to 0)
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<GraphConnection>]
-    def g_et_commands_command_id_associations(command_id, targets, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_commands_command_id_associations_with_http_info(command_id, targets, accept, content_type, opts)
+    def get_commands_command_id_associations(command_id, targets, accept, content_type, opts = {})
+      data, _status_code, _headers = get_commands_command_id_associations_with_http_info(command_id, targets, accept, content_type, opts)
       return data
     end
 
@@ -480,28 +480,28 @@ module JCAPIv2
     # @option opts [Integer] :skip The offset into the records to return.
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<GraphConnection>, Fixnum, Hash)>] Array<GraphConnection> data, response status code and response headers
-    def g_et_commands_command_id_associations_with_http_info(command_id, targets, accept, content_type, opts = {})
+    def get_commands_command_id_associations_with_http_info(command_id, targets, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GraphApi.g_et_commands_command_id_associations ..."
+        @api_client.config.logger.debug "Calling API: GraphApi.get_commands_command_id_associations ..."
       end
       # verify the required parameter 'command_id' is set
       if @api_client.config.client_side_validation && command_id.nil?
-        fail ArgumentError, "Missing the required parameter 'command_id' when calling GraphApi.g_et_commands_command_id_associations"
+        fail ArgumentError, "Missing the required parameter 'command_id' when calling GraphApi.get_commands_command_id_associations"
       end
       # verify the required parameter 'targets' is set
       if @api_client.config.client_side_validation && targets.nil?
-        fail ArgumentError, "Missing the required parameter 'targets' when calling GraphApi.g_et_commands_command_id_associations"
+        fail ArgumentError, "Missing the required parameter 'targets' when calling GraphApi.get_commands_command_id_associations"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.g_et_commands_command_id_associations"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.get_commands_command_id_associations"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.g_et_commands_command_id_associations"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.get_commands_command_id_associations"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.g_et_commands_command_id_associations, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.get_commands_command_id_associations, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -537,7 +537,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<GraphConnection>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GraphApi#g_et_commands_command_id_associations\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GraphApi#get_commands_command_id_associations\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -553,8 +553,8 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<GraphObjectWithPaths>]
-    def g_et_commands_command_id_systemgroups(command_id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_commands_command_id_systemgroups_with_http_info(command_id, accept, content_type, opts)
+    def get_commands_command_id_systemgroups(command_id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_commands_command_id_systemgroups_with_http_info(command_id, accept, content_type, opts)
       return data
     end
 
@@ -569,24 +569,24 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<GraphObjectWithPaths>, Fixnum, Hash)>] Array<GraphObjectWithPaths> data, response status code and response headers
-    def g_et_commands_command_id_systemgroups_with_http_info(command_id, accept, content_type, opts = {})
+    def get_commands_command_id_systemgroups_with_http_info(command_id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GraphApi.g_et_commands_command_id_systemgroups ..."
+        @api_client.config.logger.debug "Calling API: GraphApi.get_commands_command_id_systemgroups ..."
       end
       # verify the required parameter 'command_id' is set
       if @api_client.config.client_side_validation && command_id.nil?
-        fail ArgumentError, "Missing the required parameter 'command_id' when calling GraphApi.g_et_commands_command_id_systemgroups"
+        fail ArgumentError, "Missing the required parameter 'command_id' when calling GraphApi.get_commands_command_id_systemgroups"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.g_et_commands_command_id_systemgroups"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.get_commands_command_id_systemgroups"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.g_et_commands_command_id_systemgroups"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.get_commands_command_id_systemgroups"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.g_et_commands_command_id_systemgroups, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.get_commands_command_id_systemgroups, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -622,7 +622,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<GraphObjectWithPaths>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GraphApi#g_et_commands_command_id_systemgroups\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GraphApi#get_commands_command_id_systemgroups\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -638,8 +638,8 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<GraphObjectWithPaths>]
-    def g_et_commands_command_id_systems(command_id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_commands_command_id_systems_with_http_info(command_id, accept, content_type, opts)
+    def get_commands_command_id_systems(command_id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_commands_command_id_systems_with_http_info(command_id, accept, content_type, opts)
       return data
     end
 
@@ -654,24 +654,24 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<GraphObjectWithPaths>, Fixnum, Hash)>] Array<GraphObjectWithPaths> data, response status code and response headers
-    def g_et_commands_command_id_systems_with_http_info(command_id, accept, content_type, opts = {})
+    def get_commands_command_id_systems_with_http_info(command_id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GraphApi.g_et_commands_command_id_systems ..."
+        @api_client.config.logger.debug "Calling API: GraphApi.get_commands_command_id_systems ..."
       end
       # verify the required parameter 'command_id' is set
       if @api_client.config.client_side_validation && command_id.nil?
-        fail ArgumentError, "Missing the required parameter 'command_id' when calling GraphApi.g_et_commands_command_id_systems"
+        fail ArgumentError, "Missing the required parameter 'command_id' when calling GraphApi.get_commands_command_id_systems"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.g_et_commands_command_id_systems"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.get_commands_command_id_systems"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.g_et_commands_command_id_systems"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.get_commands_command_id_systems"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.g_et_commands_command_id_systems, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.get_commands_command_id_systems, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -707,7 +707,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<GraphObjectWithPaths>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GraphApi#g_et_commands_command_id_systems\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GraphApi#get_commands_command_id_systems\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -723,8 +723,8 @@ module JCAPIv2
     # @option opts [Integer] :skip The offset into the records to return. (default to 0)
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<GraphConnection>]
-    def g_et_gsuites_gsuite_id_associations(gsuite_id, targets, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_gsuites_gsuite_id_associations_with_http_info(gsuite_id, targets, accept, content_type, opts)
+    def get_gsuites_gsuite_id_associations(gsuite_id, targets, accept, content_type, opts = {})
+      data, _status_code, _headers = get_gsuites_gsuite_id_associations_with_http_info(gsuite_id, targets, accept, content_type, opts)
       return data
     end
 
@@ -739,28 +739,28 @@ module JCAPIv2
     # @option opts [Integer] :skip The offset into the records to return.
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<GraphConnection>, Fixnum, Hash)>] Array<GraphConnection> data, response status code and response headers
-    def g_et_gsuites_gsuite_id_associations_with_http_info(gsuite_id, targets, accept, content_type, opts = {})
+    def get_gsuites_gsuite_id_associations_with_http_info(gsuite_id, targets, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GraphApi.g_et_gsuites_gsuite_id_associations ..."
+        @api_client.config.logger.debug "Calling API: GraphApi.get_gsuites_gsuite_id_associations ..."
       end
       # verify the required parameter 'gsuite_id' is set
       if @api_client.config.client_side_validation && gsuite_id.nil?
-        fail ArgumentError, "Missing the required parameter 'gsuite_id' when calling GraphApi.g_et_gsuites_gsuite_id_associations"
+        fail ArgumentError, "Missing the required parameter 'gsuite_id' when calling GraphApi.get_gsuites_gsuite_id_associations"
       end
       # verify the required parameter 'targets' is set
       if @api_client.config.client_side_validation && targets.nil?
-        fail ArgumentError, "Missing the required parameter 'targets' when calling GraphApi.g_et_gsuites_gsuite_id_associations"
+        fail ArgumentError, "Missing the required parameter 'targets' when calling GraphApi.get_gsuites_gsuite_id_associations"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.g_et_gsuites_gsuite_id_associations"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.get_gsuites_gsuite_id_associations"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.g_et_gsuites_gsuite_id_associations"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.get_gsuites_gsuite_id_associations"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.g_et_gsuites_gsuite_id_associations, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.get_gsuites_gsuite_id_associations, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -796,7 +796,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<GraphConnection>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GraphApi#g_et_gsuites_gsuite_id_associations\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GraphApi#get_gsuites_gsuite_id_associations\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -812,8 +812,8 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<GraphObjectWithPaths>]
-    def g_et_gsuites_gsuite_id_usergroups(gsuite_id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_gsuites_gsuite_id_usergroups_with_http_info(gsuite_id, accept, content_type, opts)
+    def get_gsuites_gsuite_id_usergroups(gsuite_id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_gsuites_gsuite_id_usergroups_with_http_info(gsuite_id, accept, content_type, opts)
       return data
     end
 
@@ -828,24 +828,24 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<GraphObjectWithPaths>, Fixnum, Hash)>] Array<GraphObjectWithPaths> data, response status code and response headers
-    def g_et_gsuites_gsuite_id_usergroups_with_http_info(gsuite_id, accept, content_type, opts = {})
+    def get_gsuites_gsuite_id_usergroups_with_http_info(gsuite_id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GraphApi.g_et_gsuites_gsuite_id_usergroups ..."
+        @api_client.config.logger.debug "Calling API: GraphApi.get_gsuites_gsuite_id_usergroups ..."
       end
       # verify the required parameter 'gsuite_id' is set
       if @api_client.config.client_side_validation && gsuite_id.nil?
-        fail ArgumentError, "Missing the required parameter 'gsuite_id' when calling GraphApi.g_et_gsuites_gsuite_id_usergroups"
+        fail ArgumentError, "Missing the required parameter 'gsuite_id' when calling GraphApi.get_gsuites_gsuite_id_usergroups"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.g_et_gsuites_gsuite_id_usergroups"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.get_gsuites_gsuite_id_usergroups"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.g_et_gsuites_gsuite_id_usergroups"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.get_gsuites_gsuite_id_usergroups"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.g_et_gsuites_gsuite_id_usergroups, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.get_gsuites_gsuite_id_usergroups, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -881,7 +881,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<GraphObjectWithPaths>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GraphApi#g_et_gsuites_gsuite_id_usergroups\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GraphApi#get_gsuites_gsuite_id_usergroups\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -897,8 +897,8 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<GraphObjectWithPaths>]
-    def g_et_gsuites_gsuite_id_users(gsuite_id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_gsuites_gsuite_id_users_with_http_info(gsuite_id, accept, content_type, opts)
+    def get_gsuites_gsuite_id_users(gsuite_id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_gsuites_gsuite_id_users_with_http_info(gsuite_id, accept, content_type, opts)
       return data
     end
 
@@ -913,24 +913,24 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<GraphObjectWithPaths>, Fixnum, Hash)>] Array<GraphObjectWithPaths> data, response status code and response headers
-    def g_et_gsuites_gsuite_id_users_with_http_info(gsuite_id, accept, content_type, opts = {})
+    def get_gsuites_gsuite_id_users_with_http_info(gsuite_id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GraphApi.g_et_gsuites_gsuite_id_users ..."
+        @api_client.config.logger.debug "Calling API: GraphApi.get_gsuites_gsuite_id_users ..."
       end
       # verify the required parameter 'gsuite_id' is set
       if @api_client.config.client_side_validation && gsuite_id.nil?
-        fail ArgumentError, "Missing the required parameter 'gsuite_id' when calling GraphApi.g_et_gsuites_gsuite_id_users"
+        fail ArgumentError, "Missing the required parameter 'gsuite_id' when calling GraphApi.get_gsuites_gsuite_id_users"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.g_et_gsuites_gsuite_id_users"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.get_gsuites_gsuite_id_users"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.g_et_gsuites_gsuite_id_users"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.get_gsuites_gsuite_id_users"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.g_et_gsuites_gsuite_id_users, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.get_gsuites_gsuite_id_users, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -966,7 +966,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<GraphObjectWithPaths>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GraphApi#g_et_gsuites_gsuite_id_users\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GraphApi#get_gsuites_gsuite_id_users\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -982,8 +982,8 @@ module JCAPIv2
     # @option opts [Integer] :skip The offset into the records to return. (default to 0)
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<GraphConnection>]
-    def g_et_ldapservers_ldapserver_id_associations(ldapserver_id, targets, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_ldapservers_ldapserver_id_associations_with_http_info(ldapserver_id, targets, accept, content_type, opts)
+    def get_ldapservers_ldapserver_id_associations(ldapserver_id, targets, accept, content_type, opts = {})
+      data, _status_code, _headers = get_ldapservers_ldapserver_id_associations_with_http_info(ldapserver_id, targets, accept, content_type, opts)
       return data
     end
 
@@ -998,28 +998,28 @@ module JCAPIv2
     # @option opts [Integer] :skip The offset into the records to return.
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<GraphConnection>, Fixnum, Hash)>] Array<GraphConnection> data, response status code and response headers
-    def g_et_ldapservers_ldapserver_id_associations_with_http_info(ldapserver_id, targets, accept, content_type, opts = {})
+    def get_ldapservers_ldapserver_id_associations_with_http_info(ldapserver_id, targets, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GraphApi.g_et_ldapservers_ldapserver_id_associations ..."
+        @api_client.config.logger.debug "Calling API: GraphApi.get_ldapservers_ldapserver_id_associations ..."
       end
       # verify the required parameter 'ldapserver_id' is set
       if @api_client.config.client_side_validation && ldapserver_id.nil?
-        fail ArgumentError, "Missing the required parameter 'ldapserver_id' when calling GraphApi.g_et_ldapservers_ldapserver_id_associations"
+        fail ArgumentError, "Missing the required parameter 'ldapserver_id' when calling GraphApi.get_ldapservers_ldapserver_id_associations"
       end
       # verify the required parameter 'targets' is set
       if @api_client.config.client_side_validation && targets.nil?
-        fail ArgumentError, "Missing the required parameter 'targets' when calling GraphApi.g_et_ldapservers_ldapserver_id_associations"
+        fail ArgumentError, "Missing the required parameter 'targets' when calling GraphApi.get_ldapservers_ldapserver_id_associations"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.g_et_ldapservers_ldapserver_id_associations"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.get_ldapservers_ldapserver_id_associations"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.g_et_ldapservers_ldapserver_id_associations"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.get_ldapservers_ldapserver_id_associations"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.g_et_ldapservers_ldapserver_id_associations, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.get_ldapservers_ldapserver_id_associations, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -1055,7 +1055,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<GraphConnection>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GraphApi#g_et_ldapservers_ldapserver_id_associations\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GraphApi#get_ldapservers_ldapserver_id_associations\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1071,8 +1071,8 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<GraphObjectWithPaths>]
-    def g_et_ldapservers_ldapserver_id_usergroups(ldapserver_id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_ldapservers_ldapserver_id_usergroups_with_http_info(ldapserver_id, accept, content_type, opts)
+    def get_ldapservers_ldapserver_id_usergroups(ldapserver_id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_ldapservers_ldapserver_id_usergroups_with_http_info(ldapserver_id, accept, content_type, opts)
       return data
     end
 
@@ -1087,24 +1087,24 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<GraphObjectWithPaths>, Fixnum, Hash)>] Array<GraphObjectWithPaths> data, response status code and response headers
-    def g_et_ldapservers_ldapserver_id_usergroups_with_http_info(ldapserver_id, accept, content_type, opts = {})
+    def get_ldapservers_ldapserver_id_usergroups_with_http_info(ldapserver_id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GraphApi.g_et_ldapservers_ldapserver_id_usergroups ..."
+        @api_client.config.logger.debug "Calling API: GraphApi.get_ldapservers_ldapserver_id_usergroups ..."
       end
       # verify the required parameter 'ldapserver_id' is set
       if @api_client.config.client_side_validation && ldapserver_id.nil?
-        fail ArgumentError, "Missing the required parameter 'ldapserver_id' when calling GraphApi.g_et_ldapservers_ldapserver_id_usergroups"
+        fail ArgumentError, "Missing the required parameter 'ldapserver_id' when calling GraphApi.get_ldapservers_ldapserver_id_usergroups"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.g_et_ldapservers_ldapserver_id_usergroups"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.get_ldapservers_ldapserver_id_usergroups"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.g_et_ldapservers_ldapserver_id_usergroups"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.get_ldapservers_ldapserver_id_usergroups"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.g_et_ldapservers_ldapserver_id_usergroups, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.get_ldapservers_ldapserver_id_usergroups, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -1140,7 +1140,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<GraphObjectWithPaths>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GraphApi#g_et_ldapservers_ldapserver_id_usergroups\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GraphApi#get_ldapservers_ldapserver_id_usergroups\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1156,8 +1156,8 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<GraphObjectWithPaths>]
-    def g_et_ldapservers_ldapserver_id_users(ldapserver_id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_ldapservers_ldapserver_id_users_with_http_info(ldapserver_id, accept, content_type, opts)
+    def get_ldapservers_ldapserver_id_users(ldapserver_id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_ldapservers_ldapserver_id_users_with_http_info(ldapserver_id, accept, content_type, opts)
       return data
     end
 
@@ -1172,24 +1172,24 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<GraphObjectWithPaths>, Fixnum, Hash)>] Array<GraphObjectWithPaths> data, response status code and response headers
-    def g_et_ldapservers_ldapserver_id_users_with_http_info(ldapserver_id, accept, content_type, opts = {})
+    def get_ldapservers_ldapserver_id_users_with_http_info(ldapserver_id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GraphApi.g_et_ldapservers_ldapserver_id_users ..."
+        @api_client.config.logger.debug "Calling API: GraphApi.get_ldapservers_ldapserver_id_users ..."
       end
       # verify the required parameter 'ldapserver_id' is set
       if @api_client.config.client_side_validation && ldapserver_id.nil?
-        fail ArgumentError, "Missing the required parameter 'ldapserver_id' when calling GraphApi.g_et_ldapservers_ldapserver_id_users"
+        fail ArgumentError, "Missing the required parameter 'ldapserver_id' when calling GraphApi.get_ldapservers_ldapserver_id_users"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.g_et_ldapservers_ldapserver_id_users"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.get_ldapservers_ldapserver_id_users"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.g_et_ldapservers_ldapserver_id_users"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.get_ldapservers_ldapserver_id_users"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.g_et_ldapservers_ldapserver_id_users, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.get_ldapservers_ldapserver_id_users, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -1225,7 +1225,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<GraphObjectWithPaths>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GraphApi#g_et_ldapservers_ldapserver_id_users\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GraphApi#get_ldapservers_ldapserver_id_users\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1241,8 +1241,8 @@ module JCAPIv2
     # @option opts [Integer] :skip The offset into the records to return. (default to 0)
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<GraphConnection>]
-    def g_et_office365s_office365_id_associations(office365_id, targets, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_office365s_office365_id_associations_with_http_info(office365_id, targets, accept, content_type, opts)
+    def get_office365s_office365_id_associations(office365_id, targets, accept, content_type, opts = {})
+      data, _status_code, _headers = get_office365s_office365_id_associations_with_http_info(office365_id, targets, accept, content_type, opts)
       return data
     end
 
@@ -1257,28 +1257,28 @@ module JCAPIv2
     # @option opts [Integer] :skip The offset into the records to return.
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<GraphConnection>, Fixnum, Hash)>] Array<GraphConnection> data, response status code and response headers
-    def g_et_office365s_office365_id_associations_with_http_info(office365_id, targets, accept, content_type, opts = {})
+    def get_office365s_office365_id_associations_with_http_info(office365_id, targets, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GraphApi.g_et_office365s_office365_id_associations ..."
+        @api_client.config.logger.debug "Calling API: GraphApi.get_office365s_office365_id_associations ..."
       end
       # verify the required parameter 'office365_id' is set
       if @api_client.config.client_side_validation && office365_id.nil?
-        fail ArgumentError, "Missing the required parameter 'office365_id' when calling GraphApi.g_et_office365s_office365_id_associations"
+        fail ArgumentError, "Missing the required parameter 'office365_id' when calling GraphApi.get_office365s_office365_id_associations"
       end
       # verify the required parameter 'targets' is set
       if @api_client.config.client_side_validation && targets.nil?
-        fail ArgumentError, "Missing the required parameter 'targets' when calling GraphApi.g_et_office365s_office365_id_associations"
+        fail ArgumentError, "Missing the required parameter 'targets' when calling GraphApi.get_office365s_office365_id_associations"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.g_et_office365s_office365_id_associations"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.get_office365s_office365_id_associations"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.g_et_office365s_office365_id_associations"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.get_office365s_office365_id_associations"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.g_et_office365s_office365_id_associations, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.get_office365s_office365_id_associations, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -1314,7 +1314,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<GraphConnection>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GraphApi#g_et_office365s_office365_id_associations\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GraphApi#get_office365s_office365_id_associations\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1330,8 +1330,8 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<GraphObjectWithPaths>]
-    def g_et_office365s_office365_id_usergroups(office365_id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_office365s_office365_id_usergroups_with_http_info(office365_id, accept, content_type, opts)
+    def get_office365s_office365_id_usergroups(office365_id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_office365s_office365_id_usergroups_with_http_info(office365_id, accept, content_type, opts)
       return data
     end
 
@@ -1346,24 +1346,24 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<GraphObjectWithPaths>, Fixnum, Hash)>] Array<GraphObjectWithPaths> data, response status code and response headers
-    def g_et_office365s_office365_id_usergroups_with_http_info(office365_id, accept, content_type, opts = {})
+    def get_office365s_office365_id_usergroups_with_http_info(office365_id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GraphApi.g_et_office365s_office365_id_usergroups ..."
+        @api_client.config.logger.debug "Calling API: GraphApi.get_office365s_office365_id_usergroups ..."
       end
       # verify the required parameter 'office365_id' is set
       if @api_client.config.client_side_validation && office365_id.nil?
-        fail ArgumentError, "Missing the required parameter 'office365_id' when calling GraphApi.g_et_office365s_office365_id_usergroups"
+        fail ArgumentError, "Missing the required parameter 'office365_id' when calling GraphApi.get_office365s_office365_id_usergroups"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.g_et_office365s_office365_id_usergroups"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.get_office365s_office365_id_usergroups"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.g_et_office365s_office365_id_usergroups"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.get_office365s_office365_id_usergroups"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.g_et_office365s_office365_id_usergroups, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.get_office365s_office365_id_usergroups, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -1399,7 +1399,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<GraphObjectWithPaths>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GraphApi#g_et_office365s_office365_id_usergroups\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GraphApi#get_office365s_office365_id_usergroups\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1415,8 +1415,8 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<GraphObjectWithPaths>]
-    def g_et_office365s_office365_id_users(office365_id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_office365s_office365_id_users_with_http_info(office365_id, accept, content_type, opts)
+    def get_office365s_office365_id_users(office365_id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_office365s_office365_id_users_with_http_info(office365_id, accept, content_type, opts)
       return data
     end
 
@@ -1431,24 +1431,24 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<GraphObjectWithPaths>, Fixnum, Hash)>] Array<GraphObjectWithPaths> data, response status code and response headers
-    def g_et_office365s_office365_id_users_with_http_info(office365_id, accept, content_type, opts = {})
+    def get_office365s_office365_id_users_with_http_info(office365_id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GraphApi.g_et_office365s_office365_id_users ..."
+        @api_client.config.logger.debug "Calling API: GraphApi.get_office365s_office365_id_users ..."
       end
       # verify the required parameter 'office365_id' is set
       if @api_client.config.client_side_validation && office365_id.nil?
-        fail ArgumentError, "Missing the required parameter 'office365_id' when calling GraphApi.g_et_office365s_office365_id_users"
+        fail ArgumentError, "Missing the required parameter 'office365_id' when calling GraphApi.get_office365s_office365_id_users"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.g_et_office365s_office365_id_users"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.get_office365s_office365_id_users"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.g_et_office365s_office365_id_users"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.get_office365s_office365_id_users"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.g_et_office365s_office365_id_users, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.get_office365s_office365_id_users, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -1484,7 +1484,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<GraphObjectWithPaths>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GraphApi#g_et_office365s_office365_id_users\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GraphApi#get_office365s_office365_id_users\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1500,8 +1500,8 @@ module JCAPIv2
     # @option opts [Integer] :skip The offset into the records to return. (default to 0)
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<GraphConnection>]
-    def g_et_policies_policy_id_associations(policy_id, targets, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_policies_policy_id_associations_with_http_info(policy_id, targets, accept, content_type, opts)
+    def get_policies_policy_id_associations(policy_id, targets, accept, content_type, opts = {})
+      data, _status_code, _headers = get_policies_policy_id_associations_with_http_info(policy_id, targets, accept, content_type, opts)
       return data
     end
 
@@ -1516,28 +1516,28 @@ module JCAPIv2
     # @option opts [Integer] :skip The offset into the records to return.
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<GraphConnection>, Fixnum, Hash)>] Array<GraphConnection> data, response status code and response headers
-    def g_et_policies_policy_id_associations_with_http_info(policy_id, targets, accept, content_type, opts = {})
+    def get_policies_policy_id_associations_with_http_info(policy_id, targets, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GraphApi.g_et_policies_policy_id_associations ..."
+        @api_client.config.logger.debug "Calling API: GraphApi.get_policies_policy_id_associations ..."
       end
       # verify the required parameter 'policy_id' is set
       if @api_client.config.client_side_validation && policy_id.nil?
-        fail ArgumentError, "Missing the required parameter 'policy_id' when calling GraphApi.g_et_policies_policy_id_associations"
+        fail ArgumentError, "Missing the required parameter 'policy_id' when calling GraphApi.get_policies_policy_id_associations"
       end
       # verify the required parameter 'targets' is set
       if @api_client.config.client_side_validation && targets.nil?
-        fail ArgumentError, "Missing the required parameter 'targets' when calling GraphApi.g_et_policies_policy_id_associations"
+        fail ArgumentError, "Missing the required parameter 'targets' when calling GraphApi.get_policies_policy_id_associations"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.g_et_policies_policy_id_associations"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.get_policies_policy_id_associations"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.g_et_policies_policy_id_associations"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.get_policies_policy_id_associations"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.g_et_policies_policy_id_associations, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.get_policies_policy_id_associations, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -1573,7 +1573,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<GraphConnection>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GraphApi#g_et_policies_policy_id_associations\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GraphApi#get_policies_policy_id_associations\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1589,8 +1589,8 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<GraphObjectWithPaths>]
-    def g_et_policies_policy_id_systemgroups(policy_id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_policies_policy_id_systemgroups_with_http_info(policy_id, accept, content_type, opts)
+    def get_policies_policy_id_systemgroups(policy_id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_policies_policy_id_systemgroups_with_http_info(policy_id, accept, content_type, opts)
       return data
     end
 
@@ -1605,24 +1605,24 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<GraphObjectWithPaths>, Fixnum, Hash)>] Array<GraphObjectWithPaths> data, response status code and response headers
-    def g_et_policies_policy_id_systemgroups_with_http_info(policy_id, accept, content_type, opts = {})
+    def get_policies_policy_id_systemgroups_with_http_info(policy_id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GraphApi.g_et_policies_policy_id_systemgroups ..."
+        @api_client.config.logger.debug "Calling API: GraphApi.get_policies_policy_id_systemgroups ..."
       end
       # verify the required parameter 'policy_id' is set
       if @api_client.config.client_side_validation && policy_id.nil?
-        fail ArgumentError, "Missing the required parameter 'policy_id' when calling GraphApi.g_et_policies_policy_id_systemgroups"
+        fail ArgumentError, "Missing the required parameter 'policy_id' when calling GraphApi.get_policies_policy_id_systemgroups"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.g_et_policies_policy_id_systemgroups"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.get_policies_policy_id_systemgroups"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.g_et_policies_policy_id_systemgroups"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.get_policies_policy_id_systemgroups"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.g_et_policies_policy_id_systemgroups, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.get_policies_policy_id_systemgroups, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -1658,7 +1658,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<GraphObjectWithPaths>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GraphApi#g_et_policies_policy_id_systemgroups\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GraphApi#get_policies_policy_id_systemgroups\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1674,8 +1674,8 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<GraphObjectWithPaths>]
-    def g_et_policies_policy_id_systems(policy_id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_policies_policy_id_systems_with_http_info(policy_id, accept, content_type, opts)
+    def get_policies_policy_id_systems(policy_id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_policies_policy_id_systems_with_http_info(policy_id, accept, content_type, opts)
       return data
     end
 
@@ -1690,24 +1690,24 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<GraphObjectWithPaths>, Fixnum, Hash)>] Array<GraphObjectWithPaths> data, response status code and response headers
-    def g_et_policies_policy_id_systems_with_http_info(policy_id, accept, content_type, opts = {})
+    def get_policies_policy_id_systems_with_http_info(policy_id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GraphApi.g_et_policies_policy_id_systems ..."
+        @api_client.config.logger.debug "Calling API: GraphApi.get_policies_policy_id_systems ..."
       end
       # verify the required parameter 'policy_id' is set
       if @api_client.config.client_side_validation && policy_id.nil?
-        fail ArgumentError, "Missing the required parameter 'policy_id' when calling GraphApi.g_et_policies_policy_id_systems"
+        fail ArgumentError, "Missing the required parameter 'policy_id' when calling GraphApi.get_policies_policy_id_systems"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.g_et_policies_policy_id_systems"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.get_policies_policy_id_systems"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.g_et_policies_policy_id_systems"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.get_policies_policy_id_systems"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.g_et_policies_policy_id_systems, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.get_policies_policy_id_systems, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -1743,7 +1743,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<GraphObjectWithPaths>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GraphApi#g_et_policies_policy_id_systems\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GraphApi#get_policies_policy_id_systems\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1759,8 +1759,8 @@ module JCAPIv2
     # @option opts [Integer] :skip The offset into the records to return. (default to 0)
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<GraphConnection>]
-    def g_et_radiusservers_radiusserver_id_associations(radiusserver_id, targets, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_radiusservers_radiusserver_id_associations_with_http_info(radiusserver_id, targets, accept, content_type, opts)
+    def get_radiusservers_radiusserver_id_associations(radiusserver_id, targets, accept, content_type, opts = {})
+      data, _status_code, _headers = get_radiusservers_radiusserver_id_associations_with_http_info(radiusserver_id, targets, accept, content_type, opts)
       return data
     end
 
@@ -1775,28 +1775,28 @@ module JCAPIv2
     # @option opts [Integer] :skip The offset into the records to return.
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<GraphConnection>, Fixnum, Hash)>] Array<GraphConnection> data, response status code and response headers
-    def g_et_radiusservers_radiusserver_id_associations_with_http_info(radiusserver_id, targets, accept, content_type, opts = {})
+    def get_radiusservers_radiusserver_id_associations_with_http_info(radiusserver_id, targets, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GraphApi.g_et_radiusservers_radiusserver_id_associations ..."
+        @api_client.config.logger.debug "Calling API: GraphApi.get_radiusservers_radiusserver_id_associations ..."
       end
       # verify the required parameter 'radiusserver_id' is set
       if @api_client.config.client_side_validation && radiusserver_id.nil?
-        fail ArgumentError, "Missing the required parameter 'radiusserver_id' when calling GraphApi.g_et_radiusservers_radiusserver_id_associations"
+        fail ArgumentError, "Missing the required parameter 'radiusserver_id' when calling GraphApi.get_radiusservers_radiusserver_id_associations"
       end
       # verify the required parameter 'targets' is set
       if @api_client.config.client_side_validation && targets.nil?
-        fail ArgumentError, "Missing the required parameter 'targets' when calling GraphApi.g_et_radiusservers_radiusserver_id_associations"
+        fail ArgumentError, "Missing the required parameter 'targets' when calling GraphApi.get_radiusservers_radiusserver_id_associations"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.g_et_radiusservers_radiusserver_id_associations"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.get_radiusservers_radiusserver_id_associations"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.g_et_radiusservers_radiusserver_id_associations"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.get_radiusservers_radiusserver_id_associations"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.g_et_radiusservers_radiusserver_id_associations, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.get_radiusservers_radiusserver_id_associations, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -1832,7 +1832,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<GraphConnection>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GraphApi#g_et_radiusservers_radiusserver_id_associations\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GraphApi#get_radiusservers_radiusserver_id_associations\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1848,8 +1848,8 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<GraphObjectWithPaths>]
-    def g_et_radiusservers_radiusserver_id_usergroups(radiusserver_id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_radiusservers_radiusserver_id_usergroups_with_http_info(radiusserver_id, accept, content_type, opts)
+    def get_radiusservers_radiusserver_id_usergroups(radiusserver_id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_radiusservers_radiusserver_id_usergroups_with_http_info(radiusserver_id, accept, content_type, opts)
       return data
     end
 
@@ -1864,24 +1864,24 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<GraphObjectWithPaths>, Fixnum, Hash)>] Array<GraphObjectWithPaths> data, response status code and response headers
-    def g_et_radiusservers_radiusserver_id_usergroups_with_http_info(radiusserver_id, accept, content_type, opts = {})
+    def get_radiusservers_radiusserver_id_usergroups_with_http_info(radiusserver_id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GraphApi.g_et_radiusservers_radiusserver_id_usergroups ..."
+        @api_client.config.logger.debug "Calling API: GraphApi.get_radiusservers_radiusserver_id_usergroups ..."
       end
       # verify the required parameter 'radiusserver_id' is set
       if @api_client.config.client_side_validation && radiusserver_id.nil?
-        fail ArgumentError, "Missing the required parameter 'radiusserver_id' when calling GraphApi.g_et_radiusservers_radiusserver_id_usergroups"
+        fail ArgumentError, "Missing the required parameter 'radiusserver_id' when calling GraphApi.get_radiusservers_radiusserver_id_usergroups"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.g_et_radiusservers_radiusserver_id_usergroups"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.get_radiusservers_radiusserver_id_usergroups"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.g_et_radiusservers_radiusserver_id_usergroups"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.get_radiusservers_radiusserver_id_usergroups"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.g_et_radiusservers_radiusserver_id_usergroups, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.get_radiusservers_radiusserver_id_usergroups, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -1917,7 +1917,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<GraphObjectWithPaths>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GraphApi#g_et_radiusservers_radiusserver_id_usergroups\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GraphApi#get_radiusservers_radiusserver_id_usergroups\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1933,8 +1933,8 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<GraphObjectWithPaths>]
-    def g_et_radiusservers_radiusserver_id_users(radiusserver_id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_radiusservers_radiusserver_id_users_with_http_info(radiusserver_id, accept, content_type, opts)
+    def get_radiusservers_radiusserver_id_users(radiusserver_id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_radiusservers_radiusserver_id_users_with_http_info(radiusserver_id, accept, content_type, opts)
       return data
     end
 
@@ -1949,24 +1949,24 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<GraphObjectWithPaths>, Fixnum, Hash)>] Array<GraphObjectWithPaths> data, response status code and response headers
-    def g_et_radiusservers_radiusserver_id_users_with_http_info(radiusserver_id, accept, content_type, opts = {})
+    def get_radiusservers_radiusserver_id_users_with_http_info(radiusserver_id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GraphApi.g_et_radiusservers_radiusserver_id_users ..."
+        @api_client.config.logger.debug "Calling API: GraphApi.get_radiusservers_radiusserver_id_users ..."
       end
       # verify the required parameter 'radiusserver_id' is set
       if @api_client.config.client_side_validation && radiusserver_id.nil?
-        fail ArgumentError, "Missing the required parameter 'radiusserver_id' when calling GraphApi.g_et_radiusservers_radiusserver_id_users"
+        fail ArgumentError, "Missing the required parameter 'radiusserver_id' when calling GraphApi.get_radiusservers_radiusserver_id_users"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.g_et_radiusservers_radiusserver_id_users"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.get_radiusservers_radiusserver_id_users"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.g_et_radiusservers_radiusserver_id_users"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.get_radiusservers_radiusserver_id_users"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.g_et_radiusservers_radiusserver_id_users, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.get_radiusservers_radiusserver_id_users, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -2002,7 +2002,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<GraphObjectWithPaths>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GraphApi#g_et_radiusservers_radiusserver_id_users\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GraphApi#get_radiusservers_radiusserver_id_users\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -2018,8 +2018,8 @@ module JCAPIv2
     # @option opts [Integer] :skip The offset into the records to return. (default to 0)
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<GraphConnection>]
-    def g_et_software_apps_software_app_id_associations(software_app_id, targets, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_software_apps_software_app_id_associations_with_http_info(software_app_id, targets, accept, content_type, opts)
+    def get_software_apps_software_app_id_associations(software_app_id, targets, accept, content_type, opts = {})
+      data, _status_code, _headers = get_software_apps_software_app_id_associations_with_http_info(software_app_id, targets, accept, content_type, opts)
       return data
     end
 
@@ -2034,28 +2034,28 @@ module JCAPIv2
     # @option opts [Integer] :skip The offset into the records to return.
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<GraphConnection>, Fixnum, Hash)>] Array<GraphConnection> data, response status code and response headers
-    def g_et_software_apps_software_app_id_associations_with_http_info(software_app_id, targets, accept, content_type, opts = {})
+    def get_software_apps_software_app_id_associations_with_http_info(software_app_id, targets, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GraphApi.g_et_software_apps_software_app_id_associations ..."
+        @api_client.config.logger.debug "Calling API: GraphApi.get_software_apps_software_app_id_associations ..."
       end
       # verify the required parameter 'software_app_id' is set
       if @api_client.config.client_side_validation && software_app_id.nil?
-        fail ArgumentError, "Missing the required parameter 'software_app_id' when calling GraphApi.g_et_software_apps_software_app_id_associations"
+        fail ArgumentError, "Missing the required parameter 'software_app_id' when calling GraphApi.get_software_apps_software_app_id_associations"
       end
       # verify the required parameter 'targets' is set
       if @api_client.config.client_side_validation && targets.nil?
-        fail ArgumentError, "Missing the required parameter 'targets' when calling GraphApi.g_et_software_apps_software_app_id_associations"
+        fail ArgumentError, "Missing the required parameter 'targets' when calling GraphApi.get_software_apps_software_app_id_associations"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.g_et_software_apps_software_app_id_associations"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.get_software_apps_software_app_id_associations"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.g_et_software_apps_software_app_id_associations"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.get_software_apps_software_app_id_associations"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.g_et_software_apps_software_app_id_associations, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.get_software_apps_software_app_id_associations, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -2091,7 +2091,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<GraphConnection>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GraphApi#g_et_software_apps_software_app_id_associations\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GraphApi#get_software_apps_software_app_id_associations\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -2107,8 +2107,8 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<GraphObjectWithPaths>]
-    def g_et_software_apps_software_app_id_systemgroups(software_app_id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_software_apps_software_app_id_systemgroups_with_http_info(software_app_id, accept, content_type, opts)
+    def get_software_apps_software_app_id_systemgroups(software_app_id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_software_apps_software_app_id_systemgroups_with_http_info(software_app_id, accept, content_type, opts)
       return data
     end
 
@@ -2123,24 +2123,24 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<GraphObjectWithPaths>, Fixnum, Hash)>] Array<GraphObjectWithPaths> data, response status code and response headers
-    def g_et_software_apps_software_app_id_systemgroups_with_http_info(software_app_id, accept, content_type, opts = {})
+    def get_software_apps_software_app_id_systemgroups_with_http_info(software_app_id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GraphApi.g_et_software_apps_software_app_id_systemgroups ..."
+        @api_client.config.logger.debug "Calling API: GraphApi.get_software_apps_software_app_id_systemgroups ..."
       end
       # verify the required parameter 'software_app_id' is set
       if @api_client.config.client_side_validation && software_app_id.nil?
-        fail ArgumentError, "Missing the required parameter 'software_app_id' when calling GraphApi.g_et_software_apps_software_app_id_systemgroups"
+        fail ArgumentError, "Missing the required parameter 'software_app_id' when calling GraphApi.get_software_apps_software_app_id_systemgroups"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.g_et_software_apps_software_app_id_systemgroups"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.get_software_apps_software_app_id_systemgroups"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.g_et_software_apps_software_app_id_systemgroups"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.get_software_apps_software_app_id_systemgroups"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.g_et_software_apps_software_app_id_systemgroups, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.get_software_apps_software_app_id_systemgroups, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -2176,7 +2176,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<GraphObjectWithPaths>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GraphApi#g_et_software_apps_software_app_id_systemgroups\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GraphApi#get_software_apps_software_app_id_systemgroups\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -2192,8 +2192,8 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<GraphObjectWithPaths>]
-    def g_et_software_apps_software_app_id_systems(software_app_id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_software_apps_software_app_id_systems_with_http_info(software_app_id, accept, content_type, opts)
+    def get_software_apps_software_app_id_systems(software_app_id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_software_apps_software_app_id_systems_with_http_info(software_app_id, accept, content_type, opts)
       return data
     end
 
@@ -2208,24 +2208,24 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<GraphObjectWithPaths>, Fixnum, Hash)>] Array<GraphObjectWithPaths> data, response status code and response headers
-    def g_et_software_apps_software_app_id_systems_with_http_info(software_app_id, accept, content_type, opts = {})
+    def get_software_apps_software_app_id_systems_with_http_info(software_app_id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GraphApi.g_et_software_apps_software_app_id_systems ..."
+        @api_client.config.logger.debug "Calling API: GraphApi.get_software_apps_software_app_id_systems ..."
       end
       # verify the required parameter 'software_app_id' is set
       if @api_client.config.client_side_validation && software_app_id.nil?
-        fail ArgumentError, "Missing the required parameter 'software_app_id' when calling GraphApi.g_et_software_apps_software_app_id_systems"
+        fail ArgumentError, "Missing the required parameter 'software_app_id' when calling GraphApi.get_software_apps_software_app_id_systems"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.g_et_software_apps_software_app_id_systems"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.get_software_apps_software_app_id_systems"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.g_et_software_apps_software_app_id_systems"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.get_software_apps_software_app_id_systems"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.g_et_software_apps_software_app_id_systems, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.get_software_apps_software_app_id_systems, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -2261,7 +2261,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<GraphObjectWithPaths>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GraphApi#g_et_software_apps_software_app_id_systems\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GraphApi#get_software_apps_software_app_id_systems\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -2277,8 +2277,8 @@ module JCAPIv2
     # @option opts [Integer] :skip The offset into the records to return. (default to 0)
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<GraphConnection>]
-    def g_et_systemgroups_group_id_associations(group_id, targets, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_systemgroups_group_id_associations_with_http_info(group_id, targets, accept, content_type, opts)
+    def get_systemgroups_group_id_associations(group_id, targets, accept, content_type, opts = {})
+      data, _status_code, _headers = get_systemgroups_group_id_associations_with_http_info(group_id, targets, accept, content_type, opts)
       return data
     end
 
@@ -2293,28 +2293,28 @@ module JCAPIv2
     # @option opts [Integer] :skip The offset into the records to return.
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<GraphConnection>, Fixnum, Hash)>] Array<GraphConnection> data, response status code and response headers
-    def g_et_systemgroups_group_id_associations_with_http_info(group_id, targets, accept, content_type, opts = {})
+    def get_systemgroups_group_id_associations_with_http_info(group_id, targets, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GraphApi.g_et_systemgroups_group_id_associations ..."
+        @api_client.config.logger.debug "Calling API: GraphApi.get_systemgroups_group_id_associations ..."
       end
       # verify the required parameter 'group_id' is set
       if @api_client.config.client_side_validation && group_id.nil?
-        fail ArgumentError, "Missing the required parameter 'group_id' when calling GraphApi.g_et_systemgroups_group_id_associations"
+        fail ArgumentError, "Missing the required parameter 'group_id' when calling GraphApi.get_systemgroups_group_id_associations"
       end
       # verify the required parameter 'targets' is set
       if @api_client.config.client_side_validation && targets.nil?
-        fail ArgumentError, "Missing the required parameter 'targets' when calling GraphApi.g_et_systemgroups_group_id_associations"
+        fail ArgumentError, "Missing the required parameter 'targets' when calling GraphApi.get_systemgroups_group_id_associations"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.g_et_systemgroups_group_id_associations"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.get_systemgroups_group_id_associations"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.g_et_systemgroups_group_id_associations"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.get_systemgroups_group_id_associations"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.g_et_systemgroups_group_id_associations, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.get_systemgroups_group_id_associations, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -2350,7 +2350,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<GraphConnection>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GraphApi#g_et_systemgroups_group_id_associations\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GraphApi#get_systemgroups_group_id_associations\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -2366,8 +2366,8 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<GraphObjectWithPaths>]
-    def g_et_systemgroups_group_id_commands(group_id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_systemgroups_group_id_commands_with_http_info(group_id, accept, content_type, opts)
+    def get_systemgroups_group_id_commands(group_id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_systemgroups_group_id_commands_with_http_info(group_id, accept, content_type, opts)
       return data
     end
 
@@ -2382,24 +2382,24 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<GraphObjectWithPaths>, Fixnum, Hash)>] Array<GraphObjectWithPaths> data, response status code and response headers
-    def g_et_systemgroups_group_id_commands_with_http_info(group_id, accept, content_type, opts = {})
+    def get_systemgroups_group_id_commands_with_http_info(group_id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GraphApi.g_et_systemgroups_group_id_commands ..."
+        @api_client.config.logger.debug "Calling API: GraphApi.get_systemgroups_group_id_commands ..."
       end
       # verify the required parameter 'group_id' is set
       if @api_client.config.client_side_validation && group_id.nil?
-        fail ArgumentError, "Missing the required parameter 'group_id' when calling GraphApi.g_et_systemgroups_group_id_commands"
+        fail ArgumentError, "Missing the required parameter 'group_id' when calling GraphApi.get_systemgroups_group_id_commands"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.g_et_systemgroups_group_id_commands"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.get_systemgroups_group_id_commands"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.g_et_systemgroups_group_id_commands"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.get_systemgroups_group_id_commands"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.g_et_systemgroups_group_id_commands, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.get_systemgroups_group_id_commands, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -2435,7 +2435,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<GraphObjectWithPaths>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GraphApi#g_et_systemgroups_group_id_commands\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GraphApi#get_systemgroups_group_id_commands\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -2450,8 +2450,8 @@ module JCAPIv2
     # @option opts [Integer] :skip The offset into the records to return. (default to 0)
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<GraphConnection>]
-    def g_et_systemgroups_group_id_members(group_id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_systemgroups_group_id_members_with_http_info(group_id, accept, content_type, opts)
+    def get_systemgroups_group_id_members(group_id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_systemgroups_group_id_members_with_http_info(group_id, accept, content_type, opts)
       return data
     end
 
@@ -2465,24 +2465,24 @@ module JCAPIv2
     # @option opts [Integer] :skip The offset into the records to return.
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<GraphConnection>, Fixnum, Hash)>] Array<GraphConnection> data, response status code and response headers
-    def g_et_systemgroups_group_id_members_with_http_info(group_id, accept, content_type, opts = {})
+    def get_systemgroups_group_id_members_with_http_info(group_id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GraphApi.g_et_systemgroups_group_id_members ..."
+        @api_client.config.logger.debug "Calling API: GraphApi.get_systemgroups_group_id_members ..."
       end
       # verify the required parameter 'group_id' is set
       if @api_client.config.client_side_validation && group_id.nil?
-        fail ArgumentError, "Missing the required parameter 'group_id' when calling GraphApi.g_et_systemgroups_group_id_members"
+        fail ArgumentError, "Missing the required parameter 'group_id' when calling GraphApi.get_systemgroups_group_id_members"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.g_et_systemgroups_group_id_members"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.get_systemgroups_group_id_members"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.g_et_systemgroups_group_id_members"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.get_systemgroups_group_id_members"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.g_et_systemgroups_group_id_members, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.get_systemgroups_group_id_members, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -2517,7 +2517,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<GraphConnection>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GraphApi#g_et_systemgroups_group_id_members\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GraphApi#get_systemgroups_group_id_members\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -2534,8 +2534,8 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<GraphObjectWithPaths>]
-    def g_et_systemgroups_group_id_membership(group_id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_systemgroups_group_id_membership_with_http_info(group_id, accept, content_type, opts)
+    def get_systemgroups_group_id_membership(group_id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_systemgroups_group_id_membership_with_http_info(group_id, accept, content_type, opts)
       return data
     end
 
@@ -2551,24 +2551,24 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<GraphObjectWithPaths>, Fixnum, Hash)>] Array<GraphObjectWithPaths> data, response status code and response headers
-    def g_et_systemgroups_group_id_membership_with_http_info(group_id, accept, content_type, opts = {})
+    def get_systemgroups_group_id_membership_with_http_info(group_id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GraphApi.g_et_systemgroups_group_id_membership ..."
+        @api_client.config.logger.debug "Calling API: GraphApi.get_systemgroups_group_id_membership ..."
       end
       # verify the required parameter 'group_id' is set
       if @api_client.config.client_side_validation && group_id.nil?
-        fail ArgumentError, "Missing the required parameter 'group_id' when calling GraphApi.g_et_systemgroups_group_id_membership"
+        fail ArgumentError, "Missing the required parameter 'group_id' when calling GraphApi.get_systemgroups_group_id_membership"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.g_et_systemgroups_group_id_membership"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.get_systemgroups_group_id_membership"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.g_et_systemgroups_group_id_membership"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.get_systemgroups_group_id_membership"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.g_et_systemgroups_group_id_membership, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.get_systemgroups_group_id_membership, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -2605,7 +2605,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<GraphObjectWithPaths>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GraphApi#g_et_systemgroups_group_id_membership\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GraphApi#get_systemgroups_group_id_membership\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -2621,8 +2621,8 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<GraphObjectWithPaths>]
-    def g_et_systemgroups_group_id_policies(group_id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_systemgroups_group_id_policies_with_http_info(group_id, accept, content_type, opts)
+    def get_systemgroups_group_id_policies(group_id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_systemgroups_group_id_policies_with_http_info(group_id, accept, content_type, opts)
       return data
     end
 
@@ -2637,24 +2637,24 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<GraphObjectWithPaths>, Fixnum, Hash)>] Array<GraphObjectWithPaths> data, response status code and response headers
-    def g_et_systemgroups_group_id_policies_with_http_info(group_id, accept, content_type, opts = {})
+    def get_systemgroups_group_id_policies_with_http_info(group_id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GraphApi.g_et_systemgroups_group_id_policies ..."
+        @api_client.config.logger.debug "Calling API: GraphApi.get_systemgroups_group_id_policies ..."
       end
       # verify the required parameter 'group_id' is set
       if @api_client.config.client_side_validation && group_id.nil?
-        fail ArgumentError, "Missing the required parameter 'group_id' when calling GraphApi.g_et_systemgroups_group_id_policies"
+        fail ArgumentError, "Missing the required parameter 'group_id' when calling GraphApi.get_systemgroups_group_id_policies"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.g_et_systemgroups_group_id_policies"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.get_systemgroups_group_id_policies"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.g_et_systemgroups_group_id_policies"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.get_systemgroups_group_id_policies"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.g_et_systemgroups_group_id_policies, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.get_systemgroups_group_id_policies, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -2690,7 +2690,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<GraphObjectWithPaths>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GraphApi#g_et_systemgroups_group_id_policies\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GraphApi#get_systemgroups_group_id_policies\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -2706,8 +2706,8 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<GraphObjectWithPaths>]
-    def g_et_systemgroups_group_id_usergroups(group_id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_systemgroups_group_id_usergroups_with_http_info(group_id, accept, content_type, opts)
+    def get_systemgroups_group_id_usergroups(group_id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_systemgroups_group_id_usergroups_with_http_info(group_id, accept, content_type, opts)
       return data
     end
 
@@ -2722,24 +2722,24 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<GraphObjectWithPaths>, Fixnum, Hash)>] Array<GraphObjectWithPaths> data, response status code and response headers
-    def g_et_systemgroups_group_id_usergroups_with_http_info(group_id, accept, content_type, opts = {})
+    def get_systemgroups_group_id_usergroups_with_http_info(group_id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GraphApi.g_et_systemgroups_group_id_usergroups ..."
+        @api_client.config.logger.debug "Calling API: GraphApi.get_systemgroups_group_id_usergroups ..."
       end
       # verify the required parameter 'group_id' is set
       if @api_client.config.client_side_validation && group_id.nil?
-        fail ArgumentError, "Missing the required parameter 'group_id' when calling GraphApi.g_et_systemgroups_group_id_usergroups"
+        fail ArgumentError, "Missing the required parameter 'group_id' when calling GraphApi.get_systemgroups_group_id_usergroups"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.g_et_systemgroups_group_id_usergroups"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.get_systemgroups_group_id_usergroups"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.g_et_systemgroups_group_id_usergroups"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.get_systemgroups_group_id_usergroups"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.g_et_systemgroups_group_id_usergroups, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.get_systemgroups_group_id_usergroups, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -2775,7 +2775,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<GraphObjectWithPaths>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GraphApi#g_et_systemgroups_group_id_usergroups\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GraphApi#get_systemgroups_group_id_usergroups\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -2791,8 +2791,8 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<GraphObjectWithPaths>]
-    def g_et_systemgroups_group_id_users(group_id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_systemgroups_group_id_users_with_http_info(group_id, accept, content_type, opts)
+    def get_systemgroups_group_id_users(group_id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_systemgroups_group_id_users_with_http_info(group_id, accept, content_type, opts)
       return data
     end
 
@@ -2807,24 +2807,24 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<GraphObjectWithPaths>, Fixnum, Hash)>] Array<GraphObjectWithPaths> data, response status code and response headers
-    def g_et_systemgroups_group_id_users_with_http_info(group_id, accept, content_type, opts = {})
+    def get_systemgroups_group_id_users_with_http_info(group_id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GraphApi.g_et_systemgroups_group_id_users ..."
+        @api_client.config.logger.debug "Calling API: GraphApi.get_systemgroups_group_id_users ..."
       end
       # verify the required parameter 'group_id' is set
       if @api_client.config.client_side_validation && group_id.nil?
-        fail ArgumentError, "Missing the required parameter 'group_id' when calling GraphApi.g_et_systemgroups_group_id_users"
+        fail ArgumentError, "Missing the required parameter 'group_id' when calling GraphApi.get_systemgroups_group_id_users"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.g_et_systemgroups_group_id_users"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.get_systemgroups_group_id_users"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.g_et_systemgroups_group_id_users"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.get_systemgroups_group_id_users"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.g_et_systemgroups_group_id_users, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.get_systemgroups_group_id_users, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -2860,7 +2860,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<GraphObjectWithPaths>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GraphApi#g_et_systemgroups_group_id_users\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GraphApi#get_systemgroups_group_id_users\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -2878,8 +2878,8 @@ module JCAPIv2
     # @option opts [String] :date Current date header for the System Context API
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<GraphConnection>]
-    def g_et_systems_system_id_associations(system_id, targets, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_systems_system_id_associations_with_http_info(system_id, targets, accept, content_type, opts)
+    def get_systems_system_id_associations(system_id, targets, accept, content_type, opts = {})
+      data, _status_code, _headers = get_systems_system_id_associations_with_http_info(system_id, targets, accept, content_type, opts)
       return data
     end
 
@@ -2896,28 +2896,28 @@ module JCAPIv2
     # @option opts [String] :date Current date header for the System Context API
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<GraphConnection>, Fixnum, Hash)>] Array<GraphConnection> data, response status code and response headers
-    def g_et_systems_system_id_associations_with_http_info(system_id, targets, accept, content_type, opts = {})
+    def get_systems_system_id_associations_with_http_info(system_id, targets, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GraphApi.g_et_systems_system_id_associations ..."
+        @api_client.config.logger.debug "Calling API: GraphApi.get_systems_system_id_associations ..."
       end
       # verify the required parameter 'system_id' is set
       if @api_client.config.client_side_validation && system_id.nil?
-        fail ArgumentError, "Missing the required parameter 'system_id' when calling GraphApi.g_et_systems_system_id_associations"
+        fail ArgumentError, "Missing the required parameter 'system_id' when calling GraphApi.get_systems_system_id_associations"
       end
       # verify the required parameter 'targets' is set
       if @api_client.config.client_side_validation && targets.nil?
-        fail ArgumentError, "Missing the required parameter 'targets' when calling GraphApi.g_et_systems_system_id_associations"
+        fail ArgumentError, "Missing the required parameter 'targets' when calling GraphApi.get_systems_system_id_associations"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.g_et_systems_system_id_associations"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.get_systems_system_id_associations"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.g_et_systems_system_id_associations"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.get_systems_system_id_associations"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.g_et_systems_system_id_associations, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.get_systems_system_id_associations, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -2955,7 +2955,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<GraphConnection>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GraphApi#g_et_systems_system_id_associations\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GraphApi#get_systems_system_id_associations\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -2971,8 +2971,8 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<GraphObjectWithPaths>]
-    def g_et_systems_system_id_commands(system_id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_systems_system_id_commands_with_http_info(system_id, accept, content_type, opts)
+    def get_systems_system_id_commands(system_id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_systems_system_id_commands_with_http_info(system_id, accept, content_type, opts)
       return data
     end
 
@@ -2987,24 +2987,24 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<GraphObjectWithPaths>, Fixnum, Hash)>] Array<GraphObjectWithPaths> data, response status code and response headers
-    def g_et_systems_system_id_commands_with_http_info(system_id, accept, content_type, opts = {})
+    def get_systems_system_id_commands_with_http_info(system_id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GraphApi.g_et_systems_system_id_commands ..."
+        @api_client.config.logger.debug "Calling API: GraphApi.get_systems_system_id_commands ..."
       end
       # verify the required parameter 'system_id' is set
       if @api_client.config.client_side_validation && system_id.nil?
-        fail ArgumentError, "Missing the required parameter 'system_id' when calling GraphApi.g_et_systems_system_id_commands"
+        fail ArgumentError, "Missing the required parameter 'system_id' when calling GraphApi.get_systems_system_id_commands"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.g_et_systems_system_id_commands"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.get_systems_system_id_commands"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.g_et_systems_system_id_commands"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.get_systems_system_id_commands"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.g_et_systems_system_id_commands, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.get_systems_system_id_commands, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -3040,7 +3040,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<GraphObjectWithPaths>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GraphApi#g_et_systems_system_id_commands\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GraphApi#get_systems_system_id_commands\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -3059,8 +3059,8 @@ module JCAPIv2
     # @option opts [String] :date Current date header for the System Context API
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<GraphObjectWithPaths>]
-    def g_et_systems_system_id_memberof(system_id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_systems_system_id_memberof_with_http_info(system_id, accept, content_type, opts)
+    def get_systems_system_id_memberof(system_id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_systems_system_id_memberof_with_http_info(system_id, accept, content_type, opts)
       return data
     end
 
@@ -3078,24 +3078,24 @@ module JCAPIv2
     # @option opts [String] :date Current date header for the System Context API
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<GraphObjectWithPaths>, Fixnum, Hash)>] Array<GraphObjectWithPaths> data, response status code and response headers
-    def g_et_systems_system_id_memberof_with_http_info(system_id, accept, content_type, opts = {})
+    def get_systems_system_id_memberof_with_http_info(system_id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GraphApi.g_et_systems_system_id_memberof ..."
+        @api_client.config.logger.debug "Calling API: GraphApi.get_systems_system_id_memberof ..."
       end
       # verify the required parameter 'system_id' is set
       if @api_client.config.client_side_validation && system_id.nil?
-        fail ArgumentError, "Missing the required parameter 'system_id' when calling GraphApi.g_et_systems_system_id_memberof"
+        fail ArgumentError, "Missing the required parameter 'system_id' when calling GraphApi.get_systems_system_id_memberof"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.g_et_systems_system_id_memberof"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.get_systems_system_id_memberof"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.g_et_systems_system_id_memberof"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.get_systems_system_id_memberof"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.g_et_systems_system_id_memberof, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.get_systems_system_id_memberof, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -3134,7 +3134,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<GraphObjectWithPaths>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GraphApi#g_et_systems_system_id_memberof\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GraphApi#get_systems_system_id_memberof\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -3150,8 +3150,8 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<GraphObjectWithPaths>]
-    def g_et_systems_system_id_policies(system_id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_systems_system_id_policies_with_http_info(system_id, accept, content_type, opts)
+    def get_systems_system_id_policies(system_id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_systems_system_id_policies_with_http_info(system_id, accept, content_type, opts)
       return data
     end
 
@@ -3166,24 +3166,24 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<GraphObjectWithPaths>, Fixnum, Hash)>] Array<GraphObjectWithPaths> data, response status code and response headers
-    def g_et_systems_system_id_policies_with_http_info(system_id, accept, content_type, opts = {})
+    def get_systems_system_id_policies_with_http_info(system_id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GraphApi.g_et_systems_system_id_policies ..."
+        @api_client.config.logger.debug "Calling API: GraphApi.get_systems_system_id_policies ..."
       end
       # verify the required parameter 'system_id' is set
       if @api_client.config.client_side_validation && system_id.nil?
-        fail ArgumentError, "Missing the required parameter 'system_id' when calling GraphApi.g_et_systems_system_id_policies"
+        fail ArgumentError, "Missing the required parameter 'system_id' when calling GraphApi.get_systems_system_id_policies"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.g_et_systems_system_id_policies"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.get_systems_system_id_policies"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.g_et_systems_system_id_policies"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.get_systems_system_id_policies"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.g_et_systems_system_id_policies, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.get_systems_system_id_policies, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -3219,7 +3219,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<GraphObjectWithPaths>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GraphApi#g_et_systems_system_id_policies\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GraphApi#get_systems_system_id_policies\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -3237,8 +3237,8 @@ module JCAPIv2
     # @option opts [Array<String>] :sort The comma separated fields used to sort the collection. Default sort is ascending, prefix with &#x60;-&#x60; to sort descending. 
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<PolicyResult>]
-    def g_et_systems_system_id_policystatuses(system_id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_systems_system_id_policystatuses_with_http_info(system_id, accept, content_type, opts)
+    def get_systems_system_id_policystatuses(system_id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_systems_system_id_policystatuses_with_http_info(system_id, accept, content_type, opts)
       return data
     end
 
@@ -3255,24 +3255,24 @@ module JCAPIv2
     # @option opts [Array<String>] :sort The comma separated fields used to sort the collection. Default sort is ascending, prefix with &#x60;-&#x60; to sort descending. 
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<PolicyResult>, Fixnum, Hash)>] Array<PolicyResult> data, response status code and response headers
-    def g_et_systems_system_id_policystatuses_with_http_info(system_id, accept, content_type, opts = {})
+    def get_systems_system_id_policystatuses_with_http_info(system_id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GraphApi.g_et_systems_system_id_policystatuses ..."
+        @api_client.config.logger.debug "Calling API: GraphApi.get_systems_system_id_policystatuses ..."
       end
       # verify the required parameter 'system_id' is set
       if @api_client.config.client_side_validation && system_id.nil?
-        fail ArgumentError, "Missing the required parameter 'system_id' when calling GraphApi.g_et_systems_system_id_policystatuses"
+        fail ArgumentError, "Missing the required parameter 'system_id' when calling GraphApi.get_systems_system_id_policystatuses"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.g_et_systems_system_id_policystatuses"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.get_systems_system_id_policystatuses"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.g_et_systems_system_id_policystatuses"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.get_systems_system_id_policystatuses"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.g_et_systems_system_id_policystatuses, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.get_systems_system_id_policystatuses, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -3310,7 +3310,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<PolicyResult>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GraphApi#g_et_systems_system_id_policystatuses\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GraphApi#get_systems_system_id_policystatuses\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -3328,8 +3328,8 @@ module JCAPIv2
     # @option opts [String] :authorization Authorization header for the System Context API
     # @option opts [String] :date Current date header for the System Context API
     # @return [Array<GraphObjectWithPaths>]
-    def g_et_systems_system_id_usergroups(system_id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_systems_system_id_usergroups_with_http_info(system_id, accept, content_type, opts)
+    def get_systems_system_id_usergroups(system_id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_systems_system_id_usergroups_with_http_info(system_id, accept, content_type, opts)
       return data
     end
 
@@ -3346,24 +3346,24 @@ module JCAPIv2
     # @option opts [String] :authorization Authorization header for the System Context API
     # @option opts [String] :date Current date header for the System Context API
     # @return [Array<(Array<GraphObjectWithPaths>, Fixnum, Hash)>] Array<GraphObjectWithPaths> data, response status code and response headers
-    def g_et_systems_system_id_usergroups_with_http_info(system_id, accept, content_type, opts = {})
+    def get_systems_system_id_usergroups_with_http_info(system_id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GraphApi.g_et_systems_system_id_usergroups ..."
+        @api_client.config.logger.debug "Calling API: GraphApi.get_systems_system_id_usergroups ..."
       end
       # verify the required parameter 'system_id' is set
       if @api_client.config.client_side_validation && system_id.nil?
-        fail ArgumentError, "Missing the required parameter 'system_id' when calling GraphApi.g_et_systems_system_id_usergroups"
+        fail ArgumentError, "Missing the required parameter 'system_id' when calling GraphApi.get_systems_system_id_usergroups"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.g_et_systems_system_id_usergroups"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.get_systems_system_id_usergroups"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.g_et_systems_system_id_usergroups"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.get_systems_system_id_usergroups"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.g_et_systems_system_id_usergroups, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.get_systems_system_id_usergroups, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -3401,7 +3401,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<GraphObjectWithPaths>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GraphApi#g_et_systems_system_id_usergroups\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GraphApi#get_systems_system_id_usergroups\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -3419,8 +3419,8 @@ module JCAPIv2
     # @option opts [String] :authorization Authorization header for the System Context API
     # @option opts [String] :date Current date header for the System Context API
     # @return [Array<GraphObjectWithPaths>]
-    def g_et_systems_system_id_users(system_id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_systems_system_id_users_with_http_info(system_id, accept, content_type, opts)
+    def get_systems_system_id_users(system_id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_systems_system_id_users_with_http_info(system_id, accept, content_type, opts)
       return data
     end
 
@@ -3437,24 +3437,24 @@ module JCAPIv2
     # @option opts [String] :authorization Authorization header for the System Context API
     # @option opts [String] :date Current date header for the System Context API
     # @return [Array<(Array<GraphObjectWithPaths>, Fixnum, Hash)>] Array<GraphObjectWithPaths> data, response status code and response headers
-    def g_et_systems_system_id_users_with_http_info(system_id, accept, content_type, opts = {})
+    def get_systems_system_id_users_with_http_info(system_id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GraphApi.g_et_systems_system_id_users ..."
+        @api_client.config.logger.debug "Calling API: GraphApi.get_systems_system_id_users ..."
       end
       # verify the required parameter 'system_id' is set
       if @api_client.config.client_side_validation && system_id.nil?
-        fail ArgumentError, "Missing the required parameter 'system_id' when calling GraphApi.g_et_systems_system_id_users"
+        fail ArgumentError, "Missing the required parameter 'system_id' when calling GraphApi.get_systems_system_id_users"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.g_et_systems_system_id_users"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.get_systems_system_id_users"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.g_et_systems_system_id_users"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.get_systems_system_id_users"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.g_et_systems_system_id_users, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.get_systems_system_id_users, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -3492,7 +3492,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<GraphObjectWithPaths>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GraphApi#g_et_systems_system_id_users\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GraphApi#get_systems_system_id_users\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -3508,8 +3508,8 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<GraphObjectWithPaths>]
-    def g_et_usergroups_group_id_applications(group_id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_usergroups_group_id_applications_with_http_info(group_id, accept, content_type, opts)
+    def get_usergroups_group_id_applications(group_id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_usergroups_group_id_applications_with_http_info(group_id, accept, content_type, opts)
       return data
     end
 
@@ -3524,24 +3524,24 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<GraphObjectWithPaths>, Fixnum, Hash)>] Array<GraphObjectWithPaths> data, response status code and response headers
-    def g_et_usergroups_group_id_applications_with_http_info(group_id, accept, content_type, opts = {})
+    def get_usergroups_group_id_applications_with_http_info(group_id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GraphApi.g_et_usergroups_group_id_applications ..."
+        @api_client.config.logger.debug "Calling API: GraphApi.get_usergroups_group_id_applications ..."
       end
       # verify the required parameter 'group_id' is set
       if @api_client.config.client_side_validation && group_id.nil?
-        fail ArgumentError, "Missing the required parameter 'group_id' when calling GraphApi.g_et_usergroups_group_id_applications"
+        fail ArgumentError, "Missing the required parameter 'group_id' when calling GraphApi.get_usergroups_group_id_applications"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.g_et_usergroups_group_id_applications"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.get_usergroups_group_id_applications"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.g_et_usergroups_group_id_applications"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.get_usergroups_group_id_applications"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.g_et_usergroups_group_id_applications, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.get_usergroups_group_id_applications, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -3577,7 +3577,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<GraphObjectWithPaths>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GraphApi#g_et_usergroups_group_id_applications\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GraphApi#get_usergroups_group_id_applications\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -3593,8 +3593,8 @@ module JCAPIv2
     # @option opts [Integer] :skip The offset into the records to return. (default to 0)
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<GraphConnection>]
-    def g_et_usergroups_group_id_associations(group_id, targets, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_usergroups_group_id_associations_with_http_info(group_id, targets, accept, content_type, opts)
+    def get_usergroups_group_id_associations(group_id, targets, accept, content_type, opts = {})
+      data, _status_code, _headers = get_usergroups_group_id_associations_with_http_info(group_id, targets, accept, content_type, opts)
       return data
     end
 
@@ -3609,28 +3609,28 @@ module JCAPIv2
     # @option opts [Integer] :skip The offset into the records to return.
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<GraphConnection>, Fixnum, Hash)>] Array<GraphConnection> data, response status code and response headers
-    def g_et_usergroups_group_id_associations_with_http_info(group_id, targets, accept, content_type, opts = {})
+    def get_usergroups_group_id_associations_with_http_info(group_id, targets, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GraphApi.g_et_usergroups_group_id_associations ..."
+        @api_client.config.logger.debug "Calling API: GraphApi.get_usergroups_group_id_associations ..."
       end
       # verify the required parameter 'group_id' is set
       if @api_client.config.client_side_validation && group_id.nil?
-        fail ArgumentError, "Missing the required parameter 'group_id' when calling GraphApi.g_et_usergroups_group_id_associations"
+        fail ArgumentError, "Missing the required parameter 'group_id' when calling GraphApi.get_usergroups_group_id_associations"
       end
       # verify the required parameter 'targets' is set
       if @api_client.config.client_side_validation && targets.nil?
-        fail ArgumentError, "Missing the required parameter 'targets' when calling GraphApi.g_et_usergroups_group_id_associations"
+        fail ArgumentError, "Missing the required parameter 'targets' when calling GraphApi.get_usergroups_group_id_associations"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.g_et_usergroups_group_id_associations"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.get_usergroups_group_id_associations"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.g_et_usergroups_group_id_associations"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.get_usergroups_group_id_associations"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.g_et_usergroups_group_id_associations, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.get_usergroups_group_id_associations, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -3666,7 +3666,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<GraphConnection>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GraphApi#g_et_usergroups_group_id_associations\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GraphApi#get_usergroups_group_id_associations\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -3682,8 +3682,8 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<GraphObjectWithPaths>]
-    def g_et_usergroups_group_id_directories(group_id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_usergroups_group_id_directories_with_http_info(group_id, accept, content_type, opts)
+    def get_usergroups_group_id_directories(group_id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_usergroups_group_id_directories_with_http_info(group_id, accept, content_type, opts)
       return data
     end
 
@@ -3698,24 +3698,24 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<GraphObjectWithPaths>, Fixnum, Hash)>] Array<GraphObjectWithPaths> data, response status code and response headers
-    def g_et_usergroups_group_id_directories_with_http_info(group_id, accept, content_type, opts = {})
+    def get_usergroups_group_id_directories_with_http_info(group_id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GraphApi.g_et_usergroups_group_id_directories ..."
+        @api_client.config.logger.debug "Calling API: GraphApi.get_usergroups_group_id_directories ..."
       end
       # verify the required parameter 'group_id' is set
       if @api_client.config.client_side_validation && group_id.nil?
-        fail ArgumentError, "Missing the required parameter 'group_id' when calling GraphApi.g_et_usergroups_group_id_directories"
+        fail ArgumentError, "Missing the required parameter 'group_id' when calling GraphApi.get_usergroups_group_id_directories"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.g_et_usergroups_group_id_directories"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.get_usergroups_group_id_directories"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.g_et_usergroups_group_id_directories"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.get_usergroups_group_id_directories"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.g_et_usergroups_group_id_directories, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.get_usergroups_group_id_directories, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -3751,7 +3751,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<GraphObjectWithPaths>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GraphApi#g_et_usergroups_group_id_directories\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GraphApi#get_usergroups_group_id_directories\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -3767,8 +3767,8 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<GraphObjectWithPaths>]
-    def g_et_usergroups_group_id_gsuites(group_id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_usergroups_group_id_gsuites_with_http_info(group_id, accept, content_type, opts)
+    def get_usergroups_group_id_gsuites(group_id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_usergroups_group_id_gsuites_with_http_info(group_id, accept, content_type, opts)
       return data
     end
 
@@ -3783,24 +3783,24 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<GraphObjectWithPaths>, Fixnum, Hash)>] Array<GraphObjectWithPaths> data, response status code and response headers
-    def g_et_usergroups_group_id_gsuites_with_http_info(group_id, accept, content_type, opts = {})
+    def get_usergroups_group_id_gsuites_with_http_info(group_id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GraphApi.g_et_usergroups_group_id_gsuites ..."
+        @api_client.config.logger.debug "Calling API: GraphApi.get_usergroups_group_id_gsuites ..."
       end
       # verify the required parameter 'group_id' is set
       if @api_client.config.client_side_validation && group_id.nil?
-        fail ArgumentError, "Missing the required parameter 'group_id' when calling GraphApi.g_et_usergroups_group_id_gsuites"
+        fail ArgumentError, "Missing the required parameter 'group_id' when calling GraphApi.get_usergroups_group_id_gsuites"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.g_et_usergroups_group_id_gsuites"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.get_usergroups_group_id_gsuites"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.g_et_usergroups_group_id_gsuites"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.get_usergroups_group_id_gsuites"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.g_et_usergroups_group_id_gsuites, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.get_usergroups_group_id_gsuites, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -3836,7 +3836,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<GraphObjectWithPaths>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GraphApi#g_et_usergroups_group_id_gsuites\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GraphApi#get_usergroups_group_id_gsuites\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -3852,8 +3852,8 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<GraphObjectWithPaths>]
-    def g_et_usergroups_group_id_ldapservers(group_id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_usergroups_group_id_ldapservers_with_http_info(group_id, accept, content_type, opts)
+    def get_usergroups_group_id_ldapservers(group_id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_usergroups_group_id_ldapservers_with_http_info(group_id, accept, content_type, opts)
       return data
     end
 
@@ -3868,24 +3868,24 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<GraphObjectWithPaths>, Fixnum, Hash)>] Array<GraphObjectWithPaths> data, response status code and response headers
-    def g_et_usergroups_group_id_ldapservers_with_http_info(group_id, accept, content_type, opts = {})
+    def get_usergroups_group_id_ldapservers_with_http_info(group_id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GraphApi.g_et_usergroups_group_id_ldapservers ..."
+        @api_client.config.logger.debug "Calling API: GraphApi.get_usergroups_group_id_ldapservers ..."
       end
       # verify the required parameter 'group_id' is set
       if @api_client.config.client_side_validation && group_id.nil?
-        fail ArgumentError, "Missing the required parameter 'group_id' when calling GraphApi.g_et_usergroups_group_id_ldapservers"
+        fail ArgumentError, "Missing the required parameter 'group_id' when calling GraphApi.get_usergroups_group_id_ldapservers"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.g_et_usergroups_group_id_ldapservers"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.get_usergroups_group_id_ldapservers"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.g_et_usergroups_group_id_ldapservers"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.get_usergroups_group_id_ldapservers"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.g_et_usergroups_group_id_ldapservers, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.get_usergroups_group_id_ldapservers, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -3921,7 +3921,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<GraphObjectWithPaths>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GraphApi#g_et_usergroups_group_id_ldapservers\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GraphApi#get_usergroups_group_id_ldapservers\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -3936,8 +3936,8 @@ module JCAPIv2
     # @option opts [Integer] :skip The offset into the records to return. (default to 0)
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<GraphConnection>]
-    def g_et_usergroups_group_id_members(group_id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_usergroups_group_id_members_with_http_info(group_id, accept, content_type, opts)
+    def get_usergroups_group_id_members(group_id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_usergroups_group_id_members_with_http_info(group_id, accept, content_type, opts)
       return data
     end
 
@@ -3951,24 +3951,24 @@ module JCAPIv2
     # @option opts [Integer] :skip The offset into the records to return.
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<GraphConnection>, Fixnum, Hash)>] Array<GraphConnection> data, response status code and response headers
-    def g_et_usergroups_group_id_members_with_http_info(group_id, accept, content_type, opts = {})
+    def get_usergroups_group_id_members_with_http_info(group_id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GraphApi.g_et_usergroups_group_id_members ..."
+        @api_client.config.logger.debug "Calling API: GraphApi.get_usergroups_group_id_members ..."
       end
       # verify the required parameter 'group_id' is set
       if @api_client.config.client_side_validation && group_id.nil?
-        fail ArgumentError, "Missing the required parameter 'group_id' when calling GraphApi.g_et_usergroups_group_id_members"
+        fail ArgumentError, "Missing the required parameter 'group_id' when calling GraphApi.get_usergroups_group_id_members"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.g_et_usergroups_group_id_members"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.get_usergroups_group_id_members"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.g_et_usergroups_group_id_members"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.get_usergroups_group_id_members"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.g_et_usergroups_group_id_members, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.get_usergroups_group_id_members, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -4003,7 +4003,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<GraphConnection>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GraphApi#g_et_usergroups_group_id_members\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GraphApi#get_usergroups_group_id_members\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -4020,8 +4020,8 @@ module JCAPIv2
     # @option opts [Array<String>] :sort The comma separated fields used to sort the collection. Default sort is ascending, prefix with &#x60;-&#x60; to sort descending. 
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<GraphObjectWithPaths>]
-    def g_et_usergroups_group_id_membership(group_id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_usergroups_group_id_membership_with_http_info(group_id, accept, content_type, opts)
+    def get_usergroups_group_id_membership(group_id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_usergroups_group_id_membership_with_http_info(group_id, accept, content_type, opts)
       return data
     end
 
@@ -4037,24 +4037,24 @@ module JCAPIv2
     # @option opts [Array<String>] :sort The comma separated fields used to sort the collection. Default sort is ascending, prefix with &#x60;-&#x60; to sort descending. 
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<GraphObjectWithPaths>, Fixnum, Hash)>] Array<GraphObjectWithPaths> data, response status code and response headers
-    def g_et_usergroups_group_id_membership_with_http_info(group_id, accept, content_type, opts = {})
+    def get_usergroups_group_id_membership_with_http_info(group_id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GraphApi.g_et_usergroups_group_id_membership ..."
+        @api_client.config.logger.debug "Calling API: GraphApi.get_usergroups_group_id_membership ..."
       end
       # verify the required parameter 'group_id' is set
       if @api_client.config.client_side_validation && group_id.nil?
-        fail ArgumentError, "Missing the required parameter 'group_id' when calling GraphApi.g_et_usergroups_group_id_membership"
+        fail ArgumentError, "Missing the required parameter 'group_id' when calling GraphApi.get_usergroups_group_id_membership"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.g_et_usergroups_group_id_membership"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.get_usergroups_group_id_membership"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.g_et_usergroups_group_id_membership"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.get_usergroups_group_id_membership"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.g_et_usergroups_group_id_membership, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.get_usergroups_group_id_membership, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -4091,7 +4091,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<GraphObjectWithPaths>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GraphApi#g_et_usergroups_group_id_membership\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GraphApi#get_usergroups_group_id_membership\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -4107,8 +4107,8 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<GraphObjectWithPaths>]
-    def g_et_usergroups_group_id_office365s(group_id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_usergroups_group_id_office365s_with_http_info(group_id, accept, content_type, opts)
+    def get_usergroups_group_id_office365s(group_id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_usergroups_group_id_office365s_with_http_info(group_id, accept, content_type, opts)
       return data
     end
 
@@ -4123,24 +4123,24 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<GraphObjectWithPaths>, Fixnum, Hash)>] Array<GraphObjectWithPaths> data, response status code and response headers
-    def g_et_usergroups_group_id_office365s_with_http_info(group_id, accept, content_type, opts = {})
+    def get_usergroups_group_id_office365s_with_http_info(group_id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GraphApi.g_et_usergroups_group_id_office365s ..."
+        @api_client.config.logger.debug "Calling API: GraphApi.get_usergroups_group_id_office365s ..."
       end
       # verify the required parameter 'group_id' is set
       if @api_client.config.client_side_validation && group_id.nil?
-        fail ArgumentError, "Missing the required parameter 'group_id' when calling GraphApi.g_et_usergroups_group_id_office365s"
+        fail ArgumentError, "Missing the required parameter 'group_id' when calling GraphApi.get_usergroups_group_id_office365s"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.g_et_usergroups_group_id_office365s"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.get_usergroups_group_id_office365s"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.g_et_usergroups_group_id_office365s"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.get_usergroups_group_id_office365s"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.g_et_usergroups_group_id_office365s, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.get_usergroups_group_id_office365s, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -4176,7 +4176,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<GraphObjectWithPaths>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GraphApi#g_et_usergroups_group_id_office365s\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GraphApi#get_usergroups_group_id_office365s\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -4192,8 +4192,8 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<GraphObjectWithPaths>]
-    def g_et_usergroups_group_id_radiusservers(group_id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_usergroups_group_id_radiusservers_with_http_info(group_id, accept, content_type, opts)
+    def get_usergroups_group_id_radiusservers(group_id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_usergroups_group_id_radiusservers_with_http_info(group_id, accept, content_type, opts)
       return data
     end
 
@@ -4208,24 +4208,24 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<GraphObjectWithPaths>, Fixnum, Hash)>] Array<GraphObjectWithPaths> data, response status code and response headers
-    def g_et_usergroups_group_id_radiusservers_with_http_info(group_id, accept, content_type, opts = {})
+    def get_usergroups_group_id_radiusservers_with_http_info(group_id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GraphApi.g_et_usergroups_group_id_radiusservers ..."
+        @api_client.config.logger.debug "Calling API: GraphApi.get_usergroups_group_id_radiusservers ..."
       end
       # verify the required parameter 'group_id' is set
       if @api_client.config.client_side_validation && group_id.nil?
-        fail ArgumentError, "Missing the required parameter 'group_id' when calling GraphApi.g_et_usergroups_group_id_radiusservers"
+        fail ArgumentError, "Missing the required parameter 'group_id' when calling GraphApi.get_usergroups_group_id_radiusservers"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.g_et_usergroups_group_id_radiusservers"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.get_usergroups_group_id_radiusservers"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.g_et_usergroups_group_id_radiusservers"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.get_usergroups_group_id_radiusservers"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.g_et_usergroups_group_id_radiusservers, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.get_usergroups_group_id_radiusservers, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -4261,7 +4261,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<GraphObjectWithPaths>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GraphApi#g_et_usergroups_group_id_radiusservers\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GraphApi#get_usergroups_group_id_radiusservers\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -4277,8 +4277,8 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<GraphObjectWithPaths>]
-    def g_et_usergroups_group_id_systemgroups(group_id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_usergroups_group_id_systemgroups_with_http_info(group_id, accept, content_type, opts)
+    def get_usergroups_group_id_systemgroups(group_id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_usergroups_group_id_systemgroups_with_http_info(group_id, accept, content_type, opts)
       return data
     end
 
@@ -4293,24 +4293,24 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<GraphObjectWithPaths>, Fixnum, Hash)>] Array<GraphObjectWithPaths> data, response status code and response headers
-    def g_et_usergroups_group_id_systemgroups_with_http_info(group_id, accept, content_type, opts = {})
+    def get_usergroups_group_id_systemgroups_with_http_info(group_id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GraphApi.g_et_usergroups_group_id_systemgroups ..."
+        @api_client.config.logger.debug "Calling API: GraphApi.get_usergroups_group_id_systemgroups ..."
       end
       # verify the required parameter 'group_id' is set
       if @api_client.config.client_side_validation && group_id.nil?
-        fail ArgumentError, "Missing the required parameter 'group_id' when calling GraphApi.g_et_usergroups_group_id_systemgroups"
+        fail ArgumentError, "Missing the required parameter 'group_id' when calling GraphApi.get_usergroups_group_id_systemgroups"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.g_et_usergroups_group_id_systemgroups"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.get_usergroups_group_id_systemgroups"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.g_et_usergroups_group_id_systemgroups"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.get_usergroups_group_id_systemgroups"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.g_et_usergroups_group_id_systemgroups, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.get_usergroups_group_id_systemgroups, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -4346,7 +4346,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<GraphObjectWithPaths>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GraphApi#g_et_usergroups_group_id_systemgroups\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GraphApi#get_usergroups_group_id_systemgroups\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -4362,8 +4362,8 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<GraphObjectWithPaths>]
-    def g_et_usergroups_group_id_systems(group_id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_usergroups_group_id_systems_with_http_info(group_id, accept, content_type, opts)
+    def get_usergroups_group_id_systems(group_id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_usergroups_group_id_systems_with_http_info(group_id, accept, content_type, opts)
       return data
     end
 
@@ -4378,24 +4378,24 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<GraphObjectWithPaths>, Fixnum, Hash)>] Array<GraphObjectWithPaths> data, response status code and response headers
-    def g_et_usergroups_group_id_systems_with_http_info(group_id, accept, content_type, opts = {})
+    def get_usergroups_group_id_systems_with_http_info(group_id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GraphApi.g_et_usergroups_group_id_systems ..."
+        @api_client.config.logger.debug "Calling API: GraphApi.get_usergroups_group_id_systems ..."
       end
       # verify the required parameter 'group_id' is set
       if @api_client.config.client_side_validation && group_id.nil?
-        fail ArgumentError, "Missing the required parameter 'group_id' when calling GraphApi.g_et_usergroups_group_id_systems"
+        fail ArgumentError, "Missing the required parameter 'group_id' when calling GraphApi.get_usergroups_group_id_systems"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.g_et_usergroups_group_id_systems"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.get_usergroups_group_id_systems"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.g_et_usergroups_group_id_systems"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.get_usergroups_group_id_systems"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.g_et_usergroups_group_id_systems, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.get_usergroups_group_id_systems, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -4431,7 +4431,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<GraphObjectWithPaths>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GraphApi#g_et_usergroups_group_id_systems\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GraphApi#get_usergroups_group_id_systems\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -4447,8 +4447,8 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<GraphObjectWithPaths>]
-    def g_et_users_user_id_applications(user_id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_users_user_id_applications_with_http_info(user_id, accept, content_type, opts)
+    def get_users_user_id_applications(user_id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_users_user_id_applications_with_http_info(user_id, accept, content_type, opts)
       return data
     end
 
@@ -4463,24 +4463,24 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<GraphObjectWithPaths>, Fixnum, Hash)>] Array<GraphObjectWithPaths> data, response status code and response headers
-    def g_et_users_user_id_applications_with_http_info(user_id, accept, content_type, opts = {})
+    def get_users_user_id_applications_with_http_info(user_id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GraphApi.g_et_users_user_id_applications ..."
+        @api_client.config.logger.debug "Calling API: GraphApi.get_users_user_id_applications ..."
       end
       # verify the required parameter 'user_id' is set
       if @api_client.config.client_side_validation && user_id.nil?
-        fail ArgumentError, "Missing the required parameter 'user_id' when calling GraphApi.g_et_users_user_id_applications"
+        fail ArgumentError, "Missing the required parameter 'user_id' when calling GraphApi.get_users_user_id_applications"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.g_et_users_user_id_applications"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.get_users_user_id_applications"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.g_et_users_user_id_applications"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.get_users_user_id_applications"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.g_et_users_user_id_applications, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.get_users_user_id_applications, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -4516,7 +4516,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<GraphObjectWithPaths>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GraphApi#g_et_users_user_id_applications\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GraphApi#get_users_user_id_applications\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -4532,8 +4532,8 @@ module JCAPIv2
     # @option opts [Integer] :skip The offset into the records to return. (default to 0)
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<GraphConnection>]
-    def g_et_users_user_id_associations(user_id, targets, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_users_user_id_associations_with_http_info(user_id, targets, accept, content_type, opts)
+    def get_users_user_id_associations(user_id, targets, accept, content_type, opts = {})
+      data, _status_code, _headers = get_users_user_id_associations_with_http_info(user_id, targets, accept, content_type, opts)
       return data
     end
 
@@ -4548,28 +4548,28 @@ module JCAPIv2
     # @option opts [Integer] :skip The offset into the records to return.
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<GraphConnection>, Fixnum, Hash)>] Array<GraphConnection> data, response status code and response headers
-    def g_et_users_user_id_associations_with_http_info(user_id, targets, accept, content_type, opts = {})
+    def get_users_user_id_associations_with_http_info(user_id, targets, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GraphApi.g_et_users_user_id_associations ..."
+        @api_client.config.logger.debug "Calling API: GraphApi.get_users_user_id_associations ..."
       end
       # verify the required parameter 'user_id' is set
       if @api_client.config.client_side_validation && user_id.nil?
-        fail ArgumentError, "Missing the required parameter 'user_id' when calling GraphApi.g_et_users_user_id_associations"
+        fail ArgumentError, "Missing the required parameter 'user_id' when calling GraphApi.get_users_user_id_associations"
       end
       # verify the required parameter 'targets' is set
       if @api_client.config.client_side_validation && targets.nil?
-        fail ArgumentError, "Missing the required parameter 'targets' when calling GraphApi.g_et_users_user_id_associations"
+        fail ArgumentError, "Missing the required parameter 'targets' when calling GraphApi.get_users_user_id_associations"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.g_et_users_user_id_associations"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.get_users_user_id_associations"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.g_et_users_user_id_associations"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.get_users_user_id_associations"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.g_et_users_user_id_associations, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.get_users_user_id_associations, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -4605,7 +4605,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<GraphConnection>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GraphApi#g_et_users_user_id_associations\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GraphApi#get_users_user_id_associations\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -4621,8 +4621,8 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<GraphObjectWithPaths>]
-    def g_et_users_user_id_directories(user_id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_users_user_id_directories_with_http_info(user_id, accept, content_type, opts)
+    def get_users_user_id_directories(user_id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_users_user_id_directories_with_http_info(user_id, accept, content_type, opts)
       return data
     end
 
@@ -4637,24 +4637,24 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<GraphObjectWithPaths>, Fixnum, Hash)>] Array<GraphObjectWithPaths> data, response status code and response headers
-    def g_et_users_user_id_directories_with_http_info(user_id, accept, content_type, opts = {})
+    def get_users_user_id_directories_with_http_info(user_id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GraphApi.g_et_users_user_id_directories ..."
+        @api_client.config.logger.debug "Calling API: GraphApi.get_users_user_id_directories ..."
       end
       # verify the required parameter 'user_id' is set
       if @api_client.config.client_side_validation && user_id.nil?
-        fail ArgumentError, "Missing the required parameter 'user_id' when calling GraphApi.g_et_users_user_id_directories"
+        fail ArgumentError, "Missing the required parameter 'user_id' when calling GraphApi.get_users_user_id_directories"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.g_et_users_user_id_directories"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.get_users_user_id_directories"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.g_et_users_user_id_directories"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.get_users_user_id_directories"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.g_et_users_user_id_directories, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.get_users_user_id_directories, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -4690,7 +4690,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<GraphObjectWithPaths>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GraphApi#g_et_users_user_id_directories\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GraphApi#get_users_user_id_directories\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -4706,8 +4706,8 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<GraphObjectWithPaths>]
-    def g_et_users_user_id_gsuites(user_id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_users_user_id_gsuites_with_http_info(user_id, accept, content_type, opts)
+    def get_users_user_id_gsuites(user_id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_users_user_id_gsuites_with_http_info(user_id, accept, content_type, opts)
       return data
     end
 
@@ -4722,24 +4722,24 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<GraphObjectWithPaths>, Fixnum, Hash)>] Array<GraphObjectWithPaths> data, response status code and response headers
-    def g_et_users_user_id_gsuites_with_http_info(user_id, accept, content_type, opts = {})
+    def get_users_user_id_gsuites_with_http_info(user_id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GraphApi.g_et_users_user_id_gsuites ..."
+        @api_client.config.logger.debug "Calling API: GraphApi.get_users_user_id_gsuites ..."
       end
       # verify the required parameter 'user_id' is set
       if @api_client.config.client_side_validation && user_id.nil?
-        fail ArgumentError, "Missing the required parameter 'user_id' when calling GraphApi.g_et_users_user_id_gsuites"
+        fail ArgumentError, "Missing the required parameter 'user_id' when calling GraphApi.get_users_user_id_gsuites"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.g_et_users_user_id_gsuites"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.get_users_user_id_gsuites"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.g_et_users_user_id_gsuites"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.get_users_user_id_gsuites"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.g_et_users_user_id_gsuites, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.get_users_user_id_gsuites, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -4775,7 +4775,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<GraphObjectWithPaths>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GraphApi#g_et_users_user_id_gsuites\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GraphApi#get_users_user_id_gsuites\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -4791,8 +4791,8 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<GraphObjectWithPaths>]
-    def g_et_users_user_id_ldapservers(user_id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_users_user_id_ldapservers_with_http_info(user_id, accept, content_type, opts)
+    def get_users_user_id_ldapservers(user_id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_users_user_id_ldapservers_with_http_info(user_id, accept, content_type, opts)
       return data
     end
 
@@ -4807,24 +4807,24 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<GraphObjectWithPaths>, Fixnum, Hash)>] Array<GraphObjectWithPaths> data, response status code and response headers
-    def g_et_users_user_id_ldapservers_with_http_info(user_id, accept, content_type, opts = {})
+    def get_users_user_id_ldapservers_with_http_info(user_id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GraphApi.g_et_users_user_id_ldapservers ..."
+        @api_client.config.logger.debug "Calling API: GraphApi.get_users_user_id_ldapservers ..."
       end
       # verify the required parameter 'user_id' is set
       if @api_client.config.client_side_validation && user_id.nil?
-        fail ArgumentError, "Missing the required parameter 'user_id' when calling GraphApi.g_et_users_user_id_ldapservers"
+        fail ArgumentError, "Missing the required parameter 'user_id' when calling GraphApi.get_users_user_id_ldapservers"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.g_et_users_user_id_ldapservers"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.get_users_user_id_ldapservers"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.g_et_users_user_id_ldapservers"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.get_users_user_id_ldapservers"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.g_et_users_user_id_ldapservers, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.get_users_user_id_ldapservers, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -4860,7 +4860,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<GraphObjectWithPaths>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GraphApi#g_et_users_user_id_ldapservers\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GraphApi#get_users_user_id_ldapservers\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -4877,8 +4877,8 @@ module JCAPIv2
     # @option opts [Array<String>] :sort The comma separated fields used to sort the collection. Default sort is ascending, prefix with &#x60;-&#x60; to sort descending. 
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<GraphObjectWithPaths>]
-    def g_et_users_user_id_memberof(user_id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_users_user_id_memberof_with_http_info(user_id, accept, content_type, opts)
+    def get_users_user_id_memberof(user_id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_users_user_id_memberof_with_http_info(user_id, accept, content_type, opts)
       return data
     end
 
@@ -4894,24 +4894,24 @@ module JCAPIv2
     # @option opts [Array<String>] :sort The comma separated fields used to sort the collection. Default sort is ascending, prefix with &#x60;-&#x60; to sort descending. 
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<GraphObjectWithPaths>, Fixnum, Hash)>] Array<GraphObjectWithPaths> data, response status code and response headers
-    def g_et_users_user_id_memberof_with_http_info(user_id, accept, content_type, opts = {})
+    def get_users_user_id_memberof_with_http_info(user_id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GraphApi.g_et_users_user_id_memberof ..."
+        @api_client.config.logger.debug "Calling API: GraphApi.get_users_user_id_memberof ..."
       end
       # verify the required parameter 'user_id' is set
       if @api_client.config.client_side_validation && user_id.nil?
-        fail ArgumentError, "Missing the required parameter 'user_id' when calling GraphApi.g_et_users_user_id_memberof"
+        fail ArgumentError, "Missing the required parameter 'user_id' when calling GraphApi.get_users_user_id_memberof"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.g_et_users_user_id_memberof"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.get_users_user_id_memberof"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.g_et_users_user_id_memberof"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.get_users_user_id_memberof"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.g_et_users_user_id_memberof, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.get_users_user_id_memberof, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -4948,7 +4948,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<GraphObjectWithPaths>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GraphApi#g_et_users_user_id_memberof\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GraphApi#get_users_user_id_memberof\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -4964,8 +4964,8 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<GraphObjectWithPaths>]
-    def g_et_users_user_id_office365s(user_id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_users_user_id_office365s_with_http_info(user_id, accept, content_type, opts)
+    def get_users_user_id_office365s(user_id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_users_user_id_office365s_with_http_info(user_id, accept, content_type, opts)
       return data
     end
 
@@ -4980,24 +4980,24 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<GraphObjectWithPaths>, Fixnum, Hash)>] Array<GraphObjectWithPaths> data, response status code and response headers
-    def g_et_users_user_id_office365s_with_http_info(user_id, accept, content_type, opts = {})
+    def get_users_user_id_office365s_with_http_info(user_id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GraphApi.g_et_users_user_id_office365s ..."
+        @api_client.config.logger.debug "Calling API: GraphApi.get_users_user_id_office365s ..."
       end
       # verify the required parameter 'user_id' is set
       if @api_client.config.client_side_validation && user_id.nil?
-        fail ArgumentError, "Missing the required parameter 'user_id' when calling GraphApi.g_et_users_user_id_office365s"
+        fail ArgumentError, "Missing the required parameter 'user_id' when calling GraphApi.get_users_user_id_office365s"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.g_et_users_user_id_office365s"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.get_users_user_id_office365s"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.g_et_users_user_id_office365s"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.get_users_user_id_office365s"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.g_et_users_user_id_office365s, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.get_users_user_id_office365s, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -5033,7 +5033,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<GraphObjectWithPaths>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GraphApi#g_et_users_user_id_office365s\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GraphApi#get_users_user_id_office365s\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -5049,8 +5049,8 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<GraphObjectWithPaths>]
-    def g_et_users_user_id_radiusservers(user_id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_users_user_id_radiusservers_with_http_info(user_id, accept, content_type, opts)
+    def get_users_user_id_radiusservers(user_id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_users_user_id_radiusservers_with_http_info(user_id, accept, content_type, opts)
       return data
     end
 
@@ -5065,24 +5065,24 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<GraphObjectWithPaths>, Fixnum, Hash)>] Array<GraphObjectWithPaths> data, response status code and response headers
-    def g_et_users_user_id_radiusservers_with_http_info(user_id, accept, content_type, opts = {})
+    def get_users_user_id_radiusservers_with_http_info(user_id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GraphApi.g_et_users_user_id_radiusservers ..."
+        @api_client.config.logger.debug "Calling API: GraphApi.get_users_user_id_radiusservers ..."
       end
       # verify the required parameter 'user_id' is set
       if @api_client.config.client_side_validation && user_id.nil?
-        fail ArgumentError, "Missing the required parameter 'user_id' when calling GraphApi.g_et_users_user_id_radiusservers"
+        fail ArgumentError, "Missing the required parameter 'user_id' when calling GraphApi.get_users_user_id_radiusservers"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.g_et_users_user_id_radiusservers"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.get_users_user_id_radiusservers"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.g_et_users_user_id_radiusservers"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.get_users_user_id_radiusservers"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.g_et_users_user_id_radiusservers, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.get_users_user_id_radiusservers, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -5118,7 +5118,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<GraphObjectWithPaths>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GraphApi#g_et_users_user_id_radiusservers\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GraphApi#get_users_user_id_radiusservers\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -5134,8 +5134,8 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<GraphObjectWithPaths>]
-    def g_et_users_user_id_systemgroups(user_id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_users_user_id_systemgroups_with_http_info(user_id, accept, content_type, opts)
+    def get_users_user_id_systemgroups(user_id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_users_user_id_systemgroups_with_http_info(user_id, accept, content_type, opts)
       return data
     end
 
@@ -5150,24 +5150,24 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<GraphObjectWithPaths>, Fixnum, Hash)>] Array<GraphObjectWithPaths> data, response status code and response headers
-    def g_et_users_user_id_systemgroups_with_http_info(user_id, accept, content_type, opts = {})
+    def get_users_user_id_systemgroups_with_http_info(user_id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GraphApi.g_et_users_user_id_systemgroups ..."
+        @api_client.config.logger.debug "Calling API: GraphApi.get_users_user_id_systemgroups ..."
       end
       # verify the required parameter 'user_id' is set
       if @api_client.config.client_side_validation && user_id.nil?
-        fail ArgumentError, "Missing the required parameter 'user_id' when calling GraphApi.g_et_users_user_id_systemgroups"
+        fail ArgumentError, "Missing the required parameter 'user_id' when calling GraphApi.get_users_user_id_systemgroups"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.g_et_users_user_id_systemgroups"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.get_users_user_id_systemgroups"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.g_et_users_user_id_systemgroups"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.get_users_user_id_systemgroups"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.g_et_users_user_id_systemgroups, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.get_users_user_id_systemgroups, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -5203,7 +5203,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<GraphObjectWithPaths>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GraphApi#g_et_users_user_id_systemgroups\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GraphApi#get_users_user_id_systemgroups\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -5219,8 +5219,8 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<GraphObjectWithPaths>]
-    def g_et_users_user_id_systems(user_id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_users_user_id_systems_with_http_info(user_id, accept, content_type, opts)
+    def get_users_user_id_systems(user_id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_users_user_id_systems_with_http_info(user_id, accept, content_type, opts)
       return data
     end
 
@@ -5235,24 +5235,24 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<GraphObjectWithPaths>, Fixnum, Hash)>] Array<GraphObjectWithPaths> data, response status code and response headers
-    def g_et_users_user_id_systems_with_http_info(user_id, accept, content_type, opts = {})
+    def get_users_user_id_systems_with_http_info(user_id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GraphApi.g_et_users_user_id_systems ..."
+        @api_client.config.logger.debug "Calling API: GraphApi.get_users_user_id_systems ..."
       end
       # verify the required parameter 'user_id' is set
       if @api_client.config.client_side_validation && user_id.nil?
-        fail ArgumentError, "Missing the required parameter 'user_id' when calling GraphApi.g_et_users_user_id_systems"
+        fail ArgumentError, "Missing the required parameter 'user_id' when calling GraphApi.get_users_user_id_systems"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.g_et_users_user_id_systems"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling GraphApi.get_users_user_id_systems"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.g_et_users_user_id_systems"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling GraphApi.get_users_user_id_systems"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.g_et_users_user_id_systems, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GraphApi.get_users_user_id_systems, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -5288,7 +5288,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<GraphObjectWithPaths>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GraphApi#g_et_users_user_id_systems\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GraphApi#get_users_user_id_systems\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

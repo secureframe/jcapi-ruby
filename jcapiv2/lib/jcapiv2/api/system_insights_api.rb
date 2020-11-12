@@ -31,8 +31,8 @@ module JCAPIv2
     # @option opts [Integer] :limit  (default to 10)
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<SystemInsightsAlf>]
-    def g_et_systeminsights_alf(accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_systeminsights_alf_with_http_info(accept, content_type, opts)
+    def get_systeminsights_alf(accept, content_type, opts = {})
+      data, _status_code, _headers = get_systeminsights_alf_with_http_info(accept, content_type, opts)
       return data
     end
 
@@ -47,28 +47,28 @@ module JCAPIv2
     # @option opts [Integer] :limit 
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<SystemInsightsAlf>, Fixnum, Hash)>] Array<SystemInsightsAlf> data, response status code and response headers
-    def g_et_systeminsights_alf_with_http_info(accept, content_type, opts = {})
+    def get_systeminsights_alf_with_http_info(accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SystemInsightsApi.g_et_systeminsights_alf ..."
+        @api_client.config.logger.debug "Calling API: SystemInsightsApi.get_systeminsights_alf ..."
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.g_et_systeminsights_alf"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.get_systeminsights_alf"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.g_et_systeminsights_alf"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.get_systeminsights_alf"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.g_et_systeminsights_alf, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.get_systeminsights_alf, must be greater than or equal to 0.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] > 1000
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_alf, must be smaller than or equal to 1000.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_alf, must be smaller than or equal to 1000.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_alf, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_alf, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -105,7 +105,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<SystemInsightsAlf>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SystemInsightsApi#g_et_systeminsights_alf\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SystemInsightsApi#get_systeminsights_alf\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -121,8 +121,8 @@ module JCAPIv2
     # @option opts [Integer] :limit  (default to 10)
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<SystemInsightsAlfExceptions>]
-    def g_et_systeminsights_alf_exceptions(accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_systeminsights_alf_exceptions_with_http_info(accept, content_type, opts)
+    def get_systeminsights_alf_exceptions(accept, content_type, opts = {})
+      data, _status_code, _headers = get_systeminsights_alf_exceptions_with_http_info(accept, content_type, opts)
       return data
     end
 
@@ -137,28 +137,28 @@ module JCAPIv2
     # @option opts [Integer] :limit 
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<SystemInsightsAlfExceptions>, Fixnum, Hash)>] Array<SystemInsightsAlfExceptions> data, response status code and response headers
-    def g_et_systeminsights_alf_exceptions_with_http_info(accept, content_type, opts = {})
+    def get_systeminsights_alf_exceptions_with_http_info(accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SystemInsightsApi.g_et_systeminsights_alf_exceptions ..."
+        @api_client.config.logger.debug "Calling API: SystemInsightsApi.get_systeminsights_alf_exceptions ..."
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.g_et_systeminsights_alf_exceptions"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.get_systeminsights_alf_exceptions"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.g_et_systeminsights_alf_exceptions"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.get_systeminsights_alf_exceptions"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.g_et_systeminsights_alf_exceptions, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.get_systeminsights_alf_exceptions, must be greater than or equal to 0.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] > 1000
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_alf_exceptions, must be smaller than or equal to 1000.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_alf_exceptions, must be smaller than or equal to 1000.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_alf_exceptions, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_alf_exceptions, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -195,7 +195,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<SystemInsightsAlfExceptions>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SystemInsightsApi#g_et_systeminsights_alf_exceptions\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SystemInsightsApi#get_systeminsights_alf_exceptions\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -211,8 +211,8 @@ module JCAPIv2
     # @option opts [Integer] :limit  (default to 10)
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<SystemInsightsAlfExplicitAuths>]
-    def g_et_systeminsights_alf_explicit_auths(accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_systeminsights_alf_explicit_auths_with_http_info(accept, content_type, opts)
+    def get_systeminsights_alf_explicit_auths(accept, content_type, opts = {})
+      data, _status_code, _headers = get_systeminsights_alf_explicit_auths_with_http_info(accept, content_type, opts)
       return data
     end
 
@@ -227,28 +227,28 @@ module JCAPIv2
     # @option opts [Integer] :limit 
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<SystemInsightsAlfExplicitAuths>, Fixnum, Hash)>] Array<SystemInsightsAlfExplicitAuths> data, response status code and response headers
-    def g_et_systeminsights_alf_explicit_auths_with_http_info(accept, content_type, opts = {})
+    def get_systeminsights_alf_explicit_auths_with_http_info(accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SystemInsightsApi.g_et_systeminsights_alf_explicit_auths ..."
+        @api_client.config.logger.debug "Calling API: SystemInsightsApi.get_systeminsights_alf_explicit_auths ..."
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.g_et_systeminsights_alf_explicit_auths"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.get_systeminsights_alf_explicit_auths"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.g_et_systeminsights_alf_explicit_auths"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.get_systeminsights_alf_explicit_auths"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.g_et_systeminsights_alf_explicit_auths, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.get_systeminsights_alf_explicit_auths, must be greater than or equal to 0.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] > 1000
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_alf_explicit_auths, must be smaller than or equal to 1000.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_alf_explicit_auths, must be smaller than or equal to 1000.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_alf_explicit_auths, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_alf_explicit_auths, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -285,7 +285,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<SystemInsightsAlfExplicitAuths>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SystemInsightsApi#g_et_systeminsights_alf_explicit_auths\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SystemInsightsApi#get_systeminsights_alf_explicit_auths\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -301,8 +301,8 @@ module JCAPIv2
     # @option opts [Integer] :limit  (default to 10)
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<SystemInsightsAppcompatShims>]
-    def g_et_systeminsights_appcompat_shims(accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_systeminsights_appcompat_shims_with_http_info(accept, content_type, opts)
+    def get_systeminsights_appcompat_shims(accept, content_type, opts = {})
+      data, _status_code, _headers = get_systeminsights_appcompat_shims_with_http_info(accept, content_type, opts)
       return data
     end
 
@@ -317,28 +317,28 @@ module JCAPIv2
     # @option opts [Integer] :limit 
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<SystemInsightsAppcompatShims>, Fixnum, Hash)>] Array<SystemInsightsAppcompatShims> data, response status code and response headers
-    def g_et_systeminsights_appcompat_shims_with_http_info(accept, content_type, opts = {})
+    def get_systeminsights_appcompat_shims_with_http_info(accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SystemInsightsApi.g_et_systeminsights_appcompat_shims ..."
+        @api_client.config.logger.debug "Calling API: SystemInsightsApi.get_systeminsights_appcompat_shims ..."
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.g_et_systeminsights_appcompat_shims"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.get_systeminsights_appcompat_shims"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.g_et_systeminsights_appcompat_shims"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.get_systeminsights_appcompat_shims"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.g_et_systeminsights_appcompat_shims, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.get_systeminsights_appcompat_shims, must be greater than or equal to 0.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] > 1000
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_appcompat_shims, must be smaller than or equal to 1000.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_appcompat_shims, must be smaller than or equal to 1000.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_appcompat_shims, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_appcompat_shims, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -375,7 +375,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<SystemInsightsAppcompatShims>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SystemInsightsApi#g_et_systeminsights_appcompat_shims\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SystemInsightsApi#get_systeminsights_appcompat_shims\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -391,8 +391,8 @@ module JCAPIv2
     # @option opts [Integer] :limit  (default to 10)
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<SystemInsightsApps>]
-    def g_et_systeminsights_apps(accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_systeminsights_apps_with_http_info(accept, content_type, opts)
+    def get_systeminsights_apps(accept, content_type, opts = {})
+      data, _status_code, _headers = get_systeminsights_apps_with_http_info(accept, content_type, opts)
       return data
     end
 
@@ -407,28 +407,28 @@ module JCAPIv2
     # @option opts [Integer] :limit 
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<SystemInsightsApps>, Fixnum, Hash)>] Array<SystemInsightsApps> data, response status code and response headers
-    def g_et_systeminsights_apps_with_http_info(accept, content_type, opts = {})
+    def get_systeminsights_apps_with_http_info(accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SystemInsightsApi.g_et_systeminsights_apps ..."
+        @api_client.config.logger.debug "Calling API: SystemInsightsApi.get_systeminsights_apps ..."
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.g_et_systeminsights_apps"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.get_systeminsights_apps"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.g_et_systeminsights_apps"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.get_systeminsights_apps"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.g_et_systeminsights_apps, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.get_systeminsights_apps, must be greater than or equal to 0.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] > 1000
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_apps, must be smaller than or equal to 1000.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_apps, must be smaller than or equal to 1000.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_apps, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_apps, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -465,7 +465,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<SystemInsightsApps>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SystemInsightsApi#g_et_systeminsights_apps\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SystemInsightsApi#get_systeminsights_apps\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -481,8 +481,8 @@ module JCAPIv2
     # @option opts [Integer] :limit  (default to 10)
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<SystemInsightsAuthorizedKeys>]
-    def g_et_systeminsights_authorized_keys(accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_systeminsights_authorized_keys_with_http_info(accept, content_type, opts)
+    def get_systeminsights_authorized_keys(accept, content_type, opts = {})
+      data, _status_code, _headers = get_systeminsights_authorized_keys_with_http_info(accept, content_type, opts)
       return data
     end
 
@@ -497,28 +497,28 @@ module JCAPIv2
     # @option opts [Integer] :limit 
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<SystemInsightsAuthorizedKeys>, Fixnum, Hash)>] Array<SystemInsightsAuthorizedKeys> data, response status code and response headers
-    def g_et_systeminsights_authorized_keys_with_http_info(accept, content_type, opts = {})
+    def get_systeminsights_authorized_keys_with_http_info(accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SystemInsightsApi.g_et_systeminsights_authorized_keys ..."
+        @api_client.config.logger.debug "Calling API: SystemInsightsApi.get_systeminsights_authorized_keys ..."
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.g_et_systeminsights_authorized_keys"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.get_systeminsights_authorized_keys"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.g_et_systeminsights_authorized_keys"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.get_systeminsights_authorized_keys"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.g_et_systeminsights_authorized_keys, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.get_systeminsights_authorized_keys, must be greater than or equal to 0.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] > 1000
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_authorized_keys, must be smaller than or equal to 1000.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_authorized_keys, must be smaller than or equal to 1000.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_authorized_keys, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_authorized_keys, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -555,7 +555,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<SystemInsightsAuthorizedKeys>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SystemInsightsApi#g_et_systeminsights_authorized_keys\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SystemInsightsApi#get_systeminsights_authorized_keys\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -571,8 +571,8 @@ module JCAPIv2
     # @option opts [Integer] :limit  (default to 10)
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<SystemInsightsBattery>]
-    def g_et_systeminsights_battery(accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_systeminsights_battery_with_http_info(accept, content_type, opts)
+    def get_systeminsights_battery(accept, content_type, opts = {})
+      data, _status_code, _headers = get_systeminsights_battery_with_http_info(accept, content_type, opts)
       return data
     end
 
@@ -587,28 +587,28 @@ module JCAPIv2
     # @option opts [Integer] :limit 
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<SystemInsightsBattery>, Fixnum, Hash)>] Array<SystemInsightsBattery> data, response status code and response headers
-    def g_et_systeminsights_battery_with_http_info(accept, content_type, opts = {})
+    def get_systeminsights_battery_with_http_info(accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SystemInsightsApi.g_et_systeminsights_battery ..."
+        @api_client.config.logger.debug "Calling API: SystemInsightsApi.get_systeminsights_battery ..."
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.g_et_systeminsights_battery"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.get_systeminsights_battery"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.g_et_systeminsights_battery"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.get_systeminsights_battery"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.g_et_systeminsights_battery, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.get_systeminsights_battery, must be greater than or equal to 0.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] > 1000
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_battery, must be smaller than or equal to 1000.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_battery, must be smaller than or equal to 1000.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_battery, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_battery, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -645,7 +645,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<SystemInsightsBattery>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SystemInsightsApi#g_et_systeminsights_battery\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SystemInsightsApi#get_systeminsights_battery\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -661,8 +661,8 @@ module JCAPIv2
     # @option opts [Integer] :limit  (default to 10)
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<SystemInsightsBitlockerInfo>]
-    def g_et_systeminsights_bitlocker_info(accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_systeminsights_bitlocker_info_with_http_info(accept, content_type, opts)
+    def get_systeminsights_bitlocker_info(accept, content_type, opts = {})
+      data, _status_code, _headers = get_systeminsights_bitlocker_info_with_http_info(accept, content_type, opts)
       return data
     end
 
@@ -677,28 +677,28 @@ module JCAPIv2
     # @option opts [Integer] :limit 
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<SystemInsightsBitlockerInfo>, Fixnum, Hash)>] Array<SystemInsightsBitlockerInfo> data, response status code and response headers
-    def g_et_systeminsights_bitlocker_info_with_http_info(accept, content_type, opts = {})
+    def get_systeminsights_bitlocker_info_with_http_info(accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SystemInsightsApi.g_et_systeminsights_bitlocker_info ..."
+        @api_client.config.logger.debug "Calling API: SystemInsightsApi.get_systeminsights_bitlocker_info ..."
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.g_et_systeminsights_bitlocker_info"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.get_systeminsights_bitlocker_info"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.g_et_systeminsights_bitlocker_info"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.get_systeminsights_bitlocker_info"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.g_et_systeminsights_bitlocker_info, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.get_systeminsights_bitlocker_info, must be greater than or equal to 0.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] > 1000
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_bitlocker_info, must be smaller than or equal to 1000.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_bitlocker_info, must be smaller than or equal to 1000.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_bitlocker_info, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_bitlocker_info, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -735,7 +735,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<SystemInsightsBitlockerInfo>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SystemInsightsApi#g_et_systeminsights_bitlocker_info\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SystemInsightsApi#get_systeminsights_bitlocker_info\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -751,8 +751,8 @@ module JCAPIv2
     # @option opts [Integer] :limit  (default to 10)
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<SystemInsightsBrowserPlugins>]
-    def g_et_systeminsights_browser_plugins(accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_systeminsights_browser_plugins_with_http_info(accept, content_type, opts)
+    def get_systeminsights_browser_plugins(accept, content_type, opts = {})
+      data, _status_code, _headers = get_systeminsights_browser_plugins_with_http_info(accept, content_type, opts)
       return data
     end
 
@@ -767,28 +767,28 @@ module JCAPIv2
     # @option opts [Integer] :limit 
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<SystemInsightsBrowserPlugins>, Fixnum, Hash)>] Array<SystemInsightsBrowserPlugins> data, response status code and response headers
-    def g_et_systeminsights_browser_plugins_with_http_info(accept, content_type, opts = {})
+    def get_systeminsights_browser_plugins_with_http_info(accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SystemInsightsApi.g_et_systeminsights_browser_plugins ..."
+        @api_client.config.logger.debug "Calling API: SystemInsightsApi.get_systeminsights_browser_plugins ..."
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.g_et_systeminsights_browser_plugins"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.get_systeminsights_browser_plugins"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.g_et_systeminsights_browser_plugins"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.get_systeminsights_browser_plugins"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.g_et_systeminsights_browser_plugins, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.get_systeminsights_browser_plugins, must be greater than or equal to 0.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] > 1000
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_browser_plugins, must be smaller than or equal to 1000.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_browser_plugins, must be smaller than or equal to 1000.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_browser_plugins, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_browser_plugins, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -825,7 +825,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<SystemInsightsBrowserPlugins>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SystemInsightsApi#g_et_systeminsights_browser_plugins\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SystemInsightsApi#get_systeminsights_browser_plugins\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -841,8 +841,8 @@ module JCAPIv2
     # @option opts [Integer] :limit  (default to 10)
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<SystemInsightsCertificates>]
-    def g_et_systeminsights_certificates(accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_systeminsights_certificates_with_http_info(accept, content_type, opts)
+    def get_systeminsights_certificates(accept, content_type, opts = {})
+      data, _status_code, _headers = get_systeminsights_certificates_with_http_info(accept, content_type, opts)
       return data
     end
 
@@ -857,28 +857,28 @@ module JCAPIv2
     # @option opts [Integer] :limit 
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<SystemInsightsCertificates>, Fixnum, Hash)>] Array<SystemInsightsCertificates> data, response status code and response headers
-    def g_et_systeminsights_certificates_with_http_info(accept, content_type, opts = {})
+    def get_systeminsights_certificates_with_http_info(accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SystemInsightsApi.g_et_systeminsights_certificates ..."
+        @api_client.config.logger.debug "Calling API: SystemInsightsApi.get_systeminsights_certificates ..."
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.g_et_systeminsights_certificates"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.get_systeminsights_certificates"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.g_et_systeminsights_certificates"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.get_systeminsights_certificates"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.g_et_systeminsights_certificates, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.get_systeminsights_certificates, must be greater than or equal to 0.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] > 1000
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_certificates, must be smaller than or equal to 1000.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_certificates, must be smaller than or equal to 1000.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_certificates, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_certificates, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -915,7 +915,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<SystemInsightsCertificates>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SystemInsightsApi#g_et_systeminsights_certificates\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SystemInsightsApi#get_systeminsights_certificates\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -931,8 +931,8 @@ module JCAPIv2
     # @option opts [Integer] :limit  (default to 10)
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<SystemInsightsChromeExtensions>]
-    def g_et_systeminsights_chrome_extensions(accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_systeminsights_chrome_extensions_with_http_info(accept, content_type, opts)
+    def get_systeminsights_chrome_extensions(accept, content_type, opts = {})
+      data, _status_code, _headers = get_systeminsights_chrome_extensions_with_http_info(accept, content_type, opts)
       return data
     end
 
@@ -947,28 +947,28 @@ module JCAPIv2
     # @option opts [Integer] :limit 
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<SystemInsightsChromeExtensions>, Fixnum, Hash)>] Array<SystemInsightsChromeExtensions> data, response status code and response headers
-    def g_et_systeminsights_chrome_extensions_with_http_info(accept, content_type, opts = {})
+    def get_systeminsights_chrome_extensions_with_http_info(accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SystemInsightsApi.g_et_systeminsights_chrome_extensions ..."
+        @api_client.config.logger.debug "Calling API: SystemInsightsApi.get_systeminsights_chrome_extensions ..."
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.g_et_systeminsights_chrome_extensions"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.get_systeminsights_chrome_extensions"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.g_et_systeminsights_chrome_extensions"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.get_systeminsights_chrome_extensions"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.g_et_systeminsights_chrome_extensions, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.get_systeminsights_chrome_extensions, must be greater than or equal to 0.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] > 1000
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_chrome_extensions, must be smaller than or equal to 1000.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_chrome_extensions, must be smaller than or equal to 1000.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_chrome_extensions, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_chrome_extensions, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -1005,7 +1005,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<SystemInsightsChromeExtensions>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SystemInsightsApi#g_et_systeminsights_chrome_extensions\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SystemInsightsApi#get_systeminsights_chrome_extensions\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1021,8 +1021,8 @@ module JCAPIv2
     # @option opts [Integer] :limit  (default to 10)
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<SystemInsightsConnectivity>]
-    def g_et_systeminsights_connectivity(accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_systeminsights_connectivity_with_http_info(accept, content_type, opts)
+    def get_systeminsights_connectivity(accept, content_type, opts = {})
+      data, _status_code, _headers = get_systeminsights_connectivity_with_http_info(accept, content_type, opts)
       return data
     end
 
@@ -1037,28 +1037,28 @@ module JCAPIv2
     # @option opts [Integer] :limit 
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<SystemInsightsConnectivity>, Fixnum, Hash)>] Array<SystemInsightsConnectivity> data, response status code and response headers
-    def g_et_systeminsights_connectivity_with_http_info(accept, content_type, opts = {})
+    def get_systeminsights_connectivity_with_http_info(accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SystemInsightsApi.g_et_systeminsights_connectivity ..."
+        @api_client.config.logger.debug "Calling API: SystemInsightsApi.get_systeminsights_connectivity ..."
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.g_et_systeminsights_connectivity"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.get_systeminsights_connectivity"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.g_et_systeminsights_connectivity"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.get_systeminsights_connectivity"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.g_et_systeminsights_connectivity, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.get_systeminsights_connectivity, must be greater than or equal to 0.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] > 1000
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_connectivity, must be smaller than or equal to 1000.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_connectivity, must be smaller than or equal to 1000.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_connectivity, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_connectivity, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -1095,7 +1095,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<SystemInsightsConnectivity>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SystemInsightsApi#g_et_systeminsights_connectivity\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SystemInsightsApi#get_systeminsights_connectivity\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1111,8 +1111,8 @@ module JCAPIv2
     # @option opts [Integer] :limit  (default to 10)
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<SystemInsightsCrashes>]
-    def g_et_systeminsights_crashes(accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_systeminsights_crashes_with_http_info(accept, content_type, opts)
+    def get_systeminsights_crashes(accept, content_type, opts = {})
+      data, _status_code, _headers = get_systeminsights_crashes_with_http_info(accept, content_type, opts)
       return data
     end
 
@@ -1127,28 +1127,28 @@ module JCAPIv2
     # @option opts [Integer] :limit 
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<SystemInsightsCrashes>, Fixnum, Hash)>] Array<SystemInsightsCrashes> data, response status code and response headers
-    def g_et_systeminsights_crashes_with_http_info(accept, content_type, opts = {})
+    def get_systeminsights_crashes_with_http_info(accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SystemInsightsApi.g_et_systeminsights_crashes ..."
+        @api_client.config.logger.debug "Calling API: SystemInsightsApi.get_systeminsights_crashes ..."
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.g_et_systeminsights_crashes"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.get_systeminsights_crashes"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.g_et_systeminsights_crashes"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.get_systeminsights_crashes"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.g_et_systeminsights_crashes, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.get_systeminsights_crashes, must be greater than or equal to 0.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] > 1000
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_crashes, must be smaller than or equal to 1000.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_crashes, must be smaller than or equal to 1000.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_crashes, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_crashes, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -1185,7 +1185,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<SystemInsightsCrashes>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SystemInsightsApi#g_et_systeminsights_crashes\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SystemInsightsApi#get_systeminsights_crashes\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1201,8 +1201,8 @@ module JCAPIv2
     # @option opts [Integer] :limit  (default to 10)
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<SystemInsightsCupsDestinations>]
-    def g_et_systeminsights_cups_destinations(accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_systeminsights_cups_destinations_with_http_info(accept, content_type, opts)
+    def get_systeminsights_cups_destinations(accept, content_type, opts = {})
+      data, _status_code, _headers = get_systeminsights_cups_destinations_with_http_info(accept, content_type, opts)
       return data
     end
 
@@ -1217,28 +1217,28 @@ module JCAPIv2
     # @option opts [Integer] :limit 
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<SystemInsightsCupsDestinations>, Fixnum, Hash)>] Array<SystemInsightsCupsDestinations> data, response status code and response headers
-    def g_et_systeminsights_cups_destinations_with_http_info(accept, content_type, opts = {})
+    def get_systeminsights_cups_destinations_with_http_info(accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SystemInsightsApi.g_et_systeminsights_cups_destinations ..."
+        @api_client.config.logger.debug "Calling API: SystemInsightsApi.get_systeminsights_cups_destinations ..."
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.g_et_systeminsights_cups_destinations"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.get_systeminsights_cups_destinations"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.g_et_systeminsights_cups_destinations"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.get_systeminsights_cups_destinations"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.g_et_systeminsights_cups_destinations, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.get_systeminsights_cups_destinations, must be greater than or equal to 0.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] > 1000
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_cups_destinations, must be smaller than or equal to 1000.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_cups_destinations, must be smaller than or equal to 1000.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_cups_destinations, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_cups_destinations, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -1275,7 +1275,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<SystemInsightsCupsDestinations>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SystemInsightsApi#g_et_systeminsights_cups_destinations\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SystemInsightsApi#get_systeminsights_cups_destinations\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1291,8 +1291,8 @@ module JCAPIv2
     # @option opts [Integer] :limit  (default to 10)
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<SystemInsightsDiskEncryption>]
-    def g_et_systeminsights_disk_encryption(accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_systeminsights_disk_encryption_with_http_info(accept, content_type, opts)
+    def get_systeminsights_disk_encryption(accept, content_type, opts = {})
+      data, _status_code, _headers = get_systeminsights_disk_encryption_with_http_info(accept, content_type, opts)
       return data
     end
 
@@ -1307,28 +1307,28 @@ module JCAPIv2
     # @option opts [Integer] :limit 
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<SystemInsightsDiskEncryption>, Fixnum, Hash)>] Array<SystemInsightsDiskEncryption> data, response status code and response headers
-    def g_et_systeminsights_disk_encryption_with_http_info(accept, content_type, opts = {})
+    def get_systeminsights_disk_encryption_with_http_info(accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SystemInsightsApi.g_et_systeminsights_disk_encryption ..."
+        @api_client.config.logger.debug "Calling API: SystemInsightsApi.get_systeminsights_disk_encryption ..."
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.g_et_systeminsights_disk_encryption"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.get_systeminsights_disk_encryption"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.g_et_systeminsights_disk_encryption"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.get_systeminsights_disk_encryption"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.g_et_systeminsights_disk_encryption, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.get_systeminsights_disk_encryption, must be greater than or equal to 0.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] > 1000
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_disk_encryption, must be smaller than or equal to 1000.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_disk_encryption, must be smaller than or equal to 1000.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_disk_encryption, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_disk_encryption, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -1365,7 +1365,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<SystemInsightsDiskEncryption>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SystemInsightsApi#g_et_systeminsights_disk_encryption\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SystemInsightsApi#get_systeminsights_disk_encryption\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1381,8 +1381,8 @@ module JCAPIv2
     # @option opts [Integer] :limit  (default to 10)
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<SystemInsightsDiskInfo>]
-    def g_et_systeminsights_disk_info(accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_systeminsights_disk_info_with_http_info(accept, content_type, opts)
+    def get_systeminsights_disk_info(accept, content_type, opts = {})
+      data, _status_code, _headers = get_systeminsights_disk_info_with_http_info(accept, content_type, opts)
       return data
     end
 
@@ -1397,28 +1397,28 @@ module JCAPIv2
     # @option opts [Integer] :limit 
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<SystemInsightsDiskInfo>, Fixnum, Hash)>] Array<SystemInsightsDiskInfo> data, response status code and response headers
-    def g_et_systeminsights_disk_info_with_http_info(accept, content_type, opts = {})
+    def get_systeminsights_disk_info_with_http_info(accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SystemInsightsApi.g_et_systeminsights_disk_info ..."
+        @api_client.config.logger.debug "Calling API: SystemInsightsApi.get_systeminsights_disk_info ..."
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.g_et_systeminsights_disk_info"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.get_systeminsights_disk_info"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.g_et_systeminsights_disk_info"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.get_systeminsights_disk_info"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.g_et_systeminsights_disk_info, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.get_systeminsights_disk_info, must be greater than or equal to 0.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] > 1000
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_disk_info, must be smaller than or equal to 1000.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_disk_info, must be smaller than or equal to 1000.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_disk_info, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_disk_info, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -1455,7 +1455,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<SystemInsightsDiskInfo>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SystemInsightsApi#g_et_systeminsights_disk_info\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SystemInsightsApi#get_systeminsights_disk_info\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1471,8 +1471,8 @@ module JCAPIv2
     # @option opts [Integer] :limit  (default to 10)
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<SystemInsightsDnsResolvers>]
-    def g_et_systeminsights_dns_resolvers(accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_systeminsights_dns_resolvers_with_http_info(accept, content_type, opts)
+    def get_systeminsights_dns_resolvers(accept, content_type, opts = {})
+      data, _status_code, _headers = get_systeminsights_dns_resolvers_with_http_info(accept, content_type, opts)
       return data
     end
 
@@ -1487,28 +1487,28 @@ module JCAPIv2
     # @option opts [Integer] :limit 
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<SystemInsightsDnsResolvers>, Fixnum, Hash)>] Array<SystemInsightsDnsResolvers> data, response status code and response headers
-    def g_et_systeminsights_dns_resolvers_with_http_info(accept, content_type, opts = {})
+    def get_systeminsights_dns_resolvers_with_http_info(accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SystemInsightsApi.g_et_systeminsights_dns_resolvers ..."
+        @api_client.config.logger.debug "Calling API: SystemInsightsApi.get_systeminsights_dns_resolvers ..."
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.g_et_systeminsights_dns_resolvers"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.get_systeminsights_dns_resolvers"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.g_et_systeminsights_dns_resolvers"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.get_systeminsights_dns_resolvers"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.g_et_systeminsights_dns_resolvers, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.get_systeminsights_dns_resolvers, must be greater than or equal to 0.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] > 1000
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_dns_resolvers, must be smaller than or equal to 1000.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_dns_resolvers, must be smaller than or equal to 1000.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_dns_resolvers, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_dns_resolvers, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -1545,7 +1545,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<SystemInsightsDnsResolvers>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SystemInsightsApi#g_et_systeminsights_dns_resolvers\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SystemInsightsApi#get_systeminsights_dns_resolvers\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1561,8 +1561,8 @@ module JCAPIv2
     # @option opts [Integer] :limit  (default to 10)
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<SystemInsightsEtcHosts>]
-    def g_et_systeminsights_etc_hosts(accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_systeminsights_etc_hosts_with_http_info(accept, content_type, opts)
+    def get_systeminsights_etc_hosts(accept, content_type, opts = {})
+      data, _status_code, _headers = get_systeminsights_etc_hosts_with_http_info(accept, content_type, opts)
       return data
     end
 
@@ -1577,28 +1577,28 @@ module JCAPIv2
     # @option opts [Integer] :limit 
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<SystemInsightsEtcHosts>, Fixnum, Hash)>] Array<SystemInsightsEtcHosts> data, response status code and response headers
-    def g_et_systeminsights_etc_hosts_with_http_info(accept, content_type, opts = {})
+    def get_systeminsights_etc_hosts_with_http_info(accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SystemInsightsApi.g_et_systeminsights_etc_hosts ..."
+        @api_client.config.logger.debug "Calling API: SystemInsightsApi.get_systeminsights_etc_hosts ..."
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.g_et_systeminsights_etc_hosts"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.get_systeminsights_etc_hosts"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.g_et_systeminsights_etc_hosts"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.get_systeminsights_etc_hosts"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.g_et_systeminsights_etc_hosts, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.get_systeminsights_etc_hosts, must be greater than or equal to 0.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] > 1000
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_etc_hosts, must be smaller than or equal to 1000.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_etc_hosts, must be smaller than or equal to 1000.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_etc_hosts, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_etc_hosts, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -1635,7 +1635,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<SystemInsightsEtcHosts>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SystemInsightsApi#g_et_systeminsights_etc_hosts\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SystemInsightsApi#get_systeminsights_etc_hosts\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1651,8 +1651,8 @@ module JCAPIv2
     # @option opts [Integer] :limit  (default to 10)
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<SystemInsightsFirefoxAddons>]
-    def g_et_systeminsights_firefox_addons(accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_systeminsights_firefox_addons_with_http_info(accept, content_type, opts)
+    def get_systeminsights_firefox_addons(accept, content_type, opts = {})
+      data, _status_code, _headers = get_systeminsights_firefox_addons_with_http_info(accept, content_type, opts)
       return data
     end
 
@@ -1667,28 +1667,28 @@ module JCAPIv2
     # @option opts [Integer] :limit 
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<SystemInsightsFirefoxAddons>, Fixnum, Hash)>] Array<SystemInsightsFirefoxAddons> data, response status code and response headers
-    def g_et_systeminsights_firefox_addons_with_http_info(accept, content_type, opts = {})
+    def get_systeminsights_firefox_addons_with_http_info(accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SystemInsightsApi.g_et_systeminsights_firefox_addons ..."
+        @api_client.config.logger.debug "Calling API: SystemInsightsApi.get_systeminsights_firefox_addons ..."
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.g_et_systeminsights_firefox_addons"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.get_systeminsights_firefox_addons"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.g_et_systeminsights_firefox_addons"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.get_systeminsights_firefox_addons"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.g_et_systeminsights_firefox_addons, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.get_systeminsights_firefox_addons, must be greater than or equal to 0.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] > 1000
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_firefox_addons, must be smaller than or equal to 1000.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_firefox_addons, must be smaller than or equal to 1000.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_firefox_addons, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_firefox_addons, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -1725,7 +1725,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<SystemInsightsFirefoxAddons>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SystemInsightsApi#g_et_systeminsights_firefox_addons\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SystemInsightsApi#get_systeminsights_firefox_addons\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1741,8 +1741,8 @@ module JCAPIv2
     # @option opts [Integer] :limit  (default to 10)
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<SystemInsightsGroups>]
-    def g_et_systeminsights_groups(accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_systeminsights_groups_with_http_info(accept, content_type, opts)
+    def get_systeminsights_groups(accept, content_type, opts = {})
+      data, _status_code, _headers = get_systeminsights_groups_with_http_info(accept, content_type, opts)
       return data
     end
 
@@ -1757,28 +1757,28 @@ module JCAPIv2
     # @option opts [Integer] :limit 
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<SystemInsightsGroups>, Fixnum, Hash)>] Array<SystemInsightsGroups> data, response status code and response headers
-    def g_et_systeminsights_groups_with_http_info(accept, content_type, opts = {})
+    def get_systeminsights_groups_with_http_info(accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SystemInsightsApi.g_et_systeminsights_groups ..."
+        @api_client.config.logger.debug "Calling API: SystemInsightsApi.get_systeminsights_groups ..."
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.g_et_systeminsights_groups"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.get_systeminsights_groups"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.g_et_systeminsights_groups"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.get_systeminsights_groups"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.g_et_systeminsights_groups, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.get_systeminsights_groups, must be greater than or equal to 0.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] > 1000
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_groups, must be smaller than or equal to 1000.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_groups, must be smaller than or equal to 1000.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_groups, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_groups, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -1815,7 +1815,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<SystemInsightsGroups>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SystemInsightsApi#g_et_systeminsights_groups\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SystemInsightsApi#get_systeminsights_groups\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1831,8 +1831,8 @@ module JCAPIv2
     # @option opts [Integer] :limit  (default to 10)
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<SystemInsightsIeExtensions>]
-    def g_et_systeminsights_ie_extensions(accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_systeminsights_ie_extensions_with_http_info(accept, content_type, opts)
+    def get_systeminsights_ie_extensions(accept, content_type, opts = {})
+      data, _status_code, _headers = get_systeminsights_ie_extensions_with_http_info(accept, content_type, opts)
       return data
     end
 
@@ -1847,28 +1847,28 @@ module JCAPIv2
     # @option opts [Integer] :limit 
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<SystemInsightsIeExtensions>, Fixnum, Hash)>] Array<SystemInsightsIeExtensions> data, response status code and response headers
-    def g_et_systeminsights_ie_extensions_with_http_info(accept, content_type, opts = {})
+    def get_systeminsights_ie_extensions_with_http_info(accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SystemInsightsApi.g_et_systeminsights_ie_extensions ..."
+        @api_client.config.logger.debug "Calling API: SystemInsightsApi.get_systeminsights_ie_extensions ..."
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.g_et_systeminsights_ie_extensions"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.get_systeminsights_ie_extensions"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.g_et_systeminsights_ie_extensions"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.get_systeminsights_ie_extensions"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.g_et_systeminsights_ie_extensions, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.get_systeminsights_ie_extensions, must be greater than or equal to 0.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] > 1000
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_ie_extensions, must be smaller than or equal to 1000.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_ie_extensions, must be smaller than or equal to 1000.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_ie_extensions, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_ie_extensions, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -1905,7 +1905,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<SystemInsightsIeExtensions>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SystemInsightsApi#g_et_systeminsights_ie_extensions\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SystemInsightsApi#get_systeminsights_ie_extensions\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1921,8 +1921,8 @@ module JCAPIv2
     # @option opts [Integer] :limit  (default to 10)
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<SystemInsightsInterfaceAddresses>]
-    def g_et_systeminsights_interface_addresses(accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_systeminsights_interface_addresses_with_http_info(accept, content_type, opts)
+    def get_systeminsights_interface_addresses(accept, content_type, opts = {})
+      data, _status_code, _headers = get_systeminsights_interface_addresses_with_http_info(accept, content_type, opts)
       return data
     end
 
@@ -1937,28 +1937,28 @@ module JCAPIv2
     # @option opts [Integer] :limit 
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<SystemInsightsInterfaceAddresses>, Fixnum, Hash)>] Array<SystemInsightsInterfaceAddresses> data, response status code and response headers
-    def g_et_systeminsights_interface_addresses_with_http_info(accept, content_type, opts = {})
+    def get_systeminsights_interface_addresses_with_http_info(accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SystemInsightsApi.g_et_systeminsights_interface_addresses ..."
+        @api_client.config.logger.debug "Calling API: SystemInsightsApi.get_systeminsights_interface_addresses ..."
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.g_et_systeminsights_interface_addresses"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.get_systeminsights_interface_addresses"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.g_et_systeminsights_interface_addresses"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.get_systeminsights_interface_addresses"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.g_et_systeminsights_interface_addresses, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.get_systeminsights_interface_addresses, must be greater than or equal to 0.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] > 1000
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_interface_addresses, must be smaller than or equal to 1000.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_interface_addresses, must be smaller than or equal to 1000.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_interface_addresses, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_interface_addresses, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -1995,7 +1995,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<SystemInsightsInterfaceAddresses>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SystemInsightsApi#g_et_systeminsights_interface_addresses\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SystemInsightsApi#get_systeminsights_interface_addresses\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -2011,8 +2011,8 @@ module JCAPIv2
     # @option opts [Integer] :limit  (default to 10)
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<SystemInsightsInterfaceDetails>]
-    def g_et_systeminsights_interface_details(accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_systeminsights_interface_details_with_http_info(accept, content_type, opts)
+    def get_systeminsights_interface_details(accept, content_type, opts = {})
+      data, _status_code, _headers = get_systeminsights_interface_details_with_http_info(accept, content_type, opts)
       return data
     end
 
@@ -2027,28 +2027,28 @@ module JCAPIv2
     # @option opts [Integer] :limit 
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<SystemInsightsInterfaceDetails>, Fixnum, Hash)>] Array<SystemInsightsInterfaceDetails> data, response status code and response headers
-    def g_et_systeminsights_interface_details_with_http_info(accept, content_type, opts = {})
+    def get_systeminsights_interface_details_with_http_info(accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SystemInsightsApi.g_et_systeminsights_interface_details ..."
+        @api_client.config.logger.debug "Calling API: SystemInsightsApi.get_systeminsights_interface_details ..."
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.g_et_systeminsights_interface_details"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.get_systeminsights_interface_details"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.g_et_systeminsights_interface_details"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.get_systeminsights_interface_details"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.g_et_systeminsights_interface_details, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.get_systeminsights_interface_details, must be greater than or equal to 0.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] > 1000
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_interface_details, must be smaller than or equal to 1000.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_interface_details, must be smaller than or equal to 1000.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_interface_details, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_interface_details, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -2085,7 +2085,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<SystemInsightsInterfaceDetails>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SystemInsightsApi#g_et_systeminsights_interface_details\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SystemInsightsApi#get_systeminsights_interface_details\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -2101,8 +2101,8 @@ module JCAPIv2
     # @option opts [Integer] :limit  (default to 10)
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<SystemInsightsKernelInfo>]
-    def g_et_systeminsights_kernel_info(accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_systeminsights_kernel_info_with_http_info(accept, content_type, opts)
+    def get_systeminsights_kernel_info(accept, content_type, opts = {})
+      data, _status_code, _headers = get_systeminsights_kernel_info_with_http_info(accept, content_type, opts)
       return data
     end
 
@@ -2117,28 +2117,28 @@ module JCAPIv2
     # @option opts [Integer] :limit 
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<SystemInsightsKernelInfo>, Fixnum, Hash)>] Array<SystemInsightsKernelInfo> data, response status code and response headers
-    def g_et_systeminsights_kernel_info_with_http_info(accept, content_type, opts = {})
+    def get_systeminsights_kernel_info_with_http_info(accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SystemInsightsApi.g_et_systeminsights_kernel_info ..."
+        @api_client.config.logger.debug "Calling API: SystemInsightsApi.get_systeminsights_kernel_info ..."
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.g_et_systeminsights_kernel_info"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.get_systeminsights_kernel_info"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.g_et_systeminsights_kernel_info"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.get_systeminsights_kernel_info"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.g_et_systeminsights_kernel_info, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.get_systeminsights_kernel_info, must be greater than or equal to 0.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] > 1000
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_kernel_info, must be smaller than or equal to 1000.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_kernel_info, must be smaller than or equal to 1000.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_kernel_info, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_kernel_info, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -2175,7 +2175,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<SystemInsightsKernelInfo>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SystemInsightsApi#g_et_systeminsights_kernel_info\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SystemInsightsApi#get_systeminsights_kernel_info\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -2191,8 +2191,8 @@ module JCAPIv2
     # @option opts [Integer] :limit  (default to 10)
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<SystemInsightsLaunchd>]
-    def g_et_systeminsights_launchd(accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_systeminsights_launchd_with_http_info(accept, content_type, opts)
+    def get_systeminsights_launchd(accept, content_type, opts = {})
+      data, _status_code, _headers = get_systeminsights_launchd_with_http_info(accept, content_type, opts)
       return data
     end
 
@@ -2207,28 +2207,28 @@ module JCAPIv2
     # @option opts [Integer] :limit 
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<SystemInsightsLaunchd>, Fixnum, Hash)>] Array<SystemInsightsLaunchd> data, response status code and response headers
-    def g_et_systeminsights_launchd_with_http_info(accept, content_type, opts = {})
+    def get_systeminsights_launchd_with_http_info(accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SystemInsightsApi.g_et_systeminsights_launchd ..."
+        @api_client.config.logger.debug "Calling API: SystemInsightsApi.get_systeminsights_launchd ..."
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.g_et_systeminsights_launchd"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.get_systeminsights_launchd"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.g_et_systeminsights_launchd"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.get_systeminsights_launchd"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.g_et_systeminsights_launchd, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.get_systeminsights_launchd, must be greater than or equal to 0.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] > 1000
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_launchd, must be smaller than or equal to 1000.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_launchd, must be smaller than or equal to 1000.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_launchd, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_launchd, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -2265,7 +2265,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<SystemInsightsLaunchd>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SystemInsightsApi#g_et_systeminsights_launchd\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SystemInsightsApi#get_systeminsights_launchd\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -2281,8 +2281,8 @@ module JCAPIv2
     # @option opts [Integer] :limit  (default to 10)
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<SystemInsightsLoggedInUsers>]
-    def g_et_systeminsights_logged_in_users(accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_systeminsights_logged_in_users_with_http_info(accept, content_type, opts)
+    def get_systeminsights_logged_in_users(accept, content_type, opts = {})
+      data, _status_code, _headers = get_systeminsights_logged_in_users_with_http_info(accept, content_type, opts)
       return data
     end
 
@@ -2297,28 +2297,28 @@ module JCAPIv2
     # @option opts [Integer] :limit 
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<SystemInsightsLoggedInUsers>, Fixnum, Hash)>] Array<SystemInsightsLoggedInUsers> data, response status code and response headers
-    def g_et_systeminsights_logged_in_users_with_http_info(accept, content_type, opts = {})
+    def get_systeminsights_logged_in_users_with_http_info(accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SystemInsightsApi.g_et_systeminsights_logged_in_users ..."
+        @api_client.config.logger.debug "Calling API: SystemInsightsApi.get_systeminsights_logged_in_users ..."
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.g_et_systeminsights_logged_in_users"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.get_systeminsights_logged_in_users"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.g_et_systeminsights_logged_in_users"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.get_systeminsights_logged_in_users"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.g_et_systeminsights_logged_in_users, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.get_systeminsights_logged_in_users, must be greater than or equal to 0.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] > 1000
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_logged_in_users, must be smaller than or equal to 1000.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_logged_in_users, must be smaller than or equal to 1000.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_logged_in_users, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_logged_in_users, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -2355,7 +2355,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<SystemInsightsLoggedInUsers>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SystemInsightsApi#g_et_systeminsights_logged_in_users\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SystemInsightsApi#get_systeminsights_logged_in_users\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -2371,8 +2371,8 @@ module JCAPIv2
     # @option opts [Integer] :limit  (default to 10)
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<SystemInsightsLogicalDrives>]
-    def g_et_systeminsights_logical_drives(accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_systeminsights_logical_drives_with_http_info(accept, content_type, opts)
+    def get_systeminsights_logical_drives(accept, content_type, opts = {})
+      data, _status_code, _headers = get_systeminsights_logical_drives_with_http_info(accept, content_type, opts)
       return data
     end
 
@@ -2387,28 +2387,28 @@ module JCAPIv2
     # @option opts [Integer] :limit 
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<SystemInsightsLogicalDrives>, Fixnum, Hash)>] Array<SystemInsightsLogicalDrives> data, response status code and response headers
-    def g_et_systeminsights_logical_drives_with_http_info(accept, content_type, opts = {})
+    def get_systeminsights_logical_drives_with_http_info(accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SystemInsightsApi.g_et_systeminsights_logical_drives ..."
+        @api_client.config.logger.debug "Calling API: SystemInsightsApi.get_systeminsights_logical_drives ..."
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.g_et_systeminsights_logical_drives"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.get_systeminsights_logical_drives"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.g_et_systeminsights_logical_drives"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.get_systeminsights_logical_drives"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.g_et_systeminsights_logical_drives, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.get_systeminsights_logical_drives, must be greater than or equal to 0.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] > 1000
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_logical_drives, must be smaller than or equal to 1000.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_logical_drives, must be smaller than or equal to 1000.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_logical_drives, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_logical_drives, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -2445,7 +2445,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<SystemInsightsLogicalDrives>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SystemInsightsApi#g_et_systeminsights_logical_drives\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SystemInsightsApi#get_systeminsights_logical_drives\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -2461,8 +2461,8 @@ module JCAPIv2
     # @option opts [Integer] :limit  (default to 10)
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<SystemInsightsManagedPolicies>]
-    def g_et_systeminsights_managed_policies(accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_systeminsights_managed_policies_with_http_info(accept, content_type, opts)
+    def get_systeminsights_managed_policies(accept, content_type, opts = {})
+      data, _status_code, _headers = get_systeminsights_managed_policies_with_http_info(accept, content_type, opts)
       return data
     end
 
@@ -2477,28 +2477,28 @@ module JCAPIv2
     # @option opts [Integer] :limit 
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<SystemInsightsManagedPolicies>, Fixnum, Hash)>] Array<SystemInsightsManagedPolicies> data, response status code and response headers
-    def g_et_systeminsights_managed_policies_with_http_info(accept, content_type, opts = {})
+    def get_systeminsights_managed_policies_with_http_info(accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SystemInsightsApi.g_et_systeminsights_managed_policies ..."
+        @api_client.config.logger.debug "Calling API: SystemInsightsApi.get_systeminsights_managed_policies ..."
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.g_et_systeminsights_managed_policies"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.get_systeminsights_managed_policies"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.g_et_systeminsights_managed_policies"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.get_systeminsights_managed_policies"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.g_et_systeminsights_managed_policies, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.get_systeminsights_managed_policies, must be greater than or equal to 0.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] > 1000
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_managed_policies, must be smaller than or equal to 1000.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_managed_policies, must be smaller than or equal to 1000.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_managed_policies, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_managed_policies, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -2535,7 +2535,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<SystemInsightsManagedPolicies>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SystemInsightsApi#g_et_systeminsights_managed_policies\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SystemInsightsApi#get_systeminsights_managed_policies\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -2551,8 +2551,8 @@ module JCAPIv2
     # @option opts [Integer] :limit  (default to 10)
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<SystemInsightsMounts>]
-    def g_et_systeminsights_mounts(accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_systeminsights_mounts_with_http_info(accept, content_type, opts)
+    def get_systeminsights_mounts(accept, content_type, opts = {})
+      data, _status_code, _headers = get_systeminsights_mounts_with_http_info(accept, content_type, opts)
       return data
     end
 
@@ -2567,28 +2567,28 @@ module JCAPIv2
     # @option opts [Integer] :limit 
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<SystemInsightsMounts>, Fixnum, Hash)>] Array<SystemInsightsMounts> data, response status code and response headers
-    def g_et_systeminsights_mounts_with_http_info(accept, content_type, opts = {})
+    def get_systeminsights_mounts_with_http_info(accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SystemInsightsApi.g_et_systeminsights_mounts ..."
+        @api_client.config.logger.debug "Calling API: SystemInsightsApi.get_systeminsights_mounts ..."
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.g_et_systeminsights_mounts"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.get_systeminsights_mounts"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.g_et_systeminsights_mounts"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.get_systeminsights_mounts"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.g_et_systeminsights_mounts, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.get_systeminsights_mounts, must be greater than or equal to 0.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] > 1000
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_mounts, must be smaller than or equal to 1000.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_mounts, must be smaller than or equal to 1000.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_mounts, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_mounts, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -2625,7 +2625,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<SystemInsightsMounts>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SystemInsightsApi#g_et_systeminsights_mounts\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SystemInsightsApi#get_systeminsights_mounts\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -2641,8 +2641,8 @@ module JCAPIv2
     # @option opts [Integer] :limit  (default to 10)
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<SystemInsightsOsVersion>]
-    def g_et_systeminsights_os_version(accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_systeminsights_os_version_with_http_info(accept, content_type, opts)
+    def get_systeminsights_os_version(accept, content_type, opts = {})
+      data, _status_code, _headers = get_systeminsights_os_version_with_http_info(accept, content_type, opts)
       return data
     end
 
@@ -2657,28 +2657,28 @@ module JCAPIv2
     # @option opts [Integer] :limit 
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<SystemInsightsOsVersion>, Fixnum, Hash)>] Array<SystemInsightsOsVersion> data, response status code and response headers
-    def g_et_systeminsights_os_version_with_http_info(accept, content_type, opts = {})
+    def get_systeminsights_os_version_with_http_info(accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SystemInsightsApi.g_et_systeminsights_os_version ..."
+        @api_client.config.logger.debug "Calling API: SystemInsightsApi.get_systeminsights_os_version ..."
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.g_et_systeminsights_os_version"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.get_systeminsights_os_version"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.g_et_systeminsights_os_version"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.get_systeminsights_os_version"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.g_et_systeminsights_os_version, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.get_systeminsights_os_version, must be greater than or equal to 0.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] > 1000
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_os_version, must be smaller than or equal to 1000.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_os_version, must be smaller than or equal to 1000.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_os_version, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_os_version, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -2715,7 +2715,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<SystemInsightsOsVersion>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SystemInsightsApi#g_et_systeminsights_os_version\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SystemInsightsApi#get_systeminsights_os_version\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -2731,8 +2731,8 @@ module JCAPIv2
     # @option opts [Integer] :limit  (default to 10)
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<SystemInsightsPatches>]
-    def g_et_systeminsights_patches(accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_systeminsights_patches_with_http_info(accept, content_type, opts)
+    def get_systeminsights_patches(accept, content_type, opts = {})
+      data, _status_code, _headers = get_systeminsights_patches_with_http_info(accept, content_type, opts)
       return data
     end
 
@@ -2747,28 +2747,28 @@ module JCAPIv2
     # @option opts [Integer] :limit 
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<SystemInsightsPatches>, Fixnum, Hash)>] Array<SystemInsightsPatches> data, response status code and response headers
-    def g_et_systeminsights_patches_with_http_info(accept, content_type, opts = {})
+    def get_systeminsights_patches_with_http_info(accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SystemInsightsApi.g_et_systeminsights_patches ..."
+        @api_client.config.logger.debug "Calling API: SystemInsightsApi.get_systeminsights_patches ..."
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.g_et_systeminsights_patches"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.get_systeminsights_patches"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.g_et_systeminsights_patches"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.get_systeminsights_patches"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.g_et_systeminsights_patches, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.get_systeminsights_patches, must be greater than or equal to 0.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] > 1000
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_patches, must be smaller than or equal to 1000.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_patches, must be smaller than or equal to 1000.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_patches, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_patches, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -2805,7 +2805,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<SystemInsightsPatches>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SystemInsightsApi#g_et_systeminsights_patches\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SystemInsightsApi#get_systeminsights_patches\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -2821,8 +2821,8 @@ module JCAPIv2
     # @option opts [Integer] :limit  (default to 10)
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<SystemInsightsPrograms>]
-    def g_et_systeminsights_programs(accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_systeminsights_programs_with_http_info(accept, content_type, opts)
+    def get_systeminsights_programs(accept, content_type, opts = {})
+      data, _status_code, _headers = get_systeminsights_programs_with_http_info(accept, content_type, opts)
       return data
     end
 
@@ -2837,28 +2837,28 @@ module JCAPIv2
     # @option opts [Integer] :limit 
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<SystemInsightsPrograms>, Fixnum, Hash)>] Array<SystemInsightsPrograms> data, response status code and response headers
-    def g_et_systeminsights_programs_with_http_info(accept, content_type, opts = {})
+    def get_systeminsights_programs_with_http_info(accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SystemInsightsApi.g_et_systeminsights_programs ..."
+        @api_client.config.logger.debug "Calling API: SystemInsightsApi.get_systeminsights_programs ..."
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.g_et_systeminsights_programs"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.get_systeminsights_programs"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.g_et_systeminsights_programs"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.get_systeminsights_programs"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.g_et_systeminsights_programs, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.get_systeminsights_programs, must be greater than or equal to 0.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] > 1000
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_programs, must be smaller than or equal to 1000.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_programs, must be smaller than or equal to 1000.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_programs, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_programs, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -2895,7 +2895,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<SystemInsightsPrograms>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SystemInsightsApi#g_et_systeminsights_programs\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SystemInsightsApi#get_systeminsights_programs\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -2911,8 +2911,8 @@ module JCAPIv2
     # @option opts [Integer] :limit  (default to 10)
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<SystemInsightsPythonPackages>]
-    def g_et_systeminsights_python_packages(accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_systeminsights_python_packages_with_http_info(accept, content_type, opts)
+    def get_systeminsights_python_packages(accept, content_type, opts = {})
+      data, _status_code, _headers = get_systeminsights_python_packages_with_http_info(accept, content_type, opts)
       return data
     end
 
@@ -2927,28 +2927,28 @@ module JCAPIv2
     # @option opts [Integer] :limit 
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<SystemInsightsPythonPackages>, Fixnum, Hash)>] Array<SystemInsightsPythonPackages> data, response status code and response headers
-    def g_et_systeminsights_python_packages_with_http_info(accept, content_type, opts = {})
+    def get_systeminsights_python_packages_with_http_info(accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SystemInsightsApi.g_et_systeminsights_python_packages ..."
+        @api_client.config.logger.debug "Calling API: SystemInsightsApi.get_systeminsights_python_packages ..."
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.g_et_systeminsights_python_packages"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.get_systeminsights_python_packages"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.g_et_systeminsights_python_packages"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.get_systeminsights_python_packages"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.g_et_systeminsights_python_packages, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.get_systeminsights_python_packages, must be greater than or equal to 0.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] > 1000
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_python_packages, must be smaller than or equal to 1000.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_python_packages, must be smaller than or equal to 1000.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_python_packages, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_python_packages, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -2985,7 +2985,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<SystemInsightsPythonPackages>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SystemInsightsApi#g_et_systeminsights_python_packages\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SystemInsightsApi#get_systeminsights_python_packages\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -3001,8 +3001,8 @@ module JCAPIv2
     # @option opts [Integer] :limit  (default to 10)
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<SystemInsightsSafariExtensions>]
-    def g_et_systeminsights_safari_extensions(accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_systeminsights_safari_extensions_with_http_info(accept, content_type, opts)
+    def get_systeminsights_safari_extensions(accept, content_type, opts = {})
+      data, _status_code, _headers = get_systeminsights_safari_extensions_with_http_info(accept, content_type, opts)
       return data
     end
 
@@ -3017,28 +3017,28 @@ module JCAPIv2
     # @option opts [Integer] :limit 
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<SystemInsightsSafariExtensions>, Fixnum, Hash)>] Array<SystemInsightsSafariExtensions> data, response status code and response headers
-    def g_et_systeminsights_safari_extensions_with_http_info(accept, content_type, opts = {})
+    def get_systeminsights_safari_extensions_with_http_info(accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SystemInsightsApi.g_et_systeminsights_safari_extensions ..."
+        @api_client.config.logger.debug "Calling API: SystemInsightsApi.get_systeminsights_safari_extensions ..."
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.g_et_systeminsights_safari_extensions"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.get_systeminsights_safari_extensions"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.g_et_systeminsights_safari_extensions"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.get_systeminsights_safari_extensions"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.g_et_systeminsights_safari_extensions, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.get_systeminsights_safari_extensions, must be greater than or equal to 0.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] > 1000
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_safari_extensions, must be smaller than or equal to 1000.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_safari_extensions, must be smaller than or equal to 1000.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_safari_extensions, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_safari_extensions, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -3075,7 +3075,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<SystemInsightsSafariExtensions>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SystemInsightsApi#g_et_systeminsights_safari_extensions\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SystemInsightsApi#get_systeminsights_safari_extensions\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -3091,8 +3091,8 @@ module JCAPIv2
     # @option opts [Integer] :limit  (default to 10)
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<SystemInsightsScheduledTasks>]
-    def g_et_systeminsights_scheduled_tasks(accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_systeminsights_scheduled_tasks_with_http_info(accept, content_type, opts)
+    def get_systeminsights_scheduled_tasks(accept, content_type, opts = {})
+      data, _status_code, _headers = get_systeminsights_scheduled_tasks_with_http_info(accept, content_type, opts)
       return data
     end
 
@@ -3107,28 +3107,28 @@ module JCAPIv2
     # @option opts [Integer] :limit 
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<SystemInsightsScheduledTasks>, Fixnum, Hash)>] Array<SystemInsightsScheduledTasks> data, response status code and response headers
-    def g_et_systeminsights_scheduled_tasks_with_http_info(accept, content_type, opts = {})
+    def get_systeminsights_scheduled_tasks_with_http_info(accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SystemInsightsApi.g_et_systeminsights_scheduled_tasks ..."
+        @api_client.config.logger.debug "Calling API: SystemInsightsApi.get_systeminsights_scheduled_tasks ..."
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.g_et_systeminsights_scheduled_tasks"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.get_systeminsights_scheduled_tasks"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.g_et_systeminsights_scheduled_tasks"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.get_systeminsights_scheduled_tasks"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.g_et_systeminsights_scheduled_tasks, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.get_systeminsights_scheduled_tasks, must be greater than or equal to 0.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] > 1000
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_scheduled_tasks, must be smaller than or equal to 1000.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_scheduled_tasks, must be smaller than or equal to 1000.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_scheduled_tasks, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_scheduled_tasks, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -3165,7 +3165,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<SystemInsightsScheduledTasks>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SystemInsightsApi#g_et_systeminsights_scheduled_tasks\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SystemInsightsApi#get_systeminsights_scheduled_tasks\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -3181,8 +3181,8 @@ module JCAPIv2
     # @option opts [Integer] :limit  (default to 10)
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<SystemInsightsServices>]
-    def g_et_systeminsights_services(accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_systeminsights_services_with_http_info(accept, content_type, opts)
+    def get_systeminsights_services(accept, content_type, opts = {})
+      data, _status_code, _headers = get_systeminsights_services_with_http_info(accept, content_type, opts)
       return data
     end
 
@@ -3197,28 +3197,28 @@ module JCAPIv2
     # @option opts [Integer] :limit 
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<SystemInsightsServices>, Fixnum, Hash)>] Array<SystemInsightsServices> data, response status code and response headers
-    def g_et_systeminsights_services_with_http_info(accept, content_type, opts = {})
+    def get_systeminsights_services_with_http_info(accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SystemInsightsApi.g_et_systeminsights_services ..."
+        @api_client.config.logger.debug "Calling API: SystemInsightsApi.get_systeminsights_services ..."
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.g_et_systeminsights_services"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.get_systeminsights_services"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.g_et_systeminsights_services"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.get_systeminsights_services"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.g_et_systeminsights_services, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.get_systeminsights_services, must be greater than or equal to 0.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] > 1000
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_services, must be smaller than or equal to 1000.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_services, must be smaller than or equal to 1000.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_services, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_services, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -3255,7 +3255,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<SystemInsightsServices>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SystemInsightsApi#g_et_systeminsights_services\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SystemInsightsApi#get_systeminsights_services\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -3271,8 +3271,8 @@ module JCAPIv2
     # @option opts [Integer] :limit  (default to 10)
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<SystemInsightsShadow>]
-    def g_et_systeminsights_shadow(accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_systeminsights_shadow_with_http_info(accept, content_type, opts)
+    def get_systeminsights_shadow(accept, content_type, opts = {})
+      data, _status_code, _headers = get_systeminsights_shadow_with_http_info(accept, content_type, opts)
       return data
     end
 
@@ -3287,28 +3287,28 @@ module JCAPIv2
     # @option opts [Integer] :limit 
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<SystemInsightsShadow>, Fixnum, Hash)>] Array<SystemInsightsShadow> data, response status code and response headers
-    def g_et_systeminsights_shadow_with_http_info(accept, content_type, opts = {})
+    def get_systeminsights_shadow_with_http_info(accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SystemInsightsApi.g_et_systeminsights_shadow ..."
+        @api_client.config.logger.debug "Calling API: SystemInsightsApi.get_systeminsights_shadow ..."
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.g_et_systeminsights_shadow"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.get_systeminsights_shadow"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.g_et_systeminsights_shadow"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.get_systeminsights_shadow"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.g_et_systeminsights_shadow, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.get_systeminsights_shadow, must be greater than or equal to 0.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] > 1000
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_shadow, must be smaller than or equal to 1000.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_shadow, must be smaller than or equal to 1000.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_shadow, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_shadow, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -3345,7 +3345,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<SystemInsightsShadow>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SystemInsightsApi#g_et_systeminsights_shadow\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SystemInsightsApi#get_systeminsights_shadow\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -3361,8 +3361,8 @@ module JCAPIv2
     # @option opts [Integer] :limit  (default to 10)
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<SystemInsightsSharedFolders>]
-    def g_et_systeminsights_shared_folders(accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_systeminsights_shared_folders_with_http_info(accept, content_type, opts)
+    def get_systeminsights_shared_folders(accept, content_type, opts = {})
+      data, _status_code, _headers = get_systeminsights_shared_folders_with_http_info(accept, content_type, opts)
       return data
     end
 
@@ -3377,28 +3377,28 @@ module JCAPIv2
     # @option opts [Integer] :limit 
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<SystemInsightsSharedFolders>, Fixnum, Hash)>] Array<SystemInsightsSharedFolders> data, response status code and response headers
-    def g_et_systeminsights_shared_folders_with_http_info(accept, content_type, opts = {})
+    def get_systeminsights_shared_folders_with_http_info(accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SystemInsightsApi.g_et_systeminsights_shared_folders ..."
+        @api_client.config.logger.debug "Calling API: SystemInsightsApi.get_systeminsights_shared_folders ..."
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.g_et_systeminsights_shared_folders"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.get_systeminsights_shared_folders"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.g_et_systeminsights_shared_folders"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.get_systeminsights_shared_folders"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.g_et_systeminsights_shared_folders, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.get_systeminsights_shared_folders, must be greater than or equal to 0.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] > 1000
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_shared_folders, must be smaller than or equal to 1000.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_shared_folders, must be smaller than or equal to 1000.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_shared_folders, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_shared_folders, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -3435,7 +3435,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<SystemInsightsSharedFolders>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SystemInsightsApi#g_et_systeminsights_shared_folders\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SystemInsightsApi#get_systeminsights_shared_folders\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -3451,8 +3451,8 @@ module JCAPIv2
     # @option opts [Integer] :limit  (default to 10)
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<SystemInsightsSharedResources>]
-    def g_et_systeminsights_shared_resources(accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_systeminsights_shared_resources_with_http_info(accept, content_type, opts)
+    def get_systeminsights_shared_resources(accept, content_type, opts = {})
+      data, _status_code, _headers = get_systeminsights_shared_resources_with_http_info(accept, content_type, opts)
       return data
     end
 
@@ -3467,28 +3467,28 @@ module JCAPIv2
     # @option opts [Integer] :limit 
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<SystemInsightsSharedResources>, Fixnum, Hash)>] Array<SystemInsightsSharedResources> data, response status code and response headers
-    def g_et_systeminsights_shared_resources_with_http_info(accept, content_type, opts = {})
+    def get_systeminsights_shared_resources_with_http_info(accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SystemInsightsApi.g_et_systeminsights_shared_resources ..."
+        @api_client.config.logger.debug "Calling API: SystemInsightsApi.get_systeminsights_shared_resources ..."
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.g_et_systeminsights_shared_resources"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.get_systeminsights_shared_resources"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.g_et_systeminsights_shared_resources"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.get_systeminsights_shared_resources"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.g_et_systeminsights_shared_resources, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.get_systeminsights_shared_resources, must be greater than or equal to 0.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] > 1000
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_shared_resources, must be smaller than or equal to 1000.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_shared_resources, must be smaller than or equal to 1000.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_shared_resources, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_shared_resources, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -3525,7 +3525,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<SystemInsightsSharedResources>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SystemInsightsApi#g_et_systeminsights_shared_resources\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SystemInsightsApi#get_systeminsights_shared_resources\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -3541,8 +3541,8 @@ module JCAPIv2
     # @option opts [Integer] :limit  (default to 10)
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<SystemInsightsSharingPreferences>]
-    def g_et_systeminsights_sharing_preferences(accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_systeminsights_sharing_preferences_with_http_info(accept, content_type, opts)
+    def get_systeminsights_sharing_preferences(accept, content_type, opts = {})
+      data, _status_code, _headers = get_systeminsights_sharing_preferences_with_http_info(accept, content_type, opts)
       return data
     end
 
@@ -3557,28 +3557,28 @@ module JCAPIv2
     # @option opts [Integer] :limit 
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<SystemInsightsSharingPreferences>, Fixnum, Hash)>] Array<SystemInsightsSharingPreferences> data, response status code and response headers
-    def g_et_systeminsights_sharing_preferences_with_http_info(accept, content_type, opts = {})
+    def get_systeminsights_sharing_preferences_with_http_info(accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SystemInsightsApi.g_et_systeminsights_sharing_preferences ..."
+        @api_client.config.logger.debug "Calling API: SystemInsightsApi.get_systeminsights_sharing_preferences ..."
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.g_et_systeminsights_sharing_preferences"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.get_systeminsights_sharing_preferences"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.g_et_systeminsights_sharing_preferences"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.get_systeminsights_sharing_preferences"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.g_et_systeminsights_sharing_preferences, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.get_systeminsights_sharing_preferences, must be greater than or equal to 0.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] > 1000
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_sharing_preferences, must be smaller than or equal to 1000.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_sharing_preferences, must be smaller than or equal to 1000.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_sharing_preferences, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_sharing_preferences, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -3615,7 +3615,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<SystemInsightsSharingPreferences>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SystemInsightsApi#g_et_systeminsights_sharing_preferences\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SystemInsightsApi#get_systeminsights_sharing_preferences\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -3631,8 +3631,8 @@ module JCAPIv2
     # @option opts [Integer] :limit  (default to 10)
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<SystemInsightsSipConfig>]
-    def g_et_systeminsights_sip_config(accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_systeminsights_sip_config_with_http_info(accept, content_type, opts)
+    def get_systeminsights_sip_config(accept, content_type, opts = {})
+      data, _status_code, _headers = get_systeminsights_sip_config_with_http_info(accept, content_type, opts)
       return data
     end
 
@@ -3647,28 +3647,28 @@ module JCAPIv2
     # @option opts [Integer] :limit 
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<SystemInsightsSipConfig>, Fixnum, Hash)>] Array<SystemInsightsSipConfig> data, response status code and response headers
-    def g_et_systeminsights_sip_config_with_http_info(accept, content_type, opts = {})
+    def get_systeminsights_sip_config_with_http_info(accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SystemInsightsApi.g_et_systeminsights_sip_config ..."
+        @api_client.config.logger.debug "Calling API: SystemInsightsApi.get_systeminsights_sip_config ..."
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.g_et_systeminsights_sip_config"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.get_systeminsights_sip_config"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.g_et_systeminsights_sip_config"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.get_systeminsights_sip_config"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.g_et_systeminsights_sip_config, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.get_systeminsights_sip_config, must be greater than or equal to 0.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] > 1000
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_sip_config, must be smaller than or equal to 1000.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_sip_config, must be smaller than or equal to 1000.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_sip_config, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_sip_config, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -3705,7 +3705,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<SystemInsightsSipConfig>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SystemInsightsApi#g_et_systeminsights_sip_config\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SystemInsightsApi#get_systeminsights_sip_config\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -3721,8 +3721,8 @@ module JCAPIv2
     # @option opts [Integer] :limit  (default to 10)
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<SystemInsightsStartupItems>]
-    def g_et_systeminsights_startup_items(accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_systeminsights_startup_items_with_http_info(accept, content_type, opts)
+    def get_systeminsights_startup_items(accept, content_type, opts = {})
+      data, _status_code, _headers = get_systeminsights_startup_items_with_http_info(accept, content_type, opts)
       return data
     end
 
@@ -3737,28 +3737,28 @@ module JCAPIv2
     # @option opts [Integer] :limit 
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<SystemInsightsStartupItems>, Fixnum, Hash)>] Array<SystemInsightsStartupItems> data, response status code and response headers
-    def g_et_systeminsights_startup_items_with_http_info(accept, content_type, opts = {})
+    def get_systeminsights_startup_items_with_http_info(accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SystemInsightsApi.g_et_systeminsights_startup_items ..."
+        @api_client.config.logger.debug "Calling API: SystemInsightsApi.get_systeminsights_startup_items ..."
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.g_et_systeminsights_startup_items"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.get_systeminsights_startup_items"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.g_et_systeminsights_startup_items"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.get_systeminsights_startup_items"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.g_et_systeminsights_startup_items, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.get_systeminsights_startup_items, must be greater than or equal to 0.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] > 1000
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_startup_items, must be smaller than or equal to 1000.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_startup_items, must be smaller than or equal to 1000.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_startup_items, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_startup_items, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -3795,7 +3795,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<SystemInsightsStartupItems>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SystemInsightsApi#g_et_systeminsights_startup_items\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SystemInsightsApi#get_systeminsights_startup_items\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -3811,8 +3811,8 @@ module JCAPIv2
     # @option opts [Integer] :limit  (default to 10)
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<SystemInsightsSystemControls>]
-    def g_et_systeminsights_system_controls(accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_systeminsights_system_controls_with_http_info(accept, content_type, opts)
+    def get_systeminsights_system_controls(accept, content_type, opts = {})
+      data, _status_code, _headers = get_systeminsights_system_controls_with_http_info(accept, content_type, opts)
       return data
     end
 
@@ -3827,28 +3827,28 @@ module JCAPIv2
     # @option opts [Integer] :limit 
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<SystemInsightsSystemControls>, Fixnum, Hash)>] Array<SystemInsightsSystemControls> data, response status code and response headers
-    def g_et_systeminsights_system_controls_with_http_info(accept, content_type, opts = {})
+    def get_systeminsights_system_controls_with_http_info(accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SystemInsightsApi.g_et_systeminsights_system_controls ..."
+        @api_client.config.logger.debug "Calling API: SystemInsightsApi.get_systeminsights_system_controls ..."
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.g_et_systeminsights_system_controls"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.get_systeminsights_system_controls"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.g_et_systeminsights_system_controls"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.get_systeminsights_system_controls"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.g_et_systeminsights_system_controls, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.get_systeminsights_system_controls, must be greater than or equal to 0.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] > 1000
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_system_controls, must be smaller than or equal to 1000.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_system_controls, must be smaller than or equal to 1000.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_system_controls, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_system_controls, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -3885,7 +3885,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<SystemInsightsSystemControls>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SystemInsightsApi#g_et_systeminsights_system_controls\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SystemInsightsApi#get_systeminsights_system_controls\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -3901,8 +3901,8 @@ module JCAPIv2
     # @option opts [Integer] :limit  (default to 10)
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<SystemInsightsSystemInfo>]
-    def g_et_systeminsights_system_info(accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_systeminsights_system_info_with_http_info(accept, content_type, opts)
+    def get_systeminsights_system_info(accept, content_type, opts = {})
+      data, _status_code, _headers = get_systeminsights_system_info_with_http_info(accept, content_type, opts)
       return data
     end
 
@@ -3917,28 +3917,28 @@ module JCAPIv2
     # @option opts [Integer] :limit 
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<SystemInsightsSystemInfo>, Fixnum, Hash)>] Array<SystemInsightsSystemInfo> data, response status code and response headers
-    def g_et_systeminsights_system_info_with_http_info(accept, content_type, opts = {})
+    def get_systeminsights_system_info_with_http_info(accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SystemInsightsApi.g_et_systeminsights_system_info ..."
+        @api_client.config.logger.debug "Calling API: SystemInsightsApi.get_systeminsights_system_info ..."
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.g_et_systeminsights_system_info"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.get_systeminsights_system_info"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.g_et_systeminsights_system_info"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.get_systeminsights_system_info"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.g_et_systeminsights_system_info, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.get_systeminsights_system_info, must be greater than or equal to 0.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] > 1000
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_system_info, must be smaller than or equal to 1000.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_system_info, must be smaller than or equal to 1000.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_system_info, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_system_info, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -3975,7 +3975,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<SystemInsightsSystemInfo>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SystemInsightsApi#g_et_systeminsights_system_info\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SystemInsightsApi#get_systeminsights_system_info\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -3991,8 +3991,8 @@ module JCAPIv2
     # @option opts [Integer] :limit  (default to 10)
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<SystemInsightsUptime>]
-    def g_et_systeminsights_uptime(accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_systeminsights_uptime_with_http_info(accept, content_type, opts)
+    def get_systeminsights_uptime(accept, content_type, opts = {})
+      data, _status_code, _headers = get_systeminsights_uptime_with_http_info(accept, content_type, opts)
       return data
     end
 
@@ -4007,28 +4007,28 @@ module JCAPIv2
     # @option opts [Integer] :limit 
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<SystemInsightsUptime>, Fixnum, Hash)>] Array<SystemInsightsUptime> data, response status code and response headers
-    def g_et_systeminsights_uptime_with_http_info(accept, content_type, opts = {})
+    def get_systeminsights_uptime_with_http_info(accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SystemInsightsApi.g_et_systeminsights_uptime ..."
+        @api_client.config.logger.debug "Calling API: SystemInsightsApi.get_systeminsights_uptime ..."
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.g_et_systeminsights_uptime"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.get_systeminsights_uptime"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.g_et_systeminsights_uptime"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.get_systeminsights_uptime"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.g_et_systeminsights_uptime, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.get_systeminsights_uptime, must be greater than or equal to 0.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] > 1000
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_uptime, must be smaller than or equal to 1000.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_uptime, must be smaller than or equal to 1000.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_uptime, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_uptime, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -4065,7 +4065,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<SystemInsightsUptime>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SystemInsightsApi#g_et_systeminsights_uptime\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SystemInsightsApi#get_systeminsights_uptime\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -4081,8 +4081,8 @@ module JCAPIv2
     # @option opts [Integer] :limit  (default to 10)
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<SystemInsightsUsbDevices>]
-    def g_et_systeminsights_usb_devices(accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_systeminsights_usb_devices_with_http_info(accept, content_type, opts)
+    def get_systeminsights_usb_devices(accept, content_type, opts = {})
+      data, _status_code, _headers = get_systeminsights_usb_devices_with_http_info(accept, content_type, opts)
       return data
     end
 
@@ -4097,28 +4097,28 @@ module JCAPIv2
     # @option opts [Integer] :limit 
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<SystemInsightsUsbDevices>, Fixnum, Hash)>] Array<SystemInsightsUsbDevices> data, response status code and response headers
-    def g_et_systeminsights_usb_devices_with_http_info(accept, content_type, opts = {})
+    def get_systeminsights_usb_devices_with_http_info(accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SystemInsightsApi.g_et_systeminsights_usb_devices ..."
+        @api_client.config.logger.debug "Calling API: SystemInsightsApi.get_systeminsights_usb_devices ..."
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.g_et_systeminsights_usb_devices"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.get_systeminsights_usb_devices"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.g_et_systeminsights_usb_devices"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.get_systeminsights_usb_devices"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.g_et_systeminsights_usb_devices, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.get_systeminsights_usb_devices, must be greater than or equal to 0.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] > 1000
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_usb_devices, must be smaller than or equal to 1000.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_usb_devices, must be smaller than or equal to 1000.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_usb_devices, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_usb_devices, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -4155,7 +4155,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<SystemInsightsUsbDevices>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SystemInsightsApi#g_et_systeminsights_usb_devices\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SystemInsightsApi#get_systeminsights_usb_devices\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -4171,8 +4171,8 @@ module JCAPIv2
     # @option opts [Integer] :limit  (default to 10)
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<SystemInsightsUserGroups>]
-    def g_et_systeminsights_user_groups(accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_systeminsights_user_groups_with_http_info(accept, content_type, opts)
+    def get_systeminsights_user_groups(accept, content_type, opts = {})
+      data, _status_code, _headers = get_systeminsights_user_groups_with_http_info(accept, content_type, opts)
       return data
     end
 
@@ -4187,28 +4187,28 @@ module JCAPIv2
     # @option opts [Integer] :limit 
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<SystemInsightsUserGroups>, Fixnum, Hash)>] Array<SystemInsightsUserGroups> data, response status code and response headers
-    def g_et_systeminsights_user_groups_with_http_info(accept, content_type, opts = {})
+    def get_systeminsights_user_groups_with_http_info(accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SystemInsightsApi.g_et_systeminsights_user_groups ..."
+        @api_client.config.logger.debug "Calling API: SystemInsightsApi.get_systeminsights_user_groups ..."
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.g_et_systeminsights_user_groups"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.get_systeminsights_user_groups"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.g_et_systeminsights_user_groups"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.get_systeminsights_user_groups"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.g_et_systeminsights_user_groups, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.get_systeminsights_user_groups, must be greater than or equal to 0.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] > 1000
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_user_groups, must be smaller than or equal to 1000.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_user_groups, must be smaller than or equal to 1000.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_user_groups, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_user_groups, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -4245,7 +4245,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<SystemInsightsUserGroups>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SystemInsightsApi#g_et_systeminsights_user_groups\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SystemInsightsApi#get_systeminsights_user_groups\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -4261,8 +4261,8 @@ module JCAPIv2
     # @option opts [Integer] :limit  (default to 10)
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<SystemInsightsUserSshKeys>]
-    def g_et_systeminsights_user_ssh_keys(accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_systeminsights_user_ssh_keys_with_http_info(accept, content_type, opts)
+    def get_systeminsights_user_ssh_keys(accept, content_type, opts = {})
+      data, _status_code, _headers = get_systeminsights_user_ssh_keys_with_http_info(accept, content_type, opts)
       return data
     end
 
@@ -4277,28 +4277,28 @@ module JCAPIv2
     # @option opts [Integer] :limit 
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<SystemInsightsUserSshKeys>, Fixnum, Hash)>] Array<SystemInsightsUserSshKeys> data, response status code and response headers
-    def g_et_systeminsights_user_ssh_keys_with_http_info(accept, content_type, opts = {})
+    def get_systeminsights_user_ssh_keys_with_http_info(accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SystemInsightsApi.g_et_systeminsights_user_ssh_keys ..."
+        @api_client.config.logger.debug "Calling API: SystemInsightsApi.get_systeminsights_user_ssh_keys ..."
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.g_et_systeminsights_user_ssh_keys"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.get_systeminsights_user_ssh_keys"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.g_et_systeminsights_user_ssh_keys"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.get_systeminsights_user_ssh_keys"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.g_et_systeminsights_user_ssh_keys, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.get_systeminsights_user_ssh_keys, must be greater than or equal to 0.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] > 1000
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_user_ssh_keys, must be smaller than or equal to 1000.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_user_ssh_keys, must be smaller than or equal to 1000.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_user_ssh_keys, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_user_ssh_keys, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -4335,7 +4335,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<SystemInsightsUserSshKeys>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SystemInsightsApi#g_et_systeminsights_user_ssh_keys\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SystemInsightsApi#get_systeminsights_user_ssh_keys\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -4351,8 +4351,8 @@ module JCAPIv2
     # @option opts [Integer] :limit  (default to 10)
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<SystemInsightsUsers>]
-    def g_et_systeminsights_users(accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_systeminsights_users_with_http_info(accept, content_type, opts)
+    def get_systeminsights_users(accept, content_type, opts = {})
+      data, _status_code, _headers = get_systeminsights_users_with_http_info(accept, content_type, opts)
       return data
     end
 
@@ -4367,28 +4367,28 @@ module JCAPIv2
     # @option opts [Integer] :limit 
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<SystemInsightsUsers>, Fixnum, Hash)>] Array<SystemInsightsUsers> data, response status code and response headers
-    def g_et_systeminsights_users_with_http_info(accept, content_type, opts = {})
+    def get_systeminsights_users_with_http_info(accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SystemInsightsApi.g_et_systeminsights_users ..."
+        @api_client.config.logger.debug "Calling API: SystemInsightsApi.get_systeminsights_users ..."
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.g_et_systeminsights_users"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.get_systeminsights_users"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.g_et_systeminsights_users"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.get_systeminsights_users"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.g_et_systeminsights_users, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.get_systeminsights_users, must be greater than or equal to 0.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] > 1000
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_users, must be smaller than or equal to 1000.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_users, must be smaller than or equal to 1000.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_users, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_users, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -4425,7 +4425,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<SystemInsightsUsers>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SystemInsightsApi#g_et_systeminsights_users\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SystemInsightsApi#get_systeminsights_users\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -4441,8 +4441,8 @@ module JCAPIv2
     # @option opts [Integer] :limit  (default to 10)
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<SystemInsightsWifiNetworks>]
-    def g_et_systeminsights_wifi_networks(accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_systeminsights_wifi_networks_with_http_info(accept, content_type, opts)
+    def get_systeminsights_wifi_networks(accept, content_type, opts = {})
+      data, _status_code, _headers = get_systeminsights_wifi_networks_with_http_info(accept, content_type, opts)
       return data
     end
 
@@ -4457,28 +4457,28 @@ module JCAPIv2
     # @option opts [Integer] :limit 
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<SystemInsightsWifiNetworks>, Fixnum, Hash)>] Array<SystemInsightsWifiNetworks> data, response status code and response headers
-    def g_et_systeminsights_wifi_networks_with_http_info(accept, content_type, opts = {})
+    def get_systeminsights_wifi_networks_with_http_info(accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SystemInsightsApi.g_et_systeminsights_wifi_networks ..."
+        @api_client.config.logger.debug "Calling API: SystemInsightsApi.get_systeminsights_wifi_networks ..."
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.g_et_systeminsights_wifi_networks"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.get_systeminsights_wifi_networks"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.g_et_systeminsights_wifi_networks"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.get_systeminsights_wifi_networks"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.g_et_systeminsights_wifi_networks, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.get_systeminsights_wifi_networks, must be greater than or equal to 0.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] > 1000
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_wifi_networks, must be smaller than or equal to 1000.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_wifi_networks, must be smaller than or equal to 1000.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_wifi_networks, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_wifi_networks, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -4515,7 +4515,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<SystemInsightsWifiNetworks>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SystemInsightsApi#g_et_systeminsights_wifi_networks\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SystemInsightsApi#get_systeminsights_wifi_networks\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -4531,8 +4531,8 @@ module JCAPIv2
     # @option opts [Integer] :limit  (default to 10)
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<SystemInsightsWifiStatus>]
-    def g_et_systeminsights_wifi_status(accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_systeminsights_wifi_status_with_http_info(accept, content_type, opts)
+    def get_systeminsights_wifi_status(accept, content_type, opts = {})
+      data, _status_code, _headers = get_systeminsights_wifi_status_with_http_info(accept, content_type, opts)
       return data
     end
 
@@ -4547,28 +4547,28 @@ module JCAPIv2
     # @option opts [Integer] :limit 
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<SystemInsightsWifiStatus>, Fixnum, Hash)>] Array<SystemInsightsWifiStatus> data, response status code and response headers
-    def g_et_systeminsights_wifi_status_with_http_info(accept, content_type, opts = {})
+    def get_systeminsights_wifi_status_with_http_info(accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SystemInsightsApi.g_et_systeminsights_wifi_status ..."
+        @api_client.config.logger.debug "Calling API: SystemInsightsApi.get_systeminsights_wifi_status ..."
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.g_et_systeminsights_wifi_status"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.get_systeminsights_wifi_status"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.g_et_systeminsights_wifi_status"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.get_systeminsights_wifi_status"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.g_et_systeminsights_wifi_status, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.get_systeminsights_wifi_status, must be greater than or equal to 0.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] > 1000
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_wifi_status, must be smaller than or equal to 1000.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_wifi_status, must be smaller than or equal to 1000.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_wifi_status, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_wifi_status, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -4605,7 +4605,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<SystemInsightsWifiStatus>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SystemInsightsApi#g_et_systeminsights_wifi_status\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SystemInsightsApi#get_systeminsights_wifi_status\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -4621,8 +4621,8 @@ module JCAPIv2
     # @option opts [Integer] :limit  (default to 10)
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<SystemInsightsWindowsSecurityProducts>]
-    def g_et_systeminsights_windows_security_products(accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_systeminsights_windows_security_products_with_http_info(accept, content_type, opts)
+    def get_systeminsights_windows_security_products(accept, content_type, opts = {})
+      data, _status_code, _headers = get_systeminsights_windows_security_products_with_http_info(accept, content_type, opts)
       return data
     end
 
@@ -4637,28 +4637,28 @@ module JCAPIv2
     # @option opts [Integer] :limit 
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<SystemInsightsWindowsSecurityProducts>, Fixnum, Hash)>] Array<SystemInsightsWindowsSecurityProducts> data, response status code and response headers
-    def g_et_systeminsights_windows_security_products_with_http_info(accept, content_type, opts = {})
+    def get_systeminsights_windows_security_products_with_http_info(accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SystemInsightsApi.g_et_systeminsights_windows_security_products ..."
+        @api_client.config.logger.debug "Calling API: SystemInsightsApi.get_systeminsights_windows_security_products ..."
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.g_et_systeminsights_windows_security_products"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemInsightsApi.get_systeminsights_windows_security_products"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.g_et_systeminsights_windows_security_products"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemInsightsApi.get_systeminsights_windows_security_products"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.g_et_systeminsights_windows_security_products, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemInsightsApi.get_systeminsights_windows_security_products, must be greater than or equal to 0.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] > 1000
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_windows_security_products, must be smaller than or equal to 1000.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_windows_security_products, must be smaller than or equal to 1000.'
       end
 
       if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.g_et_systeminsights_windows_security_products, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling SystemInsightsApi.get_systeminsights_windows_security_products, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -4695,7 +4695,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<SystemInsightsWindowsSecurityProducts>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SystemInsightsApi#g_et_systeminsights_windows_security_products\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SystemInsightsApi#get_systeminsights_windows_security_products\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

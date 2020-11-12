@@ -4,13 +4,13 @@ All URIs are relative to *https://console.jumpcloud.com/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**g_et_organizations**](OrganizationsApi.md#g_et_organizations) | **GET** /organizations | Get Organization Details
-[**g_et_organizations_id**](OrganizationsApi.md#g_et_organizations_id) | **GET** /organizations/{id} | Get an Organization
+[**get_organizations**](OrganizationsApi.md#get_organizations) | **GET** /organizations | Get Organization Details
+[**get_organizations_id**](OrganizationsApi.md#get_organizations_id) | **GET** /organizations/{id} | Get an Organization
 [**p_ut_organizations_id**](OrganizationsApi.md#p_ut_organizations_id) | **PUT** /organizations/{id} | Update an Organization
 
 
-# **g_et_organizations**
-> Organizationslist g_et_organizations(accept, content_type, opts)
+# **get_organizations**
+> Organizationslist get_organizations(accept, content_type, opts)
 
 Get Organization Details
 
@@ -45,10 +45,10 @@ opts = {
 
 begin
   #Get Organization Details
-  result = api_instance.g_et_organizations(accept, content_type, opts)
+  result = api_instance.get_organizations(accept, content_type, opts)
   p result
 rescue JCAPIv1::ApiError => e
-  puts "Exception when calling OrganizationsApi->g_et_organizations: #{e}"
+  puts "Exception when calling OrganizationsApi->get_organizations: #{e}"
 end
 ```
 
@@ -80,8 +80,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_organizations_id**
-> Organization g_et_organizations_id(id, accept, content_type, opts)
+# **get_organizations_id**
+> Organization get_organizations_id(id, accept, content_type, opts)
 
 Get an Organization
 
@@ -114,10 +114,10 @@ opts = {
 
 begin
   #Get an Organization
-  result = api_instance.g_et_organizations_id(id, accept, content_type, opts)
+  result = api_instance.get_organizations_id(id, accept, content_type, opts)
   p result
 rescue JCAPIv1::ApiError => e
-  puts "Exception when calling OrganizationsApi->g_et_organizations_id: #{e}"
+  puts "Exception when calling OrganizationsApi->get_organizations_id: #{e}"
 end
 ```
 

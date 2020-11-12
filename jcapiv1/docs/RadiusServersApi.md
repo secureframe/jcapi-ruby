@@ -5,8 +5,8 @@ All URIs are relative to *https://console.jumpcloud.com/api*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**d_elete_radiusservers_id**](RadiusServersApi.md#d_elete_radiusservers_id) | **DELETE** /radiusservers/{id} | Delete Radius Server
-[**g_et_radiusservers**](RadiusServersApi.md#g_et_radiusservers) | **GET** /radiusservers | List Radius Servers
-[**g_et_radiusservers_id**](RadiusServersApi.md#g_et_radiusservers_id) | **GET** /radiusservers/{id} | Get Radius Server
+[**get_radiusservers**](RadiusServersApi.md#get_radiusservers) | **GET** /radiusservers | List Radius Servers
+[**get_radiusservers_id**](RadiusServersApi.md#get_radiusservers_id) | **GET** /radiusservers/{id} | Get Radius Server
 [**p_ost_radiusservers**](RadiusServersApi.md#p_ost_radiusservers) | **POST** /radiusservers | Create a Radius Server
 [**p_ut_radiusservers_id**](RadiusServersApi.md#p_ut_radiusservers_id) | **PUT** /radiusservers/{id} | Update Radius Servers
 
@@ -75,8 +75,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_radiusservers**
-> Radiusserverslist g_et_radiusservers(accept, content_type, opts)
+# **get_radiusservers**
+> Radiusserverslist get_radiusservers(accept, content_type, opts)
 
 List Radius Servers
 
@@ -111,10 +111,10 @@ opts = {
 
 begin
   #List Radius Servers
-  result = api_instance.g_et_radiusservers(accept, content_type, opts)
+  result = api_instance.get_radiusservers(accept, content_type, opts)
   p result
 rescue JCAPIv1::ApiError => e
-  puts "Exception when calling RadiusServersApi->g_et_radiusservers: #{e}"
+  puts "Exception when calling RadiusServersApi->get_radiusservers: #{e}"
 end
 ```
 
@@ -146,8 +146,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_radiusservers_id**
-> Radiusserver g_et_radiusservers_id(id, accept, content_type, opts)
+# **get_radiusservers_id**
+> Radiusserver get_radiusservers_id(id, accept, content_type, opts)
 
 Get Radius Server
 
@@ -179,10 +179,10 @@ opts = {
 
 begin
   #Get Radius Server
-  result = api_instance.g_et_radiusservers_id(id, accept, content_type, opts)
+  result = api_instance.get_radiusservers_id(id, accept, content_type, opts)
   p result
 rescue JCAPIv1::ApiError => e
-  puts "Exception when calling RadiusServersApi->g_et_radiusservers_id: #{e}"
+  puts "Exception when calling RadiusServersApi->get_radiusservers_id: #{e}"
 end
 ```
 

@@ -5,8 +5,8 @@ All URIs are relative to *https://console.jumpcloud.com/api*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**d_elete_applications_id**](ApplicationsApi.md#d_elete_applications_id) | **DELETE** /applications/{id} | Delete an Application
-[**g_et_applications**](ApplicationsApi.md#g_et_applications) | **GET** /applications | Applications
-[**g_et_applications_id**](ApplicationsApi.md#g_et_applications_id) | **GET** /applications/{id} | Get an Application
+[**get_applications**](ApplicationsApi.md#get_applications) | **GET** /applications | Applications
+[**get_applications_id**](ApplicationsApi.md#get_applications_id) | **GET** /applications/{id} | Get an Application
 [**p_ost_applications**](ApplicationsApi.md#p_ost_applications) | **POST** /applications | Create an Application
 [**p_ut_applications_id**](ApplicationsApi.md#p_ut_applications_id) | **PUT** /applications/{id} | Update an Application
 
@@ -73,8 +73,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_applications**
-> Applicationslist g_et_applications(accept, content_type, opts)
+# **get_applications**
+> Applicationslist get_applications(accept, content_type, opts)
 
 Applications
 
@@ -109,10 +109,10 @@ opts = {
 
 begin
   #Applications
-  result = api_instance.g_et_applications(accept, content_type, opts)
+  result = api_instance.get_applications(accept, content_type, opts)
   p result
 rescue JCAPIv1::ApiError => e
-  puts "Exception when calling ApplicationsApi->g_et_applications: #{e}"
+  puts "Exception when calling ApplicationsApi->get_applications: #{e}"
 end
 ```
 
@@ -144,8 +144,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_applications_id**
-> Application g_et_applications_id(id, opts)
+# **get_applications_id**
+> Application get_applications_id(id, opts)
 
 Get an Application
 
@@ -175,10 +175,10 @@ opts = {
 
 begin
   #Get an Application
-  result = api_instance.g_et_applications_id(id, opts)
+  result = api_instance.get_applications_id(id, opts)
   p result
 rescue JCAPIv1::ApiError => e
-  puts "Exception when calling ApplicationsApi->g_et_applications_id: #{e}"
+  puts "Exception when calling ApplicationsApi->get_applications_id: #{e}"
 end
 ```
 

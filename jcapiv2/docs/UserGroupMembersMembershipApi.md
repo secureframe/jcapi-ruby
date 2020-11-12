@@ -4,13 +4,13 @@ All URIs are relative to *https://console.jumpcloud.com/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**g_et_usergroups_group_id_members**](UserGroupMembersMembershipApi.md#g_et_usergroups_group_id_members) | **GET** /usergroups/{group_id}/members | List the members of a User Group
-[**g_et_usergroups_group_id_membership**](UserGroupMembersMembershipApi.md#g_et_usergroups_group_id_membership) | **GET** /usergroups/{group_id}/membership | List the User Group&#39;s membership
+[**get_usergroups_group_id_members**](UserGroupMembersMembershipApi.md#get_usergroups_group_id_members) | **GET** /usergroups/{group_id}/members | List the members of a User Group
+[**get_usergroups_group_id_membership**](UserGroupMembersMembershipApi.md#get_usergroups_group_id_membership) | **GET** /usergroups/{group_id}/membership | List the User Group&#39;s membership
 [**p_ost_usergroups_group_id_members**](UserGroupMembersMembershipApi.md#p_ost_usergroups_group_id_members) | **POST** /usergroups/{group_id}/members | Manage the members of a User Group
 
 
-# **g_et_usergroups_group_id_members**
-> Array&lt;GraphConnection&gt; g_et_usergroups_group_id_members(group_id, accept, content_type, opts)
+# **get_usergroups_group_id_members**
+> Array&lt;GraphConnection&gt; get_usergroups_group_id_members(group_id, accept, content_type, opts)
 
 List the members of a User Group
 
@@ -44,10 +44,10 @@ opts = {
 
 begin
   #List the members of a User Group
-  result = api_instance.g_et_usergroups_group_id_members(group_id, accept, content_type, opts)
+  result = api_instance.get_usergroups_group_id_members(group_id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling UserGroupMembersMembershipApi->g_et_usergroups_group_id_members: #{e}"
+  puts "Exception when calling UserGroupMembersMembershipApi->get_usergroups_group_id_members: #{e}"
 end
 ```
 
@@ -77,8 +77,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_usergroups_group_id_membership**
-> Array&lt;GraphObjectWithPaths&gt; g_et_usergroups_group_id_membership(group_id, accept, content_type, opts)
+# **get_usergroups_group_id_membership**
+> Array&lt;GraphObjectWithPaths&gt; get_usergroups_group_id_membership(group_id, accept, content_type, opts)
 
 List the User Group's membership
 
@@ -114,10 +114,10 @@ opts = {
 
 begin
   #List the User Group's membership
-  result = api_instance.g_et_usergroups_group_id_membership(group_id, accept, content_type, opts)
+  result = api_instance.get_usergroups_group_id_membership(group_id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling UserGroupMembersMembershipApi->g_et_usergroups_group_id_membership: #{e}"
+  puts "Exception when calling UserGroupMembersMembershipApi->get_usergroups_group_id_membership: #{e}"
 end
 ```
 

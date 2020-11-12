@@ -4,17 +4,17 @@ All URIs are relative to *https://console.jumpcloud.com/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**g_et_ldapservers**](LDAPServersApi.md#g_et_ldapservers) | **GET** /ldapservers | List LDAP Servers
-[**g_et_ldapservers_id**](LDAPServersApi.md#g_et_ldapservers_id) | **GET** /ldapservers/{id} | Get LDAP Server
-[**g_et_ldapservers_ldapserver_id_associations**](LDAPServersApi.md#g_et_ldapservers_ldapserver_id_associations) | **GET** /ldapservers/{ldapserver_id}/associations | List the associations of a LDAP Server
-[**g_et_ldapservers_ldapserver_id_usergroups**](LDAPServersApi.md#g_et_ldapservers_ldapserver_id_usergroups) | **GET** /ldapservers/{ldapserver_id}/usergroups | List the User Groups bound to a LDAP Server
-[**g_et_ldapservers_ldapserver_id_users**](LDAPServersApi.md#g_et_ldapservers_ldapserver_id_users) | **GET** /ldapservers/{ldapserver_id}/users | List the Users bound to a LDAP Server
+[**get_ldapservers**](LDAPServersApi.md#get_ldapservers) | **GET** /ldapservers | List LDAP Servers
+[**get_ldapservers_id**](LDAPServersApi.md#get_ldapservers_id) | **GET** /ldapservers/{id} | Get LDAP Server
+[**get_ldapservers_ldapserver_id_associations**](LDAPServersApi.md#get_ldapservers_ldapserver_id_associations) | **GET** /ldapservers/{ldapserver_id}/associations | List the associations of a LDAP Server
+[**get_ldapservers_ldapserver_id_usergroups**](LDAPServersApi.md#get_ldapservers_ldapserver_id_usergroups) | **GET** /ldapservers/{ldapserver_id}/usergroups | List the User Groups bound to a LDAP Server
+[**get_ldapservers_ldapserver_id_users**](LDAPServersApi.md#get_ldapservers_ldapserver_id_users) | **GET** /ldapservers/{ldapserver_id}/users | List the Users bound to a LDAP Server
 [**p_atch_ldapservers_id**](LDAPServersApi.md#p_atch_ldapservers_id) | **PATCH** /ldapservers/{id} | Update existing LDAP server
 [**p_ost_ldapservers_ldapserver_id_associations**](LDAPServersApi.md#p_ost_ldapservers_ldapserver_id_associations) | **POST** /ldapservers/{ldapserver_id}/associations | Manage the associations of a LDAP Server
 
 
-# **g_et_ldapservers**
-> Array&lt;LdapServerOutput&gt; g_et_ldapservers(accept, content_type, opts)
+# **get_ldapservers**
+> Array&lt;LdapServerOutput&gt; get_ldapservers(accept, content_type, opts)
 
 List LDAP Servers
 
@@ -49,10 +49,10 @@ opts = {
 
 begin
   #List LDAP Servers
-  result = api_instance.g_et_ldapservers(accept, content_type, opts)
+  result = api_instance.get_ldapservers(accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling LDAPServersApi->g_et_ldapservers: #{e}"
+  puts "Exception when calling LDAPServersApi->get_ldapservers: #{e}"
 end
 ```
 
@@ -84,8 +84,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_ldapservers_id**
-> LdapServerOutput g_et_ldapservers_id(id, accept, content_type, opts)
+# **get_ldapservers_id**
+> LdapServerOutput get_ldapservers_id(id, accept, content_type, opts)
 
 Get LDAP Server
 
@@ -117,10 +117,10 @@ opts = {
 
 begin
   #Get LDAP Server
-  result = api_instance.g_et_ldapservers_id(id, accept, content_type, opts)
+  result = api_instance.get_ldapservers_id(id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling LDAPServersApi->g_et_ldapservers_id: #{e}"
+  puts "Exception when calling LDAPServersApi->get_ldapservers_id: #{e}"
 end
 ```
 
@@ -148,8 +148,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_ldapservers_ldapserver_id_associations**
-> Array&lt;GraphConnection&gt; g_et_ldapservers_ldapserver_id_associations(ldapserver_id, targets, accept, content_type, opts)
+# **get_ldapservers_ldapserver_id_associations**
+> Array&lt;GraphConnection&gt; get_ldapservers_ldapserver_id_associations(ldapserver_id, targets, accept, content_type, opts)
 
 List the associations of a LDAP Server
 
@@ -185,10 +185,10 @@ opts = {
 
 begin
   #List the associations of a LDAP Server
-  result = api_instance.g_et_ldapservers_ldapserver_id_associations(ldapserver_id, targets, accept, content_type, opts)
+  result = api_instance.get_ldapservers_ldapserver_id_associations(ldapserver_id, targets, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling LDAPServersApi->g_et_ldapservers_ldapserver_id_associations: #{e}"
+  puts "Exception when calling LDAPServersApi->get_ldapservers_ldapserver_id_associations: #{e}"
 end
 ```
 
@@ -219,8 +219,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_ldapservers_ldapserver_id_usergroups**
-> Array&lt;GraphObjectWithPaths&gt; g_et_ldapservers_ldapserver_id_usergroups(ldapserver_id, accept, content_type, opts)
+# **get_ldapservers_ldapserver_id_usergroups**
+> Array&lt;GraphObjectWithPaths&gt; get_ldapservers_ldapserver_id_usergroups(ldapserver_id, accept, content_type, opts)
 
 List the User Groups bound to a LDAP Server
 
@@ -255,10 +255,10 @@ opts = {
 
 begin
   #List the User Groups bound to a LDAP Server
-  result = api_instance.g_et_ldapservers_ldapserver_id_usergroups(ldapserver_id, accept, content_type, opts)
+  result = api_instance.get_ldapservers_ldapserver_id_usergroups(ldapserver_id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling LDAPServersApi->g_et_ldapservers_ldapserver_id_usergroups: #{e}"
+  puts "Exception when calling LDAPServersApi->get_ldapservers_ldapserver_id_usergroups: #{e}"
 end
 ```
 
@@ -289,8 +289,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_ldapservers_ldapserver_id_users**
-> Array&lt;GraphObjectWithPaths&gt; g_et_ldapservers_ldapserver_id_users(ldapserver_id, accept, content_type, opts)
+# **get_ldapservers_ldapserver_id_users**
+> Array&lt;GraphObjectWithPaths&gt; get_ldapservers_ldapserver_id_users(ldapserver_id, accept, content_type, opts)
 
 List the Users bound to a LDAP Server
 
@@ -325,10 +325,10 @@ opts = {
 
 begin
   #List the Users bound to a LDAP Server
-  result = api_instance.g_et_ldapservers_ldapserver_id_users(ldapserver_id, accept, content_type, opts)
+  result = api_instance.get_ldapservers_ldapserver_id_users(ldapserver_id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling LDAPServersApi->g_et_ldapservers_ldapserver_id_users: #{e}"
+  puts "Exception when calling LDAPServersApi->get_ldapservers_ldapserver_id_users: #{e}"
 end
 ```
 

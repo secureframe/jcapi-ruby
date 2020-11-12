@@ -30,8 +30,8 @@ module JCAPIv2
     # @option opts [Integer] :skip The offset into the records to return. (default to 0)
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<GraphConnection>]
-    def g_et_usergroups_group_id_members(group_id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_usergroups_group_id_members_with_http_info(group_id, accept, content_type, opts)
+    def get_usergroups_group_id_members(group_id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_usergroups_group_id_members_with_http_info(group_id, accept, content_type, opts)
       return data
     end
 
@@ -45,24 +45,24 @@ module JCAPIv2
     # @option opts [Integer] :skip The offset into the records to return.
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<GraphConnection>, Fixnum, Hash)>] Array<GraphConnection> data, response status code and response headers
-    def g_et_usergroups_group_id_members_with_http_info(group_id, accept, content_type, opts = {})
+    def get_usergroups_group_id_members_with_http_info(group_id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: UserGroupMembersMembershipApi.g_et_usergroups_group_id_members ..."
+        @api_client.config.logger.debug "Calling API: UserGroupMembersMembershipApi.get_usergroups_group_id_members ..."
       end
       # verify the required parameter 'group_id' is set
       if @api_client.config.client_side_validation && group_id.nil?
-        fail ArgumentError, "Missing the required parameter 'group_id' when calling UserGroupMembersMembershipApi.g_et_usergroups_group_id_members"
+        fail ArgumentError, "Missing the required parameter 'group_id' when calling UserGroupMembersMembershipApi.get_usergroups_group_id_members"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling UserGroupMembersMembershipApi.g_et_usergroups_group_id_members"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling UserGroupMembersMembershipApi.get_usergroups_group_id_members"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling UserGroupMembersMembershipApi.g_et_usergroups_group_id_members"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling UserGroupMembersMembershipApi.get_usergroups_group_id_members"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling UserGroupMembersMembershipApi.g_et_usergroups_group_id_members, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling UserGroupMembersMembershipApi.get_usergroups_group_id_members, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -97,7 +97,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<GraphConnection>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: UserGroupMembersMembershipApi#g_et_usergroups_group_id_members\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: UserGroupMembersMembershipApi#get_usergroups_group_id_members\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -114,8 +114,8 @@ module JCAPIv2
     # @option opts [Array<String>] :sort The comma separated fields used to sort the collection. Default sort is ascending, prefix with &#x60;-&#x60; to sort descending. 
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<GraphObjectWithPaths>]
-    def g_et_usergroups_group_id_membership(group_id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_usergroups_group_id_membership_with_http_info(group_id, accept, content_type, opts)
+    def get_usergroups_group_id_membership(group_id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_usergroups_group_id_membership_with_http_info(group_id, accept, content_type, opts)
       return data
     end
 
@@ -131,24 +131,24 @@ module JCAPIv2
     # @option opts [Array<String>] :sort The comma separated fields used to sort the collection. Default sort is ascending, prefix with &#x60;-&#x60; to sort descending. 
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<GraphObjectWithPaths>, Fixnum, Hash)>] Array<GraphObjectWithPaths> data, response status code and response headers
-    def g_et_usergroups_group_id_membership_with_http_info(group_id, accept, content_type, opts = {})
+    def get_usergroups_group_id_membership_with_http_info(group_id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: UserGroupMembersMembershipApi.g_et_usergroups_group_id_membership ..."
+        @api_client.config.logger.debug "Calling API: UserGroupMembersMembershipApi.get_usergroups_group_id_membership ..."
       end
       # verify the required parameter 'group_id' is set
       if @api_client.config.client_side_validation && group_id.nil?
-        fail ArgumentError, "Missing the required parameter 'group_id' when calling UserGroupMembersMembershipApi.g_et_usergroups_group_id_membership"
+        fail ArgumentError, "Missing the required parameter 'group_id' when calling UserGroupMembersMembershipApi.get_usergroups_group_id_membership"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling UserGroupMembersMembershipApi.g_et_usergroups_group_id_membership"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling UserGroupMembersMembershipApi.get_usergroups_group_id_membership"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling UserGroupMembersMembershipApi.g_et_usergroups_group_id_membership"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling UserGroupMembersMembershipApi.get_usergroups_group_id_membership"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling UserGroupMembersMembershipApi.g_et_usergroups_group_id_membership, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling UserGroupMembersMembershipApi.get_usergroups_group_id_membership, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -185,7 +185,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<GraphObjectWithPaths>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: UserGroupMembersMembershipApi#g_et_usergroups_group_id_membership\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: UserGroupMembersMembershipApi#get_usergroups_group_id_membership\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

@@ -48,7 +48,7 @@ describe 'SambaDomainsApi' do
     end
   end
 
-  # unit tests for g_et_ldapservers_ldapserver_id_sambadomains
+  # unit tests for get_ldapservers_ldapserver_id_sambadomains
   # List Samba Domains
   # This endpoint returns all samba domains for an LDAP server.  ##### Sample Request &#x60;&#x60;&#x60; curl -X GET https://console.jumpcloud.com/api/v2/ldapservers/{LDAP_ID}/sambadomains \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39;   &#x60;&#x60;&#x60;
   # @param ldapserver_id Unique identifier of the LDAP server.
@@ -62,13 +62,13 @@ describe 'SambaDomainsApi' do
   # @option opts [String] :accept 
   # @option opts [String] :x_org_id 
   # @return [Array<SambaDomainOutput>]
-  describe 'g_et_ldapservers_ldapserver_id_sambadomains test' do
+  describe 'get_ldapservers_ldapserver_id_sambadomains test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_ldapservers_ldapserver_id_sambadomains_id
+  # unit tests for get_ldapservers_ldapserver_id_sambadomains_id
   # Get Samba Domain
   # This endpoint returns a specific samba domain for an LDAP server.  ##### Sample Request &#x60;&#x60;&#x60; curl -X GET \\   https://console.jumpcloud.com/api/v2/ldapservers/ldapservers/{LDAP_ID}/sambadomains/{SAMBA_ID} \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39;   &#x60;&#x60;&#x60;
   # @param ldapserver_id Unique identifier of the LDAP server.
@@ -78,7 +78,7 @@ describe 'SambaDomainsApi' do
   # @option opts [String] :accept 
   # @option opts [String] :x_org_id 
   # @return [SambaDomainOutput]
-  describe 'g_et_ldapservers_ldapserver_id_sambadomains_id test' do
+  describe 'get_ldapservers_ldapserver_id_sambadomains_id test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

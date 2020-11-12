@@ -4,14 +4,14 @@ All URIs are relative to *https://console.jumpcloud.com/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**g_et_radiusservers_radiusserver_id_associations**](RADIUSServersApi.md#g_et_radiusservers_radiusserver_id_associations) | **GET** /radiusservers/{radiusserver_id}/associations | List the associations of a RADIUS  Server
-[**g_et_radiusservers_radiusserver_id_usergroups**](RADIUSServersApi.md#g_et_radiusservers_radiusserver_id_usergroups) | **GET** /radiusservers/{radiusserver_id}/usergroups | List the User Groups bound to a RADIUS  Server
-[**g_et_radiusservers_radiusserver_id_users**](RADIUSServersApi.md#g_et_radiusservers_radiusserver_id_users) | **GET** /radiusservers/{radiusserver_id}/users | List the Users bound to a RADIUS  Server
+[**get_radiusservers_radiusserver_id_associations**](RADIUSServersApi.md#get_radiusservers_radiusserver_id_associations) | **GET** /radiusservers/{radiusserver_id}/associations | List the associations of a RADIUS  Server
+[**get_radiusservers_radiusserver_id_usergroups**](RADIUSServersApi.md#get_radiusservers_radiusserver_id_usergroups) | **GET** /radiusservers/{radiusserver_id}/usergroups | List the User Groups bound to a RADIUS  Server
+[**get_radiusservers_radiusserver_id_users**](RADIUSServersApi.md#get_radiusservers_radiusserver_id_users) | **GET** /radiusservers/{radiusserver_id}/users | List the Users bound to a RADIUS  Server
 [**p_ost_radiusservers_radiusserver_id_associations**](RADIUSServersApi.md#p_ost_radiusservers_radiusserver_id_associations) | **POST** /radiusservers/{radiusserver_id}/associations | Manage the associations of a RADIUS Server
 
 
-# **g_et_radiusservers_radiusserver_id_associations**
-> Array&lt;GraphConnection&gt; g_et_radiusservers_radiusserver_id_associations(radiusserver_id, targets, accept, content_type, opts)
+# **get_radiusservers_radiusserver_id_associations**
+> Array&lt;GraphConnection&gt; get_radiusservers_radiusserver_id_associations(radiusserver_id, targets, accept, content_type, opts)
 
 List the associations of a RADIUS  Server
 
@@ -47,10 +47,10 @@ opts = {
 
 begin
   #List the associations of a RADIUS  Server
-  result = api_instance.g_et_radiusservers_radiusserver_id_associations(radiusserver_id, targets, accept, content_type, opts)
+  result = api_instance.get_radiusservers_radiusserver_id_associations(radiusserver_id, targets, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling RADIUSServersApi->g_et_radiusservers_radiusserver_id_associations: #{e}"
+  puts "Exception when calling RADIUSServersApi->get_radiusservers_radiusserver_id_associations: #{e}"
 end
 ```
 
@@ -81,8 +81,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_radiusservers_radiusserver_id_usergroups**
-> Array&lt;GraphObjectWithPaths&gt; g_et_radiusservers_radiusserver_id_usergroups(radiusserver_id, accept, content_type, opts)
+# **get_radiusservers_radiusserver_id_usergroups**
+> Array&lt;GraphObjectWithPaths&gt; get_radiusservers_radiusserver_id_usergroups(radiusserver_id, accept, content_type, opts)
 
 List the User Groups bound to a RADIUS  Server
 
@@ -117,10 +117,10 @@ opts = {
 
 begin
   #List the User Groups bound to a RADIUS  Server
-  result = api_instance.g_et_radiusservers_radiusserver_id_usergroups(radiusserver_id, accept, content_type, opts)
+  result = api_instance.get_radiusservers_radiusserver_id_usergroups(radiusserver_id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling RADIUSServersApi->g_et_radiusservers_radiusserver_id_usergroups: #{e}"
+  puts "Exception when calling RADIUSServersApi->get_radiusservers_radiusserver_id_usergroups: #{e}"
 end
 ```
 
@@ -151,8 +151,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_radiusservers_radiusserver_id_users**
-> Array&lt;GraphObjectWithPaths&gt; g_et_radiusservers_radiusserver_id_users(radiusserver_id, accept, content_type, opts)
+# **get_radiusservers_radiusserver_id_users**
+> Array&lt;GraphObjectWithPaths&gt; get_radiusservers_radiusserver_id_users(radiusserver_id, accept, content_type, opts)
 
 List the Users bound to a RADIUS  Server
 
@@ -187,10 +187,10 @@ opts = {
 
 begin
   #List the Users bound to a RADIUS  Server
-  result = api_instance.g_et_radiusservers_radiusserver_id_users(radiusserver_id, accept, content_type, opts)
+  result = api_instance.get_radiusservers_radiusserver_id_users(radiusserver_id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling RADIUSServersApi->g_et_radiusservers_radiusserver_id_users: #{e}"
+  puts "Exception when calling RADIUSServersApi->get_radiusservers_radiusserver_id_users: #{e}"
 end
 ```
 

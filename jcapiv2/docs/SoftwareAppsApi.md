@@ -4,14 +4,14 @@ All URIs are relative to *https://console.jumpcloud.com/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**g_et_software_apps_software_app_id_associations**](SoftwareAppsApi.md#g_et_software_apps_software_app_id_associations) | **GET** /software_apps/{software_app_id}/associations | List the associations of a Software Application
-[**g_et_software_apps_software_app_id_systemgroups**](SoftwareAppsApi.md#g_et_software_apps_software_app_id_systemgroups) | **GET** /software_apps/{software_app_id}/systemgroups | List the System Groups bound to a Software App.
-[**g_et_software_apps_software_app_id_systems**](SoftwareAppsApi.md#g_et_software_apps_software_app_id_systems) | **GET** /software_apps/{software_app_id}/systems | List the Systems bound to a Software App.
+[**get_software_apps_software_app_id_associations**](SoftwareAppsApi.md#get_software_apps_software_app_id_associations) | **GET** /software_apps/{software_app_id}/associations | List the associations of a Software Application
+[**get_software_apps_software_app_id_systemgroups**](SoftwareAppsApi.md#get_software_apps_software_app_id_systemgroups) | **GET** /software_apps/{software_app_id}/systemgroups | List the System Groups bound to a Software App.
+[**get_software_apps_software_app_id_systems**](SoftwareAppsApi.md#get_software_apps_software_app_id_systems) | **GET** /software_apps/{software_app_id}/systems | List the Systems bound to a Software App.
 [**p_ost_software_apps_software_app_id_associations**](SoftwareAppsApi.md#p_ost_software_apps_software_app_id_associations) | **POST** /software_apps/{software_app_id}/associations | Manage the associations of a software application.
 
 
-# **g_et_software_apps_software_app_id_associations**
-> Array&lt;GraphConnection&gt; g_et_software_apps_software_app_id_associations(software_app_id, targets, accept, content_type, opts)
+# **get_software_apps_software_app_id_associations**
+> Array&lt;GraphConnection&gt; get_software_apps_software_app_id_associations(software_app_id, targets, accept, content_type, opts)
 
 List the associations of a Software Application
 
@@ -47,10 +47,10 @@ opts = {
 
 begin
   #List the associations of a Software Application
-  result = api_instance.g_et_software_apps_software_app_id_associations(software_app_id, targets, accept, content_type, opts)
+  result = api_instance.get_software_apps_software_app_id_associations(software_app_id, targets, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling SoftwareAppsApi->g_et_software_apps_software_app_id_associations: #{e}"
+  puts "Exception when calling SoftwareAppsApi->get_software_apps_software_app_id_associations: #{e}"
 end
 ```
 
@@ -81,8 +81,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_software_apps_software_app_id_systemgroups**
-> Array&lt;GraphObjectWithPaths&gt; g_et_software_apps_software_app_id_systemgroups(software_app_id, accept, content_type, opts)
+# **get_software_apps_software_app_id_systemgroups**
+> Array&lt;GraphObjectWithPaths&gt; get_software_apps_software_app_id_systemgroups(software_app_id, accept, content_type, opts)
 
 List the System Groups bound to a Software App.
 
@@ -117,10 +117,10 @@ opts = {
 
 begin
   #List the System Groups bound to a Software App.
-  result = api_instance.g_et_software_apps_software_app_id_systemgroups(software_app_id, accept, content_type, opts)
+  result = api_instance.get_software_apps_software_app_id_systemgroups(software_app_id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling SoftwareAppsApi->g_et_software_apps_software_app_id_systemgroups: #{e}"
+  puts "Exception when calling SoftwareAppsApi->get_software_apps_software_app_id_systemgroups: #{e}"
 end
 ```
 
@@ -151,8 +151,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_software_apps_software_app_id_systems**
-> Array&lt;GraphObjectWithPaths&gt; g_et_software_apps_software_app_id_systems(software_app_id, accept, content_type, opts)
+# **get_software_apps_software_app_id_systems**
+> Array&lt;GraphObjectWithPaths&gt; get_software_apps_software_app_id_systems(software_app_id, accept, content_type, opts)
 
 List the Systems bound to a Software App.
 
@@ -187,10 +187,10 @@ opts = {
 
 begin
   #List the Systems bound to a Software App.
-  result = api_instance.g_et_software_apps_software_app_id_systems(software_app_id, accept, content_type, opts)
+  result = api_instance.get_software_apps_software_app_id_systems(software_app_id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling SoftwareAppsApi->g_et_software_apps_software_app_id_systems: #{e}"
+  puts "Exception when calling SoftwareAppsApi->get_software_apps_software_app_id_systems: #{e}"
 end
 ```
 

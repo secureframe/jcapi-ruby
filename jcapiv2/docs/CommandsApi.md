@@ -4,14 +4,14 @@ All URIs are relative to *https://console.jumpcloud.com/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**g_et_commands_command_id_associations**](CommandsApi.md#g_et_commands_command_id_associations) | **GET** /commands/{command_id}/associations | List the associations of a Command
-[**g_et_commands_command_id_systemgroups**](CommandsApi.md#g_et_commands_command_id_systemgroups) | **GET** /commands/{command_id}/systemgroups | List the System Groups bound to a Command
-[**g_et_commands_command_id_systems**](CommandsApi.md#g_et_commands_command_id_systems) | **GET** /commands/{command_id}/systems | List the Systems bound to a Command
+[**get_commands_command_id_associations**](CommandsApi.md#get_commands_command_id_associations) | **GET** /commands/{command_id}/associations | List the associations of a Command
+[**get_commands_command_id_systemgroups**](CommandsApi.md#get_commands_command_id_systemgroups) | **GET** /commands/{command_id}/systemgroups | List the System Groups bound to a Command
+[**get_commands_command_id_systems**](CommandsApi.md#get_commands_command_id_systems) | **GET** /commands/{command_id}/systems | List the Systems bound to a Command
 [**p_ost_commands_command_id_associations**](CommandsApi.md#p_ost_commands_command_id_associations) | **POST** /commands/{command_id}/associations | Manage the associations of a Command
 
 
-# **g_et_commands_command_id_associations**
-> Array&lt;GraphConnection&gt; g_et_commands_command_id_associations(command_id, targets, accept, content_type, opts)
+# **get_commands_command_id_associations**
+> Array&lt;GraphConnection&gt; get_commands_command_id_associations(command_id, targets, accept, content_type, opts)
 
 List the associations of a Command
 
@@ -47,10 +47,10 @@ opts = {
 
 begin
   #List the associations of a Command
-  result = api_instance.g_et_commands_command_id_associations(command_id, targets, accept, content_type, opts)
+  result = api_instance.get_commands_command_id_associations(command_id, targets, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling CommandsApi->g_et_commands_command_id_associations: #{e}"
+  puts "Exception when calling CommandsApi->get_commands_command_id_associations: #{e}"
 end
 ```
 
@@ -81,8 +81,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_commands_command_id_systemgroups**
-> Array&lt;GraphObjectWithPaths&gt; g_et_commands_command_id_systemgroups(command_id, accept, content_type, opts)
+# **get_commands_command_id_systemgroups**
+> Array&lt;GraphObjectWithPaths&gt; get_commands_command_id_systemgroups(command_id, accept, content_type, opts)
 
 List the System Groups bound to a Command
 
@@ -117,10 +117,10 @@ opts = {
 
 begin
   #List the System Groups bound to a Command
-  result = api_instance.g_et_commands_command_id_systemgroups(command_id, accept, content_type, opts)
+  result = api_instance.get_commands_command_id_systemgroups(command_id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling CommandsApi->g_et_commands_command_id_systemgroups: #{e}"
+  puts "Exception when calling CommandsApi->get_commands_command_id_systemgroups: #{e}"
 end
 ```
 
@@ -151,8 +151,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_commands_command_id_systems**
-> Array&lt;GraphObjectWithPaths&gt; g_et_commands_command_id_systems(command_id, accept, content_type, opts)
+# **get_commands_command_id_systems**
+> Array&lt;GraphObjectWithPaths&gt; get_commands_command_id_systems(command_id, accept, content_type, opts)
 
 List the Systems bound to a Command
 
@@ -187,10 +187,10 @@ opts = {
 
 begin
   #List the Systems bound to a Command
-  result = api_instance.g_et_commands_command_id_systems(command_id, accept, content_type, opts)
+  result = api_instance.get_commands_command_id_systems(command_id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling CommandsApi->g_et_commands_command_id_systems: #{e}"
+  puts "Exception when calling CommandsApi->get_commands_command_id_systems: #{e}"
 end
 ```
 

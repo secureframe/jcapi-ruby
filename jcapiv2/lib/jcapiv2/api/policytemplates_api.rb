@@ -32,8 +32,8 @@ module JCAPIv2
     # @option opts [Array<String>] :sort The comma separated fields used to sort the collection. Default sort is ascending, prefix with &#x60;-&#x60; to sort descending. 
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<PolicyTemplate>]
-    def g_et_policytemplates(accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_policytemplates_with_http_info(accept, content_type, opts)
+    def get_policytemplates(accept, content_type, opts = {})
+      data, _status_code, _headers = get_policytemplates_with_http_info(accept, content_type, opts)
       return data
     end
 
@@ -49,20 +49,20 @@ module JCAPIv2
     # @option opts [Array<String>] :sort The comma separated fields used to sort the collection. Default sort is ascending, prefix with &#x60;-&#x60; to sort descending. 
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<PolicyTemplate>, Fixnum, Hash)>] Array<PolicyTemplate> data, response status code and response headers
-    def g_et_policytemplates_with_http_info(accept, content_type, opts = {})
+    def get_policytemplates_with_http_info(accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: PolicytemplatesApi.g_et_policytemplates ..."
+        @api_client.config.logger.debug "Calling API: PolicytemplatesApi.get_policytemplates ..."
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling PolicytemplatesApi.g_et_policytemplates"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling PolicytemplatesApi.get_policytemplates"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling PolicytemplatesApi.g_et_policytemplates"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling PolicytemplatesApi.get_policytemplates"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling PolicytemplatesApi.g_et_policytemplates, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling PolicytemplatesApi.get_policytemplates, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -100,7 +100,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<PolicyTemplate>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: PolicytemplatesApi#g_et_policytemplates\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: PolicytemplatesApi#get_policytemplates\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -113,8 +113,8 @@ module JCAPIv2
     # @param [Hash] opts the optional parameters
     # @option opts [String] :x_org_id  (default to )
     # @return [PolicyTemplateWithDetails]
-    def g_et_policytemplates_id(id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_policytemplates_id_with_http_info(id, accept, content_type, opts)
+    def get_policytemplates_id(id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_policytemplates_id_with_http_info(id, accept, content_type, opts)
       return data
     end
 
@@ -126,21 +126,21 @@ module JCAPIv2
     # @param [Hash] opts the optional parameters
     # @option opts [String] :x_org_id 
     # @return [Array<(PolicyTemplateWithDetails, Fixnum, Hash)>] PolicyTemplateWithDetails data, response status code and response headers
-    def g_et_policytemplates_id_with_http_info(id, accept, content_type, opts = {})
+    def get_policytemplates_id_with_http_info(id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: PolicytemplatesApi.g_et_policytemplates_id ..."
+        @api_client.config.logger.debug "Calling API: PolicytemplatesApi.get_policytemplates_id ..."
       end
       # verify the required parameter 'id' is set
       if @api_client.config.client_side_validation && id.nil?
-        fail ArgumentError, "Missing the required parameter 'id' when calling PolicytemplatesApi.g_et_policytemplates_id"
+        fail ArgumentError, "Missing the required parameter 'id' when calling PolicytemplatesApi.get_policytemplates_id"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling PolicytemplatesApi.g_et_policytemplates_id"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling PolicytemplatesApi.get_policytemplates_id"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling PolicytemplatesApi.g_et_policytemplates_id"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling PolicytemplatesApi.get_policytemplates_id"
       end
       # resource path
       local_var_path = "/policytemplates/{id}".sub('{' + 'id' + '}', id.to_s)
@@ -172,7 +172,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'PolicyTemplateWithDetails')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: PolicytemplatesApi#g_et_policytemplates_id\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: PolicytemplatesApi#get_policytemplates_id\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

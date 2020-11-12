@@ -4,62 +4,62 @@ All URIs are relative to *https://console.jumpcloud.com/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**g_et_systeminsights_alf**](SystemInsightsApi.md#g_et_systeminsights_alf) | **GET** /systeminsights/alf | List System Insights ALF
-[**g_et_systeminsights_alf_exceptions**](SystemInsightsApi.md#g_et_systeminsights_alf_exceptions) | **GET** /systeminsights/alf_exceptions | List System Insights ALF Exceptions
-[**g_et_systeminsights_alf_explicit_auths**](SystemInsightsApi.md#g_et_systeminsights_alf_explicit_auths) | **GET** /systeminsights/alf_explicit_auths | List System Insights ALF Explicit Authentications
-[**g_et_systeminsights_appcompat_shims**](SystemInsightsApi.md#g_et_systeminsights_appcompat_shims) | **GET** /systeminsights/appcompat_shims | List System Insights Application Compatibility Shims
-[**g_et_systeminsights_apps**](SystemInsightsApi.md#g_et_systeminsights_apps) | **GET** /systeminsights/apps | List System Insights Apps
-[**g_et_systeminsights_authorized_keys**](SystemInsightsApi.md#g_et_systeminsights_authorized_keys) | **GET** /systeminsights/authorized_keys | List System Insights Authorized Keys
-[**g_et_systeminsights_battery**](SystemInsightsApi.md#g_et_systeminsights_battery) | **GET** /systeminsights/battery | List System Insights Battery
-[**g_et_systeminsights_bitlocker_info**](SystemInsightsApi.md#g_et_systeminsights_bitlocker_info) | **GET** /systeminsights/bitlocker_info | List System Insights Bitlocker Info
-[**g_et_systeminsights_browser_plugins**](SystemInsightsApi.md#g_et_systeminsights_browser_plugins) | **GET** /systeminsights/browser_plugins | List System Insights Browser Plugins
-[**g_et_systeminsights_certificates**](SystemInsightsApi.md#g_et_systeminsights_certificates) | **GET** /systeminsights/certificates | List System Insights Certificates
-[**g_et_systeminsights_chrome_extensions**](SystemInsightsApi.md#g_et_systeminsights_chrome_extensions) | **GET** /systeminsights/chrome_extensions | List System Insights Chrome Extensions
-[**g_et_systeminsights_connectivity**](SystemInsightsApi.md#g_et_systeminsights_connectivity) | **GET** /systeminsights/connectivity | List System Insights Connectivity
-[**g_et_systeminsights_crashes**](SystemInsightsApi.md#g_et_systeminsights_crashes) | **GET** /systeminsights/crashes | List System Insights Crashes
-[**g_et_systeminsights_cups_destinations**](SystemInsightsApi.md#g_et_systeminsights_cups_destinations) | **GET** /systeminsights/cups_destinations | List System Insights CUPS Destinations
-[**g_et_systeminsights_disk_encryption**](SystemInsightsApi.md#g_et_systeminsights_disk_encryption) | **GET** /systeminsights/disk_encryption | List System Insights Disk Encryption
-[**g_et_systeminsights_disk_info**](SystemInsightsApi.md#g_et_systeminsights_disk_info) | **GET** /systeminsights/disk_info | List System Insights Disk Info
-[**g_et_systeminsights_dns_resolvers**](SystemInsightsApi.md#g_et_systeminsights_dns_resolvers) | **GET** /systeminsights/dns_resolvers | List System Insights DNS Resolvers
-[**g_et_systeminsights_etc_hosts**](SystemInsightsApi.md#g_et_systeminsights_etc_hosts) | **GET** /systeminsights/etc_hosts | List System Insights Etc Hosts
-[**g_et_systeminsights_firefox_addons**](SystemInsightsApi.md#g_et_systeminsights_firefox_addons) | **GET** /systeminsights/firefox_addons | List System Insights Firefox Addons
-[**g_et_systeminsights_groups**](SystemInsightsApi.md#g_et_systeminsights_groups) | **GET** /systeminsights/groups | List System Insights Groups
-[**g_et_systeminsights_ie_extensions**](SystemInsightsApi.md#g_et_systeminsights_ie_extensions) | **GET** /systeminsights/ie_extensions | List System Insights IE Extensions
-[**g_et_systeminsights_interface_addresses**](SystemInsightsApi.md#g_et_systeminsights_interface_addresses) | **GET** /systeminsights/interface_addresses | List System Insights Interface Addresses
-[**g_et_systeminsights_interface_details**](SystemInsightsApi.md#g_et_systeminsights_interface_details) | **GET** /systeminsights/interface_details | List System Insights Interface Details
-[**g_et_systeminsights_kernel_info**](SystemInsightsApi.md#g_et_systeminsights_kernel_info) | **GET** /systeminsights/kernel_info | List System Insights Kernel Info
-[**g_et_systeminsights_launchd**](SystemInsightsApi.md#g_et_systeminsights_launchd) | **GET** /systeminsights/launchd | List System Insights Launchd
-[**g_et_systeminsights_logged_in_users**](SystemInsightsApi.md#g_et_systeminsights_logged_in_users) | **GET** /systeminsights/logged_in_users | List System Insights Logged-In Users
-[**g_et_systeminsights_logical_drives**](SystemInsightsApi.md#g_et_systeminsights_logical_drives) | **GET** /systeminsights/logical_drives | List System Insights Logical Drives
-[**g_et_systeminsights_managed_policies**](SystemInsightsApi.md#g_et_systeminsights_managed_policies) | **GET** /systeminsights/managed_policies | List System Insights Managed Policies
-[**g_et_systeminsights_mounts**](SystemInsightsApi.md#g_et_systeminsights_mounts) | **GET** /systeminsights/mounts | List System Insights Mounts
-[**g_et_systeminsights_os_version**](SystemInsightsApi.md#g_et_systeminsights_os_version) | **GET** /systeminsights/os_version | List System Insights OS Version
-[**g_et_systeminsights_patches**](SystemInsightsApi.md#g_et_systeminsights_patches) | **GET** /systeminsights/patches | List System Insights Patches
-[**g_et_systeminsights_programs**](SystemInsightsApi.md#g_et_systeminsights_programs) | **GET** /systeminsights/programs | List System Insights Programs
-[**g_et_systeminsights_python_packages**](SystemInsightsApi.md#g_et_systeminsights_python_packages) | **GET** /systeminsights/python_packages | List System Insights Python Packages
-[**g_et_systeminsights_safari_extensions**](SystemInsightsApi.md#g_et_systeminsights_safari_extensions) | **GET** /systeminsights/safari_extensions | List System Insights Safari Extensions
-[**g_et_systeminsights_scheduled_tasks**](SystemInsightsApi.md#g_et_systeminsights_scheduled_tasks) | **GET** /systeminsights/scheduled_tasks | List System Insights Scheduled Tasks
-[**g_et_systeminsights_services**](SystemInsightsApi.md#g_et_systeminsights_services) | **GET** /systeminsights/services | List System Insights Services
-[**g_et_systeminsights_shadow**](SystemInsightsApi.md#g_et_systeminsights_shadow) | **GET** /systeminsights/shadow | LIst System Insights Shadow
-[**g_et_systeminsights_shared_folders**](SystemInsightsApi.md#g_et_systeminsights_shared_folders) | **GET** /systeminsights/shared_folders | List System Insights Shared Folders
-[**g_et_systeminsights_shared_resources**](SystemInsightsApi.md#g_et_systeminsights_shared_resources) | **GET** /systeminsights/shared_resources | List System Insights Shared Resources
-[**g_et_systeminsights_sharing_preferences**](SystemInsightsApi.md#g_et_systeminsights_sharing_preferences) | **GET** /systeminsights/sharing_preferences | List System Insights Sharing Preferences
-[**g_et_systeminsights_sip_config**](SystemInsightsApi.md#g_et_systeminsights_sip_config) | **GET** /systeminsights/sip_config | List System Insights SIP Config
-[**g_et_systeminsights_startup_items**](SystemInsightsApi.md#g_et_systeminsights_startup_items) | **GET** /systeminsights/startup_items | List System Insights Startup Items
-[**g_et_systeminsights_system_controls**](SystemInsightsApi.md#g_et_systeminsights_system_controls) | **GET** /systeminsights/system_controls | List System Insights System Control
-[**g_et_systeminsights_system_info**](SystemInsightsApi.md#g_et_systeminsights_system_info) | **GET** /systeminsights/system_info | List System Insights System Info
-[**g_et_systeminsights_uptime**](SystemInsightsApi.md#g_et_systeminsights_uptime) | **GET** /systeminsights/uptime | List System Insights Uptime
-[**g_et_systeminsights_usb_devices**](SystemInsightsApi.md#g_et_systeminsights_usb_devices) | **GET** /systeminsights/usb_devices | List System Insights USB Devices
-[**g_et_systeminsights_user_groups**](SystemInsightsApi.md#g_et_systeminsights_user_groups) | **GET** /systeminsights/user_groups | List System Insights User Groups
-[**g_et_systeminsights_user_ssh_keys**](SystemInsightsApi.md#g_et_systeminsights_user_ssh_keys) | **GET** /systeminsights/user_ssh_keys | List System Insights User SSH Keys
-[**g_et_systeminsights_users**](SystemInsightsApi.md#g_et_systeminsights_users) | **GET** /systeminsights/users | List System Insights Users
-[**g_et_systeminsights_wifi_networks**](SystemInsightsApi.md#g_et_systeminsights_wifi_networks) | **GET** /systeminsights/wifi_networks | List System Insights WiFi Networks
-[**g_et_systeminsights_wifi_status**](SystemInsightsApi.md#g_et_systeminsights_wifi_status) | **GET** /systeminsights/wifi_status | List System Insights WiFi Status
-[**g_et_systeminsights_windows_security_products**](SystemInsightsApi.md#g_et_systeminsights_windows_security_products) | **GET** /systeminsights/windows_security_products | List System Insights Windows Security Products
+[**get_systeminsights_alf**](SystemInsightsApi.md#get_systeminsights_alf) | **GET** /systeminsights/alf | List System Insights ALF
+[**get_systeminsights_alf_exceptions**](SystemInsightsApi.md#get_systeminsights_alf_exceptions) | **GET** /systeminsights/alf_exceptions | List System Insights ALF Exceptions
+[**get_systeminsights_alf_explicit_auths**](SystemInsightsApi.md#get_systeminsights_alf_explicit_auths) | **GET** /systeminsights/alf_explicit_auths | List System Insights ALF Explicit Authentications
+[**get_systeminsights_appcompat_shims**](SystemInsightsApi.md#get_systeminsights_appcompat_shims) | **GET** /systeminsights/appcompat_shims | List System Insights Application Compatibility Shims
+[**get_systeminsights_apps**](SystemInsightsApi.md#get_systeminsights_apps) | **GET** /systeminsights/apps | List System Insights Apps
+[**get_systeminsights_authorized_keys**](SystemInsightsApi.md#get_systeminsights_authorized_keys) | **GET** /systeminsights/authorized_keys | List System Insights Authorized Keys
+[**get_systeminsights_battery**](SystemInsightsApi.md#get_systeminsights_battery) | **GET** /systeminsights/battery | List System Insights Battery
+[**get_systeminsights_bitlocker_info**](SystemInsightsApi.md#get_systeminsights_bitlocker_info) | **GET** /systeminsights/bitlocker_info | List System Insights Bitlocker Info
+[**get_systeminsights_browser_plugins**](SystemInsightsApi.md#get_systeminsights_browser_plugins) | **GET** /systeminsights/browser_plugins | List System Insights Browser Plugins
+[**get_systeminsights_certificates**](SystemInsightsApi.md#get_systeminsights_certificates) | **GET** /systeminsights/certificates | List System Insights Certificates
+[**get_systeminsights_chrome_extensions**](SystemInsightsApi.md#get_systeminsights_chrome_extensions) | **GET** /systeminsights/chrome_extensions | List System Insights Chrome Extensions
+[**get_systeminsights_connectivity**](SystemInsightsApi.md#get_systeminsights_connectivity) | **GET** /systeminsights/connectivity | List System Insights Connectivity
+[**get_systeminsights_crashes**](SystemInsightsApi.md#get_systeminsights_crashes) | **GET** /systeminsights/crashes | List System Insights Crashes
+[**get_systeminsights_cups_destinations**](SystemInsightsApi.md#get_systeminsights_cups_destinations) | **GET** /systeminsights/cups_destinations | List System Insights CUPS Destinations
+[**get_systeminsights_disk_encryption**](SystemInsightsApi.md#get_systeminsights_disk_encryption) | **GET** /systeminsights/disk_encryption | List System Insights Disk Encryption
+[**get_systeminsights_disk_info**](SystemInsightsApi.md#get_systeminsights_disk_info) | **GET** /systeminsights/disk_info | List System Insights Disk Info
+[**get_systeminsights_dns_resolvers**](SystemInsightsApi.md#get_systeminsights_dns_resolvers) | **GET** /systeminsights/dns_resolvers | List System Insights DNS Resolvers
+[**get_systeminsights_etc_hosts**](SystemInsightsApi.md#get_systeminsights_etc_hosts) | **GET** /systeminsights/etc_hosts | List System Insights Etc Hosts
+[**get_systeminsights_firefox_addons**](SystemInsightsApi.md#get_systeminsights_firefox_addons) | **GET** /systeminsights/firefox_addons | List System Insights Firefox Addons
+[**get_systeminsights_groups**](SystemInsightsApi.md#get_systeminsights_groups) | **GET** /systeminsights/groups | List System Insights Groups
+[**get_systeminsights_ie_extensions**](SystemInsightsApi.md#get_systeminsights_ie_extensions) | **GET** /systeminsights/ie_extensions | List System Insights IE Extensions
+[**get_systeminsights_interface_addresses**](SystemInsightsApi.md#get_systeminsights_interface_addresses) | **GET** /systeminsights/interface_addresses | List System Insights Interface Addresses
+[**get_systeminsights_interface_details**](SystemInsightsApi.md#get_systeminsights_interface_details) | **GET** /systeminsights/interface_details | List System Insights Interface Details
+[**get_systeminsights_kernel_info**](SystemInsightsApi.md#get_systeminsights_kernel_info) | **GET** /systeminsights/kernel_info | List System Insights Kernel Info
+[**get_systeminsights_launchd**](SystemInsightsApi.md#get_systeminsights_launchd) | **GET** /systeminsights/launchd | List System Insights Launchd
+[**get_systeminsights_logged_in_users**](SystemInsightsApi.md#get_systeminsights_logged_in_users) | **GET** /systeminsights/logged_in_users | List System Insights Logged-In Users
+[**get_systeminsights_logical_drives**](SystemInsightsApi.md#get_systeminsights_logical_drives) | **GET** /systeminsights/logical_drives | List System Insights Logical Drives
+[**get_systeminsights_managed_policies**](SystemInsightsApi.md#get_systeminsights_managed_policies) | **GET** /systeminsights/managed_policies | List System Insights Managed Policies
+[**get_systeminsights_mounts**](SystemInsightsApi.md#get_systeminsights_mounts) | **GET** /systeminsights/mounts | List System Insights Mounts
+[**get_systeminsights_os_version**](SystemInsightsApi.md#get_systeminsights_os_version) | **GET** /systeminsights/os_version | List System Insights OS Version
+[**get_systeminsights_patches**](SystemInsightsApi.md#get_systeminsights_patches) | **GET** /systeminsights/patches | List System Insights Patches
+[**get_systeminsights_programs**](SystemInsightsApi.md#get_systeminsights_programs) | **GET** /systeminsights/programs | List System Insights Programs
+[**get_systeminsights_python_packages**](SystemInsightsApi.md#get_systeminsights_python_packages) | **GET** /systeminsights/python_packages | List System Insights Python Packages
+[**get_systeminsights_safari_extensions**](SystemInsightsApi.md#get_systeminsights_safari_extensions) | **GET** /systeminsights/safari_extensions | List System Insights Safari Extensions
+[**get_systeminsights_scheduled_tasks**](SystemInsightsApi.md#get_systeminsights_scheduled_tasks) | **GET** /systeminsights/scheduled_tasks | List System Insights Scheduled Tasks
+[**get_systeminsights_services**](SystemInsightsApi.md#get_systeminsights_services) | **GET** /systeminsights/services | List System Insights Services
+[**get_systeminsights_shadow**](SystemInsightsApi.md#get_systeminsights_shadow) | **GET** /systeminsights/shadow | LIst System Insights Shadow
+[**get_systeminsights_shared_folders**](SystemInsightsApi.md#get_systeminsights_shared_folders) | **GET** /systeminsights/shared_folders | List System Insights Shared Folders
+[**get_systeminsights_shared_resources**](SystemInsightsApi.md#get_systeminsights_shared_resources) | **GET** /systeminsights/shared_resources | List System Insights Shared Resources
+[**get_systeminsights_sharing_preferences**](SystemInsightsApi.md#get_systeminsights_sharing_preferences) | **GET** /systeminsights/sharing_preferences | List System Insights Sharing Preferences
+[**get_systeminsights_sip_config**](SystemInsightsApi.md#get_systeminsights_sip_config) | **GET** /systeminsights/sip_config | List System Insights SIP Config
+[**get_systeminsights_startup_items**](SystemInsightsApi.md#get_systeminsights_startup_items) | **GET** /systeminsights/startup_items | List System Insights Startup Items
+[**get_systeminsights_system_controls**](SystemInsightsApi.md#get_systeminsights_system_controls) | **GET** /systeminsights/system_controls | List System Insights System Control
+[**get_systeminsights_system_info**](SystemInsightsApi.md#get_systeminsights_system_info) | **GET** /systeminsights/system_info | List System Insights System Info
+[**get_systeminsights_uptime**](SystemInsightsApi.md#get_systeminsights_uptime) | **GET** /systeminsights/uptime | List System Insights Uptime
+[**get_systeminsights_usb_devices**](SystemInsightsApi.md#get_systeminsights_usb_devices) | **GET** /systeminsights/usb_devices | List System Insights USB Devices
+[**get_systeminsights_user_groups**](SystemInsightsApi.md#get_systeminsights_user_groups) | **GET** /systeminsights/user_groups | List System Insights User Groups
+[**get_systeminsights_user_ssh_keys**](SystemInsightsApi.md#get_systeminsights_user_ssh_keys) | **GET** /systeminsights/user_ssh_keys | List System Insights User SSH Keys
+[**get_systeminsights_users**](SystemInsightsApi.md#get_systeminsights_users) | **GET** /systeminsights/users | List System Insights Users
+[**get_systeminsights_wifi_networks**](SystemInsightsApi.md#get_systeminsights_wifi_networks) | **GET** /systeminsights/wifi_networks | List System Insights WiFi Networks
+[**get_systeminsights_wifi_status**](SystemInsightsApi.md#get_systeminsights_wifi_status) | **GET** /systeminsights/wifi_status | List System Insights WiFi Status
+[**get_systeminsights_windows_security_products**](SystemInsightsApi.md#get_systeminsights_windows_security_products) | **GET** /systeminsights/windows_security_products | List System Insights Windows Security Products
 
 
-# **g_et_systeminsights_alf**
-> Array&lt;SystemInsightsAlf&gt; g_et_systeminsights_alf(accept, content_type, opts)
+# **get_systeminsights_alf**
+> Array&lt;SystemInsightsAlf&gt; get_systeminsights_alf(accept, content_type, opts)
 
 List System Insights ALF
 
@@ -93,10 +93,10 @@ opts = {
 
 begin
   #List System Insights ALF
-  result = api_instance.g_et_systeminsights_alf(accept, content_type, opts)
+  result = api_instance.get_systeminsights_alf(accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling SystemInsightsApi->g_et_systeminsights_alf: #{e}"
+  puts "Exception when calling SystemInsightsApi->get_systeminsights_alf: #{e}"
 end
 ```
 
@@ -127,8 +127,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_systeminsights_alf_exceptions**
-> Array&lt;SystemInsightsAlfExceptions&gt; g_et_systeminsights_alf_exceptions(accept, content_type, opts)
+# **get_systeminsights_alf_exceptions**
+> Array&lt;SystemInsightsAlfExceptions&gt; get_systeminsights_alf_exceptions(accept, content_type, opts)
 
 List System Insights ALF Exceptions
 
@@ -162,10 +162,10 @@ opts = {
 
 begin
   #List System Insights ALF Exceptions
-  result = api_instance.g_et_systeminsights_alf_exceptions(accept, content_type, opts)
+  result = api_instance.get_systeminsights_alf_exceptions(accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling SystemInsightsApi->g_et_systeminsights_alf_exceptions: #{e}"
+  puts "Exception when calling SystemInsightsApi->get_systeminsights_alf_exceptions: #{e}"
 end
 ```
 
@@ -196,8 +196,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_systeminsights_alf_explicit_auths**
-> Array&lt;SystemInsightsAlfExplicitAuths&gt; g_et_systeminsights_alf_explicit_auths(accept, content_type, opts)
+# **get_systeminsights_alf_explicit_auths**
+> Array&lt;SystemInsightsAlfExplicitAuths&gt; get_systeminsights_alf_explicit_auths(accept, content_type, opts)
 
 List System Insights ALF Explicit Authentications
 
@@ -231,10 +231,10 @@ opts = {
 
 begin
   #List System Insights ALF Explicit Authentications
-  result = api_instance.g_et_systeminsights_alf_explicit_auths(accept, content_type, opts)
+  result = api_instance.get_systeminsights_alf_explicit_auths(accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling SystemInsightsApi->g_et_systeminsights_alf_explicit_auths: #{e}"
+  puts "Exception when calling SystemInsightsApi->get_systeminsights_alf_explicit_auths: #{e}"
 end
 ```
 
@@ -265,8 +265,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_systeminsights_appcompat_shims**
-> Array&lt;SystemInsightsAppcompatShims&gt; g_et_systeminsights_appcompat_shims(accept, content_type, opts)
+# **get_systeminsights_appcompat_shims**
+> Array&lt;SystemInsightsAppcompatShims&gt; get_systeminsights_appcompat_shims(accept, content_type, opts)
 
 List System Insights Application Compatibility Shims
 
@@ -300,10 +300,10 @@ opts = {
 
 begin
   #List System Insights Application Compatibility Shims
-  result = api_instance.g_et_systeminsights_appcompat_shims(accept, content_type, opts)
+  result = api_instance.get_systeminsights_appcompat_shims(accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling SystemInsightsApi->g_et_systeminsights_appcompat_shims: #{e}"
+  puts "Exception when calling SystemInsightsApi->get_systeminsights_appcompat_shims: #{e}"
 end
 ```
 
@@ -334,8 +334,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_systeminsights_apps**
-> Array&lt;SystemInsightsApps&gt; g_et_systeminsights_apps(accept, content_type, opts)
+# **get_systeminsights_apps**
+> Array&lt;SystemInsightsApps&gt; get_systeminsights_apps(accept, content_type, opts)
 
 List System Insights Apps
 
@@ -369,10 +369,10 @@ opts = {
 
 begin
   #List System Insights Apps
-  result = api_instance.g_et_systeminsights_apps(accept, content_type, opts)
+  result = api_instance.get_systeminsights_apps(accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling SystemInsightsApi->g_et_systeminsights_apps: #{e}"
+  puts "Exception when calling SystemInsightsApi->get_systeminsights_apps: #{e}"
 end
 ```
 
@@ -403,8 +403,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_systeminsights_authorized_keys**
-> Array&lt;SystemInsightsAuthorizedKeys&gt; g_et_systeminsights_authorized_keys(accept, content_type, opts)
+# **get_systeminsights_authorized_keys**
+> Array&lt;SystemInsightsAuthorizedKeys&gt; get_systeminsights_authorized_keys(accept, content_type, opts)
 
 List System Insights Authorized Keys
 
@@ -438,10 +438,10 @@ opts = {
 
 begin
   #List System Insights Authorized Keys
-  result = api_instance.g_et_systeminsights_authorized_keys(accept, content_type, opts)
+  result = api_instance.get_systeminsights_authorized_keys(accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling SystemInsightsApi->g_et_systeminsights_authorized_keys: #{e}"
+  puts "Exception when calling SystemInsightsApi->get_systeminsights_authorized_keys: #{e}"
 end
 ```
 
@@ -472,8 +472,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_systeminsights_battery**
-> Array&lt;SystemInsightsBattery&gt; g_et_systeminsights_battery(accept, content_type, opts)
+# **get_systeminsights_battery**
+> Array&lt;SystemInsightsBattery&gt; get_systeminsights_battery(accept, content_type, opts)
 
 List System Insights Battery
 
@@ -507,10 +507,10 @@ opts = {
 
 begin
   #List System Insights Battery
-  result = api_instance.g_et_systeminsights_battery(accept, content_type, opts)
+  result = api_instance.get_systeminsights_battery(accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling SystemInsightsApi->g_et_systeminsights_battery: #{e}"
+  puts "Exception when calling SystemInsightsApi->get_systeminsights_battery: #{e}"
 end
 ```
 
@@ -541,8 +541,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_systeminsights_bitlocker_info**
-> Array&lt;SystemInsightsBitlockerInfo&gt; g_et_systeminsights_bitlocker_info(accept, content_type, opts)
+# **get_systeminsights_bitlocker_info**
+> Array&lt;SystemInsightsBitlockerInfo&gt; get_systeminsights_bitlocker_info(accept, content_type, opts)
 
 List System Insights Bitlocker Info
 
@@ -576,10 +576,10 @@ opts = {
 
 begin
   #List System Insights Bitlocker Info
-  result = api_instance.g_et_systeminsights_bitlocker_info(accept, content_type, opts)
+  result = api_instance.get_systeminsights_bitlocker_info(accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling SystemInsightsApi->g_et_systeminsights_bitlocker_info: #{e}"
+  puts "Exception when calling SystemInsightsApi->get_systeminsights_bitlocker_info: #{e}"
 end
 ```
 
@@ -610,8 +610,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_systeminsights_browser_plugins**
-> Array&lt;SystemInsightsBrowserPlugins&gt; g_et_systeminsights_browser_plugins(accept, content_type, opts)
+# **get_systeminsights_browser_plugins**
+> Array&lt;SystemInsightsBrowserPlugins&gt; get_systeminsights_browser_plugins(accept, content_type, opts)
 
 List System Insights Browser Plugins
 
@@ -645,10 +645,10 @@ opts = {
 
 begin
   #List System Insights Browser Plugins
-  result = api_instance.g_et_systeminsights_browser_plugins(accept, content_type, opts)
+  result = api_instance.get_systeminsights_browser_plugins(accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling SystemInsightsApi->g_et_systeminsights_browser_plugins: #{e}"
+  puts "Exception when calling SystemInsightsApi->get_systeminsights_browser_plugins: #{e}"
 end
 ```
 
@@ -679,8 +679,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_systeminsights_certificates**
-> Array&lt;SystemInsightsCertificates&gt; g_et_systeminsights_certificates(accept, content_type, opts)
+# **get_systeminsights_certificates**
+> Array&lt;SystemInsightsCertificates&gt; get_systeminsights_certificates(accept, content_type, opts)
 
 List System Insights Certificates
 
@@ -714,10 +714,10 @@ opts = {
 
 begin
   #List System Insights Certificates
-  result = api_instance.g_et_systeminsights_certificates(accept, content_type, opts)
+  result = api_instance.get_systeminsights_certificates(accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling SystemInsightsApi->g_et_systeminsights_certificates: #{e}"
+  puts "Exception when calling SystemInsightsApi->get_systeminsights_certificates: #{e}"
 end
 ```
 
@@ -748,8 +748,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_systeminsights_chrome_extensions**
-> Array&lt;SystemInsightsChromeExtensions&gt; g_et_systeminsights_chrome_extensions(accept, content_type, opts)
+# **get_systeminsights_chrome_extensions**
+> Array&lt;SystemInsightsChromeExtensions&gt; get_systeminsights_chrome_extensions(accept, content_type, opts)
 
 List System Insights Chrome Extensions
 
@@ -783,10 +783,10 @@ opts = {
 
 begin
   #List System Insights Chrome Extensions
-  result = api_instance.g_et_systeminsights_chrome_extensions(accept, content_type, opts)
+  result = api_instance.get_systeminsights_chrome_extensions(accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling SystemInsightsApi->g_et_systeminsights_chrome_extensions: #{e}"
+  puts "Exception when calling SystemInsightsApi->get_systeminsights_chrome_extensions: #{e}"
 end
 ```
 
@@ -817,8 +817,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_systeminsights_connectivity**
-> Array&lt;SystemInsightsConnectivity&gt; g_et_systeminsights_connectivity(accept, content_type, opts)
+# **get_systeminsights_connectivity**
+> Array&lt;SystemInsightsConnectivity&gt; get_systeminsights_connectivity(accept, content_type, opts)
 
 List System Insights Connectivity
 
@@ -852,10 +852,10 @@ opts = {
 
 begin
   #List System Insights Connectivity
-  result = api_instance.g_et_systeminsights_connectivity(accept, content_type, opts)
+  result = api_instance.get_systeminsights_connectivity(accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling SystemInsightsApi->g_et_systeminsights_connectivity: #{e}"
+  puts "Exception when calling SystemInsightsApi->get_systeminsights_connectivity: #{e}"
 end
 ```
 
@@ -886,8 +886,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_systeminsights_crashes**
-> Array&lt;SystemInsightsCrashes&gt; g_et_systeminsights_crashes(accept, content_type, opts)
+# **get_systeminsights_crashes**
+> Array&lt;SystemInsightsCrashes&gt; get_systeminsights_crashes(accept, content_type, opts)
 
 List System Insights Crashes
 
@@ -921,10 +921,10 @@ opts = {
 
 begin
   #List System Insights Crashes
-  result = api_instance.g_et_systeminsights_crashes(accept, content_type, opts)
+  result = api_instance.get_systeminsights_crashes(accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling SystemInsightsApi->g_et_systeminsights_crashes: #{e}"
+  puts "Exception when calling SystemInsightsApi->get_systeminsights_crashes: #{e}"
 end
 ```
 
@@ -955,8 +955,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_systeminsights_cups_destinations**
-> Array&lt;SystemInsightsCupsDestinations&gt; g_et_systeminsights_cups_destinations(accept, content_type, opts)
+# **get_systeminsights_cups_destinations**
+> Array&lt;SystemInsightsCupsDestinations&gt; get_systeminsights_cups_destinations(accept, content_type, opts)
 
 List System Insights CUPS Destinations
 
@@ -990,10 +990,10 @@ opts = {
 
 begin
   #List System Insights CUPS Destinations
-  result = api_instance.g_et_systeminsights_cups_destinations(accept, content_type, opts)
+  result = api_instance.get_systeminsights_cups_destinations(accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling SystemInsightsApi->g_et_systeminsights_cups_destinations: #{e}"
+  puts "Exception when calling SystemInsightsApi->get_systeminsights_cups_destinations: #{e}"
 end
 ```
 
@@ -1024,8 +1024,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_systeminsights_disk_encryption**
-> Array&lt;SystemInsightsDiskEncryption&gt; g_et_systeminsights_disk_encryption(accept, content_type, opts)
+# **get_systeminsights_disk_encryption**
+> Array&lt;SystemInsightsDiskEncryption&gt; get_systeminsights_disk_encryption(accept, content_type, opts)
 
 List System Insights Disk Encryption
 
@@ -1059,10 +1059,10 @@ opts = {
 
 begin
   #List System Insights Disk Encryption
-  result = api_instance.g_et_systeminsights_disk_encryption(accept, content_type, opts)
+  result = api_instance.get_systeminsights_disk_encryption(accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling SystemInsightsApi->g_et_systeminsights_disk_encryption: #{e}"
+  puts "Exception when calling SystemInsightsApi->get_systeminsights_disk_encryption: #{e}"
 end
 ```
 
@@ -1093,8 +1093,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_systeminsights_disk_info**
-> Array&lt;SystemInsightsDiskInfo&gt; g_et_systeminsights_disk_info(accept, content_type, opts)
+# **get_systeminsights_disk_info**
+> Array&lt;SystemInsightsDiskInfo&gt; get_systeminsights_disk_info(accept, content_type, opts)
 
 List System Insights Disk Info
 
@@ -1128,10 +1128,10 @@ opts = {
 
 begin
   #List System Insights Disk Info
-  result = api_instance.g_et_systeminsights_disk_info(accept, content_type, opts)
+  result = api_instance.get_systeminsights_disk_info(accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling SystemInsightsApi->g_et_systeminsights_disk_info: #{e}"
+  puts "Exception when calling SystemInsightsApi->get_systeminsights_disk_info: #{e}"
 end
 ```
 
@@ -1162,8 +1162,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_systeminsights_dns_resolvers**
-> Array&lt;SystemInsightsDnsResolvers&gt; g_et_systeminsights_dns_resolvers(accept, content_type, opts)
+# **get_systeminsights_dns_resolvers**
+> Array&lt;SystemInsightsDnsResolvers&gt; get_systeminsights_dns_resolvers(accept, content_type, opts)
 
 List System Insights DNS Resolvers
 
@@ -1197,10 +1197,10 @@ opts = {
 
 begin
   #List System Insights DNS Resolvers
-  result = api_instance.g_et_systeminsights_dns_resolvers(accept, content_type, opts)
+  result = api_instance.get_systeminsights_dns_resolvers(accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling SystemInsightsApi->g_et_systeminsights_dns_resolvers: #{e}"
+  puts "Exception when calling SystemInsightsApi->get_systeminsights_dns_resolvers: #{e}"
 end
 ```
 
@@ -1231,8 +1231,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_systeminsights_etc_hosts**
-> Array&lt;SystemInsightsEtcHosts&gt; g_et_systeminsights_etc_hosts(accept, content_type, opts)
+# **get_systeminsights_etc_hosts**
+> Array&lt;SystemInsightsEtcHosts&gt; get_systeminsights_etc_hosts(accept, content_type, opts)
 
 List System Insights Etc Hosts
 
@@ -1266,10 +1266,10 @@ opts = {
 
 begin
   #List System Insights Etc Hosts
-  result = api_instance.g_et_systeminsights_etc_hosts(accept, content_type, opts)
+  result = api_instance.get_systeminsights_etc_hosts(accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling SystemInsightsApi->g_et_systeminsights_etc_hosts: #{e}"
+  puts "Exception when calling SystemInsightsApi->get_systeminsights_etc_hosts: #{e}"
 end
 ```
 
@@ -1300,8 +1300,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_systeminsights_firefox_addons**
-> Array&lt;SystemInsightsFirefoxAddons&gt; g_et_systeminsights_firefox_addons(accept, content_type, opts)
+# **get_systeminsights_firefox_addons**
+> Array&lt;SystemInsightsFirefoxAddons&gt; get_systeminsights_firefox_addons(accept, content_type, opts)
 
 List System Insights Firefox Addons
 
@@ -1335,10 +1335,10 @@ opts = {
 
 begin
   #List System Insights Firefox Addons
-  result = api_instance.g_et_systeminsights_firefox_addons(accept, content_type, opts)
+  result = api_instance.get_systeminsights_firefox_addons(accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling SystemInsightsApi->g_et_systeminsights_firefox_addons: #{e}"
+  puts "Exception when calling SystemInsightsApi->get_systeminsights_firefox_addons: #{e}"
 end
 ```
 
@@ -1369,8 +1369,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_systeminsights_groups**
-> Array&lt;SystemInsightsGroups&gt; g_et_systeminsights_groups(accept, content_type, opts)
+# **get_systeminsights_groups**
+> Array&lt;SystemInsightsGroups&gt; get_systeminsights_groups(accept, content_type, opts)
 
 List System Insights Groups
 
@@ -1404,10 +1404,10 @@ opts = {
 
 begin
   #List System Insights Groups
-  result = api_instance.g_et_systeminsights_groups(accept, content_type, opts)
+  result = api_instance.get_systeminsights_groups(accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling SystemInsightsApi->g_et_systeminsights_groups: #{e}"
+  puts "Exception when calling SystemInsightsApi->get_systeminsights_groups: #{e}"
 end
 ```
 
@@ -1438,8 +1438,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_systeminsights_ie_extensions**
-> Array&lt;SystemInsightsIeExtensions&gt; g_et_systeminsights_ie_extensions(accept, content_type, opts)
+# **get_systeminsights_ie_extensions**
+> Array&lt;SystemInsightsIeExtensions&gt; get_systeminsights_ie_extensions(accept, content_type, opts)
 
 List System Insights IE Extensions
 
@@ -1473,10 +1473,10 @@ opts = {
 
 begin
   #List System Insights IE Extensions
-  result = api_instance.g_et_systeminsights_ie_extensions(accept, content_type, opts)
+  result = api_instance.get_systeminsights_ie_extensions(accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling SystemInsightsApi->g_et_systeminsights_ie_extensions: #{e}"
+  puts "Exception when calling SystemInsightsApi->get_systeminsights_ie_extensions: #{e}"
 end
 ```
 
@@ -1507,8 +1507,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_systeminsights_interface_addresses**
-> Array&lt;SystemInsightsInterfaceAddresses&gt; g_et_systeminsights_interface_addresses(accept, content_type, opts)
+# **get_systeminsights_interface_addresses**
+> Array&lt;SystemInsightsInterfaceAddresses&gt; get_systeminsights_interface_addresses(accept, content_type, opts)
 
 List System Insights Interface Addresses
 
@@ -1542,10 +1542,10 @@ opts = {
 
 begin
   #List System Insights Interface Addresses
-  result = api_instance.g_et_systeminsights_interface_addresses(accept, content_type, opts)
+  result = api_instance.get_systeminsights_interface_addresses(accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling SystemInsightsApi->g_et_systeminsights_interface_addresses: #{e}"
+  puts "Exception when calling SystemInsightsApi->get_systeminsights_interface_addresses: #{e}"
 end
 ```
 
@@ -1576,8 +1576,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_systeminsights_interface_details**
-> Array&lt;SystemInsightsInterfaceDetails&gt; g_et_systeminsights_interface_details(accept, content_type, opts)
+# **get_systeminsights_interface_details**
+> Array&lt;SystemInsightsInterfaceDetails&gt; get_systeminsights_interface_details(accept, content_type, opts)
 
 List System Insights Interface Details
 
@@ -1611,10 +1611,10 @@ opts = {
 
 begin
   #List System Insights Interface Details
-  result = api_instance.g_et_systeminsights_interface_details(accept, content_type, opts)
+  result = api_instance.get_systeminsights_interface_details(accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling SystemInsightsApi->g_et_systeminsights_interface_details: #{e}"
+  puts "Exception when calling SystemInsightsApi->get_systeminsights_interface_details: #{e}"
 end
 ```
 
@@ -1645,8 +1645,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_systeminsights_kernel_info**
-> Array&lt;SystemInsightsKernelInfo&gt; g_et_systeminsights_kernel_info(accept, content_type, opts)
+# **get_systeminsights_kernel_info**
+> Array&lt;SystemInsightsKernelInfo&gt; get_systeminsights_kernel_info(accept, content_type, opts)
 
 List System Insights Kernel Info
 
@@ -1680,10 +1680,10 @@ opts = {
 
 begin
   #List System Insights Kernel Info
-  result = api_instance.g_et_systeminsights_kernel_info(accept, content_type, opts)
+  result = api_instance.get_systeminsights_kernel_info(accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling SystemInsightsApi->g_et_systeminsights_kernel_info: #{e}"
+  puts "Exception when calling SystemInsightsApi->get_systeminsights_kernel_info: #{e}"
 end
 ```
 
@@ -1714,8 +1714,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_systeminsights_launchd**
-> Array&lt;SystemInsightsLaunchd&gt; g_et_systeminsights_launchd(accept, content_type, opts)
+# **get_systeminsights_launchd**
+> Array&lt;SystemInsightsLaunchd&gt; get_systeminsights_launchd(accept, content_type, opts)
 
 List System Insights Launchd
 
@@ -1749,10 +1749,10 @@ opts = {
 
 begin
   #List System Insights Launchd
-  result = api_instance.g_et_systeminsights_launchd(accept, content_type, opts)
+  result = api_instance.get_systeminsights_launchd(accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling SystemInsightsApi->g_et_systeminsights_launchd: #{e}"
+  puts "Exception when calling SystemInsightsApi->get_systeminsights_launchd: #{e}"
 end
 ```
 
@@ -1783,8 +1783,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_systeminsights_logged_in_users**
-> Array&lt;SystemInsightsLoggedInUsers&gt; g_et_systeminsights_logged_in_users(accept, content_type, opts)
+# **get_systeminsights_logged_in_users**
+> Array&lt;SystemInsightsLoggedInUsers&gt; get_systeminsights_logged_in_users(accept, content_type, opts)
 
 List System Insights Logged-In Users
 
@@ -1818,10 +1818,10 @@ opts = {
 
 begin
   #List System Insights Logged-In Users
-  result = api_instance.g_et_systeminsights_logged_in_users(accept, content_type, opts)
+  result = api_instance.get_systeminsights_logged_in_users(accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling SystemInsightsApi->g_et_systeminsights_logged_in_users: #{e}"
+  puts "Exception when calling SystemInsightsApi->get_systeminsights_logged_in_users: #{e}"
 end
 ```
 
@@ -1852,8 +1852,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_systeminsights_logical_drives**
-> Array&lt;SystemInsightsLogicalDrives&gt; g_et_systeminsights_logical_drives(accept, content_type, opts)
+# **get_systeminsights_logical_drives**
+> Array&lt;SystemInsightsLogicalDrives&gt; get_systeminsights_logical_drives(accept, content_type, opts)
 
 List System Insights Logical Drives
 
@@ -1887,10 +1887,10 @@ opts = {
 
 begin
   #List System Insights Logical Drives
-  result = api_instance.g_et_systeminsights_logical_drives(accept, content_type, opts)
+  result = api_instance.get_systeminsights_logical_drives(accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling SystemInsightsApi->g_et_systeminsights_logical_drives: #{e}"
+  puts "Exception when calling SystemInsightsApi->get_systeminsights_logical_drives: #{e}"
 end
 ```
 
@@ -1921,8 +1921,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_systeminsights_managed_policies**
-> Array&lt;SystemInsightsManagedPolicies&gt; g_et_systeminsights_managed_policies(accept, content_type, opts)
+# **get_systeminsights_managed_policies**
+> Array&lt;SystemInsightsManagedPolicies&gt; get_systeminsights_managed_policies(accept, content_type, opts)
 
 List System Insights Managed Policies
 
@@ -1956,10 +1956,10 @@ opts = {
 
 begin
   #List System Insights Managed Policies
-  result = api_instance.g_et_systeminsights_managed_policies(accept, content_type, opts)
+  result = api_instance.get_systeminsights_managed_policies(accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling SystemInsightsApi->g_et_systeminsights_managed_policies: #{e}"
+  puts "Exception when calling SystemInsightsApi->get_systeminsights_managed_policies: #{e}"
 end
 ```
 
@@ -1990,8 +1990,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_systeminsights_mounts**
-> Array&lt;SystemInsightsMounts&gt; g_et_systeminsights_mounts(accept, content_type, opts)
+# **get_systeminsights_mounts**
+> Array&lt;SystemInsightsMounts&gt; get_systeminsights_mounts(accept, content_type, opts)
 
 List System Insights Mounts
 
@@ -2025,10 +2025,10 @@ opts = {
 
 begin
   #List System Insights Mounts
-  result = api_instance.g_et_systeminsights_mounts(accept, content_type, opts)
+  result = api_instance.get_systeminsights_mounts(accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling SystemInsightsApi->g_et_systeminsights_mounts: #{e}"
+  puts "Exception when calling SystemInsightsApi->get_systeminsights_mounts: #{e}"
 end
 ```
 
@@ -2059,8 +2059,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_systeminsights_os_version**
-> Array&lt;SystemInsightsOsVersion&gt; g_et_systeminsights_os_version(accept, content_type, opts)
+# **get_systeminsights_os_version**
+> Array&lt;SystemInsightsOsVersion&gt; get_systeminsights_os_version(accept, content_type, opts)
 
 List System Insights OS Version
 
@@ -2094,10 +2094,10 @@ opts = {
 
 begin
   #List System Insights OS Version
-  result = api_instance.g_et_systeminsights_os_version(accept, content_type, opts)
+  result = api_instance.get_systeminsights_os_version(accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling SystemInsightsApi->g_et_systeminsights_os_version: #{e}"
+  puts "Exception when calling SystemInsightsApi->get_systeminsights_os_version: #{e}"
 end
 ```
 
@@ -2128,8 +2128,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_systeminsights_patches**
-> Array&lt;SystemInsightsPatches&gt; g_et_systeminsights_patches(accept, content_type, opts)
+# **get_systeminsights_patches**
+> Array&lt;SystemInsightsPatches&gt; get_systeminsights_patches(accept, content_type, opts)
 
 List System Insights Patches
 
@@ -2163,10 +2163,10 @@ opts = {
 
 begin
   #List System Insights Patches
-  result = api_instance.g_et_systeminsights_patches(accept, content_type, opts)
+  result = api_instance.get_systeminsights_patches(accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling SystemInsightsApi->g_et_systeminsights_patches: #{e}"
+  puts "Exception when calling SystemInsightsApi->get_systeminsights_patches: #{e}"
 end
 ```
 
@@ -2197,8 +2197,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_systeminsights_programs**
-> Array&lt;SystemInsightsPrograms&gt; g_et_systeminsights_programs(accept, content_type, opts)
+# **get_systeminsights_programs**
+> Array&lt;SystemInsightsPrograms&gt; get_systeminsights_programs(accept, content_type, opts)
 
 List System Insights Programs
 
@@ -2232,10 +2232,10 @@ opts = {
 
 begin
   #List System Insights Programs
-  result = api_instance.g_et_systeminsights_programs(accept, content_type, opts)
+  result = api_instance.get_systeminsights_programs(accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling SystemInsightsApi->g_et_systeminsights_programs: #{e}"
+  puts "Exception when calling SystemInsightsApi->get_systeminsights_programs: #{e}"
 end
 ```
 
@@ -2266,8 +2266,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_systeminsights_python_packages**
-> Array&lt;SystemInsightsPythonPackages&gt; g_et_systeminsights_python_packages(accept, content_type, opts)
+# **get_systeminsights_python_packages**
+> Array&lt;SystemInsightsPythonPackages&gt; get_systeminsights_python_packages(accept, content_type, opts)
 
 List System Insights Python Packages
 
@@ -2301,10 +2301,10 @@ opts = {
 
 begin
   #List System Insights Python Packages
-  result = api_instance.g_et_systeminsights_python_packages(accept, content_type, opts)
+  result = api_instance.get_systeminsights_python_packages(accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling SystemInsightsApi->g_et_systeminsights_python_packages: #{e}"
+  puts "Exception when calling SystemInsightsApi->get_systeminsights_python_packages: #{e}"
 end
 ```
 
@@ -2335,8 +2335,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_systeminsights_safari_extensions**
-> Array&lt;SystemInsightsSafariExtensions&gt; g_et_systeminsights_safari_extensions(accept, content_type, opts)
+# **get_systeminsights_safari_extensions**
+> Array&lt;SystemInsightsSafariExtensions&gt; get_systeminsights_safari_extensions(accept, content_type, opts)
 
 List System Insights Safari Extensions
 
@@ -2370,10 +2370,10 @@ opts = {
 
 begin
   #List System Insights Safari Extensions
-  result = api_instance.g_et_systeminsights_safari_extensions(accept, content_type, opts)
+  result = api_instance.get_systeminsights_safari_extensions(accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling SystemInsightsApi->g_et_systeminsights_safari_extensions: #{e}"
+  puts "Exception when calling SystemInsightsApi->get_systeminsights_safari_extensions: #{e}"
 end
 ```
 
@@ -2404,8 +2404,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_systeminsights_scheduled_tasks**
-> Array&lt;SystemInsightsScheduledTasks&gt; g_et_systeminsights_scheduled_tasks(accept, content_type, opts)
+# **get_systeminsights_scheduled_tasks**
+> Array&lt;SystemInsightsScheduledTasks&gt; get_systeminsights_scheduled_tasks(accept, content_type, opts)
 
 List System Insights Scheduled Tasks
 
@@ -2439,10 +2439,10 @@ opts = {
 
 begin
   #List System Insights Scheduled Tasks
-  result = api_instance.g_et_systeminsights_scheduled_tasks(accept, content_type, opts)
+  result = api_instance.get_systeminsights_scheduled_tasks(accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling SystemInsightsApi->g_et_systeminsights_scheduled_tasks: #{e}"
+  puts "Exception when calling SystemInsightsApi->get_systeminsights_scheduled_tasks: #{e}"
 end
 ```
 
@@ -2473,8 +2473,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_systeminsights_services**
-> Array&lt;SystemInsightsServices&gt; g_et_systeminsights_services(accept, content_type, opts)
+# **get_systeminsights_services**
+> Array&lt;SystemInsightsServices&gt; get_systeminsights_services(accept, content_type, opts)
 
 List System Insights Services
 
@@ -2508,10 +2508,10 @@ opts = {
 
 begin
   #List System Insights Services
-  result = api_instance.g_et_systeminsights_services(accept, content_type, opts)
+  result = api_instance.get_systeminsights_services(accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling SystemInsightsApi->g_et_systeminsights_services: #{e}"
+  puts "Exception when calling SystemInsightsApi->get_systeminsights_services: #{e}"
 end
 ```
 
@@ -2542,8 +2542,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_systeminsights_shadow**
-> Array&lt;SystemInsightsShadow&gt; g_et_systeminsights_shadow(accept, content_type, opts)
+# **get_systeminsights_shadow**
+> Array&lt;SystemInsightsShadow&gt; get_systeminsights_shadow(accept, content_type, opts)
 
 LIst System Insights Shadow
 
@@ -2577,10 +2577,10 @@ opts = {
 
 begin
   #LIst System Insights Shadow
-  result = api_instance.g_et_systeminsights_shadow(accept, content_type, opts)
+  result = api_instance.get_systeminsights_shadow(accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling SystemInsightsApi->g_et_systeminsights_shadow: #{e}"
+  puts "Exception when calling SystemInsightsApi->get_systeminsights_shadow: #{e}"
 end
 ```
 
@@ -2611,8 +2611,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_systeminsights_shared_folders**
-> Array&lt;SystemInsightsSharedFolders&gt; g_et_systeminsights_shared_folders(accept, content_type, opts)
+# **get_systeminsights_shared_folders**
+> Array&lt;SystemInsightsSharedFolders&gt; get_systeminsights_shared_folders(accept, content_type, opts)
 
 List System Insights Shared Folders
 
@@ -2646,10 +2646,10 @@ opts = {
 
 begin
   #List System Insights Shared Folders
-  result = api_instance.g_et_systeminsights_shared_folders(accept, content_type, opts)
+  result = api_instance.get_systeminsights_shared_folders(accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling SystemInsightsApi->g_et_systeminsights_shared_folders: #{e}"
+  puts "Exception when calling SystemInsightsApi->get_systeminsights_shared_folders: #{e}"
 end
 ```
 
@@ -2680,8 +2680,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_systeminsights_shared_resources**
-> Array&lt;SystemInsightsSharedResources&gt; g_et_systeminsights_shared_resources(accept, content_type, opts)
+# **get_systeminsights_shared_resources**
+> Array&lt;SystemInsightsSharedResources&gt; get_systeminsights_shared_resources(accept, content_type, opts)
 
 List System Insights Shared Resources
 
@@ -2708,10 +2708,10 @@ opts = {
 
 begin
   #List System Insights Shared Resources
-  result = api_instance.g_et_systeminsights_shared_resources(accept, content_type, opts)
+  result = api_instance.get_systeminsights_shared_resources(accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling SystemInsightsApi->g_et_systeminsights_shared_resources: #{e}"
+  puts "Exception when calling SystemInsightsApi->get_systeminsights_shared_resources: #{e}"
 end
 ```
 
@@ -2742,8 +2742,8 @@ No authorization required
 
 
 
-# **g_et_systeminsights_sharing_preferences**
-> Array&lt;SystemInsightsSharingPreferences&gt; g_et_systeminsights_sharing_preferences(accept, content_type, opts)
+# **get_systeminsights_sharing_preferences**
+> Array&lt;SystemInsightsSharingPreferences&gt; get_systeminsights_sharing_preferences(accept, content_type, opts)
 
 List System Insights Sharing Preferences
 
@@ -2777,10 +2777,10 @@ opts = {
 
 begin
   #List System Insights Sharing Preferences
-  result = api_instance.g_et_systeminsights_sharing_preferences(accept, content_type, opts)
+  result = api_instance.get_systeminsights_sharing_preferences(accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling SystemInsightsApi->g_et_systeminsights_sharing_preferences: #{e}"
+  puts "Exception when calling SystemInsightsApi->get_systeminsights_sharing_preferences: #{e}"
 end
 ```
 
@@ -2811,8 +2811,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_systeminsights_sip_config**
-> Array&lt;SystemInsightsSipConfig&gt; g_et_systeminsights_sip_config(accept, content_type, opts)
+# **get_systeminsights_sip_config**
+> Array&lt;SystemInsightsSipConfig&gt; get_systeminsights_sip_config(accept, content_type, opts)
 
 List System Insights SIP Config
 
@@ -2846,10 +2846,10 @@ opts = {
 
 begin
   #List System Insights SIP Config
-  result = api_instance.g_et_systeminsights_sip_config(accept, content_type, opts)
+  result = api_instance.get_systeminsights_sip_config(accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling SystemInsightsApi->g_et_systeminsights_sip_config: #{e}"
+  puts "Exception when calling SystemInsightsApi->get_systeminsights_sip_config: #{e}"
 end
 ```
 
@@ -2880,8 +2880,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_systeminsights_startup_items**
-> Array&lt;SystemInsightsStartupItems&gt; g_et_systeminsights_startup_items(accept, content_type, opts)
+# **get_systeminsights_startup_items**
+> Array&lt;SystemInsightsStartupItems&gt; get_systeminsights_startup_items(accept, content_type, opts)
 
 List System Insights Startup Items
 
@@ -2915,10 +2915,10 @@ opts = {
 
 begin
   #List System Insights Startup Items
-  result = api_instance.g_et_systeminsights_startup_items(accept, content_type, opts)
+  result = api_instance.get_systeminsights_startup_items(accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling SystemInsightsApi->g_et_systeminsights_startup_items: #{e}"
+  puts "Exception when calling SystemInsightsApi->get_systeminsights_startup_items: #{e}"
 end
 ```
 
@@ -2949,8 +2949,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_systeminsights_system_controls**
-> Array&lt;SystemInsightsSystemControls&gt; g_et_systeminsights_system_controls(accept, content_type, opts)
+# **get_systeminsights_system_controls**
+> Array&lt;SystemInsightsSystemControls&gt; get_systeminsights_system_controls(accept, content_type, opts)
 
 List System Insights System Control
 
@@ -2984,10 +2984,10 @@ opts = {
 
 begin
   #List System Insights System Control
-  result = api_instance.g_et_systeminsights_system_controls(accept, content_type, opts)
+  result = api_instance.get_systeminsights_system_controls(accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling SystemInsightsApi->g_et_systeminsights_system_controls: #{e}"
+  puts "Exception when calling SystemInsightsApi->get_systeminsights_system_controls: #{e}"
 end
 ```
 
@@ -3018,8 +3018,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_systeminsights_system_info**
-> Array&lt;SystemInsightsSystemInfo&gt; g_et_systeminsights_system_info(accept, content_type, opts)
+# **get_systeminsights_system_info**
+> Array&lt;SystemInsightsSystemInfo&gt; get_systeminsights_system_info(accept, content_type, opts)
 
 List System Insights System Info
 
@@ -3053,10 +3053,10 @@ opts = {
 
 begin
   #List System Insights System Info
-  result = api_instance.g_et_systeminsights_system_info(accept, content_type, opts)
+  result = api_instance.get_systeminsights_system_info(accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling SystemInsightsApi->g_et_systeminsights_system_info: #{e}"
+  puts "Exception when calling SystemInsightsApi->get_systeminsights_system_info: #{e}"
 end
 ```
 
@@ -3087,8 +3087,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_systeminsights_uptime**
-> Array&lt;SystemInsightsUptime&gt; g_et_systeminsights_uptime(accept, content_type, opts)
+# **get_systeminsights_uptime**
+> Array&lt;SystemInsightsUptime&gt; get_systeminsights_uptime(accept, content_type, opts)
 
 List System Insights Uptime
 
@@ -3122,10 +3122,10 @@ opts = {
 
 begin
   #List System Insights Uptime
-  result = api_instance.g_et_systeminsights_uptime(accept, content_type, opts)
+  result = api_instance.get_systeminsights_uptime(accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling SystemInsightsApi->g_et_systeminsights_uptime: #{e}"
+  puts "Exception when calling SystemInsightsApi->get_systeminsights_uptime: #{e}"
 end
 ```
 
@@ -3156,8 +3156,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_systeminsights_usb_devices**
-> Array&lt;SystemInsightsUsbDevices&gt; g_et_systeminsights_usb_devices(accept, content_type, opts)
+# **get_systeminsights_usb_devices**
+> Array&lt;SystemInsightsUsbDevices&gt; get_systeminsights_usb_devices(accept, content_type, opts)
 
 List System Insights USB Devices
 
@@ -3191,10 +3191,10 @@ opts = {
 
 begin
   #List System Insights USB Devices
-  result = api_instance.g_et_systeminsights_usb_devices(accept, content_type, opts)
+  result = api_instance.get_systeminsights_usb_devices(accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling SystemInsightsApi->g_et_systeminsights_usb_devices: #{e}"
+  puts "Exception when calling SystemInsightsApi->get_systeminsights_usb_devices: #{e}"
 end
 ```
 
@@ -3225,8 +3225,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_systeminsights_user_groups**
-> Array&lt;SystemInsightsUserGroups&gt; g_et_systeminsights_user_groups(accept, content_type, opts)
+# **get_systeminsights_user_groups**
+> Array&lt;SystemInsightsUserGroups&gt; get_systeminsights_user_groups(accept, content_type, opts)
 
 List System Insights User Groups
 
@@ -3260,10 +3260,10 @@ opts = {
 
 begin
   #List System Insights User Groups
-  result = api_instance.g_et_systeminsights_user_groups(accept, content_type, opts)
+  result = api_instance.get_systeminsights_user_groups(accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling SystemInsightsApi->g_et_systeminsights_user_groups: #{e}"
+  puts "Exception when calling SystemInsightsApi->get_systeminsights_user_groups: #{e}"
 end
 ```
 
@@ -3294,8 +3294,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_systeminsights_user_ssh_keys**
-> Array&lt;SystemInsightsUserSshKeys&gt; g_et_systeminsights_user_ssh_keys(accept, content_type, opts)
+# **get_systeminsights_user_ssh_keys**
+> Array&lt;SystemInsightsUserSshKeys&gt; get_systeminsights_user_ssh_keys(accept, content_type, opts)
 
 List System Insights User SSH Keys
 
@@ -3329,10 +3329,10 @@ opts = {
 
 begin
   #List System Insights User SSH Keys
-  result = api_instance.g_et_systeminsights_user_ssh_keys(accept, content_type, opts)
+  result = api_instance.get_systeminsights_user_ssh_keys(accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling SystemInsightsApi->g_et_systeminsights_user_ssh_keys: #{e}"
+  puts "Exception when calling SystemInsightsApi->get_systeminsights_user_ssh_keys: #{e}"
 end
 ```
 
@@ -3363,8 +3363,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_systeminsights_users**
-> Array&lt;SystemInsightsUsers&gt; g_et_systeminsights_users(accept, content_type, opts)
+# **get_systeminsights_users**
+> Array&lt;SystemInsightsUsers&gt; get_systeminsights_users(accept, content_type, opts)
 
 List System Insights Users
 
@@ -3398,10 +3398,10 @@ opts = {
 
 begin
   #List System Insights Users
-  result = api_instance.g_et_systeminsights_users(accept, content_type, opts)
+  result = api_instance.get_systeminsights_users(accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling SystemInsightsApi->g_et_systeminsights_users: #{e}"
+  puts "Exception when calling SystemInsightsApi->get_systeminsights_users: #{e}"
 end
 ```
 
@@ -3432,8 +3432,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_systeminsights_wifi_networks**
-> Array&lt;SystemInsightsWifiNetworks&gt; g_et_systeminsights_wifi_networks(accept, content_type, opts)
+# **get_systeminsights_wifi_networks**
+> Array&lt;SystemInsightsWifiNetworks&gt; get_systeminsights_wifi_networks(accept, content_type, opts)
 
 List System Insights WiFi Networks
 
@@ -3467,10 +3467,10 @@ opts = {
 
 begin
   #List System Insights WiFi Networks
-  result = api_instance.g_et_systeminsights_wifi_networks(accept, content_type, opts)
+  result = api_instance.get_systeminsights_wifi_networks(accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling SystemInsightsApi->g_et_systeminsights_wifi_networks: #{e}"
+  puts "Exception when calling SystemInsightsApi->get_systeminsights_wifi_networks: #{e}"
 end
 ```
 
@@ -3501,8 +3501,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_systeminsights_wifi_status**
-> Array&lt;SystemInsightsWifiStatus&gt; g_et_systeminsights_wifi_status(accept, content_type, opts)
+# **get_systeminsights_wifi_status**
+> Array&lt;SystemInsightsWifiStatus&gt; get_systeminsights_wifi_status(accept, content_type, opts)
 
 List System Insights WiFi Status
 
@@ -3536,10 +3536,10 @@ opts = {
 
 begin
   #List System Insights WiFi Status
-  result = api_instance.g_et_systeminsights_wifi_status(accept, content_type, opts)
+  result = api_instance.get_systeminsights_wifi_status(accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling SystemInsightsApi->g_et_systeminsights_wifi_status: #{e}"
+  puts "Exception when calling SystemInsightsApi->get_systeminsights_wifi_status: #{e}"
 end
 ```
 
@@ -3570,8 +3570,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_systeminsights_windows_security_products**
-> Array&lt;SystemInsightsWindowsSecurityProducts&gt; g_et_systeminsights_windows_security_products(accept, content_type, opts)
+# **get_systeminsights_windows_security_products**
+> Array&lt;SystemInsightsWindowsSecurityProducts&gt; get_systeminsights_windows_security_products(accept, content_type, opts)
 
 List System Insights Windows Security Products
 
@@ -3605,10 +3605,10 @@ opts = {
 
 begin
   #List System Insights Windows Security Products
-  result = api_instance.g_et_systeminsights_windows_security_products(accept, content_type, opts)
+  result = api_instance.get_systeminsights_windows_security_products(accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling SystemInsightsApi->g_et_systeminsights_windows_security_products: #{e}"
+  puts "Exception when calling SystemInsightsApi->get_systeminsights_windows_security_products: #{e}"
 end
 ```
 

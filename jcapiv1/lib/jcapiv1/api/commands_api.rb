@@ -99,8 +99,8 @@ module JCAPIv1
     # @option opts [String] :sort Use space separated sort parameters to sort the collection. Default sort is ascending. Prefix with &#x60;-&#x60; to sort descending.  (default to )
     # @option opts [String] :x_org_id  (default to )
     # @return [Commandslist]
-    def g_et_commands(accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_commands_with_http_info(accept, content_type, opts)
+    def get_commands(accept, content_type, opts = {})
+      data, _status_code, _headers = get_commands_with_http_info(accept, content_type, opts)
       return data
     end
 
@@ -116,20 +116,20 @@ module JCAPIv1
     # @option opts [String] :sort Use space separated sort parameters to sort the collection. Default sort is ascending. Prefix with &#x60;-&#x60; to sort descending. 
     # @option opts [String] :x_org_id 
     # @return [Array<(Commandslist, Fixnum, Hash)>] Commandslist data, response status code and response headers
-    def g_et_commands_with_http_info(accept, content_type, opts = {})
+    def get_commands_with_http_info(accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CommandsApi.g_et_commands ..."
+        @api_client.config.logger.debug "Calling API: CommandsApi.get_commands ..."
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling CommandsApi.g_et_commands"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling CommandsApi.get_commands"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling CommandsApi.g_et_commands"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling CommandsApi.get_commands"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling CommandsApi.g_et_commands, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling CommandsApi.get_commands, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -163,7 +163,7 @@ module JCAPIv1
         :auth_names => auth_names,
         :return_type => 'Commandslist')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CommandsApi#g_et_commands\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CommandsApi#get_commands\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -177,8 +177,8 @@ module JCAPIv1
     # @option opts [String] :fields Use a space seperated string of field parameters to include the data in the response. If omitted, the default list of fields will be returned.  (default to )
     # @option opts [String] :x_org_id  (default to )
     # @return [Command]
-    def g_et_commands_id(id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_commands_id_with_http_info(id, accept, content_type, opts)
+    def get_commands_id(id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_commands_id_with_http_info(id, accept, content_type, opts)
       return data
     end
 
@@ -191,21 +191,21 @@ module JCAPIv1
     # @option opts [String] :fields Use a space seperated string of field parameters to include the data in the response. If omitted, the default list of fields will be returned. 
     # @option opts [String] :x_org_id 
     # @return [Array<(Command, Fixnum, Hash)>] Command data, response status code and response headers
-    def g_et_commands_id_with_http_info(id, accept, content_type, opts = {})
+    def get_commands_id_with_http_info(id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CommandsApi.g_et_commands_id ..."
+        @api_client.config.logger.debug "Calling API: CommandsApi.get_commands_id ..."
       end
       # verify the required parameter 'id' is set
       if @api_client.config.client_side_validation && id.nil?
-        fail ArgumentError, "Missing the required parameter 'id' when calling CommandsApi.g_et_commands_id"
+        fail ArgumentError, "Missing the required parameter 'id' when calling CommandsApi.get_commands_id"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling CommandsApi.g_et_commands_id"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling CommandsApi.get_commands_id"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling CommandsApi.g_et_commands_id"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling CommandsApi.get_commands_id"
       end
       # resource path
       local_var_path = "/commands/{id}".sub('{' + 'id' + '}', id.to_s)
@@ -234,7 +234,7 @@ module JCAPIv1
         :auth_names => auth_names,
         :return_type => 'Command')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CommandsApi#g_et_commands_id\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CommandsApi#get_commands_id\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -250,8 +250,8 @@ module JCAPIv1
     # @option opts [Integer] :skip The offset into the records to return. (default to 0)
     # @option opts [String] :x_org_id  (default to )
     # @return [Commandfilereturn]
-    def g_et_files_command_id(id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_files_command_id_with_http_info(id, accept, content_type, opts)
+    def get_files_command_id(id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_files_command_id_with_http_info(id, accept, content_type, opts)
       return data
     end
 
@@ -266,24 +266,24 @@ module JCAPIv1
     # @option opts [Integer] :skip The offset into the records to return.
     # @option opts [String] :x_org_id 
     # @return [Array<(Commandfilereturn, Fixnum, Hash)>] Commandfilereturn data, response status code and response headers
-    def g_et_files_command_id_with_http_info(id, accept, content_type, opts = {})
+    def get_files_command_id_with_http_info(id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CommandsApi.g_et_files_command_id ..."
+        @api_client.config.logger.debug "Calling API: CommandsApi.get_files_command_id ..."
       end
       # verify the required parameter 'id' is set
       if @api_client.config.client_side_validation && id.nil?
-        fail ArgumentError, "Missing the required parameter 'id' when calling CommandsApi.g_et_files_command_id"
+        fail ArgumentError, "Missing the required parameter 'id' when calling CommandsApi.get_files_command_id"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling CommandsApi.g_et_files_command_id"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling CommandsApi.get_files_command_id"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling CommandsApi.g_et_files_command_id"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling CommandsApi.get_files_command_id"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling CommandsApi.g_et_files_command_id, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling CommandsApi.get_files_command_id, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -315,7 +315,7 @@ module JCAPIv1
         :auth_names => auth_names,
         :return_type => 'Commandfilereturn')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CommandsApi#g_et_files_command_id\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CommandsApi#get_files_command_id\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

@@ -103,8 +103,8 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<WorkdayOutput>]
-    def g_et_workdays(accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_workdays_with_http_info(accept, content_type, opts)
+    def get_workdays(accept, content_type, opts = {})
+      data, _status_code, _headers = get_workdays_with_http_info(accept, content_type, opts)
       return data
     end
 
@@ -120,20 +120,20 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<WorkdayOutput>, Fixnum, Hash)>] Array<WorkdayOutput> data, response status code and response headers
-    def g_et_workdays_with_http_info(accept, content_type, opts = {})
+    def get_workdays_with_http_info(accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: WorkdayImportApi.g_et_workdays ..."
+        @api_client.config.logger.debug "Calling API: WorkdayImportApi.get_workdays ..."
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling WorkdayImportApi.g_et_workdays"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling WorkdayImportApi.get_workdays"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling WorkdayImportApi.g_et_workdays"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling WorkdayImportApi.get_workdays"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling WorkdayImportApi.g_et_workdays, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling WorkdayImportApi.get_workdays, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -171,7 +171,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<WorkdayOutput>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: WorkdayImportApi#g_et_workdays\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: WorkdayImportApi#get_workdays\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -184,8 +184,8 @@ module JCAPIv2
     # @param [Hash] opts the optional parameters
     # @option opts [String] :x_org_id  (default to )
     # @return [WorkdayOutput]
-    def g_et_workdays_id(id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_workdays_id_with_http_info(id, accept, content_type, opts)
+    def get_workdays_id(id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_workdays_id_with_http_info(id, accept, content_type, opts)
       return data
     end
 
@@ -197,21 +197,21 @@ module JCAPIv2
     # @param [Hash] opts the optional parameters
     # @option opts [String] :x_org_id 
     # @return [Array<(WorkdayOutput, Fixnum, Hash)>] WorkdayOutput data, response status code and response headers
-    def g_et_workdays_id_with_http_info(id, accept, content_type, opts = {})
+    def get_workdays_id_with_http_info(id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: WorkdayImportApi.g_et_workdays_id ..."
+        @api_client.config.logger.debug "Calling API: WorkdayImportApi.get_workdays_id ..."
       end
       # verify the required parameter 'id' is set
       if @api_client.config.client_side_validation && id.nil?
-        fail ArgumentError, "Missing the required parameter 'id' when calling WorkdayImportApi.g_et_workdays_id"
+        fail ArgumentError, "Missing the required parameter 'id' when calling WorkdayImportApi.get_workdays_id"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling WorkdayImportApi.g_et_workdays_id"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling WorkdayImportApi.get_workdays_id"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling WorkdayImportApi.g_et_workdays_id"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling WorkdayImportApi.get_workdays_id"
       end
       # resource path
       local_var_path = "/workdays/{id}".sub('{' + 'id' + '}', id.to_s)
@@ -243,7 +243,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'WorkdayOutput')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: WorkdayImportApi#g_et_workdays_id\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: WorkdayImportApi#get_workdays_id\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -259,8 +259,8 @@ module JCAPIv2
     # @option opts [Integer] :skip The offset into the records to return. (default to 0)
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<JobWorkresult>]
-    def g_et_workdays_id_import_job_id_results(id, job_id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_workdays_id_import_job_id_results_with_http_info(id, job_id, accept, content_type, opts)
+    def get_workdays_id_import_job_id_results(id, job_id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_workdays_id_import_job_id_results_with_http_info(id, job_id, accept, content_type, opts)
       return data
     end
 
@@ -275,28 +275,28 @@ module JCAPIv2
     # @option opts [Integer] :skip The offset into the records to return.
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<JobWorkresult>, Fixnum, Hash)>] Array<JobWorkresult> data, response status code and response headers
-    def g_et_workdays_id_import_job_id_results_with_http_info(id, job_id, accept, content_type, opts = {})
+    def get_workdays_id_import_job_id_results_with_http_info(id, job_id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: WorkdayImportApi.g_et_workdays_id_import_job_id_results ..."
+        @api_client.config.logger.debug "Calling API: WorkdayImportApi.get_workdays_id_import_job_id_results ..."
       end
       # verify the required parameter 'id' is set
       if @api_client.config.client_side_validation && id.nil?
-        fail ArgumentError, "Missing the required parameter 'id' when calling WorkdayImportApi.g_et_workdays_id_import_job_id_results"
+        fail ArgumentError, "Missing the required parameter 'id' when calling WorkdayImportApi.get_workdays_id_import_job_id_results"
       end
       # verify the required parameter 'job_id' is set
       if @api_client.config.client_side_validation && job_id.nil?
-        fail ArgumentError, "Missing the required parameter 'job_id' when calling WorkdayImportApi.g_et_workdays_id_import_job_id_results"
+        fail ArgumentError, "Missing the required parameter 'job_id' when calling WorkdayImportApi.get_workdays_id_import_job_id_results"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling WorkdayImportApi.g_et_workdays_id_import_job_id_results"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling WorkdayImportApi.get_workdays_id_import_job_id_results"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling WorkdayImportApi.g_et_workdays_id_import_job_id_results"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling WorkdayImportApi.get_workdays_id_import_job_id_results"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling WorkdayImportApi.g_et_workdays_id_import_job_id_results, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling WorkdayImportApi.get_workdays_id_import_job_id_results, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -331,7 +331,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<JobWorkresult>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: WorkdayImportApi#g_et_workdays_id_import_job_id_results\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: WorkdayImportApi#get_workdays_id_import_job_id_results\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -347,8 +347,8 @@ module JCAPIv2
     # @option opts [Array<String>] :sort The comma separated fields used to sort the collection. Default sort is ascending, prefix with &#x60;-&#x60; to sort descending. 
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<WorkdayWorker>]
-    def g_et_workdays_workday_id_workers(workday_id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_workdays_workday_id_workers_with_http_info(workday_id, accept, content_type, opts)
+    def get_workdays_workday_id_workers(workday_id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_workdays_workday_id_workers_with_http_info(workday_id, accept, content_type, opts)
       return data
     end
 
@@ -363,24 +363,24 @@ module JCAPIv2
     # @option opts [Array<String>] :sort The comma separated fields used to sort the collection. Default sort is ascending, prefix with &#x60;-&#x60; to sort descending. 
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<WorkdayWorker>, Fixnum, Hash)>] Array<WorkdayWorker> data, response status code and response headers
-    def g_et_workdays_workday_id_workers_with_http_info(workday_id, accept, content_type, opts = {})
+    def get_workdays_workday_id_workers_with_http_info(workday_id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: WorkdayImportApi.g_et_workdays_workday_id_workers ..."
+        @api_client.config.logger.debug "Calling API: WorkdayImportApi.get_workdays_workday_id_workers ..."
       end
       # verify the required parameter 'workday_id' is set
       if @api_client.config.client_side_validation && workday_id.nil?
-        fail ArgumentError, "Missing the required parameter 'workday_id' when calling WorkdayImportApi.g_et_workdays_workday_id_workers"
+        fail ArgumentError, "Missing the required parameter 'workday_id' when calling WorkdayImportApi.get_workdays_workday_id_workers"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling WorkdayImportApi.g_et_workdays_workday_id_workers"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling WorkdayImportApi.get_workdays_workday_id_workers"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling WorkdayImportApi.g_et_workdays_workday_id_workers"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling WorkdayImportApi.get_workdays_workday_id_workers"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling WorkdayImportApi.g_et_workdays_workday_id_workers, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling WorkdayImportApi.get_workdays_workday_id_workers, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -416,7 +416,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<WorkdayWorker>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: WorkdayImportApi#g_et_workdays_workday_id_workers\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: WorkdayImportApi#get_workdays_workday_id_workers\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

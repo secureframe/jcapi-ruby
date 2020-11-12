@@ -6,10 +6,10 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**d_elete_duo_accounts_account_id_applications_application_id**](DuoApi.md#d_elete_duo_accounts_account_id_applications_application_id) | **DELETE** /duo/accounts/{account_id}/applications/{application_id} | Delete a Duo Application
 [**d_elete_duo_accounts_id**](DuoApi.md#d_elete_duo_accounts_id) | **DELETE** /duo/accounts/{id} | Delete a Duo Account
-[**g_et_duo_accounts**](DuoApi.md#g_et_duo_accounts) | **GET** /duo/accounts | List Duo Accounts
-[**g_et_duo_accounts_account_id_applications**](DuoApi.md#g_et_duo_accounts_account_id_applications) | **GET** /duo/accounts/{account_id}/applications | List Duo Applications
-[**g_et_duo_accounts_account_id_applications_application_id**](DuoApi.md#g_et_duo_accounts_account_id_applications_application_id) | **GET** /duo/accounts/{account_id}/applications/{application_id} | Get a Duo application
-[**g_et_duo_accounts_id**](DuoApi.md#g_et_duo_accounts_id) | **GET** /duo/accounts/{id} | Get a Duo Acount
+[**get_duo_accounts**](DuoApi.md#get_duo_accounts) | **GET** /duo/accounts | List Duo Accounts
+[**get_duo_accounts_account_id_applications**](DuoApi.md#get_duo_accounts_account_id_applications) | **GET** /duo/accounts/{account_id}/applications | List Duo Applications
+[**get_duo_accounts_account_id_applications_application_id**](DuoApi.md#get_duo_accounts_account_id_applications_application_id) | **GET** /duo/accounts/{account_id}/applications/{application_id} | Get a Duo application
+[**get_duo_accounts_id**](DuoApi.md#get_duo_accounts_id) | **GET** /duo/accounts/{id} | Get a Duo Acount
 [**p_ost_duo_accounts**](DuoApi.md#p_ost_duo_accounts) | **POST** /duo/accounts | Create Duo Account
 [**p_ost_duo_accounts_account_id_applications**](DuoApi.md#p_ost_duo_accounts_account_id_applications) | **POST** /duo/accounts/{account_id}/applications | Create Duo Application
 [**p_ut_duo_accounts_account_id_applications_application_id**](DuoApi.md#p_ut_duo_accounts_account_id_applications_application_id) | **PUT** /duo/accounts/{account_id}/applications/{application_id} | Update Duo Application
@@ -146,8 +146,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_duo_accounts**
-> Array&lt;DuoAccount&gt; g_et_duo_accounts(accept, content_type, opts)
+# **get_duo_accounts**
+> Array&lt;DuoAccount&gt; get_duo_accounts(accept, content_type, opts)
 
 List Duo Accounts
 
@@ -177,10 +177,10 @@ opts = {
 
 begin
   #List Duo Accounts
-  result = api_instance.g_et_duo_accounts(accept, content_type, opts)
+  result = api_instance.get_duo_accounts(accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling DuoApi->g_et_duo_accounts: #{e}"
+  puts "Exception when calling DuoApi->get_duo_accounts: #{e}"
 end
 ```
 
@@ -207,8 +207,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_duo_accounts_account_id_applications**
-> Array&lt;DuoApplication&gt; g_et_duo_accounts_account_id_applications(account_id, accept, content_type, opts)
+# **get_duo_accounts_account_id_applications**
+> Array&lt;DuoApplication&gt; get_duo_accounts_account_id_applications(account_id, accept, content_type, opts)
 
 List Duo Applications
 
@@ -240,10 +240,10 @@ opts = {
 
 begin
   #List Duo Applications
-  result = api_instance.g_et_duo_accounts_account_id_applications(account_id, accept, content_type, opts)
+  result = api_instance.get_duo_accounts_account_id_applications(account_id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling DuoApi->g_et_duo_accounts_account_id_applications: #{e}"
+  puts "Exception when calling DuoApi->get_duo_accounts_account_id_applications: #{e}"
 end
 ```
 
@@ -271,8 +271,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_duo_accounts_account_id_applications_application_id**
-> DuoApplication g_et_duo_accounts_account_id_applications_application_id(account_id, application_id, accept, content_type, opts)
+# **get_duo_accounts_account_id_applications_application_id**
+> DuoApplication get_duo_accounts_account_id_applications_application_id(account_id, application_id, accept, content_type, opts)
 
 Get a Duo application
 
@@ -306,10 +306,10 @@ opts = {
 
 begin
   #Get a Duo application
-  result = api_instance.g_et_duo_accounts_account_id_applications_application_id(account_id, application_id, accept, content_type, opts)
+  result = api_instance.get_duo_accounts_account_id_applications_application_id(account_id, application_id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling DuoApi->g_et_duo_accounts_account_id_applications_application_id: #{e}"
+  puts "Exception when calling DuoApi->get_duo_accounts_account_id_applications_application_id: #{e}"
 end
 ```
 
@@ -338,8 +338,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_duo_accounts_id**
-> DuoAccount g_et_duo_accounts_id(id, accept, content_type, opts)
+# **get_duo_accounts_id**
+> DuoAccount get_duo_accounts_id(id, accept, content_type, opts)
 
 Get a Duo Acount
 
@@ -371,10 +371,10 @@ opts = {
 
 begin
   #Get a Duo Acount
-  result = api_instance.g_et_duo_accounts_id(id, accept, content_type, opts)
+  result = api_instance.get_duo_accounts_id(id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling DuoApi->g_et_duo_accounts_id: #{e}"
+  puts "Exception when calling DuoApi->get_duo_accounts_id: #{e}"
 end
 ```
 

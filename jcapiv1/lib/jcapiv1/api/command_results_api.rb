@@ -100,8 +100,8 @@ module JCAPIv1
     # @option opts [String] :sort Use space separated sort parameters to sort the collection. Default sort is ascending. Prefix with &#x60;-&#x60; to sort descending.  (default to )
     # @option opts [String] :x_org_id  (default to )
     # @return [Commandresultslist]
-    def g_et_commandresults(accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_commandresults_with_http_info(accept, content_type, opts)
+    def get_commandresults(accept, content_type, opts = {})
+      data, _status_code, _headers = get_commandresults_with_http_info(accept, content_type, opts)
       return data
     end
 
@@ -117,20 +117,20 @@ module JCAPIv1
     # @option opts [String] :sort Use space separated sort parameters to sort the collection. Default sort is ascending. Prefix with &#x60;-&#x60; to sort descending. 
     # @option opts [String] :x_org_id 
     # @return [Array<(Commandresultslist, Fixnum, Hash)>] Commandresultslist data, response status code and response headers
-    def g_et_commandresults_with_http_info(accept, content_type, opts = {})
+    def get_commandresults_with_http_info(accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CommandResultsApi.g_et_commandresults ..."
+        @api_client.config.logger.debug "Calling API: CommandResultsApi.get_commandresults ..."
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling CommandResultsApi.g_et_commandresults"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling CommandResultsApi.get_commandresults"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling CommandResultsApi.g_et_commandresults"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling CommandResultsApi.get_commandresults"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling CommandResultsApi.g_et_commandresults, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling CommandResultsApi.get_commandresults, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -164,7 +164,7 @@ module JCAPIv1
         :auth_names => auth_names,
         :return_type => 'Commandresultslist')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CommandResultsApi#g_et_commandresults\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CommandResultsApi#get_commandresults\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -179,8 +179,8 @@ module JCAPIv1
     # @option opts [String] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id  (default to )
     # @return [Commandresult]
-    def g_et_commandresults_id(id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_commandresults_id_with_http_info(id, accept, content_type, opts)
+    def get_commandresults_id(id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_commandresults_id_with_http_info(id, accept, content_type, opts)
       return data
     end
 
@@ -194,21 +194,21 @@ module JCAPIv1
     # @option opts [String] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id 
     # @return [Array<(Commandresult, Fixnum, Hash)>] Commandresult data, response status code and response headers
-    def g_et_commandresults_id_with_http_info(id, accept, content_type, opts = {})
+    def get_commandresults_id_with_http_info(id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: CommandResultsApi.g_et_commandresults_id ..."
+        @api_client.config.logger.debug "Calling API: CommandResultsApi.get_commandresults_id ..."
       end
       # verify the required parameter 'id' is set
       if @api_client.config.client_side_validation && id.nil?
-        fail ArgumentError, "Missing the required parameter 'id' when calling CommandResultsApi.g_et_commandresults_id"
+        fail ArgumentError, "Missing the required parameter 'id' when calling CommandResultsApi.get_commandresults_id"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling CommandResultsApi.g_et_commandresults_id"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling CommandResultsApi.get_commandresults_id"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling CommandResultsApi.g_et_commandresults_id"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling CommandResultsApi.get_commandresults_id"
       end
       # resource path
       local_var_path = "/commandresults/{id}".sub('{' + 'id' + '}', id.to_s)
@@ -238,7 +238,7 @@ module JCAPIv1
         :auth_names => auth_names,
         :return_type => 'Commandresult')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CommandResultsApi#g_et_commandresults_id\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CommandResultsApi#get_commandresults_id\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

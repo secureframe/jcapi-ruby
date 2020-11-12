@@ -32,8 +32,8 @@ module JCAPIv1
     # @option opts [Integer] :skip The offset into the records to return. (default to 0)
     # @option opts [String] :sort Use space separated sort parameters to sort the collection. Default sort is ascending. Prefix with &#x60;-&#x60; to sort descending.  (default to )
     # @return [Organizationslist]
-    def g_et_organizations(accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_organizations_with_http_info(accept, content_type, opts)
+    def get_organizations(accept, content_type, opts = {})
+      data, _status_code, _headers = get_organizations_with_http_info(accept, content_type, opts)
       return data
     end
 
@@ -49,20 +49,20 @@ module JCAPIv1
     # @option opts [Integer] :skip The offset into the records to return.
     # @option opts [String] :sort Use space separated sort parameters to sort the collection. Default sort is ascending. Prefix with &#x60;-&#x60; to sort descending. 
     # @return [Array<(Organizationslist, Fixnum, Hash)>] Organizationslist data, response status code and response headers
-    def g_et_organizations_with_http_info(accept, content_type, opts = {})
+    def get_organizations_with_http_info(accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: OrganizationsApi.g_et_organizations ..."
+        @api_client.config.logger.debug "Calling API: OrganizationsApi.get_organizations ..."
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling OrganizationsApi.g_et_organizations"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling OrganizationsApi.get_organizations"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling OrganizationsApi.g_et_organizations"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling OrganizationsApi.get_organizations"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling OrganizationsApi.g_et_organizations, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling OrganizationsApi.get_organizations, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -96,7 +96,7 @@ module JCAPIv1
         :auth_names => auth_names,
         :return_type => 'Organizationslist')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: OrganizationsApi#g_et_organizations\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: OrganizationsApi#get_organizations\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -110,8 +110,8 @@ module JCAPIv1
     # @option opts [String] :fields Use a space seperated string of field parameters to include the data in the response. If omitted, the default list of fields will be returned.  (default to )
     # @option opts [String] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @return [Organization]
-    def g_et_organizations_id(id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_organizations_id_with_http_info(id, accept, content_type, opts)
+    def get_organizations_id(id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_organizations_id_with_http_info(id, accept, content_type, opts)
       return data
     end
 
@@ -124,21 +124,21 @@ module JCAPIv1
     # @option opts [String] :fields Use a space seperated string of field parameters to include the data in the response. If omitted, the default list of fields will be returned. 
     # @option opts [String] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @return [Array<(Organization, Fixnum, Hash)>] Organization data, response status code and response headers
-    def g_et_organizations_id_with_http_info(id, accept, content_type, opts = {})
+    def get_organizations_id_with_http_info(id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: OrganizationsApi.g_et_organizations_id ..."
+        @api_client.config.logger.debug "Calling API: OrganizationsApi.get_organizations_id ..."
       end
       # verify the required parameter 'id' is set
       if @api_client.config.client_side_validation && id.nil?
-        fail ArgumentError, "Missing the required parameter 'id' when calling OrganizationsApi.g_et_organizations_id"
+        fail ArgumentError, "Missing the required parameter 'id' when calling OrganizationsApi.get_organizations_id"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling OrganizationsApi.g_et_organizations_id"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling OrganizationsApi.get_organizations_id"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling OrganizationsApi.g_et_organizations_id"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling OrganizationsApi.get_organizations_id"
       end
       # resource path
       local_var_path = "/organizations/{id}".sub('{' + 'id' + '}', id.to_s)
@@ -167,7 +167,7 @@ module JCAPIv1
         :auth_names => auth_names,
         :return_type => 'Organization')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: OrganizationsApi#g_et_organizations_id\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: OrganizationsApi#get_organizations_id\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

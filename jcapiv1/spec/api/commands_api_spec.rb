@@ -47,7 +47,7 @@ describe 'CommandsApi' do
     end
   end
 
-  # unit tests for g_et_commands
+  # unit tests for get_commands
   # List All Commands
   # This endpoint returns all commands.  #### Sample Request &#x60;&#x60;&#x60; curl -X GET https://console.jumpcloud.com/api/commands/ \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39;  &#x60;&#x60;&#x60;
   # @param accept 
@@ -60,13 +60,13 @@ describe 'CommandsApi' do
   # @option opts [String] :sort Use space separated sort parameters to sort the collection. Default sort is ascending. Prefix with &#x60;-&#x60; to sort descending. 
   # @option opts [String] :x_org_id 
   # @return [Commandslist]
-  describe 'g_et_commands test' do
+  describe 'get_commands test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_commands_id
+  # unit tests for get_commands_id
   # List an individual Command
   # This endpoint returns a specific command based on the command ID.  #### Sample Request &#x60;&#x60;&#x60; curl -X GET https://console.jumpcloud.com/api/commands/{CommandID} \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39;  &#x60;&#x60;&#x60;
   # @param id 
@@ -76,13 +76,13 @@ describe 'CommandsApi' do
   # @option opts [String] :fields Use a space seperated string of field parameters to include the data in the response. If omitted, the default list of fields will be returned. 
   # @option opts [String] :x_org_id 
   # @return [Command]
-  describe 'g_et_commands_id test' do
+  describe 'get_commands_id test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_files_command_id
+  # unit tests for get_files_command_id
   # Get a Command File
   # This endpoint returns the uploaded file(s) associated with a specific command.  #### Sample Request  &#x60;&#x60;&#x60; curl -X GET https://console.jumpcloud.com/api/files/command/{commandID} \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39;    &#x60;&#x60;&#x60;
   # @param id 
@@ -94,7 +94,7 @@ describe 'CommandsApi' do
   # @option opts [Integer] :skip The offset into the records to return.
   # @option opts [String] :x_org_id 
   # @return [Commandfilereturn]
-  describe 'g_et_files_command_id test' do
+  describe 'get_files_command_id test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

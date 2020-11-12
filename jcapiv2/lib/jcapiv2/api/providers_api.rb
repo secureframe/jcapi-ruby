@@ -32,8 +32,8 @@ module JCAPIv2
     # @option opts [Integer] :skip The offset into the records to return. (default to 0)
     # @option opts [Array<String>] :sort The comma separated fields used to sort the collection. Default sort is ascending, prefix with &#x60;-&#x60; to sort descending. 
     # @return [InlineResponse200]
-    def g_et_providers_provider_id_administrators(provider_id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_providers_provider_id_administrators_with_http_info(provider_id, accept, content_type, opts)
+    def get_providers_provider_id_administrators(provider_id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_providers_provider_id_administrators_with_http_info(provider_id, accept, content_type, opts)
       return data
     end
 
@@ -49,24 +49,24 @@ module JCAPIv2
     # @option opts [Integer] :skip The offset into the records to return.
     # @option opts [Array<String>] :sort The comma separated fields used to sort the collection. Default sort is ascending, prefix with &#x60;-&#x60; to sort descending. 
     # @return [Array<(InlineResponse200, Fixnum, Hash)>] InlineResponse200 data, response status code and response headers
-    def g_et_providers_provider_id_administrators_with_http_info(provider_id, accept, content_type, opts = {})
+    def get_providers_provider_id_administrators_with_http_info(provider_id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: ProvidersApi.g_et_providers_provider_id_administrators ..."
+        @api_client.config.logger.debug "Calling API: ProvidersApi.get_providers_provider_id_administrators ..."
       end
       # verify the required parameter 'provider_id' is set
       if @api_client.config.client_side_validation && provider_id.nil?
-        fail ArgumentError, "Missing the required parameter 'provider_id' when calling ProvidersApi.g_et_providers_provider_id_administrators"
+        fail ArgumentError, "Missing the required parameter 'provider_id' when calling ProvidersApi.get_providers_provider_id_administrators"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling ProvidersApi.g_et_providers_provider_id_administrators"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling ProvidersApi.get_providers_provider_id_administrators"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling ProvidersApi.g_et_providers_provider_id_administrators"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling ProvidersApi.get_providers_provider_id_administrators"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling ProvidersApi.g_et_providers_provider_id_administrators, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling ProvidersApi.get_providers_provider_id_administrators, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -103,7 +103,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'InlineResponse200')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: ProvidersApi#g_et_providers_provider_id_administrators\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: ProvidersApi#get_providers_provider_id_administrators\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

@@ -5,13 +5,13 @@ All URIs are relative to *https://console.jumpcloud.com/api/v2*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**d_elete_gsuites_gsuite_id_translationrules_id**](GSuiteApi.md#d_elete_gsuites_gsuite_id_translationrules_id) | **DELETE** /gsuites/{gsuite_id}/translationrules/{id} | Deletes a G Suite translation rule
-[**g_et_gsuites_gsuite_id_associations**](GSuiteApi.md#g_et_gsuites_gsuite_id_associations) | **GET** /gsuites/{gsuite_id}/associations | List the associations of a G Suite instance
-[**g_et_gsuites_gsuite_id_import_users**](GSuiteApi.md#g_et_gsuites_gsuite_id_import_users) | **GET** /gsuites/{gsuite_id}/import/users | Get a list of users to import
-[**g_et_gsuites_gsuite_id_translationrules**](GSuiteApi.md#g_et_gsuites_gsuite_id_translationrules) | **GET** /gsuites/{gsuite_id}/translationrules | List all the G Suite Translation Rules
-[**g_et_gsuites_gsuite_id_translationrules_id**](GSuiteApi.md#g_et_gsuites_gsuite_id_translationrules_id) | **GET** /gsuites/{gsuite_id}/translationrules/{id} | Gets a specific G Suite translation rule
-[**g_et_gsuites_gsuite_id_usergroups**](GSuiteApi.md#g_et_gsuites_gsuite_id_usergroups) | **GET** /gsuites/{gsuite_id}/usergroups | List the User Groups bound to a G Suite instance
-[**g_et_gsuites_gsuite_id_users**](GSuiteApi.md#g_et_gsuites_gsuite_id_users) | **GET** /gsuites/{gsuite_id}/users | List the Users bound to a G Suite instance
-[**g_et_gsuites_id**](GSuiteApi.md#g_et_gsuites_id) | **GET** /gsuites/{id} | Get G Suite
+[**get_gsuites_gsuite_id_associations**](GSuiteApi.md#get_gsuites_gsuite_id_associations) | **GET** /gsuites/{gsuite_id}/associations | List the associations of a G Suite instance
+[**get_gsuites_gsuite_id_import_users**](GSuiteApi.md#get_gsuites_gsuite_id_import_users) | **GET** /gsuites/{gsuite_id}/import/users | Get a list of users to import
+[**get_gsuites_gsuite_id_translationrules**](GSuiteApi.md#get_gsuites_gsuite_id_translationrules) | **GET** /gsuites/{gsuite_id}/translationrules | List all the G Suite Translation Rules
+[**get_gsuites_gsuite_id_translationrules_id**](GSuiteApi.md#get_gsuites_gsuite_id_translationrules_id) | **GET** /gsuites/{gsuite_id}/translationrules/{id} | Gets a specific G Suite translation rule
+[**get_gsuites_gsuite_id_usergroups**](GSuiteApi.md#get_gsuites_gsuite_id_usergroups) | **GET** /gsuites/{gsuite_id}/usergroups | List the User Groups bound to a G Suite instance
+[**get_gsuites_gsuite_id_users**](GSuiteApi.md#get_gsuites_gsuite_id_users) | **GET** /gsuites/{gsuite_id}/users | List the Users bound to a G Suite instance
+[**get_gsuites_id**](GSuiteApi.md#get_gsuites_id) | **GET** /gsuites/{id} | Get G Suite
 [**p_atch_gsuites_id**](GSuiteApi.md#p_atch_gsuites_id) | **PATCH** /gsuites/{id} | Update existing G Suite
 [**p_ost_gsuites_gsuite_id_associations**](GSuiteApi.md#p_ost_gsuites_gsuite_id_associations) | **POST** /gsuites/{gsuite_id}/associations | Manage the associations of a G Suite instance
 [**p_ost_gsuites_gsuite_id_translationrules**](GSuiteApi.md#p_ost_gsuites_gsuite_id_translationrules) | **POST** /gsuites/{gsuite_id}/translationrules | Create a new G Suite Translation Rule
@@ -79,8 +79,8 @@ nil (empty response body)
 
 
 
-# **g_et_gsuites_gsuite_id_associations**
-> Array&lt;GraphConnection&gt; g_et_gsuites_gsuite_id_associations(gsuite_idtargets, accept, content_type, opts)
+# **get_gsuites_gsuite_id_associations**
+> Array&lt;GraphConnection&gt; get_gsuites_gsuite_id_associations(gsuite_idtargets, accept, content_type, opts)
 
 List the associations of a G Suite instance
 
@@ -116,10 +116,10 @@ opts = {
 
 begin
   #List the associations of a G Suite instance
-  result = api_instance.g_et_gsuites_gsuite_id_associations(gsuite_idtargets, accept, content_type, opts)
+  result = api_instance.get_gsuites_gsuite_id_associations(gsuite_idtargets, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GSuiteApi->g_et_gsuites_gsuite_id_associations: #{e}"
+  puts "Exception when calling GSuiteApi->get_gsuites_gsuite_id_associations: #{e}"
 end
 ```
 
@@ -150,8 +150,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_gsuites_gsuite_id_import_users**
-> InlineResponse2002 g_et_gsuites_gsuite_id_import_users(gsuite_id, accept, content_type, opts)
+# **get_gsuites_gsuite_id_import_users**
+> InlineResponse2002 get_gsuites_gsuite_id_import_users(gsuite_id, accept, content_type, opts)
 
 Get a list of users to import
 
@@ -184,10 +184,10 @@ opts = {
 
 begin
   #Get a list of users to import
-  result = api_instance.g_et_gsuites_gsuite_id_import_users(gsuite_id, accept, content_type, opts)
+  result = api_instance.get_gsuites_gsuite_id_import_users(gsuite_id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GSuiteApi->g_et_gsuites_gsuite_id_import_users: #{e}"
+  puts "Exception when calling GSuiteApi->get_gsuites_gsuite_id_import_users: #{e}"
 end
 ```
 
@@ -216,8 +216,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_gsuites_gsuite_id_translationrules**
-> Array&lt;GSuiteTranslationRule&gt; g_et_gsuites_gsuite_id_translationrules(gsuite_id, accept, content_type, opts)
+# **get_gsuites_gsuite_id_translationrules**
+> Array&lt;GSuiteTranslationRule&gt; get_gsuites_gsuite_id_translationrules(gsuite_id, accept, content_type, opts)
 
 List all the G Suite Translation Rules
 
@@ -253,10 +253,10 @@ opts = {
 
 begin
   #List all the G Suite Translation Rules
-  result = api_instance.g_et_gsuites_gsuite_id_translationrules(gsuite_id, accept, content_type, opts)
+  result = api_instance.get_gsuites_gsuite_id_translationrules(gsuite_id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GSuiteApi->g_et_gsuites_gsuite_id_translationrules: #{e}"
+  puts "Exception when calling GSuiteApi->get_gsuites_gsuite_id_translationrules: #{e}"
 end
 ```
 
@@ -288,8 +288,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_gsuites_gsuite_id_translationrules_id**
-> GSuiteTranslationRule g_et_gsuites_gsuite_id_translationrules_id(gsuite_id, id, accept, content_type)
+# **get_gsuites_gsuite_id_translationrules_id**
+> GSuiteTranslationRule get_gsuites_gsuite_id_translationrules_id(gsuite_id, id, accept, content_type)
 
 Gets a specific G Suite translation rule
 
@@ -320,10 +320,10 @@ content_type = "application/json" # String |
 
 begin
   #Gets a specific G Suite translation rule
-  result = api_instance.g_et_gsuites_gsuite_id_translationrules_id(gsuite_id, id, accept, content_type)
+  result = api_instance.get_gsuites_gsuite_id_translationrules_id(gsuite_id, id, accept, content_type)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GSuiteApi->g_et_gsuites_gsuite_id_translationrules_id: #{e}"
+  puts "Exception when calling GSuiteApi->get_gsuites_gsuite_id_translationrules_id: #{e}"
 end
 ```
 
@@ -351,8 +351,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_gsuites_gsuite_id_usergroups**
-> Array&lt;GraphObjectWithPaths&gt; g_et_gsuites_gsuite_id_usergroups(gsuite_id, accept, content_type, opts)
+# **get_gsuites_gsuite_id_usergroups**
+> Array&lt;GraphObjectWithPaths&gt; get_gsuites_gsuite_id_usergroups(gsuite_id, accept, content_type, opts)
 
 List the User Groups bound to a G Suite instance
 
@@ -387,10 +387,10 @@ opts = {
 
 begin
   #List the User Groups bound to a G Suite instance
-  result = api_instance.g_et_gsuites_gsuite_id_usergroups(gsuite_id, accept, content_type, opts)
+  result = api_instance.get_gsuites_gsuite_id_usergroups(gsuite_id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GSuiteApi->g_et_gsuites_gsuite_id_usergroups: #{e}"
+  puts "Exception when calling GSuiteApi->get_gsuites_gsuite_id_usergroups: #{e}"
 end
 ```
 
@@ -421,8 +421,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_gsuites_gsuite_id_users**
-> Array&lt;GraphObjectWithPaths&gt; g_et_gsuites_gsuite_id_users(gsuite_id, accept, content_type, opts)
+# **get_gsuites_gsuite_id_users**
+> Array&lt;GraphObjectWithPaths&gt; get_gsuites_gsuite_id_users(gsuite_id, accept, content_type, opts)
 
 List the Users bound to a G Suite instance
 
@@ -457,10 +457,10 @@ opts = {
 
 begin
   #List the Users bound to a G Suite instance
-  result = api_instance.g_et_gsuites_gsuite_id_users(gsuite_id, accept, content_type, opts)
+  result = api_instance.get_gsuites_gsuite_id_users(gsuite_id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GSuiteApi->g_et_gsuites_gsuite_id_users: #{e}"
+  puts "Exception when calling GSuiteApi->get_gsuites_gsuite_id_users: #{e}"
 end
 ```
 
@@ -491,8 +491,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_gsuites_id**
-> GsuiteOutput g_et_gsuites_id(id, accept, content_type, opts)
+# **get_gsuites_id**
+> GsuiteOutput get_gsuites_id(id, accept, content_type, opts)
 
 Get G Suite
 
@@ -524,10 +524,10 @@ opts = {
 
 begin
   #Get G Suite
-  result = api_instance.g_et_gsuites_id(id, accept, content_type, opts)
+  result = api_instance.get_gsuites_id(id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GSuiteApi->g_et_gsuites_id: #{e}"
+  puts "Exception when calling GSuiteApi->get_gsuites_id: #{e}"
 end
 ```
 

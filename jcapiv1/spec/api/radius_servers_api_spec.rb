@@ -47,7 +47,7 @@ describe 'RadiusServersApi' do
     end
   end
 
-  # unit tests for g_et_radiusservers
+  # unit tests for get_radiusservers
   # List Radius Servers
   # This endpoint allows you to get a list of all RADIUS servers in your organization.  #### Sample Request &#x60;&#x60;&#x60; curl -X GET https://console.jumpcloud.com/api/radiusservers/ \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; \\ &#x60;&#x60;&#x60;
   # @param accept 
@@ -60,13 +60,13 @@ describe 'RadiusServersApi' do
   # @option opts [String] :sort Use space separated sort parameters to sort the collection. Default sort is ascending. Prefix with &#x60;-&#x60; to sort descending. 
   # @option opts [String] :x_org_id 
   # @return [Radiusserverslist]
-  describe 'g_et_radiusservers test' do
+  describe 'get_radiusservers test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_radiusservers_id
+  # unit tests for get_radiusservers_id
   # Get Radius Server
   # This endpoint allows you to get a RADIUS server in your organization.  ####  &#x60;&#x60;&#x60; curl -X PUT https://console.jumpcloud.com/api/radiusservers/{ServerID} \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; \\ &#x60;&#x60;&#x60;
   # @param id 
@@ -75,7 +75,7 @@ describe 'RadiusServersApi' do
   # @param [Hash] opts the optional parameters
   # @option opts [String] :x_org_id 
   # @return [Radiusserver]
-  describe 'g_et_radiusservers_id test' do
+  describe 'get_radiusservers_id test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

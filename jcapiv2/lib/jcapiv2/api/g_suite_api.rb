@@ -105,8 +105,8 @@ module JCAPIv2
     # @option opts [Integer] :skip The offset into the records to return. (default to 0)
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<GraphConnection>]
-    def g_et_gsuites_gsuite_id_associations(gsuite_id, targets, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_gsuites_gsuite_id_associations_with_http_info(gsuite_id, targets, accept, content_type, opts)
+    def get_gsuites_gsuite_id_associations(gsuite_id, targets, accept, content_type, opts = {})
+      data, _status_code, _headers = get_gsuites_gsuite_id_associations_with_http_info(gsuite_id, targets, accept, content_type, opts)
       return data
     end
 
@@ -121,28 +121,28 @@ module JCAPIv2
     # @option opts [Integer] :skip The offset into the records to return.
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<GraphConnection>, Fixnum, Hash)>] Array<GraphConnection> data, response status code and response headers
-    def g_et_gsuites_gsuite_id_associations_with_http_info(gsuite_id, targets, accept, content_type, opts = {})
+    def get_gsuites_gsuite_id_associations_with_http_info(gsuite_id, targets, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GSuiteApi.g_et_gsuites_gsuite_id_associations ..."
+        @api_client.config.logger.debug "Calling API: GSuiteApi.get_gsuites_gsuite_id_associations ..."
       end
       # verify the required parameter 'gsuite_id' is set
       if @api_client.config.client_side_validation && gsuite_id.nil?
-        fail ArgumentError, "Missing the required parameter 'gsuite_id' when calling GSuiteApi.g_et_gsuites_gsuite_id_associations"
+        fail ArgumentError, "Missing the required parameter 'gsuite_id' when calling GSuiteApi.get_gsuites_gsuite_id_associations"
       end
       # verify the required parameter 'targets' is set
       if @api_client.config.client_side_validation && targets.nil?
-        fail ArgumentError, "Missing the required parameter 'targets' when calling GSuiteApi.g_et_gsuites_gsuite_id_associations"
+        fail ArgumentError, "Missing the required parameter 'targets' when calling GSuiteApi.get_gsuites_gsuite_id_associations"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling GSuiteApi.g_et_gsuites_gsuite_id_associations"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling GSuiteApi.get_gsuites_gsuite_id_associations"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling GSuiteApi.g_et_gsuites_gsuite_id_associations"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling GSuiteApi.get_gsuites_gsuite_id_associations"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GSuiteApi.g_et_gsuites_gsuite_id_associations, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GSuiteApi.get_gsuites_gsuite_id_associations, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -178,7 +178,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<GraphConnection>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GSuiteApi#g_et_gsuites_gsuite_id_associations\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GSuiteApi#get_gsuites_gsuite_id_associations\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -192,8 +192,8 @@ module JCAPIv2
     # @option opts [Integer] :limit The number of records to return at once. Limited to 100. (default to 10)
     # @option opts [String] :page_token Token used to access next page of results.
     # @return [InlineResponse2002]
-    def g_et_gsuites_gsuite_id_import_users(gsuite_id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_gsuites_gsuite_id_import_users_with_http_info(gsuite_id, accept, content_type, opts)
+    def get_gsuites_gsuite_id_import_users(gsuite_id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_gsuites_gsuite_id_import_users_with_http_info(gsuite_id, accept, content_type, opts)
       return data
     end
 
@@ -206,21 +206,21 @@ module JCAPIv2
     # @option opts [Integer] :limit The number of records to return at once. Limited to 100.
     # @option opts [String] :page_token Token used to access next page of results.
     # @return [Array<(InlineResponse2002, Fixnum, Hash)>] InlineResponse2002 data, response status code and response headers
-    def g_et_gsuites_gsuite_id_import_users_with_http_info(gsuite_id, accept, content_type, opts = {})
+    def get_gsuites_gsuite_id_import_users_with_http_info(gsuite_id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GSuiteApi.g_et_gsuites_gsuite_id_import_users ..."
+        @api_client.config.logger.debug "Calling API: GSuiteApi.get_gsuites_gsuite_id_import_users ..."
       end
       # verify the required parameter 'gsuite_id' is set
       if @api_client.config.client_side_validation && gsuite_id.nil?
-        fail ArgumentError, "Missing the required parameter 'gsuite_id' when calling GSuiteApi.g_et_gsuites_gsuite_id_import_users"
+        fail ArgumentError, "Missing the required parameter 'gsuite_id' when calling GSuiteApi.get_gsuites_gsuite_id_import_users"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling GSuiteApi.g_et_gsuites_gsuite_id_import_users"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling GSuiteApi.get_gsuites_gsuite_id_import_users"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling GSuiteApi.g_et_gsuites_gsuite_id_import_users"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling GSuiteApi.get_gsuites_gsuite_id_import_users"
       end
       # resource path
       local_var_path = "/gsuites/{gsuite_id}/import/users".sub('{' + 'gsuite_id' + '}', gsuite_id.to_s)
@@ -253,7 +253,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'InlineResponse2002')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GSuiteApi#g_et_gsuites_gsuite_id_import_users\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GSuiteApi#get_gsuites_gsuite_id_import_users\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -270,8 +270,8 @@ module JCAPIv2
     # @option opts [Integer] :skip The offset into the records to return. (default to 0)
     # @option opts [Array<String>] :sort The comma separated fields used to sort the collection. Default sort is ascending, prefix with &#x60;-&#x60; to sort descending. 
     # @return [Array<GSuiteTranslationRule>]
-    def g_et_gsuites_gsuite_id_translationrules(gsuite_id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_gsuites_gsuite_id_translationrules_with_http_info(gsuite_id, accept, content_type, opts)
+    def get_gsuites_gsuite_id_translationrules(gsuite_id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_gsuites_gsuite_id_translationrules_with_http_info(gsuite_id, accept, content_type, opts)
       return data
     end
 
@@ -287,24 +287,24 @@ module JCAPIv2
     # @option opts [Integer] :skip The offset into the records to return.
     # @option opts [Array<String>] :sort The comma separated fields used to sort the collection. Default sort is ascending, prefix with &#x60;-&#x60; to sort descending. 
     # @return [Array<(Array<GSuiteTranslationRule>, Fixnum, Hash)>] Array<GSuiteTranslationRule> data, response status code and response headers
-    def g_et_gsuites_gsuite_id_translationrules_with_http_info(gsuite_id, accept, content_type, opts = {})
+    def get_gsuites_gsuite_id_translationrules_with_http_info(gsuite_id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GSuiteApi.g_et_gsuites_gsuite_id_translationrules ..."
+        @api_client.config.logger.debug "Calling API: GSuiteApi.get_gsuites_gsuite_id_translationrules ..."
       end
       # verify the required parameter 'gsuite_id' is set
       if @api_client.config.client_side_validation && gsuite_id.nil?
-        fail ArgumentError, "Missing the required parameter 'gsuite_id' when calling GSuiteApi.g_et_gsuites_gsuite_id_translationrules"
+        fail ArgumentError, "Missing the required parameter 'gsuite_id' when calling GSuiteApi.get_gsuites_gsuite_id_translationrules"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling GSuiteApi.g_et_gsuites_gsuite_id_translationrules"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling GSuiteApi.get_gsuites_gsuite_id_translationrules"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling GSuiteApi.g_et_gsuites_gsuite_id_translationrules"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling GSuiteApi.get_gsuites_gsuite_id_translationrules"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GSuiteApi.g_et_gsuites_gsuite_id_translationrules, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GSuiteApi.get_gsuites_gsuite_id_translationrules, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -341,7 +341,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<GSuiteTranslationRule>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GSuiteApi#g_et_gsuites_gsuite_id_translationrules\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GSuiteApi#get_gsuites_gsuite_id_translationrules\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -354,8 +354,8 @@ module JCAPIv2
     # @param content_type 
     # @param [Hash] opts the optional parameters
     # @return [GSuiteTranslationRule]
-    def g_et_gsuites_gsuite_id_translationrules_id(gsuite_id, id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_gsuites_gsuite_id_translationrules_id_with_http_info(gsuite_id, id, accept, content_type, opts)
+    def get_gsuites_gsuite_id_translationrules_id(gsuite_id, id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_gsuites_gsuite_id_translationrules_id_with_http_info(gsuite_id, id, accept, content_type, opts)
       return data
     end
 
@@ -367,25 +367,25 @@ module JCAPIv2
     # @param content_type 
     # @param [Hash] opts the optional parameters
     # @return [Array<(GSuiteTranslationRule, Fixnum, Hash)>] GSuiteTranslationRule data, response status code and response headers
-    def g_et_gsuites_gsuite_id_translationrules_id_with_http_info(gsuite_id, id, accept, content_type, opts = {})
+    def get_gsuites_gsuite_id_translationrules_id_with_http_info(gsuite_id, id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GSuiteApi.g_et_gsuites_gsuite_id_translationrules_id ..."
+        @api_client.config.logger.debug "Calling API: GSuiteApi.get_gsuites_gsuite_id_translationrules_id ..."
       end
       # verify the required parameter 'gsuite_id' is set
       if @api_client.config.client_side_validation && gsuite_id.nil?
-        fail ArgumentError, "Missing the required parameter 'gsuite_id' when calling GSuiteApi.g_et_gsuites_gsuite_id_translationrules_id"
+        fail ArgumentError, "Missing the required parameter 'gsuite_id' when calling GSuiteApi.get_gsuites_gsuite_id_translationrules_id"
       end
       # verify the required parameter 'id' is set
       if @api_client.config.client_side_validation && id.nil?
-        fail ArgumentError, "Missing the required parameter 'id' when calling GSuiteApi.g_et_gsuites_gsuite_id_translationrules_id"
+        fail ArgumentError, "Missing the required parameter 'id' when calling GSuiteApi.get_gsuites_gsuite_id_translationrules_id"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling GSuiteApi.g_et_gsuites_gsuite_id_translationrules_id"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling GSuiteApi.get_gsuites_gsuite_id_translationrules_id"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling GSuiteApi.g_et_gsuites_gsuite_id_translationrules_id"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling GSuiteApi.get_gsuites_gsuite_id_translationrules_id"
       end
       # resource path
       local_var_path = "/gsuites/{gsuite_id}/translationrules/{id}".sub('{' + 'gsuite_id' + '}', gsuite_id.to_s).sub('{' + 'id' + '}', id.to_s)
@@ -416,7 +416,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'GSuiteTranslationRule')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GSuiteApi#g_et_gsuites_gsuite_id_translationrules_id\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GSuiteApi#get_gsuites_gsuite_id_translationrules_id\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -432,8 +432,8 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<GraphObjectWithPaths>]
-    def g_et_gsuites_gsuite_id_usergroups(gsuite_id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_gsuites_gsuite_id_usergroups_with_http_info(gsuite_id, accept, content_type, opts)
+    def get_gsuites_gsuite_id_usergroups(gsuite_id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_gsuites_gsuite_id_usergroups_with_http_info(gsuite_id, accept, content_type, opts)
       return data
     end
 
@@ -448,24 +448,24 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<GraphObjectWithPaths>, Fixnum, Hash)>] Array<GraphObjectWithPaths> data, response status code and response headers
-    def g_et_gsuites_gsuite_id_usergroups_with_http_info(gsuite_id, accept, content_type, opts = {})
+    def get_gsuites_gsuite_id_usergroups_with_http_info(gsuite_id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GSuiteApi.g_et_gsuites_gsuite_id_usergroups ..."
+        @api_client.config.logger.debug "Calling API: GSuiteApi.get_gsuites_gsuite_id_usergroups ..."
       end
       # verify the required parameter 'gsuite_id' is set
       if @api_client.config.client_side_validation && gsuite_id.nil?
-        fail ArgumentError, "Missing the required parameter 'gsuite_id' when calling GSuiteApi.g_et_gsuites_gsuite_id_usergroups"
+        fail ArgumentError, "Missing the required parameter 'gsuite_id' when calling GSuiteApi.get_gsuites_gsuite_id_usergroups"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling GSuiteApi.g_et_gsuites_gsuite_id_usergroups"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling GSuiteApi.get_gsuites_gsuite_id_usergroups"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling GSuiteApi.g_et_gsuites_gsuite_id_usergroups"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling GSuiteApi.get_gsuites_gsuite_id_usergroups"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GSuiteApi.g_et_gsuites_gsuite_id_usergroups, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GSuiteApi.get_gsuites_gsuite_id_usergroups, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -501,7 +501,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<GraphObjectWithPaths>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GSuiteApi#g_et_gsuites_gsuite_id_usergroups\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GSuiteApi#get_gsuites_gsuite_id_usergroups\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -517,8 +517,8 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<GraphObjectWithPaths>]
-    def g_et_gsuites_gsuite_id_users(gsuite_id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_gsuites_gsuite_id_users_with_http_info(gsuite_id, accept, content_type, opts)
+    def get_gsuites_gsuite_id_users(gsuite_id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_gsuites_gsuite_id_users_with_http_info(gsuite_id, accept, content_type, opts)
       return data
     end
 
@@ -533,24 +533,24 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<GraphObjectWithPaths>, Fixnum, Hash)>] Array<GraphObjectWithPaths> data, response status code and response headers
-    def g_et_gsuites_gsuite_id_users_with_http_info(gsuite_id, accept, content_type, opts = {})
+    def get_gsuites_gsuite_id_users_with_http_info(gsuite_id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GSuiteApi.g_et_gsuites_gsuite_id_users ..."
+        @api_client.config.logger.debug "Calling API: GSuiteApi.get_gsuites_gsuite_id_users ..."
       end
       # verify the required parameter 'gsuite_id' is set
       if @api_client.config.client_side_validation && gsuite_id.nil?
-        fail ArgumentError, "Missing the required parameter 'gsuite_id' when calling GSuiteApi.g_et_gsuites_gsuite_id_users"
+        fail ArgumentError, "Missing the required parameter 'gsuite_id' when calling GSuiteApi.get_gsuites_gsuite_id_users"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling GSuiteApi.g_et_gsuites_gsuite_id_users"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling GSuiteApi.get_gsuites_gsuite_id_users"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling GSuiteApi.g_et_gsuites_gsuite_id_users"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling GSuiteApi.get_gsuites_gsuite_id_users"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GSuiteApi.g_et_gsuites_gsuite_id_users, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GSuiteApi.get_gsuites_gsuite_id_users, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -586,7 +586,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<GraphObjectWithPaths>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GSuiteApi#g_et_gsuites_gsuite_id_users\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GSuiteApi#get_gsuites_gsuite_id_users\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -599,8 +599,8 @@ module JCAPIv2
     # @param [Hash] opts the optional parameters
     # @option opts [String] :x_org_id  (default to )
     # @return [GsuiteOutput]
-    def g_et_gsuites_id(id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_gsuites_id_with_http_info(id, accept, content_type, opts)
+    def get_gsuites_id(id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_gsuites_id_with_http_info(id, accept, content_type, opts)
       return data
     end
 
@@ -612,21 +612,21 @@ module JCAPIv2
     # @param [Hash] opts the optional parameters
     # @option opts [String] :x_org_id 
     # @return [Array<(GsuiteOutput, Fixnum, Hash)>] GsuiteOutput data, response status code and response headers
-    def g_et_gsuites_id_with_http_info(id, accept, content_type, opts = {})
+    def get_gsuites_id_with_http_info(id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GSuiteApi.g_et_gsuites_id ..."
+        @api_client.config.logger.debug "Calling API: GSuiteApi.get_gsuites_id ..."
       end
       # verify the required parameter 'id' is set
       if @api_client.config.client_side_validation && id.nil?
-        fail ArgumentError, "Missing the required parameter 'id' when calling GSuiteApi.g_et_gsuites_id"
+        fail ArgumentError, "Missing the required parameter 'id' when calling GSuiteApi.get_gsuites_id"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling GSuiteApi.g_et_gsuites_id"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling GSuiteApi.get_gsuites_id"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling GSuiteApi.g_et_gsuites_id"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling GSuiteApi.get_gsuites_id"
       end
       # resource path
       local_var_path = "/gsuites/{id}".sub('{' + 'id' + '}', id.to_s)
@@ -658,7 +658,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'GsuiteOutput')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GSuiteApi#g_et_gsuites_id\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GSuiteApi#get_gsuites_id\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

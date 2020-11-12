@@ -177,8 +177,8 @@ module JCAPIv2
     # @param [Hash] opts the optional parameters
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<DuoAccount>]
-    def g_et_duo_accounts(accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_duo_accounts_with_http_info(accept, content_type, opts)
+    def get_duo_accounts(accept, content_type, opts = {})
+      data, _status_code, _headers = get_duo_accounts_with_http_info(accept, content_type, opts)
       return data
     end
 
@@ -189,17 +189,17 @@ module JCAPIv2
     # @param [Hash] opts the optional parameters
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<DuoAccount>, Fixnum, Hash)>] Array<DuoAccount> data, response status code and response headers
-    def g_et_duo_accounts_with_http_info(accept, content_type, opts = {})
+    def get_duo_accounts_with_http_info(accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: DuoApi.g_et_duo_accounts ..."
+        @api_client.config.logger.debug "Calling API: DuoApi.get_duo_accounts ..."
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling DuoApi.g_et_duo_accounts"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling DuoApi.get_duo_accounts"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling DuoApi.g_et_duo_accounts"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling DuoApi.get_duo_accounts"
       end
       # resource path
       local_var_path = "/duo/accounts"
@@ -231,7 +231,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<DuoAccount>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: DuoApi#g_et_duo_accounts\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: DuoApi#get_duo_accounts\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -244,8 +244,8 @@ module JCAPIv2
     # @param [Hash] opts the optional parameters
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<DuoApplication>]
-    def g_et_duo_accounts_account_id_applications(account_id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_duo_accounts_account_id_applications_with_http_info(account_id, accept, content_type, opts)
+    def get_duo_accounts_account_id_applications(account_id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_duo_accounts_account_id_applications_with_http_info(account_id, accept, content_type, opts)
       return data
     end
 
@@ -257,21 +257,21 @@ module JCAPIv2
     # @param [Hash] opts the optional parameters
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<DuoApplication>, Fixnum, Hash)>] Array<DuoApplication> data, response status code and response headers
-    def g_et_duo_accounts_account_id_applications_with_http_info(account_id, accept, content_type, opts = {})
+    def get_duo_accounts_account_id_applications_with_http_info(account_id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: DuoApi.g_et_duo_accounts_account_id_applications ..."
+        @api_client.config.logger.debug "Calling API: DuoApi.get_duo_accounts_account_id_applications ..."
       end
       # verify the required parameter 'account_id' is set
       if @api_client.config.client_side_validation && account_id.nil?
-        fail ArgumentError, "Missing the required parameter 'account_id' when calling DuoApi.g_et_duo_accounts_account_id_applications"
+        fail ArgumentError, "Missing the required parameter 'account_id' when calling DuoApi.get_duo_accounts_account_id_applications"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling DuoApi.g_et_duo_accounts_account_id_applications"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling DuoApi.get_duo_accounts_account_id_applications"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling DuoApi.g_et_duo_accounts_account_id_applications"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling DuoApi.get_duo_accounts_account_id_applications"
       end
       # resource path
       local_var_path = "/duo/accounts/{account_id}/applications".sub('{' + 'account_id' + '}', account_id.to_s)
@@ -303,7 +303,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<DuoApplication>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: DuoApi#g_et_duo_accounts_account_id_applications\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: DuoApi#get_duo_accounts_account_id_applications\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -317,8 +317,8 @@ module JCAPIv2
     # @param [Hash] opts the optional parameters
     # @option opts [String] :x_org_id  (default to )
     # @return [DuoApplication]
-    def g_et_duo_accounts_account_id_applications_application_id(account_id, application_id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_duo_accounts_account_id_applications_application_id_with_http_info(account_id, application_id, accept, content_type, opts)
+    def get_duo_accounts_account_id_applications_application_id(account_id, application_id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_duo_accounts_account_id_applications_application_id_with_http_info(account_id, application_id, accept, content_type, opts)
       return data
     end
 
@@ -331,25 +331,25 @@ module JCAPIv2
     # @param [Hash] opts the optional parameters
     # @option opts [String] :x_org_id 
     # @return [Array<(DuoApplication, Fixnum, Hash)>] DuoApplication data, response status code and response headers
-    def g_et_duo_accounts_account_id_applications_application_id_with_http_info(account_id, application_id, accept, content_type, opts = {})
+    def get_duo_accounts_account_id_applications_application_id_with_http_info(account_id, application_id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: DuoApi.g_et_duo_accounts_account_id_applications_application_id ..."
+        @api_client.config.logger.debug "Calling API: DuoApi.get_duo_accounts_account_id_applications_application_id ..."
       end
       # verify the required parameter 'account_id' is set
       if @api_client.config.client_side_validation && account_id.nil?
-        fail ArgumentError, "Missing the required parameter 'account_id' when calling DuoApi.g_et_duo_accounts_account_id_applications_application_id"
+        fail ArgumentError, "Missing the required parameter 'account_id' when calling DuoApi.get_duo_accounts_account_id_applications_application_id"
       end
       # verify the required parameter 'application_id' is set
       if @api_client.config.client_side_validation && application_id.nil?
-        fail ArgumentError, "Missing the required parameter 'application_id' when calling DuoApi.g_et_duo_accounts_account_id_applications_application_id"
+        fail ArgumentError, "Missing the required parameter 'application_id' when calling DuoApi.get_duo_accounts_account_id_applications_application_id"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling DuoApi.g_et_duo_accounts_account_id_applications_application_id"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling DuoApi.get_duo_accounts_account_id_applications_application_id"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling DuoApi.g_et_duo_accounts_account_id_applications_application_id"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling DuoApi.get_duo_accounts_account_id_applications_application_id"
       end
       # resource path
       local_var_path = "/duo/accounts/{account_id}/applications/{application_id}".sub('{' + 'account_id' + '}', account_id.to_s).sub('{' + 'application_id' + '}', application_id.to_s)
@@ -381,7 +381,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'DuoApplication')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: DuoApi#g_et_duo_accounts_account_id_applications_application_id\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: DuoApi#get_duo_accounts_account_id_applications_application_id\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -394,8 +394,8 @@ module JCAPIv2
     # @param [Hash] opts the optional parameters
     # @option opts [String] :x_org_id  (default to )
     # @return [DuoAccount]
-    def g_et_duo_accounts_id(id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_duo_accounts_id_with_http_info(id, accept, content_type, opts)
+    def get_duo_accounts_id(id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_duo_accounts_id_with_http_info(id, accept, content_type, opts)
       return data
     end
 
@@ -407,21 +407,21 @@ module JCAPIv2
     # @param [Hash] opts the optional parameters
     # @option opts [String] :x_org_id 
     # @return [Array<(DuoAccount, Fixnum, Hash)>] DuoAccount data, response status code and response headers
-    def g_et_duo_accounts_id_with_http_info(id, accept, content_type, opts = {})
+    def get_duo_accounts_id_with_http_info(id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: DuoApi.g_et_duo_accounts_id ..."
+        @api_client.config.logger.debug "Calling API: DuoApi.get_duo_accounts_id ..."
       end
       # verify the required parameter 'id' is set
       if @api_client.config.client_side_validation && id.nil?
-        fail ArgumentError, "Missing the required parameter 'id' when calling DuoApi.g_et_duo_accounts_id"
+        fail ArgumentError, "Missing the required parameter 'id' when calling DuoApi.get_duo_accounts_id"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling DuoApi.g_et_duo_accounts_id"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling DuoApi.get_duo_accounts_id"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling DuoApi.g_et_duo_accounts_id"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling DuoApi.get_duo_accounts_id"
       end
       # resource path
       local_var_path = "/duo/accounts/{id}".sub('{' + 'id' + '}', id.to_s)
@@ -453,7 +453,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'DuoAccount')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: DuoApi#g_et_duo_accounts_id\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: DuoApi#get_duo_accounts_id\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

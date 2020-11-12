@@ -4,12 +4,12 @@ All URIs are relative to *https://console.jumpcloud.com/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**g_et_providers_provider_id_administrators**](ProvidersApi.md#g_et_providers_provider_id_administrators) | **GET** /providers/{provider_id}/administrators | List Provider Administrators
+[**get_providers_provider_id_administrators**](ProvidersApi.md#get_providers_provider_id_administrators) | **GET** /providers/{provider_id}/administrators | List Provider Administrators
 [**p_ost_providers_provider_id_administrators**](ProvidersApi.md#p_ost_providers_provider_id_administrators) | **POST** /providers/{provider_id}/administrators | Create a new Provider Administrator
 
 
-# **g_et_providers_provider_id_administrators**
-> InlineResponse200 g_et_providers_provider_id_administrators(provider_id, accept, content_type, opts)
+# **get_providers_provider_id_administrators**
+> InlineResponse200 get_providers_provider_id_administrators(provider_id, accept, content_type, opts)
 
 List Provider Administrators
 
@@ -45,10 +45,10 @@ opts = {
 
 begin
   #List Provider Administrators
-  result = api_instance.g_et_providers_provider_id_administrators(provider_id, accept, content_type, opts)
+  result = api_instance.get_providers_provider_id_administrators(provider_id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling ProvidersApi->g_et_providers_provider_id_administrators: #{e}"
+  puts "Exception when calling ProvidersApi->get_providers_provider_id_administrators: #{e}"
 end
 ```
 

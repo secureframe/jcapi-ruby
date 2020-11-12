@@ -6,9 +6,9 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**d_elete_systemusers_id**](SystemusersApi.md#d_elete_systemusers_id) | **DELETE** /systemusers/{id} | Delete a system user
 [**d_elete_systemusers_systemuser_id_sshkeys_id**](SystemusersApi.md#d_elete_systemusers_systemuser_id_sshkeys_id) | **DELETE** /systemusers/{systemuser_id}/sshkeys/{id} | Delete a system user&#39;s Public SSH Keys
-[**g_et_systemusers**](SystemusersApi.md#g_et_systemusers) | **GET** /systemusers | List all system users
-[**g_et_systemusers_id**](SystemusersApi.md#g_et_systemusers_id) | **GET** /systemusers/{id} | List a system user
-[**g_et_systemusers_id_sshkeys**](SystemusersApi.md#g_et_systemusers_id_sshkeys) | **GET** /systemusers/{id}/sshkeys | List a system user&#39;s public SSH keys
+[**get_systemusers**](SystemusersApi.md#get_systemusers) | **GET** /systemusers | List all system users
+[**get_systemusers_id**](SystemusersApi.md#get_systemusers_id) | **GET** /systemusers/{id} | List a system user
+[**get_systemusers_id_sshkeys**](SystemusersApi.md#get_systemusers_id_sshkeys) | **GET** /systemusers/{id}/sshkeys | List a system user&#39;s public SSH keys
 [**p_ost_systemusers**](SystemusersApi.md#p_ost_systemusers) | **POST** /systemusers | Create a system user
 [**p_ost_systemusers_id_expire**](SystemusersApi.md#p_ost_systemusers_id_expire) | **POST** /systemusers/{id}/expire | Expire a system user&#39;s password
 [**p_ost_systemusers_id_resetmfa**](SystemusersApi.md#p_ost_systemusers_id_resetmfa) | **POST** /systemusers/{id}/resetmfa | Reset a system user&#39;s MFA token
@@ -147,8 +147,8 @@ nil (empty response body)
 
 
 
-# **g_et_systemusers**
-> Systemuserslist g_et_systemusers(accept, content_type, opts)
+# **get_systemusers**
+> Systemuserslist get_systemusers(accept, content_type, opts)
 
 List all system users
 
@@ -184,10 +184,10 @@ opts = {
 
 begin
   #List all system users
-  result = api_instance.g_et_systemusers(accept, content_type, opts)
+  result = api_instance.get_systemusers(accept, content_type, opts)
   p result
 rescue JCAPIv1::ApiError => e
-  puts "Exception when calling SystemusersApi->g_et_systemusers: #{e}"
+  puts "Exception when calling SystemusersApi->get_systemusers: #{e}"
 end
 ```
 
@@ -220,8 +220,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_systemusers_id**
-> Systemuserreturn g_et_systemusers_id(id, accept, content_type, opts)
+# **get_systemusers_id**
+> Systemuserreturn get_systemusers_id(id, accept, content_type, opts)
 
 List a system user
 
@@ -255,10 +255,10 @@ opts = {
 
 begin
   #List a system user
-  result = api_instance.g_et_systemusers_id(id, accept, content_type, opts)
+  result = api_instance.get_systemusers_id(id, accept, content_type, opts)
   p result
 rescue JCAPIv1::ApiError => e
-  puts "Exception when calling SystemusersApi->g_et_systemusers_id: #{e}"
+  puts "Exception when calling SystemusersApi->get_systemusers_id: #{e}"
 end
 ```
 
@@ -288,8 +288,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_systemusers_id_sshkeys**
-> Array&lt;Sshkeylist&gt; g_et_systemusers_id_sshkeys(id, accept, content_type, opts)
+# **get_systemusers_id_sshkeys**
+> Array&lt;Sshkeylist&gt; get_systemusers_id_sshkeys(id, accept, content_type, opts)
 
 List a system user's public SSH keys
 
@@ -321,10 +321,10 @@ opts = {
 
 begin
   #List a system user's public SSH keys
-  result = api_instance.g_et_systemusers_id_sshkeys(id, accept, content_type, opts)
+  result = api_instance.get_systemusers_id_sshkeys(id, accept, content_type, opts)
   p result
 rescue JCAPIv1::ApiError => e
-  puts "Exception when calling SystemusersApi->g_et_systemusers_id_sshkeys: #{e}"
+  puts "Exception when calling SystemusersApi->get_systemusers_id_sshkeys: #{e}"
 end
 ```
 

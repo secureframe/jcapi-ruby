@@ -103,8 +103,8 @@ module JCAPIv2
     # @option opts [String] :accept  (default to application/json)
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<SambaDomainOutput>]
-    def g_et_ldapservers_ldapserver_id_sambadomains(ldapserver_id, opts = {})
-      data, _status_code, _headers = g_et_ldapservers_ldapserver_id_sambadomains_with_http_info(ldapserver_id, opts)
+    def get_ldapservers_ldapserver_id_sambadomains(ldapserver_id, opts = {})
+      data, _status_code, _headers = get_ldapservers_ldapserver_id_sambadomains_with_http_info(ldapserver_id, opts)
       return data
     end
 
@@ -121,16 +121,16 @@ module JCAPIv2
     # @option opts [String] :accept 
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<SambaDomainOutput>, Fixnum, Hash)>] Array<SambaDomainOutput> data, response status code and response headers
-    def g_et_ldapservers_ldapserver_id_sambadomains_with_http_info(ldapserver_id, opts = {})
+    def get_ldapservers_ldapserver_id_sambadomains_with_http_info(ldapserver_id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SambaDomainsApi.g_et_ldapservers_ldapserver_id_sambadomains ..."
+        @api_client.config.logger.debug "Calling API: SambaDomainsApi.get_ldapservers_ldapserver_id_sambadomains ..."
       end
       # verify the required parameter 'ldapserver_id' is set
       if @api_client.config.client_side_validation && ldapserver_id.nil?
-        fail ArgumentError, "Missing the required parameter 'ldapserver_id' when calling SambaDomainsApi.g_et_ldapservers_ldapserver_id_sambadomains"
+        fail ArgumentError, "Missing the required parameter 'ldapserver_id' when calling SambaDomainsApi.get_ldapservers_ldapserver_id_sambadomains"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SambaDomainsApi.g_et_ldapservers_ldapserver_id_sambadomains, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SambaDomainsApi.get_ldapservers_ldapserver_id_sambadomains, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -168,7 +168,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<SambaDomainOutput>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SambaDomainsApi#g_et_ldapservers_ldapserver_id_sambadomains\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SambaDomainsApi#get_ldapservers_ldapserver_id_sambadomains\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -182,8 +182,8 @@ module JCAPIv2
     # @option opts [String] :accept  (default to application/json)
     # @option opts [String] :x_org_id  (default to )
     # @return [SambaDomainOutput]
-    def g_et_ldapservers_ldapserver_id_sambadomains_id(ldapserver_id, id, opts = {})
-      data, _status_code, _headers = g_et_ldapservers_ldapserver_id_sambadomains_id_with_http_info(ldapserver_id, id, opts)
+    def get_ldapservers_ldapserver_id_sambadomains_id(ldapserver_id, id, opts = {})
+      data, _status_code, _headers = get_ldapservers_ldapserver_id_sambadomains_id_with_http_info(ldapserver_id, id, opts)
       return data
     end
 
@@ -196,17 +196,17 @@ module JCAPIv2
     # @option opts [String] :accept 
     # @option opts [String] :x_org_id 
     # @return [Array<(SambaDomainOutput, Fixnum, Hash)>] SambaDomainOutput data, response status code and response headers
-    def g_et_ldapservers_ldapserver_id_sambadomains_id_with_http_info(ldapserver_id, id, opts = {})
+    def get_ldapservers_ldapserver_id_sambadomains_id_with_http_info(ldapserver_id, id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SambaDomainsApi.g_et_ldapservers_ldapserver_id_sambadomains_id ..."
+        @api_client.config.logger.debug "Calling API: SambaDomainsApi.get_ldapservers_ldapserver_id_sambadomains_id ..."
       end
       # verify the required parameter 'ldapserver_id' is set
       if @api_client.config.client_side_validation && ldapserver_id.nil?
-        fail ArgumentError, "Missing the required parameter 'ldapserver_id' when calling SambaDomainsApi.g_et_ldapservers_ldapserver_id_sambadomains_id"
+        fail ArgumentError, "Missing the required parameter 'ldapserver_id' when calling SambaDomainsApi.get_ldapservers_ldapserver_id_sambadomains_id"
       end
       # verify the required parameter 'id' is set
       if @api_client.config.client_side_validation && id.nil?
-        fail ArgumentError, "Missing the required parameter 'id' when calling SambaDomainsApi.g_et_ldapservers_ldapserver_id_sambadomains_id"
+        fail ArgumentError, "Missing the required parameter 'id' when calling SambaDomainsApi.get_ldapservers_ldapserver_id_sambadomains_id"
       end
       # resource path
       local_var_path = "/ldapservers/{ldapserver_id}/sambadomains/{id}".sub('{' + 'ldapserver_id' + '}', ldapserver_id.to_s).sub('{' + 'id' + '}', id.to_s)
@@ -238,7 +238,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'SambaDomainOutput')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SambaDomainsApi#g_et_ldapservers_ldapserver_id_sambadomains_id\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SambaDomainsApi#get_ldapservers_ldapserver_id_sambadomains_id\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

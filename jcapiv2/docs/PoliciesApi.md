@@ -5,18 +5,18 @@ All URIs are relative to *https://console.jumpcloud.com/api/v2*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**d_elete_policies_id**](PoliciesApi.md#d_elete_policies_id) | **DELETE** /policies/{id} | Deletes a Policy
-[**g_et_policies**](PoliciesApi.md#g_et_policies) | **GET** /policies | Lists all the Policies
-[**g_et_policies_id**](PoliciesApi.md#g_et_policies_id) | **GET** /policies/{id} | Gets a specific Policy.
-[**g_et_policies_policy_id_associations**](PoliciesApi.md#g_et_policies_policy_id_associations) | **GET** /policies/{policy_id}/associations | List the associations of a Policy
-[**g_et_policies_policy_id_policyresults**](PoliciesApi.md#g_et_policies_policy_id_policyresults) | **GET** /policies/{policy_id}/policyresults | Lists all the policy results of a policy.
-[**g_et_policies_policy_id_policystatuses**](PoliciesApi.md#g_et_policies_policy_id_policystatuses) | **GET** /policies/{policy_id}/policystatuses | Lists the latest policy results of a policy.
-[**g_et_policies_policy_id_systemgroups**](PoliciesApi.md#g_et_policies_policy_id_systemgroups) | **GET** /policies/{policy_id}/systemgroups | List the System Groups bound to a Policy
-[**g_et_policies_policy_id_systems**](PoliciesApi.md#g_et_policies_policy_id_systems) | **GET** /policies/{policy_id}/systems | List the Systems bound to a Policy
-[**g_et_policyresults**](PoliciesApi.md#g_et_policyresults) | **GET** /policyresults | Lists all the policy results for an organization.
-[**g_et_policyresults_id**](PoliciesApi.md#g_et_policyresults_id) | **GET** /policyresults/{id} | Get a specific Policy Result.
-[**g_et_policytemplates**](PoliciesApi.md#g_et_policytemplates) | **GET** /policytemplates | Lists all of the Policy Templates
-[**g_et_policytemplates_id**](PoliciesApi.md#g_et_policytemplates_id) | **GET** /policytemplates/{id} | Get a specific Policy Template
-[**g_et_systems_system_id_policystatuses**](PoliciesApi.md#g_et_systems_system_id_policystatuses) | **GET** /systems/{system_id}/policystatuses | List the policy statuses for a system
+[**get_policies**](PoliciesApi.md#get_policies) | **GET** /policies | Lists all the Policies
+[**get_policies_id**](PoliciesApi.md#get_policies_id) | **GET** /policies/{id} | Gets a specific Policy.
+[**get_policies_policy_id_associations**](PoliciesApi.md#get_policies_policy_id_associations) | **GET** /policies/{policy_id}/associations | List the associations of a Policy
+[**get_policies_policy_id_policyresults**](PoliciesApi.md#get_policies_policy_id_policyresults) | **GET** /policies/{policy_id}/policyresults | Lists all the policy results of a policy.
+[**get_policies_policy_id_policystatuses**](PoliciesApi.md#get_policies_policy_id_policystatuses) | **GET** /policies/{policy_id}/policystatuses | Lists the latest policy results of a policy.
+[**get_policies_policy_id_systemgroups**](PoliciesApi.md#get_policies_policy_id_systemgroups) | **GET** /policies/{policy_id}/systemgroups | List the System Groups bound to a Policy
+[**get_policies_policy_id_systems**](PoliciesApi.md#get_policies_policy_id_systems) | **GET** /policies/{policy_id}/systems | List the Systems bound to a Policy
+[**get_policyresults**](PoliciesApi.md#get_policyresults) | **GET** /policyresults | Lists all the policy results for an organization.
+[**get_policyresults_id**](PoliciesApi.md#get_policyresults_id) | **GET** /policyresults/{id} | Get a specific Policy Result.
+[**get_policytemplates**](PoliciesApi.md#get_policytemplates) | **GET** /policytemplates | Lists all of the Policy Templates
+[**get_policytemplates_id**](PoliciesApi.md#get_policytemplates_id) | **GET** /policytemplates/{id} | Get a specific Policy Template
+[**get_systems_system_id_policystatuses**](PoliciesApi.md#get_systems_system_id_policystatuses) | **GET** /systems/{system_id}/policystatuses | List the policy statuses for a system
 [**p_ost_policies**](PoliciesApi.md#p_ost_policies) | **POST** /policies | Create a new Policy
 [**p_ost_policies_policy_id_associations**](PoliciesApi.md#p_ost_policies_policy_id_associations) | **POST** /policies/{policy_id}/associations | Manage the associations of a Policy
 [**p_ut_policies_id**](PoliciesApi.md#p_ut_policies_id) | **PUT** /policies/{id} | Update an existing Policy
@@ -85,8 +85,8 @@ nil (empty response body)
 
 
 
-# **g_et_policies**
-> Array&lt;Policy&gt; g_et_policies(accept, content_type, opts)
+# **get_policies**
+> Array&lt;Policy&gt; get_policies(accept, content_type, opts)
 
 Lists all the Policies
 
@@ -121,10 +121,10 @@ opts = {
 
 begin
   #Lists all the Policies
-  result = api_instance.g_et_policies(accept, content_type, opts)
+  result = api_instance.get_policies(accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling PoliciesApi->g_et_policies: #{e}"
+  puts "Exception when calling PoliciesApi->get_policies: #{e}"
 end
 ```
 
@@ -156,8 +156,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_policies_id**
-> PolicyWithDetails g_et_policies_id(id, accept, content_type, opts)
+# **get_policies_id**
+> PolicyWithDetails get_policies_id(id, accept, content_type, opts)
 
 Gets a specific Policy.
 
@@ -189,10 +189,10 @@ opts = {
 
 begin
   #Gets a specific Policy.
-  result = api_instance.g_et_policies_id(id, accept, content_type, opts)
+  result = api_instance.get_policies_id(id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling PoliciesApi->g_et_policies_id: #{e}"
+  puts "Exception when calling PoliciesApi->get_policies_id: #{e}"
 end
 ```
 
@@ -220,8 +220,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_policies_policy_id_associations**
-> Array&lt;GraphConnection&gt; g_et_policies_policy_id_associations(policy_id, targets, accept, content_type, opts)
+# **get_policies_policy_id_associations**
+> Array&lt;GraphConnection&gt; get_policies_policy_id_associations(policy_id, targets, accept, content_type, opts)
 
 List the associations of a Policy
 
@@ -257,10 +257,10 @@ opts = {
 
 begin
   #List the associations of a Policy
-  result = api_instance.g_et_policies_policy_id_associations(policy_id, targets, accept, content_type, opts)
+  result = api_instance.get_policies_policy_id_associations(policy_id, targets, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling PoliciesApi->g_et_policies_policy_id_associations: #{e}"
+  puts "Exception when calling PoliciesApi->get_policies_policy_id_associations: #{e}"
 end
 ```
 
@@ -291,8 +291,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_policies_policy_id_policyresults**
-> Array&lt;PolicyResult&gt; g_et_policies_policy_id_policyresults(policy_id, accept, content_type, opts)
+# **get_policies_policy_id_policyresults**
+> Array&lt;PolicyResult&gt; get_policies_policy_id_policyresults(policy_id, accept, content_type, opts)
 
 Lists all the policy results of a policy.
 
@@ -329,10 +329,10 @@ opts = {
 
 begin
   #Lists all the policy results of a policy.
-  result = api_instance.g_et_policies_policy_id_policyresults(policy_id, accept, content_type, opts)
+  result = api_instance.get_policies_policy_id_policyresults(policy_id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling PoliciesApi->g_et_policies_policy_id_policyresults: #{e}"
+  puts "Exception when calling PoliciesApi->get_policies_policy_id_policyresults: #{e}"
 end
 ```
 
@@ -365,8 +365,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_policies_policy_id_policystatuses**
-> Array&lt;PolicyResult&gt; g_et_policies_policy_id_policystatuses(policy_id, accept, content_type, opts)
+# **get_policies_policy_id_policystatuses**
+> Array&lt;PolicyResult&gt; get_policies_policy_id_policystatuses(policy_id, accept, content_type, opts)
 
 Lists the latest policy results of a policy.
 
@@ -403,10 +403,10 @@ opts = {
 
 begin
   #Lists the latest policy results of a policy.
-  result = api_instance.g_et_policies_policy_id_policystatuses(policy_id, accept, content_type, opts)
+  result = api_instance.get_policies_policy_id_policystatuses(policy_id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling PoliciesApi->g_et_policies_policy_id_policystatuses: #{e}"
+  puts "Exception when calling PoliciesApi->get_policies_policy_id_policystatuses: #{e}"
 end
 ```
 
@@ -439,8 +439,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_policies_policy_id_systemgroups**
-> Array&lt;GraphObjectWithPaths&gt; g_et_policies_policy_id_systemgroups(policy_id, accept, content_type, opts)
+# **get_policies_policy_id_systemgroups**
+> Array&lt;GraphObjectWithPaths&gt; get_policies_policy_id_systemgroups(policy_id, accept, content_type, opts)
 
 List the System Groups bound to a Policy
 
@@ -475,10 +475,10 @@ opts = {
 
 begin
   #List the System Groups bound to a Policy
-  result = api_instance.g_et_policies_policy_id_systemgroups(policy_id, accept, content_type, opts)
+  result = api_instance.get_policies_policy_id_systemgroups(policy_id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling PoliciesApi->g_et_policies_policy_id_systemgroups: #{e}"
+  puts "Exception when calling PoliciesApi->get_policies_policy_id_systemgroups: #{e}"
 end
 ```
 
@@ -509,8 +509,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_policies_policy_id_systems**
-> Array&lt;GraphObjectWithPaths&gt; g_et_policies_policy_id_systems(policy_id, accept, content_type, opts)
+# **get_policies_policy_id_systems**
+> Array&lt;GraphObjectWithPaths&gt; get_policies_policy_id_systems(policy_id, accept, content_type, opts)
 
 List the Systems bound to a Policy
 
@@ -545,10 +545,10 @@ opts = {
 
 begin
   #List the Systems bound to a Policy
-  result = api_instance.g_et_policies_policy_id_systems(policy_id, accept, content_type, opts)
+  result = api_instance.get_policies_policy_id_systems(policy_id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling PoliciesApi->g_et_policies_policy_id_systems: #{e}"
+  puts "Exception when calling PoliciesApi->get_policies_policy_id_systems: #{e}"
 end
 ```
 
@@ -579,8 +579,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_policyresults**
-> Array&lt;PolicyResult&gt; g_et_policyresults(accept, content_type, opts)
+# **get_policyresults**
+> Array&lt;PolicyResult&gt; get_policyresults(accept, content_type, opts)
 
 Lists all the policy results for an organization.
 
@@ -615,10 +615,10 @@ opts = {
 
 begin
   #Lists all the policy results for an organization.
-  result = api_instance.g_et_policyresults(accept, content_type, opts)
+  result = api_instance.get_policyresults(accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling PoliciesApi->g_et_policyresults: #{e}"
+  puts "Exception when calling PoliciesApi->get_policyresults: #{e}"
 end
 ```
 
@@ -650,8 +650,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_policyresults_id**
-> PolicyResult g_et_policyresults_id(id, accept, content_type, opts)
+# **get_policyresults_id**
+> PolicyResult get_policyresults_id(id, accept, content_type, opts)
 
 Get a specific Policy Result.
 
@@ -683,10 +683,10 @@ opts = {
 
 begin
   #Get a specific Policy Result.
-  result = api_instance.g_et_policyresults_id(id, accept, content_type, opts)
+  result = api_instance.get_policyresults_id(id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling PoliciesApi->g_et_policyresults_id: #{e}"
+  puts "Exception when calling PoliciesApi->get_policyresults_id: #{e}"
 end
 ```
 
@@ -714,8 +714,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_policytemplates**
-> Array&lt;PolicyTemplate&gt; g_et_policytemplates(accept, content_type, opts)
+# **get_policytemplates**
+> Array&lt;PolicyTemplate&gt; get_policytemplates(accept, content_type, opts)
 
 Lists all of the Policy Templates
 
@@ -750,10 +750,10 @@ opts = {
 
 begin
   #Lists all of the Policy Templates
-  result = api_instance.g_et_policytemplates(accept, content_type, opts)
+  result = api_instance.get_policytemplates(accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling PoliciesApi->g_et_policytemplates: #{e}"
+  puts "Exception when calling PoliciesApi->get_policytemplates: #{e}"
 end
 ```
 
@@ -785,8 +785,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_policytemplates_id**
-> PolicyTemplateWithDetails g_et_policytemplates_id(id, accept, content_type, opts)
+# **get_policytemplates_id**
+> PolicyTemplateWithDetails get_policytemplates_id(id, accept, content_type, opts)
 
 Get a specific Policy Template
 
@@ -818,10 +818,10 @@ opts = {
 
 begin
   #Get a specific Policy Template
-  result = api_instance.g_et_policytemplates_id(id, accept, content_type, opts)
+  result = api_instance.get_policytemplates_id(id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling PoliciesApi->g_et_policytemplates_id: #{e}"
+  puts "Exception when calling PoliciesApi->get_policytemplates_id: #{e}"
 end
 ```
 
@@ -849,8 +849,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_systems_system_id_policystatuses**
-> Array&lt;PolicyResult&gt; g_et_systems_system_id_policystatuses(system_id, accept, content_type, opts)
+# **get_systems_system_id_policystatuses**
+> Array&lt;PolicyResult&gt; get_systems_system_id_policystatuses(system_id, accept, content_type, opts)
 
 List the policy statuses for a system
 
@@ -887,10 +887,10 @@ opts = {
 
 begin
   #List the policy statuses for a system
-  result = api_instance.g_et_systems_system_id_policystatuses(system_id, accept, content_type, opts)
+  result = api_instance.get_systems_system_id_policystatuses(system_id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling PoliciesApi->g_et_systems_system_id_policystatuses: #{e}"
+  puts "Exception when calling PoliciesApi->get_systems_system_id_policystatuses: #{e}"
 end
 ```
 

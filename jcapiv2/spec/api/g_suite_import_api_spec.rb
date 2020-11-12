@@ -32,7 +32,7 @@ describe 'GSuiteImportApi' do
     end
   end
 
-  # unit tests for g_et_gsuites_gsuite_id_import_users
+  # unit tests for get_gsuites_gsuite_id_import_users
   # Get a list of users to import
   # Lists G Suite users available for import.
   # @param gsuite_id 
@@ -42,7 +42,7 @@ describe 'GSuiteImportApi' do
   # @option opts [Integer] :limit The number of records to return at once. Limited to 100.
   # @option opts [String] :page_token Token used to access next page of results.
   # @return [InlineResponse2002]
-  describe 'g_et_gsuites_gsuite_id_import_users test' do
+  describe 'get_gsuites_gsuite_id_import_users test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

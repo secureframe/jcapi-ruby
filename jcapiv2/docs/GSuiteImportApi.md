@@ -4,11 +4,11 @@ All URIs are relative to *https://console.jumpcloud.com/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**g_et_gsuites_gsuite_id_import_users**](GSuiteImportApi.md#g_et_gsuites_gsuite_id_import_users) | **GET** /gsuites/{gsuite_id}/import/users | Get a list of users to import
+[**get_gsuites_gsuite_id_import_users**](GSuiteImportApi.md#get_gsuites_gsuite_id_import_users) | **GET** /gsuites/{gsuite_id}/import/users | Get a list of users to import
 
 
-# **g_et_gsuites_gsuite_id_import_users**
-> InlineResponse2002 g_et_gsuites_gsuite_id_import_users(gsuite_id, accept, content_type, opts)
+# **get_gsuites_gsuite_id_import_users**
+> InlineResponse2002 get_gsuites_gsuite_id_import_users(gsuite_id, accept, content_type, opts)
 
 Get a list of users to import
 
@@ -41,10 +41,10 @@ opts = {
 
 begin
   #Get a list of users to import
-  result = api_instance.g_et_gsuites_gsuite_id_import_users(gsuite_id, accept, content_type, opts)
+  result = api_instance.get_gsuites_gsuite_id_import_users(gsuite_id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling GSuiteImportApi->g_et_gsuites_gsuite_id_import_users: #{e}"
+  puts "Exception when calling GSuiteImportApi->get_gsuites_gsuite_id_import_users: #{e}"
 end
 ```
 

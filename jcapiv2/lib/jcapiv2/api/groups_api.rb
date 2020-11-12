@@ -34,8 +34,8 @@ module JCAPIv2
     # @option opts [Integer] :x_total_count 
     # @option opts [Integer] :x_unfiltered_total_count If provided in the request with any non-empty value, this header will be returned on the response populated with the total count of objects without filters taken into account
     # @return [Array<Group>]
-    def g_et_groups(accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_groups_with_http_info(accept, content_type, opts)
+    def get_groups(accept, content_type, opts = {})
+      data, _status_code, _headers = get_groups_with_http_info(accept, content_type, opts)
       return data
     end
 
@@ -53,20 +53,20 @@ module JCAPIv2
     # @option opts [Integer] :x_total_count 
     # @option opts [Integer] :x_unfiltered_total_count If provided in the request with any non-empty value, this header will be returned on the response populated with the total count of objects without filters taken into account
     # @return [Array<(Array<Group>, Fixnum, Hash)>] Array<Group> data, response status code and response headers
-    def g_et_groups_with_http_info(accept, content_type, opts = {})
+    def get_groups_with_http_info(accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GroupsApi.g_et_groups ..."
+        @api_client.config.logger.debug "Calling API: GroupsApi.get_groups ..."
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling GroupsApi.g_et_groups"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling GroupsApi.get_groups"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling GroupsApi.g_et_groups"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling GroupsApi.get_groups"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GroupsApi.g_et_groups, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling GroupsApi.get_groups, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -106,7 +106,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<Group>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GroupsApi#g_et_groups\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GroupsApi#get_groups\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

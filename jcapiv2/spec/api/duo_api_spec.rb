@@ -63,7 +63,7 @@ describe 'DuoApi' do
     end
   end
 
-  # unit tests for g_et_duo_accounts
+  # unit tests for get_duo_accounts
   # List Duo Accounts
   # This endpoint returns all the Duo accounts for your organization. Note: There can currently only be one Duo account for your organization.  #### Sample Request &#x60;&#x60;&#x60; curl https://console.jumpcloud.com/api/v2/duo/accounts \\   -H &#39;accept: application/json&#39; \\   -H &#39;content-type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
   # @param accept 
@@ -71,13 +71,13 @@ describe 'DuoApi' do
   # @param [Hash] opts the optional parameters
   # @option opts [String] :x_org_id 
   # @return [Array<DuoAccount>]
-  describe 'g_et_duo_accounts test' do
+  describe 'get_duo_accounts test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_duo_accounts_account_id_applications
+  # unit tests for get_duo_accounts_account_id_applications
   # List Duo Applications
   # This endpoint returns all the Duo applications for the specified Duo account. Note: There can currently only be one Duo application for your organization.  #### Sample Request &#x60;&#x60;&#x60;   curl https://console.jumpcloud.com/api/v2/duo/accounts/{ACCOUNT_ID}/applications \\   -H &#39;accept: application/json&#39; \\   -H &#39;content-type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
   # @param account_id 
@@ -86,13 +86,13 @@ describe 'DuoApi' do
   # @param [Hash] opts the optional parameters
   # @option opts [String] :x_org_id 
   # @return [Array<DuoApplication>]
-  describe 'g_et_duo_accounts_account_id_applications test' do
+  describe 'get_duo_accounts_account_id_applications test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_duo_accounts_account_id_applications_application_id
+  # unit tests for get_duo_accounts_account_id_applications_application_id
   # Get a Duo application
   # This endpoint returns a specific Duo application that is associated with the specified Duo account.  #### Sample Request &#x60;&#x60;&#x60;   curl https://console.jumpcloud.com/api/v2/duo/accounts/{ACCOUNT_ID}/applications/{APPLICATION_ID} \\   -H &#39;accept: application/json&#39; \\   -H &#39;content-type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
   # @param account_id 
@@ -102,13 +102,13 @@ describe 'DuoApi' do
   # @param [Hash] opts the optional parameters
   # @option opts [String] :x_org_id 
   # @return [DuoApplication]
-  describe 'g_et_duo_accounts_account_id_applications_application_id test' do
+  describe 'get_duo_accounts_account_id_applications_application_id test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_duo_accounts_id
+  # unit tests for get_duo_accounts_id
   # Get a Duo Acount
   # This endpoint returns a specific Duo account.  #### Sample Request &#x60;&#x60;&#x60; curl https://console.jumpcloud.com/api/v2/duo/accounts/{id} \\   -H &#39;accept: application/json&#39; \\   -H &#39;content-type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
   # @param id ObjectID of the Duo Account
@@ -117,7 +117,7 @@ describe 'DuoApi' do
   # @param [Hash] opts the optional parameters
   # @option opts [String] :x_org_id 
   # @return [DuoAccount]
-  describe 'g_et_duo_accounts_id test' do
+  describe 'get_duo_accounts_id test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

@@ -107,8 +107,8 @@ module JCAPIv1
     # @option opts [String] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id  (default to )
     # @return [Systemslist]
-    def g_et_systems(accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_systems_with_http_info(accept, content_type, opts)
+    def get_systems(accept, content_type, opts = {})
+      data, _status_code, _headers = get_systems_with_http_info(accept, content_type, opts)
       return data
     end
 
@@ -125,20 +125,20 @@ module JCAPIv1
     # @option opts [String] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id 
     # @return [Array<(Systemslist, Fixnum, Hash)>] Systemslist data, response status code and response headers
-    def g_et_systems_with_http_info(accept, content_type, opts = {})
+    def get_systems_with_http_info(accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SystemsApi.g_et_systems ..."
+        @api_client.config.logger.debug "Calling API: SystemsApi.get_systems ..."
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemsApi.g_et_systems"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemsApi.get_systems"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemsApi.g_et_systems"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemsApi.get_systems"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemsApi.g_et_systems, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemsApi.get_systems, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -173,7 +173,7 @@ module JCAPIv1
         :auth_names => auth_names,
         :return_type => 'Systemslist')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SystemsApi#g_et_systems\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SystemsApi#get_systems\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -190,8 +190,8 @@ module JCAPIv1
     # @option opts [String] :date Current date header for the System Context API
     # @option opts [String] :x_org_id  (default to )
     # @return [System]
-    def g_et_systems_id(id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_systems_id_with_http_info(id, accept, content_type, opts)
+    def get_systems_id(id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_systems_id_with_http_info(id, accept, content_type, opts)
       return data
     end
 
@@ -207,21 +207,21 @@ module JCAPIv1
     # @option opts [String] :date Current date header for the System Context API
     # @option opts [String] :x_org_id 
     # @return [Array<(System, Fixnum, Hash)>] System data, response status code and response headers
-    def g_et_systems_id_with_http_info(id, accept, content_type, opts = {})
+    def get_systems_id_with_http_info(id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SystemsApi.g_et_systems_id ..."
+        @api_client.config.logger.debug "Calling API: SystemsApi.get_systems_id ..."
       end
       # verify the required parameter 'id' is set
       if @api_client.config.client_side_validation && id.nil?
-        fail ArgumentError, "Missing the required parameter 'id' when calling SystemsApi.g_et_systems_id"
+        fail ArgumentError, "Missing the required parameter 'id' when calling SystemsApi.get_systems_id"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemsApi.g_et_systems_id"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemsApi.get_systems_id"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemsApi.g_et_systems_id"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemsApi.get_systems_id"
       end
       # resource path
       local_var_path = "/systems/{id}".sub('{' + 'id' + '}', id.to_s)
@@ -253,7 +253,7 @@ module JCAPIv1
         :auth_names => auth_names,
         :return_type => 'System')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SystemsApi#g_et_systems_id\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SystemsApi#get_systems_id\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

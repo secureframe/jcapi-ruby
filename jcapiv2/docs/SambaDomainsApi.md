@@ -5,8 +5,8 @@ All URIs are relative to *https://console.jumpcloud.com/api/v2*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**d_elete_ldapservers_ldapserver_id_sambadomains_id**](SambaDomainsApi.md#d_elete_ldapservers_ldapserver_id_sambadomains_id) | **DELETE** /ldapservers/{ldapserver_id}/sambadomains/{id} | Delete Samba Domain
-[**g_et_ldapservers_ldapserver_id_sambadomains**](SambaDomainsApi.md#g_et_ldapservers_ldapserver_id_sambadomains) | **GET** /ldapservers/{ldapserver_id}/sambadomains | List Samba Domains
-[**g_et_ldapservers_ldapserver_id_sambadomains_id**](SambaDomainsApi.md#g_et_ldapservers_ldapserver_id_sambadomains_id) | **GET** /ldapservers/{ldapserver_id}/sambadomains/{id} | Get Samba Domain
+[**get_ldapservers_ldapserver_id_sambadomains**](SambaDomainsApi.md#get_ldapservers_ldapserver_id_sambadomains) | **GET** /ldapservers/{ldapserver_id}/sambadomains | List Samba Domains
+[**get_ldapservers_ldapserver_id_sambadomains_id**](SambaDomainsApi.md#get_ldapservers_ldapserver_id_sambadomains_id) | **GET** /ldapservers/{ldapserver_id}/sambadomains/{id} | Get Samba Domain
 [**p_ost_ldapservers_ldapserver_id_sambadomains**](SambaDomainsApi.md#p_ost_ldapservers_ldapserver_id_sambadomains) | **POST** /ldapservers/{ldapserver_id}/sambadomains | Create Samba Domain
 [**p_ut_ldapservers_ldapserver_id_sambadomains_id**](SambaDomainsApi.md#p_ut_ldapservers_ldapserver_id_sambadomains_id) | **PUT** /ldapservers/{ldapserver_id}/sambadomains/{id} | Update Samba Domain
 
@@ -76,8 +76,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_ldapservers_ldapserver_id_sambadomains**
-> Array&lt;SambaDomainOutput&gt; g_et_ldapservers_ldapserver_id_sambadomains(ldapserver_id, opts)
+# **get_ldapservers_ldapserver_id_sambadomains**
+> Array&lt;SambaDomainOutput&gt; get_ldapservers_ldapserver_id_sambadomains(ldapserver_id, opts)
 
 List Samba Domains
 
@@ -112,10 +112,10 @@ opts = {
 
 begin
   #List Samba Domains
-  result = api_instance.g_et_ldapservers_ldapserver_id_sambadomains(ldapserver_id, opts)
+  result = api_instance.get_ldapservers_ldapserver_id_sambadomains(ldapserver_id, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling SambaDomainsApi->g_et_ldapservers_ldapserver_id_sambadomains: #{e}"
+  puts "Exception when calling SambaDomainsApi->get_ldapservers_ldapserver_id_sambadomains: #{e}"
 end
 ```
 
@@ -148,8 +148,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_ldapservers_ldapserver_id_sambadomains_id**
-> SambaDomainOutput g_et_ldapservers_ldapserver_id_sambadomains_id(ldapserver_id, id, opts)
+# **get_ldapservers_ldapserver_id_sambadomains_id**
+> SambaDomainOutput get_ldapservers_ldapserver_id_sambadomains_id(ldapserver_id, id, opts)
 
 Get Samba Domain
 
@@ -181,10 +181,10 @@ opts = {
 
 begin
   #Get Samba Domain
-  result = api_instance.g_et_ldapservers_ldapserver_id_sambadomains_id(ldapserver_id, id, opts)
+  result = api_instance.get_ldapservers_ldapserver_id_sambadomains_id(ldapserver_id, id, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling SambaDomainsApi->g_et_ldapservers_ldapserver_id_sambadomains_id: #{e}"
+  puts "Exception when calling SambaDomainsApi->get_ldapservers_ldapserver_id_sambadomains_id: #{e}"
 end
 ```
 

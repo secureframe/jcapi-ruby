@@ -33,8 +33,8 @@ module JCAPIv2
     # @option opts [String] :date Current date header for the System Context API
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<GraphConnection>]
-    def g_et_systems_system_id_associations(system_id, targets, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_systems_system_id_associations_with_http_info(system_id, targets, accept, content_type, opts)
+    def get_systems_system_id_associations(system_id, targets, accept, content_type, opts = {})
+      data, _status_code, _headers = get_systems_system_id_associations_with_http_info(system_id, targets, accept, content_type, opts)
       return data
     end
 
@@ -51,28 +51,28 @@ module JCAPIv2
     # @option opts [String] :date Current date header for the System Context API
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<GraphConnection>, Fixnum, Hash)>] Array<GraphConnection> data, response status code and response headers
-    def g_et_systems_system_id_associations_with_http_info(system_id, targets, accept, content_type, opts = {})
+    def get_systems_system_id_associations_with_http_info(system_id, targets, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SystemsApi.g_et_systems_system_id_associations ..."
+        @api_client.config.logger.debug "Calling API: SystemsApi.get_systems_system_id_associations ..."
       end
       # verify the required parameter 'system_id' is set
       if @api_client.config.client_side_validation && system_id.nil?
-        fail ArgumentError, "Missing the required parameter 'system_id' when calling SystemsApi.g_et_systems_system_id_associations"
+        fail ArgumentError, "Missing the required parameter 'system_id' when calling SystemsApi.get_systems_system_id_associations"
       end
       # verify the required parameter 'targets' is set
       if @api_client.config.client_side_validation && targets.nil?
-        fail ArgumentError, "Missing the required parameter 'targets' when calling SystemsApi.g_et_systems_system_id_associations"
+        fail ArgumentError, "Missing the required parameter 'targets' when calling SystemsApi.get_systems_system_id_associations"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemsApi.g_et_systems_system_id_associations"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemsApi.get_systems_system_id_associations"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemsApi.g_et_systems_system_id_associations"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemsApi.get_systems_system_id_associations"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemsApi.g_et_systems_system_id_associations, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemsApi.get_systems_system_id_associations, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -110,7 +110,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<GraphConnection>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SystemsApi#g_et_systems_system_id_associations\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SystemsApi#get_systems_system_id_associations\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -126,8 +126,8 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<GraphObjectWithPaths>]
-    def g_et_systems_system_id_commands(system_id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_systems_system_id_commands_with_http_info(system_id, accept, content_type, opts)
+    def get_systems_system_id_commands(system_id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_systems_system_id_commands_with_http_info(system_id, accept, content_type, opts)
       return data
     end
 
@@ -142,24 +142,24 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<GraphObjectWithPaths>, Fixnum, Hash)>] Array<GraphObjectWithPaths> data, response status code and response headers
-    def g_et_systems_system_id_commands_with_http_info(system_id, accept, content_type, opts = {})
+    def get_systems_system_id_commands_with_http_info(system_id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SystemsApi.g_et_systems_system_id_commands ..."
+        @api_client.config.logger.debug "Calling API: SystemsApi.get_systems_system_id_commands ..."
       end
       # verify the required parameter 'system_id' is set
       if @api_client.config.client_side_validation && system_id.nil?
-        fail ArgumentError, "Missing the required parameter 'system_id' when calling SystemsApi.g_et_systems_system_id_commands"
+        fail ArgumentError, "Missing the required parameter 'system_id' when calling SystemsApi.get_systems_system_id_commands"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemsApi.g_et_systems_system_id_commands"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemsApi.get_systems_system_id_commands"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemsApi.g_et_systems_system_id_commands"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemsApi.get_systems_system_id_commands"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemsApi.g_et_systems_system_id_commands, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemsApi.get_systems_system_id_commands, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -195,7 +195,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<GraphObjectWithPaths>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SystemsApi#g_et_systems_system_id_commands\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SystemsApi#get_systems_system_id_commands\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -206,8 +206,8 @@ module JCAPIv2
     # @param [Hash] opts the optional parameters
     # @option opts [String] :x_org_id  (default to )
     # @return [Systemfdekey]
-    def g_et_systems_system_id_fdekey(system_id, opts = {})
-      data, _status_code, _headers = g_et_systems_system_id_fdekey_with_http_info(system_id, opts)
+    def get_systems_system_id_fdekey(system_id, opts = {})
+      data, _status_code, _headers = get_systems_system_id_fdekey_with_http_info(system_id, opts)
       return data
     end
 
@@ -217,13 +217,13 @@ module JCAPIv2
     # @param [Hash] opts the optional parameters
     # @option opts [String] :x_org_id 
     # @return [Array<(Systemfdekey, Fixnum, Hash)>] Systemfdekey data, response status code and response headers
-    def g_et_systems_system_id_fdekey_with_http_info(system_id, opts = {})
+    def get_systems_system_id_fdekey_with_http_info(system_id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SystemsApi.g_et_systems_system_id_fdekey ..."
+        @api_client.config.logger.debug "Calling API: SystemsApi.get_systems_system_id_fdekey ..."
       end
       # verify the required parameter 'system_id' is set
       if @api_client.config.client_side_validation && system_id.nil?
-        fail ArgumentError, "Missing the required parameter 'system_id' when calling SystemsApi.g_et_systems_system_id_fdekey"
+        fail ArgumentError, "Missing the required parameter 'system_id' when calling SystemsApi.get_systems_system_id_fdekey"
       end
       # resource path
       local_var_path = "/systems/{system_id}/fdekey".sub('{' + 'system_id' + '}', system_id.to_s)
@@ -253,7 +253,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Systemfdekey')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SystemsApi#g_et_systems_system_id_fdekey\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SystemsApi#get_systems_system_id_fdekey\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -272,8 +272,8 @@ module JCAPIv2
     # @option opts [String] :date Current date header for the System Context API
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<GraphObjectWithPaths>]
-    def g_et_systems_system_id_memberof(system_id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_systems_system_id_memberof_with_http_info(system_id, accept, content_type, opts)
+    def get_systems_system_id_memberof(system_id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_systems_system_id_memberof_with_http_info(system_id, accept, content_type, opts)
       return data
     end
 
@@ -291,24 +291,24 @@ module JCAPIv2
     # @option opts [String] :date Current date header for the System Context API
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<GraphObjectWithPaths>, Fixnum, Hash)>] Array<GraphObjectWithPaths> data, response status code and response headers
-    def g_et_systems_system_id_memberof_with_http_info(system_id, accept, content_type, opts = {})
+    def get_systems_system_id_memberof_with_http_info(system_id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SystemsApi.g_et_systems_system_id_memberof ..."
+        @api_client.config.logger.debug "Calling API: SystemsApi.get_systems_system_id_memberof ..."
       end
       # verify the required parameter 'system_id' is set
       if @api_client.config.client_side_validation && system_id.nil?
-        fail ArgumentError, "Missing the required parameter 'system_id' when calling SystemsApi.g_et_systems_system_id_memberof"
+        fail ArgumentError, "Missing the required parameter 'system_id' when calling SystemsApi.get_systems_system_id_memberof"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemsApi.g_et_systems_system_id_memberof"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemsApi.get_systems_system_id_memberof"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemsApi.g_et_systems_system_id_memberof"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemsApi.get_systems_system_id_memberof"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemsApi.g_et_systems_system_id_memberof, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemsApi.get_systems_system_id_memberof, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -347,7 +347,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<GraphObjectWithPaths>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SystemsApi#g_et_systems_system_id_memberof\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SystemsApi#get_systems_system_id_memberof\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -363,8 +363,8 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id  (default to )
     # @return [Array<GraphObjectWithPaths>]
-    def g_et_systems_system_id_policies(system_id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_systems_system_id_policies_with_http_info(system_id, accept, content_type, opts)
+    def get_systems_system_id_policies(system_id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_systems_system_id_policies_with_http_info(system_id, accept, content_type, opts)
       return data
     end
 
@@ -379,24 +379,24 @@ module JCAPIv2
     # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
     # @option opts [String] :x_org_id 
     # @return [Array<(Array<GraphObjectWithPaths>, Fixnum, Hash)>] Array<GraphObjectWithPaths> data, response status code and response headers
-    def g_et_systems_system_id_policies_with_http_info(system_id, accept, content_type, opts = {})
+    def get_systems_system_id_policies_with_http_info(system_id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SystemsApi.g_et_systems_system_id_policies ..."
+        @api_client.config.logger.debug "Calling API: SystemsApi.get_systems_system_id_policies ..."
       end
       # verify the required parameter 'system_id' is set
       if @api_client.config.client_side_validation && system_id.nil?
-        fail ArgumentError, "Missing the required parameter 'system_id' when calling SystemsApi.g_et_systems_system_id_policies"
+        fail ArgumentError, "Missing the required parameter 'system_id' when calling SystemsApi.get_systems_system_id_policies"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemsApi.g_et_systems_system_id_policies"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemsApi.get_systems_system_id_policies"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemsApi.g_et_systems_system_id_policies"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemsApi.get_systems_system_id_policies"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemsApi.g_et_systems_system_id_policies, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemsApi.get_systems_system_id_policies, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -432,7 +432,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<GraphObjectWithPaths>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SystemsApi#g_et_systems_system_id_policies\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SystemsApi#get_systems_system_id_policies\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -450,8 +450,8 @@ module JCAPIv2
     # @option opts [String] :authorization Authorization header for the System Context API
     # @option opts [String] :date Current date header for the System Context API
     # @return [Array<GraphObjectWithPaths>]
-    def g_et_systems_system_id_usergroups(system_id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_systems_system_id_usergroups_with_http_info(system_id, accept, content_type, opts)
+    def get_systems_system_id_usergroups(system_id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_systems_system_id_usergroups_with_http_info(system_id, accept, content_type, opts)
       return data
     end
 
@@ -468,24 +468,24 @@ module JCAPIv2
     # @option opts [String] :authorization Authorization header for the System Context API
     # @option opts [String] :date Current date header for the System Context API
     # @return [Array<(Array<GraphObjectWithPaths>, Fixnum, Hash)>] Array<GraphObjectWithPaths> data, response status code and response headers
-    def g_et_systems_system_id_usergroups_with_http_info(system_id, accept, content_type, opts = {})
+    def get_systems_system_id_usergroups_with_http_info(system_id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SystemsApi.g_et_systems_system_id_usergroups ..."
+        @api_client.config.logger.debug "Calling API: SystemsApi.get_systems_system_id_usergroups ..."
       end
       # verify the required parameter 'system_id' is set
       if @api_client.config.client_side_validation && system_id.nil?
-        fail ArgumentError, "Missing the required parameter 'system_id' when calling SystemsApi.g_et_systems_system_id_usergroups"
+        fail ArgumentError, "Missing the required parameter 'system_id' when calling SystemsApi.get_systems_system_id_usergroups"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemsApi.g_et_systems_system_id_usergroups"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemsApi.get_systems_system_id_usergroups"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemsApi.g_et_systems_system_id_usergroups"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemsApi.get_systems_system_id_usergroups"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemsApi.g_et_systems_system_id_usergroups, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemsApi.get_systems_system_id_usergroups, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -523,7 +523,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<GraphObjectWithPaths>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SystemsApi#g_et_systems_system_id_usergroups\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SystemsApi#get_systems_system_id_usergroups\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -541,8 +541,8 @@ module JCAPIv2
     # @option opts [String] :authorization Authorization header for the System Context API
     # @option opts [String] :date Current date header for the System Context API
     # @return [Array<GraphObjectWithPaths>]
-    def g_et_systems_system_id_users(system_id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_systems_system_id_users_with_http_info(system_id, accept, content_type, opts)
+    def get_systems_system_id_users(system_id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_systems_system_id_users_with_http_info(system_id, accept, content_type, opts)
       return data
     end
 
@@ -559,24 +559,24 @@ module JCAPIv2
     # @option opts [String] :authorization Authorization header for the System Context API
     # @option opts [String] :date Current date header for the System Context API
     # @return [Array<(Array<GraphObjectWithPaths>, Fixnum, Hash)>] Array<GraphObjectWithPaths> data, response status code and response headers
-    def g_et_systems_system_id_users_with_http_info(system_id, accept, content_type, opts = {})
+    def get_systems_system_id_users_with_http_info(system_id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: SystemsApi.g_et_systems_system_id_users ..."
+        @api_client.config.logger.debug "Calling API: SystemsApi.get_systems_system_id_users ..."
       end
       # verify the required parameter 'system_id' is set
       if @api_client.config.client_side_validation && system_id.nil?
-        fail ArgumentError, "Missing the required parameter 'system_id' when calling SystemsApi.g_et_systems_system_id_users"
+        fail ArgumentError, "Missing the required parameter 'system_id' when calling SystemsApi.get_systems_system_id_users"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemsApi.g_et_systems_system_id_users"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling SystemsApi.get_systems_system_id_users"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemsApi.g_et_systems_system_id_users"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling SystemsApi.get_systems_system_id_users"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemsApi.g_et_systems_system_id_users, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling SystemsApi.get_systems_system_id_users, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -614,7 +614,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'Array<GraphObjectWithPaths>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SystemsApi#g_et_systems_system_id_users\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SystemsApi#get_systems_system_id_users\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

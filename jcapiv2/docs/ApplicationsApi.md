@@ -5,10 +5,10 @@ All URIs are relative to *https://console.jumpcloud.com/api/v2*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**d_elete_applications_application_id_logo**](ApplicationsApi.md#d_elete_applications_application_id_logo) | **DELETE** /applications/{application_id}/logo | Delete application image
-[**g_et_applications_application_id**](ApplicationsApi.md#g_et_applications_application_id) | **GET** /applications/{application_id} | Get an Application
-[**g_et_applications_application_id_associations**](ApplicationsApi.md#g_et_applications_application_id_associations) | **GET** /applications/{application_id}/associations | List the associations of an Application
-[**g_et_applications_application_id_usergroups**](ApplicationsApi.md#g_et_applications_application_id_usergroups) | **GET** /applications/{application_id}/usergroups | List the User Groups bound to an Application
-[**g_et_applications_application_id_users**](ApplicationsApi.md#g_et_applications_application_id_users) | **GET** /applications/{application_id}/users | List the Users bound to an Application
+[**get_applications_application_id**](ApplicationsApi.md#get_applications_application_id) | **GET** /applications/{application_id} | Get an Application
+[**get_applications_application_id_associations**](ApplicationsApi.md#get_applications_application_id_associations) | **GET** /applications/{application_id}/associations | List the associations of an Application
+[**get_applications_application_id_usergroups**](ApplicationsApi.md#get_applications_application_id_usergroups) | **GET** /applications/{application_id}/usergroups | List the User Groups bound to an Application
+[**get_applications_application_id_users**](ApplicationsApi.md#get_applications_application_id_users) | **GET** /applications/{application_id}/users | List the Users bound to an Application
 [**p_ost_applications_application_id_associations**](ApplicationsApi.md#p_ost_applications_application_id_associations) | **POST** /applications/{application_id}/associations | Manage the associations of an Application
 [**p_ost_applications_application_id_logo**](ApplicationsApi.md#p_ost_applications_application_id_logo) | **POST** /applications/{application_id}/logo | 
 
@@ -76,8 +76,8 @@ nil (empty response body)
 
 
 
-# **g_et_applications_application_id**
-> Object g_et_applications_application_id(application_id, accept, content_type, opts)
+# **get_applications_application_id**
+> Object get_applications_application_id(application_id, accept, content_type, opts)
 
 Get an Application
 
@@ -109,10 +109,10 @@ opts = {
 
 begin
   #Get an Application
-  result = api_instance.g_et_applications_application_id(application_id, accept, content_type, opts)
+  result = api_instance.get_applications_application_id(application_id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling ApplicationsApi->g_et_applications_application_id: #{e}"
+  puts "Exception when calling ApplicationsApi->get_applications_application_id: #{e}"
 end
 ```
 
@@ -140,8 +140,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_applications_application_id_associations**
-> Array&lt;GraphConnection&gt; g_et_applications_application_id_associations(application_id, targets, accept, content_type, opts)
+# **get_applications_application_id_associations**
+> Array&lt;GraphConnection&gt; get_applications_application_id_associations(application_id, targets, accept, content_type, opts)
 
 List the associations of an Application
 
@@ -177,10 +177,10 @@ opts = {
 
 begin
   #List the associations of an Application
-  result = api_instance.g_et_applications_application_id_associations(application_id, targets, accept, content_type, opts)
+  result = api_instance.get_applications_application_id_associations(application_id, targets, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling ApplicationsApi->g_et_applications_application_id_associations: #{e}"
+  puts "Exception when calling ApplicationsApi->get_applications_application_id_associations: #{e}"
 end
 ```
 
@@ -211,8 +211,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_applications_application_id_usergroups**
-> Array&lt;GraphObjectWithPaths&gt; g_et_applications_application_id_usergroups(application_id, accept, content_type, opts)
+# **get_applications_application_id_usergroups**
+> Array&lt;GraphObjectWithPaths&gt; get_applications_application_id_usergroups(application_id, accept, content_type, opts)
 
 List the User Groups bound to an Application
 
@@ -247,10 +247,10 @@ opts = {
 
 begin
   #List the User Groups bound to an Application
-  result = api_instance.g_et_applications_application_id_usergroups(application_id, accept, content_type, opts)
+  result = api_instance.get_applications_application_id_usergroups(application_id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling ApplicationsApi->g_et_applications_application_id_usergroups: #{e}"
+  puts "Exception when calling ApplicationsApi->get_applications_application_id_usergroups: #{e}"
 end
 ```
 
@@ -281,8 +281,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_applications_application_id_users**
-> Array&lt;GraphObjectWithPaths&gt; g_et_applications_application_id_users(application_id, accept, content_type, opts)
+# **get_applications_application_id_users**
+> Array&lt;GraphObjectWithPaths&gt; get_applications_application_id_users(application_id, accept, content_type, opts)
 
 List the Users bound to an Application
 
@@ -317,10 +317,10 @@ opts = {
 
 begin
   #List the Users bound to an Application
-  result = api_instance.g_et_applications_application_id_users(application_id, accept, content_type, opts)
+  result = api_instance.get_applications_application_id_users(application_id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling ApplicationsApi->g_et_applications_application_id_users: #{e}"
+  puts "Exception when calling ApplicationsApi->get_applications_application_id_users: #{e}"
 end
 ```
 

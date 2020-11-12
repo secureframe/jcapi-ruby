@@ -47,7 +47,7 @@ describe 'GSuiteApi' do
     end
   end
 
-  # unit tests for g_et_gsuites_gsuite_id_associations
+  # unit tests for get_gsuites_gsuite_id_associations
   # List the associations of a G Suite instance
   # This endpoint returns the _direct_ associations of this G Suite instance.  A direct association can be a non-homogeneous relationship between 2 different objects, for example G Suite and Users.   #### Sample Request &#x60;&#x60;&#x60; curl -X GET &#39;https://console.jumpcloud.com/api/v2/gsuites/{Gsuite_ID}/associations?targets&#x3D;user_group \\   -H &#39;accept: application/json&#39; \\   -H &#39;content-type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
   # @param gsuite_id ObjectID of the G Suite instance.
@@ -59,13 +59,13 @@ describe 'GSuiteApi' do
   # @option opts [Integer] :skip The offset into the records to return.
   # @option opts [String] :x_org_id 
   # @return [Array<GraphConnection>]
-  describe 'g_et_gsuites_gsuite_id_associations test' do
+  describe 'get_gsuites_gsuite_id_associations test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_gsuites_gsuite_id_import_users
+  # unit tests for get_gsuites_gsuite_id_import_users
   # Get a list of users to import
   # Lists G Suite users available for import.
   # @param gsuite_id 
@@ -75,13 +75,13 @@ describe 'GSuiteApi' do
   # @option opts [Integer] :limit The number of records to return at once. Limited to 100.
   # @option opts [String] :page_token Token used to access next page of results.
   # @return [InlineResponse2002]
-  describe 'g_et_gsuites_gsuite_id_import_users test' do
+  describe 'get_gsuites_gsuite_id_import_users test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_gsuites_gsuite_id_translationrules
+  # unit tests for get_gsuites_gsuite_id_translationrules
   # List all the G Suite Translation Rules
   # This endpoint returns all graph translation rules for a specific G Suite instance. These rules specify how JumpCloud attributes translate to [G Suite Admin SDK](https://developers.google.com/admin-sdk/directory/) attributes.  ##### Sample Request  &#x60;&#x60;&#x60;  curl -X GET  https://console.jumpcloud.com/api/v2/gsuites/{gsuite_id}/translationrules \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39;   &#x60;&#x60;&#x60;
   # @param gsuite_id 
@@ -94,13 +94,13 @@ describe 'GSuiteApi' do
   # @option opts [Integer] :skip The offset into the records to return.
   # @option opts [Array<String>] :sort The comma separated fields used to sort the collection. Default sort is ascending, prefix with &#x60;-&#x60; to sort descending. 
   # @return [Array<GSuiteTranslationRule>]
-  describe 'g_et_gsuites_gsuite_id_translationrules test' do
+  describe 'get_gsuites_gsuite_id_translationrules test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_gsuites_gsuite_id_translationrules_id
+  # unit tests for get_gsuites_gsuite_id_translationrules_id
   # Gets a specific G Suite translation rule
   # This endpoint returns a specific translation rule for a specific G Suite instance. These rules specify how JumpCloud attributes translate to [G Suite Admin SDK](https://developers.google.com/admin-sdk/directory/) attributes.  ###### Sample Request  &#x60;&#x60;&#x60;   curl -X GET https://console.jumpcloud.com/api/v2/gsuites/{gsuite_id}/translationrules/{id} \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39;   &#x60;&#x60;&#x60;
   # @param gsuite_id 
@@ -109,13 +109,13 @@ describe 'GSuiteApi' do
   # @param content_type 
   # @param [Hash] opts the optional parameters
   # @return [GSuiteTranslationRule]
-  describe 'g_et_gsuites_gsuite_id_translationrules_id test' do
+  describe 'get_gsuites_gsuite_id_translationrules_id test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_gsuites_gsuite_id_usergroups
+  # unit tests for get_gsuites_gsuite_id_usergroups
   # List the User Groups bound to a G Suite instance
   # This endpoint will return all User Groups bound to an G Suite instance, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the group&#39;s type, id, attributes and paths.  The &#x60;attributes&#x60; object is a key/value hash of compiled graph attributes for all paths followed.  The &#x60;paths&#x60; array enumerates each path from this G Suite instance to the corresponding User Group; this array represents all grouping and/or associations that would have to be removed to deprovision the User Group from this G Suite instance.  See &#x60;/members&#x60; and &#x60;/associations&#x60; endpoints to manage those collections.  #### Sample Request &#x60;&#x60;&#x60;   curl -X GET https://console.jumpcloud.com/api/v2/gsuites/{GSuite_ID}/usergroups \\   -H &#39;accept: application/json&#39; \\   -H &#39;content-type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
   # @param gsuite_id ObjectID of the G Suite instance.
@@ -127,13 +127,13 @@ describe 'GSuiteApi' do
   # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
   # @option opts [String] :x_org_id 
   # @return [Array<GraphObjectWithPaths>]
-  describe 'g_et_gsuites_gsuite_id_usergroups test' do
+  describe 'get_gsuites_gsuite_id_usergroups test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_gsuites_gsuite_id_users
+  # unit tests for get_gsuites_gsuite_id_users
   # List the Users bound to a G Suite instance
   # This endpoint will return all Users bound to a G Suite instance, either directly or indirectly, essentially traversing the JumpCloud Graph for your Organization.  Each element will contain the type, id, attributes and paths.  The &#x60;attributes&#x60; object is a key/value hash of compiled graph attributes for all paths followed.  The &#x60;paths&#x60; array enumerates each path from this G Suite instance to the corresponding User; this array represents all grouping and/or associations that would have to be removed to deprovision the User from this G Suite instance.  See &#x60;/members&#x60; and &#x60;/associations&#x60; endpoints to manage those collections.  #### Sample Request &#x60;&#x60;&#x60;   curl -X GET https://console.jumpcloud.com/api/v2/gsuites/{Gsuite_ID}/users \\   -H &#39;accept: application/json&#39; \\   -H &#39;content-type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
   # @param gsuite_id ObjectID of the G Suite instance.
@@ -145,13 +145,13 @@ describe 'GSuiteApi' do
   # @option opts [Array<String>] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
   # @option opts [String] :x_org_id 
   # @return [Array<GraphObjectWithPaths>]
-  describe 'g_et_gsuites_gsuite_id_users test' do
+  describe 'get_gsuites_gsuite_id_users test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_gsuites_id
+  # unit tests for get_gsuites_id
   # Get G Suite
   # This endpoint returns a specific G Suite.  ##### Sample Request  &#x60;&#x60;&#x60;  curl -X GET https://console.jumpcloud.com/api/v2/gsuites/{GSUITE_ID} \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
   # @param id Unique identifier of the GSuite.
@@ -160,7 +160,7 @@ describe 'GSuiteApi' do
   # @param [Hash] opts the optional parameters
   # @option opts [String] :x_org_id 
   # @return [GsuiteOutput]
-  describe 'g_et_gsuites_id test' do
+  describe 'get_gsuites_id test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

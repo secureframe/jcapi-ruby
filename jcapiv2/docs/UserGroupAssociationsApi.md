@@ -4,20 +4,20 @@ All URIs are relative to *https://console.jumpcloud.com/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**g_et_usergroups_group_id_applications**](UserGroupAssociationsApi.md#g_et_usergroups_group_id_applications) | **GET** /usergroups/{group_id}/applications | List the Applications bound to a User Group
-[**g_et_usergroups_group_id_associations**](UserGroupAssociationsApi.md#g_et_usergroups_group_id_associations) | **GET** /usergroups/{group_id}/associations | List the associations of a User Group.
-[**g_et_usergroups_group_id_directories**](UserGroupAssociationsApi.md#g_et_usergroups_group_id_directories) | **GET** /usergroups/{group_id}/directories | List the Directories bound to a User Group
-[**g_et_usergroups_group_id_gsuites**](UserGroupAssociationsApi.md#g_et_usergroups_group_id_gsuites) | **GET** /usergroups/{group_id}/gsuites | List the G Suite instances bound to a User Group
-[**g_et_usergroups_group_id_ldapservers**](UserGroupAssociationsApi.md#g_et_usergroups_group_id_ldapservers) | **GET** /usergroups/{group_id}/ldapservers | List the LDAP Servers bound to a User Group
-[**g_et_usergroups_group_id_office365s**](UserGroupAssociationsApi.md#g_et_usergroups_group_id_office365s) | **GET** /usergroups/{group_id}/office365s | List the Office 365 instances bound to a User Group
-[**g_et_usergroups_group_id_radiusservers**](UserGroupAssociationsApi.md#g_et_usergroups_group_id_radiusservers) | **GET** /usergroups/{group_id}/radiusservers | List the RADIUS Servers bound to a User Group
-[**g_et_usergroups_group_id_systemgroups**](UserGroupAssociationsApi.md#g_et_usergroups_group_id_systemgroups) | **GET** /usergroups/{group_id}/systemgroups | List the System Groups bound to User Groups
-[**g_et_usergroups_group_id_systems**](UserGroupAssociationsApi.md#g_et_usergroups_group_id_systems) | **GET** /usergroups/{group_id}/systems | List the Systems bound to a User Group
+[**get_usergroups_group_id_applications**](UserGroupAssociationsApi.md#get_usergroups_group_id_applications) | **GET** /usergroups/{group_id}/applications | List the Applications bound to a User Group
+[**get_usergroups_group_id_associations**](UserGroupAssociationsApi.md#get_usergroups_group_id_associations) | **GET** /usergroups/{group_id}/associations | List the associations of a User Group.
+[**get_usergroups_group_id_directories**](UserGroupAssociationsApi.md#get_usergroups_group_id_directories) | **GET** /usergroups/{group_id}/directories | List the Directories bound to a User Group
+[**get_usergroups_group_id_gsuites**](UserGroupAssociationsApi.md#get_usergroups_group_id_gsuites) | **GET** /usergroups/{group_id}/gsuites | List the G Suite instances bound to a User Group
+[**get_usergroups_group_id_ldapservers**](UserGroupAssociationsApi.md#get_usergroups_group_id_ldapservers) | **GET** /usergroups/{group_id}/ldapservers | List the LDAP Servers bound to a User Group
+[**get_usergroups_group_id_office365s**](UserGroupAssociationsApi.md#get_usergroups_group_id_office365s) | **GET** /usergroups/{group_id}/office365s | List the Office 365 instances bound to a User Group
+[**get_usergroups_group_id_radiusservers**](UserGroupAssociationsApi.md#get_usergroups_group_id_radiusservers) | **GET** /usergroups/{group_id}/radiusservers | List the RADIUS Servers bound to a User Group
+[**get_usergroups_group_id_systemgroups**](UserGroupAssociationsApi.md#get_usergroups_group_id_systemgroups) | **GET** /usergroups/{group_id}/systemgroups | List the System Groups bound to User Groups
+[**get_usergroups_group_id_systems**](UserGroupAssociationsApi.md#get_usergroups_group_id_systems) | **GET** /usergroups/{group_id}/systems | List the Systems bound to a User Group
 [**p_ost_usergroups_group_id_associations**](UserGroupAssociationsApi.md#p_ost_usergroups_group_id_associations) | **POST** /usergroups/{group_id}/associations | Manage the associations of a User Group
 
 
-# **g_et_usergroups_group_id_applications**
-> Array&lt;GraphObjectWithPaths&gt; g_et_usergroups_group_id_applications(group_id, accept, content_type, opts)
+# **get_usergroups_group_id_applications**
+> Array&lt;GraphObjectWithPaths&gt; get_usergroups_group_id_applications(group_id, accept, content_type, opts)
 
 List the Applications bound to a User Group
 
@@ -52,10 +52,10 @@ opts = {
 
 begin
   #List the Applications bound to a User Group
-  result = api_instance.g_et_usergroups_group_id_applications(group_id, accept, content_type, opts)
+  result = api_instance.get_usergroups_group_id_applications(group_id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling UserGroupAssociationsApi->g_et_usergroups_group_id_applications: #{e}"
+  puts "Exception when calling UserGroupAssociationsApi->get_usergroups_group_id_applications: #{e}"
 end
 ```
 
@@ -86,8 +86,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_usergroups_group_id_associations**
-> Array&lt;GraphConnection&gt; g_et_usergroups_group_id_associations(group_id, targets, accept, content_type, opts)
+# **get_usergroups_group_id_associations**
+> Array&lt;GraphConnection&gt; get_usergroups_group_id_associations(group_id, targets, accept, content_type, opts)
 
 List the associations of a User Group.
 
@@ -123,10 +123,10 @@ opts = {
 
 begin
   #List the associations of a User Group.
-  result = api_instance.g_et_usergroups_group_id_associations(group_id, targets, accept, content_type, opts)
+  result = api_instance.get_usergroups_group_id_associations(group_id, targets, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling UserGroupAssociationsApi->g_et_usergroups_group_id_associations: #{e}"
+  puts "Exception when calling UserGroupAssociationsApi->get_usergroups_group_id_associations: #{e}"
 end
 ```
 
@@ -157,8 +157,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_usergroups_group_id_directories**
-> Array&lt;GraphObjectWithPaths&gt; g_et_usergroups_group_id_directories(group_id, accept, content_type, opts)
+# **get_usergroups_group_id_directories**
+> Array&lt;GraphObjectWithPaths&gt; get_usergroups_group_id_directories(group_id, accept, content_type, opts)
 
 List the Directories bound to a User Group
 
@@ -193,10 +193,10 @@ opts = {
 
 begin
   #List the Directories bound to a User Group
-  result = api_instance.g_et_usergroups_group_id_directories(group_id, accept, content_type, opts)
+  result = api_instance.get_usergroups_group_id_directories(group_id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling UserGroupAssociationsApi->g_et_usergroups_group_id_directories: #{e}"
+  puts "Exception when calling UserGroupAssociationsApi->get_usergroups_group_id_directories: #{e}"
 end
 ```
 
@@ -227,8 +227,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_usergroups_group_id_gsuites**
-> Array&lt;GraphObjectWithPaths&gt; g_et_usergroups_group_id_gsuites(group_id, accept, content_type, opts)
+# **get_usergroups_group_id_gsuites**
+> Array&lt;GraphObjectWithPaths&gt; get_usergroups_group_id_gsuites(group_id, accept, content_type, opts)
 
 List the G Suite instances bound to a User Group
 
@@ -263,10 +263,10 @@ opts = {
 
 begin
   #List the G Suite instances bound to a User Group
-  result = api_instance.g_et_usergroups_group_id_gsuites(group_id, accept, content_type, opts)
+  result = api_instance.get_usergroups_group_id_gsuites(group_id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling UserGroupAssociationsApi->g_et_usergroups_group_id_gsuites: #{e}"
+  puts "Exception when calling UserGroupAssociationsApi->get_usergroups_group_id_gsuites: #{e}"
 end
 ```
 
@@ -297,8 +297,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_usergroups_group_id_ldapservers**
-> Array&lt;GraphObjectWithPaths&gt; g_et_usergroups_group_id_ldapservers(group_id, accept, content_type, opts)
+# **get_usergroups_group_id_ldapservers**
+> Array&lt;GraphObjectWithPaths&gt; get_usergroups_group_id_ldapservers(group_id, accept, content_type, opts)
 
 List the LDAP Servers bound to a User Group
 
@@ -333,10 +333,10 @@ opts = {
 
 begin
   #List the LDAP Servers bound to a User Group
-  result = api_instance.g_et_usergroups_group_id_ldapservers(group_id, accept, content_type, opts)
+  result = api_instance.get_usergroups_group_id_ldapservers(group_id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling UserGroupAssociationsApi->g_et_usergroups_group_id_ldapservers: #{e}"
+  puts "Exception when calling UserGroupAssociationsApi->get_usergroups_group_id_ldapservers: #{e}"
 end
 ```
 
@@ -367,8 +367,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_usergroups_group_id_office365s**
-> Array&lt;GraphObjectWithPaths&gt; g_et_usergroups_group_id_office365s(group_id, accept, content_type, opts)
+# **get_usergroups_group_id_office365s**
+> Array&lt;GraphObjectWithPaths&gt; get_usergroups_group_id_office365s(group_id, accept, content_type, opts)
 
 List the Office 365 instances bound to a User Group
 
@@ -403,10 +403,10 @@ opts = {
 
 begin
   #List the Office 365 instances bound to a User Group
-  result = api_instance.g_et_usergroups_group_id_office365s(group_id, accept, content_type, opts)
+  result = api_instance.get_usergroups_group_id_office365s(group_id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling UserGroupAssociationsApi->g_et_usergroups_group_id_office365s: #{e}"
+  puts "Exception when calling UserGroupAssociationsApi->get_usergroups_group_id_office365s: #{e}"
 end
 ```
 
@@ -437,8 +437,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_usergroups_group_id_radiusservers**
-> Array&lt;GraphObjectWithPaths&gt; g_et_usergroups_group_id_radiusservers(group_id, accept, content_type, opts)
+# **get_usergroups_group_id_radiusservers**
+> Array&lt;GraphObjectWithPaths&gt; get_usergroups_group_id_radiusservers(group_id, accept, content_type, opts)
 
 List the RADIUS Servers bound to a User Group
 
@@ -473,10 +473,10 @@ opts = {
 
 begin
   #List the RADIUS Servers bound to a User Group
-  result = api_instance.g_et_usergroups_group_id_radiusservers(group_id, accept, content_type, opts)
+  result = api_instance.get_usergroups_group_id_radiusservers(group_id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling UserGroupAssociationsApi->g_et_usergroups_group_id_radiusservers: #{e}"
+  puts "Exception when calling UserGroupAssociationsApi->get_usergroups_group_id_radiusservers: #{e}"
 end
 ```
 
@@ -507,8 +507,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_usergroups_group_id_systemgroups**
-> Array&lt;GraphObjectWithPaths&gt; g_et_usergroups_group_id_systemgroups(group_id, accept, content_type, opts)
+# **get_usergroups_group_id_systemgroups**
+> Array&lt;GraphObjectWithPaths&gt; get_usergroups_group_id_systemgroups(group_id, accept, content_type, opts)
 
 List the System Groups bound to User Groups
 
@@ -543,10 +543,10 @@ opts = {
 
 begin
   #List the System Groups bound to User Groups
-  result = api_instance.g_et_usergroups_group_id_systemgroups(group_id, accept, content_type, opts)
+  result = api_instance.get_usergroups_group_id_systemgroups(group_id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling UserGroupAssociationsApi->g_et_usergroups_group_id_systemgroups: #{e}"
+  puts "Exception when calling UserGroupAssociationsApi->get_usergroups_group_id_systemgroups: #{e}"
 end
 ```
 
@@ -577,8 +577,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_usergroups_group_id_systems**
-> Array&lt;GraphObjectWithPaths&gt; g_et_usergroups_group_id_systems(group_id, accept, content_type, opts)
+# **get_usergroups_group_id_systems**
+> Array&lt;GraphObjectWithPaths&gt; get_usergroups_group_id_systems(group_id, accept, content_type, opts)
 
 List the Systems bound to a User Group
 
@@ -613,10 +613,10 @@ opts = {
 
 begin
   #List the Systems bound to a User Group
-  result = api_instance.g_et_usergroups_group_id_systems(group_id, accept, content_type, opts)
+  result = api_instance.get_usergroups_group_id_systems(group_id, accept, content_type, opts)
   p result
 rescue JCAPIv2::ApiError => e
-  puts "Exception when calling UserGroupAssociationsApi->g_et_usergroups_group_id_systems: #{e}"
+  puts "Exception when calling UserGroupAssociationsApi->get_usergroups_group_id_systems: #{e}"
 end
 ```
 

@@ -63,7 +63,7 @@ describe 'SystemusersApi' do
     end
   end
 
-  # unit tests for g_et_systemusers
+  # unit tests for get_systemusers
   # List all system users
   # This endpoint returns all systemusers.  #### Sample Request  &#x60;&#x60;&#x60; curl -X GET https://console.jumpcloud.com/api/systemusers \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
   # @param accept 
@@ -77,13 +77,13 @@ describe 'SystemusersApi' do
   # @option opts [String] :search A nested object containing a string &#x60;searchTerm&#x60; and a list of &#x60;fields&#x60; to search on.
   # @option opts [String] :x_org_id 
   # @return [Systemuserslist]
-  describe 'g_et_systemusers test' do
+  describe 'get_systemusers test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_systemusers_id
+  # unit tests for get_systemusers_id
   # List a system user
   # This endpoint returns a particular System User.  #### Sample Request  &#x60;&#x60;&#x60; curl -X GET https://console.jumpcloud.com/api/systemusers/{UserID} \\   -H &#39;Accept: application/json&#39; \\   -H &#39;Content-Type: application/json&#39; \\   -H &#39;x-api-key: {API_KEY}&#39; &#x60;&#x60;&#x60;
   # @param id 
@@ -94,13 +94,13 @@ describe 'SystemusersApi' do
   # @option opts [String] :filter A filter to apply to the query. **Filter structure**: &#x60;&lt;field&gt;:&lt;operator&gt;:&lt;value&gt;&#x60;. **field** &#x3D; Populate with a valid field from an endpoint response. **operator** &#x3D;  Supported operators are: eq, ne, gt, ge, lt, le, between, search, in. **value** &#x3D; Populate with the value you want to search for. Is case sensitive. Supports wild cards. **EX:** &#x60;GET /users?username&#x3D;eq:testuser&#x60;
   # @option opts [String] :x_org_id 
   # @return [Systemuserreturn]
-  describe 'g_et_systemusers_id test' do
+  describe 'get_systemusers_id test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for g_et_systemusers_id_sshkeys
+  # unit tests for get_systemusers_id_sshkeys
   # List a system user&#39;s public SSH keys
   # This endpoint will return a specific System User&#39;s public SSH key.
   # @param id 
@@ -109,7 +109,7 @@ describe 'SystemusersApi' do
   # @param [Hash] opts the optional parameters
   # @option opts [String] :x_org_id 
   # @return [Array<Sshkeylist>]
-  describe 'g_et_systemusers_id_sshkeys test' do
+  describe 'get_systemusers_id_sshkeys test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

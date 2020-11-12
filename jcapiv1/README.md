@@ -79,10 +79,10 @@ opts = {
 
 begin
   #List Application Templates
-  result = api_instance.g_et_application_templates(accept, content_type, opts)
+  result = api_instance.get_application_templates(accept, content_type, opts)
   p result
 rescue JCAPIv1::ApiError => e
-  puts "Exception when calling ApplicationTemplatesApi->g_et_application_templates: #{e}"
+  puts "Exception when calling ApplicationTemplatesApi->get_application_templates: #{e}"
 end
 
 ```
@@ -93,43 +93,43 @@ All URIs are relative to *https://console.jumpcloud.com/api*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*JCAPIv1::ApplicationTemplatesApi* | [**g_et_application_templates**](docs/ApplicationTemplatesApi.md#g_et_application_templates) | **GET** /application-templates | List Application Templates
-*JCAPIv1::ApplicationTemplatesApi* | [**g_et_application_templates_id**](docs/ApplicationTemplatesApi.md#g_et_application_templates_id) | **GET** /application-templates/{id} | Get an Application Template
+*JCAPIv1::ApplicationTemplatesApi* | [**get_application_templates**](docs/ApplicationTemplatesApi.md#get_application_templates) | **GET** /application-templates | List Application Templates
+*JCAPIv1::ApplicationTemplatesApi* | [**get_application_templates_id**](docs/ApplicationTemplatesApi.md#get_application_templates_id) | **GET** /application-templates/{id} | Get an Application Template
 *JCAPIv1::ApplicationsApi* | [**d_elete_applications_id**](docs/ApplicationsApi.md#d_elete_applications_id) | **DELETE** /applications/{id} | Delete an Application
-*JCAPIv1::ApplicationsApi* | [**g_et_applications**](docs/ApplicationsApi.md#g_et_applications) | **GET** /applications | Applications
-*JCAPIv1::ApplicationsApi* | [**g_et_applications_id**](docs/ApplicationsApi.md#g_et_applications_id) | **GET** /applications/{id} | Get an Application
+*JCAPIv1::ApplicationsApi* | [**get_applications**](docs/ApplicationsApi.md#get_applications) | **GET** /applications | Applications
+*JCAPIv1::ApplicationsApi* | [**get_applications_id**](docs/ApplicationsApi.md#get_applications_id) | **GET** /applications/{id} | Get an Application
 *JCAPIv1::ApplicationsApi* | [**p_ost_applications**](docs/ApplicationsApi.md#p_ost_applications) | **POST** /applications | Create an Application
 *JCAPIv1::ApplicationsApi* | [**p_ut_applications_id**](docs/ApplicationsApi.md#p_ut_applications_id) | **PUT** /applications/{id} | Update an Application
 *JCAPIv1::CommandResultsApi* | [**d_elete_commandresults_id**](docs/CommandResultsApi.md#d_elete_commandresults_id) | **DELETE** /commandresults/{id} | Delete a Command result
-*JCAPIv1::CommandResultsApi* | [**g_et_commandresults**](docs/CommandResultsApi.md#g_et_commandresults) | **GET** /commandresults | List all Command Results
-*JCAPIv1::CommandResultsApi* | [**g_et_commandresults_id**](docs/CommandResultsApi.md#g_et_commandresults_id) | **GET** /commandresults/{id} | List an individual Command result
+*JCAPIv1::CommandResultsApi* | [**get_commandresults**](docs/CommandResultsApi.md#get_commandresults) | **GET** /commandresults | List all Command Results
+*JCAPIv1::CommandResultsApi* | [**get_commandresults_id**](docs/CommandResultsApi.md#get_commandresults_id) | **GET** /commandresults/{id} | List an individual Command result
 *JCAPIv1::CommandTriggersApi* | [**p_ost_command_trigger_triggername**](docs/CommandTriggersApi.md#p_ost_command_trigger_triggername) | **POST** /command/trigger/{triggername} | Launch a command via a Trigger
 *JCAPIv1::CommandsApi* | [**d_elete_commands_id**](docs/CommandsApi.md#d_elete_commands_id) | **DELETE** /commands/{id} | Delete a Command
-*JCAPIv1::CommandsApi* | [**g_et_commands**](docs/CommandsApi.md#g_et_commands) | **GET** /commands | List All Commands
-*JCAPIv1::CommandsApi* | [**g_et_commands_id**](docs/CommandsApi.md#g_et_commands_id) | **GET** /commands/{id} | List an individual Command
-*JCAPIv1::CommandsApi* | [**g_et_files_command_id**](docs/CommandsApi.md#g_et_files_command_id) | **GET** /files/command/{id} | Get a Command File
+*JCAPIv1::CommandsApi* | [**get_commands**](docs/CommandsApi.md#get_commands) | **GET** /commands | List All Commands
+*JCAPIv1::CommandsApi* | [**get_commands_id**](docs/CommandsApi.md#get_commands_id) | **GET** /commands/{id} | List an individual Command
+*JCAPIv1::CommandsApi* | [**get_files_command_id**](docs/CommandsApi.md#get_files_command_id) | **GET** /files/command/{id} | Get a Command File
 *JCAPIv1::CommandsApi* | [**p_ost_commands**](docs/CommandsApi.md#p_ost_commands) | **POST** /commands | Create A Command
 *JCAPIv1::CommandsApi* | [**p_ut_commands_id**](docs/CommandsApi.md#p_ut_commands_id) | **PUT** /commands/{id} | Update a Command
-*JCAPIv1::OrganizationsApi* | [**g_et_organizations**](docs/OrganizationsApi.md#g_et_organizations) | **GET** /organizations | Get Organization Details
-*JCAPIv1::OrganizationsApi* | [**g_et_organizations_id**](docs/OrganizationsApi.md#g_et_organizations_id) | **GET** /organizations/{id} | Get an Organization
+*JCAPIv1::OrganizationsApi* | [**get_organizations**](docs/OrganizationsApi.md#get_organizations) | **GET** /organizations | Get Organization Details
+*JCAPIv1::OrganizationsApi* | [**get_organizations_id**](docs/OrganizationsApi.md#get_organizations_id) | **GET** /organizations/{id} | Get an Organization
 *JCAPIv1::OrganizationsApi* | [**p_ut_organizations_id**](docs/OrganizationsApi.md#p_ut_organizations_id) | **PUT** /organizations/{id} | Update an Organization
 *JCAPIv1::RadiusServersApi* | [**d_elete_radiusservers_id**](docs/RadiusServersApi.md#d_elete_radiusservers_id) | **DELETE** /radiusservers/{id} | Delete Radius Server
-*JCAPIv1::RadiusServersApi* | [**g_et_radiusservers**](docs/RadiusServersApi.md#g_et_radiusservers) | **GET** /radiusservers | List Radius Servers
-*JCAPIv1::RadiusServersApi* | [**g_et_radiusservers_id**](docs/RadiusServersApi.md#g_et_radiusservers_id) | **GET** /radiusservers/{id} | Get Radius Server
+*JCAPIv1::RadiusServersApi* | [**get_radiusservers**](docs/RadiusServersApi.md#get_radiusservers) | **GET** /radiusservers | List Radius Servers
+*JCAPIv1::RadiusServersApi* | [**get_radiusservers_id**](docs/RadiusServersApi.md#get_radiusservers_id) | **GET** /radiusservers/{id} | Get Radius Server
 *JCAPIv1::RadiusServersApi* | [**p_ost_radiusservers**](docs/RadiusServersApi.md#p_ost_radiusservers) | **POST** /radiusservers | Create a Radius Server
 *JCAPIv1::RadiusServersApi* | [**p_ut_radiusservers_id**](docs/RadiusServersApi.md#p_ut_radiusservers_id) | **PUT** /radiusservers/{id} | Update Radius Servers
 *JCAPIv1::SearchApi* | [**p_ost_search_organizations**](docs/SearchApi.md#p_ost_search_organizations) | **POST** /search/organizations | Search Organizations
 *JCAPIv1::SearchApi* | [**p_ost_search_systems**](docs/SearchApi.md#p_ost_search_systems) | **POST** /search/systems | Search Systems
 *JCAPIv1::SearchApi* | [**p_ost_search_systemusers**](docs/SearchApi.md#p_ost_search_systemusers) | **POST** /search/systemusers | Search System Users
 *JCAPIv1::SystemsApi* | [**d_elete_systems_id**](docs/SystemsApi.md#d_elete_systems_id) | **DELETE** /systems/{id} | Delete a System
-*JCAPIv1::SystemsApi* | [**g_et_systems**](docs/SystemsApi.md#g_et_systems) | **GET** /systems | List All Systems
-*JCAPIv1::SystemsApi* | [**g_et_systems_id**](docs/SystemsApi.md#g_et_systems_id) | **GET** /systems/{id} | List an individual system
+*JCAPIv1::SystemsApi* | [**get_systems**](docs/SystemsApi.md#get_systems) | **GET** /systems | List All Systems
+*JCAPIv1::SystemsApi* | [**get_systems_id**](docs/SystemsApi.md#get_systems_id) | **GET** /systems/{id} | List an individual system
 *JCAPIv1::SystemsApi* | [**p_ut_systems_id**](docs/SystemsApi.md#p_ut_systems_id) | **PUT** /systems/{id} | Update a system
 *JCAPIv1::SystemusersApi* | [**d_elete_systemusers_id**](docs/SystemusersApi.md#d_elete_systemusers_id) | **DELETE** /systemusers/{id} | Delete a system user
 *JCAPIv1::SystemusersApi* | [**d_elete_systemusers_systemuser_id_sshkeys_id**](docs/SystemusersApi.md#d_elete_systemusers_systemuser_id_sshkeys_id) | **DELETE** /systemusers/{systemuser_id}/sshkeys/{id} | Delete a system user's Public SSH Keys
-*JCAPIv1::SystemusersApi* | [**g_et_systemusers**](docs/SystemusersApi.md#g_et_systemusers) | **GET** /systemusers | List all system users
-*JCAPIv1::SystemusersApi* | [**g_et_systemusers_id**](docs/SystemusersApi.md#g_et_systemusers_id) | **GET** /systemusers/{id} | List a system user
-*JCAPIv1::SystemusersApi* | [**g_et_systemusers_id_sshkeys**](docs/SystemusersApi.md#g_et_systemusers_id_sshkeys) | **GET** /systemusers/{id}/sshkeys | List a system user's public SSH keys
+*JCAPIv1::SystemusersApi* | [**get_systemusers**](docs/SystemusersApi.md#get_systemusers) | **GET** /systemusers | List all system users
+*JCAPIv1::SystemusersApi* | [**get_systemusers_id**](docs/SystemusersApi.md#get_systemusers_id) | **GET** /systemusers/{id} | List a system user
+*JCAPIv1::SystemusersApi* | [**get_systemusers_id_sshkeys**](docs/SystemusersApi.md#get_systemusers_id_sshkeys) | **GET** /systemusers/{id}/sshkeys | List a system user's public SSH keys
 *JCAPIv1::SystemusersApi* | [**p_ost_systemusers**](docs/SystemusersApi.md#p_ost_systemusers) | **POST** /systemusers | Create a system user
 *JCAPIv1::SystemusersApi* | [**p_ost_systemusers_id_expire**](docs/SystemusersApi.md#p_ost_systemusers_id_expire) | **POST** /systemusers/{id}/expire | Expire a system user's password
 *JCAPIv1::SystemusersApi* | [**p_ost_systemusers_id_resetmfa**](docs/SystemusersApi.md#p_ost_systemusers_id_resetmfa) | **POST** /systemusers/{id}/resetmfa | Reset a system user's MFA token

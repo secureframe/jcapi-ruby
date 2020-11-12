@@ -5,8 +5,8 @@ All URIs are relative to *https://console.jumpcloud.com/api*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**d_elete_commandresults_id**](CommandResultsApi.md#d_elete_commandresults_id) | **DELETE** /commandresults/{id} | Delete a Command result
-[**g_et_commandresults**](CommandResultsApi.md#g_et_commandresults) | **GET** /commandresults | List all Command Results
-[**g_et_commandresults_id**](CommandResultsApi.md#g_et_commandresults_id) | **GET** /commandresults/{id} | List an individual Command result
+[**get_commandresults**](CommandResultsApi.md#get_commandresults) | **GET** /commandresults | List all Command Results
+[**get_commandresults_id**](CommandResultsApi.md#get_commandresults_id) | **GET** /commandresults/{id} | List an individual Command result
 
 
 # **d_elete_commandresults_id**
@@ -73,8 +73,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_commandresults**
-> Commandresultslist g_et_commandresults(accept, content_type, opts)
+# **get_commandresults**
+> Commandresultslist get_commandresults(accept, content_type, opts)
 
 List all Command Results
 
@@ -109,10 +109,10 @@ opts = {
 
 begin
   #List all Command Results
-  result = api_instance.g_et_commandresults(accept, content_type, opts)
+  result = api_instance.get_commandresults(accept, content_type, opts)
   p result
 rescue JCAPIv1::ApiError => e
-  puts "Exception when calling CommandResultsApi->g_et_commandresults: #{e}"
+  puts "Exception when calling CommandResultsApi->get_commandresults: #{e}"
 end
 ```
 
@@ -144,8 +144,8 @@ Name | Type | Description  | Notes
 
 
 
-# **g_et_commandresults_id**
-> Commandresult g_et_commandresults_id(id, accept, content_type, opts)
+# **get_commandresults_id**
+> Commandresult get_commandresults_id(id, accept, content_type, opts)
 
 List an individual Command result
 
@@ -179,10 +179,10 @@ opts = {
 
 begin
   #List an individual Command result
-  result = api_instance.g_et_commandresults_id(id, accept, content_type, opts)
+  result = api_instance.get_commandresults_id(id, accept, content_type, opts)
   p result
 rescue JCAPIv1::ApiError => e
-  puts "Exception when calling CommandResultsApi->g_et_commandresults_id: #{e}"
+  puts "Exception when calling CommandResultsApi->get_commandresults_id: #{e}"
 end
 ```
 

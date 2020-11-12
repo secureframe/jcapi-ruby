@@ -100,8 +100,8 @@ module JCAPIv1
     # @option opts [String] :sort Use space separated sort parameters to sort the collection. Default sort is ascending. Prefix with &#x60;-&#x60; to sort descending.  (default to )
     # @option opts [String] :x_org_id  (default to )
     # @return [Radiusserverslist]
-    def g_et_radiusservers(accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_radiusservers_with_http_info(accept, content_type, opts)
+    def get_radiusservers(accept, content_type, opts = {})
+      data, _status_code, _headers = get_radiusservers_with_http_info(accept, content_type, opts)
       return data
     end
 
@@ -117,20 +117,20 @@ module JCAPIv1
     # @option opts [String] :sort Use space separated sort parameters to sort the collection. Default sort is ascending. Prefix with &#x60;-&#x60; to sort descending. 
     # @option opts [String] :x_org_id 
     # @return [Array<(Radiusserverslist, Fixnum, Hash)>] Radiusserverslist data, response status code and response headers
-    def g_et_radiusservers_with_http_info(accept, content_type, opts = {})
+    def get_radiusservers_with_http_info(accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: RadiusServersApi.g_et_radiusservers ..."
+        @api_client.config.logger.debug "Calling API: RadiusServersApi.get_radiusservers ..."
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling RadiusServersApi.g_et_radiusservers"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling RadiusServersApi.get_radiusservers"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling RadiusServersApi.g_et_radiusservers"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling RadiusServersApi.get_radiusservers"
       end
       if @api_client.config.client_side_validation && !opts[:'skip'].nil? && opts[:'skip'] < 0
-        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling RadiusServersApi.g_et_radiusservers, must be greater than or equal to 0.'
+        fail ArgumentError, 'invalid value for "opts[:"skip"]" when calling RadiusServersApi.get_radiusservers, must be greater than or equal to 0.'
       end
 
       # resource path
@@ -164,7 +164,7 @@ module JCAPIv1
         :auth_names => auth_names,
         :return_type => 'Radiusserverslist')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: RadiusServersApi#g_et_radiusservers\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: RadiusServersApi#get_radiusservers\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -177,8 +177,8 @@ module JCAPIv1
     # @param [Hash] opts the optional parameters
     # @option opts [String] :x_org_id  (default to )
     # @return [Radiusserver]
-    def g_et_radiusservers_id(id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_radiusservers_id_with_http_info(id, accept, content_type, opts)
+    def get_radiusservers_id(id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_radiusservers_id_with_http_info(id, accept, content_type, opts)
       return data
     end
 
@@ -190,21 +190,21 @@ module JCAPIv1
     # @param [Hash] opts the optional parameters
     # @option opts [String] :x_org_id 
     # @return [Array<(Radiusserver, Fixnum, Hash)>] Radiusserver data, response status code and response headers
-    def g_et_radiusservers_id_with_http_info(id, accept, content_type, opts = {})
+    def get_radiusservers_id_with_http_info(id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: RadiusServersApi.g_et_radiusservers_id ..."
+        @api_client.config.logger.debug "Calling API: RadiusServersApi.get_radiusservers_id ..."
       end
       # verify the required parameter 'id' is set
       if @api_client.config.client_side_validation && id.nil?
-        fail ArgumentError, "Missing the required parameter 'id' when calling RadiusServersApi.g_et_radiusservers_id"
+        fail ArgumentError, "Missing the required parameter 'id' when calling RadiusServersApi.get_radiusservers_id"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling RadiusServersApi.g_et_radiusservers_id"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling RadiusServersApi.get_radiusservers_id"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling RadiusServersApi.g_et_radiusservers_id"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling RadiusServersApi.get_radiusservers_id"
       end
       # resource path
       local_var_path = "/radiusservers/{id}".sub('{' + 'id' + '}', id.to_s)
@@ -232,7 +232,7 @@ module JCAPIv1
         :auth_names => auth_names,
         :return_type => 'Radiusserver')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: RadiusServersApi#g_et_radiusservers_id\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: RadiusServersApi#get_radiusservers_id\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

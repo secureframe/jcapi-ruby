@@ -29,8 +29,8 @@ module JCAPIv2
     # @option opts [Integer] :limit The number of records to return at once. Limited to 100. (default to 10)
     # @option opts [String] :page_token Token used to access next page of results.
     # @return [InlineResponse2002]
-    def g_et_gsuites_gsuite_id_import_users(gsuite_id, accept, content_type, opts = {})
-      data, _status_code, _headers = g_et_gsuites_gsuite_id_import_users_with_http_info(gsuite_id, accept, content_type, opts)
+    def get_gsuites_gsuite_id_import_users(gsuite_id, accept, content_type, opts = {})
+      data, _status_code, _headers = get_gsuites_gsuite_id_import_users_with_http_info(gsuite_id, accept, content_type, opts)
       return data
     end
 
@@ -43,21 +43,21 @@ module JCAPIv2
     # @option opts [Integer] :limit The number of records to return at once. Limited to 100.
     # @option opts [String] :page_token Token used to access next page of results.
     # @return [Array<(InlineResponse2002, Fixnum, Hash)>] InlineResponse2002 data, response status code and response headers
-    def g_et_gsuites_gsuite_id_import_users_with_http_info(gsuite_id, accept, content_type, opts = {})
+    def get_gsuites_gsuite_id_import_users_with_http_info(gsuite_id, accept, content_type, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: GSuiteImportApi.g_et_gsuites_gsuite_id_import_users ..."
+        @api_client.config.logger.debug "Calling API: GSuiteImportApi.get_gsuites_gsuite_id_import_users ..."
       end
       # verify the required parameter 'gsuite_id' is set
       if @api_client.config.client_side_validation && gsuite_id.nil?
-        fail ArgumentError, "Missing the required parameter 'gsuite_id' when calling GSuiteImportApi.g_et_gsuites_gsuite_id_import_users"
+        fail ArgumentError, "Missing the required parameter 'gsuite_id' when calling GSuiteImportApi.get_gsuites_gsuite_id_import_users"
       end
       # verify the required parameter 'accept' is set
       if @api_client.config.client_side_validation && accept.nil?
-        fail ArgumentError, "Missing the required parameter 'accept' when calling GSuiteImportApi.g_et_gsuites_gsuite_id_import_users"
+        fail ArgumentError, "Missing the required parameter 'accept' when calling GSuiteImportApi.get_gsuites_gsuite_id_import_users"
       end
       # verify the required parameter 'content_type' is set
       if @api_client.config.client_side_validation && content_type.nil?
-        fail ArgumentError, "Missing the required parameter 'content_type' when calling GSuiteImportApi.g_et_gsuites_gsuite_id_import_users"
+        fail ArgumentError, "Missing the required parameter 'content_type' when calling GSuiteImportApi.get_gsuites_gsuite_id_import_users"
       end
       # resource path
       local_var_path = "/gsuites/{gsuite_id}/import/users".sub('{' + 'gsuite_id' + '}', gsuite_id.to_s)
@@ -90,7 +90,7 @@ module JCAPIv2
         :auth_names => auth_names,
         :return_type => 'InlineResponse2002')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GSuiteImportApi#g_et_gsuites_gsuite_id_import_users\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GSuiteImportApi#get_gsuites_gsuite_id_import_users\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
